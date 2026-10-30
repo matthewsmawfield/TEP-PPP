@@ -1,0 +1,94 @@
+
+=== clk_cod / 2024 (dev_frozen) / GLOBAL : 30 days ===
+scripts/steps/step_96_leftover_clock_supremacy.py:450: RuntimeWarning: divide by zero encountered in matmul
+  H = Rs @ A_inv
+scripts/steps/step_96_leftover_clock_supremacy.py:450: RuntimeWarning: overflow encountered in matmul
+  H = Rs @ A_inv
+scripts/steps/step_96_leftover_clock_supremacy.py:450: RuntimeWarning: invalid value encountered in matmul
+  H = Rs @ A_inv
+scripts/steps/step_96_leftover_clock_supremacy.py:454: RuntimeWarning: divide by zero encountered in matmul
+  fitted = Psel @ H.T
+scripts/steps/step_96_leftover_clock_supremacy.py:454: RuntimeWarning: overflow encountered in matmul
+  fitted = Psel @ H.T
+scripts/steps/step_96_leftover_clock_supremacy.py:454: RuntimeWarning: invalid value encountered in matmul
+  fitted = Psel @ H.T
+  mid-horizon rms: {'zero': 2.5, 'linrate': 3.9, 'ar1': 3.98, 'free_gp': 2.49, 'empirical_cov': 2.32, 'tep_bandpass': 2.27, 'tep_lfmf': 2.13}
+  tep_bandpass mid vs baselines: {'zero': 7.6, 'linrate': 41.4, 'ar1': 39.8, 'free_gp': 6.8, 'empirical_cov': 7.8}
+  tep_lfmf mid vs baselines: {'zero': 11.2, 'linrate': 43.5, 'ar1': 42.0, 'free_gp': 9.5, 'empirical_cov': 8.5}
+
+=== clk_cod / 2024 (dev_frozen) / EUROPE : 30 days ===
+  mid-horizon rms: {'zero': 0.93, 'linrate': 1.12, 'ar1': 1.01, 'free_gp': 0.86, 'empirical_cov': 0.9, 'tep_bandpass': 0.89, 'tep_lfmf': 0.83}
+  tep_bandpass mid vs baselines: {'zero': 2.3, 'linrate': 23.0, 'ar1': 23.8, 'free_gp': 5.1, 'empirical_cov': 2.6}
+  tep_lfmf mid vs baselines: {'zero': 6.4, 'linrate': 33.7, 'ar1': 22.6, 'free_gp': 5.7, 'empirical_cov': 3.4}
+
+=== clk_cod / 2024 (dev_frozen) / NORTH_AMERICA : 30 days ===
+  mid-horizon rms: {'zero': 1.54, 'linrate': 2.16, 'ar1': 2.08, 'free_gp': 1.68, 'empirical_cov': 1.52, 'tep_bandpass': 1.65, 'tep_lfmf': 1.6}
+  tep_bandpass mid vs baselines: {'zero': 1.4, 'linrate': 16.3, 'ar1': 9.0, 'free_gp': -0.5, 'empirical_cov': -0.2}
+  tep_lfmf mid vs baselines: {'zero': -2.0, 'linrate': 19.6, 'ar1': 9.9, 'free_gp': -1.9, 'empirical_cov': -1.1}
+
+=== clk_cod / 2024 (dev_frozen) / ASIA_PACIFIC : 30 days ===
+  mid-horizon rms: {'zero': 2.59, 'linrate': 3.57, 'ar1': 3.67, 'free_gp': 2.43, 'empirical_cov': 2.33, 'tep_bandpass': 2.24, 'tep_lfmf': 2.13}
+  tep_bandpass mid vs baselines: {'zero': 5.5, 'linrate': 38.3, 'ar1': 40.7, 'free_gp': 2.2, 'empirical_cov': 4.8}
+  tep_lfmf mid vs baselines: {'zero': 13.0, 'linrate': 44.5, 'ar1': 40.9, 'free_gp': 7.5, 'empirical_cov': 11.2}
+
+=== clk_cod / 2025 (independent) / GLOBAL : 30 days ===
+  mid-horizon rms: {'zero': 2.99, 'linrate': 3.64, 'ar1': 3.72, 'free_gp': 2.78, 'empirical_cov': 2.95, 'tep_bandpass': 2.59, 'tep_lfmf': 2.41}
+  tep_bandpass mid vs baselines: {'zero': 14.2, 'linrate': 32.2, 'ar1': 33.4, 'free_gp': 9.3, 'empirical_cov': 12.4}
+  tep_lfmf mid vs baselines: {'zero': 17.6, 'linrate': 37.3, 'ar1': 37.6, 'free_gp': 13.8, 'empirical_cov': 15.8}
+
+=== clk_cod / 2025 (independent) / EUROPE : 30 days ===
+  mid-horizon rms: {'zero': 1.14, 'linrate': 1.54, 'ar1': 1.45, 'free_gp': 1.06, 'empirical_cov': 1.1, 'tep_bandpass': 1.04, 'tep_lfmf': 0.93}
+  tep_bandpass mid vs baselines: {'zero': 9.2, 'linrate': 33.3, 'ar1': 28.0, 'free_gp': 3.5, 'empirical_cov': 8.2}
+  tep_lfmf mid vs baselines: {'zero': 16.4, 'linrate': 37.4, 'ar1': 32.2, 'free_gp': 9.4, 'empirical_cov': 14.1}
+
+=== clk_cod / 2025 (independent) / NORTH_AMERICA : 30 days ===
+  mid-horizon rms: {'zero': 3.91, 'linrate': 2.46, 'ar1': 2.42, 'free_gp': 3.98, 'empirical_cov': 3.91, 'tep_bandpass': 4.04, 'tep_lfmf': 3.88}
+  tep_bandpass mid vs baselines: {'zero': -4.0, 'linrate': -37.2, 'ar1': -39.1, 'free_gp': -0.0, 'empirical_cov': -4.1}
+  tep_lfmf mid vs baselines: {'zero': -0.9, 'linrate': -47.6, 'ar1': -34.2, 'free_gp': 3.1, 'empirical_cov': -0.8}
+
+=== clk_cod / 2025 (independent) / ASIA_PACIFIC : 30 days ===
+  mid-horizon rms: {'zero': 2.25, 'linrate': 3.06, 'ar1': 3.0, 'free_gp': 2.21, 'empirical_cov': 2.36, 'tep_bandpass': 2.1, 'tep_lfmf': 2.03}
+  tep_bandpass mid vs baselines: {'zero': 10.1, 'linrate': 32.3, 'ar1': 31.3, 'free_gp': 6.3, 'empirical_cov': 8.4}
+  tep_lfmf mid vs baselines: {'zero': 14.6, 'linrate': 35.7, 'ar1': 31.1, 'free_gp': 9.5, 'empirical_cov': 11.1}
+
+=== clk_cod_ops / 2024 (dev_frozen) / GLOBAL : 30 days ===
+  mid-horizon rms: {'zero': 2.83, 'linrate': 4.29, 'ar1': 4.16, 'free_gp': 3795.58, 'empirical_cov': 2.62, 'tep_bandpass': 2.41, 'tep_lfmf': 2.32}
+  tep_bandpass mid vs baselines: {'zero': 12.8, 'linrate': 37.9, 'ar1': 37.6, 'free_gp': 99.9, 'empirical_cov': 7.1}
+  tep_lfmf mid vs baselines: {'zero': 16.8, 'linrate': 40.9, 'ar1': 40.7, 'free_gp': 99.9, 'empirical_cov': 12.1}
+
+=== clk_cod_ops / 2024 (dev_frozen) / EUROPE : 30 days ===
+  mid-horizon rms: {'zero': 1.13, 'linrate': 1.5, 'ar1': 1.52, 'free_gp': 1.07, 'empirical_cov': 1.16, 'tep_bandpass': 0.94, 'tep_lfmf': 0.88}
+  tep_bandpass mid vs baselines: {'zero': 16.9, 'linrate': 35.1, 'ar1': 36.1, 'free_gp': 13.6, 'empirical_cov': 18.7}
+  tep_lfmf mid vs baselines: {'zero': 21.8, 'linrate': 38.4, 'ar1': 40.3, 'free_gp': 17.9, 'empirical_cov': 22.5}
+
+=== clk_cod_ops / 2024 (dev_frozen) / NORTH_AMERICA : 30 days ===
+  mid-horizon rms: {'zero': 3.48, 'linrate': 2.57, 'ar1': 2.49, 'free_gp': 3.19, 'empirical_cov': 3.19, 'tep_bandpass': 3.25, 'tep_lfmf': 3.15}
+  tep_bandpass mid vs baselines: {'zero': 5.0, 'linrate': -26.5, 'ar1': -27.6, 'free_gp': -4.3, 'empirical_cov': -3.2}
+  tep_lfmf mid vs baselines: {'zero': 8.4, 'linrate': -12.9, 'ar1': -17.4, 'free_gp': 3.4, 'empirical_cov': 3.3}
+
+=== clk_cod_ops / 2024 (dev_frozen) / ASIA_PACIFIC : 30 days ===
+  mid-horizon rms: {'zero': 2.68, 'linrate': 3.91, 'ar1': 4.17, 'free_gp': 2.36, 'empirical_cov': 2.39, 'tep_bandpass': 2.14, 'tep_lfmf': 2.0}
+  tep_bandpass mid vs baselines: {'zero': 13.5, 'linrate': 37.7, 'ar1': 41.1, 'free_gp': 4.8, 'empirical_cov': 9.0}
+  tep_lfmf mid vs baselines: {'zero': 16.8, 'linrate': 40.4, 'ar1': 44.0, 'free_gp': 11.5, 'empirical_cov': 14.5}
+
+=== clk_cod_ops / 2025 (independent) / GLOBAL : 30 days ===
+  mid-horizon rms: {'zero': 3.04, 'linrate': 4.35, 'ar1': 4.25, 'free_gp': 2.76, 'empirical_cov': 2.89, 'tep_bandpass': 2.61, 'tep_lfmf': 2.36}
+  tep_bandpass mid vs baselines: {'zero': 12.9, 'linrate': 37.2, 'ar1': 34.1, 'free_gp': 3.0, 'empirical_cov': 8.6}
+  tep_lfmf mid vs baselines: {'zero': 19.3, 'linrate': 41.9, 'ar1': 38.5, 'free_gp': 9.8, 'empirical_cov': 15.7}
+
+=== clk_cod_ops / 2025 (independent) / EUROPE : 30 days ===
+  mid-horizon rms: {'zero': 0.94, 'linrate': 1.38, 'ar1': 1.43, 'free_gp': 0.89, 'empirical_cov': 0.95, 'tep_bandpass': 0.83, 'tep_lfmf': 0.77}
+  tep_bandpass mid vs baselines: {'zero': 13.2, 'linrate': 38.8, 'ar1': 42.0, 'free_gp': 8.1, 'empirical_cov': 14.2}
+  tep_lfmf mid vs baselines: {'zero': 21.8, 'linrate': 48.2, 'ar1': 47.9, 'free_gp': 16.1, 'empirical_cov': 20.9}
+
+=== clk_cod_ops / 2025 (independent) / NORTH_AMERICA : 30 days ===
+  mid-horizon rms: {'zero': 4.25, 'linrate': 2.87, 'ar1': 2.89, 'free_gp': 3.98, 'empirical_cov': 4.0, 'tep_bandpass': 3.95, 'tep_lfmf': 3.77}
+  tep_bandpass mid vs baselines: {'zero': 5.0, 'linrate': -38.6, 'ar1': -35.2, 'free_gp': 0.6, 'empirical_cov': -1.0}
+  tep_lfmf mid vs baselines: {'zero': 10.3, 'linrate': -28.9, 'ar1': -28.3, 'free_gp': 6.3, 'empirical_cov': 7.1}
+
+=== clk_cod_ops / 2025 (independent) / ASIA_PACIFIC : 30 days ===
+  mid-horizon rms: {'zero': 2.93, 'linrate': 4.26, 'ar1': 3.65, 'free_gp': 2.18, 'empirical_cov': 2.3, 'tep_bandpass': 2.19, 'tep_lfmf': 2.02}
+  tep_bandpass mid vs baselines: {'zero': 23.2, 'linrate': 45.9, 'ar1': 44.9, 'free_gp': 2.8, 'empirical_cov': 7.2}
+  tep_lfmf mid vs baselines: {'zero': 29.3, 'linrate': 53.7, 'ar1': 48.2, 'free_gp': 9.1, 'empirical_cov': 14.1}
+
+Level 1 PASS -- saved results/outputs/step_96_leftover_clock_supremacy.json

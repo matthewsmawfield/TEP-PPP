@@ -1,0 +1,39 @@
+grid from cache
+
+GEOMETRY-CORRECTED carrier-phase SD, DOY 100  (100-500 uHz)
+   sep_km  pair          SD rms (m)    gradient (m/m)   n_ep
+<stdin>:126: RuntimeWarning: Mean of empty slice
+      0.003  WTZR-WTZZ       0.07214     2.18e-02      2810
+<stdin>:126: RuntimeWarning: Mean of empty slice
+      0.019  ZIM2-ZIMM: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+      5.199  WAB2-ZIMM       0.35481     6.82e-05      1083
+<stdin>:126: RuntimeWarning: Mean of empty slice
+      9.680  STR1-TIDV: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+     23.595  GODE-USN8       1.42981     6.06e-05      2810
+<stdin>:126: RuntimeWarning: Mean of empty slice
+     35.913  PADO-VEN1: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    104.772  BRUX-REDU       0.19317     1.84e-06      1982
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    132.182  BRUX-DLF1       0.44169     3.34e-06      1336
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    142.192  BZR2-VEN1: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    151.333  GRAS-IENG       0.47110     3.11e-06      1058
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    162.414  GOP6-WTZR: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    166.783  OBE4-WTZR: sparse
+<stdin>:126: RuntimeWarning: Mean of empty slice
+    281.737  BRUX-WSRT       0.31999     1.14e-06      1615
+
+co-located phase noise floor: 0.07214 m
+field structure above the co-located floor:
+      5.199 km  WAB2-ZIMM     field 0.34740 m   grad 6.68e-05 m/m
+     23.595 km  GODE-USN8     field 1.42799 m   grad 6.05e-05 m/m
+    104.772 km  BRUX-REDU     field 0.17919 m   grad 1.71e-06 m/m
+    132.182 km  BRUX-DLF1     field 0.43576 m   grad 3.30e-06 m/m
+    151.333 km  GRAS-IENG     field 0.46554 m   grad 3.08e-06 m/m
+    281.737 km  BRUX-WSRT     field 0.31175 m   grad 1.11e-06 m/m

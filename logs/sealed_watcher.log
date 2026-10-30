@@ -1,0 +1,1276 @@
+=== SEALED ENVELOPE: envelope_20261028_001059 (sealed 2026-10-28T00:10:59Z) ===
+SHA-256 integrity: PASS (07940e78e2b46c9c...)
+Cutoff window before seal: 1793143841 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_001059 (sealed 2026-10-28T00:10:59Z) ===
+SHA-256 integrity: PASS (07940e78e2b46c9c...)
+Cutoff window before seal: 1793143841 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793146269      40.5     2.9959     2.9140    +2.73%  -34.00%     2.6677   +10.95%   +9.87%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +10.95% | mean ramp +9.87% | mean frozen-at-seal 2.73 | mean frozen strict-future -34.0
+=== SEALED ENVELOPE: envelope_20261028_005400 (sealed 2026-10-28T00:54:00Z) ===
+SHA-256 integrity: PASS (cfc36fa19554ccb8...)
+Cutoff window before seal: 1793146269 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_005400 (sealed 2026-10-28T00:54:00Z) ===
+SHA-256 integrity: PASS (cfc36fa19554ccb8...)
+Cutoff window before seal: 1793146269 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793148938      44.5     2.8261     2.3194   +17.93%   +0.57%     2.3194   +17.93%  +17.70%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +17.93% | mean ramp +17.70% | mean frozen-at-seal 17.93 | mean frozen strict-future 0.57
+=== SEALED ENVELOPE: envelope_20261028_005400 (sealed 2026-10-28T00:54:00Z) ===
+SHA-256 integrity: PASS (cfc36fa19554ccb8...)
+Cutoff window before seal: 1793146269 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793148938      44.5     2.8261     2.3194   +17.93%   +0.57%     2.3194   +17.93%  +17.70%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +17.93% | mean ramp +17.70% | mean frozen-at-seal 17.93 | mean frozen strict-future 0.57
+=== SEALED ENVELOPE: envelope_20261028_013002 (sealed 2026-10-28T01:30:02Z) ===
+SHA-256 integrity: PASS (91ea020320bbf42e...)
+Cutoff window before seal: 1793148938 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_013002 (sealed 2026-10-28T01:30:02Z) ===
+SHA-256 integrity: PASS (91ea020320bbf42e...)
+Cutoff window before seal: 1793148938 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793150954      33.6     2.7931     1.6997   +39.15%   +0.87%     1.6997   +39.15%  +38.98%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +39.15% | mean ramp +38.98% | mean frozen-at-seal 39.15 | mean frozen strict-future 0.87
+=== SEALED ENVELOPE: envelope_20261028_020129 (sealed 2026-10-28T02:01:29Z) ===
+SHA-256 integrity: PASS (0f1ee687f79c3414...)
+Cutoff window before seal: 1793150954 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_020129 (sealed 2026-10-28T02:01:29Z) ===
+SHA-256 integrity: PASS (0f1ee687f79c3414...)
+Cutoff window before seal: 1793150954 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793152877      32.0     2.6062     1.5104   +42.05%  -18.84%     1.5104   +42.05%  +41.58%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +42.05% | mean ramp +41.58% | mean frozen-at-seal 42.05 | mean frozen strict-future -18.84
+=== SEALED ENVELOPE: envelope_20261028_023853 (sealed 2026-10-28T02:38:53Z) ===
+SHA-256 integrity: PASS (92359dfdb0481c52...)
+Cutoff window before seal: 1793152877 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_023853 (sealed 2026-10-28T02:38:53Z) ===
+SHA-256 integrity: PASS (92359dfdb0481c52...)
+Cutoff window before seal: 1793152877 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793155185      38.5     2.1577     1.6834   +21.98%  +10.35%     1.6834   +21.98%  +21.71%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +21.98% | mean ramp +21.71% | mean frozen-at-seal 21.98 | mean frozen strict-future 10.35
+=== SEALED ENVELOPE: envelope_20261028_030501 (sealed 2026-10-28T03:05:01Z) ===
+SHA-256 integrity: PASS (ad70bef476710013...)
+Cutoff window before seal: 1793155185 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_030501 (sealed 2026-10-28T03:05:01Z) ===
+SHA-256 integrity: PASS (ad70bef476710013...)
+Cutoff window before seal: 1793155185 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793156659      24.6     2.6374     2.0969   +20.50%   +8.19%     2.0969   +20.49%  +20.57%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +20.49% | mean ramp +20.57% | mean frozen-at-seal 20.5 | mean frozen strict-future 8.19
+=== SEALED ENVELOPE: envelope_20261028_031909 (sealed 2026-10-28T03:19:09Z) ===
+SHA-256 integrity: PASS (1936cf1241c8cd33...)
+Cutoff window before seal: 1793156659 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_031909 (sealed 2026-10-28T03:19:09Z) ===
+SHA-256 integrity: PASS (1936cf1241c8cd33...)
+Cutoff window before seal: 1793156659 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793157506      14.1     2.7176     1.6716   +38.49%   -2.69%     1.6716   +38.49%  +38.52%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +38.49% | mean ramp +38.52% | mean frozen-at-seal 38.49 | mean frozen strict-future -2.69
+=== SEALED ENVELOPE: envelope_20261028_033629 (sealed 2026-10-28T03:36:29Z) ===
+SHA-256 integrity: PASS (1a761a86139f23ca...)
+Cutoff window before seal: 1793157506 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_033629 (sealed 2026-10-28T03:36:29Z) ===
+SHA-256 integrity: PASS (1a761a86139f23ca...)
+Cutoff window before seal: 1793157506 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793158592      18.1     2.8604     1.9509   +31.80%   +3.84%     1.9509   +31.80%  +31.65%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +31.80% | mean ramp +31.65% | mean frozen-at-seal 31.8 | mean frozen strict-future 3.84
+=== SEALED ENVELOPE: envelope_20261028_040217 (sealed 2026-10-28T04:02:17Z) ===
+SHA-256 integrity: PASS (ebe5a9a0bd4de359...)
+Cutoff window before seal: 1793158592 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_040217 (sealed 2026-10-28T04:02:17Z) ===
+SHA-256 integrity: PASS (ebe5a9a0bd4de359...)
+Cutoff window before seal: 1793158592 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793172563     232.8     2.0829     2.0168    +3.17%   +3.17%     2.0168    +3.17%   +3.17%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +3.17% | mean ramp +3.17% | mean frozen-at-seal 3.17 | mean frozen strict-future 3.17
+=== SEALED ENVELOPE: envelope_20261028_074803 (sealed 2026-10-28T07:48:03Z) ===
+SHA-256 integrity: PASS (91ac80d6e3bab863...)
+Cutoff window before seal: 1793172563 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_074803 (sealed 2026-10-28T07:48:03Z) ===
+SHA-256 integrity: PASS (91ac80d6e3bab863...)
+Cutoff window before seal: 1793172563 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793173654      18.2     7.6470     8.6122   -12.62%  -13.81%     8.6122   -12.62%  -14.69%
+Summary: causal wins 0/1 | frozen wins 0/1 | mean causal -12.62% | mean ramp -14.69% | mean frozen-at-seal -12.62 | mean frozen strict-future -13.81
+=== SEALED ENVELOPE: envelope_20261028_075646 (sealed 2026-10-28T07:56:46Z) ===
+SHA-256 integrity: PASS (bca8e6b7aec11046...)
+Cutoff window before seal: 1793173654 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_075646 (sealed 2026-10-28T07:56:46Z) ===
+SHA-256 integrity: PASS (bca8e6b7aec11046...)
+Cutoff window before seal: 1793173654 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793174190       8.9     3.0551     3.4156   -11.80%  +45.30%     3.4156   -11.80%  -15.47%
+Summary: causal wins 0/1 | frozen wins 0/1 | mean causal -11.80% | mean ramp -15.47% | mean frozen-at-seal -11.8 | mean frozen strict-future 45.3
+=== SEALED ENVELOPE: envelope_20261028_080519 (sealed 2026-10-28T08:05:19Z) ===
+SHA-256 integrity: PASS (036bced8cba3a1ef...)
+Cutoff window before seal: 1793174190 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_080519 (sealed 2026-10-28T08:05:19Z) ===
+SHA-256 integrity: PASS (036bced8cba3a1ef...)
+Cutoff window before seal: 1793174190 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793174737       9.1     2.2793     2.2679    +0.50%  +11.86%     2.2679    +0.50%   +0.50%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +0.50% | mean ramp +0.50% | mean frozen-at-seal 0.5 | mean frozen strict-future 11.86
+=== SEALED ENVELOPE: envelope_20261028_081251 (sealed 2026-10-28T08:12:51Z) ===
+SHA-256 integrity: PASS (a9a47fe810d7d7fb...)
+Cutoff window before seal: 1793174737 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_081251 (sealed 2026-10-28T08:12:51Z) ===
+SHA-256 integrity: PASS (a9a47fe810d7d7fb...)
+Cutoff window before seal: 1793174737 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793175191       7.6     2.1719     2.0940    +3.59%  -21.30%     2.0940    +3.59%   +3.59%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +3.59% | mean ramp +3.59% | mean frozen-at-seal 3.59 | mean frozen strict-future -21.3
+=== SEALED ENVELOPE: envelope_20261028_081951 (sealed 2026-10-28T08:19:51Z) ===
+SHA-256 integrity: PASS (1f7fca922e5dd671...)
+Cutoff window before seal: 1793175191 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_081951 (sealed 2026-10-28T08:19:51Z) ===
+SHA-256 integrity: PASS (1f7fca922e5dd671...)
+Cutoff window before seal: 1793175191 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793175560       6.2     1.9317     1.2877   +33.34%  +39.40%     1.2877   +33.34%  +33.34%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +33.34% | mean ramp +33.34% | mean frozen-at-seal 33.34 | mean frozen strict-future 39.4
+=== SEALED ENVELOPE: envelope_20261028_082445 (sealed 2026-10-28T08:24:45Z) ===
+SHA-256 integrity: PASS (279a983ee6286929...)
+Cutoff window before seal: 1793175560 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_082445 (sealed 2026-10-28T08:24:45Z) ===
+SHA-256 integrity: PASS (279a983ee6286929...)
+Cutoff window before seal: 1793175560 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793175866       5.1     2.6494     2.6430    +0.24%  -18.61%     2.6430    +0.24%   +0.24%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +0.24% | mean ramp +0.24% | mean frozen-at-seal 0.24 | mean frozen strict-future -18.61
+=== SEALED ENVELOPE: envelope_20261028_082943 (sealed 2026-10-28T08:29:43Z) ===
+SHA-256 integrity: PASS (8fb35088b8412d3e...)
+Cutoff window before seal: 1793175866 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_082943 (sealed 2026-10-28T08:29:43Z) ===
+SHA-256 integrity: PASS (8fb35088b8412d3e...)
+Cutoff window before seal: 1793175866 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793176155       4.8     2.5961     1.9501   +24.88%  -20.20%     1.9501   +24.88%  +24.88%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +24.88% | mean ramp +24.88% | mean frozen-at-seal 24.88 | mean frozen strict-future -20.2
+=== SEALED ENVELOPE: envelope_20261028_083334 (sealed 2026-10-28T08:33:34Z) ===
+SHA-256 integrity: PASS (448f92fdf0c5c488...)
+Cutoff window before seal: 1793176155 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_083334 (sealed 2026-10-28T08:33:34Z) ===
+SHA-256 integrity: PASS (448f92fdf0c5c488...)
+Cutoff window before seal: 1793176155 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793176431       4.6     2.7378     1.7355   +36.61%  +17.26%     1.7355   +36.61%  +36.61%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +36.61% | mean ramp +36.61% | mean frozen-at-seal 36.61 | mean frozen strict-future 17.26
+=== SEALED ENVELOPE: envelope_20261028_083820 (sealed 2026-10-28T08:38:20Z) ===
+SHA-256 integrity: PASS (691c969aacf62214...)
+Cutoff window before seal: 1793176431 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_083820 (sealed 2026-10-28T08:38:20Z) ===
+SHA-256 integrity: PASS (691c969aacf62214...)
+Cutoff window before seal: 1793176431 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793176689       4.3     2.6680     1.4108   +47.12%   +5.21%     1.4108   +47.12%  +47.12%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +47.12% | mean ramp +47.12% | mean frozen-at-seal 47.12 | mean frozen strict-future 5.21
+=== SEALED ENVELOPE: envelope_20261028_084310 (sealed 2026-10-28T08:43:10Z) ===
+SHA-256 integrity: PASS (0703542a6efca736...)
+Cutoff window before seal: 1793176689 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_084310 (sealed 2026-10-28T08:43:10Z) ===
+SHA-256 integrity: PASS (0703542a6efca736...)
+Cutoff window before seal: 1793176689 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793176987       5.0     2.9136     2.1751   +25.35%  -31.72%     2.1751   +25.35%  +25.35%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +25.35% | mean ramp +25.35% | mean frozen-at-seal 25.35 | mean frozen strict-future -31.72
+=== SEALED ENVELOPE: envelope_20261028_084804 (sealed 2026-10-28T08:48:04Z) ===
+SHA-256 integrity: PASS (a3701422b46c3f85...)
+Cutoff window before seal: 1793176987 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_084804 (sealed 2026-10-28T08:48:04Z) ===
+SHA-256 integrity: PASS (a3701422b46c3f85...)
+Cutoff window before seal: 1793176987 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793177279       4.9     2.9821     2.0465   +31.37%   +8.23%     2.0465   +31.37%  +31.37%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +31.37% | mean ramp +31.37% | mean frozen-at-seal 31.37 | mean frozen strict-future 8.23
+=== SEALED ENVELOPE: envelope_20261028_085358 (sealed 2026-10-28T08:53:58Z) ===
+SHA-256 integrity: PASS (862f0b325d64567f...)
+Cutoff window before seal: 1793177279 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_085358 (sealed 2026-10-28T08:53:58Z) ===
+SHA-256 integrity: PASS (862f0b325d64567f...)
+Cutoff window before seal: 1793177279 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793177608       5.5     2.7852     1.7671   +36.55%   -7.58%     1.7671   +36.55%  +36.55%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +36.55% | mean ramp +36.55% | mean frozen-at-seal 36.55 | mean frozen strict-future -7.58
+=== SEALED ENVELOPE: envelope_20261028_085900 (sealed 2026-10-28T08:59:00Z) ===
+SHA-256 integrity: PASS (a3532bc9d339e6bf...)
+Cutoff window before seal: 1793177608 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_085900 (sealed 2026-10-28T08:59:00Z) ===
+SHA-256 integrity: PASS (a3532bc9d339e6bf...)
+Cutoff window before seal: 1793177608 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793177927       5.3     3.5825     2.6866   +25.01%  +11.67%     2.6866   +25.01%  +25.01%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +25.01% | mean ramp +25.01% | mean frozen-at-seal 25.01 | mean frozen strict-future 11.67
+=== SEALED ENVELOPE: envelope_20261028_090351 (sealed 2026-10-28T09:03:51Z) ===
+SHA-256 integrity: PASS (da76b938c66baa17...)
+Cutoff window before seal: 1793177927 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_090351 (sealed 2026-10-28T09:03:51Z) ===
+SHA-256 integrity: PASS (da76b938c66baa17...)
+Cutoff window before seal: 1793177927 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793178235       5.1     3.4009     2.5133   +26.10%  -38.08%     2.5133   +26.10%  +26.10%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +26.10% | mean ramp +26.10% | mean frozen-at-seal 26.1 | mean frozen strict-future -38.08
+=== SEALED ENVELOPE: envelope_20261028_091043 (sealed 2026-10-28T09:10:43Z) ===
+SHA-256 integrity: PASS (71a9196ccb1a2121...)
+Cutoff window before seal: 1793178235 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_091043 (sealed 2026-10-28T09:10:43Z) ===
+SHA-256 integrity: PASS (71a9196ccb1a2121...)
+Cutoff window before seal: 1793178235 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793178655       7.0     3.7384     2.9979   +19.81%   +8.68%     2.9979   +19.81%  +19.81%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +19.81% | mean ramp +19.81% | mean frozen-at-seal 19.81 | mean frozen strict-future 8.68
+=== SEALED ENVELOPE: envelope_20261028_091936 (sealed 2026-10-28T09:19:36Z) ===
+SHA-256 integrity: PASS (6bb64119c5e9da2b...)
+Cutoff window before seal: 1793178655 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_091936 (sealed 2026-10-28T09:19:36Z) ===
+SHA-256 integrity: PASS (6bb64119c5e9da2b...)
+Cutoff window before seal: 1793178655 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793179155       8.3     3.1055     1.6782   +45.96%  +15.79%     1.6782   +45.96%  +45.96%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +45.96% | mean ramp +45.96% | mean frozen-at-seal 45.96 | mean frozen strict-future 15.79
+=== SEALED ENVELOPE: envelope_20261028_092846 (sealed 2026-10-28T09:28:46Z) ===
+SHA-256 integrity: PASS (b6946be92babc743...)
+Cutoff window before seal: 1793179155 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_092846 (sealed 2026-10-28T09:28:46Z) ===
+SHA-256 integrity: PASS (b6946be92babc743...)
+Cutoff window before seal: 1793179155 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793179692       8.9     3.3240     1.9497   +41.35%  +35.57%     1.9497   +41.34%  +41.34%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +41.34% | mean ramp +41.34% | mean frozen-at-seal 41.35 | mean frozen strict-future 35.57
+=== SEALED ENVELOPE: envelope_20261028_093956 (sealed 2026-10-28T09:39:56Z) ===
+SHA-256 integrity: PASS (45309317d9283708...)
+Cutoff window before seal: 1793179692 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_093956 (sealed 2026-10-28T09:39:56Z) ===
+SHA-256 integrity: PASS (45309317d9283708...)
+Cutoff window before seal: 1793179692 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793180392      11.7     3.3810     2.9274   +13.42%  -45.66%     2.9274   +13.42%  +13.42%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +13.42% | mean ramp +13.42% | mean frozen-at-seal 13.42 | mean frozen strict-future -45.66
+=== SEALED ENVELOPE: envelope_20261028_094957 (sealed 2026-10-28T09:49:57Z) ===
+SHA-256 integrity: PASS (361c4e3061ee9ef8...)
+Cutoff window before seal: 1793180392 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_094957 (sealed 2026-10-28T09:49:57Z) ===
+SHA-256 integrity: PASS (361c4e3061ee9ef8...)
+Cutoff window before seal: 1793180392 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793181001      10.2     3.5097     2.3703   +32.46%  -44.32%     2.3703   +32.46%  +32.46%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +32.46% | mean ramp +32.46% | mean frozen-at-seal 32.46 | mean frozen strict-future -44.32
+=== SEALED ENVELOPE: envelope_20261028_100605 (sealed 2026-10-28T10:06:05Z) ===
+SHA-256 integrity: PASS (27eb88e2d5db6046...)
+Cutoff window before seal: 1793181001 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_100605 (sealed 2026-10-28T10:06:05Z) ===
+SHA-256 integrity: PASS (27eb88e2d5db6046...)
+Cutoff window before seal: 1793181001 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793181945      15.7     4.0295     3.1188   +22.60%  -46.75%     3.1188   +22.60%  +22.60%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +22.60% | mean ramp +22.60% | mean frozen-at-seal 22.6 | mean frozen strict-future -46.75
+=== SEALED ENVELOPE: envelope_20261028_102248 (sealed 2026-10-28T10:22:48Z) ===
+SHA-256 integrity: PASS (1f9cdcfe10f9ed37...)
+Cutoff window before seal: 1793181945 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_102248 (sealed 2026-10-28T10:22:48Z) ===
+SHA-256 integrity: PASS (1f9cdcfe10f9ed37...)
+Cutoff window before seal: 1793181945 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793183007      17.7     3.7963     2.8092   +26.00%  +16.28%     2.8092   +26.00%  +26.00%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +26.00% | mean ramp +26.00% | mean frozen-at-seal 26.0 | mean frozen strict-future 16.28
+=== SEALED ENVELOPE: envelope_20261028_104606 (sealed 2026-10-28T10:46:06Z) ===
+SHA-256 integrity: PASS (d97b5e3cf430f604...)
+Cutoff window before seal: 1793183007 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_104606 (sealed 2026-10-28T10:46:06Z) ===
+SHA-256 integrity: PASS (d97b5e3cf430f604...)
+Cutoff window before seal: 1793183007 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793184321      21.9     2.4596     1.5747   +35.98%   +6.28%     1.5747   +35.98%  +35.96%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.98% | mean ramp +35.96% | mean frozen-at-seal 35.98 | mean frozen strict-future 6.28
+=== SEALED ENVELOPE: envelope_20261028_111250 (sealed 2026-10-28T11:12:50Z) ===
+SHA-256 integrity: PASS (60d92fd6caa4828d...)
+Cutoff window before seal: 1793184321 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_111250 (sealed 2026-10-28T11:12:50Z) ===
+SHA-256 integrity: PASS (60d92fd6caa4828d...)
+Cutoff window before seal: 1793184321 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793185939      27.0     2.5635     1.8590   +27.48%   -2.91%     1.8590   +27.48%  +27.54%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +27.48% | mean ramp +27.54% | mean frozen-at-seal 27.48 | mean frozen strict-future -2.91
+=== SEALED ENVELOPE: envelope_20261028_112958 (sealed 2026-10-28T11:29:58Z) ===
+SHA-256 integrity: PASS (373d0426adee8d47...)
+Cutoff window before seal: 1793185939 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_112958 (sealed 2026-10-28T11:29:58Z) ===
+SHA-256 integrity: PASS (373d0426adee8d47...)
+Cutoff window before seal: 1793185939 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793186975      17.3     2.5842     1.7722   +31.42%  +11.02%     1.7777   +31.21%  +31.16%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +31.21% | mean ramp +31.16% | mean frozen-at-seal 31.42 | mean frozen strict-future 11.02
+=== SEALED ENVELOPE: envelope_20261028_114404 (sealed 2026-10-28T11:44:04Z) ===
+SHA-256 integrity: PASS (3354471eb8dac854...)
+Cutoff window before seal: 1793186975 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_114404 (sealed 2026-10-28T11:44:04Z) ===
+SHA-256 integrity: PASS (3354471eb8dac854...)
+Cutoff window before seal: 1793186975 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793187834      14.3     2.3576     1.4712   +37.60%   +8.93%     1.4712   +37.60%  +37.83%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +37.60% | mean ramp +37.83% | mean frozen-at-seal 37.6 | mean frozen strict-future 8.93
+=== SEALED ENVELOPE: envelope_20261028_115823 (sealed 2026-10-28T11:58:23Z) ===
+SHA-256 integrity: PASS (1f7dd7b44d1ba0e6...)
+Cutoff window before seal: 1793187834 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_115823 (sealed 2026-10-28T11:58:23Z) ===
+SHA-256 integrity: PASS (1f7dd7b44d1ba0e6...)
+Cutoff window before seal: 1793187834 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793188680      14.1     2.4347     1.3406   +44.94%  +29.40%     1.3406   +44.94%  +45.44%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +44.94% | mean ramp +45.44% | mean frozen-at-seal 44.94 | mean frozen strict-future 29.4
+=== SEALED ENVELOPE: envelope_20261028_121135 (sealed 2026-10-28T12:11:35Z) ===
+SHA-256 integrity: PASS (73c4e832c752cfee...)
+Cutoff window before seal: 1793188680 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_121135 (sealed 2026-10-28T12:11:35Z) ===
+SHA-256 integrity: PASS (73c4e832c752cfee...)
+Cutoff window before seal: 1793188680 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793189482      13.4     2.4664     1.1390   +53.82%   +7.65%     1.1390   +53.82%  +53.75%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +53.82% | mean ramp +53.75% | mean frozen-at-seal 53.82 | mean frozen strict-future 7.65
+=== SEALED ENVELOPE: envelope_20261028_122251 (sealed 2026-10-28T12:22:51Z) ===
+SHA-256 integrity: PASS (144e823d06e8054f...)
+Cutoff window before seal: 1793189482 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_122251 (sealed 2026-10-28T12:22:51Z) ===
+SHA-256 integrity: PASS (144e823d06e8054f...)
+Cutoff window before seal: 1793189482 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793190155      11.2     2.5410     1.3837   +45.55%  -32.25%     1.3837   +45.55%  +44.64%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +45.55% | mean ramp +44.64% | mean frozen-at-seal 45.55 | mean frozen strict-future -32.25
+=== SEALED ENVELOPE: envelope_20261028_124317 (sealed 2026-10-28T12:43:17Z) ===
+SHA-256 integrity: PASS (c6de89284da3a069...)
+Cutoff window before seal: 1793190155 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_124317 (sealed 2026-10-28T12:43:17Z) ===
+SHA-256 integrity: PASS (c6de89284da3a069...)
+Cutoff window before seal: 1793190155 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793191385      20.5     2.8145     1.6335   +41.96%   +2.05%     1.6591   +41.05%  +41.01%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +41.05% | mean ramp +41.01% | mean frozen-at-seal 41.96 | mean frozen strict-future 2.05
+=== SEALED ENVELOPE: envelope_20261028_131929 (sealed 2026-10-28T13:19:29Z) ===
+SHA-256 integrity: PASS (2c226607661c2904...)
+Cutoff window before seal: 1793191385 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_131929 (sealed 2026-10-28T13:19:29Z) ===
+SHA-256 integrity: PASS (2c226607661c2904...)
+Cutoff window before seal: 1793191385 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793193558      36.2     3.5903     2.4319   +32.26%  +18.87%     2.4319   +32.26%  +32.74%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +32.26% | mean ramp +32.74% | mean frozen-at-seal 32.26 | mean frozen strict-future 18.87
+=== SEALED ENVELOPE: envelope_20261028_140823 (sealed 2026-10-28T14:08:23Z) ===
+SHA-256 integrity: PASS (dc82b571a7c99914...)
+Cutoff window before seal: 1793193558 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_140823 (sealed 2026-10-28T14:08:23Z) ===
+SHA-256 integrity: PASS (dc82b571a7c99914...)
+Cutoff window before seal: 1793193558 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793196498      49.0     4.1582     3.6034   +13.34%   +5.44%     3.6034   +13.34%  +12.77%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +13.34% | mean ramp +12.77% | mean frozen-at-seal 13.34 | mean frozen strict-future 5.44
+=== SEALED ENVELOPE: envelope_20261028_144147 (sealed 2026-10-28T14:41:47Z) ===
+SHA-256 integrity: PASS (46792ee172135f26...)
+Cutoff window before seal: 1793196498 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_144147 (sealed 2026-10-28T14:41:47Z) ===
+SHA-256 integrity: PASS (46792ee172135f26...)
+Cutoff window before seal: 1793196498 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793198478      33.0     4.0520     3.4378   +15.16%  +15.84%     3.4378   +15.16%  +15.36%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +15.16% | mean ramp +15.36% | mean frozen-at-seal 15.16 | mean frozen strict-future 15.84
+=== SEALED ENVELOPE: envelope_20261028_145904 (sealed 2026-10-28T14:59:04Z) ===
+SHA-256 integrity: PASS (d463a32d26bf8cc7...)
+Cutoff window before seal: 1793198478 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_145904 (sealed 2026-10-28T14:59:04Z) ===
+SHA-256 integrity: PASS (d463a32d26bf8cc7...)
+Cutoff window before seal: 1793198478 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793199513      17.2     4.0401     3.0291   +25.02%  +13.42%     3.0291   +25.02%  +25.32%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +25.02% | mean ramp +25.32% | mean frozen-at-seal 25.02 | mean frozen strict-future 13.42
+=== SEALED ENVELOPE: envelope_20261028_152242 (sealed 2026-10-28T15:22:42Z) ===
+SHA-256 integrity: PASS (d874c75b875f7649...)
+Cutoff window before seal: 1793199513 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_152242 (sealed 2026-10-28T15:22:42Z) ===
+SHA-256 integrity: PASS (d874c75b875f7649...)
+Cutoff window before seal: 1793199513 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793200991      24.6     3.9726     2.7806   +30.01%  +16.17%     2.7806   +30.01%  +30.68%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +30.01% | mean ramp +30.68% | mean frozen-at-seal 30.01 | mean frozen strict-future 16.17
+=== SEALED ENVELOPE: envelope_20261028_154959 (sealed 2026-10-28T15:49:59Z) ===
+SHA-256 integrity: PASS (85b3ce96fc76ca41...)
+Cutoff window before seal: 1793200991 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_154959 (sealed 2026-10-28T15:49:59Z) ===
+SHA-256 integrity: PASS (85b3ce96fc76ca41...)
+Cutoff window before seal: 1793200991 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793202577      26.4     3.1793     1.6134   +49.25%  +25.92%     1.6134   +49.25%  +48.50%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +49.25% | mean ramp +48.50% | mean frozen-at-seal 49.25 | mean frozen strict-future 25.92
+=== SEALED ENVELOPE: envelope_20261028_161124 (sealed 2026-10-28T16:11:24Z) ===
+SHA-256 integrity: PASS (aa6103605e676e28...)
+Cutoff window before seal: 1793202577 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_161124 (sealed 2026-10-28T16:11:24Z) ===
+SHA-256 integrity: PASS (aa6103605e676e28...)
+Cutoff window before seal: 1793202577 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793203876      21.6     3.2052     1.9169   +40.19%   +7.64%     1.9003   +40.71%  +40.63%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +40.71% | mean ramp +40.63% | mean frozen-at-seal 40.19 | mean frozen strict-future 7.64
+=== SEALED ENVELOPE: envelope_20261028_163236 (sealed 2026-10-28T16:32:36Z) ===
+SHA-256 integrity: PASS (28c8d17a6de66fc9...)
+Cutoff window before seal: 1793203876 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_163236 (sealed 2026-10-28T16:32:36Z) ===
+SHA-256 integrity: PASS (28c8d17a6de66fc9...)
+Cutoff window before seal: 1793203876 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793205162      21.4     2.7519     1.7351   +36.95%   -5.41%     1.7351   +36.95%  +36.82%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +36.95% | mean ramp +36.82% | mean frozen-at-seal 36.95 | mean frozen strict-future -5.41
+=== SEALED ENVELOPE: envelope_20261028_171238 (sealed 2026-10-28T17:12:38Z) ===
+SHA-256 integrity: PASS (2588e835bd80fa4b...)
+Cutoff window before seal: 1793205162 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_171238 (sealed 2026-10-28T17:12:38Z) ===
+SHA-256 integrity: PASS (2588e835bd80fa4b...)
+Cutoff window before seal: 1793205162 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793207535      39.5     3.4202     3.0898    +9.66%   +0.55%     3.0898    +9.66%   +9.32%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +9.66% | mean ramp +9.32% | mean frozen-at-seal 9.66 | mean frozen strict-future 0.55
+=== SEALED ENVELOPE: envelope_20261028_173237 (sealed 2026-10-28T17:32:37Z) ===
+SHA-256 integrity: PASS (06eacc5b79335ca4...)
+Cutoff window before seal: 1793207535 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_173237 (sealed 2026-10-28T17:32:37Z) ===
+SHA-256 integrity: PASS (06eacc5b79335ca4...)
+Cutoff window before seal: 1793207535 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793208751      20.3     3.4429     2.5178   +26.87%  +28.46%     2.5178   +26.87%  +26.96%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +26.87% | mean ramp +26.96% | mean frozen-at-seal 26.87 | mean frozen strict-future 28.46
+=== SEALED ENVELOPE: envelope_20261028_175002 (sealed 2026-10-28T17:50:02Z) ===
+SHA-256 integrity: PASS (e10e03a1379712e8...)
+Cutoff window before seal: 1793208751 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_175002 (sealed 2026-10-28T17:50:02Z) ===
+SHA-256 integrity: PASS (e10e03a1379712e8...)
+Cutoff window before seal: 1793208751 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793209790      17.3     3.2419     1.6006   +50.63%  +40.82%     1.6006   +50.63%  +50.68%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +50.63% | mean ramp +50.68% | mean frozen-at-seal 50.63 | mean frozen strict-future 40.82
+=== SEALED ENVELOPE: envelope_20261028_181313 (sealed 2026-10-28T18:13:13Z) ===
+SHA-256 integrity: PASS (fdc1350f060275fa...)
+Cutoff window before seal: 1793209790 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_181313 (sealed 2026-10-28T18:13:13Z) ===
+SHA-256 integrity: PASS (fdc1350f060275fa...)
+Cutoff window before seal: 1793209790 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793211168      23.0     3.0998     1.4112   +54.48%   +5.68%     1.4112   +54.47%  +53.24%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +54.47% | mean ramp +53.24% | mean frozen-at-seal 54.48 | mean frozen strict-future 5.68
+=== SEALED ENVELOPE: envelope_20261028_184352 (sealed 2026-10-28T18:43:52Z) ===
+SHA-256 integrity: PASS (6845ed7edbe85ec9...)
+Cutoff window before seal: 1793211168 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_184352 (sealed 2026-10-28T18:43:52Z) ===
+SHA-256 integrity: PASS (6845ed7edbe85ec9...)
+Cutoff window before seal: 1793211168 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793213021      30.9     3.1368     1.9416   +38.10%   +0.73%     1.9416   +38.10%  +37.83%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +38.10% | mean ramp +37.83% | mean frozen-at-seal 38.1 | mean frozen strict-future 0.73
+=== SEALED ENVELOPE: envelope_20261028_191648 (sealed 2026-10-28T19:16:48Z) ===
+SHA-256 integrity: PASS (b06aabaf00a93af6...)
+Cutoff window before seal: 1793213021 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_191648 (sealed 2026-10-28T19:16:48Z) ===
+SHA-256 integrity: PASS (b06aabaf00a93af6...)
+Cutoff window before seal: 1793213021 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793215047      33.8     3.0892     1.7090   +44.68%  +28.35%     1.7090   +44.68%  +44.98%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +44.68% | mean ramp +44.98% | mean frozen-at-seal 44.68 | mean frozen strict-future 28.35
+=== SEALED ENVELOPE: envelope_20261028_194527 (sealed 2026-10-28T19:45:27Z) ===
+SHA-256 integrity: PASS (d3ed492e2d809aa0...)
+Cutoff window before seal: 1793215047 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_194527 (sealed 2026-10-28T19:45:27Z) ===
+SHA-256 integrity: PASS (d3ed492e2d809aa0...)
+Cutoff window before seal: 1793215047 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793216680      27.2     3.8654     2.7892   +27.84%   +9.29%     2.7892   +27.84%  +28.12%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +27.84% | mean ramp +28.12% | mean frozen-at-seal 27.84 | mean frozen strict-future 9.29
+=== SEALED ENVELOPE: envelope_20261028_200634 (sealed 2026-10-28T20:06:34Z) ===
+SHA-256 integrity: PASS (671ce409e7b65919...)
+Cutoff window before seal: 1793216680 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_200634 (sealed 2026-10-28T20:06:34Z) ===
+SHA-256 integrity: PASS (671ce409e7b65919...)
+Cutoff window before seal: 1793216680 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793217961      21.4     4.2027     3.3554   +20.16%   +4.42%     3.3554   +20.16%  +20.00%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +20.16% | mean ramp +20.00% | mean frozen-at-seal 20.16 | mean frozen strict-future 4.42
+=== SEALED ENVELOPE: envelope_20261028_202458 (sealed 2026-10-28T20:24:58Z) ===
+SHA-256 integrity: PASS (b934ffca326be3ae...)
+Cutoff window before seal: 1793217961 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_202458 (sealed 2026-10-28T20:24:58Z) ===
+SHA-256 integrity: PASS (b934ffca326be3ae...)
+Cutoff window before seal: 1793217961 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793219118      19.3     3.3361     2.1680   +35.01%  -20.16%     2.1680   +35.01%  +34.56%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.01% | mean ramp +34.56% | mean frozen-at-seal 35.01 | mean frozen strict-future -20.16
+=== SEALED ENVELOPE: envelope_20261028_210329 (sealed 2026-10-28T21:03:29Z) ===
+SHA-256 integrity: PASS (e28558b04eee6888...)
+Cutoff window before seal: 1793219118 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_210329 (sealed 2026-10-28T21:03:29Z) ===
+SHA-256 integrity: PASS (e28558b04eee6888...)
+Cutoff window before seal: 1793219118 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793221392      37.9     3.3620     2.9088   +13.48%  -24.76%     2.9088   +13.48%  +12.83%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +13.48% | mean ramp +12.83% | mean frozen-at-seal 13.48 | mean frozen strict-future -24.76
+=== SEALED ENVELOPE: envelope_20261028_213238 (sealed 2026-10-28T21:32:38Z) ===
+SHA-256 integrity: PASS (ab0fd03ed7c0d476...)
+Cutoff window before seal: 1793221392 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_213238 (sealed 2026-10-28T21:32:38Z) ===
+SHA-256 integrity: PASS (ab0fd03ed7c0d476...)
+Cutoff window before seal: 1793221392 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793223171      29.6     2.6996     2.0925   +22.49%   +1.05%     2.0925   +22.49%  +22.30%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +22.49% | mean ramp +22.30% | mean frozen-at-seal 22.49 | mean frozen strict-future 1.05
+=== SEALED ENVELOPE: envelope_20261028_214645 (sealed 2026-10-28T21:46:45Z) ===
+SHA-256 integrity: PASS (69924751f2fd9692...)
+Cutoff window before seal: 1793223171 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_214645 (sealed 2026-10-28T21:46:45Z) ===
+SHA-256 integrity: PASS (69924751f2fd9692...)
+Cutoff window before seal: 1793223171 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793224021      14.2     2.7064     1.6619   +38.59%  +12.07%     1.6619   +38.59%  +38.94%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +38.59% | mean ramp +38.94% | mean frozen-at-seal 38.59 | mean frozen strict-future 12.07
+=== SEALED ENVELOPE: envelope_20261028_220002 (sealed 2026-10-28T22:00:02Z) ===
+SHA-256 integrity: PASS (8929785fb60f5b26...)
+Cutoff window before seal: 1793224021 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_220002 (sealed 2026-10-28T22:00:02Z) ===
+SHA-256 integrity: PASS (8929785fb60f5b26...)
+Cutoff window before seal: 1793224021 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793224795      12.9     2.8562     1.5082   +47.20%   +9.23%     1.5082   +47.20%  +47.53%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +47.20% | mean ramp +47.53% | mean frozen-at-seal 47.2 | mean frozen strict-future 9.23
+=== SEALED ENVELOPE: envelope_20261028_221910 (sealed 2026-10-28T22:19:10Z) ===
+SHA-256 integrity: PASS (51a26d3f965de073...)
+Cutoff window before seal: 1793224795 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_221910 (sealed 2026-10-28T22:19:10Z) ===
+SHA-256 integrity: PASS (51a26d3f965de073...)
+Cutoff window before seal: 1793224795 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793225918      18.7     3.1795     2.0115   +36.74%  +16.71%     2.0181   +36.53%  +36.52%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +36.53% | mean ramp +36.52% | mean frozen-at-seal 36.74 | mean frozen strict-future 16.71
+=== SEALED ENVELOPE: envelope_20261028_223231 (sealed 2026-10-28T22:32:31Z) ===
+SHA-256 integrity: PASS (fa40e82fcf8297b4...)
+Cutoff window before seal: 1793225918 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_223231 (sealed 2026-10-28T22:32:31Z) ===
+SHA-256 integrity: PASS (fa40e82fcf8297b4...)
+Cutoff window before seal: 1793225918 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793226771      14.2     3.3272     2.1389   +35.71%  +26.11%     2.1389   +35.71%  +35.81%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.71% | mean ramp +35.81% | mean frozen-at-seal 35.71 | mean frozen strict-future 26.11
+=== SEALED ENVELOPE: envelope_20261028_231107 (sealed 2026-10-28T23:11:07Z) ===
+SHA-256 integrity: PASS (d76131e0df69f18a...)
+Cutoff window before seal: 1793226771 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261028_231107 (sealed 2026-10-28T23:11:07Z) ===
+SHA-256 integrity: PASS (d76131e0df69f18a...)
+Cutoff window before seal: 1793226771 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793229032      37.7     3.0157     2.3208   +23.04%  -22.59%     2.3208   +23.04%  +22.42%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +23.04% | mean ramp +22.42% | mean frozen-at-seal 23.04 | mean frozen strict-future -22.59
+=== SEALED ENVELOPE: envelope_20261029_005913 (sealed 2026-10-29T00:59:13Z) ===
+SHA-256 integrity: PASS (0072463ae8a66d78...)
+Cutoff window before seal: 1793229032 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_005913 (sealed 2026-10-29T00:59:13Z) ===
+SHA-256 integrity: PASS (0072463ae8a66d78...)
+Cutoff window before seal: 1793229032 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793235582     109.2     2.8852     3.0533    -5.83%   -4.07%     3.0533    -5.83%   -6.04%
+Summary: causal wins 0/1 | frozen wins 0/1 | mean causal -5.83% | mean ramp -6.04% | mean frozen-at-seal -5.83 | mean frozen strict-future -4.07
+=== SEALED ENVELOPE: envelope_20261029_012212 (sealed 2026-10-29T01:22:12Z) ===
+SHA-256 integrity: PASS (f8bc3802f18ab44f...)
+Cutoff window before seal: 1793235582 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_012212 (sealed 2026-10-29T01:22:12Z) ===
+SHA-256 integrity: PASS (f8bc3802f18ab44f...)
+Cutoff window before seal: 1793235582 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793236924      22.4     3.3234     2.6171   +21.25%   -5.56%     2.6171   +21.25%  +20.62%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +21.25% | mean ramp +20.62% | mean frozen-at-seal 21.25 | mean frozen strict-future -5.56
+=== SEALED ENVELOPE: envelope_20261029_014958 (sealed 2026-10-29T01:49:58Z) ===
+SHA-256 integrity: PASS (fe6ee6a70c275727...)
+Cutoff window before seal: 1793236924 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_014958 (sealed 2026-10-29T01:49:58Z) ===
+SHA-256 integrity: PASS (fe6ee6a70c275727...)
+Cutoff window before seal: 1793236924 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793238580      27.6     3.0971     1.7786   +42.57%  +21.14%     1.7786   +42.57%  +42.25%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +42.57% | mean ramp +42.25% | mean frozen-at-seal 42.57 | mean frozen strict-future 21.14
+=== SEALED ENVELOPE: envelope_20261029_022438 (sealed 2026-10-29T02:24:38Z) ===
+SHA-256 integrity: PASS (61a6598b9f3a2448...)
+Cutoff window before seal: 1793238580 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_022438 (sealed 2026-10-29T02:24:38Z) ===
+SHA-256 integrity: PASS (61a6598b9f3a2448...)
+Cutoff window before seal: 1793238580 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793240682      35.0     3.3788     2.3648   +30.01%   -4.47%     2.3648   +30.01%  +29.62%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +30.01% | mean ramp +29.62% | mean frozen-at-seal 30.01 | mean frozen strict-future -4.47
+=== SEALED ENVELOPE: envelope_20261029_024359 (sealed 2026-10-29T02:43:59Z) ===
+SHA-256 integrity: PASS (7d5f52c09be855cd...)
+Cutoff window before seal: 1793240682 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_024359 (sealed 2026-10-29T02:43:59Z) ===
+SHA-256 integrity: PASS (7d5f52c09be855cd...)
+Cutoff window before seal: 1793240682 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793241830      19.1     3.3636     2.1748   +35.34%   -2.26%     2.1748   +35.34%  +34.94%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.34% | mean ramp +34.94% | mean frozen-at-seal 35.34 | mean frozen strict-future -2.26
+=== SEALED ENVELOPE: envelope_20261029_030521 (sealed 2026-10-29T03:05:21Z) ===
+SHA-256 integrity: PASS (c812089dae3ec38b...)
+Cutoff window before seal: 1793241830 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_030521 (sealed 2026-10-29T03:05:21Z) ===
+SHA-256 integrity: PASS (c812089dae3ec38b...)
+Cutoff window before seal: 1793241830 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793243119      21.5     3.1680     1.9914   +37.14%  -14.89%     1.9914   +37.14%  +36.55%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +37.14% | mean ramp +36.55% | mean frozen-at-seal 37.14 | mean frozen strict-future -14.89
+=== SEALED ENVELOPE: envelope_20261029_032239 (sealed 2026-10-29T03:22:39Z) ===
+SHA-256 integrity: PASS (aeafd5fb7c18e7cf...)
+Cutoff window before seal: 1793243119 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_032239 (sealed 2026-10-29T03:22:39Z) ===
+SHA-256 integrity: PASS (aeafd5fb7c18e7cf...)
+Cutoff window before seal: 1793243119 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793244158      17.3     3.0989     1.6085   +48.09%  -13.71%     1.6085   +48.09%  +47.65%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +48.09% | mean ramp +47.65% | mean frozen-at-seal 48.09 | mean frozen strict-future -13.71
+=== SEALED ENVELOPE: envelope_20261029_034404 (sealed 2026-10-29T03:44:04Z) ===
+SHA-256 integrity: PASS (81432557784e1e84...)
+Cutoff window before seal: 1793244158 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_034404 (sealed 2026-10-29T03:44:04Z) ===
+SHA-256 integrity: PASS (81432557784e1e84...)
+Cutoff window before seal: 1793244158 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793245401      20.7     2.8766     1.5313   +46.77%   +2.87%     1.5313   +46.77%  +46.49%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +46.77% | mean ramp +46.49% | mean frozen-at-seal 46.77 | mean frozen strict-future 2.87
+=== SEALED ENVELOPE: envelope_20261029_035422 (sealed 2026-10-29T03:54:22Z) ===
+SHA-256 integrity: PASS (827a0aee31711640...)
+Cutoff window before seal: 1793245401 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_035422 (sealed 2026-10-29T03:54:22Z) ===
+SHA-256 integrity: PASS (827a0aee31711640...)
+Cutoff window before seal: 1793245401 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793246066      11.1     3.1358     1.6892   +46.13%  -14.86%     1.6892   +46.13%  +45.99%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +46.13% | mean ramp +45.99% | mean frozen-at-seal 46.13 | mean frozen strict-future -14.86
+=== SEALED ENVELOPE: envelope_20261029_040628 (sealed 2026-10-29T04:06:28Z) ===
+SHA-256 integrity: PASS (3ce2f19d98f7d327...)
+Cutoff window before seal: 1793246066 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_040628 (sealed 2026-10-29T04:06:28Z) ===
+SHA-256 integrity: PASS (3ce2f19d98f7d327...)
+Cutoff window before seal: 1793246066 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793246789      12.1     3.1926     2.2341   +30.02%   +1.20%     2.1921   +31.34%  +31.31%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +31.34% | mean ramp +31.31% | mean frozen-at-seal 30.02 | mean frozen strict-future 1.2
+=== SEALED ENVELOPE: envelope_20261029_042137 (sealed 2026-10-29T04:21:37Z) ===
+SHA-256 integrity: PASS (5e00f2485c68e648...)
+Cutoff window before seal: 1793246789 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_042137 (sealed 2026-10-29T04:21:37Z) ===
+SHA-256 integrity: PASS (5e00f2485c68e648...)
+Cutoff window before seal: 1793246789 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793247679      14.8     3.8684     3.6147    +6.56%  -22.64%     3.6147    +6.56%   +5.67%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +6.56% | mean ramp +5.67% | mean frozen-at-seal 6.56 | mean frozen strict-future -22.64
+=== SEALED ENVELOPE: envelope_20261029_043459 (sealed 2026-10-29T04:34:59Z) ===
+SHA-256 integrity: PASS (5b292b113b31af35...)
+Cutoff window before seal: 1793247679 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_043459 (sealed 2026-10-29T04:34:59Z) ===
+SHA-256 integrity: PASS (5b292b113b31af35...)
+Cutoff window before seal: 1793247679 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793248489      13.5     3.3225     2.6672   +19.72%  -15.65%     2.6672   +19.72%  +19.75%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +19.72% | mean ramp +19.75% | mean frozen-at-seal 19.72 | mean frozen strict-future -15.65
+=== SEALED ENVELOPE: envelope_20261029_044708 (sealed 2026-10-29T04:47:08Z) ===
+SHA-256 integrity: PASS (b9007c11cce5b105...)
+Cutoff window before seal: 1793248489 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_044708 (sealed 2026-10-29T04:47:08Z) ===
+SHA-256 integrity: PASS (b9007c11cce5b105...)
+Cutoff window before seal: 1793248489 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793249193      11.7     2.7664     1.7715   +35.97%  -57.36%     1.7715   +35.96%  +35.09%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.96% | mean ramp +35.09% | mean frozen-at-seal 35.97 | mean frozen strict-future -57.36
+=== SEALED ENVELOPE: envelope_20261029_051025 (sealed 2026-10-29T05:10:25Z) ===
+SHA-256 integrity: PASS (f2c8f9400eb23708...)
+Cutoff window before seal: 1793249193 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_051025 (sealed 2026-10-29T05:10:25Z) ===
+SHA-256 integrity: PASS (f2c8f9400eb23708...)
+Cutoff window before seal: 1793249193 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793250626      23.9     2.6745     1.7598   +34.20%  -12.55%     1.7598   +34.20%  +33.86%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +34.20% | mean ramp +33.86% | mean frozen-at-seal 34.2 | mean frozen strict-future -12.55
+=== SEALED ENVELOPE: envelope_20261029_053601 (sealed 2026-10-29T05:36:01Z) ===
+SHA-256 integrity: PASS (a9d7b47808dc7efa...)
+Cutoff window before seal: 1793250626 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_053601 (sealed 2026-10-29T05:36:01Z) ===
+SHA-256 integrity: PASS (a9d7b47808dc7efa...)
+Cutoff window before seal: 1793250626 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793252164      25.6     3.1303     2.2934   +26.74%  +20.84%     2.2934   +26.74%  +26.90%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +26.74% | mean ramp +26.90% | mean frozen-at-seal 26.74 | mean frozen strict-future 20.84
+=== SEALED ENVELOPE: envelope_20261029_054909 (sealed 2026-10-29T05:49:09Z) ===
+SHA-256 integrity: PASS (f3c86e1f7ea213fc...)
+Cutoff window before seal: 1793252164 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_054909 (sealed 2026-10-29T05:49:09Z) ===
+SHA-256 integrity: PASS (f3c86e1f7ea213fc...)
+Cutoff window before seal: 1793252164 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793252930      12.8     3.1017     1.3695   +55.85%  -42.58%     1.3695   +55.85%  +54.76%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +55.85% | mean ramp +54.76% | mean frozen-at-seal 55.85 | mean frozen strict-future -42.58
+=== SEALED ENVELOPE: envelope_20261029_061122 (sealed 2026-10-29T06:11:22Z) ===
+SHA-256 integrity: PASS (79bc6d6a5c23abbb...)
+Cutoff window before seal: 1793252930 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_061122 (sealed 2026-10-29T06:11:22Z) ===
+SHA-256 integrity: PASS (79bc6d6a5c23abbb...)
+Cutoff window before seal: 1793252930 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793254248      22.0     3.1485     1.9610   +37.72%   -1.60%     1.9610   +37.72%  +37.61%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +37.72% | mean ramp +37.61% | mean frozen-at-seal 37.72 | mean frozen strict-future -1.6
+=== SEALED ENVELOPE: envelope_20261029_063150 (sealed 2026-10-29T06:31:50Z) ===
+SHA-256 integrity: PASS (b39173ebe2d8c3ba...)
+Cutoff window before seal: 1793254248 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_063150 (sealed 2026-10-29T06:31:50Z) ===
+SHA-256 integrity: PASS (b39173ebe2d8c3ba...)
+Cutoff window before seal: 1793254248 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793255488      20.7     2.9463     1.2359   +58.05%  +19.77%     1.2359   +58.05%  +58.16%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +58.05% | mean ramp +58.16% | mean frozen-at-seal 58.05 | mean frozen strict-future 19.77
+=== SEALED ENVELOPE: envelope_20261029_065238 (sealed 2026-10-29T06:52:38Z) ===
+SHA-256 integrity: PASS (1b2cfaefae697e39...)
+Cutoff window before seal: 1793255488 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_065238 (sealed 2026-10-29T06:52:38Z) ===
+SHA-256 integrity: PASS (1b2cfaefae697e39...)
+Cutoff window before seal: 1793255488 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793256729      20.7     3.6702     2.7676   +24.59%   -4.41%     2.7676   +24.59%  +24.44%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +24.59% | mean ramp +24.44% | mean frozen-at-seal 24.59 | mean frozen strict-future -4.41
+=== SEALED ENVELOPE: envelope_20261029_070808 (sealed 2026-10-29T07:08:08Z) ===
+SHA-256 integrity: PASS (7fa11d0b18731706...)
+Cutoff window before seal: 1793256729 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_070808 (sealed 2026-10-29T07:08:08Z) ===
+SHA-256 integrity: PASS (7fa11d0b18731706...)
+Cutoff window before seal: 1793256729 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793257663      15.6     3.5702     2.7835   +22.03%  +29.34%     2.7835   +22.04%  +22.16%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +22.04% | mean ramp +22.16% | mean frozen-at-seal 22.03 | mean frozen strict-future 29.34
+=== SEALED ENVELOPE: envelope_20261029_072130 (sealed 2026-10-29T07:21:30Z) ===
+SHA-256 integrity: PASS (349b99afd265fb8f...)
+Cutoff window before seal: 1793257663 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_072130 (sealed 2026-10-29T07:21:30Z) ===
+SHA-256 integrity: PASS (349b99afd265fb8f...)
+Cutoff window before seal: 1793257663 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793258470      13.4     2.7088     1.9281   +28.82%   +7.62%     1.9281   +28.82%  +29.02%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +28.82% | mean ramp +29.02% | mean frozen-at-seal 28.82 | mean frozen strict-future 7.62
+=== SEALED ENVELOPE: envelope_20261029_073255 (sealed 2026-10-29T07:32:55Z) ===
+SHA-256 integrity: PASS (ec128ac6f5dc02e2...)
+Cutoff window before seal: 1793258470 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_073255 (sealed 2026-10-29T07:32:55Z) ===
+SHA-256 integrity: PASS (ec128ac6f5dc02e2...)
+Cutoff window before seal: 1793258470 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793259173      11.7     2.7494     1.3011   +52.68%  +35.87%     1.3011   +52.68%  +52.39%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +52.68% | mean ramp +52.39% | mean frozen-at-seal 52.68 | mean frozen strict-future 35.87
+=== SEALED ENVELOPE: envelope_20261029_074604 (sealed 2026-10-29T07:46:04Z) ===
+SHA-256 integrity: PASS (dbdbdfeba16bbb61...)
+Cutoff window before seal: 1793259173 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_074604 (sealed 2026-10-29T07:46:04Z) ===
+SHA-256 integrity: PASS (dbdbdfeba16bbb61...)
+Cutoff window before seal: 1793259173 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793259952      13.0     2.7393     1.4254   +47.96%   -3.81%     1.4254   +47.96%  +47.89%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +47.96% | mean ramp +47.89% | mean frozen-at-seal 47.96 | mean frozen strict-future -3.81
+=== SEALED ENVELOPE: envelope_20261029_080013 (sealed 2026-10-29T08:00:13Z) ===
+SHA-256 integrity: PASS (dff424a28568e952...)
+Cutoff window before seal: 1793259952 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_080013 (sealed 2026-10-29T08:00:13Z) ===
+SHA-256 integrity: PASS (dff424a28568e952...)
+Cutoff window before seal: 1793259952 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793260818      14.4     2.8320     1.2733   +55.04%  +29.34%     1.2733   +55.04%  +55.29%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +55.04% | mean ramp +55.29% | mean frozen-at-seal 55.04 | mean frozen strict-future 29.34
+=== SEALED ENVELOPE: envelope_20261029_082020 (sealed 2026-10-29T08:20:20Z) ===
+SHA-256 integrity: PASS (2d2bd9386d1cb552...)
+Cutoff window before seal: 1793260818 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_082020 (sealed 2026-10-29T08:20:20Z) ===
+SHA-256 integrity: PASS (2d2bd9386d1cb552...)
+Cutoff window before seal: 1793260818 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793262004      19.8     2.8249     1.3090   +53.66%   +1.55%     1.3090   +53.66%  +53.58%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +53.66% | mean ramp +53.58% | mean frozen-at-seal 53.66 | mean frozen strict-future 1.55
+=== SEALED ENVELOPE: envelope_20261029_083928 (sealed 2026-10-29T08:39:28Z) ===
+SHA-256 integrity: PASS (3661a8d341aeac38...)
+Cutoff window before seal: 1793262004 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_083928 (sealed 2026-10-29T08:39:28Z) ===
+SHA-256 integrity: PASS (3661a8d341aeac38...)
+Cutoff window before seal: 1793262004 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793263168      19.4     2.8113     1.3271   +52.79%   +0.93%     1.3271   +52.79%  +52.40%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +52.79% | mean ramp +52.40% | mean frozen-at-seal 52.79 | mean frozen strict-future 0.93
+=== SEALED ENVELOPE: envelope_20261029_090013 (sealed 2026-10-29T09:00:13Z) ===
+SHA-256 integrity: PASS (45abd51f497f0f19...)
+Cutoff window before seal: 1793263168 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_090013 (sealed 2026-10-29T09:00:13Z) ===
+SHA-256 integrity: PASS (45abd51f497f0f19...)
+Cutoff window before seal: 1793263168 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793264427      21.0     2.9959     1.8933   +36.80%  +19.42%     1.8933   +36.80%  +37.29%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +36.80% | mean ramp +37.29% | mean frozen-at-seal 36.8 | mean frozen strict-future 19.42
+=== SEALED ENVELOPE: envelope_20261029_092735 (sealed 2026-10-29T09:27:35Z) ===
+SHA-256 integrity: PASS (8130d25ed5fe2919...)
+Cutoff window before seal: 1793264427 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_092735 (sealed 2026-10-29T09:27:35Z) ===
+SHA-256 integrity: PASS (8130d25ed5fe2919...)
+Cutoff window before seal: 1793264427 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793266028      26.7     3.4330     2.7327   +20.40%   +9.28%     2.7327   +20.40%  +20.64%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +20.40% | mean ramp +20.64% | mean frozen-at-seal 20.4 | mean frozen strict-future 9.28
+=== SEALED ENVELOPE: envelope_20261029_094738 (sealed 2026-10-29T09:47:38Z) ===
+SHA-256 integrity: PASS (a14510d0c31aaf0e...)
+Cutoff window before seal: 1793266028 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_094738 (sealed 2026-10-29T09:47:38Z) ===
+SHA-256 integrity: PASS (a14510d0c31aaf0e...)
+Cutoff window before seal: 1793266028 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793267232      20.1     2.9471     1.7628   +40.19%   +0.17%     1.7628   +40.19%  +40.08%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +40.19% | mean ramp +40.08% | mean frozen-at-seal 40.19 | mean frozen strict-future 0.17
+=== SEALED ENVELOPE: envelope_20261029_100804 (sealed 2026-10-29T10:08:04Z) ===
+SHA-256 integrity: PASS (72a510203e4f3bd1...)
+Cutoff window before seal: 1793267232 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_100804 (sealed 2026-10-29T10:08:04Z) ===
+SHA-256 integrity: PASS (72a510203e4f3bd1...)
+Cutoff window before seal: 1793267232 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793268445      20.2     2.9343     1.9201   +34.56%   -6.65%     1.9201   +34.56%  +34.22%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +34.56% | mean ramp +34.22% | mean frozen-at-seal 34.56 | mean frozen strict-future -6.65
+=== SEALED ENVELOPE: envelope_20261029_102723 (sealed 2026-10-29T10:27:23Z) ===
+SHA-256 integrity: PASS (ed8855e35fa99436...)
+Cutoff window before seal: 1793268445 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_102723 (sealed 2026-10-29T10:27:23Z) ===
+SHA-256 integrity: PASS (ed8855e35fa99436...)
+Cutoff window before seal: 1793268445 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793269648      20.1     3.2022     2.2253   +30.51%  +14.78%     2.2253   +30.51%  +30.36%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +30.51% | mean ramp +30.36% | mean frozen-at-seal 30.51 | mean frozen strict-future 14.78
+=== SEALED ENVELOPE: envelope_20261029_104744 (sealed 2026-10-29T10:47:44Z) ===
+SHA-256 integrity: PASS (c4b8769d0567fc7b...)
+Cutoff window before seal: 1793269648 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_104744 (sealed 2026-10-29T10:47:44Z) ===
+SHA-256 integrity: PASS (c4b8769d0567fc7b...)
+Cutoff window before seal: 1793269648 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793270854      20.1     3.0252     1.7521   +42.08%  -11.01%     1.7521   +42.08%  +41.56%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +42.08% | mean ramp +41.56% | mean frozen-at-seal 42.08 | mean frozen strict-future -11.01
+=== SEALED ENVELOPE: envelope_20261029_112511 (sealed 2026-10-29T11:25:11Z) ===
+SHA-256 integrity: PASS (367b2d840168484d...)
+Cutoff window before seal: 1793270854 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_112511 (sealed 2026-10-29T11:25:11Z) ===
+SHA-256 integrity: PASS (367b2d840168484d...)
+Cutoff window before seal: 1793270854 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793273155      38.4     2.9449     2.1589   +26.69%  +16.56%     2.1589   +26.69%  +26.80%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +26.69% | mean ramp +26.80% | mean frozen-at-seal 26.69 | mean frozen strict-future 16.56
+=== SEALED ENVELOPE: envelope_20261029_124501 (sealed 2026-10-29T12:45:01Z) ===
+SHA-256 integrity: PASS (2f06cc7d886556f0...)
+Cutoff window before seal: 1793273155 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_124501 (sealed 2026-10-29T12:45:01Z) ===
+SHA-256 integrity: PASS (2f06cc7d886556f0...)
+Cutoff window before seal: 1793273155 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793277962      80.1     2.7774     2.8962    -4.28%   -0.55%     2.8962    -4.28%   -4.42%
+Summary: causal wins 0/1 | frozen wins 0/1 | mean causal -4.28% | mean ramp -4.42% | mean frozen-at-seal -4.28 | mean frozen strict-future -0.55
+=== SEALED ENVELOPE: envelope_20261029_134156 (sealed 2026-10-29T13:41:56Z) ===
+SHA-256 integrity: PASS (3f1ef15b550a0657...)
+Cutoff window before seal: 1793277962 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_134156 (sealed 2026-10-29T13:41:56Z) ===
+SHA-256 integrity: PASS (3f1ef15b550a0657...)
+Cutoff window before seal: 1793277962 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793281321      56.0     2.6206     2.0163   +23.06%  +18.47%     2.0163   +23.06%  +22.87%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +23.06% | mean ramp +22.87% | mean frozen-at-seal 23.06 | mean frozen strict-future 18.47
+=== SEALED ENVELOPE: envelope_20261029_141328 (sealed 2026-10-29T14:13:28Z) ===
+SHA-256 integrity: PASS (7f2ec523376bd86b...)
+Cutoff window before seal: 1793281321 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_141328 (sealed 2026-10-29T14:13:28Z) ===
+SHA-256 integrity: PASS (7f2ec523376bd86b...)
+Cutoff window before seal: 1793281321 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793283186      31.1     4.0757     3.8078    +6.57%  +19.98%     3.8078    +6.57%   +6.66%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +6.57% | mean ramp +6.66% | mean frozen-at-seal 6.57 | mean frozen strict-future 19.98
+=== SEALED ENVELOPE: envelope_20261029_144405 (sealed 2026-10-29T14:44:05Z) ===
+SHA-256 integrity: PASS (f91f6b8ef48c8486...)
+Cutoff window before seal: 1793283186 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_144405 (sealed 2026-10-29T14:44:05Z) ===
+SHA-256 integrity: PASS (f91f6b8ef48c8486...)
+Cutoff window before seal: 1793283186 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793285014      30.5     3.1057     2.2363   +27.99%  +13.60%     2.2363   +27.99%  +27.41%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +27.99% | mean ramp +27.41% | mean frozen-at-seal 27.99 | mean frozen strict-future 13.6
+=== SEALED ENVELOPE: envelope_20261029_150845 (sealed 2026-10-29T15:08:45Z) ===
+SHA-256 integrity: PASS (2239996acf0871de...)
+Cutoff window before seal: 1793285014 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_150845 (sealed 2026-10-29T15:08:45Z) ===
+SHA-256 integrity: PASS (2239996acf0871de...)
+Cutoff window before seal: 1793285014 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793286527      25.2     2.7420     1.7671   +35.55%   +7.03%     1.7671   +35.55%  +35.54%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.55% | mean ramp +35.54% | mean frozen-at-seal 35.55 | mean frozen strict-future 7.03
+=== SEALED ENVELOPE: envelope_20261029_155216 (sealed 2026-10-29T15:52:16Z) ===
+SHA-256 integrity: PASS (30e67bd15c74e21e...)
+Cutoff window before seal: 1793286527 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_155216 (sealed 2026-10-29T15:52:16Z) ===
+SHA-256 integrity: PASS (30e67bd15c74e21e...)
+Cutoff window before seal: 1793286527 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793289147      43.7     3.0143     2.3762   +21.17%   -8.28%     2.3762   +21.17%  +21.19%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +21.17% | mean ramp +21.19% | mean frozen-at-seal 21.17 | mean frozen strict-future -8.28
+=== SEALED ENVELOPE: envelope_20261029_161928 (sealed 2026-10-29T16:19:28Z) ===
+SHA-256 integrity: PASS (39d4ebfe0d4a9f85...)
+Cutoff window before seal: 1793289147 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_161928 (sealed 2026-10-29T16:19:28Z) ===
+SHA-256 integrity: PASS (39d4ebfe0d4a9f85...)
+Cutoff window before seal: 1793289147 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793290755      26.8     3.1889     2.4435   +23.38%   -2.14%     2.4435   +23.37%  +23.18%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +23.37% | mean ramp +23.18% | mean frozen-at-seal 23.38 | mean frozen strict-future -2.14
+=== SEALED ENVELOPE: envelope_20261029_164348 (sealed 2026-10-29T16:43:48Z) ===
+SHA-256 integrity: PASS (b5e288101cfcdcec...)
+Cutoff window before seal: 1793290755 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_164348 (sealed 2026-10-29T16:43:48Z) ===
+SHA-256 integrity: PASS (b5e288101cfcdcec...)
+Cutoff window before seal: 1793290755 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793292216      24.4     3.3697     2.6240   +22.13%  +25.76%     2.6240   +22.13%  +22.43%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +22.13% | mean ramp +22.43% | mean frozen-at-seal 22.13 | mean frozen strict-future 25.76
+=== SEALED ENVELOPE: envelope_20261029_171013 (sealed 2026-10-29T17:10:13Z) ===
+SHA-256 integrity: PASS (5223853182238cce...)
+Cutoff window before seal: 1793292216 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_171013 (sealed 2026-10-29T17:10:13Z) ===
+SHA-256 integrity: PASS (5223853182238cce...)
+Cutoff window before seal: 1793292216 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793293813      26.6     2.0082     1.4151   +29.53%   -8.65%     1.4151   +29.53%  +28.97%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +29.53% | mean ramp +28.97% | mean frozen-at-seal 29.53 | mean frozen strict-future -8.65
+=== SEALED ENVELOPE: envelope_20261029_174610 (sealed 2026-10-29T17:46:10Z) ===
+SHA-256 integrity: PASS (b6e110b985a484a4...)
+Cutoff window before seal: 1793293813 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_174610 (sealed 2026-10-29T17:46:10Z) ===
+SHA-256 integrity: PASS (b6e110b985a484a4...)
+Cutoff window before seal: 1793293813 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793295956      35.7     2.1371     1.5242   +28.68%  +13.31%     1.5242   +28.68%  +29.15%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +28.68% | mean ramp +29.15% | mean frozen-at-seal 28.68 | mean frozen strict-future 13.31
+=== SEALED ENVELOPE: envelope_20261029_182338 (sealed 2026-10-29T18:23:38Z) ===
+SHA-256 integrity: PASS (6bd53557a899e288...)
+Cutoff window before seal: 1793295956 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_182338 (sealed 2026-10-29T18:23:38Z) ===
+SHA-256 integrity: PASS (6bd53557a899e288...)
+Cutoff window before seal: 1793295956 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793298231      37.9     2.5268     1.6366   +35.23%  +25.25%     1.6366   +35.23%  +34.89%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +35.23% | mean ramp +34.89% | mean frozen-at-seal 35.23 | mean frozen strict-future 25.25
+=== SEALED ENVELOPE: envelope_20261029_185519 (sealed 2026-10-29T18:55:19Z) ===
+SHA-256 integrity: PASS (a135cf9eb44dcf11...)
+Cutoff window before seal: 1793298231 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_185519 (sealed 2026-10-29T18:55:19Z) ===
+SHA-256 integrity: PASS (a135cf9eb44dcf11...)
+Cutoff window before seal: 1793298231 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793300108      31.3     2.8475     1.9260   +32.36%   +2.18%     1.9260   +32.36%  +31.47%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +32.36% | mean ramp +31.47% | mean frozen-at-seal 32.36 | mean frozen strict-future 2.18
+=== SEALED ENVELOPE: envelope_20261029_192304 (sealed 2026-10-29T19:23:04Z) ===
+SHA-256 integrity: PASS (5f4c4515f1fb79d8...)
+Cutoff window before seal: 1793300108 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_192304 (sealed 2026-10-29T19:23:04Z) ===
+SHA-256 integrity: PASS (5f4c4515f1fb79d8...)
+Cutoff window before seal: 1793300108 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793301804      28.3     3.4593     2.3146   +33.09%  +14.74%     2.3146   +33.09%  +33.58%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +33.09% | mean ramp +33.58% | mean frozen-at-seal 33.09 | mean frozen strict-future 14.74
+=== SEALED ENVELOPE: envelope_20261029_195407 (sealed 2026-10-29T19:54:07Z) ===
+SHA-256 integrity: PASS (cfc8e0bf7c7e25ff...)
+Cutoff window before seal: 1793301804 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_195407 (sealed 2026-10-29T19:54:07Z) ===
+SHA-256 integrity: PASS (cfc8e0bf7c7e25ff...)
+Cutoff window before seal: 1793301804 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793303588      29.7     3.2765     1.9546   +40.35%   +2.28%     1.9546   +40.34%  +40.09%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +40.34% | mean ramp +40.09% | mean frozen-at-seal 40.35 | mean frozen strict-future 2.28
+=== SEALED ENVELOPE: envelope_20261029_201631 (sealed 2026-10-29T20:16:31Z) ===
+SHA-256 integrity: PASS (93cb40ac2a54a168...)
+Cutoff window before seal: 1793303588 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_201631 (sealed 2026-10-29T20:16:31Z) ===
+SHA-256 integrity: PASS (93cb40ac2a54a168...)
+Cutoff window before seal: 1793303588 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793304996      23.5     3.2583     1.7124   +47.44%  -13.79%     1.7124   +47.44%  +47.26%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +47.44% | mean ramp +47.26% | mean frozen-at-seal 47.44 | mean frozen strict-future -13.79
+=== SEALED ENVELOPE: envelope_20261029_204218 (sealed 2026-10-29T20:42:18Z) ===
+SHA-256 integrity: PASS (d6d7c1a8a36dc41e...)
+Cutoff window before seal: 1793304996 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_204218 (sealed 2026-10-29T20:42:18Z) ===
+SHA-256 integrity: PASS (d6d7c1a8a36dc41e...)
+Cutoff window before seal: 1793304996 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793306576      26.3     3.6557     2.9474   +19.37%   -0.32%     2.9474   +19.38%  +19.09%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +19.38% | mean ramp +19.09% | mean frozen-at-seal 19.37 | mean frozen strict-future -0.32
+=== SEALED ENVELOPE: envelope_20261029_211037 (sealed 2026-10-29T21:10:37Z) ===
+SHA-256 integrity: PASS (b82cb61debb67778...)
+Cutoff window before seal: 1793306576 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_211037 (sealed 2026-10-29T21:10:37Z) ===
+SHA-256 integrity: PASS (b82cb61debb67778...)
+Cutoff window before seal: 1793306576 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793308226      27.5     2.9661     2.1357   +28.00%  -10.24%     2.1357   +28.00%  +27.43%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +28.00% | mean ramp +27.43% | mean frozen-at-seal 28.0 | mean frozen strict-future -10.24
+=== SEALED ENVELOPE: envelope_20261029_220115 (sealed 2026-10-29T22:01:15Z) ===
+SHA-256 integrity: PASS (bf2193547b73a724...)
+Cutoff window before seal: 1793308226 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_220115 (sealed 2026-10-29T22:01:15Z) ===
+SHA-256 integrity: PASS (bf2193547b73a724...)
+Cutoff window before seal: 1793308226 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793311297      51.2     3.6538     3.5467    +2.93%   -5.71%     3.5467    +2.93%   +2.66%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +2.93% | mean ramp +2.66% | mean frozen-at-seal 2.93 | mean frozen strict-future -5.71
+=== SEALED ENVELOPE: envelope_20261029_224015 (sealed 2026-10-29T22:40:15Z) ===
+SHA-256 integrity: PASS (679fce98bbafcaac...)
+Cutoff window before seal: 1793311297 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_224015 (sealed 2026-10-29T22:40:15Z) ===
+SHA-256 integrity: PASS (679fce98bbafcaac...)
+Cutoff window before seal: 1793311297 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793313631      38.9     3.9497     2.7827   +29.55%   -2.20%     2.7827   +29.55%  +29.52%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +29.55% | mean ramp +29.52% | mean frozen-at-seal 29.55 | mean frozen strict-future -2.2
+=== SEALED ENVELOPE: envelope_20261029_233322 (sealed 2026-10-29T23:33:22Z) ===
+SHA-256 integrity: PASS (eda17ec095fd35a0...)
+Cutoff window before seal: 1793313631 | Post-seal blind windows scored: 0
+=== SEALED ENVELOPE: envelope_20261029_233322 (sealed 2026-10-29T23:33:22Z) ===
+SHA-256 integrity: PASS (eda17ec095fd35a0...)
+Cutoff window before seal: 1793313631 | Post-seal blind windows scored: 1
+
+--- Post-seal strictly ex-ante windows (n=1) ---
+      window  lead_min  persist_m   frozen_m  frozen_%    fut_%   causal_m  causal_%   ramp_%
+  1793316774      52.4     3.3596     2.7276   +18.81%   +8.95%     2.7276   +18.81%  +19.42%
+Summary: causal wins 1/1 | frozen wins 1/1 | mean causal +18.81% | mean ramp +19.42% | mean frozen-at-seal 18.81 | mean frozen strict-future 8.95
+=== SEALED ENVELOPE: envelope_20261030_001200 (sealed 2026-10-30T00:12:00Z) ===
+SHA-256 integrity: PASS (dad56037f438cae2...)
+Cutoff window before seal: 1793316774 | Post-seal blind windows scored: 0

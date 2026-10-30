@@ -1,0 +1,248 @@
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ]   Step 04: TEP-PPP Convergence Speedup Test
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ]   +--------------------------------------------------------------------------+
+[2026-09-03 23:35:50] [INFO    ]   | Mode                 Hybrid Simulation (Real Clocks + Synthetic Obs)
+[2026-09-03 23:35:50] [INFO    ]   | Goal                 Isolate theoretical convergence speedup with defensible statistics
+[2026-09-03 23:35:50] [INFO    ]   | Method               Multi-seed Monte Carlo with bootstrap 95% CI
+[2026-09-03 23:35:50] [INFO    ]   | Arms                 standard, clock_only, clock_q, full_tep
+[2026-09-03 23:35:50] [INFO    ]   +--------------------------------------------------------------------------+
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [PROCESS ] Starting Monte Carlo multi-seed run with component isolation
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ] Monte Carlo: 20 seeds x 4 arms
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [INFO    ] Duration: 7200s (2.0 h), dt=10.0s, 720 epochs per run
+[2026-09-03 23:35:50] [INFO    ] Arms: standard, clock_only, clock_q, full_tep
+[2026-09-03 23:35:50] [INFO    ] Total runs: 80
+[2026-09-03 23:35:50] [INFO    ] Bootstrap: 2000 resamples, 95% CI
+[2026-09-03 23:35:50] [PROCESS ] Seed 1/20 (random seed=42)
+[2026-09-03 23:35:50] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-03 23:38:23] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=46.7cm  tep_rms=46.7cm  speedup=1.0
+[2026-09-03 23:38:23] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-03 23:40:55] [SUCCESS ]   -> acc_imp=+7.4%  conv_acc=+9.3%  base_rms=46.7cm  tep_rms=43.2cm  speedup=1.0555555555555556
+[2026-09-03 23:40:55] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-03 23:43:31] [SUCCESS ]   -> acc_imp=+7.4%  conv_acc=+9.3%  base_rms=46.7cm  tep_rms=43.2cm  speedup=1.0555555555555556
+[2026-09-03 23:43:31] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-03 23:46:13] [SUCCESS ]   -> acc_imp=+7.4%  conv_acc=+9.3%  base_rms=46.7cm  tep_rms=43.2cm  speedup=1.0555555555555556
+[2026-09-03 23:46:13] [PROCESS ] Seed 2/20 (random seed=142)
+[2026-09-03 23:46:13] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-03 23:48:44] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=88.5cm  tep_rms=88.5cm  speedup=1.0
+[2026-09-03 23:48:44] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-03 23:51:23] [SUCCESS ]   -> acc_imp=+24.7%  conv_acc=+25.3%  base_rms=88.5cm  tep_rms=66.6cm  speedup=0.1984126984126984
+[2026-09-03 23:51:23] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-03 23:54:02] [SUCCESS ]   -> acc_imp=+24.7%  conv_acc=+25.3%  base_rms=88.5cm  tep_rms=66.6cm  speedup=0.1984126984126984
+[2026-09-03 23:54:02] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-03 23:56:47] [SUCCESS ]   -> acc_imp=+24.7%  conv_acc=+25.3%  base_rms=88.5cm  tep_rms=66.6cm  speedup=0.1984126984126984
+[2026-09-03 23:56:47] [PROCESS ] Seed 3/20 (random seed=242)
+[2026-09-03 23:56:47] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-03 23:59:22] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=49.5cm  tep_rms=49.5cm  speedup=1.0
+[2026-09-03 23:59:22] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:02:01] [SUCCESS ]   -> acc_imp=+6.8%  conv_acc=+7.4%  base_rms=49.5cm  tep_rms=46.1cm  speedup=1.0384615384615385
+[2026-09-04 00:02:01] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:04:46] [SUCCESS ]   -> acc_imp=+6.8%  conv_acc=+7.4%  base_rms=49.5cm  tep_rms=46.1cm  speedup=1.0384615384615385
+[2026-09-04 00:04:46] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:07:36] [SUCCESS ]   -> acc_imp=+6.8%  conv_acc=+7.4%  base_rms=49.5cm  tep_rms=46.1cm  speedup=1.0384615384615385
+[2026-09-04 00:07:36] [PROCESS ] Seed 4/20 (random seed=342)
+[2026-09-04 00:07:36] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 00:10:11] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=70.0cm  tep_rms=70.0cm  speedup=1.0
+[2026-09-04 00:10:11] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:12:52] [SUCCESS ]   -> acc_imp=+9.1%  conv_acc=+9.9%  base_rms=70.0cm  tep_rms=63.6cm  speedup=0.9924242424242423
+[2026-09-04 00:12:52] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:15:28] [SUCCESS ]   -> acc_imp=+9.1%  conv_acc=+9.9%  base_rms=70.0cm  tep_rms=63.6cm  speedup=0.9924242424242423
+[2026-09-04 00:15:28] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:18:02] [SUCCESS ]   -> acc_imp=+9.1%  conv_acc=+9.9%  base_rms=70.0cm  tep_rms=63.6cm  speedup=0.9924242424242423
+[2026-09-04 00:18:02] [PROCESS ] Seed 5/20 (random seed=442)
+[2026-09-04 00:18:02] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 00:20:38] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=112.4cm  tep_rms=112.4cm  speedup=1.0
+[2026-09-04 00:20:38] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:23:08] [SUCCESS ]   -> acc_imp=+7.1%  conv_acc=+8.1%  base_rms=112.4cm  tep_rms=104.4cm  speedup=0.9915254237288135
+[2026-09-04 00:23:08] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:25:42] [SUCCESS ]   -> acc_imp=+7.1%  conv_acc=+8.1%  base_rms=112.4cm  tep_rms=104.4cm  speedup=0.9915254237288135
+[2026-09-04 00:25:42] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:28:28] [SUCCESS ]   -> acc_imp=+7.1%  conv_acc=+8.1%  base_rms=112.4cm  tep_rms=104.4cm  speedup=0.9915254237288135
+[2026-09-04 00:28:28] [PROCESS ] Seed 6/20 (random seed=542)
+[2026-09-04 00:28:28] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 00:31:20] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=108.3cm  tep_rms=108.3cm  speedup=1.0
+[2026-09-04 00:31:20] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:34:05] [SUCCESS ]   -> acc_imp=+33.8%  conv_acc=+34.8%  base_rms=108.3cm  tep_rms=71.7cm  speedup=1.6717948717948719
+[2026-09-04 00:34:05] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:36:48] [SUCCESS ]   -> acc_imp=+33.8%  conv_acc=+34.8%  base_rms=108.3cm  tep_rms=71.7cm  speedup=1.6717948717948719
+[2026-09-04 00:36:48] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:39:52] [SUCCESS ]   -> acc_imp=+33.8%  conv_acc=+34.8%  base_rms=108.3cm  tep_rms=71.7cm  speedup=1.6717948717948719
+[2026-09-04 00:39:52] [PROCESS ] Seed 7/20 (random seed=642)
+[2026-09-04 00:39:52] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 00:42:28] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=40.4cm  tep_rms=40.4cm  speedup=1.0
+[2026-09-04 00:42:28] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:45:04] [SUCCESS ]   -> acc_imp=+9.8%  conv_acc=+10.4%  base_rms=40.4cm  tep_rms=36.4cm  speedup=1.1015037593984962
+[2026-09-04 00:45:04] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:47:41] [SUCCESS ]   -> acc_imp=+9.8%  conv_acc=+10.4%  base_rms=40.4cm  tep_rms=36.4cm  speedup=1.1015037593984962
+[2026-09-04 00:47:41] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:50:20] [SUCCESS ]   -> acc_imp=+9.8%  conv_acc=+10.4%  base_rms=40.4cm  tep_rms=36.4cm  speedup=1.1015037593984962
+[2026-09-04 00:50:20] [PROCESS ] Seed 8/20 (random seed=742)
+[2026-09-04 00:50:20] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 00:53:13] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=60.8cm  tep_rms=60.8cm  speedup=1.0
+[2026-09-04 00:53:13] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 00:55:58] [SUCCESS ]   -> acc_imp=+2.7%  conv_acc=+4.1%  base_rms=60.8cm  tep_rms=59.1cm  speedup=0.9945945945945946
+[2026-09-04 00:55:58] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 00:58:38] [SUCCESS ]   -> acc_imp=+2.7%  conv_acc=+4.1%  base_rms=60.8cm  tep_rms=59.1cm  speedup=0.9945945945945946
+[2026-09-04 00:58:38] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:01:14] [SUCCESS ]   -> acc_imp=+2.7%  conv_acc=+4.1%  base_rms=60.8cm  tep_rms=59.1cm  speedup=0.9945945945945946
+[2026-09-04 01:01:14] [PROCESS ] Seed 9/20 (random seed=842)
+[2026-09-04 01:01:14] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:03:49] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=89.6cm  tep_rms=89.6cm  speedup=1.0
+[2026-09-04 01:03:49] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:06:31] [SUCCESS ]   -> acc_imp=+25.8%  conv_acc=+26.2%  base_rms=89.6cm  tep_rms=66.5cm  speedup=0.9878048780487805
+[2026-09-04 01:06:31] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:09:09] [SUCCESS ]   -> acc_imp=+25.8%  conv_acc=+26.2%  base_rms=89.6cm  tep_rms=66.5cm  speedup=0.9878048780487805
+[2026-09-04 01:09:09] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:11:49] [SUCCESS ]   -> acc_imp=+25.8%  conv_acc=+26.2%  base_rms=89.6cm  tep_rms=66.5cm  speedup=0.9878048780487805
+[2026-09-04 01:11:49] [PROCESS ] Seed 10/20 (random seed=942)
+[2026-09-04 01:11:49] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:14:30] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=42.2cm  tep_rms=42.2cm  speedup=1.0
+[2026-09-04 01:14:30] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:17:07] [SUCCESS ]   -> acc_imp=-1.3%  conv_acc=-0.8%  base_rms=42.2cm  tep_rms=42.8cm  speedup=0.9964539007092199
+[2026-09-04 01:17:07] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:19:38] [SUCCESS ]   -> acc_imp=-1.3%  conv_acc=-0.8%  base_rms=42.2cm  tep_rms=42.8cm  speedup=0.9964539007092199
+[2026-09-04 01:19:38] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:22:12] [SUCCESS ]   -> acc_imp=-1.3%  conv_acc=-0.8%  base_rms=42.2cm  tep_rms=42.8cm  speedup=0.9964539007092199
+[2026-09-04 01:22:12] [PROCESS ] Seed 11/20 (random seed=1042)
+[2026-09-04 01:22:12] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:24:45] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=48.9cm  tep_rms=48.9cm  speedup=1.0
+[2026-09-04 01:24:45] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:27:22] [SUCCESS ]   -> acc_imp=+3.4%  conv_acc=+4.3%  base_rms=48.9cm  tep_rms=47.2cm  speedup=0.9956896551724138
+[2026-09-04 01:27:22] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:30:08] [SUCCESS ]   -> acc_imp=+3.4%  conv_acc=+4.3%  base_rms=48.9cm  tep_rms=47.2cm  speedup=0.9956896551724138
+[2026-09-04 01:30:08] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:32:48] [SUCCESS ]   -> acc_imp=+3.4%  conv_acc=+4.3%  base_rms=48.9cm  tep_rms=47.2cm  speedup=0.9956896551724138
+[2026-09-04 01:32:48] [PROCESS ] Seed 12/20 (random seed=1142)
+[2026-09-04 01:32:48] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:35:26] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=113.6cm  tep_rms=113.6cm  speedup=1.0
+[2026-09-04 01:35:26] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:38:02] [SUCCESS ]   -> acc_imp=+27.4%  conv_acc=+27.7%  base_rms=113.6cm  tep_rms=82.5cm  speedup=0.9819277108433735
+[2026-09-04 01:38:02] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:40:44] [SUCCESS ]   -> acc_imp=+27.4%  conv_acc=+27.7%  base_rms=113.6cm  tep_rms=82.5cm  speedup=0.9819277108433735
+[2026-09-04 01:40:44] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:43:15] [SUCCESS ]   -> acc_imp=+27.4%  conv_acc=+27.7%  base_rms=113.6cm  tep_rms=82.5cm  speedup=0.9819277108433735
+[2026-09-04 01:43:15] [PROCESS ] Seed 13/20 (random seed=1242)
+[2026-09-04 01:43:15] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:45:49] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=84.5cm  tep_rms=84.5cm  speedup=1.0
+[2026-09-04 01:45:49] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:48:24] [SUCCESS ]   -> acc_imp=+20.6%  conv_acc=+21.4%  base_rms=84.5cm  tep_rms=67.1cm  speedup=1.627659574468085
+[2026-09-04 01:48:24] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:50:57] [SUCCESS ]   -> acc_imp=+20.6%  conv_acc=+21.4%  base_rms=84.5cm  tep_rms=67.1cm  speedup=1.627659574468085
+[2026-09-04 01:50:57] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 01:53:30] [SUCCESS ]   -> acc_imp=+20.6%  conv_acc=+21.4%  base_rms=84.5cm  tep_rms=67.1cm  speedup=1.627659574468085
+[2026-09-04 01:53:30] [PROCESS ] Seed 14/20 (random seed=1342)
+[2026-09-04 01:53:30] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 01:56:01] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=82.1cm  tep_rms=82.1cm  speedup=1.0
+[2026-09-04 01:56:01] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 01:58:35] [SUCCESS ]   -> acc_imp=+10.5%  conv_acc=+10.5%  base_rms=82.1cm  tep_rms=73.5cm  speedup=0.933920704845815
+[2026-09-04 01:58:35] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:01:12] [SUCCESS ]   -> acc_imp=+10.5%  conv_acc=+10.5%  base_rms=82.1cm  tep_rms=73.5cm  speedup=0.933920704845815
+[2026-09-04 02:01:12] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:03:48] [SUCCESS ]   -> acc_imp=+10.5%  conv_acc=+10.5%  base_rms=82.1cm  tep_rms=73.5cm  speedup=0.933920704845815
+[2026-09-04 02:03:48] [PROCESS ] Seed 15/20 (random seed=1442)
+[2026-09-04 02:03:48] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:06:24] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=67.8cm  tep_rms=67.8cm  speedup=1.0
+[2026-09-04 02:06:24] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 02:09:01] [SUCCESS ]   -> acc_imp=+13.9%  conv_acc=+14.3%  base_rms=67.8cm  tep_rms=58.4cm  speedup=1.0472972972972971
+[2026-09-04 02:09:01] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:11:40] [SUCCESS ]   -> acc_imp=+13.9%  conv_acc=+14.3%  base_rms=67.8cm  tep_rms=58.4cm  speedup=1.0472972972972971
+[2026-09-04 02:11:40] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:14:15] [SUCCESS ]   -> acc_imp=+13.9%  conv_acc=+14.3%  base_rms=67.8cm  tep_rms=58.4cm  speedup=1.0472972972972971
+[2026-09-04 02:14:15] [PROCESS ] Seed 16/20 (random seed=1542)
+[2026-09-04 02:14:15] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:16:52] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=94.7cm  tep_rms=94.7cm  speedup=None
+[2026-09-04 02:16:52] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 02:19:28] [SUCCESS ]   -> acc_imp=+9.5%  conv_acc=+20.4%  base_rms=94.7cm  tep_rms=85.8cm  speedup=None
+[2026-09-04 02:19:28] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:22:06] [SUCCESS ]   -> acc_imp=+9.5%  conv_acc=+20.4%  base_rms=94.7cm  tep_rms=85.8cm  speedup=None
+[2026-09-04 02:22:06] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:24:43] [SUCCESS ]   -> acc_imp=+9.5%  conv_acc=+20.4%  base_rms=94.7cm  tep_rms=85.8cm  speedup=None
+[2026-09-04 02:24:43] [PROCESS ] Seed 17/20 (random seed=1642)
+[2026-09-04 02:24:43] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:27:20] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=113.8cm  tep_rms=113.8cm  speedup=1.0
+[2026-09-04 02:27:20] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 02:29:55] [SUCCESS ]   -> acc_imp=+11.7%  conv_acc=+24.6%  base_rms=113.8cm  tep_rms=100.4cm  speedup=None
+[2026-09-04 02:29:55] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:32:30] [SUCCESS ]   -> acc_imp=+11.7%  conv_acc=+24.6%  base_rms=113.8cm  tep_rms=100.4cm  speedup=None
+[2026-09-04 02:32:30] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:35:05] [SUCCESS ]   -> acc_imp=+11.7%  conv_acc=+24.6%  base_rms=113.8cm  tep_rms=100.4cm  speedup=None
+[2026-09-04 02:35:05] [PROCESS ] Seed 18/20 (random seed=1742)
+[2026-09-04 02:35:05] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:37:42] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=55.3cm  tep_rms=55.3cm  speedup=1.0
+[2026-09-04 02:37:42] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 02:40:13] [SUCCESS ]   -> acc_imp=+1.1%  conv_acc=+1.1%  base_rms=55.3cm  tep_rms=54.7cm  speedup=1.0
+[2026-09-04 02:40:13] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:42:42] [SUCCESS ]   -> acc_imp=+1.1%  conv_acc=+1.1%  base_rms=55.3cm  tep_rms=54.7cm  speedup=1.0
+[2026-09-04 02:42:42] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:45:12] [SUCCESS ]   -> acc_imp=+1.1%  conv_acc=+1.1%  base_rms=55.3cm  tep_rms=54.7cm  speedup=1.0
+[2026-09-04 02:45:12] [PROCESS ] Seed 19/20 (random seed=1842)
+[2026-09-04 02:45:12] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:47:43] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=49.3cm  tep_rms=49.3cm  speedup=1.0
+[2026-09-04 02:47:43] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 02:50:14] [SUCCESS ]   -> acc_imp=+3.5%  conv_acc=+2.5%  base_rms=49.3cm  tep_rms=47.5cm  speedup=0.9852941176470588
+[2026-09-04 02:50:14] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:52:43] [SUCCESS ]   -> acc_imp=+3.5%  conv_acc=+2.5%  base_rms=49.3cm  tep_rms=47.5cm  speedup=0.9852941176470588
+[2026-09-04 02:52:43] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 02:55:13] [SUCCESS ]   -> acc_imp=+3.5%  conv_acc=+2.5%  base_rms=49.3cm  tep_rms=47.5cm  speedup=0.9852941176470588
+[2026-09-04 02:55:13] [PROCESS ] Seed 20/20 (random seed=1942)
+[2026-09-04 02:55:13] [DETAIL  ]   Arm: standard     [clock_prior=False, pos_constraint=False, q_scale=False]
+[2026-09-04 02:57:42] [SUCCESS ]   -> acc_imp=+0.0%  conv_acc=+0.0%  base_rms=78.5cm  tep_rms=78.5cm  speedup=1.0
+[2026-09-04 02:57:42] [DETAIL  ]   Arm: clock_only   [clock_prior=True, pos_constraint=False, q_scale=False]
+[2026-09-04 03:00:12] [SUCCESS ]   -> acc_imp=+4.3%  conv_acc=+4.4%  base_rms=78.5cm  tep_rms=75.1cm  speedup=0.8902439024390244
+[2026-09-04 03:00:12] [DETAIL  ]   Arm: clock_q      [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 03:02:41] [SUCCESS ]   -> acc_imp=+4.3%  conv_acc=+4.4%  base_rms=78.5cm  tep_rms=75.1cm  speedup=0.8902439024390244
+[2026-09-04 03:02:41] [DETAIL  ]   Arm: full_tep     [clock_prior=True, pos_constraint=False, q_scale=True]
+[2026-09-04 03:05:10] [SUCCESS ]   -> acc_imp=+4.3%  conv_acc=+4.4%  base_rms=78.5cm  tep_rms=75.1cm  speedup=0.8902439024390244
+[2026-09-04 03:05:11] [SUCCESS ] Saved Monte Carlo summary to results/outputs/step_04_monte_carlo.json
+[2026-09-04 03:05:11] [DETAIL  ] Arm: standard (n=20 seeds)
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline RMS:     74.8 cm [63.8, 86.0]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP RMS:          74.8 cm [64.4, 85.9]
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline Conv RMS:139.1 cm [118.9, 159.2]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP Conv RMS:     139.1 cm [120.2, 160.1]
+[2026-09-04 03:05:11] [DETAIL  ]   Accuracy improvement:   +0.0% [+0.0, +0.0]
+[2026-09-04 03:05:11] [DETAIL  ]   Conv accuracy improvement: +0.0% [+0.0, +0.0]
+[2026-09-04 03:05:11] [DETAIL  ]   Speedup:                1.00x [1.00, 1.00]
+[2026-09-04 03:05:11] [DETAIL  ] Arm: clock_only (n=20 seeds)
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline RMS:     74.8 cm [63.6, 86.2]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP RMS:          64.6 cm [56.7, 72.7]
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline Conv RMS:139.1 cm [118.6, 159.7]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP Conv RMS:     117.2 cm [102.8, 131.3]
+[2026-09-04 03:05:11] [DETAIL  ]   Accuracy improvement:   +11.6% [+7.5, +16.0]
+[2026-09-04 03:05:11] [DETAIL  ]   Conv accuracy improvement: +13.3% [+8.6, +17.6]
+[2026-09-04 03:05:11] [DETAIL  ]   Speedup:                1.03x [0.90, 1.17]
+[2026-09-04 03:05:11] [DETAIL  ] Arm: clock_q (n=20 seeds)
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline RMS:     74.8 cm [64.5, 85.9]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP RMS:          64.6 cm [56.7, 72.9]
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline Conv RMS:139.1 cm [119.3, 160.1]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP Conv RMS:     117.2 cm [103.4, 131.7]
+[2026-09-04 03:05:11] [DETAIL  ]   Accuracy improvement:   +11.6% [+7.8, +15.8]
+[2026-09-04 03:05:11] [DETAIL  ]   Conv accuracy improvement: +13.3% [+9.0, +17.7]
+[2026-09-04 03:05:11] [DETAIL  ]   Speedup:                1.03x [0.90, 1.16]
+[2026-09-04 03:05:11] [DETAIL  ] Arm: full_tep (n=20 seeds)
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline RMS:     74.8 cm [64.5, 85.2]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP RMS:          64.6 cm [56.9, 72.8]
+[2026-09-04 03:05:11] [DETAIL  ]   Baseline Conv RMS:139.1 cm [118.3, 160.4]
+[2026-09-04 03:05:11] [DETAIL  ]   TEP Conv RMS:     117.2 cm [103.3, 131.3]
+[2026-09-04 03:05:11] [DETAIL  ]   Accuracy improvement:   +11.6% [+7.5, +15.7]
+[2026-09-04 03:05:11] [DETAIL  ]   Conv accuracy improvement: +13.3% [+8.9, +17.7]
+[2026-09-04 03:05:11] [DETAIL  ]   Speedup:                1.03x [0.89, 1.16]
+[2026-09-04 03:05:11] [PROCESS ] Running single-seed detailed run for plotting
+[2026-09-04 03:07:42] [SUCCESS ] Plot saved to results/figures/step_5_real_data_convergence.png
+[2026-09-04 03:07:42] [SUCCESS ] Saved convergence summary to results/outputs/step_5_convergence_summary.json
+[2026-09-04 03:07:42] [SUCCESS ] Single-seed plot saved
+[2026-09-04 03:07:42] [INFO    ] 
+[2026-09-04 03:07:42] [INFO    ] ================================================================================
+[2026-09-04 03:07:42] [INFO    ]                                 Step 04 Complete
+[2026-09-04 03:07:42] [INFO    ] ================================================================================
+[2026-09-04 03:07:42] [INFO    ]   Monte Carlo seeds                    20
+[2026-09-04 03:07:42] [INFO    ]   Arms tested                          standard, clock_only, clock_q, full_tep
+[2026-09-04 03:07:42] [INFO    ]   Output                               results/outputs/step_04_monte_carlo.json
+[2026-09-04 03:07:42] [INFO    ]   Elapsed                              211.9 min
+[2026-09-04 03:07:42] [INFO    ] ================================================================================
+[2026-09-04 03:07:42] [INFO    ] 

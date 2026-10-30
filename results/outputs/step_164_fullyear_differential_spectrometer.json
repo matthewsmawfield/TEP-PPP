@@ -1,0 +1,3185 @@
+{
+  "step": 164,
+  "title": "Co-located differential spectrometer: coherent multi-window accumulation",
+  "timestamp": "2026-09-07T11:36:54.642296+00:00",
+  "product": "clk_cod_ops",
+  "design": "Coherent accumulation of cross-spectra across 13-day overlapping windows (step=7d).  Each window is independently detrended.  The cross-spectral product conj(F_delta)*F_remote is accumulated across all windows before computing phase alignment, giving the SNR of the full year with per-window drift removal.",
+  "pairs": {
+    "MAT1-MATE": {
+      "2024": {
+        "year": 2024,
+        "n_windows": 46,
+        "n_remote_stations": 158,
+        "freq_resolution_uhz": 0.8903133903133903,
+        "noise_floor": 1286094289.5523298,
+        "power_at_tides": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 5881776822.808325,
+            "snr": 4.573363609954044
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 5881776822.808325,
+            "snr": 4.573363609954044
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 5240085675.254455,
+            "snr": 4.074417962837274
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 5240085675.254455,
+            "snr": 4.074417962837274
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 5240085675.254455,
+            "snr": 4.074417962837274
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "power": 978918322.9034293,
+            "snr": 0.7611559516714564
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "power": 935681182.2696965,
+            "snr": 0.7275370008799223
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 839598508.4633434,
+            "snr": 0.652828113213686
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 839598508.4633434,
+            "snr": 0.652828113213686
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "power": 1247722423.786726,
+            "snr": 0.9701640337902748
+          }
+        },
+        "tidal_lines": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 50.01499671890072,
+              "R2_exponential": -1.20570220474292e-13,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.08870017382806765
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03010426286923462,
+              "R2_max": 0.790153290844982,
+              "lambda_median_km": 337.5170258140747,
+              "p_R2_ge_observed": 0.8621378621378621,
+              "p_TEP_band_and_R2": 0.17882117882117882
+            },
+            "internal_fit": {
+              "lambda_km": 2923.9152348113053,
+              "R2_exponential": 0.5607587856414262,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.10086106742418541
+            },
+            "atomic_fit": {
+              "lambda_km": 2793.5290723146295,
+              "R2_exponential": 0.6737493119281175,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.12685141425271768
+            },
+            "mean_phase_cos": -0.08870017382806765
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 50.01499671890072,
+              "R2_exponential": -1.20570220474292e-13,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.08870017382806765
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.022856930062214675,
+              "R2_max": 0.9052783768921265,
+              "lambda_median_km": 287.55829083994286,
+              "p_R2_ge_observed": 0.8351648351648352,
+              "p_TEP_band_and_R2": 0.16383616383616384
+            },
+            "internal_fit": {
+              "lambda_km": 2923.9152348113053,
+              "R2_exponential": 0.5607587856414262,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.10086106742418541
+            },
+            "atomic_fit": {
+              "lambda_km": 2793.5290723146295,
+              "R2_exponential": 0.6737493119281175,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.12685141425271768
+            },
+            "mean_phase_cos": -0.08870017382806765
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 190.46971257458105,
+              "R2_exponential": 0.07092652655201526,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04201067384523461
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03132564805691379,
+              "R2_max": 0.7890875098390773,
+              "lambda_median_km": 396.4430089282498,
+              "p_R2_ge_observed": 0.3956043956043956,
+              "p_TEP_band_and_R2": 0.10589410589410589
+            },
+            "internal_fit": {
+              "lambda_km": 649.9388788910475,
+              "R2_exponential": 0.607916095642092,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0364391230668422
+            },
+            "atomic_fit": {
+              "lambda_km": 4070.243984254165,
+              "R2_exponential": 0.6050286594935632,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.02990477451947144
+            },
+            "mean_phase_cos": 0.04201067384523461
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 190.46971257458105,
+              "R2_exponential": 0.07092652655201526,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04201067384523461
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03152931628190858,
+              "R2_max": 0.8190512913265687,
+              "lambda_median_km": 405.2266637584605,
+              "p_R2_ge_observed": 0.3856143856143856,
+              "p_TEP_band_and_R2": 0.1008991008991009
+            },
+            "internal_fit": {
+              "lambda_km": 649.9388788910475,
+              "R2_exponential": 0.607916095642092,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0364391230668422
+            },
+            "atomic_fit": {
+              "lambda_km": 4070.243984254165,
+              "R2_exponential": 0.6050286594935632,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.02990477451947144
+            },
+            "mean_phase_cos": 0.04201067384523461
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 190.46971257458105,
+              "R2_exponential": 0.07092652655201526,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04201067384523461
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.028499281372818264,
+              "R2_max": 0.9066847103195463,
+              "lambda_median_km": 268.51367955388463,
+              "p_R2_ge_observed": 0.3876123876123876,
+              "p_TEP_band_and_R2": 0.1088911088911089
+            },
+            "internal_fit": {
+              "lambda_km": 649.9388788910475,
+              "R2_exponential": 0.607916095642092,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0364391230668422
+            },
+            "atomic_fit": {
+              "lambda_km": 4070.243984254165,
+              "R2_exponential": 0.6050286594935632,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.02990477451947144
+            },
+            "mean_phase_cos": 0.04201067384523461
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.06527292103727655,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.03949446633172967
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.026358579817808203,
+              "R2_max": 0.820633960994706,
+              "lambda_median_km": 332.18782545956526,
+              "p_R2_ge_observed": 0.3906093906093906,
+              "p_TEP_band_and_R2": 0.1008991008991009
+            },
+            "internal_fit": {
+              "lambda_km": 426.8766080958858,
+              "R2_exponential": 0.610408915381719,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.1027565991632837
+            },
+            "atomic_fit": {
+              "lambda_km": 390.8274578652008,
+              "R2_exponential": 0.26790456005695995,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.00835580387887325
+            },
+            "mean_phase_cos": -0.03949446633172967
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 268.2520334650862,
+              "R2_exponential": 0.7017555257158261,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04399658799739894
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03755962187598144,
+              "R2_max": 0.895923589878554,
+              "lambda_median_km": 261.0906124229756,
+              "p_R2_ge_observed": 0.004995004995004995,
+              "p_TEP_band_and_R2": 0.002997002997002997
+            },
+            "internal_fit": {
+              "lambda_km": 232.1027764834883,
+              "R2_exponential": 0.1873127482757564,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.20279900268983506
+            },
+            "atomic_fit": {
+              "lambda_km": 50.11414306092516,
+              "R2_exponential": -1.0442757769624222e-12,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.02821048216973306
+            },
+            "mean_phase_cos": 0.04399658799739894
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 202.91539649160424,
+              "R2_exponential": 0.2029383369625667,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.14174320830418338
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.027178001164932353,
+              "R2_max": 0.7754817977041221,
+              "lambda_median_km": 255.98813202890466,
+              "p_R2_ge_observed": 0.1938061938061938,
+              "p_TEP_band_and_R2": 0.059940059940059943
+            },
+            "internal_fit": {
+              "lambda_km": 1585.6785551564979,
+              "R2_exponential": 0.5509692747989406,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.10827199348699883
+            },
+            "atomic_fit": {
+              "lambda_km": 1499.8163805344275,
+              "R2_exponential": 0.4534667770627513,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.212183665237573
+            },
+            "mean_phase_cos": -0.14174320830418338
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 202.91539649160424,
+              "R2_exponential": 0.2029383369625667,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.14174320830418338
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.024977635581207247,
+              "R2_max": 0.8727367927322025,
+              "lambda_median_km": 368.4269183357744,
+              "p_R2_ge_observed": 0.1928071928071928,
+              "p_TEP_band_and_R2": 0.061938061938061936
+            },
+            "internal_fit": {
+              "lambda_km": 1585.6785551564979,
+              "R2_exponential": 0.5509692747989406,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.10827199348699883
+            },
+            "atomic_fit": {
+              "lambda_km": 1499.8163805344275,
+              "R2_exponential": 0.4534667770627513,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.212183665237573
+            },
+            "mean_phase_cos": -0.14174320830418338
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 253.34365623886674,
+              "R2_exponential": 0.7465595613439466,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.003523758646798529
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.030173642535491596,
+              "R2_max": 0.868492445924899,
+              "lambda_median_km": 393.34231499972384,
+              "p_R2_ge_observed": 0.001998001998001998,
+              "p_TEP_band_and_R2": 0.001998001998001998
+            },
+            "internal_fit": {
+              "lambda_km": 488.90301106526374,
+              "R2_exponential": 0.48630517631480163,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.21095350048902622
+            },
+            "atomic_fit": {
+              "lambda_km": 39982.37493443261,
+              "R2_exponential": -1.1433076707589862e-12,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.048883929992246736
+            },
+            "mean_phase_cos": -0.003523758646798529
+          }
+        },
+        "control_freqs": {
+          "13uHz": {
+            "freq_uhz": 13.0,
+            "actual_freq_uhz": 13.354700854700855,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 1545.5868822466457,
+              "R2_exponential": 0.25576841948759677,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.06868855731106663
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.028896790450297305,
+              "R2_max": 0.757819901456114,
+              "lambda_median_km": 380.6870699340951,
+              "p_R2_ge_observed": 0.13486513486513488,
+              "p_TEP_band_and_R2": 0.04995004995004995
+            }
+          },
+          "15uHz": {
+            "freq_uhz": 15.0,
+            "actual_freq_uhz": 15.135327635327634,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 50.36714685013934,
+              "R2_exponential": -8.264500195309665e-13,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.1246971112201358
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.019796909770245508,
+              "R2_max": 0.8432239762805426,
+              "lambda_median_km": 233.18992715802221,
+              "p_R2_ge_observed": 0.9110889110889111,
+              "p_TEP_band_and_R2": 0.16483516483516483
+            }
+          },
+          "17uHz": {
+            "freq_uhz": 17.0,
+            "actual_freq_uhz": 16.915954415954413,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 214.9644832658334,
+              "R2_exponential": 0.28291356324087913,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.10760788731728704
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02774751352714694,
+              "R2_max": 0.7861537435281505,
+              "lambda_median_km": 330.98107951985764,
+              "p_R2_ge_observed": 0.1258741258741259,
+              "p_TEP_band_and_R2": 0.03896103896103896
+            }
+          },
+          "19uHz": {
+            "freq_uhz": 19.0,
+            "actual_freq_uhz": 18.696581196581196,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999954917,
+              "R2_exponential": 0.04809150265900497,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.004923259009851993
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.030807421661761758,
+              "R2_max": 0.8202171552078497,
+              "lambda_median_km": 314.95377415751244,
+              "p_R2_ge_observed": 0.43956043956043955,
+              "p_TEP_band_and_R2": 0.10989010989010989
+            }
+          },
+          "25uHz": {
+            "freq_uhz": 25.0,
+            "actual_freq_uhz": 24.928774928774928,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 216.89008584001874,
+              "R2_exponential": 0.1842000333568542,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.02822279888521888
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.035079259878158964,
+              "R2_max": 0.7455019096627234,
+              "lambda_median_km": 397.9800259387292,
+              "p_R2_ge_observed": 0.2037962037962038,
+              "p_TEP_band_and_R2": 0.07292707292707293
+            }
+          },
+          "27uHz": {
+            "freq_uhz": 27.0,
+            "actual_freq_uhz": 26.70940170940171,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 831.4902442378344,
+              "R2_exponential": 0.815389825587113,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.053446001237193924
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.034371345333709336,
+              "R2_max": 0.7749646476205608,
+              "lambda_median_km": 408.7858361963236,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            }
+          },
+          "29uHz": {
+            "freq_uhz": 29.0,
+            "actual_freq_uhz": 29.38034188034188,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 54.82912392392353,
+              "R2_exponential": -4.440892098500626e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.05595110995071966
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.022738594674293344,
+              "R2_max": 0.8230056583893777,
+              "lambda_median_km": 222.61871323449094,
+              "p_R2_ge_observed": 0.7342657342657343,
+              "p_TEP_band_and_R2": 0.17182817182817184
+            }
+          },
+          "31uHz": {
+            "freq_uhz": 31.0,
+            "actual_freq_uhz": 31.160968660968656,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 50.002405708096454,
+              "R2_exponential": -1.7319479184152442e-14,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.22004572683559637
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.031411303235100996,
+              "R2_max": 0.8628502392747482,
+              "lambda_median_km": 379.2532486270435,
+              "p_R2_ge_observed": 0.7912087912087912,
+              "p_TEP_band_and_R2": 0.1998001998001998
+            }
+          },
+          "33uHz": {
+            "freq_uhz": 33.0,
+            "actual_freq_uhz": 32.94159544159544,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999999823,
+              "R2_exponential": 0.32362295281239173,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.12672774570459644
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03052048987031819,
+              "R2_max": 0.8811379869411027,
+              "lambda_median_km": 297.6633718100177,
+              "p_R2_ge_observed": 0.0989010989010989,
+              "p_TEP_band_and_R2": 0.02097902097902098
+            }
+          },
+          "37uHz": {
+            "freq_uhz": 37.0,
+            "actual_freq_uhz": 37.39316239316239,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 1580.7202677177256,
+              "R2_exponential": 0.32430539288577687,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0020126542826299754
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.027771884195406382,
+              "R2_max": 0.855677070679433,
+              "lambda_median_km": 502.19067850298933,
+              "p_R2_ge_observed": 0.09090909090909091,
+              "p_TEP_band_and_R2": 0.027972027972027972
+            }
+          },
+          "39uHz": {
+            "freq_uhz": 39.0,
+            "actual_freq_uhz": 39.17378917378917,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.08363192659660013,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.016546211749619073
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02951073973494589,
+              "R2_max": 0.7403579356591135,
+              "lambda_median_km": 349.60437366228575,
+              "p_R2_ge_observed": 0.3756243756243756,
+              "p_TEP_band_and_R2": 0.11188811188811189
+            }
+          },
+          "41uHz": {
+            "freq_uhz": 41.0,
+            "actual_freq_uhz": 40.95441595441595,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 51.518620526339504,
+              "R2_exponential": -5.454081630773544e-12,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.11666706753381309
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.030095207851684957,
+              "R2_max": 0.8838780321385503,
+              "lambda_median_km": 456.5329072171713,
+              "p_R2_ge_observed": 0.983016983016983,
+              "p_TEP_band_and_R2": 0.18581418581418582
+            }
+          },
+          "43uHz": {
+            "freq_uhz": 43.0,
+            "actual_freq_uhz": 42.73504273504273,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 50.022351032583636,
+              "R2_exponential": -1.5654144647214707e-13,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.09799859329999576
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02967747356211442,
+              "R2_max": 0.7833026749265142,
+              "lambda_median_km": 462.6908944315471,
+              "p_R2_ge_observed": 0.8491508491508492,
+              "p_TEP_band_and_R2": 0.18281718281718282
+            }
+          },
+          "45uHz": {
+            "freq_uhz": 45.0,
+            "actual_freq_uhz": 45.4059829059829,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 50.01553008516683,
+              "R2_exponential": -2.2870594307278225e-14,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.010095911540878091
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02779577251847809,
+              "R2_max": 0.756424773294756,
+              "lambda_median_km": 235.2387106381708,
+              "p_R2_ge_observed": 0.7952047952047953,
+              "p_TEP_band_and_R2": 0.17482517482517482
+            }
+          }
+        },
+        "broadband": {
+          "n_pairs": 158,
+          "fit": {
+            "lambda_km": 739.2885367971654,
+            "R2_exponential": 0.5874606659045225,
+            "best_model": "exponential",
+            "n_bins": 10,
+            "n_pairs": 158,
+            "mean_index": -0.050644589424280205
+          },
+          "null": {
+            "n_realisations": 1000,
+            "R2_median": 0.02742597698539395,
+            "R2_max": 0.7533374638077907,
+            "lambda_median_km": 266.96552231330514,
+            "p_R2_ge_observed": 0.014985014985014986,
+            "p_TEP_band_and_R2": 0.005994005994005994
+          }
+        },
+        "separation_m": 10.723574637088047
+      },
+      "2025": {
+        "year": 2025,
+        "n_windows": 9,
+        "n_remote_stations": 157,
+        "freq_resolution_uhz": 0.8903133903133903,
+        "noise_floor": 1266204.5463140237,
+        "power_at_tides": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 31840318.94684995,
+            "snr": 25.146268065091455
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 31840318.94684995,
+            "snr": 25.146268065091455
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 404162670.09512436,
+            "snr": 319.19224367947453
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 404162670.09512436,
+            "snr": 319.19224367947453
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 404162670.09512436,
+            "snr": 319.19224367947453
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "power": 3244485.964256164,
+            "snr": 2.5623711221863825
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "power": 3665682.624450647,
+            "snr": 2.8950161607945635
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 81599444.21145622,
+            "snr": 64.44412512101283
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 81599444.21145622,
+            "snr": 64.44412512101283
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "power": 6624566.57122494,
+            "snr": 5.231829715435267
+          }
+        },
+        "tidal_lines": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 6347.866538270097,
+              "R2_exponential": 0.7385387514443622,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.09133182105174055
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.024788380353020556,
+              "R2_max": 0.7360298010105544,
+              "lambda_median_km": 279.44790188536183,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            },
+            "internal_fit": {
+              "lambda_km": 7046.117608020654,
+              "R2_exponential": 0.8402003361236619,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.0958730409540078
+            },
+            "atomic_fit": {
+              "lambda_km": 39999.99999999981,
+              "R2_exponential": 0.051298028987429634,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.07603282076326756
+            },
+            "mean_phase_cos": 0.09133182105174055
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 6347.866538270097,
+              "R2_exponential": 0.7385387514443622,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.09133182105174055
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.030016327673578758,
+              "R2_max": 0.7616412123700464,
+              "lambda_median_km": 416.2515043955756,
+              "p_R2_ge_observed": 0.002997002997002997,
+              "p_TEP_band_and_R2": 0.001998001998001998
+            },
+            "internal_fit": {
+              "lambda_km": 7046.117608020654,
+              "R2_exponential": 0.8402003361236619,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.0958730409540078
+            },
+            "atomic_fit": {
+              "lambda_km": 39999.99999999981,
+              "R2_exponential": 0.051298028987429634,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.07603282076326756
+            },
+            "mean_phase_cos": 0.09133182105174055
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 2461.8873219720876,
+              "R2_exponential": 0.864487784044359,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": -0.011456052505678965
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.027206834605359276,
+              "R2_max": 0.7236193810325846,
+              "lambda_median_km": 314.1783541001506,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            },
+            "internal_fit": {
+              "lambda_km": 3153.1414717974008,
+              "R2_exponential": 0.9289903740619756,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.019695025946860126
+            },
+            "atomic_fit": {
+              "lambda_km": 52.29340242239648,
+              "R2_exponential": -6.661338147750939e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.04263641284949196
+            },
+            "mean_phase_cos": -0.011456052505678965
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 2461.8873219720876,
+              "R2_exponential": 0.864487784044359,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": -0.011456052505678965
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.027150359049798622,
+              "R2_max": 0.8585157599947778,
+              "lambda_median_km": 427.9512733407163,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            },
+            "internal_fit": {
+              "lambda_km": 3153.1414717974008,
+              "R2_exponential": 0.9289903740619756,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.019695025946860126
+            },
+            "atomic_fit": {
+              "lambda_km": 52.29340242239648,
+              "R2_exponential": -6.661338147750939e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.04263641284949196
+            },
+            "mean_phase_cos": -0.011456052505678965
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 2461.8873219720876,
+              "R2_exponential": 0.864487784044359,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": -0.011456052505678965
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.031153150021175247,
+              "R2_max": 0.8011419856201859,
+              "lambda_median_km": 454.25639605598826,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            },
+            "internal_fit": {
+              "lambda_km": 3153.1414717974008,
+              "R2_exponential": 0.9289903740619756,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.019695025946860126
+            },
+            "atomic_fit": {
+              "lambda_km": 52.29340242239648,
+              "R2_exponential": -6.661338147750939e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.04263641284949196
+            },
+            "mean_phase_cos": -0.011456052505678965
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 30713.98065104893,
+              "R2_exponential": 0.7317995236205659,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.23242972249759594
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.028630196676183772,
+              "R2_max": 0.9038517351335795,
+              "lambda_median_km": 363.0711098399677,
+              "p_R2_ge_observed": 0.005994005994005994,
+              "p_TEP_band_and_R2": 0.001998001998001998
+            },
+            "internal_fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.7076187114978425,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.23144198898427018
+            },
+            "atomic_fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.02437582941790495,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.013163910850084712
+            },
+            "mean_phase_cos": 0.23242972249759594
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 4783.767442879193,
+              "R2_exponential": 0.7677806436974022,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.06845472521854182
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0345537753615226,
+              "R2_max": 0.8461773740410523,
+              "lambda_median_km": 420.95553917491173,
+              "p_R2_ge_observed": 0.002997002997002997,
+              "p_TEP_band_and_R2": 0.002997002997002997
+            },
+            "internal_fit": {
+              "lambda_km": 3465.530419129851,
+              "R2_exponential": 0.7951036780534031,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.08519872918419162
+            },
+            "atomic_fit": {
+              "lambda_km": 2332.0668278051553,
+              "R2_exponential": 0.46459560126309163,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.14160985346374763
+            },
+            "mean_phase_cos": 0.06845472521854182
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 2483.0968623650647,
+              "R2_exponential": 0.5757917111206414,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.08400720735472607
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02309921750196059,
+              "R2_max": 0.7734616493393867,
+              "lambda_median_km": 356.5758508324062,
+              "p_R2_ge_observed": 0.016983016983016984,
+              "p_TEP_band_and_R2": 0.005994005994005994
+            },
+            "internal_fit": {
+              "lambda_km": 1990.335999013381,
+              "R2_exponential": 0.6294498051908564,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.10376418895487832
+            },
+            "atomic_fit": {
+              "lambda_km": 1389.3457861070362,
+              "R2_exponential": 0.53170530221974,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.09640712241265173
+            },
+            "mean_phase_cos": 0.08400720735472607
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 2483.0968623650647,
+              "R2_exponential": 0.5757917111206414,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.08400720735472607
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.029295946586600174,
+              "R2_max": 0.8048571601247373,
+              "lambda_median_km": 437.42726709832465,
+              "p_R2_ge_observed": 0.015984015984015984,
+              "p_TEP_band_and_R2": 0.005994005994005994
+            },
+            "internal_fit": {
+              "lambda_km": 1990.335999013381,
+              "R2_exponential": 0.6294498051908564,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.10376418895487832
+            },
+            "atomic_fit": {
+              "lambda_km": 1389.3457861070362,
+              "R2_exponential": 0.53170530221974,
+              "best_model": "exponential",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.09640712241265173
+            },
+            "mean_phase_cos": 0.08400720735472607
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "n_pairs": 154,
+            "differential_fit": {
+              "lambda_km": 9378.29668897809,
+              "R2_exponential": 0.008665708150872198,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.13168724607680646
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.025792268623182957,
+              "R2_max": 0.899880899250861,
+              "lambda_median_km": 457.90760442203714,
+              "p_R2_ge_observed": 0.5904095904095904,
+              "p_TEP_band_and_R2": 0.17182817182817184
+            },
+            "internal_fit": {
+              "lambda_km": 604.0273147982119,
+              "R2_exponential": 0.6148748729776199,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.24526908503716344
+            },
+            "atomic_fit": {
+              "lambda_km": 484.8215089405856,
+              "R2_exponential": 0.6813297783794581,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.14808876010040645
+            },
+            "mean_phase_cos": 0.13168724607680646
+          }
+        },
+        "control_freqs": {
+          "13uHz": {
+            "freq_uhz": 13.0,
+            "actual_freq_uhz": 13.354700854700855,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 24502.319600135073,
+              "R2_exponential": 0.8640694343310682,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.10772261170505175
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.035608066285738205,
+              "R2_max": 0.8357647895479723,
+              "lambda_median_km": 486.7018976924703,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            }
+          },
+          "15uHz": {
+            "freq_uhz": 15.0,
+            "actual_freq_uhz": 15.135327635327634,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 8936.863341763012,
+              "R2_exponential": 0.4210176098932127,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.24167920256636125
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.028573284364041607,
+              "R2_max": 0.6967707931841611,
+              "lambda_median_km": 627.4254335630876,
+              "p_R2_ge_observed": 0.04595404595404595,
+              "p_TEP_band_and_R2": 0.01998001998001998
+            }
+          },
+          "17uHz": {
+            "freq_uhz": 17.0,
+            "actual_freq_uhz": 16.915954415954413,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 819.7846668889922,
+              "R2_exponential": 0.7746919397898545,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.0003977820361858446
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02919792618824435,
+              "R2_max": 0.7703614408334807,
+              "lambda_median_km": 347.6271647105665,
+              "p_R2_ge_observed": 0.000999000999000999,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            }
+          },
+          "19uHz": {
+            "freq_uhz": 19.0,
+            "actual_freq_uhz": 18.696581196581196,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 296.9289032141223,
+              "R2_exponential": 0.4751359698246158,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.1133329925210004
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02671666535567019,
+              "R2_max": 0.8356631787497111,
+              "lambda_median_km": 388.23536557018696,
+              "p_R2_ge_observed": 0.02097902097902098,
+              "p_TEP_band_and_R2": 0.008991008991008992
+            }
+          },
+          "25uHz": {
+            "freq_uhz": 25.0,
+            "actual_freq_uhz": 24.928774928774928,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 891.7177345681257,
+              "R2_exponential": 0.8092818715676122,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.1896202278540507
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03030532785264045,
+              "R2_max": 0.8282418194355351,
+              "lambda_median_km": 492.11314097996444,
+              "p_R2_ge_observed": 0.002997002997002997,
+              "p_TEP_band_and_R2": 0.002997002997002997
+            }
+          },
+          "27uHz": {
+            "freq_uhz": 27.0,
+            "actual_freq_uhz": 26.70940170940171,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 1143.2454391331332,
+              "R2_exponential": 0.6247562336504628,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.32652860987584964
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.026249410227734638,
+              "R2_max": 0.7690379749104652,
+              "lambda_median_km": 390.0946448922798,
+              "p_R2_ge_observed": 0.007992007992007992,
+              "p_TEP_band_and_R2": 0.002997002997002997
+            }
+          },
+          "29uHz": {
+            "freq_uhz": 29.0,
+            "actual_freq_uhz": 29.38034188034188,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 319.90236232343887,
+              "R2_exponential": 0.343725484286323,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.2122412726070879
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02478032857769502,
+              "R2_max": 0.9332562269068525,
+              "lambda_median_km": 308.80453029045566,
+              "p_R2_ge_observed": 0.07592407592407592,
+              "p_TEP_band_and_R2": 0.027972027972027972
+            }
+          },
+          "31uHz": {
+            "freq_uhz": 31.0,
+            "actual_freq_uhz": 31.160968660968656,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 17226.879215924993,
+              "R2_exponential": 0.31420011221750177,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.424487018135761
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02834689461363893,
+              "R2_max": 0.8506950867936746,
+              "lambda_median_km": 431.4037646869259,
+              "p_R2_ge_observed": 0.0919080919080919,
+              "p_TEP_band_and_R2": 0.03596403596403597
+            }
+          },
+          "33uHz": {
+            "freq_uhz": 33.0,
+            "actual_freq_uhz": 32.94159544159544,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 1557.6972008550185,
+              "R2_exponential": 0.8371235694599961,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.38794555696501215
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03174676722035119,
+              "R2_max": 0.888743862227614,
+              "lambda_median_km": 422.7542060439547,
+              "p_R2_ge_observed": 0.001998001998001998,
+              "p_TEP_band_and_R2": 0.000999000999000999
+            }
+          },
+          "37uHz": {
+            "freq_uhz": 37.0,
+            "actual_freq_uhz": 37.39316239316239,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 1119.857789982857,
+              "R2_exponential": 0.32979675178758494,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.3436929365321599
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03355606551287571,
+              "R2_max": 0.7985197985317266,
+              "lambda_median_km": 445.0703164578422,
+              "p_R2_ge_observed": 0.0989010989010989,
+              "p_TEP_band_and_R2": 0.03996003996003996
+            }
+          },
+          "39uHz": {
+            "freq_uhz": 39.0,
+            "actual_freq_uhz": 39.17378917378917,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 13496.796892428449,
+              "R2_exponential": 0.3314937393824967,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.22678565374980592
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.030786821109503537,
+              "R2_max": 0.7467409221503469,
+              "lambda_median_km": 454.8640497585968,
+              "p_R2_ge_observed": 0.0919080919080919,
+              "p_TEP_band_and_R2": 0.026973026973026972
+            }
+          },
+          "41uHz": {
+            "freq_uhz": 41.0,
+            "actual_freq_uhz": 40.95441595441595,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 3016.162263738009,
+              "R2_exponential": 0.5990035656783653,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.16753121012777308
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.02949911306537073,
+              "R2_max": 0.8699782197622252,
+              "lambda_median_km": 290.76536267638835,
+              "p_R2_ge_observed": 0.013986013986013986,
+              "p_TEP_band_and_R2": 0.007992007992007992
+            }
+          },
+          "43uHz": {
+            "freq_uhz": 43.0,
+            "actual_freq_uhz": 42.73504273504273,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 819.2436111880894,
+              "R2_exponential": 0.28760590970721733,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.24500336700185107
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.022734039901856684,
+              "R2_max": 0.7897435481586004,
+              "lambda_median_km": 376.2812512515286,
+              "p_R2_ge_observed": 0.10789210789210789,
+              "p_TEP_band_and_R2": 0.03596403596403597
+            }
+          },
+          "45uHz": {
+            "freq_uhz": 45.0,
+            "actual_freq_uhz": 45.4059829059829,
+            "n_pairs": 154,
+            "fit": {
+              "lambda_km": 691.960533957502,
+              "R2_exponential": 0.6290310390124323,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 154,
+              "mean_index": 0.14172757531111815
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.03744492387751125,
+              "R2_max": 0.909603994685678,
+              "lambda_median_km": 581.50658124238,
+              "p_R2_ge_observed": 0.012987012987012988,
+              "p_TEP_band_and_R2": 0.006993006993006993
+            }
+          }
+        },
+        "broadband": {
+          "n_pairs": 154,
+          "fit": {
+            "lambda_km": 2940.7553545474884,
+            "R2_exponential": 0.8326104839445996,
+            "best_model": "gaussian",
+            "n_bins": 10,
+            "n_pairs": 154,
+            "mean_index": -0.07043917810142233
+          },
+          "null": {
+            "n_realisations": 1000,
+            "R2_median": 0.01867217025334228,
+            "R2_max": 0.859578762641684,
+            "lambda_median_km": 297.1579300827443,
+            "p_R2_ge_observed": 0.001998001998001998,
+            "p_TEP_band_and_R2": 0.001998001998001998
+          }
+        },
+        "separation_m": 10.7
+      }
+    },
+    "STR2-STR1": {
+      "2024": {
+        "year": 2024,
+        "n_windows": 47,
+        "n_remote_stations": 158,
+        "freq_resolution_uhz": 0.8903133903133903,
+        "noise_floor": 562570876470081.6,
+        "power_at_tides": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 2049917472404032.8,
+            "snr": 3.64383859553215
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 2049917472404032.8,
+            "snr": 3.64383859553215
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 4673805396778611.0,
+            "snr": 8.307940549828961
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 4673805396778611.0,
+            "snr": 8.307940549828961
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 4673805396778611.0,
+            "snr": 8.307940549828961
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "power": 1384435551195213.2,
+            "snr": 2.4609086767555763
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "power": 684066934873428.5,
+            "snr": 1.2159657804643007
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 984813530790142.6,
+            "snr": 1.7505590352800933
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 984813530790142.6,
+            "snr": 1.7505590352800933
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "power": 408415975051704.7,
+            "snr": 0.725981368986535
+          }
+        },
+        "tidal_lines": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 55.46584227510073,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.025552879465017723
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.011078917023582602,
+              "R2_max": 0.8603264622649214,
+              "lambda_median_km": 542.1018029278155,
+              "p_R2_ge_observed": 0.9180819180819181,
+              "p_TEP_band_and_R2": 0.15984015984015984
+            },
+            "internal_fit": {
+              "lambda_km": 114.27037109906234,
+              "R2_exponential": -6.499245586155666e-13,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.014323717209026744
+            },
+            "atomic_fit": {
+              "lambda_km": 12852.593287548547,
+              "R2_exponential": 0.5915207787242724,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.06356761019954028
+            },
+            "mean_phase_cos": 0.025552879465017723
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 55.46584227510073,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.025552879465017723
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.00407153548598127,
+              "R2_max": 0.7730357149628706,
+              "lambda_median_km": 475.21678394140326,
+              "p_R2_ge_observed": 0.9150849150849151,
+              "p_TEP_band_and_R2": 0.11888111888111888
+            },
+            "internal_fit": {
+              "lambda_km": 114.27037109906234,
+              "R2_exponential": -6.499245586155666e-13,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.014323717209026744
+            },
+            "atomic_fit": {
+              "lambda_km": 12852.593287548547,
+              "R2_exponential": 0.5915207787242724,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.06356761019954028
+            },
+            "mean_phase_cos": 0.025552879465017723
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 39999.999999999985,
+              "R2_exponential": 0.0749699329093868,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.04965841232599274
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.004913577197550534,
+              "R2_max": 0.8135417617099229,
+              "lambda_median_km": 483.3661011833058,
+              "p_R2_ge_observed": 0.3116883116883117,
+              "p_TEP_band_and_R2": 0.1038961038961039
+            },
+            "internal_fit": {
+              "lambda_km": 4375.186495451764,
+              "R2_exponential": 0.2632155859205071,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.10449191664945347
+            },
+            "atomic_fit": {
+              "lambda_km": 55.42633751929071,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04662863378374113
+            },
+            "mean_phase_cos": -0.04965841232599274
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 39999.999999999985,
+              "R2_exponential": 0.0749699329093868,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.04965841232599274
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.004348789508967776,
+              "R2_max": 0.7809757958436128,
+              "lambda_median_km": 480.84202243472885,
+              "p_R2_ge_observed": 0.2987012987012987,
+              "p_TEP_band_and_R2": 0.09090909090909091
+            },
+            "internal_fit": {
+              "lambda_km": 4375.186495451764,
+              "R2_exponential": 0.2632155859205071,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.10449191664945347
+            },
+            "atomic_fit": {
+              "lambda_km": 55.42633751929071,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04662863378374113
+            },
+            "mean_phase_cos": -0.04965841232599274
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 39999.999999999985,
+              "R2_exponential": 0.0749699329093868,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.04965841232599274
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.002829825449303769,
+              "R2_max": 0.8776489795715936,
+              "lambda_median_km": 454.371433667269,
+              "p_R2_ge_observed": 0.3096903096903097,
+              "p_TEP_band_and_R2": 0.08691308691308691
+            },
+            "internal_fit": {
+              "lambda_km": 4375.186495451764,
+              "R2_exponential": 0.2632155859205071,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.10449191664945347
+            },
+            "atomic_fit": {
+              "lambda_km": 55.42633751929071,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.04662863378374113
+            },
+            "mean_phase_cos": -0.04965841232599274
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 505.0989289445537,
+              "R2_exponential": 0.01472793093860858,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.053134408871877974
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0056165536100146185,
+              "R2_max": 0.7914732862583218,
+              "lambda_median_km": 502.04367218994,
+              "p_R2_ge_observed": 0.45754245754245754,
+              "p_TEP_band_and_R2": 0.12287712287712288
+            },
+            "internal_fit": {
+              "lambda_km": 748.3332905460512,
+              "R2_exponential": 0.25516155480750213,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.11876748996777084
+            },
+            "atomic_fit": {
+              "lambda_km": 39999.999999531916,
+              "R2_exponential": 0.12846803988128908,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.12332461551461585
+            },
+            "mean_phase_cos": -0.053134408871877974
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 805.2341399440439,
+              "R2_exponential": 0.2660950210946387,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.004035517920715379
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0034132436948530742,
+              "R2_max": 0.8138394188005764,
+              "lambda_median_km": 475.831822940499,
+              "p_R2_ge_observed": 0.10989010989010989,
+              "p_TEP_band_and_R2": 0.028971028971028972
+            },
+            "internal_fit": {
+              "lambda_km": 803.9904536856566,
+              "R2_exponential": 0.5268382626180466,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.16656992838756118
+            },
+            "atomic_fit": {
+              "lambda_km": 55.853371523092505,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.035592121750227496
+            },
+            "mean_phase_cos": 0.004035517920715379
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 56.53969882079525,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.01620548854617158
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0030463934102467616,
+              "R2_max": 0.7815450070841837,
+              "lambda_median_km": 471.41584763910595,
+              "p_R2_ge_observed": 0.906093906093906,
+              "p_TEP_band_and_R2": 0.13386613386613386
+            },
+            "internal_fit": {
+              "lambda_km": 55.158731618519596,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.010979030615951391
+            },
+            "atomic_fit": {
+              "lambda_km": 93.10435264979697,
+              "R2_exponential": -1.5543122344752192e-15,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.07237697152380311
+            },
+            "mean_phase_cos": -0.01620548854617158
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 56.53969882079525,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.01620548854617158
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.007720094118664311,
+              "R2_max": 0.8280545810529782,
+              "lambda_median_km": 505.615316406248,
+              "p_R2_ge_observed": 0.9150849150849151,
+              "p_TEP_band_and_R2": 0.12987012987012986
+            },
+            "internal_fit": {
+              "lambda_km": 55.158731618519596,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "power_law",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.010979030615951391
+            },
+            "atomic_fit": {
+              "lambda_km": 93.10435264979697,
+              "R2_exponential": -1.5543122344752192e-15,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.07237697152380311
+            },
+            "mean_phase_cos": -0.01620548854617158
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "n_pairs": 158,
+            "differential_fit": {
+              "lambda_km": 39999.999999999935,
+              "R2_exponential": 0.30090977330339463,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.23189669316162517
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0026569657140293468,
+              "R2_max": 0.8699980728958305,
+              "lambda_median_km": 462.4390909207259,
+              "p_R2_ge_observed": 0.0899100899100899,
+              "p_TEP_band_and_R2": 0.03596403596403597
+            },
+            "internal_fit": {
+              "lambda_km": 9376.54737314051,
+              "R2_exponential": 0.33628214849002425,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.11447297879217233
+            },
+            "atomic_fit": {
+              "lambda_km": 56.56689325085074,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.22074868183253715
+            },
+            "mean_phase_cos": -0.23189669316162517
+          }
+        },
+        "control_freqs": {
+          "13uHz": {
+            "freq_uhz": 13.0,
+            "actual_freq_uhz": 13.354700854700855,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999999927,
+              "R2_exponential": 0.018359883042096126,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.11737700531355816
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.008766496082168007,
+              "R2_max": 0.7180651509281841,
+              "lambda_median_km": 516.3861667605302,
+              "p_R2_ge_observed": 0.46653346653346656,
+              "p_TEP_band_and_R2": 0.12987012987012986
+            }
+          },
+          "15uHz": {
+            "freq_uhz": 15.0,
+            "actual_freq_uhz": 15.135327635327634,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 2431.5931558073203,
+              "R2_exponential": 0.11158899874374595,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0765701586713396
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.007526428520570727,
+              "R2_max": 0.8077978970634726,
+              "lambda_median_km": 500.99319714187044,
+              "p_R2_ge_observed": 0.23976023976023977,
+              "p_TEP_band_and_R2": 0.07892107892107893
+            }
+          },
+          "17uHz": {
+            "freq_uhz": 17.0,
+            "actual_freq_uhz": 16.915954415954413,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 61.686621779297525,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.039528923808481005
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.009121281971964101,
+              "R2_max": 0.9301715258347815,
+              "lambda_median_km": 536.2456557787912,
+              "p_R2_ge_observed": 0.8321678321678322,
+              "p_TEP_band_and_R2": 0.14385614385614387
+            }
+          },
+          "19uHz": {
+            "freq_uhz": 19.0,
+            "actual_freq_uhz": 18.696581196581196,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 80.51218902476307,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.08592300321805597
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010418460079425929,
+              "R2_max": 0.727900559153647,
+              "lambda_median_km": 529.874988509664,
+              "p_R2_ge_observed": 0.9330669330669331,
+              "p_TEP_band_and_R2": 0.15384615384615385
+            }
+          },
+          "25uHz": {
+            "freq_uhz": 25.0,
+            "actual_freq_uhz": 24.928774928774928,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 672.9589436167521,
+              "R2_exponential": 0.13730210667616394,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.014343684662105416
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0029804667619410252,
+              "R2_max": 0.8149634000204214,
+              "lambda_median_km": 469.5532488820311,
+              "p_R2_ge_observed": 0.21878121878121878,
+              "p_TEP_band_and_R2": 0.060939060939060936
+            }
+          },
+          "27uHz": {
+            "freq_uhz": 27.0,
+            "actual_freq_uhz": 26.70940170940171,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.0957303151734008,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.052174217996857064
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.003978715356001805,
+              "R2_max": 0.7774847766992474,
+              "lambda_median_km": 460.78159768121736,
+              "p_R2_ge_observed": 0.2727272727272727,
+              "p_TEP_band_and_R2": 0.06993006993006994
+            }
+          },
+          "29uHz": {
+            "freq_uhz": 29.0,
+            "actual_freq_uhz": 29.38034188034188,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 747.2680603664976,
+              "R2_exponential": 0.2882070370367559,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.23782951561024399
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.008053258175582445,
+              "R2_max": 0.7906613784011295,
+              "lambda_median_km": 501.4296147936301,
+              "p_R2_ge_observed": 0.07792207792207792,
+              "p_TEP_band_and_R2": 0.03696303696303696
+            }
+          },
+          "31uHz": {
+            "freq_uhz": 31.0,
+            "actual_freq_uhz": 31.160968660968656,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.97895436713,
+              "R2_exponential": 0.4423698949202116,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.04285952067272903
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0028799234182381728,
+              "R2_max": 0.6963418036054723,
+              "lambda_median_km": 479.1995958660552,
+              "p_R2_ge_observed": 0.04095904095904096,
+              "p_TEP_band_and_R2": 0.017982017982017984
+            }
+          },
+          "33uHz": {
+            "freq_uhz": 33.0,
+            "actual_freq_uhz": 32.94159544159544,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 1590.7594513019842,
+              "R2_exponential": 0.35272167935151777,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.11461595204616434
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010643635645153582,
+              "R2_max": 0.8322146547645307,
+              "lambda_median_km": 516.1426787737553,
+              "p_R2_ge_observed": 0.058941058941058944,
+              "p_TEP_band_and_R2": 0.026973026973026972
+            }
+          },
+          "37uHz": {
+            "freq_uhz": 37.0,
+            "actual_freq_uhz": 37.39316239316239,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 95.67314870296025,
+              "R2_exponential": -4.218847493575595e-15,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.0022516685863757427
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010462104939355676,
+              "R2_max": 0.7584275332530961,
+              "lambda_median_km": 546.2576898266518,
+              "p_R2_ge_observed": 0.942057942057942,
+              "p_TEP_band_and_R2": 0.15084915084915085
+            }
+          },
+          "39uHz": {
+            "freq_uhz": 39.0,
+            "actual_freq_uhz": 39.17378917378917,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.3624537673314904,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.012495611107267502
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010221989859285241,
+              "R2_max": 0.8541628588656008,
+              "lambda_median_km": 535.1286093242961,
+              "p_R2_ge_observed": 0.059940059940059943,
+              "p_TEP_band_and_R2": 0.015984015984015984
+            }
+          },
+          "41uHz": {
+            "freq_uhz": 41.0,
+            "actual_freq_uhz": 40.95441595441595,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 60.3823491257545,
+              "R2_exponential": 2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.2475775669753492
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.006597874065798259,
+              "R2_max": 0.8384216053594976,
+              "lambda_median_km": 482.8623179201349,
+              "p_R2_ge_observed": 0.5984015984015985,
+              "p_TEP_band_and_R2": 0.13886113886113885
+            }
+          },
+          "43uHz": {
+            "freq_uhz": 43.0,
+            "actual_freq_uhz": 42.73504273504273,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 39999.999999970736,
+              "R2_exponential": 0.15349393545405332,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": -0.19399443926739385
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.004065265415093167,
+              "R2_max": 0.7343099185160509,
+              "lambda_median_km": 463.96345282660855,
+              "p_R2_ge_observed": 0.18981018981018982,
+              "p_TEP_band_and_R2": 0.054945054945054944
+            }
+          },
+          "45uHz": {
+            "freq_uhz": 45.0,
+            "actual_freq_uhz": 45.4059829059829,
+            "n_pairs": 158,
+            "fit": {
+              "lambda_km": 103.82171247395206,
+              "R2_exponential": -1.2656542480726785e-14,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 158,
+              "mean_index": 0.03423874465081294
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0056279253920552,
+              "R2_max": 0.8529400102875102,
+              "lambda_median_km": 486.8236027795,
+              "p_R2_ge_observed": 0.952047952047952,
+              "p_TEP_band_and_R2": 0.13686313686313686
+            }
+          }
+        },
+        "broadband": {
+          "n_pairs": 158,
+          "fit": {
+            "lambda_km": 478.7625130202939,
+            "R2_exponential": 0.011740942939743038,
+            "best_model": "constant",
+            "n_bins": 10,
+            "n_pairs": 158,
+            "mean_index": -0.16443997201352825
+          },
+          "null": {
+            "n_realisations": 1000,
+            "R2_median": 0.0028796457704544642,
+            "R2_max": 0.8054583627627363,
+            "lambda_median_km": 477.7043607708914,
+            "p_R2_ge_observed": 0.4695304695304695,
+            "p_TEP_band_and_R2": 0.12887112887112886
+          }
+        },
+        "separation_m": 70.30772774094176
+      }
+    },
+    "THTI-THTG": {
+      "2024": {
+        "year": 2024,
+        "n_windows": 33,
+        "n_remote_stations": 157,
+        "freq_resolution_uhz": 0.8903133903133903,
+        "noise_floor": 67100632799619.22,
+        "power_at_tides": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 272708891018571.22,
+            "snr": 4.06417763350987
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "power": 272708891018571.22,
+            "snr": 4.06417763350987
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 240676652112484.2,
+            "snr": 3.586801525869514
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 240676652112484.2,
+            "snr": 3.586801525869514
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "power": 240676652112484.2,
+            "snr": 3.586801525869514
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "power": 200420918802524.94,
+            "snr": 2.9868707706682356
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "power": 167552816288902.0,
+            "snr": 2.497037796785917
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 125965877554554.4,
+            "snr": 1.8772681016395607
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "power": 125965877554554.4,
+            "snr": 1.8772681016395607
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "power": 58008170871239.69,
+            "snr": 0.8644951388829357
+          }
+        },
+        "tidal_lines": {
+          "O1": {
+            "freq_uhz": 10.758,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 39999.9999955901,
+              "R2_exponential": 0.20019609519386683,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.042804243130537954
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.01179064431371657,
+              "R2_max": 0.9254510786197211,
+              "lambda_median_km": 815.9299448243962,
+              "p_R2_ge_observed": 0.16083916083916083,
+              "p_TEP_band_and_R2": 0.08291708291708291
+            },
+            "internal_fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.334907918025087,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.04948264324867608
+            },
+            "atomic_fit": {
+              "lambda_km": 53.812737493678895,
+              "R2_exponential": 1.1102230246251565e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.058960424008124804
+            },
+            "mean_phase_cos": -0.042804243130537954
+          },
+          "Q1": {
+            "freq_uhz": 10.676,
+            "actual_freq_uhz": 10.683760683760683,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 39999.9999955901,
+              "R2_exponential": 0.20019609519386683,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.042804243130537954
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.0066976811819697835,
+              "R2_max": 0.7647948574897977,
+              "lambda_median_km": 749.596954544447,
+              "p_R2_ge_observed": 0.13886113886113885,
+              "p_TEP_band_and_R2": 0.08491508491508491
+            },
+            "internal_fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.334907918025087,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.04948264324867608
+            },
+            "atomic_fit": {
+              "lambda_km": 53.812737493678895,
+              "R2_exponential": 1.1102230246251565e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.058960424008124804
+            },
+            "mean_phase_cos": -0.042804243130537954
+          },
+          "S1": {
+            "freq_uhz": 11.574,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 56.26488853556543,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.010383321585189167
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010491802941897277,
+              "R2_max": 0.8190036374193724,
+              "lambda_median_km": 801.2960231012034,
+              "p_R2_ge_observed": 0.949050949050949,
+              "p_TEP_band_and_R2": 0.18981018981018982
+            },
+            "internal_fit": {
+              "lambda_km": 1030.0651578512197,
+              "R2_exponential": 0.14110726672840468,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.061179942495501544
+            },
+            "atomic_fit": {
+              "lambda_km": 1623.602569540113,
+              "R2_exponential": 0.2623483634565138,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.007494089327201534
+            },
+            "mean_phase_cos": -0.010383321585189167
+          },
+          "P1": {
+            "freq_uhz": 11.542,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 56.26488853556543,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.010383321585189167
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010713635198535632,
+              "R2_max": 0.7695548734237089,
+              "lambda_median_km": 823.8952510961959,
+              "p_R2_ge_observed": 0.962037962037962,
+              "p_TEP_band_and_R2": 0.2127872127872128
+            },
+            "internal_fit": {
+              "lambda_km": 1030.0651578512197,
+              "R2_exponential": 0.14110726672840468,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.061179942495501544
+            },
+            "atomic_fit": {
+              "lambda_km": 1623.602569540113,
+              "R2_exponential": 0.2623483634565138,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.007494089327201534
+            },
+            "mean_phase_cos": -0.010383321585189167
+          },
+          "K1": {
+            "freq_uhz": 11.608,
+            "actual_freq_uhz": 11.574074074074073,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 56.26488853556543,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.010383321585189167
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.012679693630934519,
+              "R2_max": 0.7064799939119029,
+              "lambda_median_km": 831.1653188587682,
+              "p_R2_ge_observed": 0.9630369630369631,
+              "p_TEP_band_and_R2": 0.22377622377622378
+            },
+            "internal_fit": {
+              "lambda_km": 1030.0651578512197,
+              "R2_exponential": 0.14110726672840468,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.061179942495501544
+            },
+            "atomic_fit": {
+              "lambda_km": 1623.602569540113,
+              "R2_exponential": 0.2623483634565138,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.007494089327201534
+            },
+            "mean_phase_cos": -0.010383321585189167
+          },
+          "N2": {
+            "freq_uhz": 21.422,
+            "actual_freq_uhz": 21.367521367521366,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 101.15357554639957,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.1745919985718406
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.01051363619720036,
+              "R2_max": 0.814400653099901,
+              "lambda_median_km": 794.5988025895775,
+              "p_R2_ge_observed": 0.8721278721278721,
+              "p_TEP_band_and_R2": 0.18181818181818182
+            },
+            "internal_fit": {
+              "lambda_km": 4768.438137117221,
+              "R2_exponential": 0.42348053390841167,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.03954896701033677
+            },
+            "atomic_fit": {
+              "lambda_km": 39999.999999999985,
+              "R2_exponential": 0.24765966428027852,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.19298342692887238
+            },
+            "mean_phase_cos": 0.1745919985718406
+          },
+          "M2": {
+            "freq_uhz": 22.365,
+            "actual_freq_uhz": 22.257834757834754,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 39999.99999999983,
+              "R2_exponential": 0.07670558075208411,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.017510085081427214
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.00657052342416814,
+              "R2_max": 0.8197627615094971,
+              "lambda_median_km": 798.6344590137601,
+              "p_R2_ge_observed": 0.3076923076923077,
+              "p_TEP_band_and_R2": 0.16783216783216784
+            },
+            "internal_fit": {
+              "lambda_km": 167.32549213219363,
+              "R2_exponential": -1.538769112130467e-13,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.16576907148533615
+            },
+            "atomic_fit": {
+              "lambda_km": 931.7625272713501,
+              "R2_exponential": 0.06828801756766634,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.016921944943209262
+            },
+            "mean_phase_cos": 0.017510085081427214
+          },
+          "S2": {
+            "freq_uhz": 23.148,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 39999.999999854255,
+              "R2_exponential": 0.2643444009479906,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.024507468896322836
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.014759549023084795,
+              "R2_max": 0.8009473480307532,
+              "lambda_median_km": 840.915091063262,
+              "p_R2_ge_observed": 0.1008991008991009,
+              "p_TEP_band_and_R2": 0.06693306693306693
+            },
+            "internal_fit": {
+              "lambda_km": 1375.7395078771306,
+              "R2_exponential": 0.05307090246314272,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.10605393318370929
+            },
+            "atomic_fit": {
+              "lambda_km": 57.29493560850119,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.01952134470117249
+            },
+            "mean_phase_cos": -0.024507468896322836
+          },
+          "K2": {
+            "freq_uhz": 23.098,
+            "actual_freq_uhz": 23.148148148148145,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 39999.999999854255,
+              "R2_exponential": 0.2643444009479906,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.024507468896322836
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.014273004694588698,
+              "R2_max": 0.8061834810309899,
+              "lambda_median_km": 881.8166517350547,
+              "p_R2_ge_observed": 0.12787212787212787,
+              "p_TEP_band_and_R2": 0.06993006993006994
+            },
+            "internal_fit": {
+              "lambda_km": 1375.7395078771306,
+              "R2_exponential": 0.05307090246314272,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.10605393318370929
+            },
+            "atomic_fit": {
+              "lambda_km": 57.29493560850119,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.01952134470117249
+            },
+            "mean_phase_cos": -0.024507468896322836
+          },
+          "M3": {
+            "freq_uhz": 34.533,
+            "actual_freq_uhz": 34.72222222222222,
+            "n_pairs": 157,
+            "differential_fit": {
+              "lambda_km": 59.71833366603124,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.03880085520661357
+            },
+            "differential_null": {
+              "n_realisations": 1000,
+              "R2_median": 0.01498217273940361,
+              "R2_max": 0.836115343934061,
+              "lambda_median_km": 812.3867982934489,
+              "p_R2_ge_observed": 0.954045954045954,
+              "p_TEP_band_and_R2": 0.1998001998001998
+            },
+            "internal_fit": {
+              "lambda_km": 451.329457190062,
+              "R2_exponential": 3.765129102384357e-06,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.11051417097505216
+            },
+            "atomic_fit": {
+              "lambda_km": 1036.2398462935055,
+              "R2_exponential": 0.2270450793115697,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.03301877119432889
+            },
+            "mean_phase_cos": -0.03880085520661357
+          }
+        },
+        "control_freqs": {
+          "13uHz": {
+            "freq_uhz": 13.0,
+            "actual_freq_uhz": 13.354700854700855,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 55.789165768531745,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.06980443980816803
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.007962884475347654,
+              "R2_max": 0.7330336131707925,
+              "lambda_median_km": 769.4559368050095,
+              "p_R2_ge_observed": 0.8491508491508492,
+              "p_TEP_band_and_R2": 0.1968031968031968
+            }
+          },
+          "15uHz": {
+            "freq_uhz": 15.0,
+            "actual_freq_uhz": 15.135327635327634,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 65.93483959257816,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.08758055239402748
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.016987992956609188,
+              "R2_max": 0.8170195127908028,
+              "lambda_median_km": 828.72390689587,
+              "p_R2_ge_observed": 0.8651348651348651,
+              "p_TEP_band_and_R2": 0.2057942057942058
+            }
+          },
+          "17uHz": {
+            "freq_uhz": 17.0,
+            "actual_freq_uhz": 16.915954415954413,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 6990.0599479295515,
+              "R2_exponential": 0.11845094323204197,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.06539801587176082
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.01389873691958693,
+              "R2_max": 0.7358322016069495,
+              "lambda_median_km": 845.9129560950917,
+              "p_R2_ge_observed": 0.26373626373626374,
+              "p_TEP_band_and_R2": 0.13786213786213786
+            }
+          },
+          "19uHz": {
+            "freq_uhz": 19.0,
+            "actual_freq_uhz": 18.696581196581196,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 55.40125889538854,
+              "R2_exponential": -4.440892098500626e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.00731388876105159
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010607505163098163,
+              "R2_max": 0.8748065143157423,
+              "lambda_median_km": 819.0082981203946,
+              "p_R2_ge_observed": 0.968031968031968,
+              "p_TEP_band_and_R2": 0.21478521478521478
+            }
+          },
+          "25uHz": {
+            "freq_uhz": 25.0,
+            "actual_freq_uhz": 24.928774928774928,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 33242.58677073008,
+              "R2_exponential": 0.6046889101480238,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.016848490268954328
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.01580469652805777,
+              "R2_max": 0.7757119826719646,
+              "lambda_median_km": 888.4030980879701,
+              "p_R2_ge_observed": 0.008991008991008992,
+              "p_TEP_band_and_R2": 0.006993006993006993
+            }
+          },
+          "27uHz": {
+            "freq_uhz": 27.0,
+            "actual_freq_uhz": 26.70940170940171,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 39999.99999999997,
+              "R2_exponential": 0.5040715004129233,
+              "best_model": "gaussian",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.05770513054370765
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.014012700386887567,
+              "R2_max": 0.8213325938813195,
+              "lambda_median_km": 829.0241449284707,
+              "p_R2_ge_observed": 0.02097902097902098,
+              "p_TEP_band_and_R2": 0.015984015984015984
+            }
+          },
+          "29uHz": {
+            "freq_uhz": 29.0,
+            "actual_freq_uhz": 29.38034188034188,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 96.96286789462397,
+              "R2_exponential": 2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.11394795600829592
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010834875006453859,
+              "R2_max": 0.87644203338602,
+              "lambda_median_km": 857.1997884130277,
+              "p_R2_ge_observed": 0.6413586413586414,
+              "p_TEP_band_and_R2": 0.23376623376623376
+            }
+          },
+          "31uHz": {
+            "freq_uhz": 31.0,
+            "actual_freq_uhz": 31.160968660968656,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 39999.99999999999,
+              "R2_exponential": 0.029850795953809017,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.03970702035131764
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.006866978834450033,
+              "R2_max": 0.781833482727261,
+              "lambda_median_km": 816.3465128130435,
+              "p_R2_ge_observed": 0.4305694305694306,
+              "p_TEP_band_and_R2": 0.1888111888111888
+            }
+          },
+          "33uHz": {
+            "freq_uhz": 33.0,
+            "actual_freq_uhz": 32.94159544159544,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 71.0697026881021,
+              "R2_exponential": 0.0,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.11553222982314985
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.010595760412939637,
+              "R2_max": 0.7841770991055607,
+              "lambda_median_km": 810.3183244041661,
+              "p_R2_ge_observed": 0.8401598401598401,
+              "p_TEP_band_and_R2": 0.1998001998001998
+            }
+          },
+          "37uHz": {
+            "freq_uhz": 37.0,
+            "actual_freq_uhz": 37.39316239316239,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 39999.999999980966,
+              "R2_exponential": 0.25681403915312695,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.013846153937487532
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.007159615652359064,
+              "R2_max": 0.7643451973511789,
+              "lambda_median_km": 750.0988059141303,
+              "p_R2_ge_observed": 0.10989010989010989,
+              "p_TEP_band_and_R2": 0.07692307692307693
+            }
+          },
+          "39uHz": {
+            "freq_uhz": 39.0,
+            "actual_freq_uhz": 39.17378917378917,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 162.08790257880196,
+              "R2_exponential": -4.1300296516055823e-14,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.192717195541953
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.011003161020955554,
+              "R2_max": 0.7827017672720319,
+              "lambda_median_km": 804.0288858664235,
+              "p_R2_ge_observed": 0.977022977022977,
+              "p_TEP_band_and_R2": 0.2007992007992008
+            }
+          },
+          "41uHz": {
+            "freq_uhz": 41.0,
+            "actual_freq_uhz": 40.95441595441595,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 103.54969579605904,
+              "R2_exponential": -2.220446049250313e-16,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.14158746386748905
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.007736112727285638,
+              "R2_max": 0.7191136424258633,
+              "lambda_median_km": 794.4275859452243,
+              "p_R2_ge_observed": 0.9410589410589411,
+              "p_TEP_band_and_R2": 0.1958041958041958
+            }
+          },
+          "43uHz": {
+            "freq_uhz": 43.0,
+            "actual_freq_uhz": 42.73504273504273,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 1343.6087823347596,
+              "R2_exponential": 0.16002309703536666,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": 0.02621300595777082
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.012815299339630715,
+              "R2_max": 0.7963024791027428,
+              "lambda_median_km": 827.952819780155,
+              "p_R2_ge_observed": 0.19080919080919082,
+              "p_TEP_band_and_R2": 0.11688311688311688
+            }
+          },
+          "45uHz": {
+            "freq_uhz": 45.0,
+            "actual_freq_uhz": 45.4059829059829,
+            "n_pairs": 157,
+            "fit": {
+              "lambda_km": 39999.9999998642,
+              "R2_exponential": 0.14647496530635606,
+              "best_model": "constant",
+              "n_bins": 10,
+              "n_pairs": 157,
+              "mean_index": -0.10788547045902085
+            },
+            "null": {
+              "n_realisations": 1000,
+              "R2_median": 0.008500079959049,
+              "R2_max": 0.7348029454204301,
+              "lambda_median_km": 812.3095048473493,
+              "p_R2_ge_observed": 0.21678321678321677,
+              "p_TEP_band_and_R2": 0.12287712287712288
+            }
+          }
+        },
+        "broadband": {
+          "n_pairs": 157,
+          "fit": {
+            "lambda_km": 57.588199137383754,
+            "R2_exponential": 0.0,
+            "best_model": "constant",
+            "n_bins": 10,
+            "n_pairs": 157,
+            "mean_index": -0.04741218227976438
+          },
+          "null": {
+            "n_realisations": 1000,
+            "R2_median": 0.011666489650488443,
+            "R2_max": 0.7644997327147902,
+            "lambda_median_km": 840.4771131511809,
+            "p_R2_ge_observed": 0.8441558441558441,
+            "p_TEP_band_and_R2": 0.22677322677322678
+          }
+        },
+        "separation_m": 1.5578786860846872
+      }
+    }
+  },
+  "summary": {
+    "pairs": {
+      "MAT1-MATE": {
+        "2024": {
+          "M2_R2": 0.7017555257158261,
+          "M2_lambda_km": 268.2520334650862,
+          "M2_p_null": 0.004995004995004995,
+          "M2_n_pairs": 158,
+          "M2_snr": 0.7275370008799223,
+          "M2_internal_R2": 0.1873127482757564,
+          "M2_atomic_R2": -1.0442757769624222e-12,
+          "S2_R2": 0.2029383369625667,
+          "S2_lambda_km": 202.91539649160424,
+          "S2_p_null": 0.1938061938061938,
+          "S2_n_pairs": 158,
+          "S2_snr": 0.652828113213686,
+          "S2_internal_R2": 0.5509692747989406,
+          "S2_atomic_R2": 0.4534667770627513,
+          "control_R2_mean": 0.16556597261569564,
+          "lunar_mean_R2": 0.3027176016193616,
+          "solar_mean_R2": 0.12373125071623584,
+          "broadband_R2": 0.5874606659045225,
+          "broadband_lambda": 739.2885367971654,
+          "n_windows": 46,
+          "n_remote_stations": 158
+        },
+        "2025": {
+          "M2_R2": 0.7677806436974022,
+          "M2_lambda_km": 4783.767442879193,
+          "M2_p_null": 0.002997002997002997,
+          "M2_n_pairs": 154,
+          "M2_snr": 2.8950161607945635,
+          "M2_internal_R2": 0.7951036780534031,
+          "M2_atomic_R2": 0.46459560126309163,
+          "S2_R2": 0.5757917111206414,
+          "S2_lambda_km": 2483.0968623650647,
+          "S2_p_null": 0.016983016983016984,
+          "S2_n_pairs": 154,
+          "S2_snr": 64.44412512101283,
+          "S2_internal_R2": 0.6294498051908564,
+          "S2_atomic_R2": 0.53170530221974,
+          "control_R2_mean": 0.5457809450420531,
+          "lunar_mean_R2": 0.5970646756715129,
+          "solar_mean_R2": 0.749009354874872,
+          "broadband_R2": 0.8326104839445996,
+          "broadband_lambda": 2940.7553545474884,
+          "n_windows": 9,
+          "n_remote_stations": 157
+        }
+      },
+      "STR2-STR1": {
+        "2024": {
+          "M2_R2": 0.2660950210946387,
+          "M2_lambda_km": 805.2341399440439,
+          "M2_p_null": 0.10989010989010989,
+          "M2_n_pairs": 158,
+          "M2_snr": 1.2159657804643007,
+          "M2_internal_R2": 0.5268382626180466,
+          "M2_atomic_R2": 0.0,
+          "S2_R2": -2.220446049250313e-16,
+          "S2_lambda_km": 56.53969882079525,
+          "S2_p_null": 0.906093906093906,
+          "S2_n_pairs": 158,
+          "S2_snr": 1.7505590352800933,
+          "S2_internal_R2": -2.220446049250313e-16,
+          "S2_atomic_R2": -1.5543122344752192e-15,
+          "control_R2_mean": 0.14015911555210134,
+          "lunar_mean_R2": 0.11634654506732829,
+          "solar_mean_R2": 0.044981959745631996,
+          "broadband_R2": 0.011740942939743038,
+          "broadband_lambda": 478.7625130202939,
+          "n_windows": 47,
+          "n_remote_stations": 158
+        }
+      },
+      "THTI-THTG": {
+        "2024": {
+          "M2_R2": 0.07670558075208411,
+          "M2_lambda_km": 39999.99999999983,
+          "M2_p_null": 0.3076923076923077,
+          "M2_n_pairs": 157,
+          "M2_snr": 2.497037796785917,
+          "M2_internal_R2": -1.538769112130467e-13,
+          "M2_atomic_R2": 0.06828801756766634,
+          "S2_R2": 0.2643444009479906,
+          "S2_lambda_km": 39999.999999854255,
+          "S2_p_null": 0.1008991008991009,
+          "S2_n_pairs": 157,
+          "S2_snr": 1.8772681016395607,
+          "S2_internal_R2": 0.05307090246314272,
+          "S2_atomic_R2": 0.0,
+          "control_R2_mean": 0.1300267322315433,
+          "lunar_mean_R2": 0.09541955422796351,
+          "solar_mean_R2": 0.1057377603791961,
+          "broadband_R2": 0.0,
+          "broadband_lambda": 57.588199137383754,
+          "n_windows": 33,
+          "n_remote_stations": 157
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+
+=== clk_cod_ops / 2024 (dev_frozen) / GLOBAL : 32 days ===
+scripts/steps/step_96_leftover_clock_supremacy.py:476: RuntimeWarning: divide by zero encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:476: RuntimeWarning: overflow encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:476: RuntimeWarning: invalid value encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:481: RuntimeWarning: divide by zero encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:481: RuntimeWarning: overflow encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:481: RuntimeWarning: invalid value encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+  mid-horizon rms: {'zero': 2.96, 'linrate': 4.06, 'ar1': 4.08, 'free_gp': 2.67, 'empirical_cov': 5.66, 'empirical_cov_full': 2.59, 'empirical_cov_full_hybrid': 3.31, 'tep_bandpass': 2.7, 'tep_lfmf': 2.53, 'tep_lfmf_hybrid': 3.51, 'tep_bandpass_hybrid': 3.74, 'tep_lfmf_gated': 2.34, 'tep_lfmf_gated_screened': 2.3}
+  tep_bandpass mid vs baselines: {'zero': 8.9, 'linrate': 40.9, 'ar1': 38.6, 'free_gp': 5.7, 'empirical_cov': 47.3, 'empirical_cov_full': -6.6, 'empirical_cov_full_hybrid': 26.5}
+  tep_lfmf mid vs baselines: {'zero': 13.3, 'linrate': 43.1, 'ar1': 41.2, 'free_gp': 7.6, 'empirical_cov': 47.7, 'empirical_cov_full': -2.1, 'empirical_cov_full_hybrid': 32.5}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -29.7, 'linrate': 9.3, 'ar1': 8.9, 'free_gp': -34.4, 'empirical_cov': 35.4, 'empirical_cov_full': -54.8, 'empirical_cov_full_hybrid': -1.6}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -37.8, 'linrate': 5.5, 'ar1': 5.5, 'free_gp': -43.2, 'empirical_cov': 32.5, 'empirical_cov_full': -67.3, 'empirical_cov_full_hybrid': -10.3}
+  tep_lfmf_gated mid vs baselines: {'zero': 8.1, 'linrate': 40.1, 'ar1': 36.5, 'free_gp': 5.9, 'empirical_cov': 52.7, 'empirical_cov_full': -2.9, 'empirical_cov_full_hybrid': 27.7}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 8.3, 'linrate': 39.6, 'ar1': 37.8, 'free_gp': 6.4, 'empirical_cov': 52.3, 'empirical_cov_full': -3.6, 'empirical_cov_full_hybrid': 25.4}
+
+=== clk_cod_ops / 2024 (dev_frozen) / EUROPE : 32 days ===

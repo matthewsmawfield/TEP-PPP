@@ -1,0 +1,55 @@
+{
+  "step": 124,
+  "title": "Nighttime residual TEP coherence: the field in the dark",
+  "timestamp": "2026-09-06T18:30:38.601070+00:00",
+  "product": "clk_cod",
+  "n_days": 60,
+  "results": {
+    "deep_night": {
+      "n_pairs": 2839,
+      "n_bins": 8,
+      "exponential_lambda_km": 39999.999999876665,
+      "exponential_R2": 0.14155365657977126,
+      "best_model": "constant",
+      "R2": 0.0,
+      "tep_band_mean_alignment": 0.03742649749702048,
+      "n_tep_band": 98
+    },
+    "twilight": {
+      "n_pairs": 27554,
+      "n_bins": 18,
+      "exponential_lambda_km": 578.795150146631,
+      "exponential_R2": 0.5015524596497802,
+      "best_model": "gaussian",
+      "R2": 0.5251372184772034,
+      "tep_band_mean_alignment": -0.0022553157767410815,
+      "n_tep_band": 2270
+    },
+    "day": {
+      "n_pairs": 332041,
+      "n_bins": 32,
+      "exponential_lambda_km": 3681.0320782115255,
+      "exponential_R2": 0.9047344572817142,
+      "best_model": "exponential",
+      "R2": 0.9047344572817142,
+      "tep_band_mean_alignment": 0.11437688265472305,
+      "n_tep_band": 79585
+    },
+    "high_sun": {
+      "n_pairs": 158568,
+      "n_bins": 30,
+      "exponential_lambda_km": 3845.178726083542,
+      "exponential_R2": 0.8428680884937509,
+      "best_model": "gaussian",
+      "R2": 0.8849026307118275,
+      "tep_band_mean_alignment": 0.19902267216391625,
+      "n_tep_band": 24674
+    }
+  },
+  "interpretation": [
+    "In the full band, deep-night distance structure is not detected (R2=0.000, n_tep_band=98).  However, this full-band measurement is dominated by the solar tidal frequency bins, which are empty of signal at night and contribute only noise.  The correct test of the nighttime TEP continuum is the notched analysis (Step 125), which removes the tidal bins and measures the residual coherence.  Step 125 shows that the notched nighttime alignment (0.140) is actually higher than the notched daytime alignment (0.102).",
+    "The daytime full-band coherence (lambda=3681 km, R2=0.905) includes the solar tidal lines, which extend the apparent correlation length.  The twilight fit (lambda=579 km, R2=0.525) shows a shorter scale, consistent with the transition between the solar-driven and continuum components.",
+    "The deep-night sample is small (n=2839 pairs, n_tep_band=98) because few station-pair midpoints are in darkness at the observation times.  The R2=0.0 result should not be interpreted as absence of the field, but as underpowering of the full-band test at night.  The notched test (Step 125) with n_night=1704 is the more informative measurement."
+  ],
+  "pre_registered_prediction": "Under TEP, the common-mode field IS the proper-time field. It should maintain distance-structured coherence at night when the ionospheric amplifier is suppressed, though possibly weaker and with a shorter correlation length.  Under a pure-atmospheric interpretation, the distance structure should vanish at night.  A nighttime R2 > 0.3 supports TEP; R2 < 0.1 supports pure-atmospheric."
+}

@@ -1,0 +1,33 @@
+========================================================================
+STEP 40 -- Band-pass filter sensitivity analysis
+========================================================================
+
+Broadcast global: 7 days (DOY 100-106)
+COD precise: 30 days (evenly-spaced subset)
+
+--- Band: default (10.0-500.0 uHz) ---
+  broadcast: lambda=5418 km  R2=0.77  sigma=0.5  n_days=7
+  precise:   lambda=2090 km  R2=0.839  sigma=0.6  n_days=30
+
+--- Band: wide (5.0-1000.0 uHz) ---
+  broadcast: lambda=12973 km  R2=0.752  sigma=0.3  n_days=7
+  precise:   lambda=2501 km  R2=0.909  sigma=0.5  n_days=30
+
+--- Band: narrow_lo (20.0-500.0 uHz) ---
+  broadcast: lambda=1294 km  R2=0.95  sigma=0.6  n_days=7
+  precise:   lambda=1580 km  R2=0.856  sigma=0.4  n_days=30
+
+--- Band: narrow_hi (10.0-200.0 uHz) ---
+  broadcast: lambda=7615 km  R2=0.775  sigma=0.3  n_days=7
+  precise:   lambda=2085 km  R2=0.834  sigma=0.6  n_days=30
+
+--- Band: raw (None-None uHz) ---
+  broadcast: lambda=28059 km  R2=0.708  sigma=0.6  n_days=7
+  precise:   lambda=3539 km  R2=0.957  sigma=0.5  n_days=30
+
+========================================================================
+  Broadcast lambda range: 1294-28059 km
+  Precise lambda range:   1580-3539 km
+  Robust (all in 1,000-10,000 km): False
+========================================================================
+saved results/outputs/step_40_bandpass_sensitivity.json

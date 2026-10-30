@@ -1,0 +1,13 @@
+STEP 103  |  phase-aligned oscillator dependence | 30 days
+    10/30 days  Q pairs=17965  A pairs=2380
+    20/30 days  Q pairs=37668  A pairs=5003
+    30/30 days  Q pairs=54307  A pairs=7817
+    null 50/200
+    null 100/200
+    null 150/200
+    null 200/200
+
+  QUARTZ: n=54307, lambda=2453.8214970614135, R2=0.9360147522018171, z=10.495145286939751
+  ATOMIC: n=7817, lambda=None, R2=0.30883114474255424, z=3.170484886985438
+  TEP band (1000-5000 km): Q PA=+0.2164, A PA=+0.0560, diff=+0.1603
+saved results/outputs/step_103_atomic_quartz_gradients.json

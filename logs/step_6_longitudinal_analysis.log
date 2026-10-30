@@ -1,0 +1,17 @@
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ] TEP-PPP Longitudinal Analysis (Phase 1)
+[2026-09-03 23:35:50] [INFO    ] ================================================================================
+[2026-09-03 23:35:50] [INFO    ] 
+[2026-09-03 23:35:50] [INFO    ] Loaded 986 cached days from results/outputs/step_6_longitudinal_metrics.json
+[2026-09-03 23:35:50] [INFO    ] ------------------------------------------------------------
+[2026-09-03 23:35:50] [SUCCESS ] Longitudinal Summary (986 days)
+[2026-09-03 23:35:50] [INFO    ] Average Improvement (in-sample β): 20.66% ± 11.29%  [LEAKY -- not cited]
+[2026-09-03 23:35:50] [INFO    ] Median Improvement (in-sample β): 18.93% (IQR: 12.22%)  [LEAKY -- not cited]
+[2026-09-03 23:35:50] [SUCCESS ] Average Improvement (leave-one-day-out β): -17.93% ± 449.26%
+[2026-09-03 23:35:50] [SUCCESS ] Median Improvement (leave-one-day-out β): 0.15% (IQR: 0.07%)
+[2026-09-03 23:35:50] [WARNING ] β=1 improvement distribution is heavy-tailed; reporting robust statistics.
+[2026-09-03 23:35:50] [INFO    ] Median Improvement (β=1): 17.53% (IQR: 9.45%)
+[2026-09-03 23:35:50] [INFO    ] ------------------------------------------------------------
+[2026-09-03 23:35:50] [INFO    ] ------------------------------------------------------------
+[2026-09-03 23:35:50] [SUCCESS ] Saved stability plot to results/figures/step_6_longitudinal_stability.png

@@ -1,0 +1,33 @@
+{
+  "step": 132,
+  "title": "Lunar M2 isolation: purely gravitational TEP prediction",
+  "timestamp": "2026-09-06T19:13:05.485790+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 0,
+  "m2_period_h": 12.42,
+  "m2_width_frac": 0.08,
+  "m2_lambda_km": 4677.0,
+  "results": {
+    "n_days": 0,
+    "m2_vs_full_band_pct": {
+      "median": null,
+      "ci95": null,
+      "n": 0
+    },
+    "m2_vs_empirical_pct": {
+      "median": null,
+      "ci95": null,
+      "n": 0
+    },
+    "median_rms_m": {
+      "full_band": null,
+      "m2": null,
+      "empirical": null
+    },
+    "m2_bins_median": null,
+    "m2_bins_range": null
+  },
+  "interpretation": [],
+  "pre_registered_prediction": "The M2 lunar semidiurnal tide (12.4h) is purely gravitational. If the M2-band kernel carries predictive power and beats empirical covariance on independent-year data, that is direct evidence of gravitational coupling with no atmospheric confound.  The M2 band has limited spectral bins, so the test trades purity for power."
+}

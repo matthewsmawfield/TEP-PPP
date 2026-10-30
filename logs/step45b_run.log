@@ -1,0 +1,22 @@
+[broadcast_global] 7 days, 4933 pair-days, 52 stations
+scripts/steps/step_45b_t4_forensic.py:176: RuntimeWarning: divide by zero encountered in matmul
+  return y - A @ beta
+scripts/steps/step_45b_t4_forensic.py:176: RuntimeWarning: overflow encountered in matmul
+  return y - A @ beta
+scripts/steps/step_45b_t4_forensic.py:176: RuntimeWarning: invalid value encountered in matmul
+  return y - A @ beta
+[precise_cod] 20 days, 29694 pair-days, 152 stations
+
+saved results/outputs/step_45b_t4_forensic.json
+
+[broadcast_global] corr(d,Jbar)=-0.978
+  specs surviving null: 2/10   lambda in TEP band: 5/10
+  LOSO stable: True   LODO stable: True   bootstrap CI in band: False
+  partial corr ever significant (|pc|>0.1): True
+  bootstrap lambda 4667 km CI [1954.1204776331476, 39999.99999999999], R^2 0.64 CI [0.2917747491642624, 0.8749256084579906]
+
+[precise_cod] corr(d,Jbar)=-0.969
+  specs surviving null: 0/10   lambda in TEP band: 9/10
+  LOSO stable: True   LODO stable: True   bootstrap CI in band: False
+  partial corr ever significant (|pc|>0.1): False
+  bootstrap lambda 3818 km CI [1701.9779100232113, 26894.95011031889], R^2 0.62 CI [0.3321377755753725, 0.8623854612754149]

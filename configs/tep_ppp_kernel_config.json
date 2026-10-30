@@ -1,0 +1,41 @@
+{
+  "description": "TEP-PPP Dynamic Kernel configuration — Unified Physics model",
+  "version": "0.1",
+  "codename": "Pune",
+  "kernel": {
+    "base_lambda_km": 1000.0,
+    "base_sigma_ns": 20.0,
+    "enable_rotation_effects": true,
+    "enable_velocity_coupling": true,
+    "velocity_coupling_factor": 0.35,
+    "enable_local_time": true,
+    "cmb_coupling_factor": 0.20,
+    "diurnal_coupling_factor": 0.10,
+    "seasonal_coupling_factor": -0.20,
+    "enable_chandler_wobble": true,
+    "chandler_coupling_factor": 0.15,
+    "enable_semiannual_nutation": false,
+    "enable_multiscale": false,
+    "lambda_short_km": 500.0,
+    "lambda_long_km": 5000.0,
+    "multiscale_mixing_weight": 0.5
+  },
+  "network": {
+    "stations": ["ZIMM", "GRAS", "GENO", "BRUX", "WTZR"],
+    "region": "European EUREF Permanent Network",
+    "sampling_interval_s": 30,
+    "reference_doy": 100,
+    "reference_year": 2024
+  },
+  "validation": {
+    "method": "Leave-One-Out Cross-Validation",
+    "longitudinal_period": "2022-2024",
+    "longitudinal_days": 986,
+    "falsification_test": {
+      "enabled": true,
+      "tidal_model": "full",
+      "ztd_estimation": true,
+      "step": 24
+    }
+  }
+}

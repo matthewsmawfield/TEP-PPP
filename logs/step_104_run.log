@@ -1,0 +1,52 @@
+clk_cod_ops/2024/GLOBAL: 169 days in 1490s
+clk_cod_ops/2024/EUROPE: 169 days in 1076s
+clk_cod_ops/2024/NORTH_AMERICA: 169 days in 896s
+clk_cod_ops/2024/EAST_ASIA: 169 days in 648s
+clk_cod_ops/2024/ASIA_OCEANIA: 169 days in 957s
+clk_cod_ops/2025/GLOBAL: 72 days in 704s
+clk_cod_ops/2025/EUROPE: 72 days in 504s
+clk_cod_ops/2025/NORTH_AMERICA: 72 days in 379s
+clk_cod_ops/2025/EAST_ASIA: 72 days in 340s
+clk_cod_ops/2025/ASIA_OCEANIA: 72 days in 416s
+{
+  "clk_cod_ops_2024_GLOBAL": {
+    "seasons_evaluated": 4,
+    "seasons_positive_ci": 4
+  },
+  "clk_cod_ops_2024_EUROPE": {
+    "seasons_evaluated": 4,
+    "seasons_positive_ci": 4
+  },
+  "clk_cod_ops_2024_NORTH_AMERICA": {
+    "seasons_evaluated": 4,
+    "seasons_positive_ci": 4
+  },
+  "clk_cod_ops_2024_EAST_ASIA": {
+    "seasons_evaluated": 4,
+    "seasons_positive_ci": 4
+  },
+  "clk_cod_ops_2024_ASIA_OCEANIA": {
+    "seasons_evaluated": 4,
+    "seasons_positive_ci": 4
+  },
+  "clk_cod_ops_2025_GLOBAL": {
+    "seasons_evaluated": 2,
+    "seasons_positive_ci": 2
+  },
+  "clk_cod_ops_2025_EUROPE": {
+    "seasons_evaluated": 2,
+    "seasons_positive_ci": 2
+  },
+  "clk_cod_ops_2025_NORTH_AMERICA": {
+    "seasons_evaluated": 2,
+    "seasons_positive_ci": 2
+  },
+  "clk_cod_ops_2025_EAST_ASIA": {
+    "seasons_evaluated": 2,
+    "seasons_positive_ci": 2
+  },
+  "clk_cod_ops_2025_ASIA_OCEANIA": {
+    "seasons_evaluated": 2,
+    "seasons_positive_ci": 2
+  }
+}

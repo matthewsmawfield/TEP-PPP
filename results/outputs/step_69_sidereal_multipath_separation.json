@@ -1,0 +1,153 @@
+{
+  "step": 69,
+  "title": "Sidereal separation of multipath from the closed-loop (holonomy) residual",
+  "timestamp": "2026-09-02T15:59:25.345890+00:00",
+  "principle": "GPS geometry repeats every 86164.0905 s, so multipath repeats with it while a proper-time field effect does not; the template is built leave-one-day-out so no day cleans itself",
+  "result": {
+    "pairs": [
+      {
+        "pair": "WTZR-WTZZ",
+        "baseline_km": 0.0033023053674794203,
+        "n_obs": 11339,
+        "sidereal_repeating_variance_fraction": 0.9326414276417209,
+        "raw": {
+          "slope": 0.018856208742538,
+          "z": 2.389519189087679,
+          "rms_mm": 120.64698582874074
+        },
+        "multipath_cleaned": {
+          "slope": -0.0013802196836280019,
+          "z": -0.16202046590488464,
+          "rms_mm": 31.31215175696262
+        }
+      },
+      {
+        "pair": "ZIM2-ZIMM",
+        "baseline_km": 0.018771100979916886,
+        "n_obs": 21556,
+        "sidereal_repeating_variance_fraction": 0.4305768527384787,
+        "raw": {
+          "slope": -0.0019650692424609544,
+          "z": -14.212990635919535,
+          "rms_mm": 6.553514463122092
+        },
+        "multipath_cleaned": {
+          "slope": -5.536276383097181e-05,
+          "z": -0.09279212831594084,
+          "rms_mm": 4.945290643301933
+        }
+      },
+      {
+        "pair": "WAB2-ZIMM",
+        "baseline_km": 5.199186024511033,
+        "n_obs": 12498,
+        "sidereal_repeating_variance_fraction": 0.9697050258200669,
+        "raw": {
+          "slope": -0.022709442833190437,
+          "z": -3.773759679455577,
+          "rms_mm": 144.77030520534436
+        },
+        "multipath_cleaned": {
+          "slope": -4.450428970492701e-06,
+          "z": -0.10855724983195915,
+          "rms_mm": 25.1979252539476
+        }
+      },
+      {
+        "pair": "PADO-VEN1",
+        "baseline_km": 35.91289102394428,
+        "n_obs": 22348,
+        "sidereal_repeating_variance_fraction": 0.7559740080586476,
+        "raw": {
+          "slope": 0.0050760801700689235,
+          "z": 9.161566470055746,
+          "rms_mm": 12.983393737127637
+        },
+        "multipath_cleaned": {
+          "slope": 0.0003260972468697719,
+          "z": 1.558677223086975,
+          "rms_mm": 6.413664988025459
+        }
+      },
+      {
+        "pair": "BRUX-REDU",
+        "baseline_km": 104.77193734153582,
+        "n_obs": 19225,
+        "sidereal_repeating_variance_fraction": 0.9716256061601285,
+        "raw": {
+          "slope": -0.02509196702469779,
+          "z": -5.62249938508039,
+          "rms_mm": 123.07400467877683
+        },
+        "multipath_cleaned": {
+          "slope": 0.0005445367539646432,
+          "z": 0.5848115919823104,
+          "rms_mm": 20.731447608043208
+        }
+      },
+      {
+        "pair": "BRUX-DLF1",
+        "baseline_km": 132.18239375898176,
+        "n_obs": 21697,
+        "sidereal_repeating_variance_fraction": 0.969729278950798,
+        "raw": {
+          "slope": -0.001407063605476928,
+          "z": -0.6874342891405896,
+          "rms_mm": 78.60139565809871
+        },
+        "multipath_cleaned": {
+          "slope": 0.0001874731132146137,
+          "z": 0.3802946091047928,
+          "rms_mm": 13.675450456609967
+        }
+      },
+      {
+        "pair": "GRAS-IENG",
+        "baseline_km": 151.33314385641043,
+        "n_obs": 20258,
+        "sidereal_repeating_variance_fraction": 0.6535944844498267,
+        "raw": {
+          "slope": 0.011495963092636955,
+          "z": 2.616508789931274,
+          "rms_mm": 105.51188129978188
+        },
+        "multipath_cleaned": {
+          "slope": -0.0005903261465648438,
+          "z": -0.2575231784913975,
+          "rms_mm": 62.100309670190526
+        }
+      },
+      {
+        "pair": "BRUX-WSRT",
+        "baseline_km": 281.7366138430005,
+        "n_obs": 21070,
+        "sidereal_repeating_variance_fraction": 0.9634822687931692,
+        "raw": {
+          "slope": 0.004899754604786615,
+          "z": 2.7348353977108437,
+          "rms_mm": 86.37219442338433
+        },
+        "multipath_cleaned": {
+          "slope": 0.0003654465197362566,
+          "z": 1.0066228642540416,
+          "rms_mm": 16.505392163036685
+        }
+      }
+    ],
+    "verdict": {
+      "raw_slope_vs_baseline_spearman": -0.48571428571428577,
+      "raw_slope_vs_noise_spearman": 0.7714285714285715,
+      "raw_n_detected": 2,
+      "multipath_cleaned_slope_vs_baseline_spearman": 0.6,
+      "multipath_cleaned_slope_vs_noise_spearman": 0.3714285714285715,
+      "multipath_cleaned_n_detected": 0,
+      "median_sidereal_repeating_fraction": 0.9665936473066181,
+      "controls_null_after_cleaning": true,
+      "holonomy_detected": false,
+      "interpretation": "MULTIPATH CHARACTERISATION ONLY. 96.7% (median) of the double-difference residual variance is sidereal-repeating, i.e. multipath: leave-one-day-out sidereal cleaning drops the DD residual from 79-145 mm to 13-31 mm. That part stands. The post-cleaning holonomy slopes (|z| <= 1.6) are NOT a bound on the non-exact sector and must not be reported as one: the loop invariant T is a function of satellite geometry, and satellite geometry is exactly what repeats every sidereal day, so the template removes a static geometry-locked signal along with the multipath. step_72 shows by injection that a static holonomy is recovered at 1.00 of its true slope before cleaning and 0.00 after, on all eight pairs, while a day-modulated injection survives at 1.26. The non-exact sector is therefore UNTESTED on this dataset, not bounded. Separating it requires a site-frame azimuth/elevation multipath model (multipath is a per-satellite, per-site function of az/el; T is an irreducibly two-satellite cross-product), not day-repetition.",
+      "superseded_by": "step_72b_sidereal_template_blindness",
+      "holonomy_null_has_power": false,
+      "prior_interpretation_withdrawn": "DECISIVE. 96.7% (median) of the double-difference residual variance is sidereal-repeating, i.e. multipath: leave-one-day-out sidereal cleaning drops the DD residual from 79-145 mm to 13-31 mm. After t..."
+    }
+  }
+}

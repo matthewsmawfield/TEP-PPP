@@ -1,0 +1,225 @@
+{
+  "step": 105,
+  "title": "Moving-platform clock bridging (GRACE-FO free-running USO vs terrestrial TEP field)",
+  "timestamp": "2026-09-04T10:12:07.887857+00:00",
+  "satellite": "GRACE-FO C/D (CLK1B USO clock 10 s, GNV1B position 1 s)",
+  "ground_network": "clk_cod_ops (300+ stations, 300 s)",
+  "lambda_km": 4200.0,
+  "pre_window_s": 3600.0,
+  "note_swarm": "Step 104 (Swarm-A) was negative but the Swarm clock is steered; GRACE-FO's USO free-runs (offset ~-23 ms, drift ~-1.5e-8 s/s) so its clock carries the physical signal.",
+  "grace_c_absolute": {
+    "600": {
+      "n": 1025,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 0.3773756385580059,
+        "tep": 0.5504038483313467,
+        "netmean": 0.5279789426743076,
+        "distscr": 0.5672739653252713
+      },
+      "tep_vs_persist_pct": -45.85039204822567,
+      "tep_vs_persist_ci95": [
+        -58.69733460682354,
+        -38.04522278321294
+      ],
+      "tep_vs_netmean_pct": -4.247310611187061,
+      "tep_vs_distscr_pct": 2.9738923386430027
+    },
+    "1800": {
+      "n": 1010,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 1.1407028031543847,
+        "tep": 1.3660965556303997,
+        "netmean": 1.3326619195799083,
+        "distscr": 1.3605163534939086
+      },
+      "tep_vs_persist_pct": -19.75920036776746,
+      "tep_vs_persist_ci95": [
+        -23.05455327782491,
+        -16.95114897711088
+      ],
+      "tep_vs_netmean_pct": -2.508861066656043,
+      "tep_vs_distscr_pct": -0.4101532570454314
+    },
+    "3600": {
+      "n": 990,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 1.9264140969149486,
+        "tep": 2.2301163155814576,
+        "netmean": 2.1297724350535123,
+        "distscr": 2.146270276932459
+      },
+      "tep_vs_persist_pct": -15.76515761345767,
+      "tep_vs_persist_ci95": [
+        -20.348096969546823,
+        -10.200524624267281
+      ],
+      "tep_vs_netmean_pct": -4.7114836719831965,
+      "tep_vs_distscr_pct": -3.9065927320595772
+    },
+    "7200": {
+      "n": 945,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 3.899787750828319,
+        "tep": 4.759282197948194,
+        "netmean": 4.6569746120338325,
+        "distscr": 4.740421631022249
+      },
+      "tep_vs_persist_pct": -22.039518610655605,
+      "tep_vs_persist_ci95": [
+        -25.74672839180332,
+        -18.198772459191414
+      ],
+      "tep_vs_netmean_pct": -2.196868019207021,
+      "tep_vs_distscr_pct": -0.39786686489060585
+    }
+  },
+  "grace_c_minus_d": {
+    "600": {
+      "n": 1015,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 0.29813378747154023,
+        "tep": 0.5016108212321241,
+        "netmean": 0.4722238270792079,
+        "distscr": 0.49908609882177324
+      },
+      "tep_vs_persist_pct": -68.25024278068707,
+      "tep_vs_persist_ci95": [
+        -86.69138889525362,
+        -58.26247528267743
+      ],
+      "tep_vs_netmean_pct": -6.223107024200836,
+      "tep_vs_distscr_pct": -0.5058691108229985
+    },
+    "1800": {
+      "n": 997,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 0.8645556701373966,
+        "tep": 1.1466638558606965,
+        "netmean": 1.1043271733756586,
+        "distscr": 1.141152761521866
+      },
+      "tep_vs_persist_pct": -32.630424559990075,
+      "tep_vs_persist_ci95": [
+        -36.79308276855095,
+        -27.27463113120051
+      ],
+      "tep_vs_netmean_pct": -3.8337082982052406,
+      "tep_vs_distscr_pct": -0.48294098079215697
+    },
+    "3600": {
+      "n": 972,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 1.5131793251542467,
+        "tep": 1.9054456720707602,
+        "netmean": 1.8166795199256356,
+        "distscr": 1.8579171734201743
+      },
+      "tep_vs_persist_pct": -25.923321869106797,
+      "tep_vs_persist_ci95": [
+        -32.14274228113696,
+        -18.961971401735966
+      ],
+      "tep_vs_netmean_pct": -4.886175639210055,
+      "tep_vs_distscr_pct": -2.5581602522728453
+    },
+    "7200": {
+      "n": 918,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 3.132057834957517,
+        "tep": 3.9496259321020086,
+        "netmean": 3.8005562575837857,
+        "distscr": 3.8368273001012563
+      },
+      "tep_vs_persist_pct": -26.103224787852007,
+      "tep_vs_persist_ci95": [
+        -31.3400868380177,
+        -22.217881760398207
+      ],
+      "tep_vs_netmean_pct": -3.922312009479234,
+      "tep_vs_distscr_pct": -2.9398933852919473
+    }
+  },
+  "ground_control": {
+    "600": {
+      "n": 25607,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 2.12169537452738,
+        "tep": 2.1045934440726572,
+        "netmean": 2.1126103607502165,
+        "distscr": 2.1167200152756003
+      },
+      "tep_vs_persist_pct": 0.8060502303980588,
+      "tep_vs_persist_ci95": [
+        0.7218823655507073,
+        0.9041205343611192
+      ],
+      "tep_vs_netmean_pct": 0.37947918965579586,
+      "tep_vs_distscr_pct": 0.5728944364597144
+    },
+    "1800": {
+      "n": 25214,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 3.2848906621403064,
+        "tep": 3.1737256797635878,
+        "netmean": 3.2124596049032257,
+        "distscr": 3.2149245009538303
+      },
+      "tep_vs_persist_pct": 3.3841303656751864,
+      "tep_vs_persist_ci95": [
+        2.8440063518967604,
+        3.834482234988601
+      ],
+      "tep_vs_netmean_pct": 1.2057404575770425,
+      "tep_vs_distscr_pct": 1.2814864292464478
+    },
+    "3600": {
+      "n": 24697,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 4.679796117174828,
+        "tep": 4.487240633818896,
+        "netmean": 4.550229688595955,
+        "distscr": 4.557920820685857
+      },
+      "tep_vs_persist_pct": 4.114612656932937,
+      "tep_vs_persist_ci95": [
+        3.3302767835631797,
+        4.760277519340505
+      ],
+      "tep_vs_netmean_pct": 1.3843049491529147,
+      "tep_vs_distscr_pct": 1.5507111608034863
+    },
+    "7200": {
+      "n": 23521,
+      "n_days": 5,
+      "rms_m": {
+        "persist": 7.58772536659689,
+        "tep": 7.225265544860158,
+        "netmean": 7.333455101272866,
+        "distscr": 7.338390835473717
+      },
+      "tep_vs_persist_pct": 4.776923310012937,
+      "tep_vs_persist_ci95": [
+        3.939269457807637,
+        5.76423360606343
+      ],
+      "tep_vs_netmean_pct": 1.47528763616388,
+      "tep_vs_distscr_pct": 1.5415544517840662
+    }
+  },
+  "verdict": {
+    "grace_c_bridgeable_from_ground": false,
+    "grace_cd_diff_bridgeable_from_ground": false,
+    "ground_control_reproduces_step56": true
+  }
+}

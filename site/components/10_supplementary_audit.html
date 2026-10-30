@@ -1,0 +1,462 @@
+    <h2>Appendix A &mdash; Supplementary Audit Detail</h2>
+
+    <p>This appendix retains the diagnostic history, superseded tests, and step-level forensic detail that support the main text but are not part of its evidence chain. Every figure, table and number below traces to a persisted output under <code>results/outputs/</code>; section cross-references are updated to the appendix numbering (A.1&ndash;A.20).</p>
+
+
+
+
+    <h3>A.1 Convergence Test: Standard vs Constrained PPP (Illustrative)</h3>
+    <p><em>This subsection is an illustrative hybrid-replay simulation, not an operational benchmark. The homemade Kalman filter used here does not reach production PPP steady-state accuracy (its unobstructed baseline is ~75 cm, well above a real dual-frequency PPP solution), so the absolute numbers are indicative only. The operational claim rests on the leakage-free held-out analysis of Section 3.3.3 and the production-engine integration of Step 23. To ensure complete fairness and causality, observations are pre-detrended using an expanding-window causal filter, preventing any future-data leakage into the simulation.</em></p>
+    <p>Two identical Extended Kalman Filter instances are initialized — one using standard unconstrained clock process noise ($\sigma^2_{\text{clk}} = 10^4$ m²/s), and one using the same process noise plus the spatial covariance kernel ($\lambda_T = 4200$ km) as a clock prior. Both process the same synthetic GNSS observations, driven by real clock bias time series from the European network, over a 2-hour simulation (721 epochs at 10 s cadence). To obtain statistically defensible results, the simulation is repeated over 20 independent random seeds — each seed redraws satellite geometry and observation noise — and bootstrap 95% confidence intervals are computed from the resulting per-seed metric distributions. Four component-isolation arms are evaluated: <code>standard</code> (no prior), <code>clock_only</code> (clock prior on), <code>clock_q</code> (clock prior + process-noise modulation), and <code>full_tep</code> (clock prior + process-noise modulation + position constraint). The last two arms test whether the velocity-coupled covariance modulation and the position-domain constraint add incremental benefit beyond the clock prior alone.</p>
+
+    <p>Across 20 seeds, the clock prior provides a statistically significant steady-state accuracy improvement of 11.6% (bootstrap 95% CI [7.5, 16.0]) in full-duration 3D position RMS, reducing the mean from 74.8 cm (CI [63.6, 86.2]) to 64.6 cm (CI [56.7, 72.7]). During the convergence period (first 30 minutes), the improvement is 13.3% (CI [8.6, 17.6]). The confidence interval excludes zero at both horizons, confirming that the clock prior carries genuine steady-state information. The convergence-speed effect is not statistically significant: the mean time-to-fix speedup is 1.03$\times$ (CI [0.90, 1.17]), with the interval including unity. This is consistent with the interpretation that during ambiguity resolution a full sky already constrains the clock; the gain appears in the steady-state regime, not in the initial convergence rate.</p>
+
+    <p>Component isolation reveals that the process-noise modulation ($q$-scale) and the position constraint carry no incremental benefit beyond the clock prior alone. The <code>clock_q</code> and <code>full_tep</code> arms produce accuracy improvements of 11.6% (CI [7.8, 15.8]) and 11.6% (CI [7.5, 15.7]) respectively, statistically indistinguishable from <code>clock_only</code>. The $q$-scale modulation is too small relative to the baseline process noise to produce a measurable effect, and the position constraint is disabled in the current implementation. The operational content of the TEP prior in this simulation is therefore entirely carried by the clock-domain kriging prediction; the additional components are refinement targets, not contributors to the present result.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Standard PPP</th>
+                <th>TEP (clock_only)</th>
+                <th>Improvement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Full-duration RMS (20-seed mean)</td>
+                <td>74.8 cm (CI [63.6, 86.2])</td>
+                <td>64.6 cm (CI [56.7, 72.7])</td>
+                <td>11.6% (CI [7.5, 16.0])</td>
+            </tr>
+            <tr>
+                <td>Convergence-period RMS (first 30 min)</td>
+                <td>139.1 cm (CI [118.6, 159.7])</td>
+                <td>117.2 cm (CI [102.8, 131.3])</td>
+                <td>13.3% (CI [8.6, 17.6])</td>
+            </tr>
+            <tr>
+                <td>Time-to-fix speedup (20 cm, hold 60 s)</td>
+                <td>34.9 min (mean)</td>
+                <td>36.6 min (mean)</td>
+                <td>1.03$\times$ (CI [0.90, 1.17])</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <h3>A.2 Kernel Family Comparison: Reverse-Engineering Patterns from Papers 1&ndash;2</h3>
+    <p>Papers 1&ndash;2 identified five distinct patterns in the distance-structured correlations of CODE PPP clock residuals beyond the baseline exponential decay: (i) a Gaussian/squared-exponential covariance preferred by AIC ($\Delta\text{AIC} = -12.8$ versus exponential), (ii) a Mat&eacute;rn($\nu=1.5$) kernel competitive with exponential, (iii) an East&ndash;West/North&ndash;South anisotropy (ratio 2.16, $p < 10^{-15}$), (iv) a velocity-dependent anisotropy tracking Earth's orbital motion ($r = -0.888$), and (v) alignment with the Cosmic Microwave Background dipole direction ($r = 0.747$). The baseline operational kernel (Step 25) uses only the isotropic exponential. To test whether the additional patterns carry exploitable operational signal, all five were reverse-engineered into the kernel family and evaluated under the same leakage-free nested cross-validation (<code>scripts/steps/step_32_kernel_family.py</code>).</p>
+    <p>Each extended family &mdash; Gaussian, Mat&eacute;rn-1.5, exponential with EW/NS stretching (ratio 2.16), exponential with orbital-velocity-axis anisotropy, and exponential with CMB-dipole-axis anisotropy &mdash; was tested with hyperparameters $(\lambda, \eta, K, \text{form}, \text{aniso\_mode}, \text{aniso\_ratio})$ selected jointly by leave-one-out inside the training half, then scored on held-out stations. The anisotropic variants stretch the effective distance along the preferred axis by the stated ratio, so pairs aligned with the axis see a shorter effective distance (longer correlation) and perpendicular pairs are unstretched. The velocity and CMB axes are time-varying: the preferred azimuth is computed per day from Earth's orbital velocity vector or the CMB dipole direction projected onto the equatorial plane at the epoch's Greenwich sidereal time.</p>
+
+    <table>
+        <thead>
+            <tr><th>Kernel family</th><th>Skill vs raw</th><th>vs bulk mean</th><th>Win rate</th><th>$\lambda^\ast$</th><th>$\Delta$ vs baseline</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Exponential, isotropic (baseline)</td><td>+43.2%</td><td>+39.1%</td><td>99%</td><td>4,200 km</td><td>&mdash;</td></tr>
+            <tr><td>Gaussian, isotropic</td><td>+42.5%</td><td>+37.5%</td><td>99%</td><td>1,500 km</td><td>$-0.6$ pp</td></tr>
+            <tr><td>Mat&eacute;rn-1.5, isotropic</td><td>+42.6%</td><td>+38.9%</td><td>99%</td><td>1,500 km</td><td>$-0.6$ pp</td></tr>
+            <tr><td>Exponential, EW/NS anisotropy (ratio 2.16)</td><td>+40.8%</td><td>+36.2%</td><td>97%</td><td>1,500 km</td><td>$-2.4$ pp</td></tr>
+            <tr><td>Exponential, velocity-axis anisotropy (ratio 2.0)</td><td>+41.3%</td><td>+36.7%</td><td>99%</td><td>1,500 km</td><td>$-1.9$ pp</td></tr>
+            <tr><td>Exponential, CMB-axis anisotropy (ratio 2.0)</td><td>+41.7%</td><td>+37.3%</td><td>98%</td><td>1,500 km</td><td>$-1.4$ pp</td></tr>
+        </tbody>
+    </table>
+
+    <p>The baseline exponential isotropic kernel wins. No extended family improves the held-out skill; the best alternative (Gaussian) is 0.6 percentage points behind, and the anisotropic variants lose 1.4&ndash;2.4 pp. The result is robust: with the full $\lambda$ grid and additional anisotropy ratios (1.3, 1.5), the baseline still wins at $+42.4\%$, and even a mild EW/NS ratio of 1.3 does not improve ($+42.1\%$). The selected $\lambda^\ast$ shifts downward to 1,500 km for the Gaussian and Mat&eacute;rn forms (their slower decay at short distances compensates for the shorter scale), but the held-out error does not improve.</p>
+    <p>This negative result is informative. The patterns identified in Papers 1&ndash;2 at the physics level &mdash; 165 million station-pair measurements over 25.3 years, where anisotropy is significant at $p < 10^{-15}$ &mdash; do not carry additional exploitable signal at the operational prediction level (52 stations, 7 days, 280 held-out evaluations). The isotropic exponential kernel already captures all the spatial structure that is operationally exploitable at this network scale. The anisotropic and directional signatures are real physics (established by the series), but their effect on single-station clock prediction is below the noise floor of a 52-station, 7-day evaluation. This is consistent with the T2 result: the EW/NS anisotropy has the correct sign but is not independently significant at this network's scale and orientation diversity. The operational kernel is therefore not leaving exploitable signal on the table; it is already optimal for the available data.</p>
+
+
+
+
+    <h3>A.3 Retrospective Density Diagnostic (Step 54)</h3>
+    <p>Step 54 runs one a-priori kernel (physics-fixed $\lambda = 4{,}200$ km, Gaussian, no tuning) on global and dense-European networks. The target station is spatially held out, but the whole-day zero-phase FFT band-limit is retrospective. Network density, region and product construction also differ between the two arms, and the cell bootstrap is not clustered by day. The result is therefore a mechanism/density association, not a causal operational trial.</p>
+    <table>
+        <thead>
+            <tr><th>Network</th><th>Stations</th><th>Median nearest reference</th><th>Kernel vs flat regional mean</th><th>Distance-scramble null</th><th>Full prior vs predict-zero</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Global (clk_cod)</td><td>~110</td><td>~700 km</td><td>$-6$ to $-9\%$ (every bin)</td><td>$-15$ to $-24\%$</td><td>$\sim 0\%$</td></tr>
+            <tr><td>Dense EUREF/EPN (precise)</td><td>~25</td><td>~130 km</td><td>$+6.7\%$ (95% CI $[+5.3, +7.1]$)</td><td>$-0.2\%$ (95% CI $[-0.7, -0.1]$)</td><td>$+35\%$</td></tr>
+        </tbody>
+    </table>
+    <p>The dense arm shows a $+6.7\%$ kernel margin over a flat mean and a near-zero scramble control, while the global arm does not. The former explanation that a 700 km nearest reference lies “too far out” on a 4,200 km Gaussian correlation was incorrect: the assumed correlation there is still about 0.986. The contrast may instead reflect density, regional common modes, station topology or product construction. Step 54 motivates the causal within-network outage experiment below; it does not by itself identify density as the cause.</p>
+
+
+
+
+
+    <h3>A.4 Bounds on the Scalar-Sector Field Gradient &mdash; and Why They Are Not a Test of TEP (Step 66)</h3>
+    <p>A moving receiver's clock accumulates the field along its path, so its rate contains a term <code>v·∇φ</code> encoding velocity along the field gradient. Step 66 attempted to measure <code>∇φ</code> three ways: per-pair clock differences across the IGS network; a direct regression of GPS satellite clock rate on satellite velocity at 3.9 km/s; and the clock-rate agreement floor between clean station pairs. None returned a detection.</p>
+    <p><strong>Those non-detections are reported here as instrument bounds, not as physical results, for two reasons.</strong></p>
+    <p>First, they are <em>noise-limited, not signal-limited</em>. Every pair difference contains both stations' local noise, so each measurement is an upper bound on field structure, never a measurement of it. The code-based estimator floor is $\sim 0.5$ m; a rough carrier-phase single difference reaches $\sim 0.072$ m on a co-located pair; ambiguity-resolved baseline processing reaches $\sim 0.003$ m. The analysis here therefore never entered the regime where a realistic gradient would become visible &mdash; it bounded the field below its own noise floor and no lower.</p>
+    <p>Second, and more fundamentally, the scalar gradient is the wrong observable for TEP. The framework is explicit that a conformal-only scalar cannot generate the distinctive signature: the local-rate response is governed by the exact one-form $\omega^{(A)}=d\ln A$, and $\oint_C d\ln A = 0$ for any closed loop. A scalar potential's gradient is exact, so any loop-integrated test of it vanishes identically, independent of the field's amplitude. The invariant TEP observable is the residual synchronization holonomy $H_{\rm resid}(C) = \oint_C(\tilde\sigma - \sigma_{\rm GR})$, which is nonzero only from the non-exact (disformal / non-metric) sector. Measuring $\nabla\phi$ and finding it small therefore constrains the conformal sector's amplitude; it says nothing about the sector that carries the distinctive TEP signal.</p>
+    <p>The numbers, stated as bounds: the ground-network scalar gradient is $\lesssim 1.0\times10^{-6}$ m/m at 280 km, consistent across three independent routes (IGS clock products, raw RINEX with precise ephemerides, and carrier-phase single differences); the satellite-frame regression bounds it at $\lesssim 1.7\times10^{-8}$ m/m at orbital altitude. The measured clock-rate agreement floor between clean pairs is $4.1\times10^{-4}$ m/s. These are the tightest scalar-sector bounds this dataset supports, and they are the reason the network predicts a station's clock so well &mdash; a smooth conformal sector is exactly what makes the outage-bridging and P1 results of Sections 3.6d, 3.6e and 3.6g work. The properly TEP-native test, of the non-exact sector via the closed synchronization loop, is Section 3.5h. (<code>scripts/steps/step_66_clock_gradient_holygrail.py</code>.)</p>
+
+
+
+
+    <h3>A.5 Position-Domain Diagnostics Under Obstruction</h3>
+
+    <p><strong>Linearised post-fit replay (Steps 33/39).</strong> RTKLIB SPP was run on real RINEX and its post-fit pseudorange residuals and satellite geometry were replayed with only three satellites in the linearised position update. Step 39 improves the protocol by calibrating every clock prior on a same-horizon pseudo-gap wholly before the evaluation window and by selecting the conventional temporal method on that calibration interval. External IGS SINEX coordinates provide independent truth. The evidence boundary is critical: the original RTKLIB state and post-fit residuals came from a full-sky solution, so satellites later removed from the replay had already informed the linearisation point. The following tables are therefore mechanism diagnostics and pipeline-refinement outputs, not raw-observation end-to-end position proof. P2 can pass only after RINEX observations are physically thinned before independent solves for every arm.</p>
+
+    <p><strong>Corrected causal replay result.</strong> Across 175 station-days and 4/5/6/8 retained satellites, the TEP clock prior is 8–14% worse in 3-D RMS than the causally selected conventional prior at 10 minutes and essentially tied from 30 to 240 minutes (absolute differences below 0.05% beyond 30 minutes). The reliability channel is more promising: TEP reduces the fraction of epochs exceeding 25 m in all 20 gap/satellite cells, by 6.6–22.9% relative, with 11.7–22.9% reductions at four hours. This consistent tail reduction is operationally important, but remains a post-fit diagnostic. Kilometre-scale RMS tails despite metre-scale medians show that the linearised subset solve itself is not an integrity-safe estimator. The older Step 33 table is retained below as provenance for the superseded diagnostic, not as evidence for P2.</p>
+
+    <table>
+        <thead>
+            <tr><th>Obstruction</th><th>Persistence</th><th>Linear extrap.</th><th>Kernel</th><th>Kernel vs persistence</th><th>Kernel vs linear</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>10 min</td><td>19.9 m</td><td>20.6 m</td><td>20.0 m</td><td>$+0\%$ (CI $[-2, +1]$)</td><td>$+5\%$</td></tr>
+            <tr><td>30 min</td><td>20.7 m</td><td>23.5 m</td><td>20.6 m</td><td>$-1\%$ (CI $[-3, +1]$)</td><td>$+15\%$</td></tr>
+            <tr><td>60 min</td><td>21.9 m</td><td>29.6 m</td><td>21.2 m</td><td>$+1\%$ (CI $[-1, +3]$)</td><td>$+31\%$</td></tr>
+            <tr><td>120 min</td><td>21.7 m</td><td>42.3 m</td><td>20.7 m</td><td>$+4\%$ (CI $[+3, +6]$)</td><td>$+52\%$</td></tr>
+            <tr><td>240 min</td><td>22.9 m</td><td>71.1 m</td><td>20.8 m</td><td>$+9\%$ (CI $[+7, +12]$)</td><td>$+71\%$</td></tr>
+        </tbody>
+    </table>
+
+    <p>Three findings. First, the network kernel beats naive rate extrapolation decisively at every gap length ($+5\%$ to $+71\%$) — linear extrapolation amplifies the noise in a locally-estimated clock rate and is catastrophic for long outages (71 m at four hours), whereas the network prediction stays bounded. Second, against a persistence baseline the kernel matches it for short gaps and beats it by a margin that grows monotonically with gap length — indistinguishable up to an hour, then $+4\%$ at two hours and $+9\%$ at four hours (the four-hour CI excludes zero). This is the expected crossover: while the receiver clock has not yet drifted far, freezing it is adequate; once it has, only a network-informed prediction tracks it. Third, every clock prior beats having none — a three-satellite solve is rank-deficient without one — so the network prior converts an unsolvable epoch into a bounded fix that requires no local satellites and never needs re-acquisition. The operational value is therefore a robust bridging channel for extended GNSS outages, with a real accuracy gain over persistence beyond the one-hour mark.</p>
+
+    <p><strong>Obstruction-strategy robustness.</strong> The headline gap-length sweep keeps the three highest-elevation satellites during each obstruction window — the most favourable geometry for the solver. To test whether the result depends on this choice, the 60-minute obstruction was re-evaluated under three strategies: <em>highest</em> (best geometry), <em>random</em> (realistic for a generic obstruction where satellite visibility is unpredictable), and <em>lowest</em> (worst geometry). The kernel beats persistence in all three cases: $+1\%$ (highest, CI $[-1, +3]$), $+1\%$ (random, CI $[-1, +2]$), and $+4\%$ (lowest, CI $[-1, +4]$). At 60 minutes the kernel is statistically indistinguishable from persistence under every strategy — the benefit emerges at longer gaps, as the gap-length table above shows. The critical finding is that the kernel never underperforms persistence under any obstruction strategy, confirming the result is not an artefact of favourable satellite selection.</p>
+
+    <table>
+        <thead>
+            <tr><th>Obstruction strategy (60 min, 3 sats)</th><th>Persistence</th><th>Kernel</th><th>Kernel vs persistence</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Highest-elevation (best geometry)</td><td>21.9 m</td><td>21.2 m</td><td>$+1\%$ (CI $[-1, +3]$)</td></tr>
+            <tr><td>Random (realistic obstruction)</td><td>22.1 m</td><td>21.9 m</td><td>$+1\%$ (CI $[-1, +2]$)</td></tr>
+            <tr><td>Lowest-elevation (worst geometry)</td><td>32.0 m</td><td>30.9 m</td><td>$+4\%$ (CI $[-1, +4]$)</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>Per-station consistency.</strong> Across the 47 held-out stations, 25 (53%) show a positive kernel-versus-persistence median at 60 minutes. The station-level win rate is below the pooled median because many stations have a clock stable enough that persistence is adequate at one hour — the benefit concentrates in stations whose clock drifts faster, exactly the stations where a network prior is most needed. At four hours the pooled benefit is $+9\%$ (CI [7, 12]) and the station-level win rate rises, because more clocks have drifted far enough for the network prediction to matter.</p>
+
+    <p><strong>Moderate-obstruction sweep (five satellites).</strong> The three-satellite regime is the hardest case — rank-deficient without a clock prior, and the regime where the prior is most essential. A secondary sweep with five satellites kept (moderate obstruction, the system already overdetermined) tests whether the prior adds value when the geometry is already sufficient to determine the clock. With a K-dependent prior weight — the kernel prior sigma is inflated tenfold for $K \ge 4$ so the prior is effectively unconstrained when the geometry already determines the clock — the kernel is correctly inert at five satellites: the position error is statistically indistinguishable from persistence at every gap length (median difference $\le 2\%$, CI includes zero throughout). This is the expected physics: with five satellites the clock is already well determined by the geometry, the prior is not needed, and a properly weighted prior neither helps nor harms. The prior's value is therefore confined to the degraded-geometry regime where the clock is weakly observable — exactly where it is needed. The kernel does, however, still beat linear extrapolation ($+23\%$ to $+80\%$), confirming the network prediction is a better clock model than naive rate extrapolation even when persistence is already adequate.</p>
+
+    <table>
+        <thead>
+            <tr><th>Obstruction (5 sats kept)</th><th>Persistence</th><th>Linear extrap.</th><th>Kernel</th><th>Kernel vs persistence</th><th>Kernel vs linear</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>60 min</td><td>12.0 m</td><td>23.2 m</td><td>12.0 m</td><td>$+2\%$ (CI $[-4, +1]$)</td><td>$+48\%$</td></tr>
+            <tr><td>120 min</td><td>12.0 m</td><td>33.7 m</td><td>12.1 m</td><td>$-0\%$ (CI $[-3, +0]$)</td><td>$+65\%$</td></tr>
+            <tr><td>240 min</td><td>12.2 m</td><td>60.0 m</td><td>12.2 m</td><td>$+1\%$ (CI $[-3, +2]$)</td><td>$+80\%$</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>Year-long analytical position propagation (Step 35).</strong> Per-day held-out clock errors from Step 34 were propagated through representative SP3 satellite geometry across 318 days. The covariance calculation predicts positive reductions relative to a no-network clock prior, including about 20% at four satellites and 26% at eight. Versus a bulk-mean prior the marginal figures are about 2% and 5%. These are analytical upper bounds: they do not model raw-observation solver behaviour, integrity failures or a causal persistence baseline and therefore cannot pass P2.</p>
+
+    <table>
+        <thead>
+            <tr><th>Visible satellites</th><th>Kernel vs self (no network)</th><th>95% CI</th><th>% days positive</th><th>Kernel vs bulk mean</th><th>95% CI</th><th>% days positive</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>3</td><td>$+6\%$</td><td>[6, 7]</td><td>99.7%</td><td>$+1\%$</td><td>[0, 1]</td><td>85%</td></tr>
+            <tr><td>4</td><td>$+20\%$</td><td>[18, 21]</td><td>99.7%</td><td>$+2\%$</td><td>[2, 3]</td><td>85%</td></tr>
+            <tr><td>5</td><td>$+27\%$</td><td>[26, 28]</td><td>99.7%</td><td>$+4\%$</td><td>[3, 4]</td><td>85%</td></tr>
+            <tr><td>6</td><td>$+30\%$</td><td>[29, 31]</td><td>99.7%</td><td>$+5\%$</td><td>[4, 5]</td><td>85%</td></tr>
+            <tr><td>8</td><td>$+26\%$</td><td>[25, 27]</td><td>99.7%</td><td>$+5\%$</td><td>[5, 6]</td><td>85%</td></tr>
+            <tr><td>full sky</td><td>$+1\%$</td><td>[1, 1]</td><td>99.7%</td><td>$+0\%$</td><td>[0, 0]</td><td>85%</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>Analytical bound (Step 26).</strong> Real SP3 satellite positions form the geometry matrix and the clock enters as a covariance constraint. Each prior quality comes from held-out clock prediction. Because the self/no-network baseline is weaker than a causal persistence model and no raw observations are independently re-solved, the resulting 3-D RSS reductions are hypothesis-generating upper bounds. The corrected Step 39 replay is the stronger diagnostic, and the planned raw-RINEX thinning experiment is the evidentiary P2 test.</p>
+
+    <p>With a full sky the clock is well determined by the geometry and every prior is inert (kernel versus self: $+0.9\%$). As satellites are removed the priors matter, and the kernel's distance-structured prediction beats the no-network <em>self</em> prior by a growing margin — $+14\%$ at three visible satellites, $+21\%$ at four, $+27\%$ at five, $+27\%$ at six, $+22\%$ at eight (per-station optimal sigma variant: prior sigma set to each station's actual held-out prediction error). A deployable variant that estimates the prior sigma from the training set yields $+15\%$ at three, $+29\%$ at four, $+32\%$ at five, $+30\%$ at six, $+20\%$ at eight; both variants are reported in <code>step_26_operational_gain.json</code>. The deployable variant sometimes exceeds the per-station optimal because the training-set median sigma is a regularised estimate that trades per-station optimality for robustness — both variants confirm the method is practical. Against a bulk-mean prior the kernel's marginal gain is $+12$–$22\%$ over the same range. A leakage-free scaled-mean control (uniform kriging with the same nugget but no distance weighting) produces results within 0.1 percentage points of the raw mean at every satellite count, confirming that the kernel's advantage over the mean is genuinely distance-structured geometry, not nugget-induced rescaling. With three or fewer satellites the clock-free solution is rank-deficient and only a prior of any kind keeps it finite; among priors the kernel is still best.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Visible satellites</th>
+                <th>No network (self)</th>
+                <th>Scaled mean</th>
+                <th>Bulk mean</th>
+                <th>Kernel</th>
+                <th>Kernel vs self</th>
+                <th>Kernel vs scaled mean</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>3 (rank-deficient without a prior)</td><td>22.7 m</td><td>22.5 m</td><td>22.5 m</td><td>15.6 m</td><td>+31%</td><td>+31%</td></tr>
+            <tr><td>4</td><td>15.5 m</td><td>14.0 m</td><td>14.0 m</td><td>9.0 m</td><td>+42%</td><td>+36%</td></tr>
+            <tr><td>5</td><td>11.9 m</td><td>10.4 m</td><td>10.4 m</td><td>6.7 m</td><td>+44%</td><td>+36%</td></tr>
+            <tr><td>6</td><td>8.9 m</td><td>8.0 m</td><td>8.0 m</td><td>5.5 m</td><td>+38%</td><td>+31%</td></tr>
+            <tr><td>8</td><td>5.5 m</td><td>5.2 m</td><td>5.2 m</td><td>4.1 m</td><td>+25%</td><td>+21%</td></tr>
+            <tr><td>full sky</td><td>1.1 m</td><td>1.1 m</td><td>1.1 m</td><td>1.1 m</td><td>+1%</td><td>+1%</td></tr>
+        </tbody>
+    </table>
+    <p>The prior is a virtual measurement channel that engages only when satellite geometry is degraded and is correctly inert otherwise. Two exploratory Kalman-filter simulations of the same scenario (Steps 07, 20) did not reach PPP-grade accuracy in their unobstructed baseline and their absolute error figures are not used here; they are retained in the repository as documented attempts.</p>
+
+
+
+
+    <h3>A.6 Raw-Observation Position Test (Step 44)</h3>
+    <p>The analytical bounds (Step 26) and post-fit replays (Steps 33/39) share a fundamental limitation: the full-sky RTKLIB state and post-fit residuals have already used the satellites that are later labelled &ldquo;obstructed.&rdquo; This is a mechanism diagnostic, not a raw-observation proof. Step 44 removes that limitation entirely.</p>
+
+    <p><strong>Method.</strong> For each station-day and satellite count $k \in \{4, 5, 6, 8\}$, GPS satellites are thinned from the RINEX observation file <em>before</em> an independent RTKLIB SPP solve (<code>scripts/lib/rinex_thin.py</code>). Elevation is computed from SP3 orbits and the station's IGS SINEX truth ECEF; the $k$ highest-elevation GPS satellites are kept at each epoch. The full-sky solution is never computed, never used, and never contaminates the residuals. The TEP kernel clock prediction (physics-fixed Gaussian, $\lambda = 4{,}200$ km, nugget 0.35) is then applied as a linearised correction around the <em>thinned</em> solution, and the 3-D position error is measured against external IGS SINEX truth. Every clock-prior sigma is calibrated on a same-horizon pseudo-gap that ends before the evaluation window (causal, no leakage). The prior sigma is then inflated by the clock dilution of precision (DOP) so that when the clock is observable from geometry ($k \ge 4$), the prior weight is a negligible fraction of the geometric clock-observation weight and the prior is correctly inert; when the clock is unobservable ($k = 3$), the calibrated sigma is used because the prior is the only clock source. An additional disagreement gate inflates sigma further when the prior prediction conflicts with the free-clock clock estimate by more than $3\sigma$, matching the operational deployment where a receiver trusts the network prior only when it is consistent with the local observation-based clock estimate. Three comparisons are reported: (i) the free-clock solve (ordinary, no prior) &mdash; the honest null; (ii) the best deployable conventional clock prior (persistence, first-order Gauss&ndash;Markov, or a free GP, selected on training data only) &mdash; the fair conventional baseline; and (iii) the TEP kernel.</p>
+
+    <p><strong>Result.</strong> Across 7 days and 368 station-k cells, the TEP kernel is statistically tied with the best deployable conventional clock prior: median 0.0% difference in 3-D RMS, 85% of gap/satellite cells positive. Against the free-clock solve (ordinary, no prior), the TEP kernel is correctly inert: RMS 10.7&ndash;17.7 m matching 10.7&ndash;17.7 m, p99 22.8&ndash;36.4 m versus 22.7&ndash;36.3 m, and the >25 m failure rate is unchanged (ratio median 1.00, range 0.98&ndash;1.03). The DOP-adaptive sigma inflation is essential: without it, a fixed-sigma prior injects its prediction error directly into the position estimate and produces catastrophic tail blow-ups (p99 $\sim$153 m for all prior methods versus 22.7 m free-clock at $k=4$), an artefact of the Bayesian weighting, not the physics. With the DOP-adaptive inflation, all clock-prior methods (TEP, persistence, free GP, Gauss&ndash;Markov) are inert at $k \ge 4$, confirming that the clock is already observable from satellite geometry and a properly weighted prior neither helps nor harms.</p>
+
+    <p>This is the correct physics. At $k = 4/5/6$ the receiver clock is already observable from satellite geometry (four unknowns, four or more equations), so a properly weighted finite-error prior is inert &mdash; neither helping nor harming. The prior engages only when geometry is weak ($k = 3$, underdetermined), tested in Step 48 below. At $k = 8$ the system is fully overdetermined and the prior is correctly inert. The P2 evaluation is reframed: the headline is not &ldquo;TEP improves positioning at k=4/5/6&rdquo; but &ldquo;TEP is inert at k=4/5/6 where the clock is observable, and enables positioning at k=3 where free-clock SPP is infeasible.&rdquo;</p>
+
+    <p>The earlier post-fit replay diagnostics (Steps 33/39) are retained as mechanism checks &mdash; they confirm the prior reaches the position state and reduces tail risk &mdash; but are no longer the headline position evidence. Step 44 supersedes them for the P2 evaluation because it removes the full-sky linearisation that prevented Steps 33/39 from being raw-observation proofs. One residual dependency remains: the TEP clock prediction is applied as a linearised correction around the thinned RTKLIB solution rather than inserted into the estimator for a joint re-solve of the thinned pseudoranges. A joint-estimation confirmation (P2b) has been implemented as Steps 51 and 52, inserting the clock prior inside the normal equations of a raw-observation RTKLIB SPP solve for naturally obstructed kinematic rovers; it is the next data target to make the raw-observation evaluation fully unconditional. An integrity monitor that detects and rejects catastrophic clock-prediction failures (Step 08 mechanism) would address the tail risk and give the TEP kernel comparable availability-adjusted performance to free-clock at k=4/5/6 while enabling a fix at k=3.</p>
+
+
+
+
+    <h3>A.7 What Actually Limits the Three-Satellite Fix (Step 57)</h3>
+    <p>Step 57 isolates the bottleneck at $k = 3$ by injecting a controlled clock-prediction error into a position solve on real Step 48 geometry (69 stations $\times$ 7 days, real ionosphere-free residuals, real IGS SINEX truth) and sweeping its magnitude, under a deployable integrity gate (PDOP $\le 10$). The clock is supplied from an all-satellite free solve plus Gaussian noise of the stated standard deviation.</p>
+    <table>
+        <thead><tr><th>Injected clock $\sigma$</th><th>3-D RMS</th><th>p50</th><th>p99</th><th>&gt;10 m rate</th></tr></thead>
+        <tbody>
+            <tr><td>0.0 m</td><td>8.34 m</td><td>5.43 m</td><td>24.5 m</td><td>19%</td></tr>
+            <tr><td>0.5 m</td><td>8.37 m</td><td>5.44 m</td><td>24.5 m</td><td>19%</td></tr>
+            <tr><td>1.0 m</td><td>8.44 m</td><td>5.50 m</td><td>24.7 m</td><td>19%</td></tr>
+            <tr><td>2.0 m</td><td>8.71 m</td><td>5.76 m</td><td>25.0 m</td><td>21%</td></tr>
+            <tr><td>4.0 m</td><td>9.68 m</td><td>6.53 m</td><td>26.8 m</td><td>27%</td></tr>
+            <tr><td>8.0 m</td><td>12.90 m</td><td>8.77 m</td><td>34.4 m</td><td>43%</td></tr>
+        </tbody>
+    </table>
+    <p>The position error is essentially flat until the clock error exceeds $\sim 4$ m: a <em>perfect</em> clock still gives $8.3$ m RMS at $k = 3$. A dedicated error-budget decomposition tests whether a fixable modelling gap is hiding a clock lever &mdash; it is not. Applying the estimated zenith wet delay moves the floor by $<3\%$ (the three highest-elevation satellites share most of the wet delay, which the clock absorbs); tightening the integrity gate to PDOP $\le 6$ reduces the floor by $\sim 7\%$; and swapping the injected error for the <em>measured</em> dense-network clock quality ($0.4$ m, Step 56) versus an AR(1)-class value ($1.5$ m) changes the floor by $\sim 2\%$. The three-satellite fix is genuinely limited by pseudorange model error &mdash; multipath, broadcast-orbit error, un-smoothed code &mdash; not by clock prediction, troposphere modelling, or geometry selection. A better clock prior therefore improves $k = 3$ <em>feasibility and availability</em>, not $k = 3$ <em>accuracy</em>; the accuracy lever is carrier smoothing, multipath mitigation and satellite count. Step 57 also compares the two estimator architectures: hard-fixing the clock (post-solve) and a soft $1/\sigma^2$ prior row (joint) are statistically identical at $k = 3$ (the clock row is not redundant there). At $k \ge 4$ the joint solve is a near-tie with a free-clock solve (single-digit percent), and the large joint-versus-post-solve margin ($+80$&ndash;$94\%$) is against an unfiltered hard-clock-fix baseline with no integrity monitor &mdash; it shows hard-fixing an uncertain clock is statistically suboptimal, not that the network prior adds position accuracy. The clock prediction's position-domain payload is timing holdover (Step 55) and feasibility. The corrected PPP cold-start test (Section 3.6i) confirms the prior is inert in clean full-sky PPP, as expected. (<code>scripts/steps/step_57_joint_estimator_sensitivity.py</code>.)</p>
+
+
+
+
+    <h3>A.8 TEP-Specific Predictive Superiority: Phase-Cos vs a Tuned Conventional Model (Step 64, P1)</h3>
+    <p>The P1 gate asks whether the <em>physics-fixed</em> TEP predictor &mdash; every parameter set a priori from Papers 1&ndash;2 &mdash; beats a conventional spatial model that is allowed to <em>learn</em> its covariance from data. Earlier P1 attempts used an amplitude-domain isotropic Gaussian and tied. Step 64 gives TEP its full arsenal, all in the phase domain where Papers 1&ndash;2 measured it: the phase-cos coherence Gram $\operatorname{Re}(S_{ij}/|S_{ij}|)$ frozen from the complete prior UTC day, an annual time-varying $\lambda$, and an isotropic multi-scale exponential continuum ($\lambda/1.6, \lambda, 1.6\lambda$) &mdash; with <em>zero</em> tuning on any data. Two arsenal components were withdrawn during development: a harmonic add-on (incompatible prior/current residual definitions) and a pairwise azimuth warp (not guaranteed positive definite on the sphere). The conventional competitor selects $(\text{form}, \lambda, \text{nugget})$ by leave-one-out on the held-out station's own prior day (the strongest deployable conventional model), and a second control fits $\rho(d)$ to the whole prior-day network covariance.</p>
+    <p>Held-out (leave-one-station-out) clock prediction on the dense EUREF/EPN network, 30 days, current-day evaluation epochs struck after the prior-day structures are frozen:</p>
+    <table>
+        <thead><tr><th>Network</th><th>phase-cos vs tuned conventional</th><th>phase-cos vs empirical covariance</th><th>full arsenal vs phase-cos</th><th>full arsenal vs geometry-scramble null</th></tr></thead>
+        <tbody>
+            <tr><td>dense EUREF/EPN (precise)</td><td>$+0.3\%$ (95% CI $[-0.3, +1.0]$, 57% of days)</td><td>$+5.2\%$ (CI $[+3.7, +6.3]$, 93% of days)</td><td>$+0.7\%$ (CI $[+0.5, +1.0]$)</td><td>$+1.3\%$ (CI $[+0.9, +1.6]$)</td></tr>
+            <tr><td>global CODE (broadcast)</td><td>$+0.3\%$ (CI $[-1.6, +0.7]$, 57% of days)</td><td>$-3.2\%$ (CI $[-4.6, -1.4]$, 23% of days)</td><td>$+2.1\%$ (CI $[+1.9, +2.9]$)</td><td>$+2.3\%$ (CI $[+0.8, +3.0]$)</td></tr>
+        </tbody>
+    </table>
+    <p>On the dense network the a-priori phase-cos TEP predictor is at a statistical tie with the prior-day-tuned conventional kernel ($+0.3\%$, CI includes zero, 57% of days positive) and beats the empirical-covariance conventional by $+5.2\%$ (CI positive, 93% of days). The empirical-covariance baseline is a weak competitor (single-parameter length-scale fit, fixed nugget), so the margin over it is expected; the tie with the better-tuned conventional kernel is the meaningful comparison. P1 does not pass as a strict superiority test: the phase-cos predictor does not exceed the tuned conventional kernel on either product (median $+0.3\%$ on both, CI includes zero). The full arsenal adds a modest but consistent improvement over phase-cos alone: $+0.8\%$ on the dense network (CI $[+0.5, +1.0]$) and $+2.1\%$ on broadcast (CI $[+1.9, +2.9]$). The arsenal beats the geometry-scramble null on both networks ($+1.5\%$ dense, $+2.3\%$ broadcast), confirming that the distance structure is load-bearing. Against the tuned conventional, the full arsenal reaches $+0.9\%$ on the dense network (CI $[+0.5, +1.8]$, 77% of days) and $+2.0\%$ on broadcast (CI $[+0.2, +2.8]$, 70% of days). The conventional baseline is tuned in-sample on the target's own prior-day residual (not a true leave-one-out cross-validation), which gives it a look-back advantage; a stricter held-out-day tuning would be a fairer test. The P1 gate also requires independent-year replication, which is tested in Step 92 &mdash; where this band-limited predictor loses to a causal empirical-covariance map. Appendix A.9 identifies why (the 10&nbsp;&micro;Hz edge excludes the low-frequency drift), and Section 3.6n's Step 96 removes the edge and passes P1 on the held-out year. (<code>scripts/steps/step_64_maximal_tep_p1.py</code>.)</p>
+
+
+
+
+    <h3>A.9 Drift Decomposition: The Clock "Drift" is the TEP Field (Step 65)</h3>
+    <p>The standard GNSS model decomposes the receiver clock as offset + drift $\times t$ + noise, where "drift" is removed by polynomial detrending. Step 65 tests whether this decomposition is physically wrong: if the TEP field is real, the "drift" is the low-frequency TEP field and the "noise" is the mid-frequency TEP field plus a much smaller true oscillator noise. The analysis groups 18 EUREF/EPN stations by clock type (8 quartz: INTERNAL/OCXO, 10 atomic: H-MASER/CESIUM) and decomposes each clock residual into three frequency bands: LF ($<$10&nbsp;&micro;Hz, periods $>$28&nbsp;h), MF (10&ndash;500&nbsp;&micro;Hz), and HF ($>$500&nbsp;&micro;Hz, periods $<$33&nbsp;min).</p>
+    <table>
+        <thead><tr><th>Band</th><th>Quartz RMS (m)</th><th>Atomic RMS (m)</th><th>Quartz / Atomic ratio</th><th>Atomic $\lambda$ (km)</th><th>Interpretation</th></tr></thead>
+        <tbody>
+            <tr><td>LF ("drift")</td><td>13.63</td><td>3.60</td><td>$3.8\times$</td><td>2,006</td><td>TEP field candidate; strong oscillator-class differential</td></tr>
+            <tr><td>MF (TEP band)</td><td>19.24</td><td>16.07</td><td>$1.2\times$</td><td>&mdash;</td><td>Both oscillator classes see the MF field</td></tr>
+            <tr><td>HF ("noise")</td><td>7.47</td><td>8.21</td><td>$0.9\times$</td><td>&mdash;</td><td>True oscillator noise</td></tr>
+        </tbody>
+    </table>
+    <p>On the atomic clocks, the LF band yields a distance fit of $\lambda \approx 2{,}006$ km &mdash; numerically matching the TEP scale from Steps 53 and 58, but the fit is weak ($R^2 = 0.017$) and not statistically resolved: the LF band contains fewer than one full cycle in a 24-hour arc (the fundamental Fourier frequency is $11.6\,\mu$Hz), so the "LF component" is essentially the residual trend after detrending rather than a resolved oscillatory band, and the distance fit is indicative only. The conclusion does not rest on it: the oscillator-class differential, which is independent of the spatial fit, is directionally consistent with the proposed screening hypothesis. The spatial correlation is not visible on the ALL-group (quartz+atomic) because the ALL-group correlation ($R^2 = 0.38$, $\lambda \approx 12{,}500$ km) is dominated by the quartz subgroup, which has higher LF amplitude and therefore stronger pair correlations &mdash; a population difference, not a dilution. The frequency-dependent differential shows that quartz carries $3.8\times$ more LF amplitude than atomic, but only $1.2\times$ more MF and $0.9\times$ more HF &mdash; consistent with either partial isolation of the atomic transition from the low-frequency field or differential disciplining/transfer characteristics (Section 3.5f). The HF band shows no differential because it is dominated by local oscillator noise. The practical implication: detrending discards the strongest part of the TEP signal. A spatiotemporal predictor that models the full field (LF+MF) without detrending gives a tighter clock constraint &mdash; and, as Section 3.6n shows, it is what closes the independent-year gap in Step 92, where the 10&ndash;500&nbsp;&micro;Hz band-limited predictor loses to a causal empirical-covariance map. (<code>scripts/steps/step_65b_drift_decomposition.py</code>.)</p>
+
+
+    <h3>A.10 The Measured Angular Structure Pays Off Operationally (Step 86)</h3>
+    <p>Sections 3.7b and 3.7e are physics results, and the test of whether they matter is whether they improve prediction. They do, and they do so by fixing a defect in the kernel this pipeline has been using throughout.</p>
+
+    <p><strong>Every isotropic decaying kernel is mis-signed over most of the sampled range.</strong> Section 3.7e measured $C(d)$ across the full sphere: it crosses zero near $47^\circ$ and is <em>negative</em> from $\sim$5,250 to $\sim$15,750 km &mdash; 22 of 40 distance bins, 55% of the range &mdash; before rebounding to $+0.057$ toward the antipode. A Gaussian or exponential kernel is positive everywhere. At 6,250 km the fitted Gaussian assigns $+0.021$ where the measured correlation is $-0.051$: not an inefficiency but the wrong sign, and the antipodal rebound is missed entirely. Kriging with a mis-signed covariance actively mis-weights distant stations.</p>
+
+    <p><strong>The measured profile cannot be used directly, for a reason worth recording.</strong> By Schoenberg's theorem [10] a function $C(\theta) = \sum_\ell a_\ell P_\ell(\cos\theta)$ on the sphere is a valid (positive semi-definite) covariance <em>if and only if</em> every $a_\ell \ge 0$. The raw empirical profile fails that test &mdash; its monopole coefficient is $a_0 = -0.011$ &mdash; and feeding it into a kriging solve produces an indefinite system with explosive weights. Fitting the profile in the Legendre basis and clipping negative coefficients to zero gives the closest valid covariance that still carries the quadrupole, and that is the operationally usable form of the Section 3.7e result.</p>
+
+    <p>Evaluation is leave-one-station-out clock prediction on the 317-station operational product, strictly causal: the empirical profile and the isotropic $\lambda$ values are fitted on the first 150 days and applied unchanged to 120 held-out days, 9,394 predictions in total. Stations are standardised and the kernels normalised to correlation matrices, since a fitted constant offset otherwise makes the covariance near rank-one.</p>
+
+    <table>
+        <thead><tr><th>Kernel</th><th>RMS</th><th>Skill vs predicting nothing</th></tr></thead>
+        <tbody>
+            <tr><td>zero (baseline)</td><td>53.57</td><td>&mdash;</td></tr>
+            <tr><td>network mean</td><td>53.46</td><td>$+0.21\%$</td></tr>
+            <tr><td><strong>Gaussian</strong> &mdash; the kernel in use</td><td>53.99</td><td>$\mathbf{-0.78\%}$</td></tr>
+            <tr><td>exponential</td><td>52.40</td><td>$+2.18\%$</td></tr>
+            <tr><td><strong>Legendre PSD</strong> &mdash; measured structure</td><td><strong>52.11</strong></td><td>$\mathbf{+2.73\%}$</td></tr>
+        </tbody>
+    </table>
+
+    <p>A day-clustered bootstrap over the 120 test days &mdash; necessary because predictions within a day share a network state and a single kernel solve &mdash; gives $+3.48\%$ for the measured-structure kernel over the Gaussian, CI95 $[+2.80, +4.40]$, $P(>0) = 1.000$, and $+2.73\%$ over predicting nothing, CI95 $[+2.17, +3.28]$. The Gaussian itself is <em>not</em> distinguishable from predicting nothing (CI95 $[-1.86, +0.14]$, centrally negative). So the angular structure does not merely add a few percent to a working predictor: it converts a kernel that was doing no useful work into one that does.</p>
+
+    <p><strong>The remaining structural results stack on top (Step 90b).</strong> Two further measurements were still outside the kernel, and each has a principled covariance form rather than a tuned one. If $\mathrm{resid}_i = s_i\,\phi + \eta_i$ and $f_i$ is the fraction of station $i$'s variance carried by the field, then for standardised series $\rho_{ij} = \sqrt{f_i f_j}\;C(d_{ij})$ &mdash; so <em>oscillator screening enters as a per-station factor</em>, with $f$ taken directly from the Step 65 network-predictable fractions (quartz $0.6152$, atomic $0.5352$). The anisotropy of Section 3.7c enters by fitting <em>separate</em> Legendre profiles for east&ndash;west and north&ndash;south oriented baselines on the training half and interpolating between them by orientation, rather than imposing a stretch ratio. An orientation-dependent kernel is not guaranteed positive semi-definite, so the smallest eigenvalue is checked and a ridge added where needed.</p>
+
+    <table>
+        <thead><tr><th>Kernel</th><th>RMS</th><th>vs predicting nothing</th><th>vs angular-only base</th></tr></thead>
+        <tbody>
+            <tr><td>Gaussian &mdash; the kernel in use</td><td>53.99</td><td>$-0.78\%$</td><td>&mdash;</td></tr>
+            <tr><td>network mean</td><td>53.46</td><td>$+0.21\%$</td><td>&mdash;</td></tr>
+            <tr><td>angular structure (Step 86)</td><td>52.11</td><td>$+2.73\%$</td><td>&mdash;</td></tr>
+            <tr><td>$+$ oscillator screening</td><td>51.77</td><td>$+3.37\%$</td><td>$+0.66\%$ &nbsp;CI $[+0.60, +0.72]$</td></tr>
+            <tr><td>$+$ anisotropy</td><td>51.73</td><td>$+3.43\%$</td><td>$+0.73\%$ &nbsp;CI $[+0.48, +0.98]$</td></tr>
+            <tr><td><strong>$+$ both</strong></td><td><strong>51.70</strong></td><td>$\mathbf{+3.49\%}$</td><td>$\mathbf{+0.79\%}$ &nbsp;CI $[+0.54, +1.04]$</td></tr>
+        </tbody>
+    </table>
+
+    <p>Every increment has a day-clustered bootstrap interval excluding zero with $P(>0) = 1.000$. The two are not additive ($+0.66\%$ and $+0.73\%$ give $+0.79\%$ together, not $+1.39\%$), which is expected: screening and orientation partly encode the same structure, since the anisotropy of Section 3.7d is itself concentrated in the least-screened stations.</p>
+
+    <p><strong>The cumulative picture is the point.</strong> The kernel this pipeline was using is not distinguishable from predicting nothing ($-0.78\%$, CI $[-1.86, +0.14]$). Adding the measured angular structure takes it to $+2.73\%$; adding the measured screening factors and the measured anisotropy takes it to $+3.49\%$. Each step is a quantity measured for physics reasons, entering through a form the physics dictates &mdash; a Legendre expansion clipped to satisfy Schoenberg, a $\sqrt{f_i f_j}$ variance share, an orientation interpolation &mdash; with no free parameters tuned on the evaluation data. The absolute size remains a few percent of band-limited clock variance on a global network, and should not be oversold; what the sequence establishes is that <em>the structural results are operationally load-bearing rather than decorative</em>, and that the route from a measured feature of the field to a validated prediction gain is now mechanical. (<code>scripts/steps/step_86_angular_kernel_operational.py</code>, <code>step_90b_physics_kernel_stack.py</code>.)</p>
+
+
+
+
+    <h3>A.11 One Kernel per Frequency Regime (Step 88b)</h3>
+    <p>Sections 3.5d and 3.5f both say that a single kernel across 10&ndash;500 &micro;Hz is averaging distinct physical regimes: the phase-lock scale ($\sim$2,800 km) and the coherent-power scale ($\sim$1,200 km) differ by more than a factor of two, and the quartz/atomic screening contrast is $3.8\times$ at low frequency but $0.9\times$ at high frequency, where the residual is true oscillator noise rather than field. Step 88 therefore fits a separate spatial profile <em>and</em> separate field-share factors in each of three sub-bands on the training half, and predicts each band with its own kernel.</p>
+
+    <p><strong>The correlation length falls monotonically with frequency, which is the two-scale result measured directly:</strong></p>
+
+    <table>
+        <thead><tr><th>Sub-band</th><th>Period range</th><th>Correlation half-scale</th><th>Field share, quartz</th><th>Field share, atomic</th></tr></thead>
+        <tbody>
+            <tr><td>LF, 10&ndash;60 &micro;Hz</td><td>4.6&ndash;28 h</td><td><strong>3,769 km</strong></td><td>0.118</td><td>0.092</td></tr>
+            <tr><td>MF, 60&ndash;200 &micro;Hz</td><td>1.4&ndash;4.6 h</td><td><strong>1,256 km</strong></td><td>0.047</td><td>0.065</td></tr>
+            <tr><td>HF, 200&ndash;500 &micro;Hz</td><td>33 min&ndash;1.4 h</td><td><strong>754 km</strong></td><td>0.026</td><td>0.063</td></tr>
+            <tr><td><em>full window, 10&ndash;500 &micro;Hz</em></td><td><em>33 min&ndash;28 h</em></td><td><em>3,769 km</em></td><td><em>0.069</em></td><td><em>0.050</em></td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>The last row is the mechanism.</strong> A kernel fitted on the whole window returns $\lambda = 3{,}769$ km &mdash; identical to the low-frequency band, because the full-window profile is dominated by its largest-amplitude component. That single kernel is then applied to high-frequency data whose true correlation scale is $754$ km, weighting stations five times too far away. Splitting the bands is not a refinement of the kernel; it removes a systematic mismatch.</p>
+
+    <p>Low-frequency structure is long-range and matches the TEP scale; high-frequency structure is short-range, as local oscillator noise should be. The field share also inverts with frequency &mdash; quartz carries the larger share at low frequency ($0.118$ against $0.092$) and the smaller share at high frequency ($0.026$ against $0.063$) &mdash; which is the frequency-dependent screening of Section 3.5f appearing in an independent estimator, measured here as correlation with the network rather than as band amplitude.</p>
+
+    <p>Operationally, giving each band its own kernel beats a kernel fitted on the full 10&ndash;500 &micro;Hz window by $+2.05\%$, day-clustered CI95 $[+1.76, +2.32]$, $P(>0) = 1.000$ over 9,281 held-out predictions. All profiles and field shares are fitted on the training half and applied unchanged. (An earlier version of this comparison used the low-frequency profile as the stand-in for "one global kernel", which is a straw man &mdash; it measured band-specific against LF rather than against a genuine full-window fit. Correcting it moved the result from $+1.97\%$ to $+2.05\%$, so the conclusion did not depend on the weaker baseline.)</p>
+
+    <p>Three implementation points are worth recording, because each initially produced a divergent predictor rather than a wrong number. Kriging with a correlation matrix assumes homoscedastic data, and within a band station amplitudes span two orders of magnitude (H-masers at $\sim$5 cm against internal quartz at $\sim$4 m), so stations must be standardised or predicting a quiet station from noisy neighbours diverges. Field share is the <em>correlation with the network</em>, not the amplitude &mdash; a station with large local noise has more total variance but a <em>lower</em> field fraction, and using an amplitude ratio inverts the weighting. And a positive-semi-definite repair must renormalise by $\sqrt{\mathrm{diag}}$ outer product; adding a ridge and then resetting the diagonal to unity simply deletes the ridge and leaves the kernel indefinite. (<code>scripts/steps/step_88b_band_decomposed_kernel.py</code>.)</p>
+
+    <p><em>Solar-tidal notching and Paper 1 multi-band out-of-year generalisation (Steps 125, 127, 140, 142, 146).</em> Two mechanisms further explain and close the band-limited out-of-year gap of Section 3.6n. First, across $362{,}434$ station-pair-days over 60 days (<code>results/outputs/step_125_notched_elevation.json</code>), the apparent solar-elevation correlation of the full $10$&ndash;$500\,\mu\text{Hz}$ band ($r = 0.809$) is carried by the discrete solar atmospheric harmonics ($24$ h, $12$ h, $8$ h, $6$ h); notching those tidal lines reduces the elevation correlation to $r = 0.334$ and inverts the day/night contrast from night-negative ($-0.0006$ vs $+0.114$ day) to night-positive ($+0.140$ night vs $+0.102$ day), demonstrating that the underlying TEP continuum persists in the dark when the solar-driven ionosphere collapses. Moreover, in the $25$&ndash;$100\,\mu\text{Hz}$ continuum band across 21 regional CORS pairs (<code>results/outputs/step_146_constellation_8h_clocktype.json</code>), GPS and GLONASS independently recover identical inter-station correlations ($p = 0.41$ for GPS vs GLONASS difference; common-mode correlation exceeds GPS-minus-GLONASS differential at $p = 0.0012$), ruling out constellation-specific orbit resonances. Exploiting this solar-illumination-independent continuum ($\lambda = 1{,}877$ km) as a notched prior on 57 held-out days of 2025 (<code>results/outputs/step_127_notched_prior.json</code>) beats the un-notched full-band kernel by $+1.87\%$ (CI95 $[+1.64, +2.60]\%$, $86.0\%$ of days positive) and turns Step 92's $-0.93\%$ deficit against the empirical covariance into $+0.34\%$ ($59.6\%$ of days positive). Second, assigning Paper 1's physics-fixed frequency-dependent length scales across three sub-bands &mdash; tidal ($9.84$&ndash;$35\,\mu\text{Hz}$, $\lambda = 4{,}677$ km), post-tidal ($35$&ndash;$100\,\mu\text{Hz}$, $\lambda = 1{,}502$ km), and intermediate ($100$&ndash;$500\,\mu\text{Hz}$, $\lambda = 1{,}459$ km) &mdash; on the 57 held-out days of 2025 (<code>results/outputs/step_140_multiband_controls.json</code>) beats the single-$\lambda$ full-band kernel by $+2.19\%$ (CI95 $[+1.56, +2.89]\%$, $87.7\%$ of days positive), beats the causal empirical-covariance map on held-out 2025 by $+0.56\%$ (CI95 $[+0.37, +1.23]\%$, $68.4\%$ of days positive), and clears all three specificity nulls with positive 95% confidence intervals: geometry scramble ($+1.10\%$, CI95 $[+0.93, +1.46]\%$), phase scramble ($+1.11\%$, CI95 $[+0.32, +1.75]\%$), and inter-band $\lambda$ scramble ($+0.68\%$, CI95 $[+0.45, +0.78]\%$), with multi-year replication across both 2024 ($+2.29\%$, CI95 $[+1.63, +2.86]\%$) and 2025 ($+3.33\%$, CI95 $[+2.66, +4.21]\%$; <code>results/outputs/step_142_multi_year.json</code>). Expanding the held-out 2025 evaluation to 88 CODE days and replicating unchanged on 49 held-out days of the independent GFZ analysis centre (<code>results/outputs/step_153_cross_product.json</code>) confirms that the three-band physics-fixed kernel beats both the single-band kernel ($+2.34\%$ on COD, CI95 $[+2.06, +2.61]\%$, $96.6\%$ of days positive; $+2.24\%$ on GFZ, CI95 $[+1.68, +3.01]\%$) and the causal empirical-covariance map on both centres ($+1.55\%$ on COD, CI95 $[+0.38, +2.10]\%$; $+1.18\%$ on GFZ, CI95 $[+0.43, +2.69]\%$), with a cross-centre difference of $-0.10\%$ that rules out a CODE-specific processing artefact.</p>
+
+
+
+
+    <h3>A.12 Robustness of the Operational Result (Steps 85, 87, 88)</h3>
+    <p>The Step 55 outage prediction result is the strongest operational claim. Three independent robustness checks test whether it is an artefact of station selection, season, network density, or a hyperparameter choice. The percentages below are larger than the pooled headline of Section 3.6d for two definitional reasons: Steps 85 and 87 evaluate a 15-day subset whose clock excursions are systematically smaller (persistence RMS $\sim$10.9 m at 1 h versus $18.4$ m on the full 90-day set), and Step 88 reports the median of per-station improvement ratios rather than the pooled RMS ratio, which is weighted toward the largest-error station-days.</p>
+
+    <p><strong>Per-station breadth (Step 88).</strong> TEP wins at every one of the 25 EUREF stations individually at both 1 h and 4 h outages: 25/25 at 1 h (sign test $p = 3 \times 10^{-8}$), 25/25 at 4 h (same). The median per-station improvement is $+33.7\%$ at 1 h (IQR $28.9$&ndash;$44.2\%$, range $0.5$&ndash;$51.3\%$) and $+47.8\%$ at 4 h (IQR $40.3$&ndash;$51.8\%$, range $0.7$&ndash;$60.1\%$). The aggregate improvement is not driven by outlier stations; the worst-performing station still wins by $+0.5\%$ at 1 h.</p>
+
+    <p><strong>Seasonal stability (Step 88).</strong> Splitting the 90-day evaluation into four quarters shows the improvement is positive in every quarter at both horizons:</p>
+
+    <table>
+        <thead><tr><th>Quarter</th><th>1 h TEP vs persistence</th><th>4 h TEP vs persistence</th></tr></thead>
+        <tbody>
+            <tr><td>Q1</td><td>$+18.6\%$</td><td>$+32.2\%$</td></tr>
+            <tr><td>Q2</td><td>$+36.9\%$</td><td>$+43.8\%$</td></tr>
+            <tr><td>Q3</td><td>$+39.2\%$</td><td>$+47.1\%$</td></tr>
+            <tr><td>Q4</td><td>$+33.7\%$</td><td>$+43.5\%$</td></tr>
+        </tbody>
+    </table>
+
+    <p>The method is stable across seasons. The lowest quarter (Q1, $+18.6\%$ at 1 h) still represents a substantial margin over persistence.</p>
+
+    <p><strong>Network density (Step 85).</strong> The TEP covariance remains physics-fixed ($\lambda = 4{,}200$ km, nugget $= 0.35$) without re-tuning at any density. With as few as 5 reference stations, TEP still beats persistence by $+20.8\%$ at 30 min and $+30.2\%$ at 1 h. The improvement scales monotonically with density:</p>
+
+    <table>
+        <thead><tr><th>Reference stations</th><th>30 min</th><th>1 h</th><th>4 h</th></tr></thead>
+        <tbody>
+            <tr><td>5</td><td>$+20.8\%$</td><td>$+30.2\%$</td><td>$+40.1\%$</td></tr>
+            <tr><td>8</td><td>$+23.1\%$</td><td>$+32.1\%$</td><td>$+42.1\%$</td></tr>
+            <tr><td>12</td><td>$+25.0\%$</td><td>$+33.8\%$</td><td>$+43.8\%$</td></tr>
+            <tr><td>16</td><td>$+26.2\%$</td><td>$+34.8\%$</td><td>$+44.8\%$</td></tr>
+            <tr><td>20</td><td>$+27.0\%$</td><td>$+35.6\%$</td><td>$+45.6\%$</td></tr>
+            <tr><td>all available</td><td>$+27.5\%$</td><td>$+36.0\%$</td><td>$+46.1\%$</td></tr>
+        </tbody>
+    </table>
+
+    <p>The method is deployable in regions with sparse CORS coverage and self-improves as networks expand. The gain from 5 to 99 stations is $+6.0$ pp at 1 h &mdash; useful but not dramatic, confirming that the physics-fixed scale does the work and the density margin is one of marginal refinement rather than threshold dependence.</p>
+
+    <p><strong>Pre-window sensitivity (Step 87).</strong> The result is robust to a 4$\times$ range of pre-window lengths (1 h, 2 h, 4 h), with TEP beating persistence at every choice:</p>
+
+    <table>
+        <thead><tr><th>Pre-window</th><th>1 h gap</th><th>4 h gap</th></tr></thead>
+        <tbody>
+            <tr><td>1 h</td><td>$+30.3\%$</td><td>$+36.6\%$</td></tr>
+            <tr><td>2 h</td><td>$+37.8\%$</td><td>$+46.2\%$</td></tr>
+            <tr><td>4 h</td><td>$+36.6\%$</td><td>$+40.3\%$</td></tr>
+        </tbody>
+    </table>
+
+    <p>The 2-hour pre-window is optimal but not critical; the 1-hour window loses $+7.5$ pp at 1 h gap but still wins by $+30.3\%$. Together these checks establish that the operational result is not an artefact of station selection, season, network density, or a hyperparameter choice. (<code>scripts/steps/step_85_network_density_robustness.py</code>, <code>step_87_prewindow_sensitivity.py</code>, <code>step_88_per_station_breakdown.py</code>.)</p>
+
+
+
+
+    <h3>A.13 Operational Holdover Specification with Confidence Intervals (Step 90)</h3>
+    <p>Step 90 converts the Step 55/56 clock-RMS results into a deployment-ready timing holdover specification with day-clustered bootstrap confidence intervals (4,000 resamples). The conversion is $1\;\mathrm{m\;clock\;range} = 3.3356\;\mathrm{ns}$ time error. The phase-resolved prior is used at 30 min, 1 h, 4 h, and 8 h; the distance-only prior at 10 min and 2 h (where the phase arm is not available).</p>
+
+    <table>
+        <thead><tr><th>Outage</th><th>TEP-aided TE (ns)</th><th>CI95</th><th>Persistence</th><th>OCXO ($\$300$)</th><th>CSAC ($\$1.5$k)</th><th>Rubidium ($\$2$k)</th><th>vs TCXO</th></tr></thead>
+        <tbody>
+            <tr><td>10 min</td><td>17.0</td><td>[16.5, 17.5]</td><td>19.9</td><td>6.0</td><td>30.0</td><td>3.0</td><td>35$\times$</td></tr>
+            <tr><td>30 min</td><td>22.1</td><td>[19.8, 24.1]</td><td>30.1</td><td>18.4</td><td>90.1</td><td>9.1</td><td>81$\times$</td></tr>
+            <tr><td>1 h</td><td><strong>24.7</strong></td><td>[22.0, 27.3]</td><td>39.9</td><td>37.5</td><td>180.6</td><td>18.4</td><td>146$\times$</td></tr>
+            <tr><td>2 h</td><td>34.5</td><td>[31.9, 37.3]</td><td>57.2</td><td>78.0</td><td>362.3</td><td>37.5</td><td>210$\times$</td></tr>
+            <tr><td>4 h</td><td>40.6</td><td>[38.0, 43.9]</td><td>85.9</td><td>167.8</td><td>729.3</td><td>78.0</td><td>357$\times$</td></tr>
+            <tr><td>8 h</td><td><strong>65.7</strong></td><td>[62.8, 68.9]</td><td>148.0</td><td>383.4</td><td>1477.3</td><td>168.1</td><td>445$\times$</td></tr>
+        </tbody>
+    </table>
+
+    <p>At 1 h the TEP-aided TCXO (24.7 ns, CI [22.0, 27.3]) beats a GNSS-disciplined OCXO (37.5 ns) and a disciplined CSAC (180.6 ns), but not a disciplined Rubidium (18.4 ns). Beyond 2 h the TEP-aided TCXO beats all three: at 8 h it holds 65.7 ns versus 383.4 ns for the OCXO and 168.1 ns for the Rubidium. The network-aided p99 stays inside the ITU-T G.8272 PRTC-A $\pm$100 ns envelope out to a $\sim$2 h outage (86 ns at 2 h). The deployment specification is: $<1$ ms compute per epoch, $<1$ MB memory, $\sim$240 KB/h bandwidth at 30 s cadence, physics-fixed $\lambda = 4{,}200$ km with zero per-site configuration, and a 24-hour phase Gram update cycle. (<code>scripts/steps/step_90_operational_holdover_spec.py</code>.)</p>
+
+
+
+
+    <h3>A.14 The S2 Evaluation Across Both Estimators (Step 83)</h3>
+    <p>Gate S2 (physics separability) uses the frozen criterion $|{\rm partial\ corr}(\rho, \log d \mid J)| > 0.15$. Step 45 computes the pair correlation as a Pearson correlation of band-passed series &mdash; the statistic Paper 1 states "fails to detect TEP signals due to phase averaging effects and amplitude suppression" &mdash; so the identical design was repeated with the Papers 1&ndash;2 phase-alignment index, under the same corrected pooled-$\kappa$ stage-1 and real-SP3 co-visibility as the re-audited Step 45.</p>
+
+    <p>Step 83 keeps the Step 45 design unchanged &mdash; stage 1 extracts the non-common-view component $\alpha_{ij}$, stage 2 tests $\alpha$ against distance controlling for mean co-visibility &mdash; and changes only the estimator and the time unit (pair-day rather than epoch, since the 10&ndash;500 &micro;Hz band needs a full day; co-visibility still varies day to day as the constellation precesses). Run over a <em>full year</em> (361 days of <code>clk_cod_ops</code>, real-SP3 co-visibility, pooled common-view slope $\kappa = +0.048$):</p>
+
+    <table>
+        <thead><tr><th>Arm</th><th>Pairs</th><th>Partial corr, phase-cos</th><th>$z$ vs pair-permutation null</th><th>Partial corr, band-passed (Step 45)</th><th>$\lambda$ fitted to $\alpha$</th><th>$R^2$</th></tr></thead>
+        <tbody>
+            <tr><td>precise (<code>clk_cod_ops</code>)</td><td>58,492</td><td>$-0.026$</td><td>$+9.4$</td><td>$-0.040$ ($9.2\sigma$)</td><td>3,695 km</td><td>0.785</td></tr>
+            <tr><td>broadcast (361-day set)</td><td>435</td><td>$-0.002$</td><td>$-1.5$</td><td>$-0.164$ ($10.8\sigma$, frozen met)</td><td>&mdash; (constant)</td><td>0.000</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>The two estimators tell one story.</strong> On the precise product both return a small, significant, negative partial correlation &mdash; $-0.040$ ($9.2\sigma$) band-passed and $-0.026$ ($z = +9.4$ against the pair-permutation null; station-clustered bootstrap CI $[-0.051, -0.007]$) phase-cos &mdash; and both recover a TEP-band distance scale in $\alpha$ ($\lambda = 2{,}155$ and $3{,}695$ km). The sign is the decaying-field direction; the magnitude is attenuated, as predicted for a network-solved product whose satellite clocks absorb the field's common mode and whose stations are predominantly atomic (screened). The earlier failure of this gate was an estimator problem, not a property of the geometry: the per-pair stage-1 slope on the arbitrarily-phased nominal co-visibility attenuated the partial correlation to zero; on real-SP3 co-visibility the retained <code>perpair_beta</code> specification (Step 45b) returns $-0.279$ with $\lambda = 1{,}240$ km &mdash; the same decay direction, so the attenuation was dominated by the nominal-J screen rather than by the slope pooling itself. The year-scale broadcast arm is the sparse tail (435 station pairs surviving the 30-day minimum), so its flat fit is a data-coverage statement, not a contradiction of the 4,933-pair-day Step-45 result. The receiver-clock channel therefore establishes separability on the minimally processed product and the expected attenuation on the network product; physical identification of $\lambda_T$ continues to rest on the phase observable (Step 53, $25$&ndash;$27\sigma$). (<code>scripts/steps/step_83_t4_phasecos.py</code>.)</p>
+
+
+
+
+    <h3>A.15 Interpretation</h3>
+    <p>The control battery reveals a clear distinction between the broadcast SPP and precise-clock results on a regional cluster. The ~50% reduction with broadcast SPP is dominated by common-mode satellite-product error — any averaging predictor removes it, the correlation length is irrelevant, and the dynamic kernel's geometry-dependent coupling terms do not improve the reduction. The ~16% residual in precise clocks depends on the correlation length and requires epoch-to-epoch coherence, but a leakage-free scaled-mean control shows its advantage over the raw network mean is nugget-induced rescaling, not resolvable distance geometry at 500–1200 km. This residual is consistent with the TEP signal identified in Papers 1–3, with the caveat that geometry-specific structure is not independently resolvable at this network scale.</p>
+
+    <p><strong>Operational synthesis.</strong> The strongest practical chain is now Step 53 phase-scale recovery &rarr; Step 55 causal outage bridging ($+5.0$&ndash;$18.9\%$ over 90 days) &rarr; Step 56 phase-resolved prediction ($+26.5$&ndash;$55.7\%$ over temporal, $+4.8$&ndash;$23.4\%$ over causal CV spatial) &rarr; Step 60 timing holdover specification (25 ns at 1 h, 66 ns at 8 h) &rarr; Step 48 dense-network k=3 blind solve. Step 56 beats distance-only TEP, temporal, network-mean and causally tuned spatial controls on later days, while phase randomisation destroys the gain. The phase-resolved prior converts directly to a deployment-ready timing holdover specification: 25 ns at 1 h and 66 ns at 8 h, beating a $\$300$ OCXO beyond 30 min and a $\$2{,}000$ Rubidium beyond 2 h with a $\$5$ TCXO and a network link. Step 48 establishes the k=3 algebraic feasibility: free-clock SPP is infeasible (0% availability), while the recalibrated blind TEP solve on the dense EUREF-prioritised network (20 phase Gram stations, median nearest reference ~130 km) achieves 7.54 m RMS (p50 5.21 m, p99 18.65 m) for the canonical arm and 5.76 m RMS (p50 3.05 m, p99 17.55 m) for the phase-resolved arm, at 95.2% availability. Conventional clock-prior controls (AR1, persistence) are also feasible at 5.5&ndash;5.7 m RMS, so TEP supplies the missing degree of freedom but does not exceed the best conventional clock prior in position accuracy. The clock-domain advantage ($+5.0$ to $+18.9\%$, Step 55; $+26.5$ to $+55.7\%$, Step 56) is the predictive-power result; k=3 position accuracy is pseudorange-noise-limited (~0.3 m per satellite). The phase-resolved prior (Step 56) does not provide additional position-domain benefit in single-epoch $k=3$ code SPP beyond the distance-only kernel, because the $k=3$ code solve is exactly determined &mdash; the clock is one of four unknowns, and the $\sim 8$ m pseudorange noise floor dominates the residual budget. The whole-sample tail is bounded (p99 17.52 m at 1 h), and no truth-linearised Step 48 number is used as operational evidence. Once the estimator moves beyond single-epoch code SPP, the clock-domain advantage translates directly into position: in $k = 4$ GPS-only production PPP (Step 62, P3 PASS) the physics-fixed TEP prior reduces 3-D RMS by $+29.8\%$ over free-clock across 96 cold starts; in $k = 4$&ndash;$5$ degraded-sky SPP with a causally calibrated soft clock sigma (Step 106, Section 3.11c) the frozen Step 96 network prior beats free-clock by $+49$&ndash;$61\%$ and beats the deployable persistence-trend prior by $+14.5\%$ (1 h) to $+48.0\%$ (4 h) across 27 days; and once carrier-phase tracking removes the pseudorange noise floor on the live observatory (Section 3.10, $38{,}900$ unlatched 1 Hz outage epochs), the causal TEP clock prior beats persistence at $k = 3$ by $+29.6\%$ in 3-D RMS ($+46.7\%$ vertical) across 8 of 8 windows and at $k = 4$ by $+14.0\%$ over persistence ($+62.9\%$ over free-clock).</p>
+
+    <p>On the physics attribution, the cross-sectional receiver-network channel alone cannot close T4 because distance and mean satellite co-visibility are collinear ($r \approx -0.93$), but the temporal T4 regression (Step 45, corrected pooled-$\kappa$ stage-1 on real-SP3 co-visibility) separates the non-common-view intercept $\alpha$ at the frozen S2 level on the minimally processed broadcast product ($\mathrm{PC} = -0.164$, $10.8\sigma$, day-folded out-of-sample $R^2$ gain $+0.022 > 0.02$, $\lambda = 4{,}349$ km, $R^2 = 0.950$; $\mathrm{PC} = -0.267$ with the local-solar-time $\cos\Delta\lambda$ systematic also controlled) and measures the physically predicted attenuation on the network-solved precise product ($\mathrm{PC} = -0.040$, $9.2\sigma$; S2 recorded PARTIAL pending an unattenuated precise-side estimator). Applying the same common-view-free intercept $\alpha$ to the midpoint-bearing sector test (Step 176) confirms that the short-baseline East&ndash;West anisotropy at $500$&ndash;$800$ km survives common-view removal essentially unchanged ($+0.130 \rightarrow +0.126$, $z = +1.98 \rightarrow +1.91$, with $\bar J$'s own EW&ndash;NS contrast $-0.015$, opposite-signed), while sub-diurnal Earth-rotation aperture synthesis (Step 137) resolves the celestial axis in favour of the CMB dipole ($\Delta\mathrm{BIC} = -2{,}315.5$ over Solar Apex). Three further lines of evidence establish the field without relying on common-view geometry at all. The constellation- and product-independence test (T5) shows the correlation survives the removal of two orders of magnitude of satellite-clock error, localising it to the receiver ($p < 10^{-6}$), and the same invariance holds at global aperture where the T1 correlation length recovers at $3{,}480$ km (broadcast) and $3{,}628$ km (precise), a $+4.3\%$ shift. The corrected phase-alignment index on receiver clocks (Step 53) &mdash; using $\cos(\arg \sum_f S_{ij}(f))$ &mdash; detects a distance-structured phase alignment at $\lambda = 4{,}348$ km on the precise COD product ($R^2 = 0.898$, 27.0$\sigma$), replicated on the independent GFZ product ($\lambda = 4{,}076$ km, $R^2 = 0.955$, 25.6$\sigma$), and $\lambda = 2{,}778$ km on broadcast ($R^2 = 0.683$, 12.5$\sigma$), matching the Paper 1&ndash;2 Gaussian fit to within 3.5%. The phase-coherent cross-spectral analysis of the satellite clocks (Section 3.8, Method 2; Appendix A.18, Step 98) uses no receiver clocks and no common-view geometry and, with the corrected $\cos(\arg \sum_f S)$ statistic, detects a GPS pair phase alignment that falls off with inter-satellite separation at $10.6\sigma$ above a phase-randomised null and $12.6\sigma$ above a geometry-shuffled null (exponential $\lambda$ at the 40{,}000&nbsp;km upper bound, $R^2 = 0.617$; 43{,}525 pair-days; $15.9\sigma$ over 180 days in Step 98). The GPS&times;Galileo cross-constellation arm independently confirms the phase alignment at $12.0\sigma$ / $14.8\sigma$ ($\lambda = 14{,}911$ km, $R^2 = 0.693$ on 90 days; $\lambda = 8{,}140 \pm 795$ km, log-slope $26.4\sigma$ on 180 days), the Galileo-only and BeiDou-only arms are independently significant at $6.7\sigma$ and $5.7\sigma$ ($8.6\sigma$ and $4.9\sigma$ on 180 days), and the all-MEO arm is also positive ($R^2 = 0.708$, $7.2\sigma$ / $7.1\sigma$). It is a satellite-side detection of the same distance-structured correlation. (An inertial position-gradient regression, Section 3.8 Method 1, does <em>not</em> provide independent evidence: over the full year that gradient is Sun-synchronous &mdash; consistent with solar-radiation-pressure orbit mismodelling and degenerate with a heliocentric field component &mdash; and rules out only a CMB-fixed MEO gradient.) In the position domain, the benefit of the network clock prior appears precisely in the two regimes where the receiver clock is not already pinned by full-sky satellite geometry: the underdetermined $k = 3$ case, where a conventional solve cannot produce a fix at all ($95.2\%$ availability in single-epoch code SPP, Step 48; $+29.6\%$ 3-D and $+46.7\%$ vertical RMSE reduction over persistence across $38{,}900$ unlatched carrier-phase outage epochs, Section 3.10), and the degraded-sky $k = 4$&ndash;$5$ regime ($+29.8\%$ over free-clock across 96 cold starts in $k = 4$ GPS-only PRIDE-PPP-AR, Step 62; $+49$&ndash;$61\%$ over free-clock and $+14.5$&ndash;$48.0\%$ over persistence-trend across 27 days in Step 106; $+14.0\%$ over persistence and $+62.9\%$ over free-clock at $k = 4$ on the live observatory). Clean full-sky PPP cold start was tested directly and does <em>not</em> show a TEP-specific gain once a look-ahead bias in the trend is removed (Section 3.6i): with a full sky and a converged filter the receiver clock is already observation-determined and the network prior is correctly inert. Finally, Section 3.5h shows that while sidereal templating provably erases a static geometry-locked holonomy along with multipath, the joint site-frame azimuth/elevation estimator of Step 79 recovers injected static holonomy at $1.00$ on all eight pairs and bounds the non-exact sector below the site-multipath-modelled floor.</p>
+
+
+
+
+    <h3>A.16 Full-field spatiotemporal predictor at the TEP scale (Step 101)</h3>
+
+    <p>Step 53 showed that the TEP signal is in the phase, not the amplitude: GNSS processing suppresses spatially correlated amplitudes when phases are aligned (Paper 1, Sec 2.3). Step 101 tests whether the TEP-scale spatial coherence of the resid increment &mdash; the change in the IGS detrended residual over the prediction gap &mdash; is strong enough to improve clock prediction. The resid still contains the TEP field's LF component (10&ndash;100 &micro;Hz, 69&times; more power than the MF band), which is spatially correlated at the TEP scale (Step 103: quartz phase alignment $R^2 = 0.94$ at $\lambda = 2{,}454$ km). No additional detrending is applied: the IGS resid is already detrended, and further detrending removes $47.5\%$ of the power including the TEP LF signal.</p>
+
+    <p>The protocol is strictly causal. For each prediction epoch $t_i$, the resid increment $\Delta r_j = r_j(t_i + \Delta t) - r_j(t_i)$ is computed for each reference station $j$ and kriged to the target at the physics-fixed TEP scale ($\lambda = 4{,}200$ km, nugget $0.35$, no data tuning). The kriged increment is added to the target's last known value. A phase-coherence filter (cross-spectrum phase alignment $\mathrm{PA} > 0$ from a 12-hour pre-window) was tested as an additional arm; it does not improve over unfiltered amplitude kriging ($-0.7\%$, CI includes zero). A phase-only kriging kernel (using the PA Gram as the covariance) was also tested and gives only $+1.5\%$ versus persistence, against $+11.0\%$ for the distance kernel. The phase observable is the stronger detection tool &mdash; Step 103's $10.5\sigma$ quartz phase alignment is the strongest single TEP detection in this paper &mdash; but the per-epoch PA computed from a 12-hour window (21 frequency bins in the 10&ndash;500&nbsp;&micro;Hz band) is too noisy to improve on the smooth, physics-fixed distance kernel for prediction. The distance kernel works because the field's spatial coherence is at the TEP scale; the phase alignment confirms that this coherence is phase coherence (Step 103), not amplitude coherence. The two observables are complementary: phase detects the field, distance predicts its evolution.</p>
+
+    <p>Over 40 days at the 4-hour gap horizon, the TEP-scale kriging achieves 2.73 m median RMS against 3.10 m for persistence &mdash; an $11.0\%$ improvement (CI $[10.0, 12.8]$, 40 of 40 days positive). The gain is concentrated at the TEP scale: a lambda sweep shows $+13.2\%$ at 2{,}000 km and $+11.0\%$ at 4{,}200 km versus $+5.3\%$ at 500 km and $+7.5\%$ at 8{,}000 km. The TEP scale is load-bearing; a local-scale kernel cannot reproduce the gain. The gap horizon matters: at 1 hour the kriging does not significantly beat persistence ($+0.9\%$, CI $[-0.6, 2.1]$ includes zero), while at 4 hours the gain is $+11.0\%$ (CI $[10.0, 12.8]$). The turn-on at 4 hours is consistent with the TEP LF component (10&ndash;100 &micro;Hz, period 2.8&ndash;28 h) beginning to evolve coherently across the network; a local noise model would not show this gap dependence. (<code>scripts/steps/step_101_full_field_predictor.py</code>.)</p>
+
+
+
+
+    <h3>A.17 Decisive drone experiment (Step 100)</h3>
+
+    <p>Step 100 projects what a decisive UAV demonstration requires: a 24-hour docked pre-flight collection to learn the flight receiver's phase state against the live network, a production PPP/INS filter fusing the clock prior with inertial aiding, and registered 10-minute to 8-hour network-denied episodes. The projected 24-hour docked-history performance (61.2 m clock-prior RMS from the measured learning curve, $k = 3$ position p50 of 97.7 m) is a falsifiable prediction, not a re-scored result &mdash; Flight 8 cannot be re-flown, so the registered protocol of Section 4 is the route to the decisive test. (<code>scripts/steps/step_100_decisive_drone_experiment.py</code>.)</p>
+
+
+
+
+    <h3>A.18 Satellite-channel flagship (Step 98)</h3>
+
+    <p>The satellite-side cross-spectral detection of Section 3.8 (Step 36) is extended to 180 days and seven arms: GPS-only, Galileo-only, GLONASS-only, BeiDou-only, GPS&times;Galileo cross-constellation, all-MEO, and a GLONASS&times;others cross arm. After a clock-jump-repair correction recovered the full constellation corpus (the earlier all-or-nothing screen discarded ~80&ndash;95% of Galileo and BeiDou satellite-days and preferentially removed the most stable oscillators), every arm shows a <em>positive</em> phase-alignment contrast relative to both nulls: GPS-only $+0.546$ at $15.9\sigma$ (87{,}081 pair-days), Galileo-only $+0.244$ at $8.6\sigma$ (59{,}335 pair-days), BeiDou-only $+0.150$ at $4.7\sigma$ (110{,}252 pair-days), and GLONASS-only $+0.035$ at $0.9\sigma$ (36{,}124 pair-days, the noisiest Cs-clock family). The decisive independence test is the GPS&times;Galileo cross-constellation arm &mdash; sharing no orbital plane or clock family, though the clock estimates traverse the same terrestrial tracking segment as the receiver products &mdash; which resolves an exponential decay $\lambda = 8{,}140 \pm 795$ km ($R^2=0.655$, 148{,}682 pair-days, log-slope $26.4\sigma$ above the phase-randomised null; its near/far contrast alone reaches $+2.2\sigma$, since GPS&ndash;Galileo pairs occupy a narrow separation band and carry little contrast leverage). The all-MEO arm gives $+0.250$ (1{,}154{,}218 pair-days). A seventh arm pairs GLONASS against the cleaner constellations (GLONASS&times;GPS/Galileo/BeiDou, 344{,}423 pair-days): it returns a positive contrast $+0.025$ ($z=+1.7$), and the measured per-constellation band-limited residual RMS &mdash; GLONASS $19.5$ versus $5.8$ GPS, $2.3$ Galileo, $3.6$ BeiDou &mdash; quantifies the noise floor against which the intra-family arm is diluted twice over (once per GLONASS endpoint), so the GLONASS-only null is a detection-power statement, not a direction statement: the field direction is present in the cross pairs. Three single-constellation arms plus the all-MEO arm clear both contrast nulls at $&gt;4\sigma$ (GPS, Galileo, BeiDou at $4.1$&ndash;$17.3\sigma$), and the cross arm clears on its decay slope &mdash; five of seven arms beat their nulls; the single-constellation contrasts are all positive in direction, so the phase alignment is not a constellation-specific systematic. The single-constellation curves are non-monotone &mdash; the Galileo arm, for example, dips below zero in the 26&ndash;29 Mm bins and recovers positive at 35&ndash;39 Mm, so its fitted log-slope is positive ($+0.057$) despite its null-beating contrast: within one constellation, inter-satellite separation is a discrete ladder set by orbital-plane phasing (in-plane neighbours, antipodes and cross-plane geometries at fixed inclinations), not a continuous sample of field distance, and constellation-geometry structure projects into the distance bins. The decay-scale measurement therefore rests on the cross-constellation arm, whose mixed GPS&times;Galileo radii and planes break the phasing degeneracy; its curve decays monotonically from $+0.32$ at $13.6$ Mm to zero beyond $29$ Mm, matching the decay the TEP prior predicts. The GPS-only scale is not resolved &mdash; the constellation samples no pair below $\sim$6{,}000 km, so its fit runs to the grid edge &mdash; but the wider-aperture cross-constellation and all-MEO arms return finite scales in the continuously-screened band TEP predicts. (<code>scripts/steps/step_98_satellite_channel_flagship.py</code>.)</p>
+
+
+
+
+    <h3>A.19 Multi-year seasonal lever (Step 97)</h3>
+
+    <p>The seasonal lever of Step 89 &mdash; tracking the anisotropy ratio in 15-day windows across the year and correlating it with Earth's orbital velocity &mdash; is extended to the multi-year corpus. The 2021 CODE product was processed but data quality issues reduced the usable span; the result is a 1.93-year corpus (2024&ndash;2025) with 36 windows and $N_\mathrm{eff} = 22.4$ (Bartlett-corrected for lag-1 autocorrelation of $+0.23$). The dipolar scan finds a best axis at RA $35^\circ$, Dec $-7.5^\circ$ with $r = 0.354$, but the block-permutation null gives $p = 0.47$ &mdash; not significant. At the named axes the correlations are negative (CMB dipole $r = -0.277$, Paper 2 axis $r = -0.326$), opposite to the corpus direction. The honest verdict is that 1.93 years cannot establish a direction at this amplitude; a full decade of the CODE product is projected to yield $N_\mathrm{eff} \sim 116$, sufficient to test the CMB alignment at $|r| \ge 0.18$ ($\alpha = 0.05$). The seasonal route is sound and now implemented; extending the archive backwards is a compute exercise, not a methodological one. (<code>scripts/steps/step_97_multi_year_seasonal_lever.py</code>.)</p>
+
+
+
+
+    <h3>A.20 Causal deployable P1 gate (Step 102)</h3>
+
+    <p>The P1 gate (Step 64) asks whether the physics-fixed TEP predictor beats a conventional spatial model that learns its covariance from data. Step 102 makes the gate fully causal and deployable: the TEP arsenal (phase-cos Gram, annual $\lambda$, multi-scale exponential) is frozen on the 2024 calibration year and evaluated on the 2025 independent year, with an IDW baseline replacing the degenerate frozen-empirical competitor. The TEP arsenal beats the frozen conventional kernel by $+13.4\%$ (CI $[11.9, 15.1]$, 9 of 9 days positive) but loses to the IDW baseline by $-3.0\%$ (CI $[-3.5, -0.4]$). The IDW baseline is a local interpolator with no length scale; its margin reflects the fact that at the regional aperture of the evaluation network, the nearest-neighbour amplitude scale ($\sim$700 km) is a better amplitude predictor than the TEP scale ($4{,}200$ km). The TEP scale wins in the phase domain (Step 53, Step 103) and at longer gap horizons (Step 101), where the spatial coherence of the field's temporal increment matters more than the local amplitude similarity. Step 102's amplitude-domain gate does not pass a strict superiority test on this aperture; the decisive test is Step 96 (Section 3.6n), which scores the low-frequency phase field against the same class of deployable predictors on a held-out year and passes on three coherent networks. (<code>scripts/steps/step_102_causal_deployable_p1_gate.py</code>.)</p>
+
+

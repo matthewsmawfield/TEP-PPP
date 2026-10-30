@@ -1,0 +1,219 @@
+{
+  "test": "T3_resolvability_vs_aperture",
+  "lambda_grid_km": [
+    300.0,
+    700.0,
+    1500.0,
+    2500.0,
+    4200.0,
+    7000.0,
+    12000.0,
+    25000.0
+  ],
+  "nugget": 0.35,
+  "apertures_km": [
+    1500,
+    3000,
+    6000,
+    12000,
+    20000
+  ],
+  "global_broadcast": {
+    "label": "global_broadcast",
+    "rows": [
+      {
+        "aperture_km": 1500,
+        "n_stations": 21,
+        "max_baseline_km": 1703,
+        "lambda_cv_median_km": 1500.0,
+        "lambda_cv_values": [
+          1500.0,
+          12000.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          4200.0,
+          700.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          2500.0,
+          1500.0,
+          1500.0
+        ],
+        "reduction_mean_pct": 47.30022555711093,
+        "reduction_kriging_pct": 55.70317222191108,
+        "reduction_uniform_kriging_pct": 47.26932890613164,
+        "margin_pct": 8.402946664800156,
+        "margin_ci95": [
+          5.926305391409004,
+          10.727637370993225
+        ],
+        "margin_sigma": 6.485601322469496,
+        "geometry_specific_margin_pct": 8.433843315779447,
+        "geometry_specific_margin_ci95": [
+          6.136350862367075,
+          10.615207457232595
+        ],
+        "geometry_specific_margin_sigma": 6.705880086664798
+      },
+      {
+        "aperture_km": 3000,
+        "n_stations": 23,
+        "max_baseline_km": 2171,
+        "lambda_cv_median_km": 1500.0,
+        "lambda_cv_values": [
+          7000.0,
+          4200.0,
+          2500.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          2500.0,
+          1500.0,
+          1500.0,
+          1500.0,
+          2500.0,
+          1500.0
+        ],
+        "reduction_mean_pct": 48.10258388499806,
+        "reduction_kriging_pct": 56.403321588669094,
+        "reduction_uniform_kriging_pct": 48.034890644681475,
+        "margin_pct": 8.300737703671045,
+        "margin_ci95": [
+          6.409440041006774,
+          9.951245642149644
+        ],
+        "margin_sigma": 6.854624952135388,
+        "geometry_specific_margin_pct": 8.368430943987628,
+        "geometry_specific_margin_ci95": [
+          6.501239771291998,
+          9.945525988128637
+        ],
+        "geometry_specific_margin_sigma": 7.119457372035322
+      },
+      {
+        "aperture_km": 6000,
+        "n_stations": 27,
+        "max_baseline_km": 5925,
+        "lambda_cv_median_km": 1500.0,
+        "lambda_cv_values": [
+          2500.0,
+          12000.0,
+          2500.0,
+          700.0,
+          2500.0,
+          1500.0,
+          2500.0,
+          1500.0,
+          1500.0,
+          700.0,
+          1500.0,
+          1500.0,
+          4200.0,
+          1500.0
+        ],
+        "reduction_mean_pct": 40.28922989539842,
+        "reduction_kriging_pct": 53.708552419555694,
+        "reduction_uniform_kriging_pct": 40.075777209551134,
+        "margin_pct": 13.419322524157268,
+        "margin_ci95": [
+          8.248046461836314,
+          19.006946280645064
+        ],
+        "margin_sigma": 3.9557115887338044,
+        "geometry_specific_margin_pct": 13.63277521000455,
+        "geometry_specific_margin_ci95": [
+          8.509308658462666,
+          19.11104490560712
+        ],
+        "geometry_specific_margin_sigma": 4.11274197579822
+      },
+      {
+        "aperture_km": 12000,
+        "n_stations": 40,
+        "max_baseline_km": 14261,
+        "lambda_cv_median_km": 2500.0,
+        "lambda_cv_values": [
+          1500.0,
+          2500.0,
+          7000.0,
+          4200.0,
+          1500.0,
+          1500.0,
+          12000.0,
+          4200.0,
+          2500.0,
+          4200.0,
+          2500.0,
+          2500.0,
+          2500.0,
+          2500.0
+        ],
+        "reduction_mean_pct": 23.18220952252492,
+        "reduction_kriging_pct": 48.45794856684741,
+        "reduction_uniform_kriging_pct": 23.039337540503546,
+        "margin_pct": 25.275739044322485,
+        "margin_ci95": [
+          22.347071102243298,
+          27.326274327083308
+        ],
+        "margin_sigma": 14.484888308597904,
+        "geometry_specific_margin_pct": 25.41861102634386,
+        "geometry_specific_margin_ci95": [
+          22.479645434564333,
+          27.532817822803615
+        ],
+        "geometry_specific_margin_sigma": 14.472182371042598
+      },
+      {
+        "aperture_km": 20000,
+        "n_stations": 52,
+        "max_baseline_km": 18217,
+        "lambda_cv_median_km": 2500.0,
+        "lambda_cv_values": [
+          2500.0,
+          1500.0,
+          4200.0,
+          1500.0,
+          2500.0,
+          4200.0,
+          4200.0,
+          4200.0,
+          4200.0,
+          2500.0,
+          2500.0,
+          7000.0,
+          1500.0,
+          2500.0
+        ],
+        "reduction_mean_pct": 14.138693371486903,
+        "reduction_kriging_pct": 45.041686027049295,
+        "reduction_uniform_kriging_pct": 14.054848505962687,
+        "margin_pct": 30.90299265556239,
+        "margin_ci95": [
+          27.276105403082255,
+          35.74161437671209
+        ],
+        "margin_sigma": 11.303295538837865,
+        "geometry_specific_margin_pct": 30.986837521086606,
+        "geometry_specific_margin_ci95": [
+          27.403990792232744,
+          35.79727344278443
+        ],
+        "geometry_specific_margin_sigma": 11.442101140562018
+      }
+    ],
+    "spearman_rho": 0.8999999999999998,
+    "spearman_p": 0.03738607346849875,
+    "geometry_spearman_rho": 0.8999999999999998,
+    "geometry_spearman_p": 0.03738607346849875,
+    "T3_pass": true,
+    "T3_geometry_pass": true
+  },
+  "timestamp": "2026-09-01T08:59:00.414825",
+  "T3_pass": true
+}

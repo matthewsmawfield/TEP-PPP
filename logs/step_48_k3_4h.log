@@ -1,0 +1,16 @@
+  DOY 100: phase Gram from DOY 99: 26/170 stations, mean_phase_cos=0.732
+  DOY 100: dense-only mode: 20 phase Gram stations (median nearest ref ~130 km)
+  DOY 100: precise kriging: 20/20 stations with precise clocks
+  DOY 100: 20 stations with full-sky clocks (event_days=3.0)
+  DOY 101: phase Gram from DOY 100: 26/154 stations, mean_phase_cos=0.711
+  DOY 101: dense-only mode: 20 phase Gram stations (median nearest ref ~130 km)
+  DOY 101: precise kriging: 20/20 stations with precise clocks
+  DOY 101: 20 stations with full-sky clocks (event_days=2.0)
+  DOY 102: phase Gram from DOY 101: 26/128 stations, mean_phase_cos=0.744
+  DOY 102: dense-only mode: 20 phase Gram stations (median nearest ref ~130 km)
+  DOY 102: precise kriging: 20/20 stations with precise clocks
+  DOY 102: 20 stations with full-sky clocks (event_days=1.0)
+
+Three-satellite challenge (raw obs, SINEX truth, TEP covariance FIXED by the physics, soft prior + integrity monitor): at the reported satellite count the network-aided clock gives 3-D RMS 19.89 m (p99 67.2 m, >25 m failure 16.1%, availability 90%). Conventional (clock solved from the same satellites): INFEASIBLE.
+Summary: TEP vs best conventional (k=4/5/6): median n/a, n/a positive cells, k=3 TEP availability 91% (conventional INFEASIBLE)
+saved results/outputs/step_48_k3_4h.json

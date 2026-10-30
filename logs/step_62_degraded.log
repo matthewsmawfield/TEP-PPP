@@ -1,0 +1,61 @@
+thinned RINEX to k=4 GPS -> /var/folders/9m/gqkny80x7mbfq14342n5k30w0000gn/T/step62_1lf58bjv/thinned_k4.rnx
+passA: full-day free-clock trend (clean sky)
+passA rck=/var/folders/9m/gqkny80x7mbfq14342n5k30w0000gn/T/step62_1lf58bjv/passA/rck_2024100 full_day_err=0.3283275061341097
+   20 min  start   1800s   free   1.2031 m   TEP   0.6048 m    +49.7%   prior_applied=True  pers   0.8558  TEPvP  +29.3%  TEPflat   0.6605  flatVp  +22.8%  PN   0.9182  PNvP   -7.3%
+   20 min  start  18300s   free   1.5976 m   TEP   1.0436 m    +34.7%   prior_applied=True  pers   0.7876  TEPvP  -32.5%  TEPflat   1.1012  flatVp  -39.8%  PN   0.8390  PNvP   -6.5%
+   20 min  start  34800s   free   2.7924 m   TEP   1.5042 m    +46.1%   prior_applied=True  pers   1.2507  TEPvP  -20.3%  TEPflat   1.6736  flatVp  -33.8%  PN   1.2884  PNvP   -3.0%
+   20 min  start  51300s   free   0.7485 m   TEP   0.7901 m     -5.6%   prior_applied=True  pers   0.5545  TEPvP  -42.5%  TEPflat   0.7777  flatVp  -40.2%  PN   0.5561  PNvP   -0.3%
+   20 min  start  67800s   free   2.8697 m   TEP   1.3566 m    +52.7%   prior_applied=True  pers   1.3392  TEPvP   -1.3%  TEPflat   1.4427  flatVp   -7.7%  PN   1.1345  PNvP  +15.3%
+   20 min  start  84300s   free   1.4639 m   TEP   1.5201 m     -3.8%   prior_applied=True  pers   0.8858  TEPvP  -71.6%  TEPflat   1.3153  flatVp  -48.5%  PN   0.8443  PNvP   +4.7%
+   40 min  start   1800s   free   0.7536 m   TEP   0.2459 m    +67.4%   prior_applied=True  pers   0.6106  TEPvP  +59.7%  TEPflat   0.2700  flatVp  +55.8%  PN   0.7070  PNvP  -15.8%
+   40 min  start  18300s   free   1.4927 m   TEP   1.0979 m    +26.5%   prior_applied=True  pers   1.0141  TEPvP   -8.3%  TEPflat   1.1362  flatVp  -12.0%  PN   1.0690  PNvP   -5.4%
+   40 min  start  34800s   free   1.4131 m   TEP   1.6343 m    -15.6%   prior_applied=True  pers   0.8697  TEPvP  -87.9%  TEPflat   1.5528  flatVp  -78.5%  PN   0.8641  PNvP   +0.6%
+   40 min  start  51300s   free   2.8726 m   TEP   0.4216 m    +85.3%   prior_applied=True  pers   1.4388  TEPvP  +70.7%  TEPflat   0.6209  flatVp  +56.8%  PN   1.6064  PNvP  -11.7%
+   40 min  start  67800s   free   1.2563 m   TEP   1.2207 m     +2.8%   prior_applied=True  pers   1.2422  TEPvP   +1.7%  TEPflat   1.2238  flatVp   +1.5%  PN   1.2359  PNvP   +0.5%
+   40 min  start  84300s   free   0.9610 m   TEP   1.7435 m    -81.4%   prior_applied=True  pers   0.7719  TEPvP -125.9%  TEPflat   1.5781  flatVp -104.5%  PN   0.7065  PNvP   +8.5%
+
+{
+ "by_window_improvement_pct": {
+  "20": 38.88243293607842,
+  "40": 25.432688039128394
+ },
+ "by_window_improvement_pct_median": {
+  "20": 40.406466155014144,
+  "40": 14.640733851768172
+ },
+ "by_window_improvement_pct_from_mean": {
+  "20": 36.11982937200523,
+  "40": 27.263980952877077
+ },
+ "overall_improvement_pct_rms": 33.093555100537344,
+ "best_improvement_pct": 38.88243293607842,
+ "short_window_improvement_pct": null,
+ "n_starts": 12,
+ "n_improved": 8,
+ "n_degraded": 4,
+ "sign_test_p_one_sided": 0.19384765625,
+ "sign_test_p_two_sided": 0.3876953125,
+ "paired_reduction_m": 0.5201050126259655,
+ "paired_reduction_ci95": [
+  0.07831137237914279,
+  1.013633532949304
+ ],
+ "median_improvement_pct": 30.564687217456935,
+ "median_improvement_ci95": [
+  -4.697688420705259,
+  51.226710397606524
+ ],
+ "convergence_gain_detected": true,
+ "persistence_err_m_rms": 1.0070270422366792,
+ "persistence_improvement_pct_rms": 43.61907033361215,
+ "tep_vs_persistence_pct_rms": -18.66857339060466,
+ "tep_vs_persistence_paired_m": 0.13019101120070808,
+ "tep_vs_persistence_ci95": [
+  -0.17251486948991424,
+  0.40855894647555224
+ ],
+ "tep_vs_persistence_n_tep_wins": 4,
+ "tep_vs_persistence_n_pers_wins": 8,
+ "tep_vs_persistence_sign_p": 0.927001953125
+}
+wrote results/outputs/step_62_ppp_degraded.json

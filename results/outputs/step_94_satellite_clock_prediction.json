@@ -1,0 +1,244 @@
+{
+  "step": 94,
+  "title": "Satellite-clock gap prediction from inter-satellite TEP structure",
+  "timestamp": "2026-10-29T12:48:21.679409+00:00",
+  "n_train_days": 40,
+  "n_test_days": 40,
+  "cpsi_legendre_coeffs": [
+    0.0018746908473273843,
+    0.057221761651179655,
+    0.027526760054007678,
+    0.008670529020673537,
+    0.06754424705876881,
+    0.0,
+    0.08531968491952807
+  ],
+  "cpsi_near_25deg": 0.3122403005196769,
+  "cpsi_far_160deg": 0.013106213617180376,
+  "krige_covariance": "off-diag C(psi)*s_i*s_j, diag empirical pre-gap innovation variance",
+  "by_gap": {
+    "5": {
+      "gap_min": 5,
+      "n_eval": 56096,
+      "rms_ns": {
+        "conventional": 0.26376349170986985,
+        "const_hold": 0.1363801207539946,
+        "const_mean": 0.13726618909230298,
+        "tep_krige": 0.1422469449792619,
+        "tep_scramble": 0.15863977868821966
+      },
+      "rms_m": {
+        "conventional": 0.0790743055103645,
+        "const_hold": 0.04088573162317685,
+        "const_mean": 0.041151368228274296,
+        "tep_krige": 0.04264456127832368,
+        "tep_scramble": 0.04755900918951739
+      },
+      "tep_vs_conventional_pct": 46.070267701897,
+      "tep_vs_const_mean_pct": -3.628538039771523,
+      "tep_vs_scramble_pct": 10.333368997680692,
+      "tep_vs_conventional_ci": {
+        "median_pct": 2.173038943283301,
+        "ci95": [
+          0.74200755751469,
+          12.676969986219754
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -1.6266270474404765,
+        "ci95": [
+          -2.271868678874489,
+          -1.2343254693384487
+        ],
+        "n_days": 40
+      }
+    },
+    "10": {
+      "gap_min": 10,
+      "n_eval": 112192,
+      "rms_ns": {
+        "conventional": 0.28957840583389355,
+        "const_hold": 0.1486669437458935,
+        "const_mean": 0.14983484414921364,
+        "tep_krige": 0.15442169844614306,
+        "tep_scramble": 0.1755989723126572
+      },
+      "rms_m": {
+        "conventional": 0.08681342206866448,
+        "const_hold": 0.04456922848892914,
+        "const_mean": 0.04491935622153967,
+        "tep_krige": 0.046294460545704005,
+        "tep_scramble": 0.05264324753188544
+      },
+      "tep_vs_conventional_pct": 46.673614007419594,
+      "tep_vs_const_mean_pct": -3.0612734460894853,
+      "tep_vs_scramble_pct": 12.06002152951534,
+      "tep_vs_conventional_ci": {
+        "median_pct": 4.484470609285046,
+        "ci95": [
+          3.365349104834159,
+          14.39523246297798
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -1.6119894127791579,
+        "ci95": [
+          -1.8595329435785901,
+          -1.1408881820200056
+        ],
+        "n_days": 40
+      }
+    },
+    "15": {
+      "gap_min": 15,
+      "n_eval": 168192,
+      "rms_ns": {
+        "conventional": 0.32994382701556196,
+        "const_hold": 0.17678099196572075,
+        "const_mean": 0.17890998371468517,
+        "tep_krige": 0.17862029852414438,
+        "tep_scramble": 0.20574911976036458
+      },
+      "rms_m": {
+        "conventional": 0.09891467090292212,
+        "const_hold": 0.052997608109081676,
+        "const_mean": 0.05363586377856543,
+        "tep_krige": 0.05354901834324701,
+        "tep_scramble": 0.06168203434429607
+      },
+      "tep_vs_conventional_pct": 45.86342161942625,
+      "tep_vs_const_mean_pct": 0.16191672735421658,
+      "tep_vs_scramble_pct": 13.1853887238094,
+      "tep_vs_conventional_ci": {
+        "median_pct": 8.605897487679536,
+        "ci95": [
+          7.027058067703818,
+          17.80211965684635
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -1.0220097614915935,
+        "ci95": [
+          -1.5785413475543075,
+          -0.5941221321626666
+        ],
+        "n_days": 40
+      }
+    },
+    "20": {
+      "gap_min": 20,
+      "n_eval": 224000,
+      "rms_ns": {
+        "conventional": 0.37397320196563777,
+        "const_hold": 0.2072626698102753,
+        "const_mean": 0.21051245341236927,
+        "tep_krige": 0.20962815351703523,
+        "tep_scramble": 0.2513363924480614
+      },
+      "rms_m": {
+        "conventional": 0.11211434544340897,
+        "const_hold": 0.06213578523406482,
+        "const_mean": 0.06311004584810467,
+        "tep_krige": 0.06284493940887334,
+        "tep_scramble": 0.07534875487685695
+      },
+      "tep_vs_conventional_pct": 43.94567514056883,
+      "tep_vs_const_mean_pct": 0.4200701103424964,
+      "tep_vs_scramble_pct": 16.594588043848503,
+      "tep_vs_conventional_ci": {
+        "median_pct": 12.454684840695379,
+        "ci95": [
+          10.214351394249526,
+          20.168136062330483
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -0.9177342148881218,
+        "ci95": [
+          -1.6015417678089339,
+          -0.5055783320202512
+        ],
+        "n_days": 40
+      }
+    },
+    "30": {
+      "gap_min": 30,
+      "n_eval": 329280,
+      "rms_ns": {
+        "conventional": 0.47200633135298126,
+        "const_hold": 0.2549447726678456,
+        "const_mean": 0.2596004065119986,
+        "tep_krige": 0.2581408293077309,
+        "tep_scramble": 0.33787293894723
+      },
+      "rms_m": {
+        "conventional": 0.14150393826787272,
+        "const_hold": 0.07643052005234464,
+        "const_mean": 0.07782624396603127,
+        "tep_krige": 0.07738867372832309,
+        "tep_scramble": 0.101291758858674
+      },
+      "tep_vs_conventional_pct": 45.309879940003384,
+      "tep_vs_const_mean_pct": 0.562239953272281,
+      "tep_vs_scramble_pct": 23.598252611746418,
+      "tep_vs_conventional_ci": {
+        "median_pct": 19.93522848000937,
+        "ci95": [
+          18.37992349444559,
+          26.195756760725033
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -1.0061488706332389,
+        "ci95": [
+          -1.516557854307865,
+          -0.6265178220709489
+        ],
+        "n_days": 40
+      }
+    },
+    "40": {
+      "gap_min": 40,
+      "n_eval": 438528,
+      "rms_ns": {
+        "conventional": 0.5729225789293931,
+        "const_hold": 0.28991564715254503,
+        "const_mean": 0.29546230645130706,
+        "tep_krige": 0.2953575517496408,
+        "tep_scramble": 0.39830746289293084
+      },
+      "rms_m": {
+        "conventional": 0.17175786818094177,
+        "const_hold": 0.08691452447252217,
+        "const_mean": 0.0885773710973866,
+        "tep_krige": 0.08854596642788701,
+        "tep_scramble": 0.11940957334041552
+      },
+      "tep_vs_conventional_pct": 48.447213879828496,
+      "tep_vs_const_mean_pct": 0.03545450616846413,
+      "tep_vs_scramble_pct": 25.846844644978205,
+      "tep_vs_conventional_ci": {
+        "median_pct": 26.70338048029668,
+        "ci95": [
+          25.559785286033875,
+          32.747585907469855
+        ],
+        "n_days": 40
+      },
+      "tep_vs_const_mean_ci": {
+        "median_pct": -0.9928569391236541,
+        "ci95": [
+          -1.6412066294365202,
+          -0.6741506071081149
+        ],
+        "n_days": 40
+      }
+    }
+  },
+  "operational_context": "satellite-clock correction gap-fill for real-time precise services; conventional = the missing satellite's own quadratic extrapolation, which is current practice"
+}

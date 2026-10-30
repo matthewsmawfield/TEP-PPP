@@ -1,0 +1,54 @@
+{
+  "step": 88,
+  "title": "Band-decomposed spatial kernels",
+  "timestamp": "2026-09-03T10:09:59.545267+00:00",
+  "verdict": {
+    "n_predictions": 9281,
+    "n_test_days": 120,
+    "bands": {
+      "LF": [
+        1e-05,
+        6e-05
+      ],
+      "MF": [
+        6e-05,
+        0.0002
+      ],
+      "HF": [
+        0.0002,
+        0.0005
+      ]
+    },
+    "per_band_field_share": {
+      "LF": {
+        "QUARTZ": 0.11797542138802575,
+        "ATOMIC": 0.09226289115336607
+      },
+      "MF": {
+        "QUARTZ": 0.05,
+        "ATOMIC": 0.06516163300321921
+      },
+      "HF": {
+        "QUARTZ": 0.05,
+        "ATOMIC": 0.0633173539532593
+      },
+      "FULL": {
+        "QUARTZ": 0.06893219304016797,
+        "ATOMIC": 0.05
+      }
+    },
+    "rms": {
+      "zero": 92.79008567729636,
+      "single_band": 93.37606811535467,
+      "band_decomposed": 91.46452355455261
+    },
+    "band_decomposed_vs_single_band_pct": 2.047146125750954,
+    "bootstrap_ci95": [
+      1.7578105126251071,
+      2.3231761754771147
+    ],
+    "bootstrap_p_gt_0": 1.0,
+    "helps": true,
+    "causality": "per-band profiles and screening factors fitted on the training half only"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "step": 75,
+  "title": "Oscillator screening as the organizing principle across TEP signatures",
+  "timestamp": "2026-09-02T20:23:35.331604+00:00",
+  "arms": {
+    "clk_cod": {
+      "n_pair_days": 1936557,
+      "unique_pairs": {
+        "QQ": 6907,
+        "QA": 5520,
+        "AA": 1096
+      },
+      "signatures": {
+        "A_distance_matched_amplitude": {
+          "QQ": 0.25731446971369726,
+          "QA": 0.12686092651664133,
+          "AA": 0.08062715460696694
+        },
+        "B_lambda_km_exponential": {
+          "QQ": 2590.7942056582074,
+          "QA": 7324.191367086567,
+          "AA": 1096.6234379124976
+        },
+        "C_anisotropy_500_800km": {
+          "QQ": 0.3109964283874487,
+          "QA": -0.24411226226619204,
+          "AA": 0.046005120689598986
+        },
+        "D_annual_modulation_amplitude": {
+          "QQ": 0.028854205330201103,
+          "QA": 0.014256124479478844,
+          "AA": 0.011567424529599826
+        }
+      },
+      "monotone_QQ_gt_QA_gt_AA": {
+        "A_distance_matched_amplitude": true,
+        "B_lambda_km_exponential": false,
+        "C_anisotropy_500_800km": false,
+        "D_annual_modulation_amplitude": true
+      },
+      "amplitude_gap_pair_clustered": {
+        "qq_minus_aa": 0.1817470832082369,
+        "ci95": [
+          0.07216138776601416,
+          0.2974808432779061
+        ],
+        "p_gt_0": 0.9993333333333333
+      }
+    },
+    "broadcast": {
+      "n_pair_days": 119187,
+      "unique_pairs": {
+        "QQ": 1150,
+        "QA": 1389,
+        "AA": 376
+      },
+      "signatures": {
+        "A_distance_matched_amplitude": {
+          "QQ": 0.38586551952936277,
+          "QA": 0.435291768757976,
+          "AA": 0.6531738315584966
+        },
+        "B_lambda_km_exponential": {
+          "QQ": 39999.99999999999,
+          "QA": 39999.99999990132,
+          "AA": 9314.978970501368
+        },
+        "C_anisotropy_500_800km": {
+          "QQ": 0.35551048008156616,
+          "QA": -0.042891011150153036,
+          "AA": -0.006248186010712864
+        },
+        "D_annual_modulation_amplitude": {
+          "QQ": 0.1399665316396761,
+          "QA": 0.09602416581560641,
+          "AA": 0.026960259657914248
+        }
+      },
+      "monotone_QQ_gt_QA_gt_AA": {
+        "A_distance_matched_amplitude": false,
+        "B_lambda_km_exponential": true,
+        "C_anisotropy_500_800km": false,
+        "D_annual_modulation_amplitude": true
+      },
+      "amplitude_gap_pair_clustered": {
+        "qq_minus_aa": -0.2683569227104543,
+        "ci95": [
+          -0.3200935531140816,
+          -0.21417463446251372
+        ],
+        "p_gt_0": 0.0
+      }
+    },
+    "precise": {
+      "n_pair_days": 122084,
+      "unique_pairs": {
+        "QQ": 210,
+        "QA": 358,
+        "AA": 132
+      },
+      "signatures": {
+        "A_distance_matched_amplitude": {
+          "QQ": 0.396367914038901,
+          "QA": 0.5964820420910568,
+          "AA": 0.9587093394551157
+        },
+        "B_lambda_km_exponential": {
+          "QQ": 39998.01232836904,
+          "QA": 13568.936018848533,
+          "AA": 39999.9999999999
+        },
+        "C_anisotropy_500_800km": {
+          "QQ": 0.4430377309323635,
+          "QA": -0.07829800221817013,
+          "AA": -0.03843425766434172
+        },
+        "D_annual_modulation_amplitude": {
+          "QQ": 0.01263324294422725,
+          "QA": 0.02123536078280634,
+          "AA": 0.01594971878083921
+        }
+      },
+      "monotone_QQ_gt_QA_gt_AA": {
+        "A_distance_matched_amplitude": false,
+        "B_lambda_km_exponential": false,
+        "C_anisotropy_500_800km": false,
+        "D_annual_modulation_amplitude": false
+      },
+      "amplitude_gap_pair_clustered": {
+        "qq_minus_aa": -0.5611310849374676,
+        "ci95": [
+          -0.6380445278162644,
+          -0.4776385520160595
+        ],
+        "p_gt_0": 0.0
+      }
+    }
+  },
+  "verdict": {
+    "prediction": "screening is continuous, so QQ > QA > AA for every signature",
+    "n_tests": 12,
+    "n_monotone": 4,
+    "p_binomial_1_in_6_per_test": 0.12517809268000235,
+    "note": "each signature has a 1/6 chance of the predicted strict order under the null"
+  }
+}

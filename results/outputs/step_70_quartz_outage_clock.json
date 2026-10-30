@@ -1,0 +1,2259 @@
+{
+  "step": 70,
+  "title": "Clock-type-aware TEP outage test on quartz CORS receivers",
+  "timestamp": "2026-09-02T17:37:52.332060+00:00",
+  "date_tag": "2024100",
+  "n_targets": 16,
+  "outage_durations_s": [
+    600,
+    1800,
+    3600,
+    7200,
+    14400,
+    28800
+  ],
+  "screening_factor": 3.78,
+  "step65_reference": "quartz LF / atomic LF = 3.78x",
+  "targets": [
+    {
+      "station": "BRST",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -7.422037293310076,
+          "temporal_pred_m": -7.383751725187386,
+          "temporal_error_m": 0.03828556812269035,
+          "mode_errors_m": {
+            "none": 0.016204130507164294,
+            "quartz_only": 0.39294604041270986,
+            "screening_scaled": 0.16768549269815836,
+            "type_weighted": 0.1869468378567536
+          },
+          "mode_deltas_m": {
+            "none": -0.05448969862985423,
+            "quartz_only": -0.4312316085354003,
+            "screening_scaled": -0.20597106082084896,
+            "type_weighted": -0.22523240597944405
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -7.707070648827499,
+          "temporal_pred_m": -7.119617747867289,
+          "temporal_error_m": 0.5874529009602103,
+          "mode_errors_m": {
+            "none": 0.4141968877580364,
+            "quartz_only": 0.2693873816150436,
+            "screening_scaled": 0.06745482894400734,
+            "type_weighted": 0.20406517601343754
+          },
+          "mode_deltas_m": {
+            "none": -0.1732560132021741,
+            "quartz_only": -0.31806551934516686,
+            "screening_scaled": -0.6549077299042181,
+            "type_weighted": -0.3833877249467723
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -7.948386495877016,
+          "temporal_pred_m": -6.723416781887143,
+          "temporal_error_m": 1.2249697139898732,
+          "mode_errors_m": {
+            "none": 0.9809805132522555,
+            "quartz_only": 1.5229571704651814,
+            "screening_scaled": 0.30269053520167777,
+            "type_weighted": 0.9684086146792765
+          },
+          "mode_deltas_m": {
+            "none": -0.24398920073761785,
+            "quartz_only": 0.29798745647530844,
+            "screening_scaled": -0.9222791787881954,
+            "type_weighted": -0.25656109931059673
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -9.123606782949249,
+          "temporal_pred_m": -5.931014849926852,
+          "temporal_error_m": 3.1925919330223973,
+          "mode_errors_m": {
+            "none": 3.2094796914191663,
+            "quartz_only": 4.0172238764065815,
+            "screening_scaled": 3.256427659762185,
+            "type_weighted": 3.373391034232924
+          },
+          "mode_deltas_m": {
+            "none": 0.01688775839676923,
+            "quartz_only": 0.8246319433841846,
+            "screening_scaled": 0.06383572673978768,
+            "type_weighted": 0.1807991012105264
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -8.043376425678328,
+          "temporal_pred_m": -4.346210986006268,
+          "temporal_error_m": 3.6971654396720606,
+          "mode_errors_m": {
+            "none": 4.552652271993969,
+            "quartz_only": 6.612486710699554,
+            "screening_scaled": 6.930905665848874,
+            "type_weighted": 4.976150962927997
+          },
+          "mode_deltas_m": {
+            "none": 0.8554868323219085,
+            "quartz_only": 2.9153212710274934,
+            "screening_scaled": 3.233740226176814,
+            "type_weighted": 1.2789855232559373
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -7.796549716880676,
+          "truth_clk_m": -6.218639556251801,
+          "temporal_pred_m": -1.1766032581651018,
+          "temporal_error_m": 5.042036298086699,
+          "mode_errors_m": {
+            "none": 6.088671883719701,
+            "quartz_only": 8.497912811681644,
+            "screening_scaled": 8.998318811779445,
+            "type_weighted": 6.858708855982902
+          },
+          "mode_deltas_m": {
+            "none": 1.0466355856330019,
+            "quartz_only": 3.4558765135949456,
+            "screening_scaled": 3.956282513692747,
+            "type_weighted": 1.816672557896204
+          }
+        }
+      }
+    },
+    {
+      "station": "LAMA",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -3.1151095039586285,
+          "temporal_pred_m": -4.369897412680349,
+          "temporal_error_m": 1.2547879087217209,
+          "mode_errors_m": {
+            "none": 1.1454055765216142,
+            "quartz_only": 1.3636324653493417,
+            "screening_scaled": 0.8413226930053166,
+            "type_weighted": 1.1759258010880003
+          },
+          "mode_deltas_m": {
+            "none": 0.109382332200107,
+            "quartz_only": -0.10884455662762109,
+            "screening_scaled": 0.41346521571640443,
+            "type_weighted": 0.0788621076337209
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -2.8682900815018444,
+          "temporal_pred_m": -4.971973550370811,
+          "temporal_error_m": 2.103683468868967,
+          "mode_errors_m": {
+            "none": 2.0560392703098636,
+            "quartz_only": 2.159661384333634,
+            "screening_scaled": 1.9235883983155553,
+            "type_weighted": 2.125100829725853
+          },
+          "mode_deltas_m": {
+            "none": 0.0476441985591036,
+            "quartz_only": -0.05597791546466721,
+            "screening_scaled": 0.18009507055341162,
+            "type_weighted": -0.021417360856885934
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -3.8200611614318585,
+          "temporal_pred_m": -5.875087756906504,
+          "temporal_error_m": 2.055026595474646,
+          "mode_errors_m": {
+            "none": 1.703078854097495,
+            "quartz_only": 1.53642417351606,
+            "screening_scaled": 0.7246641330690164,
+            "type_weighted": 1.5885111051751033
+          },
+          "mode_deltas_m": {
+            "none": 0.3519477413771507,
+            "quartz_only": 0.5186024219585862,
+            "screening_scaled": 1.3303624624056296,
+            "type_weighted": 0.4665154902995427
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -2.636016520000868,
+          "temporal_pred_m": -7.68131616997789,
+          "temporal_error_m": 5.045299649977022,
+          "mode_errors_m": {
+            "none": 4.4285046653160896,
+            "quartz_only": 4.570715904244832,
+            "screening_scaled": 2.7138146079586987,
+            "type_weighted": 4.363619685988713
+          },
+          "mode_deltas_m": {
+            "none": 0.6167949846609324,
+            "quartz_only": 0.4745837457321903,
+            "screening_scaled": 2.331485042018324,
+            "type_weighted": 0.6816799639883097
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -0.7038145471405156,
+          "temporal_pred_m": -11.293772996120662,
+          "temporal_error_m": 10.589958448980147,
+          "mode_errors_m": {
+            "none": 8.860207187501457,
+            "quartz_only": 8.531873803174198,
+            "screening_scaled": 4.051498680590698,
+            "type_weighted": 8.626627041003752
+          },
+          "mode_deltas_m": {
+            "none": 1.7297512614786903,
+            "quartz_only": 2.0580846458059474,
+            "screening_scaled": 6.5384597683894485,
+            "type_weighted": 1.9633314079763933
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -3.538961941112846,
+          "truth_clk_m": -4.48745990746461,
+          "temporal_pred_m": -18.51868664840621,
+          "temporal_error_m": 14.031226740941598,
+          "mode_errors_m": {
+            "none": 12.739670598567226,
+            "quartz_only": 12.772075001631602,
+            "screening_scaled": 9.149144522766473,
+            "type_weighted": 12.855524184321737
+          },
+          "mode_deltas_m": {
+            "none": 1.2915561423743722,
+            "quartz_only": 1.2591517393099967,
+            "screening_scaled": 4.882082218175126,
+            "type_weighted": 1.17570255661986
+          }
+        }
+      }
+    },
+    {
+      "station": "LROC",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": -0.7664585172256768,
+          "temporal_pred_m": -1.0311835828075506,
+          "temporal_error_m": 0.2647250655818738,
+          "mode_errors_m": {
+            "none": 0.3999770774057003,
+            "quartz_only": 0.725755216343599,
+            "screening_scaled": 0.775977670275938,
+            "type_weighted": 0.5799613033953988
+          },
+          "mode_deltas_m": {
+            "none": -0.1352520118238265,
+            "quartz_only": -0.4610301507617252,
+            "screening_scaled": -0.5112526046940642,
+            "type_weighted": -0.31523623781352483
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": -1.86468078178389,
+          "temporal_pred_m": -1.3102726530203235,
+          "temporal_error_m": 0.5544081287635665,
+          "mode_errors_m": {
+            "none": 0.43333484848965353,
+            "quartz_only": 0.37231436415476216,
+            "screening_scaled": 0.09675112932817576,
+            "type_weighted": 0.3254120668796494
+          },
+          "mode_deltas_m": {
+            "none": -0.1210732802739129,
+            "quartz_only": -0.18209376460880433,
+            "screening_scaled": -0.45765699943539073,
+            "type_weighted": -0.2289960618839171
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": -0.47192634840533865,
+          "temporal_pred_m": -1.7289062583394825,
+          "temporal_error_m": 1.2569799099341439,
+          "mode_errors_m": {
+            "none": 1.4198204190513,
+            "quartz_only": 0.9907357064669571,
+            "screening_scaled": 1.8725170343969935,
+            "type_weighted": 1.3489847892652416
+          },
+          "mode_deltas_m": {
+            "none": -0.16284050911715597,
+            "quartz_only": 0.2662442034671868,
+            "screening_scaled": -0.6155371244628496,
+            "type_weighted": -0.0920048793310976
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": 0.20026843672403039,
+          "temporal_pred_m": -2.5661734689778006,
+          "temporal_error_m": 2.7664419057018312,
+          "mode_errors_m": {
+            "none": 2.9043099881505503,
+            "quartz_only": 2.47428430940876,
+            "screening_scaled": 3.2875832573579897,
+            "type_weighted": 2.838971831026244
+          },
+          "mode_deltas_m": {
+            "none": -0.13786808244871915,
+            "quartz_only": 0.2921575962930708,
+            "screening_scaled": -0.5211413516561584,
+            "type_weighted": -0.07252992532441305
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": 2.6045881632579255,
+          "temporal_pred_m": -4.240707890254437,
+          "temporal_error_m": 6.845296053512362,
+          "mode_errors_m": {
+            "none": 6.0265232279879015,
+            "quartz_only": 4.684059696645104,
+            "screening_scaled": 3.750334773029898,
+            "type_weighted": 5.686391483021225
+          },
+          "mode_deltas_m": {
+            "none": 0.8187728255244615,
+            "quartz_only": 2.161236356867259,
+            "screening_scaled": 3.0949612804824644,
+            "type_weighted": 1.1589045704911367
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -0.34274291721220984,
+          "truth_clk_m": 1.6995850407341535,
+          "temporal_pred_m": -7.58977673280771,
+          "temporal_error_m": 9.289361773541863,
+          "mode_errors_m": {
+            "none": 8.569679507950083,
+            "quartz_only": 6.982596407854369,
+            "screening_scaled": 6.568962809604934,
+            "type_weighted": 8.03045572417472
+          },
+          "mode_deltas_m": {
+            "none": 0.7196822655917804,
+            "quartz_only": 2.306765365687495,
+            "screening_scaled": 2.7203989639369297,
+            "type_weighted": 1.2589060493671438
+          }
+        }
+      }
+    },
+    {
+      "station": "TLSE",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -8.560416855651786,
+          "temporal_pred_m": -8.91604571926472,
+          "temporal_error_m": 0.35562886361293344,
+          "mode_errors_m": {
+            "none": 0.6505292475479845,
+            "quartz_only": 0.9199605401242472,
+            "screening_scaled": 1.4703523148874247,
+            "type_weighted": 0.8407961830787993
+          },
+          "mode_deltas_m": {
+            "none": -0.29490038393505047,
+            "quartz_only": -0.5643316765113132,
+            "screening_scaled": -1.1147234512744908,
+            "type_weighted": -0.48516731946586633
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -8.675384855005442,
+          "temporal_pred_m": -8.91186754265986,
+          "temporal_error_m": 0.2364826876544175,
+          "mode_errors_m": {
+            "none": 0.4367934802398068,
+            "quartz_only": 0.49783932493028793,
+            "screening_scaled": 0.993657483627187,
+            "type_weighted": 0.5310753937630626
+          },
+          "mode_deltas_m": {
+            "none": -0.20031079258538895,
+            "quartz_only": -0.26135663727586966,
+            "screening_scaled": -0.7571747959727702,
+            "type_weighted": -0.29459270610864446
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -9.43560330218603,
+          "temporal_pred_m": -8.90560027775257,
+          "temporal_error_m": 0.5300030244334604,
+          "mode_errors_m": {
+            "none": 0.6905876797642421,
+            "quartz_only": 1.0502275584388734,
+            "screening_scaled": 1.1370130215838152,
+            "type_weighted": 0.8686950130476045
+          },
+          "mode_deltas_m": {
+            "none": 0.16058465533078187,
+            "quartz_only": 0.5202245340054135,
+            "screening_scaled": 0.6070099971503554,
+            "type_weighted": 0.33869198861414374
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -9.710940496465,
+          "temporal_pred_m": -8.893065747937989,
+          "temporal_error_m": 0.8178747485270108,
+          "mode_errors_m": {
+            "none": 1.1955010329286715,
+            "quartz_only": 1.5662280755056326,
+            "screening_scaled": 2.2453021035652876,
+            "type_weighted": 1.4531008990334353
+          },
+          "mode_deltas_m": {
+            "none": 0.37762628440166063,
+            "quartz_only": 0.748353326978621,
+            "screening_scaled": 1.427427355038277,
+            "type_weighted": 0.6352261505064238
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -9.496574648556544,
+          "temporal_pred_m": -8.867996688308827,
+          "temporal_error_m": 0.6285779602477177,
+          "mode_errors_m": {
+            "none": 2.7167428919721273,
+            "quartz_only": 3.909205170381516,
+            "screening_scaled": 8.521841402165986,
+            "type_weighted": 3.4738708227322057
+          },
+          "mode_deltas_m": {
+            "none": 2.0881649317244095,
+            "quartz_only": 3.2806272101337983,
+            "screening_scaled": 7.8932634419182675,
+            "type_weighted": 2.8452928624844875
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -8.583483645831258,
+          "truth_clk_m": -7.7763383209861985,
+          "temporal_pred_m": -8.817858569050504,
+          "temporal_error_m": 1.0415202480643053,
+          "mode_errors_m": {
+            "none": 1.0587967806770573,
+            "quartz_only": 2.807959252691692,
+            "screening_scaled": 6.897678120578045,
+            "type_weighted": 2.253132073092196
+          },
+          "mode_deltas_m": {
+            "none": 2.1003170287413626,
+            "quartz_only": 3.8494795007559977,
+            "screening_scaled": 7.939198368642351,
+            "type_weighted": 3.2946523211565015
+          }
+        }
+      }
+    },
+    {
+      "station": "GANP",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -9.096546194307862,
+          "temporal_pred_m": -9.481124532854398,
+          "temporal_error_m": 0.384578338546536,
+          "mode_errors_m": {
+            "none": 0.4724260892096428,
+            "quartz_only": 0.6755598507715881,
+            "screening_scaled": 0.7166428360530777,
+            "type_weighted": 0.546857989602179
+          },
+          "mode_deltas_m": {
+            "none": -0.08784775066310638,
+            "quartz_only": -0.29098151222505286,
+            "screening_scaled": -0.3320644975065421,
+            "type_weighted": -0.16227965105564313
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -8.989444657489155,
+          "temporal_pred_m": -9.612566236908297,
+          "temporal_error_m": 0.6231215794191414,
+          "mode_errors_m": {
+            "none": 0.5411373900805749,
+            "quartz_only": 0.5495229386490639,
+            "screening_scaled": 0.3132213437193627,
+            "type_weighted": 0.5594524466980673
+          },
+          "mode_deltas_m": {
+            "none": 0.08198418933856562,
+            "quartz_only": 0.07359864077007772,
+            "screening_scaled": 0.30990023569977804,
+            "type_weighted": 0.06366913272107474
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -9.043581179834572,
+          "temporal_pred_m": -9.809728792989144,
+          "temporal_error_m": 0.7661476131545726,
+          "mode_errors_m": {
+            "none": 0.10027096907191435,
+            "quartz_only": 0.13600883231800864,
+            "screening_scaled": 1.7508661014778717,
+            "type_weighted": 0.10342676525864647
+          },
+          "mode_deltas_m": {
+            "none": 0.6658766440826573,
+            "quartz_only": 0.9021564454725817,
+            "screening_scaled": 2.5170137146324447,
+            "type_weighted": 0.8695743784132195
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -9.86649794237652,
+          "temporal_pred_m": -10.204053905150838,
+          "temporal_error_m": 0.3375559627743172,
+          "mode_errors_m": {
+            "none": 0.9252760418514505,
+            "quartz_only": 0.9867218928865675,
+            "screening_scaled": 4.435949014711085,
+            "type_weighted": 1.2027191811053761
+          },
+          "mode_deltas_m": {
+            "none": 1.2628320046257677,
+            "quartz_only": 1.3242778556608852,
+            "screening_scaled": 4.773504977485402,
+            "type_weighted": 1.5402751438796933
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -10.065799266266097,
+          "temporal_pred_m": -10.992704129474227,
+          "temporal_error_m": 0.9269048632081294,
+          "mode_errors_m": {
+            "none": 2.5270717337471353,
+            "quartz_only": 3.263683939482415,
+            "screening_scaled": 12.12912667328277,
+            "type_weighted": 3.247929565597098
+          },
+          "mode_deltas_m": {
+            "none": 3.4539765969552643,
+            "quartz_only": 4.190588802690544,
+            "screening_scaled": 13.056031536490899,
+            "type_weighted": 4.1748344288052275
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -9.340893972367187,
+          "truth_clk_m": -8.649976702044667,
+          "temporal_pred_m": -12.570004578121004,
+          "temporal_error_m": 3.920027876076338,
+          "mode_errors_m": {
+            "none": 0.721683864683083,
+            "quartz_only": 0.013030741313086125,
+            "screening_scaled": 8.169712486990164,
+            "type_weighted": 0.074317564372679
+          },
+          "mode_deltas_m": {
+            "none": 3.198344011393255,
+            "quartz_only": 3.9069971347632513,
+            "screening_scaled": 12.089740363066502,
+            "type_weighted": 3.8457103117036584
+          }
+        }
+      }
+    },
+    {
+      "station": "VEN1",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": -3.5192374487754194,
+          "temporal_pred_m": -2.5918080645566373,
+          "temporal_error_m": 0.9274293842187822,
+          "mode_errors_m": {
+            "none": 0.7075916761546432,
+            "quartz_only": 0.48581320048398746,
+            "screening_scaled": 0.09644284773633727,
+            "type_weighted": 0.592375597071054
+          },
+          "mode_deltas_m": {
+            "none": -0.2198377080641389,
+            "quartz_only": -0.44161618373479483,
+            "screening_scaled": -0.830986536482445,
+            "type_weighted": -0.33505378714772827
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": -3.2335869908828565,
+          "temporal_pred_m": -2.6159663660695704,
+          "temporal_error_m": 0.6176206248132861,
+          "mode_errors_m": {
+            "none": 0.5932039363426242,
+            "quartz_only": 0.594934584933219,
+            "screening_scaled": 0.5253255423941843,
+            "type_weighted": 0.574325702791858
+          },
+          "mode_deltas_m": {
+            "none": -0.024416688470661807,
+            "quartz_only": -0.02268603988006691,
+            "screening_scaled": -0.09229508241910163,
+            "type_weighted": -0.043294922021427935
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": -1.695703683441883,
+          "temporal_pred_m": -2.6522038183389696,
+          "temporal_error_m": 0.9565001348970865,
+          "mode_errors_m": {
+            "none": 0.4556624484267866,
+            "quartz_only": 0.13625284084526212,
+            "screening_scaled": 0.9366663199606475,
+            "type_weighted": 0.21750707665205193
+          },
+          "mode_deltas_m": {
+            "none": 0.5008376864703,
+            "quartz_only": 0.8202472940518244,
+            "screening_scaled": 1.893166454857734,
+            "type_weighted": 0.7389930582450346
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": -1.3237955057056074,
+          "temporal_pred_m": -2.7246787228777682,
+          "temporal_error_m": 1.4008832171721608,
+          "mode_errors_m": {
+            "none": 0.4838424679058362,
+            "quartz_only": 0.2738076135359975,
+            "screening_scaled": 2.0655308150545464,
+            "type_weighted": 0.15888270509430513
+          },
+          "mode_deltas_m": {
+            "none": 0.9170407492663246,
+            "quartz_only": 1.1270756036361633,
+            "screening_scaled": 3.466414032226707,
+            "type_weighted": 1.2420005120778557
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": 1.5457466603539398,
+          "temporal_pred_m": -2.8696285319553656,
+          "temporal_error_m": 4.415375192309305,
+          "mode_errors_m": {
+            "none": 1.376602036613864,
+            "quartz_only": 0.43389947968403497,
+            "screening_scaled": 7.071187336219463,
+            "type_weighted": 0.5703847750652744
+          },
+          "mode_deltas_m": {
+            "none": 3.0387731556954414,
+            "quartz_only": 3.9814757126252704,
+            "screening_scaled": 11.486562528528768,
+            "type_weighted": 3.844990417244031
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -2.658460902582788,
+          "truth_clk_m": -1.7811415474251684,
+          "temporal_pred_m": -3.1595281501105603,
+          "temporal_error_m": 1.378386602685392,
+          "mode_errors_m": {
+            "none": 1.7929126699869016,
+            "quartz_only": 3.133962422122134,
+            "screening_scaled": 10.609124648015877,
+            "type_weighted": 2.8232935058411117
+          },
+          "mode_deltas_m": {
+            "none": 3.1712992726722935,
+            "quartz_only": 4.512349024807526,
+            "screening_scaled": 11.987511250701269,
+            "type_weighted": 4.201680108526504
+          }
+        }
+      }
+    },
+    {
+      "station": "ZIMM",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -12.0029775031535,
+          "temporal_pred_m": -12.056517571143102,
+          "temporal_error_m": 0.053540067989601425,
+          "mode_errors_m": {
+            "none": 0.20898609968083015,
+            "quartz_only": 0.46626038377219103,
+            "screening_scaled": 0.641126067782448,
+            "type_weighted": 0.3389640696401255
+          },
+          "mode_deltas_m": {
+            "none": -0.1554460316912294,
+            "quartz_only": -0.41272031578258983,
+            "screening_scaled": -0.5875859997928471,
+            "type_weighted": -0.28542400165052473
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -12.160472800613203,
+          "temporal_pred_m": -11.771109656531161,
+          "temporal_error_m": 0.38936314408204176,
+          "mode_errors_m": {
+            "none": 0.3271576758900494,
+            "quartz_only": 0.25998921876662706,
+            "screening_scaled": 0.1542264743163102,
+            "type_weighted": 0.2582035571445811
+          },
+          "mode_deltas_m": {
+            "none": -0.062205468191992706,
+            "quartz_only": -0.12937392531541492,
+            "screening_scaled": -0.23513666976573241,
+            "type_weighted": -0.13115958693746038
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -13.21252550261755,
+          "temporal_pred_m": -11.34299778461325,
+          "temporal_error_m": 1.869527718004301,
+          "mode_errors_m": {
+            "none": 2.185401813755888,
+            "quartz_only": 2.4731191353429836,
+            "screening_scaled": 3.0635317999452987,
+            "type_weighted": 2.343101479390338
+          },
+          "mode_deltas_m": {
+            "none": 0.31587409575158687,
+            "quartz_only": 0.603591417338682,
+            "screening_scaled": 1.1940040819409983,
+            "type_weighted": 0.47357376138603735
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -11.674914257770778,
+          "temporal_pred_m": -10.486774040777428,
+          "temporal_error_m": 1.1881402169933502,
+          "mode_errors_m": {
+            "none": 1.8077109774884406,
+            "quartz_only": 2.0627444691842474,
+            "screening_scaled": 3.53011769166479,
+            "type_weighted": 2.051338069042533
+          },
+          "mode_deltas_m": {
+            "none": 0.61957076049509,
+            "quartz_only": 0.8746042521908981,
+            "screening_scaled": 2.34197747467144,
+            "type_weighted": 0.8631978520491823
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -8.38523251533721,
+          "temporal_pred_m": -8.774326553105782,
+          "temporal_error_m": 0.3890940377685723,
+          "mode_errors_m": {
+            "none": 1.922705305898643,
+            "quartz_only": 2.987727692325871,
+            "screening_scaled": 8.3495074812935,
+            "type_weighted": 2.6044620675141505
+          },
+          "mode_deltas_m": {
+            "none": 2.3117993436672153,
+            "quartz_only": 3.3768217300944428,
+            "screening_scaled": 8.738601519062072,
+            "type_weighted": 2.993556105282723
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -11.74802486616248,
+          "truth_clk_m": -10.627501816857706,
+          "temporal_pred_m": -5.349431577762492,
+          "temporal_error_m": 5.2780702390952134,
+          "mode_errors_m": {
+            "none": 7.765902347987014,
+            "quartz_only": 8.958499913343768,
+            "screening_scaled": 14.682075610706217,
+            "type_weighted": 8.531617602819164
+          },
+          "mode_deltas_m": {
+            "none": 2.4878321088918005,
+            "quartz_only": 3.680429674248556,
+            "screening_scaled": 9.404005371611005,
+            "type_weighted": 3.2535473637239507
+          }
+        }
+      }
+    },
+    {
+      "station": "USAL",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": -4.533936498048052,
+          "temporal_pred_m": -2.009094678952531,
+          "temporal_error_m": 2.5248418190955215,
+          "mode_errors_m": {
+            "none": 2.188925079627131,
+            "quartz_only": 2.0139302747566,
+            "screening_scaled": 1.2550765439050053,
+            "type_weighted": 2.1010311462682187
+          },
+          "mode_deltas_m": {
+            "none": -0.3359167394683906,
+            "quartz_only": -0.5109115443389217,
+            "screening_scaled": -1.2697652751905164,
+            "type_weighted": -0.423810672827303
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": -3.634472889861367,
+          "temporal_pred_m": -2.069251836984866,
+          "temporal_error_m": 1.5652210528765012,
+          "mode_errors_m": {
+            "none": 1.6141415482628658,
+            "quartz_only": 1.696176786690492,
+            "screening_scaled": 1.75014052543696,
+            "type_weighted": 1.648357324932508
+          },
+          "mode_deltas_m": {
+            "none": 0.048920495386364775,
+            "quartz_only": 0.13095573381399084,
+            "screening_scaled": 0.18491947256045885,
+            "type_weighted": 0.08313627205600688
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": -1.5064208581708824,
+          "temporal_pred_m": -2.1594875740333683,
+          "temporal_error_m": 0.6530667158624859,
+          "mode_errors_m": {
+            "none": 0.25890664080116976,
+            "quartz_only": 0.5396178874347377,
+            "screening_scaled": 2.794192572326132,
+            "type_weighted": 0.5265409172488598
+          },
+          "mode_deltas_m": {
+            "none": 0.9119733566636556,
+            "quartz_only": 1.1926846032972236,
+            "screening_scaled": 3.447259288188618,
+            "type_weighted": 1.1796076331113456
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": -2.9773562620842777,
+          "temporal_pred_m": -2.339959048130374,
+          "temporal_error_m": 0.6373972139539039,
+          "mode_errors_m": {
+            "none": 2.2720437528560486,
+            "quartz_only": 2.3959695530484417,
+            "screening_scaled": 6.81636113100401,
+            "type_weighted": 2.677989479753844
+          },
+          "mode_deltas_m": {
+            "none": 1.6346465389021447,
+            "quartz_only": 1.7585723390945378,
+            "screening_scaled": 6.1789639170501065,
+            "type_weighted": 2.04059226579994
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": 1.1328130214602297,
+          "temporal_pred_m": -2.7009019963243843,
+          "temporal_error_m": 3.833715017784614,
+          "mode_errors_m": {
+            "none": 0.6583268691281412,
+            "quartz_only": 1.3633184165180299,
+            "screening_scaled": 13.1462033147456,
+            "type_weighted": 1.5753832665715088
+          },
+          "mode_deltas_m": {
+            "none": 4.492041886912755,
+            "quartz_only": 5.197033434302644,
+            "screening_scaled": 16.979918332530215,
+            "type_weighted": 5.409098284356123
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -2.8060785025567836,
+          "truth_clk_m": -0.15710343427735105,
+          "temporal_pred_m": -3.422787892712406,
+          "temporal_error_m": 3.2656844584350546,
+          "mode_errors_m": {
+            "none": 1.4008742110523087,
+            "quartz_only": 2.660921710174745,
+            "screening_scaled": 14.373907312227177,
+            "type_weighted": 2.643465388770559
+          },
+          "mode_deltas_m": {
+            "none": 4.6665586694873635,
+            "quartz_only": 5.9266061686097995,
+            "screening_scaled": 17.639591770662232,
+            "type_weighted": 5.909149847205613
+          }
+        }
+      }
+    },
+    {
+      "station": "WROC",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -3.462703029261555,
+          "temporal_pred_m": -4.5704394883818384,
+          "temporal_error_m": 1.1077364591202836,
+          "mode_errors_m": {
+            "none": 1.09972148949003,
+            "quartz_only": 1.319619654500873,
+            "screening_scaled": 1.077439873917926,
+            "type_weighted": 1.1596357321375268
+          },
+          "mode_deltas_m": {
+            "none": 0.008014969630253402,
+            "quartz_only": -0.21188319538058958,
+            "screening_scaled": 0.030296585202357857,
+            "type_weighted": -0.05189927301724315
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -3.50095540665622,
+          "temporal_pred_m": -4.747474762246744,
+          "temporal_error_m": 1.2465193555905243,
+          "mode_errors_m": {
+            "none": 1.1741525475592445,
+            "quartz_only": 1.2170564065374032,
+            "screening_scaled": 0.972972821232287,
+            "type_weighted": 1.2067104998214857
+          },
+          "mode_deltas_m": {
+            "none": 0.07236680803127979,
+            "quartz_only": 0.029462949053121287,
+            "screening_scaled": 0.2735465343582376,
+            "type_weighted": 0.03980885576903892
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -4.048961836756624,
+          "temporal_pred_m": -5.013027673044103,
+          "temporal_error_m": 0.964065836287479,
+          "mode_errors_m": {
+            "none": 0.4996347269556276,
+            "quartz_only": 0.231425166765165,
+            "screening_scaled": 0.7914837569869206,
+            "type_weighted": 0.3187945468110369
+          },
+          "mode_deltas_m": {
+            "none": 0.4644311093318518,
+            "quartz_only": 0.7326406695223143,
+            "screening_scaled": 1.7555495932743996,
+            "type_weighted": 0.6452712894764416
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -2.796986535870466,
+          "temporal_pred_m": -5.544133494638821,
+          "temporal_error_m": 2.747146958768355,
+          "mode_errors_m": {
+            "none": 1.8865104756550362,
+            "quartz_only": 1.821040244577587,
+            "screening_scaled": 0.5060589473999886,
+            "type_weighted": 1.6778376238672768
+          },
+          "mode_deltas_m": {
+            "none": 0.8606364831133184,
+            "quartz_only": 0.9261067141907675,
+            "screening_scaled": 3.2532059061683434,
+            "type_weighted": 1.0693093349010785
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -0.6469167119212286,
+          "temporal_pred_m": -6.6063451378282565,
+          "temporal_error_m": 5.959428425907028,
+          "mode_errors_m": {
+            "none": 3.4847875672679525,
+            "quartz_only": 2.7736204013495374,
+            "screening_scaled": 3.394714019748678,
+            "type_weighted": 2.9447534501211265
+          },
+          "mode_deltas_m": {
+            "none": 2.474640858639076,
+            "quartz_only": 3.1858080245574905,
+            "screening_scaled": 9.354142445655706,
+            "type_weighted": 3.0146749757859013
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -3.7555249505377843,
+          "truth_clk_m": -5.124986570746186,
+          "temporal_pred_m": -8.730768424207128,
+          "temporal_error_m": 3.6057818534609414,
+          "mode_errors_m": {
+            "none": 1.0913155973825548,
+            "quartz_only": 0.30961899809697435,
+            "screening_scaled": 5.898900594515359,
+            "type_weighted": 0.5791737544630635
+          },
+          "mode_deltas_m": {
+            "none": 2.5144662560783866,
+            "quartz_only": 3.296162855363967,
+            "screening_scaled": 9.5046824479763,
+            "type_weighted": 3.0266080989978774
+          }
+        }
+      }
+    },
+    {
+      "station": "ELBA",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": -3.894795774677718,
+          "temporal_pred_m": -4.0534618856688,
+          "temporal_error_m": 0.15866611099108185,
+          "mode_errors_m": {
+            "none": 0.552203217221066,
+            "quartz_only": 0.8254097689756139,
+            "screening_scaled": 1.6462363725404212,
+            "type_weighted": 0.7196962112158558
+          },
+          "mode_deltas_m": {
+            "none": -0.39353710622998384,
+            "quartz_only": -0.6667436579845324,
+            "screening_scaled": -1.487570261549339,
+            "type_weighted": -0.5610301002247743
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": -4.096434733371402,
+          "temporal_pred_m": -4.715693123650208,
+          "temporal_error_m": 0.619258390278806,
+          "mode_errors_m": {
+            "none": 0.7673880735316319,
+            "quartz_only": 0.7979085380487261,
+            "screening_scaled": 1.1791885929744863,
+            "type_weighted": 0.8070674802973672
+          },
+          "mode_deltas_m": {
+            "none": -0.14812968325282547,
+            "quartz_only": -0.1786501477699205,
+            "screening_scaled": -0.5599302026956803,
+            "type_weighted": -0.18780909001856083
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": -2.7029230167786977,
+          "temporal_pred_m": -5.709039980622319,
+          "temporal_error_m": 3.0061169638436214,
+          "mode_errors_m": {
+            "none": 2.5923065899031412,
+            "quartz_only": 2.291145692465551,
+            "screening_scaled": 1.441913750348606,
+            "type_weighted": 2.348598394400349
+          },
+          "mode_deltas_m": {
+            "none": 0.41381037394048037,
+            "quartz_only": 0.7149712713780703,
+            "screening_scaled": 1.5642032134950157,
+            "type_weighted": 0.6575185694432722
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": -2.0808979304811355,
+          "temporal_pred_m": -7.695733694566542,
+          "temporal_error_m": 5.614835764085406,
+          "mode_errors_m": {
+            "none": 4.911185728141573,
+            "quartz_only": 4.741774389553925,
+            "screening_scaled": 2.9550386282177157,
+            "type_weighted": 4.588552877175916
+          },
+          "mode_deltas_m": {
+            "none": 0.7036500359438336,
+            "quartz_only": 0.8730613745314825,
+            "screening_scaled": 2.6597971358676906,
+            "type_weighted": 1.0262828869094904
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": 1.5054375853738082,
+          "temporal_pred_m": -11.669121122454987,
+          "temporal_error_m": 13.174558707828796,
+          "mode_errors_m": {
+            "none": 10.367944021603282,
+            "quartz_only": 9.53028396291191,
+            "screening_scaled": 2.565555193896351,
+            "type_weighted": 9.540861439490058
+          },
+          "mode_deltas_m": {
+            "none": 2.8066146862255144,
+            "quartz_only": 3.6442747449168875,
+            "screening_scaled": 10.609003513932445,
+            "type_weighted": 3.6336972683387376
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -4.11493288170434,
+          "truth_clk_m": -2.1227409587219253,
+          "temporal_pred_m": -19.615895978231876,
+          "temporal_error_m": 17.49315501950995,
+          "mode_errors_m": {
+            "none": 14.76809844464569,
+            "quartz_only": 13.540950308726996,
+            "screening_scaled": 7.192441166523039,
+            "type_weighted": 13.681853041718531
+          },
+          "mode_deltas_m": {
+            "none": 2.7250565748642623,
+            "quartz_only": 3.952204710782955,
+            "screening_scaled": 10.300713852986911,
+            "type_weighted": 3.8113019777914188
+          }
+        }
+      }
+    },
+    {
+      "station": "RIGA",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 5.440638495769035,
+          "temporal_pred_m": 5.596402209136189,
+          "temporal_error_m": 0.1557637133671541,
+          "mode_errors_m": {
+            "none": 0.42827264842355195,
+            "quartz_only": 0.23617571302078577,
+            "screening_scaled": 1.1858474878803378,
+            "type_weighted": 0.4672954434290224
+          },
+          "mode_deltas_m": {
+            "none": 0.27250893505639784,
+            "quartz_only": 0.08041199965363166,
+            "screening_scaled": 1.0300837745131837,
+            "type_weighted": 0.3115317300618679
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 5.742341759405662,
+          "temporal_pred_m": 5.640158692855457,
+          "temporal_error_m": 0.1021830665502046,
+          "mode_errors_m": {
+            "none": 0.06176948190821907,
+            "quartz_only": 0.02899683582392587,
+            "screening_scaled": 0.5175575666226351,
+            "type_weighted": 0.013242524808056544
+          },
+          "mode_deltas_m": {
+            "none": 0.16395254845842328,
+            "quartz_only": 0.073186230726279,
+            "screening_scaled": 0.6197406331728399,
+            "type_weighted": 0.11542559135826139
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 6.493988735031734,
+          "temporal_pred_m": 5.70579341843436,
+          "temporal_error_m": 0.7881953165973741,
+          "mode_errors_m": {
+            "none": 0.5427036490493178,
+            "quartz_only": 0.43611115458195115,
+            "screening_scaled": 0.13976318673427723,
+            "type_weighted": 0.4935528519772632
+          },
+          "mode_deltas_m": {
+            "none": 0.2454916675480559,
+            "quartz_only": 0.3520841620154227,
+            "screening_scaled": 0.9279585033316513,
+            "type_weighted": 0.2946424646201112
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 6.11923351527114,
+          "temporal_pred_m": 5.837062869592165,
+          "temporal_error_m": 0.282170645678975,
+          "mode_errors_m": {
+            "none": 0.5851314311117637,
+            "quartz_only": 0.54354479484976,
+            "screening_scaled": 2.9962312045900186,
+            "type_weighted": 0.7311072301022827
+          },
+          "mode_deltas_m": {
+            "none": 0.8673020767907389,
+            "quartz_only": 0.8257154405287348,
+            "screening_scaled": 3.2784018502689927,
+            "type_weighted": 1.0132778757812577
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 7.111131784433818,
+          "temporal_pred_m": 6.099601771907777,
+          "temporal_error_m": 1.0115300125260411,
+          "mode_errors_m": {
+            "none": 1.082131916253335,
+            "quartz_only": 1.715710075198336,
+            "screening_scaled": 6.902512078260001,
+            "type_weighted": 1.5067090936900218
+          },
+          "mode_deltas_m": {
+            "none": 2.0936619287793765,
+            "quartz_only": 2.7272400877243763,
+            "screening_scaled": 7.914042090786043,
+            "type_weighted": 2.5182391062160625
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": 4.930427932658967,
+          "truth_clk_m": 4.014932670568792,
+          "temporal_pred_m": 6.624679576538998,
+          "temporal_error_m": 2.609746905970206,
+          "mode_errors_m": {
+            "none": 5.02060935412996,
+            "quartz_only": 5.477549615276041,
+            "screening_scaled": 11.72280696001408,
+            "type_weighted": 5.263453280408997
+          },
+          "mode_deltas_m": {
+            "none": 2.4108624481597554,
+            "quartz_only": 2.867802709305835,
+            "screening_scaled": 9.113060054043874,
+            "type_weighted": 2.6537063744387908
+          }
+        }
+      }
+    },
+    {
+      "station": "MARS",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": -3.805902657001129,
+          "temporal_pred_m": -2.0663505972080056,
+          "temporal_error_m": 1.7395520597931236,
+          "mode_errors_m": {
+            "none": 1.4599751116213402,
+            "quartz_only": 1.1993739465578108,
+            "screening_scaled": 0.6827511957037822,
+            "type_weighted": 1.2885296998623388
+          },
+          "mode_deltas_m": {
+            "none": -0.2795769481717835,
+            "quartz_only": -0.5401781132353128,
+            "screening_scaled": -1.0568008640893416,
+            "type_weighted": -0.4510223599307848
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": -3.483202183980863,
+          "temporal_pred_m": -2.126285206431341,
+          "temporal_error_m": 1.3569169775495218,
+          "mode_errors_m": {
+            "none": 1.2263515992438903,
+            "quartz_only": 1.202814928113726,
+            "screening_scaled": 0.863379847554234,
+            "type_weighted": 1.1752344016835639
+          },
+          "mode_deltas_m": {
+            "none": -0.13056537830563164,
+            "quartz_only": -0.15410204943579592,
+            "screening_scaled": -0.4935371299952876,
+            "type_weighted": -0.18168257586595782
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": -1.6051281508012651,
+          "temporal_pred_m": -2.216187120266344,
+          "temporal_error_m": 0.611058969465079,
+          "mode_errors_m": {
+            "none": 0.3607672965112283,
+            "quartz_only": 0.027289271611201205,
+            "screening_scaled": 0.3350435543004764,
+            "type_weighted": 0.11260596690802349
+          },
+          "mode_deltas_m": {
+            "none": 0.25029167295385063,
+            "quartz_only": 0.6383482410762802,
+            "screening_scaled": 0.9461025237655554,
+            "type_weighted": 0.4984530025570554
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": -1.0567907122898998,
+          "temporal_pred_m": -2.39599094793635,
+          "temporal_error_m": 1.3392002356464503,
+          "mode_errors_m": {
+            "none": 0.8320462178844665,
+            "quartz_only": 0.47035564246604467,
+            "screening_scaled": 0.5778419514938486,
+            "type_weighted": 0.4804574344502015
+          },
+          "mode_deltas_m": {
+            "none": 0.5071540177619839,
+            "quartz_only": 0.8688445931804056,
+            "screening_scaled": 1.917042187140299,
+            "type_weighted": 0.8587428011962488
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": 0.9586563746877517,
+          "temporal_pred_m": -2.7555986032763617,
+          "temporal_error_m": 3.7142549779641136,
+          "mode_errors_m": {
+            "none": 1.2901813833425624,
+            "quartz_only": 0.039847557203203765,
+            "screening_scaled": 5.448743209705349,
+            "type_weighted": 0.35249928077873993
+          },
+          "mode_deltas_m": {
+            "none": 2.424073594621551,
+            "quartz_only": 3.6744074207609096,
+            "screening_scaled": 9.162998187669462,
+            "type_weighted": 3.3617556971853735
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -2.656930543757027,
+          "truth_clk_m": 0.43890138650976035,
+          "temporal_pred_m": -3.4748139139563854,
+          "temporal_error_m": 3.9137153004661456,
+          "mode_errors_m": {
+            "none": 1.3956956142325485,
+            "quartz_only": 0.34999757666696346,
+            "screening_scaled": 5.604399113496852,
+            "type_weighted": 0.10146963186571839
+          },
+          "mode_deltas_m": {
+            "none": 2.5180196862335973,
+            "quartz_only": 4.263712877133109,
+            "screening_scaled": 9.518114413962998,
+            "type_weighted": 3.8122456686004274
+          }
+        }
+      }
+    },
+    {
+      "station": "MAT1",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -4.822123059759277,
+          "temporal_pred_m": -3.377027203136232,
+          "temporal_error_m": 1.4450958566230452,
+          "mode_errors_m": {
+            "none": 1.0603354225478663,
+            "quartz_only": 0.8652743372251033,
+            "screening_scaled": 0.009298584181132163,
+            "type_weighted": 0.9526392725901403
+          },
+          "mode_deltas_m": {
+            "none": -0.3847604340751791,
+            "quartz_only": -0.5798215193979417,
+            "screening_scaled": -1.4543944408041771,
+            "type_weighted": -0.4924565840329048
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -4.586018040821336,
+          "temporal_pred_m": -3.7325638706614215,
+          "temporal_error_m": 0.8534541701599143,
+          "mode_errors_m": {
+            "none": 0.8651379099177618,
+            "quartz_only": 0.9318980816217954,
+            "screening_scaled": 0.8976187064445771,
+            "type_weighted": 0.890005962278344
+          },
+          "mode_deltas_m": {
+            "none": 0.011683739757847344,
+            "quartz_only": 0.07844391146188094,
+            "screening_scaled": 0.04416453628466296,
+            "type_weighted": 0.03655179211842988
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -2.3016620355904247,
+          "temporal_pred_m": -4.265868871949206,
+          "temporal_error_m": 1.9642068363587817,
+          "mode_errors_m": {
+            "none": 1.1815293288179967,
+            "quartz_only": 0.9024040615111346,
+            "screening_scaled": 0.9943141421453863,
+            "type_weighted": 0.923357970869858
+          },
+          "mode_deltas_m": {
+            "none": 0.7826775075407852,
+            "quartz_only": 1.061802774847647,
+            "screening_scaled": 2.958520978504168,
+            "type_weighted": 1.0408488654889234
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -3.988503207673187,
+          "temporal_pred_m": -5.332478874524775,
+          "temporal_error_m": 1.3439756668515885,
+          "mode_errors_m": {
+            "none": 0.045418549778021955,
+            "quartz_only": 0.1726831754297482,
+            "screening_scaled": 3.907934472008339,
+            "type_weighted": 0.42714589386669033
+          },
+          "mode_deltas_m": {
+            "none": 1.3893942166296105,
+            "quartz_only": 1.5166588422813365,
+            "screening_scaled": 5.251910138859928,
+            "type_weighted": 1.7711215607182789
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -0.3926645218158385,
+          "temporal_pred_m": -7.465698879675914,
+          "temporal_error_m": 7.073034357860076,
+          "mode_errors_m": {
+            "none": 3.023768514764398,
+            "quartz_only": 2.3129347662008577,
+            "screening_scaled": 8.233190529041586,
+            "type_weighted": 2.1466757656189674
+          },
+          "mode_deltas_m": {
+            "none": 4.049265843095678,
+            "quartz_only": 4.760099591659218,
+            "screening_scaled": 15.306224886901662,
+            "type_weighted": 4.926358592241108
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -3.405134266572019,
+          "truth_clk_m": -0.8781586770754322,
+          "temporal_pred_m": -11.73213888997819,
+          "temporal_error_m": 10.853980212902758,
+          "mode_errors_m": {
+            "none": 7.02708615993155,
+            "quartz_only": 5.860438366478904,
+            "screening_scaled": 3.611679307328404,
+            "type_weighted": 5.912633866202671
+          },
+          "mode_deltas_m": {
+            "none": 3.826894052971207,
+            "quartz_only": 4.993541846423853,
+            "screening_scaled": 14.465659520231162,
+            "type_weighted": 4.941346346700087
+          }
+        }
+      }
+    },
+    {
+      "station": "PADO",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": -3.0121471591955555,
+          "temporal_pred_m": -2.3895627235212644,
+          "temporal_error_m": 0.6225844356742911,
+          "mode_errors_m": {
+            "none": 0.37407608137395876,
+            "quartz_only": 0.12848129009410725,
+            "screening_scaled": 0.3167771435809654,
+            "type_weighted": 0.24716842444441056
+          },
+          "mode_deltas_m": {
+            "none": -0.2485083543003325,
+            "quartz_only": -0.4941031455801838,
+            "screening_scaled": -0.9393615792552568,
+            "type_weighted": -0.37541601122988044
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": -2.983431487970151,
+          "temporal_pred_m": -2.5335140484758902,
+          "temporal_error_m": 0.44991743949426066,
+          "mode_errors_m": {
+            "none": 0.39500903491959827,
+            "quartz_only": 0.376039879988205,
+            "screening_scaled": 0.2423636702020362,
+            "type_weighted": 0.36601334213266545
+          },
+          "mode_deltas_m": {
+            "none": -0.05490840457466251,
+            "quartz_only": -0.07387755950605576,
+            "screening_scaled": -0.2075537692922243,
+            "type_weighted": -0.0839040973615954
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": -1.6351820853384558,
+          "temporal_pred_m": -2.749441035907829,
+          "temporal_error_m": 1.1142589505693734,
+          "mode_errors_m": {
+            "none": 0.6553797876923602,
+            "quartz_only": 0.34954127370224497,
+            "screening_scaled": 0.6203042851057361,
+            "type_weighted": 0.4250252209067673
+          },
+          "mode_deltas_m": {
+            "none": 0.45887916287701314,
+            "quartz_only": 0.7647176768671284,
+            "screening_scaled": 1.7345632356751095,
+            "type_weighted": 0.6892337296626061
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": -1.0282832552875134,
+          "temporal_pred_m": -3.181295010771707,
+          "temporal_error_m": 2.1530117554841937,
+          "mode_errors_m": {
+            "none": 1.3046985689178614,
+            "quartz_only": 1.1158874207874225,
+            "screening_scaled": 1.0536120897365424,
+            "type_weighted": 0.9924873635225429
+          },
+          "mode_deltas_m": {
+            "none": 0.8483131865663324,
+            "quartz_only": 1.0371243346967711,
+            "screening_scaled": 3.206623845220736,
+            "type_weighted": 1.1605243919616506
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": 0.7150657874377118,
+          "temporal_pred_m": -4.045002960499462,
+          "temporal_error_m": 4.760068747937174,
+          "mode_errors_m": {
+            "none": 1.8016980015249493,
+            "quartz_only": 0.8625815581714915,
+            "screening_scaled": 6.422572673501035,
+            "type_weighted": 1.0019742305864263
+          },
+          "mode_deltas_m": {
+            "none": 2.958370746412225,
+            "quartz_only": 3.8974871897656826,
+            "screening_scaled": 11.182641421438209,
+            "type_weighted": 3.758094517350748
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -3.0204263008800147,
+          "truth_clk_m": -1.384804551436624,
+          "temporal_pred_m": -5.772418859954974,
+          "temporal_error_m": 4.38761430851835,
+          "mode_errors_m": {
+            "none": 1.3772075575872285,
+            "quartz_only": 0.09482548212330166,
+            "screening_scaled": 6.99172321000129,
+            "type_weighted": 0.3751139211483372
+          },
+          "mode_deltas_m": {
+            "none": 3.0104067509311214,
+            "quartz_only": 4.292788826395048,
+            "screening_scaled": 11.37933751851964,
+            "type_weighted": 4.012500387370013
+          }
+        }
+      }
+    },
+    {
+      "station": "MAR7",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -9.19140539087914,
+          "temporal_pred_m": -9.109176605551879,
+          "temporal_error_m": 0.08222878532726163,
+          "mode_errors_m": {
+            "none": 0.546707087122158,
+            "quartz_only": 0.3519614910978319,
+            "screening_scaled": 1.8379567661119722,
+            "type_weighted": 0.7385392361010812
+          },
+          "mode_deltas_m": {
+            "none": 0.4644783017948969,
+            "quartz_only": 0.2697327057705705,
+            "screening_scaled": 1.7557279807847102,
+            "type_weighted": 0.6563104507738193
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -10.228635667822667,
+          "temporal_pred_m": -8.983406537561155,
+          "temporal_error_m": 1.245229130261512,
+          "mode_errors_m": {
+            "none": 1.6252085879140807,
+            "quartz_only": 1.5980394190998535,
+            "screening_scaled": 2.681551480188223,
+            "type_weighted": 1.7123131425070515
+          },
+          "mode_deltas_m": {
+            "none": 0.37997945765256913,
+            "quartz_only": 0.352810288838341,
+            "screening_scaled": 1.4363223499267113,
+            "type_weighted": 0.4670840122455388
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -9.626735054024465,
+          "temporal_pred_m": -8.794751435575067,
+          "temporal_error_m": 0.8319836184493976,
+          "mode_errors_m": {
+            "none": 0.9561805437397357,
+            "quartz_only": 1.2252991246498546,
+            "screening_scaled": 1.3014479960468748,
+            "type_weighted": 0.9811741280069004
+          },
+          "mode_deltas_m": {
+            "none": 0.12419692529033792,
+            "quartz_only": 0.39331550620045763,
+            "screening_scaled": 0.46946437759747733,
+            "type_weighted": 0.1491905095575022
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -10.045063650059541,
+          "temporal_pred_m": -8.417441231602895,
+          "temporal_error_m": 1.627622418456646,
+          "mode_errors_m": {
+            "none": 2.2671005028953752,
+            "quartz_only": 2.5055501384094283,
+            "screening_scaled": 4.044849577635043,
+            "type_weighted": 2.407338775028289
+          },
+          "mode_deltas_m": {
+            "none": 0.6394780844387296,
+            "quartz_only": 0.8779277199527823,
+            "screening_scaled": 2.4172271591783976,
+            "type_weighted": 0.7797163565716427
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -10.376252093092045,
+          "temporal_pred_m": -7.662820823658548,
+          "temporal_error_m": 2.7134312694334968,
+          "mode_errors_m": {
+            "none": 4.081553307212612,
+            "quartz_only": 5.240474009138435,
+            "screening_scaled": 7.884932572238553,
+            "type_weighted": 4.305762946754087
+          },
+          "mode_deltas_m": {
+            "none": 1.3681220377791155,
+            "quartz_only": 2.527042739704938,
+            "screening_scaled": 5.171501302805056,
+            "type_weighted": 1.5923316773205902
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": -9.48563727726256,
+          "truth_clk_m": -8.91583599499366,
+          "temporal_pred_m": -6.153580007769856,
+          "temporal_error_m": 2.7622559872238046,
+          "mode_errors_m": {
+            "none": 3.889684996369061,
+            "quartz_only": 4.457610174784099,
+            "screening_scaled": 7.023937641792873,
+            "type_weighted": 3.4346645214113964
+          },
+          "mode_deltas_m": {
+            "none": 1.1274290091452563,
+            "quartz_only": 1.695354187560294,
+            "screening_scaled": 4.2616816545690686,
+            "type_weighted": 0.672408534187592
+          }
+        }
+      }
+    },
+    {
+      "station": "GRAC",
+      "clock_type": "QUARTZ",
+      "n_refs": 46,
+      "n_quartz_refs": 21,
+      "n_atomic_refs": 17,
+      "kernel_modes": [
+        "none",
+        "quartz_only",
+        "screening_scaled",
+        "type_weighted"
+      ],
+      "outages": {
+        "600": {
+          "duration_s": 600,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 1.3116455905881164,
+          "temporal_pred_m": 3.1705067462422454,
+          "temporal_error_m": 1.858861155654129,
+          "mode_errors_m": {
+            "none": 1.6235762895206622,
+            "quartz_only": 1.4012025262663614,
+            "screening_scaled": 0.9694843616696247,
+            "type_weighted": 1.4808333973737156
+          },
+          "mode_deltas_m": {
+            "none": -0.23528486613346683,
+            "quartz_only": -0.4576586293877676,
+            "screening_scaled": -0.8893767939845045,
+            "type_weighted": -0.37802775828041335
+          }
+        },
+        "1800": {
+          "duration_s": 1800,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 2.495938076574436,
+          "temporal_pred_m": 3.3790256962980307,
+          "temporal_error_m": 0.8830876197235948,
+          "mode_errors_m": {
+            "none": 0.7887628507150701,
+            "quartz_only": 0.7835039651300355,
+            "screening_scaled": 0.5265399928713705,
+            "type_weighted": 0.7527946212317573
+          },
+          "mode_deltas_m": {
+            "none": -0.09432476900852492,
+            "quartz_only": -0.09958365459355951,
+            "screening_scaled": -0.3565476268522242,
+            "type_weighted": -0.1302929984918374
+          }
+        },
+        "3600": {
+          "duration_s": 3600,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 3.006561757895575,
+          "temporal_pred_m": 3.691804121381709,
+          "temporal_error_m": 0.6852423634861342,
+          "mode_errors_m": {
+            "none": 1.0754808415087953,
+            "quartz_only": 1.5092126800912937,
+            "screening_scaled": 2.1603438104117942,
+            "type_weighted": 1.3559656806141605
+          },
+          "mode_deltas_m": {
+            "none": 0.39023847802266126,
+            "quartz_only": 0.82397031660516,
+            "screening_scaled": 1.4751014469256596,
+            "type_weighted": 0.6707233171280258
+          }
+        },
+        "7200": {
+          "duration_s": 7200,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 5.076818716756805,
+          "temporal_pred_m": 4.317360971549066,
+          "temporal_error_m": 0.7594577452077393,
+          "mode_errors_m": {
+            "none": 0.10009411553986514,
+            "quartz_only": 0.2668006788042634,
+            "screening_scaled": 1.7329367749368254,
+            "type_weighted": 0.2710348884100524
+          },
+          "mode_deltas_m": {
+            "none": 0.6593636296678742,
+            "quartz_only": 1.026258424012003,
+            "screening_scaled": 2.4923945201445643,
+            "type_weighted": 1.0304926336177922
+          }
+        },
+        "14400": {
+          "duration_s": 14400,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 6.293669306688647,
+          "temporal_pred_m": 5.568474671883779,
+          "temporal_error_m": 0.7251946348048683,
+          "mode_errors_m": {
+            "none": 2.001491980357068,
+            "quartz_only": 3.2909692825243173,
+            "screening_scaled": 9.581680770507255,
+            "type_weighted": 2.9689864120051634
+          },
+          "mode_deltas_m": {
+            "none": 2.7266866151619373,
+            "quartz_only": 4.0161639173291865,
+            "screening_scaled": 10.306875405312123,
+            "type_weighted": 3.6941810468100327
+          }
+        },
+        "28800": {
+          "duration_s": 28800,
+          "anchor_clk_m": 3.3191223086866657,
+          "truth_clk_m": 5.2082728642160365,
+          "temporal_pred_m": 8.070702072553205,
+          "temporal_error_m": 2.8624292083371685,
+          "mode_errors_m": {
+            "none": 5.805827673016857,
+            "quartz_only": 7.659737371816837,
+            "screening_scaled": 13.98847540482639,
+            "type_weighted": 7.143691895816591
+          },
+          "mode_deltas_m": {
+            "none": 2.9433984646796887,
+            "quartz_only": 4.797308163479669,
+            "screening_scaled": 11.126046196489222,
+            "type_weighted": 4.281262687479423
+          }
+        }
+      }
+    }
+  ],
+  "aggregate": {
+    "600": {
+      "temporal": {
+        "n": 16,
+        "median_m": 0.5035813871104136,
+        "p95_m": 2.025356321514477
+      },
+      "none": {
+        "n": 16,
+        "median_m": 0.6013662323845252,
+        "p95_m": 1.7649134870472794,
+        "improvement_vs_temporal_pct": -19.417883142029574
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 0.7755824926596064,
+        "p95_m": 1.554384463388921
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 0.8086501816406273,
+        "p95_m": 1.6941664709333089,
+        "improvement_vs_temporal_pct": -60.579839195551
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 0.7291177236584685,
+        "p95_m": 1.6358828345973413
+      }
+    },
+    "1800": {
+      "temporal": {
+        "n": 16,
+        "median_m": 0.6211899848489737,
+        "p95_m": 1.6998366568746177
+      },
+      "none": {
+        "n": 16,
+        "median_m": 0.680296004937128,
+        "p95_m": 1.7329162585130264,
+        "improvement_vs_temporal_pct": -9.514966681654478
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 0.6892192750316273,
+        "p95_m": 1.8120479361012776
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 0.6949599202128023,
+        "p95_m": 2.113079168783722,
+        "improvement_vs_temporal_pct": -11.875583503131306
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 0.6635601620118077,
+        "p95_m": 1.8155100643117519
+      }
+    },
+    "3600": {
+      "temporal": {
+        "n": 16,
+        "median_m": 0.9602829855922828,
+        "p95_m": 2.2927991875668896
+      },
+      "none": {
+        "n": 16,
+        "median_m": 0.8233841117519889,
+        "p95_m": 2.2871280077927016,
+        "improvement_vs_temporal_pct": 14.256096993727057
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 0.9465698839890458,
+        "p95_m": 2.336639053184909
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 1.0656635818646008,
+        "p95_m": 2.8615273792309237,
+        "improvement_vs_temporal_pct": -10.973910592336635
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 0.8960264919587313,
+        "p95_m": 2.3444757081428405
+      }
+    },
+    "7200": {
+      "temporal": {
+        "n": 16,
+        "median_m": 1.3724294420118746,
+        "p95_m": 5.1876836785041185
+      },
+      "none": {
+        "n": 16,
+        "median_m": 1.556204773203151,
+        "p95_m": 4.549174931022461,
+        "improvement_vs_temporal_pct": -13.390512150619276
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 1.6936341600416098,
+        "p95_m": 4.613480525572105
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 2.975634916403867,
+        "p95_m": 5.031052043784316,
+        "improvement_vs_temporal_pct": -116.81514730854346
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 1.565469261450356,
+        "p95_m": 4.419852983785514
+      }
+    },
+    "14400": {
+      "temporal": {
+        "n": 16,
+        "median_m": 3.773984997874364,
+        "p95_m": 11.236108513692308
+      },
+      "none": {
+        "n": 16,
+        "median_m": 2.6219073128596313,
+        "p95_m": 9.237141396026914,
+        "improvement_vs_temporal_pct": 30.526822063776667
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 3.125705815904143,
+        "p95_m": 8.781476343108626
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 7.0010465010341685,
+        "p95_m": 12.383395833648477,
+        "improvement_vs_temporal_pct": -85.50806388942708
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 2.956869931063145,
+        "p95_m": 8.85518564062533
+      }
+    },
+    "28800": {
+      "temporal": {
+        "n": 16,
+        "median_m": 3.916871588271242,
+        "p95_m": 14.896708810583686
+      },
+      "none": {
+        "n": 16,
+        "median_m": 4.455147175249511,
+        "p95_m": 13.246777560086842,
+        "improvement_vs_temporal_pct": -13.742487463466821
+      },
+      "quartz_only": {
+        "n": 16,
+        "median_m": 4.96757989503007,
+        "p95_m": 12.96429382840545
+      },
+      "screening_scaled": {
+        "n": 16,
+        "median_m": 7.681076826756602,
+        "p95_m": 14.450949386846936,
+        "improvement_vs_temporal_pct": -96.10233967733257
+      },
+      "type_weighted": {
+        "n": 16,
+        "median_m": 4.3490589009101965,
+        "p95_m": 13.062106398670936
+      }
+    }
+  }
+}

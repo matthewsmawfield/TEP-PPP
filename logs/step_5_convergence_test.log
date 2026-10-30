@@ -1,0 +1,13 @@
+[12:42:08] [INFO] 
+[12:42:08] [INFO] ================================================================================
+[12:42:08] [INFO] TEP-PPP Convergence Speedup Test
+[12:42:08] [INFO] ================================================================================
+[12:42:08] [INFO] 
+[12:42:08] [INFO] 
+[12:42:08] [INFO] ================================================================================
+[12:42:08] [INFO] Monte Carlo: 20 seeds x 4 arms
+[12:42:08] [INFO] ================================================================================
+[12:42:08] [INFO] 
+[16:08:24] [SUCCESS] Saved Monte Carlo summary to results/outputs/step_04_monte_carlo.json
+[16:11:03] [SUCCESS] Plot saved to results/figures/step_5_real_data_convergence.png
+[16:11:03] [SUCCESS] Saved convergence summary to results/outputs/step_5_convergence_summary.json

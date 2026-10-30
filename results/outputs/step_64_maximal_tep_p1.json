@@ -1,0 +1,191 @@
+{
+  "step": 64,
+  "title": "Maximal a-priori TEP clock predictor vs data-tuned conventional (P1 gate)",
+  "timestamp": "2026-09-03T14:32:12.375698+00:00",
+  "arsenal": [
+    "phase-cos coherence Gram (prior day)",
+    "fixed 4,200 km TEP phase scale",
+    "isotropic multi-scale exponential covariance (lambda/1.6, lambda, 1.6 lambda)"
+  ],
+  "nugget": 0.7,
+  "development_period": "2024; strict P1 requires a frozen independent-year replication",
+  "withdrawn_components": [
+    "harmonic add-on: incompatible prior/current residual definitions",
+    "pairwise azimuth warp: not guaranteed positive definite on the sphere",
+    "annual/event lambda modulation: weakened the 2024 development benchmark"
+  ],
+  "conventional": "LOO-selected (form, lambda, nugget) on the held-out station's own prior day",
+  "arms": {
+    "precise": {
+      "n_days_used": 30,
+      "phasecos_vs_tuned_conventional_pct": {
+        "median": 0.3394830217509637,
+        "ci95": [
+          -0.33862494473159144,
+          0.9571399898752608
+        ],
+        "n": 30,
+        "frac_positive": 0.5666666666666667
+      },
+      "phasecos_vs_empirical_covariance_pct": {
+        "median": 5.20001100105259,
+        "ci95": [
+          3.672578999352888,
+          6.324234776116477
+        ],
+        "n": 30,
+        "frac_positive": 0.9333333333333333
+      },
+      "full_arsenal_vs_phasecos_pct": {
+        "median": 0.763507462146451,
+        "ci95": [
+          0.4795661756669789,
+          0.9063355326475842
+        ],
+        "n": 30,
+        "frac_positive": 0.9666666666666667
+      },
+      "full_arsenal_vs_tuned_conventional_pct": {
+        "median": 0.893851939759932,
+        "ci95": [
+          0.4583882683828533,
+          1.7678840785022354
+        ],
+        "n": 30,
+        "frac_positive": 0.7666666666666667
+      },
+      "full_arsenal_vs_empirical_covariance_pct": {
+        "median": 6.068348439818477,
+        "ci95": [
+          4.700322706735194,
+          6.844372894031936
+        ],
+        "n": 30,
+        "frac_positive": 1.0
+      },
+      "full_arsenal_vs_phase_only_pct": {
+        "median": 0.9213641556718777,
+        "ci95": [
+          0.6076089176871913,
+          1.1165253228321792
+        ],
+        "n": 30,
+        "frac_positive": 0.9666666666666667
+      },
+      "full_arsenal_vs_geometry_scramble_pct": {
+        "median": 1.451979852326768,
+        "ci95": [
+          0.9615037362794843,
+          1.641079200792206
+        ],
+        "n": 30,
+        "frac_positive": 0.8666666666666667
+      },
+      "full_arsenal_vs_phase_scramble_pct": {
+        "median": 3.446678959609878,
+        "ci95": [
+          2.381892088004278,
+          4.73517193250832
+        ],
+        "n": 30,
+        "frac_positive": 0.9333333333333333
+      },
+      "median_rms_m": {
+        "phasecos": 3.6482850191821026,
+        "full_arsenal": 3.6288384282095603,
+        "phase_only": 3.65295741659484,
+        "tuned_conventional": 3.666089788692685,
+        "empirical_covariance": 3.850954833489011
+      },
+      "development_gate_pass": true,
+      "p1_pass": false,
+      "p1_requires_independent_year": true
+    },
+    "clk_cod": {
+      "n_days_used": 30,
+      "phasecos_vs_tuned_conventional_pct": {
+        "median": 0.28282920944726064,
+        "ci95": [
+          -1.6118973338381526,
+          0.6897905555787509
+        ],
+        "n": 30,
+        "frac_positive": 0.5666666666666667
+      },
+      "phasecos_vs_empirical_covariance_pct": {
+        "median": -3.095349952866877,
+        "ci95": [
+          -4.598796231570301,
+          -1.1561253224673274
+        ],
+        "n": 30,
+        "frac_positive": 0.23333333333333334
+      },
+      "full_arsenal_vs_phasecos_pct": {
+        "median": 2.2720227888409994,
+        "ci95": [
+          1.9656463251910006,
+          2.842383578903651
+        ],
+        "n": 30,
+        "frac_positive": 0.9666666666666667
+      },
+      "full_arsenal_vs_tuned_conventional_pct": {
+        "median": 2.0976703653580566,
+        "ci95": [
+          0.36521824605381115,
+          2.962512356844904
+        ],
+        "n": 30,
+        "frac_positive": 0.7
+      },
+      "full_arsenal_vs_empirical_covariance_pct": {
+        "median": -0.22891306398890032,
+        "ci95": [
+          -1.953473085239943,
+          1.2952288862860928
+        ],
+        "n": 30,
+        "frac_positive": 0.4666666666666667
+      },
+      "full_arsenal_vs_phase_only_pct": {
+        "median": 1.0353972273754397,
+        "ci95": [
+          -0.029489116005720906,
+          2.09831630893183
+        ],
+        "n": 30,
+        "frac_positive": 0.6333333333333333
+      },
+      "full_arsenal_vs_geometry_scramble_pct": {
+        "median": 2.281229031166898,
+        "ci95": [
+          0.7282122950472647,
+          2.97229797647221
+        ],
+        "n": 30,
+        "frac_positive": 0.8
+      },
+      "full_arsenal_vs_phase_scramble_pct": {
+        "median": 3.0808037110495734,
+        "ci95": [
+          -0.12373238581493973,
+          4.153368225526927
+        ],
+        "n": 30,
+        "frac_positive": 0.6666666666666666
+      },
+      "median_rms_m": {
+        "phasecos": 1.2306025981719766,
+        "full_arsenal": 1.1880427571354584,
+        "phase_only": 1.2033156033088268,
+        "tuned_conventional": 1.2078251637764628,
+        "empirical_covariance": 1.1908345560849
+      },
+      "development_gate_pass": false,
+      "p1_pass": false,
+      "p1_requires_independent_year": true
+    }
+  },
+  "p1_pass": false
+}

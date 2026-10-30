@@ -1,0 +1,250 @@
+{
+  "step": 71,
+  "title": "Co-located clock-difference TEP field measurement",
+  "timestamp": "2026-09-02T17:36:04.738632+00:00",
+  "n_pairs": 4,
+  "pairs": [
+    {
+      "quartz_station": "THTI",
+      "atomic_station": "THTG",
+      "separation_m": 11,
+      "quartz_xyz": [
+        -5246418.0047,
+        -3077259.2378,
+        -1913851.5087
+      ],
+      "atomic_xyz": [
+        -5246414.1319,
+        -3077260.4664,
+        -1913841.6975
+      ],
+      "quartz_clock_type": "INTERNAL (quartz)",
+      "atomic_clock_type": "EXTERNAL (atomic)",
+      "n_epochs": 2880,
+      "duration_s": 86370.0,
+      "steering_unwrapped": true,
+      "bands": {
+        "LF": {
+          "rms_quartz_m": 3.157235970535337,
+          "rms_atomic_m": 0.26202175271877526,
+          "rms_difference_m": 2.940542618180931,
+          "screening_factor": 12.049518552469038,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "MF": {
+          "rms_quartz_m": 4.264124560901691,
+          "rms_atomic_m": 0.48114653744407315,
+          "rms_difference_m": 3.961291746339892,
+          "screening_factor": 8.862423875174075,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "HF": {
+          "rms_quartz_m": 0.3286317323184756,
+          "rms_atomic_m": 0.1888479750732865,
+          "rms_difference_m": 0.34082608431712835,
+          "screening_factor": 1.7401919834774136,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "FULL": {
+          "rms_quartz_m": 4.2788800685540345,
+          "rms_atomic_m": 0.54406141745341,
+          "rms_difference_m": 3.98177291193876,
+          "screening_factor": 7.864700438752306,
+          "tep_fraction_of_quartz": 1.0
+        }
+      },
+      "cross_correlation": {
+        "LF": 0.840120347595597,
+        "MF": 0.6634667361048092,
+        "HF": 0.22155427483399276,
+        "FULL": 0.5907072996222791
+      },
+      "day": "2024-100"
+    },
+    {
+      "quartz_station": "TLSE",
+      "atomic_station": "TLSG",
+      "separation_m": 1266,
+      "quartz_xyz": [
+        4627852.2816,
+        119640.578,
+        4372994.629
+      ],
+      "atomic_xyz": [
+        4628684.7755,
+        119996.7157,
+        4372109.7032
+      ],
+      "quartz_clock_type": "INTERNAL (quartz)",
+      "atomic_clock_type": "EXTERNAL (atomic)",
+      "n_epochs": 2880,
+      "duration_s": 86370.0,
+      "steering_unwrapped": true,
+      "bands": {
+        "LF": {
+          "rms_quartz_m": 0.16151719397667802,
+          "rms_atomic_m": 0.4921687079780708,
+          "rms_difference_m": 0.6013816203152851,
+          "screening_factor": 0.32817444782343747,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "MF": {
+          "rms_quartz_m": 0.49949399718424836,
+          "rms_atomic_m": 0.9786097464975979,
+          "rms_difference_m": 0.9839264127406787,
+          "screening_factor": 0.5104118357413829,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "HF": {
+          "rms_quartz_m": 0.12217045666233635,
+          "rms_atomic_m": 0.16093440544942827,
+          "rms_difference_m": 0.1918446979995652,
+          "screening_factor": 0.7591319974194515,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "FULL": {
+          "rms_quartz_m": 0.5260848590081947,
+          "rms_atomic_m": 0.9960037728721002,
+          "rms_difference_m": 1.0123334971701938,
+          "screening_factor": 0.5281956487887228,
+          "tep_fraction_of_quartz": 1.0
+        }
+      },
+      "cross_correlation": {
+        "LF": -0.587103141525807,
+        "MF": 0.24453289943678477,
+        "HF": 0.10225897168942566,
+        "FULL": 0.23280327386973332
+      },
+      "day": "2024-100"
+    },
+    {
+      "quartz_station": "FAA1",
+      "atomic_station": "THTG",
+      "separation_m": 2533,
+      "quartz_xyz": [
+        -5247394.125,
+        -3076906.802,
+        -1911532.689
+      ],
+      "atomic_xyz": [
+        -5246414.1319,
+        -3077260.4664,
+        -1913841.6975
+      ],
+      "quartz_clock_type": "INTERNAL (quartz)",
+      "atomic_clock_type": "EXTERNAL (atomic)",
+      "n_epochs": 2880,
+      "duration_s": 86370.0,
+      "steering_unwrapped": true,
+      "bands": {
+        "LF": {
+          "rms_quartz_m": 7.3906511808493445,
+          "rms_atomic_m": 0.26202175271877526,
+          "rms_difference_m": 7.222474736531226,
+          "screening_factor": 28.206250451204486,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "MF": {
+          "rms_quartz_m": 8.397792519763716,
+          "rms_atomic_m": 0.48114653744407315,
+          "rms_difference_m": 8.194940615440741,
+          "screening_factor": 17.453710805805905,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "HF": {
+          "rms_quartz_m": 0.5548183725889169,
+          "rms_atomic_m": 0.1888479750732865,
+          "rms_difference_m": 0.5602046307713124,
+          "screening_factor": 2.93791009606329,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "FULL": {
+          "rms_quartz_m": 8.422806879884579,
+          "rms_atomic_m": 0.54406141745341,
+          "rms_difference_m": 8.222713291500796,
+          "screening_factor": 15.481353041554092,
+          "tep_fraction_of_quartz": 1.0
+        }
+      },
+      "cross_correlation": {
+        "LF": 0.652265457147048,
+        "MF": 0.4451563244108232,
+        "HF": 0.14152889774998328,
+        "FULL": 0.39570600063530026
+      },
+      "day": "2024-100"
+    },
+    {
+      "quartz_station": "ZIMM",
+      "atomic_station": "WAB2",
+      "separation_m": 5199,
+      "quartz_xyz": [
+        4331297.348,
+        567555.639,
+        4633133.728
+      ],
+      "atomic_xyz": [
+        4327318.2325,
+        566955.9585,
+        4636425.9246
+      ],
+      "quartz_clock_type": "INTERNAL (quartz)",
+      "atomic_clock_type": "EXTERNAL (atomic)",
+      "n_epochs": 2880,
+      "duration_s": 86370.0,
+      "steering_unwrapped": true,
+      "bands": {
+        "LF": {
+          "rms_quartz_m": 0.8040469644034609,
+          "rms_atomic_m": 0.11262549942269054,
+          "rms_difference_m": 0.7686985476331815,
+          "screening_factor": 7.1391200795995795,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "MF": {
+          "rms_quartz_m": 1.5583968755556428,
+          "rms_atomic_m": 0.20962639386606918,
+          "rms_difference_m": 1.5178232160659266,
+          "screening_factor": 7.434163450578205,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "HF": {
+          "rms_quartz_m": 0.18684727885918756,
+          "rms_atomic_m": 0.09314371605200823,
+          "rms_difference_m": 0.19507530760309094,
+          "screening_factor": 2.0060105692461154,
+          "tep_fraction_of_quartz": 1.0
+        },
+        "FULL": {
+          "rms_quartz_m": 1.5736621798013222,
+          "rms_atomic_m": 0.24366768895888216,
+          "rms_difference_m": 1.5368449898714653,
+          "screening_factor": 6.458230824632931,
+          "tep_fraction_of_quartz": 1.0
+        }
+      },
+      "cross_correlation": {
+        "LF": 0.3769955773075644,
+        "MF": 0.25828969385585143,
+        "HF": 0.1589690052517344,
+        "FULL": 0.22674897867459112
+      },
+      "day": "2024-100"
+    }
+  ],
+  "summary": {
+    "lf_screening_median": 9.594319316034309,
+    "mf_screening_median": 8.14829366287614,
+    "hf_screening_median": 1.8731012763617645,
+    "lf_xcorr_median": 0.5146305172273062,
+    "mf_xcorr_median": 0.3517230091333373,
+    "hf_xcorr_median": 0.15024895150085885,
+    "lf_tep_fraction_median": 1.0,
+    "step65_reference": {
+      "lf_screening": 3.78,
+      "mf_screening": 1.2,
+      "hf_screening": 0.91
+    }
+  }
+}

@@ -1,0 +1,32 @@
+  2024100: 140 station-k cells processed
+  2024101: 280 station-k cells processed
+  2024102: 420 station-k cells processed
+  2024103: 552 station-k cells processed
+  2024104: 672 station-k cells processed
+  2024105: 764 station-k cells processed
+  2024106: 872 station-k cells processed
+  L=10min k=4: TEP 3D 876.45 m vs deployable 876.44 m (-0.0%), vs ordinary -8420.9%
+  L=10min k=5: TEP 3D 565.25 m vs deployable 565.25 m (+0.0%), vs ordinary -5055.5%
+  L=10min k=6: TEP 3D 199.15 m vs deployable 199.17 m (+0.0%), vs ordinary -1463.2%
+  L=10min k=8: TEP 3D 129.36 m vs deployable 129.39 m (+0.0%), vs ordinary -696.7%
+  L=30min k=4: TEP 3D 2419.00 m vs deployable 2418.99 m (-0.0%), vs ordinary -22633.4%
+  L=30min k=5: TEP 3D 1210.93 m vs deployable 1210.93 m (-0.0%), vs ordinary -10550.9%
+  L=30min k=6: TEP 3D 659.64 m vs deployable 659.65 m (+0.0%), vs ordinary -4995.5%
+  L=30min k=8: TEP 3D 362.60 m vs deployable 362.62 m (+0.0%), vs ordinary -2127.8%
+  L=60min k=4: TEP 3D 4100.08 m vs deployable 4100.10 m (+0.0%), vs ordinary -36897.2%
+  L=60min k=5: TEP 3D 2577.93 m vs deployable 2577.93 m (+0.0%), vs ordinary -21800.9%
+  L=60min k=6: TEP 3D 1053.46 m vs deployable 1053.48 m (+0.0%), vs ordinary -8045.6%
+  L=60min k=8: TEP 3D 520.95 m vs deployable 520.97 m (+0.0%), vs ordinary -3105.8%
+  L=120min k=4: TEP 3D 8643.06 m vs deployable 8643.06 m (-0.0%), vs ordinary -82172.3%
+  L=120min k=5: TEP 3D 4139.82 m vs deployable 4139.83 m (+0.0%), vs ordinary -35685.9%
+  L=120min k=6: TEP 3D 1840.17 m vs deployable 1840.17 m (+0.0%), vs ordinary -14132.5%
+  L=120min k=8: TEP 3D 801.82 m vs deployable 801.83 m (+0.0%), vs ordinary -4762.6%
+  L=240min k=4: TEP 3D 8425.67 m vs deployable 8425.72 m (+0.0%), vs ordinary -76836.9%
+  L=240min k=5: TEP 3D 5112.93 m vs deployable 5112.95 m (+0.0%), vs ordinary -43030.9%
+  L=240min k=6: TEP 3D 2592.67 m vs deployable 2592.68 m (+0.0%), vs ordinary -19320.7%
+  L=240min k=8: TEP 3D 839.20 m vs deployable 839.22 m (+0.0%), vs ordinary -4858.2%
+
+P2 gate: PASS
+  TEP vs deployable: median +0.00%, 73% positive cells
+  TEP vs ordinary (free-clock): median -19320.65%, 0% positive cells
+saved results/outputs/step_44_raw_thin_position.json

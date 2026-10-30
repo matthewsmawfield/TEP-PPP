@@ -1,0 +1,11 @@
+STEP 98  |  satellite-channel flagship | 180 SP3 days (of 366 available)
+  loaded 180 usable days  (median 114 sats/day)
+Traceback (most recent call last):
+  File "scripts/steps/step_98_satellite_channel_flagship.py", line 210, in <module>
+    main()
+  File "scripts/steps/step_98_satellite_channel_flagship.py", line 110, in main
+    arm = s36.run_arm(preps, label, a, b, cross_only=cross)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/steps/step_36_meo_csd.py", line 359, in run_arm
+    from joblib import Parallel, delayed
+ModuleNotFoundError: No module named 'joblib'

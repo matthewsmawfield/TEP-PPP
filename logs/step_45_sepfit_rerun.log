@@ -1,0 +1,38 @@
+
+[broadcast_global] 7 days, 4,933 pair-days (822 zero-co-visibility)
+  corr(dist, Jbar) = -0.946
+  pooled common-view slope kappa = -0.0144
+  Stage 2: partial corr(alpha, log-d | Jbar) = -0.1644
+           partial corr(alpha, Jbar | log-d) = +0.0230
+           partial corr(alpha, cos-dlon | Jbar) = +0.6930
+           partial corr(alpha, log-d | Jbar+cos-dlon) = -0.2671
+  OOS R^2 gain of distance term: +0.0222 (with cos-dlon base: +0.0002)
+  Distance fit to alpha (raw): lambda = 4349 km, R^2 = 0.950
+  Distance fit to alpha (Jbar+cos-dlon separated): lambda = 1008 km, R^2 = 0.625
+  Permutation null (200 trials): PC sigma = 10.8, p = 0.0000
+  R^2 sigma = 1.9, p = 0.0150  (raw; separated: sigma = 6.5, p = 0.0000)
+  distance_fit_significant = True  common_view_separated = True  frozen_S2 = True
+  T4 temporal pass (BOTH conditions): True
+
+[precise_cod] 30 days, 53,079 pair-days (8624 zero-co-visibility)
+  corr(dist, Jbar) = -0.932
+  pooled common-view slope kappa = +0.0289
+  Stage 2: partial corr(alpha, log-d | Jbar) = -0.0403
+           partial corr(alpha, Jbar | log-d) = -0.0162
+           partial corr(alpha, cos-dlon | Jbar) = -0.0221
+           partial corr(alpha, log-d | Jbar+cos-dlon) = -0.0389
+  OOS R^2 gain of distance term: +0.0007 (with cos-dlon base: +0.0007)
+  Distance fit to alpha (raw): lambda = 2155 km, R^2 = 0.861
+  Distance fit to alpha (Jbar+cos-dlon separated): lambda = 1085 km, R^2 = 0.232
+  Permutation null (100 trials): PC sigma = 9.2, p = 0.0000
+  R^2 sigma = 2.5, p = 0.0100  (raw; separated: sigma = 1.2, p = 0.1200)
+  distance_fit_significant = False  common_view_separated = False  frozen_S2 = False
+  T4 temporal pass (BOTH conditions): False
+
+Saved results/outputs/step_45_temporal_t4.json
+
+========================================================================
+TEMPORAL T4 RESULT
+========================================================================
+  Broadcast: PC=-0.1644, lambda=4349 km, R^2=0.950, R^2sig=1.9, pass=True
+  Precise:   PC=-0.0403, lambda=2155 km, R^2=0.861, R^2sig=2.5, pass=False

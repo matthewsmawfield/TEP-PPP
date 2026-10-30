@@ -1,0 +1,1136 @@
+{
+  "generated": "2026-10-30T00:55:16.879871+00:00",
+  "project": "TEP-PPP",
+  "version": "0.1",
+  "codename": "Pune",
+  "files": {
+    "results/figures/step_06_falsification.png": {
+      "sha256": "bd4a1f508750386a11d12040d35bb53d938ddb7673940898ed86d40ed7f4228b",
+      "size_bytes": 258680,
+      "modified": "2026-09-03T23:34:25"
+    },
+    "results/figures/step_12_integrity_proof.png": {
+      "sha256": "fb90ed8dd259e65da00c543570fc8992577860bcfca1f6029cd52bbeb03c0616",
+      "size_bytes": 499012,
+      "modified": "2026-09-27T05:32:33"
+    },
+    "results/figures/step_137_aperture_synthesis.png": {
+      "sha256": "58bbec6a648e63785b5a6456a4a4cfe67fb31ad2530c1ff6b184adc8437cb0bc",
+      "size_bytes": 433962,
+      "modified": "2026-09-06T22:01:25"
+    },
+    "results/figures/step_137_aperture_synthesis_clean.png": {
+      "sha256": "0d1f3411534bc229803e5a81e624b13edc7994f76a24ceca3cf97907eadcb938",
+      "size_bytes": 416916,
+      "modified": "2026-10-29T19:24:39"
+    },
+    "results/figures/step_138_alien_clock_vertex.png": {
+      "sha256": "216cb999fab76239b14fead142708bd088a313c1cb9a8b199184c84bf3d42762",
+      "size_bytes": 339073,
+      "modified": "2026-09-06T21:50:05"
+    },
+    "results/figures/step_139_pulsar_crosscheck.png": {
+      "sha256": "66fe80846def3b89765d8c3250bb09a47f88b6a5ebf1b807356aedcacc2ef1b2",
+      "size_bytes": 409542,
+      "modified": "2026-09-06T22:01:32"
+    },
+    "results/figures/step_177_distance_blind_geography.png": {
+      "sha256": "8f24abbc8c40f287b5a08b429abf31b66372d03807032f0609c6118ecd6927a3",
+      "size_bytes": 184868,
+      "modified": "2026-10-29T21:38:39"
+    },
+    "results/figures/step_28_operational_case.png": {
+      "sha256": "3a973d132834384daf09f9bfda714b9431daf5c42703a5f3dcb470c2e15edd27",
+      "size_bytes": 647935,
+      "modified": "2026-09-03T23:36:48"
+    },
+    "results/figures/step_36_meo_csd.png": {
+      "sha256": "20cabe80e162a62f9a56eb6d44cf3e34307f789f9d2f2ba6fc823ddd9a4ae2bc",
+      "size_bytes": 282262,
+      "modified": "2026-10-29T10:28:02"
+    },
+    "results/figures/step_37_live_comparison.png": {
+      "sha256": "31157bdb90c622a73a892c14cace0401d6b3b82e60a99846f4e3aefcc4fb2687",
+      "size_bytes": 327551,
+      "modified": "2026-10-16T11:41:09"
+    },
+    "results/figures/step_53_headline_detection.png": {
+      "sha256": "ee554561d6e830c5775f2321ff1e31c1178957a12dee53b85f734bddf658565b",
+      "size_bytes": 114168,
+      "modified": "2026-10-29T21:30:48"
+    },
+    "results/figures/step_5_real_data_convergence.png": {
+      "sha256": "6491b2b0a69192aba5ce930982fd99008b67a8855c2d79660b5ce04658d27a98",
+      "size_bytes": 674893,
+      "modified": "2026-09-27T05:32:33"
+    },
+    "results/figures/step_6_longitudinal_stability.png": {
+      "sha256": "dc96fd51a6b2cfe0d57dfc2a05b3e5307f09c0e7f4adfa2923ba4d291a931589",
+      "size_bytes": 220990,
+      "modified": "2026-09-27T05:32:33"
+    },
+    "results/figures/step_80_clock_field_localisation.png": {
+      "sha256": "8856928a8705f868aa6ca882c1e8db1546f574068dc67551f28d582f6cbeb2ba",
+      "size_bytes": 291544,
+      "modified": "2026-09-03T23:33:00"
+    },
+    "results/forecasts/tep_weather_forecast_30day_20251227.csv": {
+      "sha256": "5f3bdd31507e3ca2b126b95fff2b4862d9ec4260858d61e01805090e82c52fdc",
+      "size_bytes": 123699,
+      "modified": "2025-12-27T20:50:30"
+    },
+    "results/forecasts/tep_weather_forecast_30day_20251227.png": {
+      "sha256": "6e410bdcdd8a516b4e1d8c1f23dbd81f6a63658fa9e9d54b2067da2b791283cd",
+      "size_bytes": 471588,
+      "modified": "2025-12-27T20:50:30"
+    },
+    "results/outputs/evidence_assessment.json": {
+      "sha256": "5f87db4eeae1f8467655060d9b5c2931443b67e23b00d30f021cf243983bb446",
+      "size_bytes": 93395,
+      "modified": "2026-09-07T23:28:11"
+    },
+    "results/outputs/gram_far_arc_floor_20261016.json": {
+      "sha256": "b191ad7101dd4f857e1bb051b84afec29c1be5120ee03d44a7034ebacb67734f",
+      "size_bytes": 8861,
+      "modified": "2026-10-16T10:27:36"
+    },
+    "results/outputs/leo_probe_swarm_a.json": {
+      "sha256": "2476e4b981116016601a18d6a3208f01c4f72be655915d51592dc01b68a9d099",
+      "size_bytes": 1533,
+      "modified": "2026-09-04T10:33:11"
+    },
+    "results/outputs/live_loo_network.json": {
+      "sha256": "60ccab4e78fb117a7edbeee050b0dbc49a055c7cb1b902c6ae41b8bd83dd4368",
+      "size_bytes": 1098,
+      "modified": "2026-09-07T14:19:34"
+    },
+    "results/outputs/live_rig_dutch_only_baseline.json": {
+      "sha256": "eca5f1b669ad0ed8e40676d1dd01805fe92591731030fbde36587f284b4a2348",
+      "size_bytes": 1642,
+      "modified": "2026-09-06T23:46:15"
+    },
+    "results/outputs/live_rrr_attribution_and_position.json": {
+      "sha256": "414f1ac5f4bc0671fe9023521aec9a82b681cf1563cc4d9079979a48933f42ac",
+      "size_bytes": 10718,
+      "modified": "2026-10-25T17:24:54"
+    },
+    "results/outputs/phase1_gate.json": {
+      "sha256": "f74fecc5d4078fa66d52c0c2782feec9b595e0a5461d4cce47f58ec59f318399",
+      "size_bytes": 15930,
+      "modified": "2026-09-03T10:07:41"
+    },
+    "results/outputs/session_2026_10_18_causal_audit.json": {
+      "sha256": "28acb017c70e54bfba8668e055f9e1274ebe9542d43cea215385cd35e43b3d19",
+      "size_bytes": 2117,
+      "modified": "2026-10-18T13:21:45"
+    },
+    "results/outputs/session_2026_10_27_phase_pattern_audit.json": {
+      "sha256": "f1077e5d2a05c7be624f1ebd46a9efb74830c9eebcdd804334e4940a9d8282e9",
+      "size_bytes": 1476,
+      "modified": "2026-10-27T21:04:14"
+    },
+    "results/outputs/sinex_audit.json": {
+      "sha256": "c651bf158fd2c258268ffb5875d0d0bf58061795115e728372d8ef95c8a56225",
+      "size_bytes": 3712,
+      "modified": "2026-09-01T17:32:53"
+    },
+    "results/outputs/sinex_fallback_impact.json": {
+      "sha256": "f8ad933363c4cdc98dff83543c08885c92044f8375ddd6fe72ddede848fe8d23",
+      "size_bytes": 5650,
+      "modified": "2026-09-01T17:38:54"
+    },
+    "results/outputs/step_03b_controls.json": {
+      "sha256": "7adcf35dcbd1fe69bc491209165ca36bfdd49c5e8f37abf69b9d4bd48840d2d5",
+      "size_bytes": 1491,
+      "modified": "2026-09-01T08:52:51"
+    },
+    "results/outputs/step_03c_precise_controls.json": {
+      "sha256": "7e7523cacf216466a26e67f0adc4891b3ef3b64df3702c4ee3adf4638bd8ca0a",
+      "size_bytes": 1964,
+      "modified": "2026-09-01T08:35:37"
+    },
+    "results/outputs/step_06_falsification.json": {
+      "sha256": "1db6e07e9b8d34171b428b61ea2590236b474c1a17800073c0adcb4ad5460967",
+      "size_bytes": 1275,
+      "modified": "2026-09-03T23:34:25"
+    },
+    "results/outputs/step_09_acquire_global_clk.json": {
+      "sha256": "b75901f04411dbaca8493c468703ba5dc2b4fa3a1fad5a2b244989fc072cec93",
+      "size_bytes": 210,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_09b_acquire_sinex.json": {
+      "sha256": "836d26c6ab0ce883b16e8a2676fa68eaf2bae9ed6f16598b8a2b1c413fce4634",
+      "size_bytes": 132,
+      "modified": "2026-09-01T15:28:54"
+    },
+    "results/outputs/step_100_decisive_drone_experiment.json": {
+      "sha256": "8faabc20b5882bc3a3138f986e5781b5e0dcafe136e234e6adced6764994beee",
+      "size_bytes": 5943,
+      "modified": "2026-09-03T23:42:51"
+    },
+    "results/outputs/step_101_full_field_predictor.json": {
+      "sha256": "a19d41bf6726f802b068e688a1d7582a9c5712050fba416f9334476a64803d73",
+      "size_bytes": 8475,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_102_causal_deployable_p1_gate.json": {
+      "sha256": "be67c56fc8abd03a45b35b1357cbac2135a4f0c8c95e559e1099c974853b86be",
+      "size_bytes": 2647,
+      "modified": "2026-09-03T23:43:34"
+    },
+    "results/outputs/step_103_atomic_quartz_gradients.json": {
+      "sha256": "646cfaadac48734ecb466153269cc3f3e86b3d439d16844ce243195753f70eb3",
+      "size_bytes": 2553,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_104_leo_moving_platform.json": {
+      "sha256": "90b441f3cd2683379d84dca03ba8d9a1d9306440ea4441de21d96988dbdeb31b",
+      "size_bytes": 5222,
+      "modified": "2026-09-04T10:53:19"
+    },
+    "results/outputs/step_104b_seasonal_regional_sweep.json": {
+      "sha256": "8d5b82bce26955ad5c29e1974343844a8b860dd7c6449861df53942d0d2946bf",
+      "size_bytes": 73647,
+      "modified": "2026-10-16T14:16:46"
+    },
+    "results/outputs/step_105_gracefo_moving_platform.json": {
+      "sha256": "1726f141f8b39f71374d2ad9cbe69ab6415597269b748911670b333445afa68f",
+      "size_bytes": 6432,
+      "modified": "2026-09-04T11:12:17"
+    },
+    "results/outputs/step_106_degraded_sky_position_flagship.json": {
+      "sha256": "7d49c53aa8229abd4878f21ff435226d0bc4e22ef6a6d563c51951999c4690e2",
+      "size_bytes": 14783,
+      "modified": "2026-09-04T14:51:14"
+    },
+    "results/outputs/step_107_live_clock_prior_calibration.json": {
+      "sha256": "5427924a877bdd44de48a3bb6f70472d2fc249664806882acf6a46586ad108dc",
+      "size_bytes": 1362,
+      "modified": "2026-09-06T21:13:43"
+    },
+    "results/outputs/step_10_global_correlation.json": {
+      "sha256": "31b40d07de82759b01559226bfd86813f5c6a179f61167f908e2730f1c0a0af7",
+      "size_bytes": 11023,
+      "modified": "2026-09-03T00:52:29"
+    },
+    "results/outputs/step_114_solar_flare_trigger.json": {
+      "sha256": "9a10b89684acf02cc4959cb5b832be02eba230657ac14ba1beb376019506a069",
+      "size_bytes": 17900,
+      "modified": "2026-09-06T19:07:10"
+    },
+    "results/outputs/step_115_lunar_tidal_modulation.json": {
+      "sha256": "9071d0450b50f359637b20b70510159e16ec71e95a00d35181c3ba609b2f015e",
+      "size_bytes": 19026,
+      "modified": "2026-09-06T19:09:17"
+    },
+    "results/outputs/step_116_eclipse_ionospheric_test.json": {
+      "sha256": "470a39495d29bbd4f73dc677650f28e33092d87e9a7c0416aff062f4831501c0",
+      "size_bytes": 8391,
+      "modified": "2026-09-06T18:48:08"
+    },
+    "results/outputs/step_117_hemisphere_symmetry.json": {
+      "sha256": "f0ed42328cc95cb45c7f6a4764a148f82119a66f2cf952ccd21cf9f4b371c22b",
+      "size_bytes": 10485,
+      "modified": "2026-09-06T18:48:08"
+    },
+    "results/outputs/step_118_subband_scale_free.json": {
+      "sha256": "9b19e6ab1a15b5dbf1e8b3e28ae7802b879ed46e85e231123e756fb70a2c3ef7",
+      "size_bytes": 3075,
+      "modified": "2026-09-06T18:48:08"
+    },
+    "results/outputs/step_119_spectral_signature.json": {
+      "sha256": "9a24b355852db224ce2e6594bfff0ea57bfa2f4e26e1f58bdf8771bdbc69b1e4",
+      "size_bytes": 4973,
+      "modified": "2026-09-06T19:07:03"
+    },
+    "results/outputs/step_11_anisotropy.json": {
+      "sha256": "90c9cf09662a5f1cf4238da36c97d120ae78d6d6ceb951d0eab316d4d25c4d95",
+      "size_bytes": 4880,
+      "modified": "2026-09-01T18:54:50"
+    },
+    "results/outputs/step_11b_anisotropy_csd.json": {
+      "sha256": "7be69666b5618a143ffb2aec43430b5fc5efd57553e25b832e8430475680b6cc",
+      "size_bytes": 8237,
+      "modified": "2026-09-02T00:56:04"
+    },
+    "results/outputs/step_120_lunar_screening.json": {
+      "sha256": "324a547b6ad5abe1e40e622d95d5d13fe03284fbf2c562340284ca68136a5373",
+      "size_bytes": 15967,
+      "modified": "2026-09-06T18:54:08"
+    },
+    "results/outputs/step_121_peak_filtered_coherence.json": {
+      "sha256": "13d9922ea46c48b926daecefebd26fd6840e130243395eec76b88c9eaf8244d9",
+      "size_bytes": 7144,
+      "modified": "2026-09-06T19:13:09"
+    },
+    "results/outputs/step_122_lat_controlled_screening.json": {
+      "sha256": "1654ccb86e09237a455c29cb2a08086d1e9ae63ca0c0a96fdd9d9ea1248dd5ab",
+      "size_bytes": 2979,
+      "modified": "2026-09-06T19:13:09"
+    },
+    "results/outputs/step_123_solar_elevation_dependence.json": {
+      "sha256": "a1bf53fecbfdef3647e89c878174c97511b14bbb298761c83f6f8ad7305faf5a",
+      "size_bytes": 2953,
+      "modified": "2026-09-06T19:13:13"
+    },
+    "results/outputs/step_124_nighttime_residual.json": {
+      "sha256": "65c9d14d2cd2bf1c2acce9d0606bc3f1af509018b6892ee0c9ab718bd240ccb6",
+      "size_bytes": 3022,
+      "modified": "2026-09-06T19:31:53"
+    },
+    "results/outputs/step_125_notched_elevation.json": {
+      "sha256": "ea80b86f3b85681fde5175d9cf0062fd4505b409a5367f68622ecad192712156",
+      "size_bytes": 5750,
+      "modified": "2026-09-06T19:31:40"
+    },
+    "results/outputs/step_126_cross_frequency.json": {
+      "sha256": "ce046087f7a8fb8abf9178a13b8266a4e59972878bac67fc0d35d2a663d061fe",
+      "size_bytes": 2994,
+      "modified": "2026-09-06T19:32:02"
+    },
+    "results/outputs/step_127_notched_prior.json": {
+      "sha256": "a52a0a77a6d0b400a520eba04657c9e9cbbb9bf1c3d3a4e92b0662e3a3e57da1",
+      "size_bytes": 2415,
+      "modified": "2026-09-06T20:03:11"
+    },
+    "results/outputs/step_128_storm_adaptive.json": {
+      "sha256": "88183c90bd48133b04871f2f1676870bef86e4ff7ca1655b51766918dcbc6782",
+      "size_bytes": 2372,
+      "modified": "2026-09-06T20:02:21"
+    },
+    "results/outputs/step_129_lat_aware_prior.json": {
+      "sha256": "3f5c737547e9b46a96b7103d6c637009de33437cf8e972df5158c4ff8bc98d68",
+      "size_bytes": 1982,
+      "modified": "2026-09-06T20:04:24"
+    },
+    "results/outputs/step_12_resolvability.json": {
+      "sha256": "12ac3d1151db14bd81cabcb03a123f097a4fba39013d4872d3a99203fc9a5373",
+      "size_bytes": 5680,
+      "modified": "2026-09-01T08:59:00"
+    },
+    "results/outputs/step_130_day_night_prior.json": {
+      "sha256": "afb4d145ed6461011399747d2f1cb2da458ad2da486fbff86e7ef25b59b9d473",
+      "size_bytes": 2210,
+      "modified": "2026-09-06T20:02:47"
+    },
+    "results/outputs/step_131_tidal_band_prior.json": {
+      "sha256": "010006a1f64f1c2c2f516904db345dc29d5252990e8bdb015c96a1836b79d7a4",
+      "size_bytes": 2329,
+      "modified": "2026-09-06T20:13:44"
+    },
+    "results/outputs/step_132_m2_isolation.json": {
+      "sha256": "c11143b4cab395741b533ae7a954210992f5b4cb429835b8ac11ea12fcfe17ca",
+      "size_bytes": 1026,
+      "modified": "2026-09-06T20:13:05"
+    },
+    "results/outputs/step_133_tidal_enhanced.json": {
+      "sha256": "422d5272534b6d9cb8b3bccf7b967695241e66e04aa3730beecae576efee3b12",
+      "size_bytes": 1422,
+      "modified": "2026-09-06T20:13:47"
+    },
+    "results/outputs/step_134_multiband_prior.json": {
+      "sha256": "1ee51b8503ecc4b81cc92d69a84b2b475c203466c691cc50e725897fa502c999",
+      "size_bytes": 2508,
+      "modified": "2026-09-07T01:24:32"
+    },
+    "results/outputs/step_135_weighted_fusion.json": {
+      "sha256": "7fa7b80fc4308f92656e227e3385dd85451b5a87328e05fef406f98068af5a66",
+      "size_bytes": 3254,
+      "modified": "2026-09-06T20:35:39"
+    },
+    "results/outputs/step_136_band_nugget.json": {
+      "sha256": "58338f1fc301cf7b6276ad20df90ffc6284a422bb6e145665cb0b52b81db42bf",
+      "size_bytes": 1528,
+      "modified": "2026-09-06T20:49:25"
+    },
+    "results/outputs/step_137_aperture_synthesis.json": {
+      "sha256": "a3d8054dc525994925d6414d9b880a19522debf406ba7e95114c99471f4254e5",
+      "size_bytes": 23244,
+      "modified": "2026-09-06T22:01:24"
+    },
+    "results/outputs/step_138_alien_clock_vertex.json": {
+      "sha256": "b1e73b59e2025301f9779e220a7d6b019b5a91306da45762591e2865e8c309ec",
+      "size_bytes": 665606,
+      "modified": "2026-09-06T21:50:04"
+    },
+    "results/outputs/step_139_pulsar_crosscheck.json": {
+      "sha256": "235fcbfd4424b219e38f94f5205cebdc347ea14918234dfc3fec54fb38a7b2ce",
+      "size_bytes": 18192,
+      "modified": "2026-09-06T22:01:31"
+    },
+    "results/outputs/step_13_commonview.json": {
+      "sha256": "0d59cd11b38ef18053496f000df69855da9ef564a800bc82ec57b0f8d371b6aa",
+      "size_bytes": 1767,
+      "modified": "2026-09-01T18:46:05"
+    },
+    "results/outputs/step_140_multiband_controls.json": {
+      "sha256": "f24d6e08a91c87f35db8ef0da2ef9f1682ee8988072bb84059311a4d24debf53",
+      "size_bytes": 5050,
+      "modified": "2026-09-06T21:01:58"
+    },
+    "results/outputs/step_142_multi_year.json": {
+      "sha256": "8c49c053cfdf3d1e8c308c02db9cc7a813722c160cf4f72aee328328d34893b0",
+      "size_bytes": 2506,
+      "modified": "2026-09-06T20:59:48"
+    },
+    "results/outputs/step_143_lambda_sweep.json": {
+      "sha256": "6633f7f5672bec09c5dc5779885e84b35078e40c01e54ee9853a12b4601ffd77",
+      "size_bytes": 7434,
+      "modified": "2026-09-06T21:30:15"
+    },
+    "results/outputs/step_144_fake_tides.json": {
+      "sha256": "1397af0fd545d16c3d3bae6f2e56f034a7405ab5027b518182761a4b747c1de9",
+      "size_bytes": 2347,
+      "modified": "2026-09-06T21:23:50"
+    },
+    "results/outputs/step_145_multiband_operational.json": {
+      "sha256": "2bb2a60cdfd7c67d7b7ca7ef47c5515f5c6a7415e2883202d9405b38000d7362",
+      "size_bytes": 64,
+      "modified": "2026-09-07T01:23:35"
+    },
+    "results/outputs/step_146_constellation_8h_clocktype.json": {
+      "sha256": "2358152ea299ef80011ad3e3dc582e965d3e39bbe215d5670fe75c075b0ecc2e",
+      "size_bytes": 26798,
+      "modified": "2026-09-07T00:23:11"
+    },
+    "results/outputs/step_147_year2021.json": {
+      "sha256": "637080ea7ec3c1045b291a86cd14fb6ca3625c884c4e60044a8f54163445661b",
+      "size_bytes": 59,
+      "modified": "2026-09-06T21:39:00"
+    },
+    "results/outputs/step_148_finer_bands.json": {
+      "sha256": "57ff6b22d465565c19a7cf9a3ea115e5976453b95fa944461d3b9b7e0bd933a7",
+      "size_bytes": 2536,
+      "modified": "2026-09-06T21:40:29"
+    },
+    "results/outputs/step_149_m2_lunar.json": {
+      "sha256": "daa0cb53fd37653f60477ad012ce2052c8150d68303dafdf5d5607e5dee27664",
+      "size_bytes": 2409,
+      "modified": "2026-09-07T00:50:39"
+    },
+    "results/outputs/step_14_precise_global.json": {
+      "sha256": "e8dcacf0e7137b2243c8090dbe1419522a8178206b5612a7a04a7e8d13050b5b",
+      "size_bytes": 26463,
+      "modified": "2026-09-01T17:33:48"
+    },
+    "results/outputs/step_150_holdover.json": {
+      "sha256": "40c8ca9ebfd990d7fd701efa85b3a041b8136b42f1389d80412af8b041b125e0",
+      "size_bytes": 5992,
+      "modified": "2026-09-07T01:37:54"
+    },
+    "results/outputs/step_152_freq_spectrum.json": {
+      "sha256": "51f1afb22faf60775aa0f18220ad411f0569b7d64d45ca9505abb32242b09268",
+      "size_bytes": 124041,
+      "modified": "2026-09-07T00:58:13"
+    },
+    "results/outputs/step_152_lunar_tides.json": {
+      "sha256": "5d3b1bfd56cabc017b2156421178f45581d9cec16a0cf0424ff8281b4d69837d",
+      "size_bytes": 25104,
+      "modified": "2026-09-07T00:24:42"
+    },
+    "results/outputs/step_152b_lunar_expanded.json": {
+      "sha256": "7eb1e9b6271217e6037c36a73d169339a3a7aebdc8ed2bceab3fc45afb8e4e84",
+      "size_bytes": 65187,
+      "modified": "2026-09-07T02:22:27"
+    },
+    "results/outputs/step_152c_igs_lunar.json": {
+      "sha256": "506d183a46e4dd48f834e9bf2a28e45541a9cf55c6453efe20b2b5849b4ce4c0",
+      "size_bytes": 63251,
+      "modified": "2026-09-07T02:31:10"
+    },
+    "results/outputs/step_152d_gfz_lunar.json": {
+      "sha256": "cd406ce89389c02e24d905c9ebf73613f2c642b4af70ba2e7901c8a29a5c726d",
+      "size_bytes": 72443,
+      "modified": "2026-09-07T10:04:03"
+    },
+    "results/outputs/step_152e_gfz_2024.json": {
+      "sha256": "17b2d6869aeb9976602c8c1f8d60d0fb3337ddc9822233138a0f28556ac8a4ed",
+      "size_bytes": 62295,
+      "modified": "2026-09-07T10:38:16"
+    },
+    "results/outputs/step_152f_cod_2024.json": {
+      "sha256": "7ce8889eb1b901040bba81d4dd54311041716de960a3877b2078657ebdedea4b",
+      "size_bytes": 42979,
+      "modified": "2026-09-07T10:22:10"
+    },
+    "results/outputs/step_153_cross_product.json": {
+      "sha256": "f953e5655518da5619d7864eb4dd415321fc0a8b6a35a6644cf2d83f6667253c",
+      "size_bytes": 2528,
+      "modified": "2026-09-07T00:26:23"
+    },
+    "results/outputs/step_154_holdover_ar.json": {
+      "sha256": "b63ea2ad10e37ccc99cd3ec44e2b8951ddc6e899b1eb3760a20e2f7e32160242",
+      "size_bytes": 9141,
+      "modified": "2026-09-07T01:01:58"
+    },
+    "results/outputs/step_155_leave_one_band_out.json": {
+      "sha256": "30204f6adcadd01c1c7955145450ec80abe7a8657a283e0fdb7e6ef8da5b87f8",
+      "size_bytes": 6540,
+      "modified": "2026-09-07T02:05:20"
+    },
+    "results/outputs/step_156_weighted_loob.json": {
+      "sha256": "e5ed8b01a6cb1dc607035e20bec035a594658ae6ccfdee9d469b8f59243b669e",
+      "size_bytes": 8977,
+      "modified": "2026-09-07T02:11:45"
+    },
+    "results/outputs/step_157_tidal_notching.json": {
+      "sha256": "71fdcb10943d119757be641687b66889020cfefc6727d26f209a08ac411d63db",
+      "size_bytes": 7687,
+      "modified": "2026-09-07T02:12:54"
+    },
+    "results/outputs/step_158_screening_replication.json": {
+      "sha256": "b14590286b3b84eb358ac226f3568f019334a5e9ec63aab81cd1de08424bca89",
+      "size_bytes": 2110,
+      "modified": "2026-09-07T02:23:11"
+    },
+    "results/outputs/step_159_clocktype_multiband.json": {
+      "sha256": "9d9fa352353276781806485c7a5c96a9c686ce6faea1c71decc1124892677ce2",
+      "size_bytes": 2131,
+      "modified": "2026-09-07T02:10:08"
+    },
+    "results/outputs/step_15_csd_crosscheck.json": {
+      "sha256": "340c30054ccfed774649080818919cb7ff78ad0439d77f25bb6961e20501bb83",
+      "size_bytes": 5399,
+      "modified": "2026-09-01T22:13:44"
+    },
+    "results/outputs/step_160_freq_clocktype.json": {
+      "sha256": "3247326d16ebd83212e3b6e42f2a60dfd31c9f19dc887f0139ffc63b211baa06",
+      "size_bytes": 4852,
+      "modified": "2026-09-07T02:25:02"
+    },
+    "results/outputs/step_162_m2_vs_s2_clocktype.json": {
+      "sha256": "70af5b8a88f90dab4405635b9260dae29db312bbc58c4562c8ff32c0e8b47799",
+      "size_bytes": 4778,
+      "modified": "2026-09-07T02:22:52"
+    },
+    "results/outputs/step_163_colocated_differential_spectrometer.json": {
+      "sha256": "b36548bdeb9819d9fb7da6529618f9037b436e2aac72c4b2f8c4a7b21e961b1d",
+      "size_bytes": 584358,
+      "modified": "2026-09-07T23:10:08"
+    },
+    "results/outputs/step_164_fullyear_differential_spectrometer.json": {
+      "sha256": "dc75774ab452e38ef63add8f81693f2985248468933648202ab829228b467373",
+      "size_bytes": 114549,
+      "modified": "2026-09-07T23:10:08"
+    },
+    "results/outputs/step_165_gravitational_phase.json": {
+      "sha256": "05bdfa9815df5e00fffe6cbca29c54748ecbc9850b6bcd7bd00f0d2592d77e02",
+      "size_bytes": 18177,
+      "modified": "2026-09-07T12:43:44"
+    },
+    "results/outputs/step_165b_gravitational_phase_direct.json": {
+      "sha256": "c43bc7ad970dc848bcc589c90d01aae562e6bf037f27918f4536674dd3241b0d",
+      "size_bytes": 18242,
+      "modified": "2026-09-07T13:22:44"
+    },
+    "results/outputs/step_166_differential_gravitational_phase.json": {
+      "sha256": "1ceff683c66cc10a8ad81aa5d984d1eb5f7d4d4d3f8e8ca9e4e40059eff3de3f",
+      "size_bytes": 26611,
+      "modified": "2026-09-07T13:58:31"
+    },
+    "results/outputs/step_166b_differential_gravitational_phase_wide.json": {
+      "sha256": "92dccb6297797998e04b6b0f18edf1b9312afa1ab25d11084ed409dbc60f7ba4",
+      "size_bytes": 243768,
+      "modified": "2026-09-07T15:23:01"
+    },
+    "results/outputs/step_167_clocktype_gravitational_phase.json": {
+      "sha256": "17b0b50539654a088538b7312bd91b77f760af6a04034ccb58ddb2243cfc7a06",
+      "size_bytes": 3006,
+      "modified": "2026-09-07T16:04:19"
+    },
+    "results/outputs/step_168_live_network_tep_evidence.json": {
+      "sha256": "a858bea1a1aaf57ab36e60bd6f985cea23638a17002fef39da2bbc0081fd2f6d",
+      "size_bytes": 5628,
+      "modified": "2026-09-07T21:15:11"
+    },
+    "results/outputs/step_169_corrected_gravitational_phase.json": {
+      "sha256": "e10c4f1fe3984ab0fc362fe777f38f1edb2ff2e4e1a1883ea80e1510c85759a7",
+      "size_bytes": 8195,
+      "modified": "2026-09-07T23:28:05"
+    },
+    "results/outputs/step_169_gfz_replication.json": {
+      "sha256": "3dde58a236cc423511d1984abde12277f4fc7456c17360c28270caf4465dd435",
+      "size_bytes": 4290,
+      "modified": "2026-09-07T21:36:11"
+    },
+    "results/outputs/step_16_draconitic_falsification.json": {
+      "sha256": "7d209e5582d506373457584f8c47bbe2d740e3e88ed7845fe0cd55c176db1ef0",
+      "size_bytes": 2391,
+      "modified": "2026-09-01T09:11:03"
+    },
+    "results/outputs/step_170_clock_field_localisation_live.json": {
+      "sha256": "c121450768af1ea8cfd583bab02ba77a54770fbd70715753d958630160025a30",
+      "size_bytes": 1211,
+      "modified": "2026-09-08T11:53:43"
+    },
+    "results/outputs/step_171_ztd_covariance_control.json": {
+      "sha256": "615516eeea9a5440682a6bb2ea8de04cee97fa434801ccab6feb113336091626",
+      "size_bytes": 48097,
+      "modified": "2026-09-26T23:43:33"
+    },
+    "results/outputs/step_172_channel_sensitivity.json": {
+      "sha256": "476f84826042dd2aa72d3c74245b19ed4fb001c02af50cbba1f356adf1872431",
+      "size_bytes": 3731,
+      "modified": "2026-10-29T16:45:32"
+    },
+    "results/outputs/step_172_satellite_free_holdover.json": {
+      "sha256": "3b5629f9878948270810dfd160486e1fc29e55704a301ff4442db9d1b819d453",
+      "size_bytes": 5313,
+      "modified": "2026-10-29T16:43:15"
+    },
+    "results/outputs/step_173_twstft_screen.json": {
+      "sha256": "4c49af6f4cb9a8b036d139ee8c924806c05c349ba2a0408d7f3c1118c58eea90",
+      "size_bytes": 16285,
+      "modified": "2026-10-28T05:09:55"
+    },
+    "results/outputs/step_174_clean_untapered_arm.json": {
+      "sha256": "0a0c74d58ab4046bc2fee7152fe340988415fcb748e75eba9a4b28672f8abbb7",
+      "size_bytes": 32802,
+      "modified": "2026-10-29T05:27:31"
+    },
+    "results/outputs/step_174_epoch_share.json": {
+      "sha256": "5d22c320396f787dff67f5372146a70116f3678bc7ad97c720ad16d1065f3f3e",
+      "size_bytes": 555,
+      "modified": "2026-10-28T19:47:33"
+    },
+    "results/outputs/step_174_mismatch_control.json": {
+      "sha256": "83d60672b8def694dd731d805a58746004d6a2277c680f61386671f8c80022be",
+      "size_bytes": 6318,
+      "modified": "2026-10-29T17:23:42"
+    },
+    "results/outputs/step_174_sealed_envelope_prediction.json": {
+      "sha256": "903f08aa3a2e31c8e817865414a83bf507631670ce4b1e22528f074dfb37d7a4",
+      "size_bytes": 154547,
+      "modified": "2026-10-29T02:11:35"
+    },
+    "results/outputs/step_174_sta_only_probe.json": {
+      "sha256": "cc581961ba31296a9f6ade5de6b4a98bed1fbed4fa41fd9bc6632ec80e1bee57",
+      "size_bytes": 8362,
+      "modified": "2026-10-29T00:44:31"
+    },
+    "results/outputs/step_174b_station_permutation_null.json": {
+      "sha256": "0addc917dbdfb1b209bfacb387cc78db505c759a7f795bd1dd496988fabb20ee",
+      "size_bytes": 1313,
+      "modified": "2026-10-29T17:23:08"
+    },
+    "results/outputs/step_176_t2_alpha_anisotropy.json": {
+      "sha256": "263934ea29202ea3c1293640da75992131356f2378ec3ed219fe1333560d2e22",
+      "size_bytes": 15884,
+      "modified": "2026-10-29T14:50:47"
+    },
+    "results/outputs/step_177_distance_blind_geography.json": {
+      "sha256": "e9505148709698a73c81484a1ff068d0814990161b270763f5079f9277dbd3b9",
+      "size_bytes": 19218,
+      "modified": "2026-10-29T21:38:36"
+    },
+    "results/outputs/step_178_pruned_basis_probe.json": {
+      "sha256": "ba676f96c46c503781bf29ae8e3c6f74dc1a51ee3fbc29a4fe7a870d35599b8b",
+      "size_bytes": 2940,
+      "modified": "2026-10-29T21:44:35"
+    },
+    "results/outputs/step_178_satellite_scale_reconciliation.json": {
+      "sha256": "16f154018879295945c3ced4b1a3934eb5d68928bb67c3475f378f8c8107b017",
+      "size_bytes": 3955,
+      "modified": "2026-10-29T21:55:39"
+    },
+    "results/outputs/step_179_axis_robustness.json": {
+      "sha256": "25eb8199d88193262b0a97058835290eae55c0b2deca36e17a1943af651b25b1",
+      "size_bytes": 5758,
+      "modified": "2026-10-29T21:53:04"
+    },
+    "results/outputs/step_180_prospective_preregistration.json": {
+      "sha256": "1c16296328d96dd27c3fab3d46da3242e705ae77af0694aa8116beee32ee7fd3",
+      "size_bytes": 2473,
+      "modified": "2026-10-29T22:26:27"
+    },
+    "results/outputs/step_21_position_information.json": {
+      "sha256": "61073b3721007d9f972e381c8a3ebd3a5d82532ad64d089eca3c7af7a0ae88b2",
+      "size_bytes": 415414,
+      "modified": "2026-09-01T00:33:08"
+    },
+    "results/outputs/step_23_pride_endtoend.json": {
+      "sha256": "e9d877715e300b588b52a436dd559e632534d88fdcc58484f8bb05f6befbb9de",
+      "size_bytes": 971,
+      "modified": "2026-09-01T00:35:30"
+    },
+    "results/outputs/step_24_degraded_geometry.json": {
+      "sha256": "b5ee305bf757090112a407bc2eaf365e839a3c0cd65cf442dec4aecc541ba0c7",
+      "size_bytes": 2572,
+      "modified": "2026-09-01T00:48:22"
+    },
+    "results/outputs/step_25_kernel_selection.json": {
+      "sha256": "ec6668815dab5b3ce3758a06e12e73f24ef11531e852e57c1b3f69acb533a682",
+      "size_bytes": 367537,
+      "modified": "2026-09-01T10:34:09"
+    },
+    "results/outputs/step_26_operational_gain.json": {
+      "sha256": "84b9f728f45bc979d076bed7dcdec870970c402d91e733568fe16e00afe7ea9a",
+      "size_bytes": 13895,
+      "modified": "2026-09-27T00:51:04"
+    },
+    "results/outputs/step_27_discriminators.json": {
+      "sha256": "f3d95de52d29ddfe47d4f63cce142244a551c55ad6baaca14a122e7d904ad3ba",
+      "size_bytes": 4345,
+      "modified": "2026-09-01T12:46:25"
+    },
+    "results/outputs/step_30_meo_kriging.json": {
+      "sha256": "2bcd843bbb96964983e86d91b91c9cf4d7948cacc5c24bc4866b459230dd1906",
+      "size_bytes": 1371,
+      "modified": "2026-09-01T04:37:46"
+    },
+    "results/outputs/step_31_meo_anisotropy.json": {
+      "sha256": "6b3fa5187b19bf17850cc2b6a41739b253db5de3b64ddbcfbdf5275ee9ed3b50",
+      "size_bytes": 591,
+      "modified": "2026-09-01T03:16:04"
+    },
+    "results/outputs/step_32_kernel_family.json": {
+      "sha256": "8f31a320dd6c7d126972e177c5db97b4e3a9c7e8bb1539220aec334509c2b8e9",
+      "size_bytes": 2256585,
+      "modified": "2026-09-01T13:16:08"
+    },
+    "results/outputs/step_33_position_demo.json": {
+      "sha256": "05f8975fbf0f78dec1f405a35470380459353b69ce3ea8b1fd100f21d294d522",
+      "size_bytes": 1758099,
+      "modified": "2026-09-01T17:49:28"
+    },
+    "results/outputs/step_34_heldout_lodo.json": {
+      "sha256": "22a65ddc56887e4bdff98f0f4e823a425a6aa7bf4ca055b84a391a44eca4f464",
+      "size_bytes": 281475,
+      "modified": "2026-09-01T16:48:02"
+    },
+    "results/outputs/step_34b_meo_gradient.json": {
+      "sha256": "dee20034243aefc7af5de1963ff16bcdbadf9df5a14315108493d5a5bdebd610",
+      "size_bytes": 11848,
+      "modified": "2026-10-29T13:04:09"
+    },
+    "results/outputs/step_35_position_lodo.json": {
+      "sha256": "279a7002d839835b9936185ce308af8886e584353ecf8be4daaa64c19200b6a4",
+      "size_bytes": 822381,
+      "modified": "2026-09-27T00:51:04"
+    },
+    "results/outputs/step_36_meo_csd.json": {
+      "sha256": "59c2a4090358f86650126d92af00dc7bab799bf0e7767c57c6844ea21e953451",
+      "size_bytes": 24703,
+      "modified": "2026-10-29T10:28:01"
+    },
+    "results/outputs/step_37_ntrip_acquire.json": {
+      "sha256": "5d7745da873fa0665680379ae1e59cf13f112c80f275097b0856a16f20015049",
+      "size_bytes": 8081,
+      "modified": "2026-10-16T11:24:20"
+    },
+    "results/outputs/step_37b_ntrip_process.json": {
+      "sha256": "f593fab208447d3becfb9b11fcecf1e1d8ece367f90da58f33a46030b435e468",
+      "size_bytes": 47601,
+      "modified": "2026-10-16T11:39:17"
+    },
+    "results/outputs/step_37c_ntrip_report.json": {
+      "sha256": "a895d55d3c8e673369a26431c1e36e4406fae7ff4fa71821225c322e1f67a5da",
+      "size_bytes": 2328,
+      "modified": "2026-10-16T11:41:09"
+    },
+    "results/outputs/step_38_baseline_battery.json": {
+      "sha256": "686678e5d87abbbfe8a47b819d3a3f1915431bee70943ca265f92daf415f6487",
+      "size_bytes": 3162162,
+      "modified": "2026-09-02T13:22:06"
+    },
+    "results/outputs/step_39_endtoend_position.json": {
+      "sha256": "140b02adee56cfc1a7bafae59063ed86bbc61c18e48fe71922cafaed258c4c31",
+      "size_bytes": 84398,
+      "modified": "2026-09-01T18:13:15"
+    },
+    "results/outputs/step_3_tep_analysis_results.npz": {
+      "sha256": "ba09846a46faf96c9876e4412a48b8edd3aaa936f8c64171fe9a337001ae4fa9",
+      "size_bytes": 69854,
+      "modified": "2026-09-01T08:52:03"
+    },
+    "results/outputs/step_40_bandpass_sensitivity.json": {
+      "sha256": "d30ce1ba6c9b5be45b14847826b2bad84734d90ac2f3a65135de29001f0b70b5",
+      "size_bytes": 3150,
+      "modified": "2026-09-01T18:16:46"
+    },
+    "results/outputs/step_41_global_anisotropy.json": {
+      "sha256": "48afa4c4e3358c7d2524c0136ca26556b6fc18ee9daedb3d1ba155656d6e7811",
+      "size_bytes": 1913,
+      "modified": "2026-09-01T17:43:45"
+    },
+    "results/outputs/step_42_global_t5.json": {
+      "sha256": "fa1deab587fa756836a1a3ba78b058ac6f3ede374c719cecf57c48f16e64838f",
+      "size_bytes": 4512,
+      "modified": "2026-09-01T17:47:03"
+    },
+    "results/outputs/step_43_free_gp_validation.json": {
+      "sha256": "da65de522ac060f0fe80364d55db0577f8e5c86b54ac28bed87d7a93dac335f4",
+      "size_bytes": 4475,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_44_raw_thin_position.json": {
+      "sha256": "3a679e9cff931ed055fdc9cdd02d0210569f311f0563bc4d4b6eba4d0672b4bf",
+      "size_bytes": 121512,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_45_temporal_t4.json": {
+      "sha256": "c67665945759c248b8adc83fdbcdbae74dab59fb070b566bce8c8e72c3345240",
+      "size_bytes": 7464,
+      "modified": "2026-10-29T18:03:36"
+    },
+    "results/outputs/step_45b_t4_forensic.json": {
+      "sha256": "b4fe2939af6fae6f795fc46f06a7910c69320651449eafa051b5a2131dcec09d",
+      "size_bytes": 18478,
+      "modified": "2026-10-29T09:12:40"
+    },
+    "results/outputs/step_47_continuous_azimuth_t2.json": {
+      "sha256": "b951f3ba368cc1484ed9ac8d282bb788270cece15d3120149310c9a120c2ec9f",
+      "size_bytes": 31977,
+      "modified": "2026-09-01T20:36:01"
+    },
+    "results/outputs/step_48_three_satellite.json": {
+      "sha256": "2b4ce31f28ed0e5e4332d18a32269ba0c762e6321a7df767045bad60805ed094",
+      "size_bytes": 323407,
+      "modified": "2026-09-03T00:58:46"
+    },
+    "results/outputs/step_48_three_satellite_precise.json": {
+      "sha256": "7a38eac742fecdee6554aed5ea8602d14a65737e297b0f067b64d4793bcb9cc8",
+      "size_bytes": 339361,
+      "modified": "2026-09-03T02:09:16"
+    },
+    "results/outputs/step_48b_gap_sweep.json": {
+      "sha256": "779b7676e9052c4a2074627a8fd5ca5aff6ef70904fd86de1f2e39901c8fb736",
+      "size_bytes": 11684,
+      "modified": "2026-09-02T08:30:19"
+    },
+    "results/outputs/step_50_lambda_meta_analysis.json": {
+      "sha256": "cdad2f0bf8e5d2193ab42f79df6179e7de4aff4d5203a826d782b9dfde5c68ee",
+      "size_bytes": 3539,
+      "modified": "2026-09-01T21:02:00"
+    },
+    "results/outputs/step_52_drone_kinematic.json": {
+      "sha256": "456f7f81caebeb6e9faaf881064cb7e1adc8bd0e0d2060ce9be29c08fe380a84",
+      "size_bytes": 2675213,
+      "modified": "2026-10-30T00:54:16"
+    },
+    "results/outputs/step_53_coherent_lambda.json": {
+      "sha256": "db64dbcdc8ed9ef63bee8e6942a3ac0c1360d86d07fb25be1ccc422e4ef30169",
+      "size_bytes": 13016,
+      "modified": "2026-09-02T00:09:10"
+    },
+    "results/outputs/step_54_dense_operational_skill.json": {
+      "sha256": "feda79f2d91f788effaf02c2e18ef32a7ef2ffde5ccbf051045c3b00bf78156d",
+      "size_bytes": 43889,
+      "modified": "2026-09-02T09:13:24"
+    },
+    "results/outputs/step_55_dense_outage_prediction.json": {
+      "sha256": "b6e212724decc2b9be4de9cf36aa458d867ed9f1115e2a6fccc525529af18505",
+      "size_bytes": 47797,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_55_dense_outage_prediction_legendre.json": {
+      "sha256": "4086cf7ab731c0bb78ec1b01f6b50d24d58373e4d9f09b5190010410fc998f6f",
+      "size_bytes": 38526,
+      "modified": "2026-09-03T19:09:49"
+    },
+    "results/outputs/step_56_phase_predictive_bridge.json": {
+      "sha256": "1cb42cb4b2f0e26c3389f77fed3d14bc9e546b81cf495125bf4b211a8a6350bf",
+      "size_bytes": 50648,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_57_joint_estimator_sensitivity.json": {
+      "sha256": "53560802a51ad52e88c9dc6f8654d2a451774a1d6e29db741af31bf1da8de8f5",
+      "size_bytes": 31365,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_58_clock_field_lengthscales.json": {
+      "sha256": "2ada63f1a819bef47a9d85ed0d6203686c640c958728e5fd5d2862f57a4ce116",
+      "size_bytes": 8676,
+      "modified": "2026-09-02T10:45:23"
+    },
+    "results/outputs/step_59_common_mode_is_tep.json": {
+      "sha256": "0419d95d8836114f91f7357fd1d260e7c8824a906e638e317ce95938a84ba417",
+      "size_bytes": 10619,
+      "modified": "2026-09-02T11:36:18"
+    },
+    "results/outputs/step_60_operational_benefits.json": {
+      "sha256": "6c3ddd3dee36256b99ce37d075eebb537f75e9d82bda76484a036d22404fc6d4",
+      "size_bytes": 6891,
+      "modified": "2026-09-03T10:00:09"
+    },
+    "results/outputs/step_61_acquire_regional_cors.json": {
+      "sha256": "4f748b2498a239d7265030e573a40f9c2f35aa4c2825ba5647d7f2b16ad0acb2",
+      "size_bytes": 875,
+      "modified": "2026-09-02T17:12:59"
+    },
+    "results/outputs/step_62_ppp_convergence.json": {
+      "sha256": "2d6f97d425be775b8c7506557f22c7cf89a42b6644d367a9c9a4aa7a80886e06",
+      "size_bytes": 23392,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_62_ppp_degraded.json": {
+      "sha256": "da0b30dbf93948b86393d0b4b95ed9934cd5a54dfbfebd1ff5a2d50470577f7f",
+      "size_bytes": 88341,
+      "modified": "2026-09-03T16:04:13"
+    },
+    "results/outputs/step_64_maximal_tep_p1.json": {
+      "sha256": "10372ebe546a5cc6c9394a920b83c35abf8388080aa177e019f0721683bf5851",
+      "size_bytes": 5489,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_65_oscillator_screening.json": {
+      "sha256": "e00977fe1af0bbb991570a004bc8177d492abe83dc9473c088cb8ea54fd7b2a2",
+      "size_bytes": 3082,
+      "modified": "2026-09-02T14:27:03"
+    },
+    "results/outputs/step_65b_drift_decomposition.json": {
+      "sha256": "716bacb512143d5ec4f8b4c03401203d2d07f405c2ac4a106e9fb368faaa5b0b",
+      "size_bytes": 12018,
+      "modified": "2026-09-27T08:56:53"
+    },
+    "results/outputs/step_65c_oscillator_noise_null.json": {
+      "sha256": "3e3797b8485d1c6d6c3d3a6686c937bf6ecc854c27b73dd165b809fa532dab2a",
+      "size_bytes": 14205,
+      "modified": "2026-09-27T09:01:07"
+    },
+    "results/outputs/step_66_clock_gradient_holygrail.json": {
+      "sha256": "fb829a3fc2eb0be872e43aff05ed26fa894ec2dd68fa4c303f518a859ca9bc23",
+      "size_bytes": 23459,
+      "modified": "2026-09-02T15:17:51"
+    },
+    "results/outputs/step_68_synchronization_holonomy.json": {
+      "sha256": "0efd696b1c7972f48c35546d9437c2b373450f28353616679e599620c06b331b",
+      "size_bytes": 25162,
+      "modified": "2026-09-02T16:48:08"
+    },
+    "results/outputs/step_69_sidereal_multipath_separation.json": {
+      "sha256": "7262b2b6b5f6d2d2151cd44fbf7634485d9322a77c48566d906d81f583dd9dd6",
+      "size_bytes": 6123,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_70_quartz_outage_clock.json": {
+      "sha256": "06c7b9498f337556fb43897d89709472da02aec6966fbe7e74f2f9ec87c64271",
+      "size_bytes": 77448,
+      "modified": "2026-09-02T18:37:52"
+    },
+    "results/outputs/step_71_station_field_decomposition.json": {
+      "sha256": "4ee9ecba2f0ab7414c61507ad17be2f475763a3d854d3c923c3d6cec3bc5c36e",
+      "size_bytes": 13549,
+      "modified": "2026-09-02T18:32:48"
+    },
+    "results/outputs/step_71b_colocated_tep_anchor.json": {
+      "sha256": "45badc250dffe6f3bfb12a180cad1aef14a05b3381a4b736a79fd10af29c148e",
+      "size_bytes": 7568,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_72_housing_screening.json": {
+      "sha256": "afb89b614aa9a9b4b5c8de9e9a8e0c3d18947d0cddc59ade5be1609f6717c423",
+      "size_bytes": 28286,
+      "modified": "2026-10-28T22:07:56"
+    },
+    "results/outputs/step_72b_sidereal_template_blindness.json": {
+      "sha256": "1eb35b260c2653a55b285b43a2db20c56738791138a8cb97fdac95a9d20d039e",
+      "size_bytes": 4131,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_73_phase_anisotropy.json": {
+      "sha256": "b20b78fff1cac852d0c158b40e18f8258591fd3ac8c3720344d620318fba4e89",
+      "size_bytes": 5909,
+      "modified": "2026-09-02T20:51:51"
+    },
+    "results/outputs/step_73b_satellite_unwrap.json": {
+      "sha256": "1778036ac82316aaf75023c2c8190f9cb72ddc85f623093b788a3891da1007aa",
+      "size_bytes": 14346,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_74_short_baseline_anisotropy.json": {
+      "sha256": "2cdf83fc581600f78804a4ef7f4b8b605f2b4834ec1136efc9a6a35d610d5b1d",
+      "size_bytes": 7826,
+      "modified": "2026-09-02T21:02:47"
+    },
+    "results/outputs/step_74b_anisotropy_pair_clustered.json": {
+      "sha256": "3739cb243d047be5d952d3b7f817542bc44e1a53a7d2d20a38ddb37ba20abdb2",
+      "size_bytes": 1429,
+      "modified": "2026-09-04T17:39:54"
+    },
+    "results/outputs/step_74c_comprehensive_clocks.json": {
+      "sha256": "b2a865e327a3bcada4b55b60f35ca251e4383095431fd14b3af5250b0e567008",
+      "size_bytes": 157520,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_75_screening_organizing_principle.json": {
+      "sha256": "922ac0376233e4e3cb914a515218d0efecca08e810d5243f1021f833a7910894",
+      "size_bytes": 4177,
+      "modified": "2026-09-02T21:23:35"
+    },
+    "results/outputs/step_75b_common_mode_analysis.json": {
+      "sha256": "ed500774040f4fbd519f05ba88f2de179ea0a3fe315741061a4e0157950315b3",
+      "size_bytes": 3653,
+      "modified": "2026-09-02T22:37:41"
+    },
+    "results/outputs/step_75c_screening_lambda_proper.json": {
+      "sha256": "a8faaeae04b6366c513babc0d33ddd40186af7c230308dfbc79419c029985f7b",
+      "size_bytes": 3884,
+      "modified": "2026-09-02T22:07:25"
+    },
+    "results/outputs/step_76_screening_anisotropy_null.json": {
+      "sha256": "e36e86f88f3343e8be017ca164bab7729ef4a4348b00c464d52742c72a942db1",
+      "size_bytes": 6896,
+      "modified": "2026-09-02T21:42:04"
+    },
+    "results/outputs/step_77_colocated_screening_differential.json": {
+      "sha256": "acddf42c6bbcea47725e59c3304e85edc7622a1869c39e45399a4fbc4a3222e9",
+      "size_bytes": 10587028,
+      "modified": "2026-09-03T00:46:12"
+    },
+    "results/outputs/step_78_acquire_wide_clock_network.json": {
+      "sha256": "f42c8470e69e55106cf77f2c271827657593cbaad5c6be4e34fc1e80331f1b58",
+      "size_bytes": 1221,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_79_azel_holonomy.json": {
+      "sha256": "3f17e1345bfaa7de7c6151e4d07f1d083148069bf24522beb7240da100a8e549",
+      "size_bytes": 2658,
+      "modified": "2026-09-02T22:37:04"
+    },
+    "results/outputs/step_79_azel_holonomy_el35.json": {
+      "sha256": "7d95b29e67a6ff3009ec2c9e64071bb008daf1495e5691ccdb25d486c4380208",
+      "size_bytes": 6686,
+      "modified": "2026-09-03T08:56:20"
+    },
+    "results/outputs/step_80_clock_field_localisation.json": {
+      "sha256": "6cd19a70f777c2f051b87b291f9e50232251dceeb79df7e63db9f4cca63c4c91",
+      "size_bytes": 48759,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_80b_colocated_screening_wide.json": {
+      "sha256": "3627f5d4fa6b77c90f565157ac802440a480149098e697927acb814f6a88dc75",
+      "size_bytes": 8401,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_80b_colocated_screening_wide_dmax20000.json": {
+      "sha256": "f8ef837eb0e503996fa87d8ea7cee606249b79508f31f9177cfe164a267e54db",
+      "size_bytes": 8464,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_81_spherical_structure.json": {
+      "sha256": "a3dcf3c6a1ffb2d6771bd4f6a0def777d26c118fe6a514bd90dc1bce52934991",
+      "size_bytes": 12030,
+      "modified": "2026-09-03T00:02:44"
+    },
+    "results/outputs/step_82_anisotropy_pair_permutation.json": {
+      "sha256": "ed48097908d1f7edefac67f1c5cd2cba4c7b3cde60bfed5d0f1d3d3480c41f70",
+      "size_bytes": 3092,
+      "modified": "2026-09-03T00:04:10"
+    },
+    "results/outputs/step_83_t4_phasecos.json": {
+      "sha256": "05bd56842ffd55a0c658fe764596a57178f5d08fa6624b1b63505da7c965d589",
+      "size_bytes": 3205,
+      "modified": "2026-10-29T13:38:16"
+    },
+    "results/outputs/step_83_t4_phasecos_fullyear.json": {
+      "sha256": "01fd77e78152657e46d7ff2d4d630697054f4fb6129c9888e9939bf7b64801a0",
+      "size_bytes": 1148,
+      "modified": "2026-09-04T09:12:12"
+    },
+    "results/outputs/step_84_quadrupole_axis.json": {
+      "sha256": "b1715b47ffea6efe2c51531e132c1fbda24b27f0801070f4402a262e55964d7f",
+      "size_bytes": 2897,
+      "modified": "2026-09-03T09:23:58"
+    },
+    "results/outputs/step_85_network_density_robustness.json": {
+      "sha256": "d439d580c9bc4ae7dd49c7c7b2f754673b4629f3ab148ee98702e81eabe34d0c",
+      "size_bytes": 7258,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_86_angular_kernel_operational.json": {
+      "sha256": "b3bf478d77994595e77136fc3d27cbfb774c4debabd6252c231450568130de97",
+      "size_bytes": 4802,
+      "modified": "2026-09-03T09:55:14"
+    },
+    "results/outputs/step_87_prewindow_sensitivity.json": {
+      "sha256": "29e0332f5f24abeb26f990df43c72be3a6fd37c4ad39ecc9f989429e693f1207",
+      "size_bytes": 2165,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_88_per_station_breakdown.json": {
+      "sha256": "45076128e5f72fdbcff628cc8acf9f2664f871c6b13592bd32105015b93219fc",
+      "size_bytes": 20435,
+      "modified": "2026-09-03T20:39:38"
+    },
+    "results/outputs/step_88b_band_decomposed_kernel.json": {
+      "sha256": "75ce82095321520ce76e191b7c7bb157c77f77af6816fdd482b33168e65894ba",
+      "size_bytes": 1175,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_89_seasonal_axis.json": {
+      "sha256": "e9e5799f6253f71151cb85a2d246075fc2f5a058b6a4eaf02cf6eb71f6938d88",
+      "size_bytes": 6184,
+      "modified": "2026-09-03T10:12:28"
+    },
+    "results/outputs/step_90_operational_holdover_spec.json": {
+      "sha256": "0481e68723593c9822f827291404eb3242cf0f3715572367229e55ef86bff753",
+      "size_bytes": 9006,
+      "modified": "2026-09-03T10:20:00"
+    },
+    "results/outputs/step_90b_physics_kernel_stack.json": {
+      "sha256": "3161d92f28e195621ffe82892f9109e94d2cff79a8fdda71a05e85e84af9488c",
+      "size_bytes": 1964,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/outputs/step_91_tep_field_is_the_clock.json": {
+      "sha256": "9803dda99101feca7cf0f46995fc2e0aa1a56758cf3b667a1c59448dfa93e92f",
+      "size_bytes": 2620,
+      "modified": "2026-09-03T11:51:04"
+    },
+    "results/outputs/step_92_independent_year_p1.json": {
+      "sha256": "fb6c1209408ab43a01bed844352ba9b69a9d26e1394595bede2144fee9cf06e8",
+      "size_bytes": 27901,
+      "modified": "2026-09-03T15:34:05"
+    },
+    "results/outputs/step_93_fullsky_ppp_clock.json": {
+      "sha256": "9beee0e1c5a6480be664922291e91d7317e21a360237a1e0d2926419c4590c51",
+      "size_bytes": 1260,
+      "modified": "2026-09-03T14:20:40"
+    },
+    "results/outputs/step_94_satellite_clock_prediction.json": {
+      "sha256": "5d7e2283e918fdf2dcefc47a77d82dc9bdb5571d9198cb90e9cfd0852f0a41ed",
+      "size_bytes": 7285,
+      "modified": "2026-10-29T12:48:21"
+    },
+    "results/outputs/step_96_gfz_replication.json": {
+      "sha256": "d3eed086dd021a00aba6ee92bfe27323ba426c681cfef3b57a2d4be2ad0e0da6",
+      "size_bytes": 2671689,
+      "modified": "2026-10-28T10:41:25"
+    },
+    "results/outputs/step_96_leftover_clock_supremacy.json": {
+      "sha256": "006ccdb28879b2d9101dedb34811d3545c0486504b3958e4e7e1bc946df7f888",
+      "size_bytes": 6697436,
+      "modified": "2026-10-28T11:25:22"
+    },
+    "results/outputs/step_97_multi_year_seasonal_lever.json": {
+      "sha256": "514fce7df5ecb2d02bc8b52c145f4c0d627c1f554e4ff1f847d119bc1cb3a152",
+      "size_bytes": 7652,
+      "modified": "2026-09-03T22:47:40"
+    },
+    "results/outputs/step_98_satellite_channel_flagship.json": {
+      "sha256": "c5fd32598b39d0f38e2ffa90f5820489776bdee4396eeacece4865bfaf86a3e4",
+      "size_bytes": 28990,
+      "modified": "2026-10-29T13:23:53"
+    },
+    "results/outputs/step_99_precise_clock_position.json": {
+      "sha256": "ce509dc62eff6cedd4c7994f9dfd20347c8676397353c04d3fd2c68a074ee467",
+      "size_bytes": 7304,
+      "modified": "2026-09-05T14:19:48"
+    },
+    "results/sta_sid_hist_step174.npz": {
+      "sha256": "716164e453831b79e51b65e992e0bbb91447df1ba403b098e13b9722e6136e41",
+      "size_bytes": 7383142,
+      "modified": "2026-10-28T18:57:01"
+    }
+  },
+  "excluded_volatile": [
+    "results/outputs/evidence_audit.json",
+    "results/outputs/live_observatory_audit.json",
+    "results/outputs/sealed_anchor_chain_status.json",
+    "results/outputs/sealed_lattice_audit.json",
+    "results/outputs/step_174_live_ledger.json"
+  ],
+  "exclusion_reason": "regenerated by scripts/verify_manuscript.py (evidence_audit) or scripts/live/*.py live-audit refreshers (fresh generated timestamp), so a pinned content hash would be permanently stale by design"
+}

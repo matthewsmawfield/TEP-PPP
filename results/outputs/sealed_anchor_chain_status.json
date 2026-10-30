@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-29T23:02:18.109479+00:00",
+  "chain": "SHA256(prev_anchor + weights_sha256 + utc), prev starts 'GENESIS'; weights_sha256 is the plain sha256 of the *_weights.npz file bytes",
+  "n_links": 122,
+  "n_links_verified": 122,
+  "first_envelope": "envelope_20261027_191517",
+  "first_seal_utc": "2026-10-27T19:15:17Z",
+  "last_envelope": "envelope_20261029_224015",
+  "last_seal_utc": "2026-10-29T22:40:15Z",
+  "head_sha256": "3517830c02f5d1f5a34ab381dd2aa48fb97d480eb5b92c0931258ce4a07edd92",
+  "failures": []
+}

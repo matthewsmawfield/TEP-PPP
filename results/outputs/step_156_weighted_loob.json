@@ -1,0 +1,287 @@
+{
+  "step": 156,
+  "title": "Weighted leave-one-band-out with per-band spatial kernels",
+  "timestamp": "2026-09-07T01:11:45.711624+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "weights": {
+    "tidal": 2.25,
+    "post_tidal": 1.75,
+    "intermediate": 1.0
+  },
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 10.0,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459
+    }
+  ],
+  "method": "per-band predictions with per-band lambdas, weighted average",
+  "results": {
+    "weighted_full": {
+      "median_rms_m": 0.6158089357754776,
+      "n": 13,
+      "band_failures": 838,
+      "vs_full_band_pct": {
+        "median": 1.4699930174055131,
+        "ci95": [
+          1.1322075143168853,
+          1.6151393139714032
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_weighted_pct": {
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 13,
+        "frac_positive": null
+      }
+    },
+    "weighted_no_tidal": {
+      "median_rms_m": 0.6147951725412173,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": 0.4126254415655839,
+        "ci95": [
+          0.12293156381748549,
+          0.4799211897759337
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "vs_full_band_pct": {
+        "median": 1.7262498377233593,
+        "ci95": [
+          1.4219820854541876,
+          1.9941183060862122
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      }
+    },
+    "weighted_no_post": {
+      "median_rms_m": 0.6185572731679517,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": -0.9360659032044971,
+        "ci95": [
+          -1.0627579196464731,
+          -0.7285958581144891
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_full_band_pct": {
+        "median": 0.5843840109344134,
+        "ci95": [
+          0.440216878490296,
+          0.6909634283446597
+        ],
+        "n": 13,
+        "frac_positive": 0.9230769230769231
+      }
+    },
+    "weighted_no_inter": {
+      "median_rms_m": 0.6180610977681686,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": -0.36572414946447473,
+        "ci95": [
+          -0.3940621795115673,
+          -0.3130476072746413
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_full_band_pct": {
+        "median": 0.9854880697708679,
+        "ci95": [
+          0.7914048050851386,
+          1.26619352078291
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      }
+    },
+    "simple_avg": {
+      "median_rms_m": 0.61491814630932,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": 0.20899787867377784,
+        "ci95": [
+          0.19614241967520485,
+          0.26312650975832685
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_full_band_pct": {
+        "median": 1.6632521572073178,
+        "ci95": [
+          1.2752232826372945,
+          1.8135352342990574
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      }
+    },
+    "simple_no_tidal": {
+      "median_rms_m": 0.6155985742198599,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": 0.3087028609489062,
+        "ci95": [
+          0.00834581723562211,
+          0.4093401556879428
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "vs_full_band_pct": {
+        "median": 1.613503526602511,
+        "ci95": [
+          1.241015125812428,
+          1.875280584478134
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      }
+    },
+    "tidal_only": {
+      "median_rms_m": 0.6288106225411119,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": -2.730447962814675,
+        "ci95": [
+          -2.9966186197923905,
+          -2.3857782510979364
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_full_band_pct": {
+        "median": -1.1660183338567442,
+        "ci95": [
+          -1.3432224662084158,
+          -1.0587668549250306
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      }
+    },
+    "post_tidal_only": {
+      "median_rms_m": 0.6133057691996092,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": 0.4700074657407183,
+        "ci95": [
+          0.29183091203969225,
+          0.726344633681042
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "vs_full_band_pct": {
+        "median": 1.788975456018127,
+        "ci95": [
+          1.6525167640497274,
+          2.1856604356891407
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      }
+    },
+    "intermediate_only": {
+      "median_rms_m": 0.6190244144050431,
+      "n": 13,
+      "band_failures": 838,
+      "vs_weighted_pct": {
+        "median": -0.197448040413839,
+        "ci95": [
+          -0.5797736023871902,
+          0.032706686819095054
+        ],
+        "n": 13,
+        "frac_positive": 0.38461538461538464
+      },
+      "vs_full_band_pct": {
+        "median": 1.0447298629683965,
+        "ci95": [
+          0.9082528813196822,
+          1.6449922713399068
+        ],
+        "n": 13,
+        "frac_positive": 0.9230769230769231
+      }
+    },
+    "full_band_baseline": {
+      "median_rms_m": 0.6228610149909556,
+      "n": 13,
+      "band_failures": 0,
+      "vs_weighted_pct": {
+        "median": -1.4919241989551413,
+        "ci95": [
+          -1.6416543182652177,
+          -1.1451732519271562
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_full_band_pct": {
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 13,
+        "frac_positive": null
+      }
+    }
+  },
+  "interpretation": [
+    "Weighted leave-one-band-out (per-band lambdas): 13 eval days, 13-day window.",
+    "  Weights: tidal=2.25, post_tidal=1.75, intermediate=1.0",
+    "  Per-band lambdas: tidal=4677, post_tidal=1502, intermediate=1459 km",
+    "  Band failures: weighted_full=838, weighted_no_tidal=838, weighted_no_post=838, weighted_no_inter=838, simple_avg=838, simple_no_tidal=838, tidal_only=838, post_tidal_only=838, intermediate_only=838",
+    "  weighted_full            : vs weighted +0.00% CI[0.0, 0.0], vs full-band +1.47% CI[1.1322075143168853, 1.6151393139714032], RMS=0.6158, n=13",
+    "  weighted_no_tidal        : vs weighted +0.41% CI[0.12293156381748549, 0.4799211897759337], vs full-band +1.73% CI[1.4219820854541876, 1.9941183060862122], RMS=0.6148, n=13",
+    "  weighted_no_post         : vs weighted -0.94% CI[-1.0627579196464731, -0.7285958581144891], vs full-band +0.58% CI[0.440216878490296, 0.6909634283446597], RMS=0.6186, n=13",
+    "  weighted_no_inter        : vs weighted -0.37% CI[-0.3940621795115673, -0.3130476072746413], vs full-band +0.99% CI[0.7914048050851386, 1.26619352078291], RMS=0.6181, n=13",
+    "  simple_avg               : vs weighted +0.21% CI[0.19614241967520485, 0.26312650975832685], vs full-band +1.66% CI[1.2752232826372945, 1.8135352342990574], RMS=0.6149, n=13",
+    "  simple_no_tidal          : vs weighted +0.31% CI[0.00834581723562211, 0.4093401556879428], vs full-band +1.61% CI[1.241015125812428, 1.875280584478134], RMS=0.6156, n=13",
+    "  tidal_only               : vs weighted -2.73% CI[-2.9966186197923905, -2.3857782510979364], vs full-band -1.17% CI[-1.3432224662084158, -1.0587668549250306], RMS=0.6288, n=13",
+    "  post_tidal_only          : vs weighted +0.47% CI[0.29183091203969225, 0.726344633681042], vs full-band +1.79% CI[1.6525167640497274, 2.1856604356891407], RMS=0.6133, n=13",
+    "  intermediate_only        : vs weighted -0.20% CI[-0.5797736023871902, 0.032706686819095054], vs full-band +1.04% CI[0.9082528813196822, 1.6449922713399068], RMS=0.6190, n=13",
+    "  full_band_baseline       : vs weighted -1.49% CI[-1.6416543182652177, -1.1451732519271562], vs full-band +0.00% CI[0.0, 0.0], RMS=0.6229, n=13",
+    "\n  Removing the tidal band does NOT hurt (+0.41% CI[0.12293156381748549, 0.4799211897759337]).",
+    "  Even with proper weights and per-band lambdas, the tidal band is not essential.",
+    "\n  Weighted multi-band vs full-band: +1.47%",
+    "  Simple multi-band vs full-band: +1.66%",
+    "  Weighted advantage over simple: -0.19%"
+  ],
+  "pre_registered_prediction": "Step 135 found the optimal fusion weight for the tidal band is 2.25x (highest of all bands). Step 155 used simple averaging (1x for all), which under-weights the tidal band. With proper weights and per-band spatial kernels, removing the tidal band should hurt performance, confirming the gravitational tidal structure is essential."
+}

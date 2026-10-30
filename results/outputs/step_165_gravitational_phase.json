@@ -1,0 +1,505 @@
+{
+  "step": 165,
+  "title": "Gravitational phase prediction: M2 clock phase vs lunar potential",
+  "timestamp": "2026-09-07T11:43:44.434104+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "window_doy": [
+    22,
+    51
+  ],
+  "n_days": 30,
+  "n_stations": 50,
+  "jd_t0": 2460698.0,
+  "gmst_deg": 302.0909863836132,
+  "moon_ra_deg": 216.24372004597367,
+  "moon_dec_deg": -17.660746402021715,
+  "per_station": {
+    "AIRA": {
+      "lon_deg": 130.59959841132758,
+      "lat_deg": 31.824057938161488,
+      "M2_observed_phase_deg": 358.163512003379,
+      "M2_expected_phase_deg": 287.1062705020658,
+      "M2_phase_residual_deg": 71.05724150131323,
+      "M2_amp_ns": 0.8533823491429074,
+      "M2_snr": 8.148021813314003
+    },
+    "AJAC": {
+      "lon_deg": 8.762619669299946,
+      "lat_deg": 41.92746032098939,
+      "M2_observed_phase_deg": 338.3784045033619,
+      "M2_expected_phase_deg": 170.78022798612105,
+      "M2_phase_residual_deg": 167.59817651724086,
+      "M2_amp_ns": 1.566565447852038,
+      "M2_snr": 18.94175336013694
+    },
+    "ASCG": {
+      "lon_deg": -14.332665030717411,
+      "lat_deg": -7.916280111676152,
+      "M2_observed_phase_deg": 306.9484194947346,
+      "M2_expected_phase_deg": 216.97079738615577,
+      "M2_phase_residual_deg": 89.97762210857883,
+      "M2_amp_ns": 0.8686769183895535,
+      "M2_snr": 7.787849377285584
+    },
+    "BRFT": {
+      "lon_deg": -38.42553810139075,
+      "lat_deg": -3.8774445466960694,
+      "M2_observed_phase_deg": 348.30144489116066,
+      "M2_expected_phase_deg": 265.15654352750244,
+      "M2_phase_residual_deg": 83.14490136365822,
+      "M2_amp_ns": 0.9557118608822294,
+      "M2_snr": 10.766556938722639
+    },
+    "BRST": {
+      "lon_deg": -4.496590012929245,
+      "lat_deg": 48.38049658079086,
+      "M2_observed_phase_deg": 324.25772675199335,
+      "M2_expected_phase_deg": 197.29864735057944,
+      "M2_phase_residual_deg": 126.95907940141387,
+      "M2_amp_ns": 0.9347862854133728,
+      "M2_snr": 17.31371544869689
+    },
+    "CCJ2": {
+      "lon_deg": 142.19502262507,
+      "lat_deg": 27.067533263297467,
+      "M2_observed_phase_deg": 23.48160107299788,
+      "M2_expected_phase_deg": 263.91542207458093,
+      "M2_phase_residual_deg": 119.56617899841694,
+      "M2_amp_ns": 1.5555534344869264,
+      "M2_snr": 12.571252488722456
+    },
+    "CHPG": {
+      "lon_deg": -45.002376082964545,
+      "lat_deg": -22.682271623509696,
+      "M2_observed_phase_deg": 158.519668545691,
+      "M2_expected_phase_deg": 278.31021949065007,
+      "M2_phase_residual_deg": -119.79055094495908,
+      "M2_amp_ns": 1.0299904514974132,
+      "M2_snr": 7.871797927001985
+    },
+    "CORD": {
+      "lon_deg": -64.47004899113014,
+      "lat_deg": -31.528432979922282,
+      "M2_observed_phase_deg": 210.93812393996288,
+      "M2_expected_phase_deg": 317.24556530698123,
+      "M2_phase_residual_deg": -106.30744136701836,
+      "M2_amp_ns": 0.0683106587318426,
+      "M2_snr": 2.621558010367514
+    },
+    "CPVG": {
+      "lon_deg": -22.934930655879217,
+      "lat_deg": 16.732063882648838,
+      "M2_observed_phase_deg": 47.748152960122624,
+      "M2_expected_phase_deg": 234.17532863647938,
+      "M2_phase_residual_deg": 173.57282432364326,
+      "M2_amp_ns": 1.7144797859233405,
+      "M2_snr": 13.927530192432933
+    },
+    "CRO1": {
+      "lon_deg": -64.58431774147513,
+      "lat_deg": 17.75690052393906,
+      "M2_observed_phase_deg": 213.50582992052577,
+      "M2_expected_phase_deg": 317.4741028076712,
+      "M2_phase_residual_deg": -103.96827288714545,
+      "M2_amp_ns": 0.0656152461759342,
+      "M2_snr": 4.772871654248929
+    },
+    "DAEJ": {
+      "lon_deg": 127.3744861492262,
+      "lat_deg": 36.39942666526195,
+      "M2_observed_phase_deg": 72.51876392422358,
+      "M2_expected_phase_deg": 293.5564950262685,
+      "M2_phase_residual_deg": 138.96226889795503,
+      "M2_amp_ns": 0.29006959602979016,
+      "M2_snr": 4.711612138844624
+    },
+    "DLF1": {
+      "lon_deg": 4.387465598212888,
+      "lat_deg": 51.98602186542363,
+      "M2_observed_phase_deg": 2.540667047097489,
+      "M2_expected_phase_deg": 179.53053612829518,
+      "M2_phase_residual_deg": -176.9898690811977,
+      "M2_amp_ns": 0.05912883798848867,
+      "M2_snr": 2.491609738193346
+    },
+    "DYNG": {
+      "lon_deg": 23.932435414696844,
+      "lat_deg": 38.07855177457758,
+      "M2_observed_phase_deg": 280.16335553467053,
+      "M2_expected_phase_deg": 140.44059649532727,
+      "M2_phase_residual_deg": 139.72275903934326,
+      "M2_amp_ns": 0.43927535459838996,
+      "M2_snr": 9.407742771583884
+    },
+    "FAIR": {
+      "lon_deg": -147.49924242295762,
+      "lat_deg": 64.97799493810598,
+      "M2_observed_phase_deg": 336.91902791463446,
+      "M2_expected_phase_deg": 123.3039521706362,
+      "M2_phase_residual_deg": -146.38492425600174,
+      "M2_amp_ns": 0.17952406211832195,
+      "M2_snr": 7.403481001087963
+    },
+    "FLRS": {
+      "lon_deg": -31.126390311190512,
+      "lat_deg": 39.45383814001302,
+      "M2_observed_phase_deg": 266.1038591545107,
+      "M2_expected_phase_deg": 250.55824794710196,
+      "M2_phase_residual_deg": 15.54561120740874,
+      "M2_amp_ns": 0.08226691748529175,
+      "M2_snr": 1.8362464886861698
+    },
+    "FRDN": {
+      "lon_deg": -66.659884222215,
+      "lat_deg": 45.933508262009774,
+      "M2_observed_phase_deg": 214.97332752886052,
+      "M2_expected_phase_deg": 321.62523576915095,
+      "M2_phase_residual_deg": -106.65190824029042,
+      "M2_amp_ns": 0.224359245049012,
+      "M2_snr": 4.726063253100943
+    },
+    "GLPS": {
+      "lon_deg": -90.3036630675634,
+      "lat_deg": -0.7429975534582297,
+      "M2_observed_phase_deg": 177.23504629115803,
+      "M2_expected_phase_deg": 8.912793459847762,
+      "M2_phase_residual_deg": 168.32225283131027,
+      "M2_amp_ns": 0.14696780517289895,
+      "M2_snr": 6.6950168309222775
+    },
+    "GUAM": {
+      "lon_deg": 144.86835974605916,
+      "lat_deg": 13.589330126782551,
+      "M2_observed_phase_deg": 172.29915245226374,
+      "M2_expected_phase_deg": 258.56874783260264,
+      "M2_phase_residual_deg": -86.2695953803389,
+      "M2_amp_ns": 0.03375360913134172,
+      "M2_snr": 1.4779087180193233
+    },
+    "HARB": {
+      "lon_deg": 27.707248061896667,
+      "lat_deg": -25.886959622400518,
+      "M2_observed_phase_deg": 205.11435116516853,
+      "M2_expected_phase_deg": 132.89097120092762,
+      "M2_phase_residual_deg": 72.2233799642409,
+      "M2_amp_ns": 0.10944255529417342,
+      "M2_snr": 17.274375167874997
+    },
+    "INVK": {
+      "lon_deg": -133.5269664636339,
+      "lat_deg": 68.30618241995585,
+      "M2_observed_phase_deg": 330.2415875661359,
+      "M2_expected_phase_deg": 95.35940025198875,
+      "M2_phase_residual_deg": -125.11781268585287,
+      "M2_amp_ns": 0.94495061093624,
+      "M2_snr": 11.72753859739116
+    },
+    "KERG": {
+      "lon_deg": 70.25552359720879,
+      "lat_deg": -49.35146741494972,
+      "M2_observed_phase_deg": 210.06241435622462,
+      "M2_expected_phase_deg": 47.794420130303365,
+      "M2_phase_residual_deg": 162.26799422592126,
+      "M2_amp_ns": 0.4530358023828185,
+      "M2_snr": 7.1009552644650835
+    },
+    "MAR7": {
+      "lon_deg": 17.258451349290823,
+      "lat_deg": 60.59505745478387,
+      "M2_observed_phase_deg": 263.2105567324177,
+      "M2_expected_phase_deg": 153.7885646261393,
+      "M2_phase_residual_deg": 109.42199210627837,
+      "M2_amp_ns": 0.14894472530850594,
+      "M2_snr": 5.339193968587342
+    },
+    "MAS1": {
+      "lon_deg": -15.633272314306726,
+      "lat_deg": 27.763744442499128,
+      "M2_observed_phase_deg": 338.2521866578597,
+      "M2_expected_phase_deg": 219.5720119533344,
+      "M2_phase_residual_deg": 118.68017470452526,
+      "M2_amp_ns": 1.5064812783623112,
+      "M2_snr": 18.372112125734372
+    },
+    "MAT1": {
+      "lon_deg": 16.70455180692669,
+      "lat_deg": 40.649065483071624,
+      "M2_observed_phase_deg": 328.16044612997194,
+      "M2_expected_phase_deg": 154.89636371086758,
+      "M2_phase_residual_deg": 173.2640824191044,
+      "M2_amp_ns": 1.4560536736376837,
+      "M2_snr": 18.27863850479295
+    },
+    "MIZU": {
+      "lon_deg": 141.13287207918157,
+      "lat_deg": 39.13515067396398,
+      "M2_observed_phase_deg": 354.8814891007786,
+      "M2_expected_phase_deg": 266.0397231663578,
+      "M2_phase_residual_deg": 88.84176593442078,
+      "M2_amp_ns": 0.34947038233307165,
+      "M2_snr": 8.865759533384816
+    },
+    "NANO": {
+      "lon_deg": -124.0864812947478,
+      "lat_deg": 49.29480903267967,
+      "M2_observed_phase_deg": 307.5846643811816,
+      "M2_expected_phase_deg": 76.47842991421655,
+      "M2_phase_residual_deg": -128.89376553303498,
+      "M2_amp_ns": 0.8279753813121028,
+      "M2_snr": 19.16181288929139
+    },
+    "NICO": {
+      "lon_deg": 33.39645011925349,
+      "lat_deg": 35.14098920119397,
+      "M2_observed_phase_deg": 292.2755603686533,
+      "M2_expected_phase_deg": 121.51256708621398,
+      "M2_phase_residual_deg": 170.7629932824393,
+      "M2_amp_ns": 1.4498850726910761,
+      "M2_snr": 16.52427815893755
+    },
+    "NKLG": {
+      "lon_deg": 9.672128973586227,
+      "lat_deg": 0.35390992155794304,
+      "M2_observed_phase_deg": 247.58917323177099,
+      "M2_expected_phase_deg": 168.9612093775485,
+      "M2_phase_residual_deg": 78.62796385422246,
+      "M2_amp_ns": 0.6638424453111886,
+      "M2_snr": 10.741500693754432
+    },
+    "ONS1": {
+      "lon_deg": 11.92454704122236,
+      "lat_deg": 57.395336079144336,
+      "M2_observed_phase_deg": 334.6271332180089,
+      "M2_expected_phase_deg": 164.45637324227624,
+      "M2_phase_residual_deg": 170.17075997573266,
+      "M2_amp_ns": 0.17658064030159099,
+      "M2_snr": 7.024637703037431
+    },
+    "OUS2": {
+      "lon_deg": 170.51092415773144,
+      "lat_deg": -45.86946893278684,
+      "M2_observed_phase_deg": 234.81259247821976,
+      "M2_expected_phase_deg": 207.28361900925802,
+      "M2_phase_residual_deg": 27.528973468961738,
+      "M2_amp_ns": 0.34216092414807076,
+      "M2_snr": 9.3770606533243
+    },
+    "PDEL": {
+      "lon_deg": -25.662760625276537,
+      "lat_deg": 37.74775237569086,
+      "M2_observed_phase_deg": 283.3775759631184,
+      "M2_expected_phase_deg": 239.63098857527402,
+      "M2_phase_residual_deg": 43.74658738784436,
+      "M2_amp_ns": 0.10529039718823169,
+      "M2_snr": 2.780795397774402
+    },
+    "RABT": {
+      "lon_deg": -6.854285748363467,
+      "lat_deg": 33.998106817759975,
+      "M2_observed_phase_deg": 355.626811912567,
+      "M2_expected_phase_deg": 202.01403882144788,
+      "M2_phase_residual_deg": 153.61277309111915,
+      "M2_amp_ns": 2.754580471219207,
+      "M2_snr": 20.044514430796138
+    },
+    "REUN": {
+      "lon_deg": 55.57172335318559,
+      "lat_deg": -21.20822355699321,
+      "M2_observed_phase_deg": 120.11690385524541,
+      "M2_expected_phase_deg": 77.16202061834974,
+      "M2_phase_residual_deg": 42.95488323689568,
+      "M2_amp_ns": 0.22927523915350104,
+      "M2_snr": 3.8467036364350657
+    },
+    "RGDG": {
+      "lon_deg": -67.7515272461565,
+      "lat_deg": -53.7858371755347,
+      "M2_observed_phase_deg": 73.43984801639307,
+      "M2_expected_phase_deg": 323.8085218170339,
+      "M2_phase_residual_deg": 109.63132619935914,
+      "M2_amp_ns": 0.09045960173000071,
+      "M2_snr": 0.9784669937562981
+    },
+    "SANT": {
+      "lon_deg": -70.66855454444642,
+      "lat_deg": -33.150286748822715,
+      "M2_observed_phase_deg": 226.41575547134678,
+      "M2_expected_phase_deg": 329.6425764136138,
+      "M2_phase_residual_deg": -103.22682094226704,
+      "M2_amp_ns": 0.07582648905222825,
+      "M2_snr": 2.513143785190494
+    },
+    "SCH2": {
+      "lon_deg": -66.83262152427992,
+      "lat_deg": 54.83209109171107,
+      "M2_observed_phase_deg": 191.36619068966633,
+      "M2_expected_phase_deg": 321.9707103732808,
+      "M2_phase_residual_deg": -130.60451968361446,
+      "M2_amp_ns": 0.6564330759564884,
+      "M2_snr": 7.802139148062242
+    },
+    "SCRZ": {
+      "lon_deg": -63.15967407455715,
+      "lat_deg": -17.79678963612761,
+      "M2_observed_phase_deg": 51.28768729280796,
+      "M2_expected_phase_deg": 314.62481547383527,
+      "M2_phase_residual_deg": 96.66287181897269,
+      "M2_amp_ns": 1.6126268253183353,
+      "M2_snr": 8.668351600441833
+    },
+    "SGOC": {
+      "lon_deg": 79.87418218462346,
+      "lat_deg": 6.892079315208664,
+      "M2_observed_phase_deg": 242.7516618832591,
+      "M2_expected_phase_deg": 28.557102955474022,
+      "M2_phase_residual_deg": -145.80544107221493,
+      "M2_amp_ns": 1.805328708900682,
+      "M2_snr": 29.585101425262728
+    },
+    "STHL": {
+      "lon_deg": -5.667342631436905,
+      "lat_deg": -15.942531622804653,
+      "M2_observed_phase_deg": 342.7123356053672,
+      "M2_expected_phase_deg": 199.64015258759477,
+      "M2_phase_residual_deg": 143.07218301777243,
+      "M2_amp_ns": 1.1110916165064826,
+      "M2_snr": 9.272460713677273
+    },
+    "SUTH": {
+      "lon_deg": 20.81046618652125,
+      "lat_deg": -32.3802071015821,
+      "M2_observed_phase_deg": 261.78769032265825,
+      "M2_expected_phase_deg": 146.68453495167844,
+      "M2_phase_residual_deg": 115.10315537097983,
+      "M2_amp_ns": 0.1108876721428741,
+      "M2_snr": 5.053643040339517
+    },
+    "SYDN": {
+      "lon_deg": 151.15038335146994,
+      "lat_deg": -33.78086929426859,
+      "M2_observed_phase_deg": 307.8640920918974,
+      "M2_expected_phase_deg": 246.00470062178107,
+      "M2_phase_residual_deg": 61.85939147011635,
+      "M2_amp_ns": 0.1330707761618187,
+      "M2_snr": 4.4651516772851885
+    },
+    "TASH": {
+      "lon_deg": 69.29557266619834,
+      "lat_deg": 41.32804990791747,
+      "M2_observed_phase_deg": 281.02176636053406,
+      "M2_expected_phase_deg": 49.714321992324244,
+      "M2_phase_residual_deg": -128.69255563179019,
+      "M2_amp_ns": 0.09707241136923107,
+      "M2_snr": 3.4502408211790985
+    },
+    "THTG": {
+      "lon_deg": -149.6064463828839,
+      "lat_deg": -17.57705630954049,
+      "M2_observed_phase_deg": 20.818455380060772,
+      "M2_expected_phase_deg": 127.51836009048873,
+      "M2_phase_residual_deg": -106.69990471042796,
+      "M2_amp_ns": 1.7207615845093827,
+      "M2_snr": 4.832307403118944
+    },
+    "THTI": {
+      "lon_deg": -149.60646099387716,
+      "lat_deg": -17.577055668326658,
+      "M2_observed_phase_deg": 184.13179210100836,
+      "M2_expected_phase_deg": 127.51838931247528,
+      "M2_phase_residual_deg": 56.61340278853308,
+      "M2_amp_ns": 0.6757827468401072,
+      "M2_snr": 6.158989091879091
+    },
+    "TLSE": {
+      "lon_deg": 1.4808953166612835,
+      "lat_deg": 43.56069764648627,
+      "M2_observed_phase_deg": 328.4111169363026,
+      "M2_expected_phase_deg": 185.34367669139837,
+      "M2_phase_residual_deg": 143.06744024490422,
+      "M2_amp_ns": 1.2775897088740742,
+      "M2_snr": 20.94691938814891
+    },
+    "UCAL": {
+      "lon_deg": -114.13385256570687,
+      "lat_deg": 51.07997473140126,
+      "M2_observed_phase_deg": 160.0949287500038,
+      "M2_expected_phase_deg": 56.5731724561347,
+      "M2_phase_residual_deg": 103.52175629386909,
+      "M2_amp_ns": 0.8507007984193141,
+      "M2_snr": 29.181855130197224
+    },
+    "USUD": {
+      "lon_deg": 138.3620505033172,
+      "lat_deg": 36.13311034577098,
+      "M2_observed_phase_deg": 207.42816662175161,
+      "M2_expected_phase_deg": 271.58136631808657,
+      "M2_phase_residual_deg": -64.15319969633495,
+      "M2_amp_ns": 0.08339161907806526,
+      "M2_snr": 3.138242259829288
+    },
+    "VALD": {
+      "lon_deg": -77.56417098622994,
+      "lat_deg": 48.0970576786543,
+      "M2_observed_phase_deg": 195.22376311135324,
+      "M2_expected_phase_deg": 343.4338092971808,
+      "M2_phase_residual_deg": -148.21004618582757,
+      "M2_amp_ns": 0.8167839426674935,
+      "M2_snr": 10.090482921867153
+    },
+    "VILL": {
+      "lon_deg": -3.9519747870129924,
+      "lat_deg": 40.44359627894775,
+      "M2_observed_phase_deg": 241.42454747818897,
+      "M2_expected_phase_deg": 196.20941689874692,
+      "M2_phase_residual_deg": 45.21513057944205,
+      "M2_amp_ns": 0.17481166990020236,
+      "M2_snr": 1.2099016643628466
+    },
+    "YKRO": {
+      "lon_deg": -5.240089745695023,
+      "lat_deg": 6.870562983053453,
+      "M2_observed_phase_deg": 274.80029707585464,
+      "M2_expected_phase_deg": 198.785646816111,
+      "M2_phase_residual_deg": 76.01465025974363,
+      "M2_amp_ns": 1.447265441053826,
+      "M2_snr": 11.577787742339302
+    }
+  },
+  "m2_absolute_phase": {
+    "n_stations": 8640,
+    "mean_phase_residual_deg": 144.97517225552193,
+    "concentration_R": 0.365495392487485,
+    "rayleigh_z": 6.679344096479037,
+    "rayleigh_p": 0.001842936485097758,
+    "phase_residual_std_deg": 113.89687410948085,
+    "median_abs_phase_residual_deg": 112.36724078516949,
+    "n_high_snr": 42,
+    "high_snr_concentration_R": 0.45212143304842434,
+    "high_snr_rayleigh_p": 0.00018681734385053538,
+    "high_snr_median_abs_residual": 119.67836497168801
+  },
+  "m2_cross_station_longitude": {
+    "n_pairs": 1225,
+    "r": 0.1275714219377375,
+    "p": 7.508058048771537e-06,
+    "mean_actual_corr": 0.050867701862696464
+  },
+  "s2_cross_station_longitude": {
+    "n_pairs": 1225,
+    "r": 0.07124044141765104,
+    "p": 0.012629855878873344
+  },
+  "control_15uhz": {
+    "n_pairs": 1225,
+    "r": 0.015054650468057372,
+    "p": 0.5986070660076277
+  },
+  "interpretation": [
+    "M2 absolute phase: 8640 stations, mean residual +144.98 deg, R=0.3655, Rayleigh p=0.001843.",
+    "M2 cross-station longitude prediction: r=0.1276, p=0.000008, n=1225 pairs.",
+    "S2 cross-station longitude prediction: r=0.0712, p=0.012630, n=1225 pairs.",
+    "Control (15 uHz): r=0.0151, p=0.598607, n=1225 pairs."
+  ],
+  "pre_registered_prediction": "TEP (gravitational): M2 clock phase matches the lunar gravitational potential phase. The phase difference between stations is 2*(lon1-lon2), purely longitude-dependent. The absolute phase matches the lunar ephemeris. The control frequency (15 uHz) shows NO longitude dependence. S2 also shows longitude dependence (solar gravitational + atmospheric). If the M2 phase matches the gravitational prediction and the control does not, the signal is definitively gravitational."
+}

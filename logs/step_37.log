@@ -1,0 +1,67 @@
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [INFO    ] 
+[2026-10-16 01:52:50] [INFO    ] STEP 37: Live NTRIP Stream Acquisition
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [INFO    ] STEP 37: Live NTRIP Stream Acquisition
+[2026-10-16 01:52:50] [INFO    ] 
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [INFO    ] Caster: renep (193.137.94.71)
+[2026-10-16 01:52:50] [INFO    ] 
+[2026-10-16 01:52:50] [INFO    ] Target stations: CASC, VSEU, MERT, GUAD
+[2026-10-16 01:52:50] [INFO    ] Caster: renep (193.137.94.71)
+[2026-10-16 01:52:50] [INFO    ] Target stations: GAIA, BRAG, AVI1, BAIO, MIRA
+[2026-10-16 01:52:50] [INFO    ] 
+[2026-10-16 01:52:50] [INFO    ] Duration: 34200 s (9.5 h)
+[2026-10-16 01:52:50] [INFO    ] Duration: 34200 s (9.5 h)
+[2026-10-16 01:52:50] [PROCESS ] 
+Fetching sourcetable...
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [PROCESS ] 
+Fetching sourcetable...
+[2026-10-16 01:52:50] [INFO    ] STEP 37: Live NTRIP Stream Acquisition
+[2026-10-16 01:52:50] [INFO    ] ================================================================================
+[2026-10-16 01:52:50] [INFO    ] 
+[2026-10-16 01:52:50] [INFO    ] Caster: agrs_nl (ntrip.kadaster.nl)
+[2026-10-16 01:52:50] [INFO    ] Target stations: DLF1
+[2026-10-16 01:52:50] [INFO    ] Duration: 34200 s (9.5 h)
+[2026-10-16 01:52:50] [PROCESS ] 
+Fetching sourcetable...
+[2026-10-16 01:52:50] [INFO    ] Found 4 matching mountpoints:
+[2026-10-16 01:52:50] [INFO    ]   CASC         RTCM 3           GPS+GLO              (38.690, -9.420) PRT
+[2026-10-16 01:52:50] [INFO    ]   GUAD         RTCM 3           GPS+GLO              (40.540, -7.270) PRT
+[2026-10-16 01:52:50] [INFO    ]   MERT         RTCM 3           GPS+GLO              (37.650, -7.660) PRT
+[2026-10-16 01:52:50] [INFO    ]   VSEU         RTCM 3           GPS+GLO              (40.650, -7.910) PRT
+[2026-10-16 01:52:50] [PROCESS ] 
+Recording 4 mountpoints for 34200 s...
+[2026-10-16 01:52:50] [INFO    ] Found 5 matching mountpoints:
+[2026-10-16 01:52:50] [INFO    ]   AVI1         RTCM 3           GPS+GLO              (39.060, -7.890) PRT
+[2026-10-16 01:52:50] [INFO    ]   BAIO         RTCM 3           GPS+GLO              (41.160, -8.030) PRT
+[2026-10-16 01:52:50] [INFO    ]   MIRA         RTCM 3           GPS+GLO              (41.520, -7.190) PRT
+[2026-10-16 01:52:50] [INFO    ]   GAIA         RTCM 3           GPS+GLO              (41.110, -8.590) PRT
+[2026-10-16 01:52:50] [INFO    ]   BRAG         RTCM 3           GPS+GLO              (41.550, -8.430) PRT
+[2026-10-16 01:52:50] [PROCESS ] 
+Recording 5 mountpoints for 34200 s...
+[2026-10-16 01:52:50] [INFO    ] Found 1 matching mountpoints:
+[2026-10-16 01:52:50] [INFO    ]   DLF100NLD0   RTCM 3.3         GPS+GLO+GAL+BDS+QZS  (51.990, 4.390) NLD
+[2026-10-16 01:52:50] [PROCESS ] 
+Recording 1 mountpoints for 34200 s...
+[2026-10-16 11:22:50] [INFO    ]   CASC          11699.5 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   GUAD          11920.2 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   MERT          11313.4 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   VSEU          12239.7 KB  OK
+[2026-10-16 11:22:50] [SUCCESS ] 
+Recorded 4/4 mountpoints, 47172.8 KB total
+[2026-10-16 11:22:50] [SUCCESS ] Manifest saved: results/outputs/step_37_ntrip_acquire.json
+[2026-10-16 11:22:50] [INFO    ]   AVI1          12095.7 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   BAIO          10904.4 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   MIRA          11696.4 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   GAIA           9545.0 KB  OK
+[2026-10-16 11:22:50] [INFO    ]   BRAG          11578.5 KB  OK
+[2026-10-16 11:22:50] [SUCCESS ] 
+Recorded 5/5 mountpoints, 55820.0 KB total
+[2026-10-16 11:22:50] [SUCCESS ] Manifest saved: results/outputs/step_37_ntrip_acquire.json
+[2026-10-16 11:22:50] [INFO    ]   DLF100NLD0    82816.6 KB  OK
+[2026-10-16 11:22:50] [SUCCESS ] 
+Recorded 1/1 mountpoints, 82816.6 KB total
+[2026-10-16 11:22:50] [SUCCESS ] Manifest saved: results/outputs/step_37_ntrip_acquire.json

@@ -1,0 +1,75 @@
+{
+  "test": "ntrip_live_report",
+  "status": "ok",
+  "blind_protocol_frozen": true,
+  "live_result": {
+    "n_stations": 10,
+    "recording_start_utc": "2026-10-15T19:31:27+00:00",
+    "recording_duration_s": 53483.1,
+    "caster": "agrs_nl+renep",
+    "kernel_prior": {
+      "sigma_m": 3.6656064954106644,
+      "train_day": "2024100",
+      "n_train_stations": 45
+    }
+  },
+  "archived_result": {
+    "n_station_days": 203,
+    "n_stations": 47
+  },
+  "comparison_table": [
+    {
+      "gap": "10 min",
+      "gap_s": 600,
+      "live_hold_m": 2.842621802960485,
+      "live_kernel_m": 2.860477887931103,
+      "live_kernel_vs_hold_pct": -0.6281554919483678,
+      "archived_hold_m": 19.858419143355214,
+      "archived_kernel_m": 20.000583132500957,
+      "archived_kernel_vs_hold_pct": 0.43425230148933525
+    },
+    {
+      "gap": "30 min",
+      "gap_s": 1800,
+      "live_hold_m": 2.9406847259117463,
+      "live_kernel_m": 2.8785624655396638,
+      "live_kernel_vs_hold_pct": 2.1125100499449823,
+      "archived_hold_m": 20.659557910380897,
+      "archived_kernel_m": 20.556461801883497,
+      "archived_kernel_vs_hold_pct": -1.0346343440705543
+    },
+    {
+      "gap": "60 min",
+      "gap_s": 3600,
+      "live_hold_m": 3.3582348516572997,
+      "live_kernel_m": 3.2239774659875797,
+      "live_kernel_vs_hold_pct": 3.997855766503755,
+      "archived_hold_m": 21.854726325566812,
+      "archived_kernel_m": 21.207432215436235,
+      "archived_kernel_vs_hold_pct": 0.7634772034429416
+    },
+    {
+      "gap": "120 min",
+      "gap_s": 7200,
+      "live_hold_m": 3.533640308727713,
+      "live_kernel_m": 3.3495571498164383,
+      "live_kernel_vs_hold_pct": 5.20944812794355,
+      "archived_hold_m": 21.69698529380794,
+      "archived_kernel_m": 20.686077390930862,
+      "archived_kernel_vs_hold_pct": 4.453367795216085
+    },
+    {
+      "gap": "240 min",
+      "gap_s": 14400,
+      "live_hold_m": 3.751683183798342,
+      "live_kernel_m": 3.183611218758546,
+      "live_kernel_vs_hold_pct": 15.141789357188184,
+      "archived_hold_m": 22.91114119758378,
+      "archived_kernel_m": 20.824882892597444,
+      "archived_kernel_vs_hold_pct": 8.744727549069436
+    }
+  ],
+  "figure": "results/figures/step_37_live_comparison.png",
+  "processing_latency_ms": null,
+  "timestamp": "2026-10-16T10:41:09.208139+00:00"
+}

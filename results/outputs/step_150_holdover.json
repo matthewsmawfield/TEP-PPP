@@ -1,0 +1,205 @@
+{
+  "step": 150,
+  "title": "Operational clock-prediction holdover test",
+  "timestamp": "2026-09-07T00:37:54.677806+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_samples": 414353,
+  "gaps": [
+    "1h",
+    "4h",
+    "8h"
+  ],
+  "gaps_s": [
+    3600,
+    14400,
+    28800
+  ],
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "results": {
+    "n_samples": 414353,
+    "by_gap": {
+      "1h": {
+        "rms_m": {
+          "persist": 2452.9804385526227,
+          "drift": 3099.4148535860786,
+          "single": 2481.01812913203,
+          "multi": 2455.4216920252366
+        },
+        "median_error_m": {
+          "persist": 0.3476836539064475,
+          "drift": 0.45913624891820654,
+          "single": 0.41866252013168115,
+          "multi": 0.3837459348374589
+        },
+        "p95_error_m": {
+          "persist": 1.9986343392548316,
+          "drift": 2.6744631059356547,
+          "single": 5.208567071928023,
+          "multi": 2.9282318960218894
+        },
+        "comparisons": {
+          "multi_vs_persist_pct": {
+            "median": -2.0174681871255595,
+            "ci95": [
+              -2.05893519089525,
+              -1.974034127302784
+            ],
+            "n": 410057,
+            "frac_positive": 0.4108697083576186
+          },
+          "multi_vs_drift_pct": {
+            "median": 16.292586009362424,
+            "ci95": [
+              16.128076406996577,
+              16.47804592644627
+            ],
+            "n": 410944,
+            "frac_positive": 0.6280393435601931
+          },
+          "multi_vs_single_pct": {
+            "median": 4.887127806810076,
+            "ci95": [
+              4.815114925279969,
+              4.964034933135231
+            ],
+            "n": 413585,
+            "frac_positive": 0.6041055647569423
+          }
+        }
+      },
+      "4h": {
+        "rms_m": {
+          "persist": 2278.961401641709,
+          "drift": 6001.532090231502,
+          "single": 2658.389259851066,
+          "multi": 2314.1623263817373
+        },
+        "median_error_m": {
+          "persist": 0.32624026105125564,
+          "drift": 0.8721188675460667,
+          "single": 0.6172957495913696,
+          "multi": 0.43394111655612955
+        },
+        "p95_error_m": {
+          "persist": 1.871192794885261,
+          "drift": 5.347409207816506,
+          "single": 9.131502075085107,
+          "multi": 3.591840105304006
+        },
+        "comparisons": {
+          "multi_vs_persist_pct": {
+            "median": -15.478882151994444,
+            "ci95": [
+              -15.954229162313034,
+              -14.979318962789145
+            ],
+            "n": 88447,
+            "frac_positive": 0.35580630207921127
+          },
+          "multi_vs_drift_pct": {
+            "median": 47.56710813578913,
+            "ci95": [
+              47.05368130708117,
+              48.11171658390275
+            ],
+            "n": 88921,
+            "frac_positive": 0.689151044185288
+          },
+          "multi_vs_single_pct": {
+            "median": 25.737735196833388,
+            "ci95": [
+              25.320886061789476,
+              26.171443555397012
+            ],
+            "n": 89315,
+            "frac_positive": 0.6880927055925656
+          }
+        }
+      },
+      "8h": {
+        "rms_m": {
+          "persist": 2360.4788953956127,
+          "drift": 11224.511705547347,
+          "single": 3660.5687915093117,
+          "multi": 2503.8448164287765
+        },
+        "median_error_m": {
+          "persist": 0.3344659805947626,
+          "drift": 1.3277966283809195,
+          "single": 0.9679377612605078,
+          "multi": 0.557555999980754
+        },
+        "p95_error_m": {
+          "persist": 1.9169313786402429,
+          "drift": 9.12218759528111,
+          "single": 11.250687658422413,
+          "multi": 4.30873398249926
+        },
+        "comparisons": {
+          "multi_vs_persist_pct": {
+            "median": -42.687742731513445,
+            "ci95": [
+              -44.52242922639063,
+              -40.8432307544774
+            ],
+            "n": 34180,
+            "frac_positive": 0.31255119953189
+          },
+          "multi_vs_drift_pct": {
+            "median": 55.52360870501456,
+            "ci95": [
+              54.664279854038476,
+              56.416228348777665
+            ],
+            "n": 34363,
+            "frac_positive": 0.6869598114250793
+          },
+          "multi_vs_single_pct": {
+            "median": 39.44604790988796,
+            "ci95": [
+              38.731539146077154,
+              40.213331586764454
+            ],
+            "n": 34511,
+            "frac_positive": 0.7337660456086466
+          }
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "1h: RMS persist=2452.980, drift=3099.415, single=2481.018, multi=2455.422 m",
+    "  multi vs persist: -2.02%, CI95 [-2.06, -1.97]",
+    "  multi vs drift: +16.29%, CI95 [+16.13, +16.48]",
+    "  multi vs single: +4.89%, CI95 [+4.82, +4.96]",
+    "4h: RMS persist=2278.961, drift=6001.532, single=2658.389, multi=2314.162 m",
+    "  multi vs persist: -15.48%, CI95 [-15.95, -14.98]",
+    "  multi vs drift: +47.57%, CI95 [+47.05, +48.11]",
+    "  multi vs single: +25.74%, CI95 [+25.32, +26.17]",
+    "8h: RMS persist=2360.479, drift=11224.512, single=3660.569, multi=2503.845 m",
+    "  multi vs persist: -42.69%, CI95 [-44.52, -40.84]",
+    "  multi vs drift: +55.52%, CI95 [+54.66, +56.42]",
+    "  multi vs single: +39.45%, CI95 [+38.73, +40.21]"
+  ],
+  "pre_registered_prediction": "The multi-band TEP kernel should produce smaller holdover error than persistence, drift extrapolation, and the single-lambda kernel, with the advantage growing for longer gaps."
+}

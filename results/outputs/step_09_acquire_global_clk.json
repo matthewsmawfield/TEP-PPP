@@ -1,0 +1,15 @@
+{
+  "year": 2025,
+  "n_doys": 51,
+  "centres": [
+    "gfz"
+  ],
+  "summary": {
+    "gfz": {
+      "have": 0,
+      "downloaded": 51,
+      "n_missing": 0
+    }
+  },
+  "timestamp": "2026-09-04T14:34:33.217755"
+}

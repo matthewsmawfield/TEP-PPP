@@ -1,0 +1,52 @@
+{
+  "step": 61,
+  "region": "germany_benelux",
+  "bbox_WESN": [
+    2.0,
+    15.5,
+    47.0,
+    55.5
+  ],
+  "year": 2024,
+  "doys": [
+    100,
+    101,
+    102
+  ],
+  "timestamp": "2026-09-02T16:08:07.953065+00:00",
+  "days": {
+    "2024100": {
+      "status": "ok",
+      "n_stations": 3,
+      "stations": [
+        "ENTZ",
+        "LIL2",
+        "MLVL"
+      ],
+      "nav": false,
+      "dir": "data/cors_germany_benelux_2024100"
+    },
+    "2024101": {
+      "status": "ok",
+      "n_stations": 3,
+      "stations": [
+        "ENTZ",
+        "LIL2",
+        "MLVL"
+      ],
+      "nav": false,
+      "dir": "data/cors_germany_benelux_2024101"
+    },
+    "2024102": {
+      "status": "ok",
+      "n_stations": 3,
+      "stations": [
+        "ENTZ",
+        "LIL2",
+        "MLVL"
+      ],
+      "nav": false,
+      "dir": "data/cors_germany_benelux_2024102"
+    }
+  }
+}

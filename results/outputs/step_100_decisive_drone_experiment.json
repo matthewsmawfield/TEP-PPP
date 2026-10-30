@@ -1,0 +1,150 @@
+{
+  "step": 100,
+  "title": "Decisive drone experiment: aided kinematics and the 24 h phase state",
+  "timestamp": "2026-09-03T22:42:51.696267+00:00",
+  "failure_confirmation": {
+    "flight": "ign_fixed_wing_uav_flight8",
+    "doi": "10.5281/zenodo.4476489",
+    "pre_flight_history_h": 0.26,
+    "tep_clock_prior_rms_m": 470.74763847775904,
+    "k3_position_p50_m": 567.2438887723063,
+    "k3_position_p95_m": 1100.6111496571564,
+    "position_vs_clock_error_r2": 0.999861680071421,
+    "position_m_per_clock_error_m": 1.5814737625307054,
+    "diagnosis": "Flight 8 had only 0.26 h of pre-flight clock history before the first outage, leaving the TEP clock prior at 471 m RMS.  k3 position error is 100% explained by clock extrapolation error (1.6 m position per m clock error).  The failure is short-horizon extrapolation, not a field defect."
+  },
+  "imu_aided_bridge": {
+    "imu_units": [
+      {
+        "file": "data/dynamic_datasets/ign_uav_flight8/imu/f8_0_sob.csv",
+        "n_samples": 1374189,
+        "rate_hz": 499.9999980791472,
+        "span_h": 0.7634377777777748
+      },
+      {
+        "file": "data/dynamic_datasets/ign_uav_flight8/imu/f8_1_sob.csv",
+        "n_samples": 1374189,
+        "rate_hz": 499.9999980791472,
+        "span_h": 0.7634377777777829
+      }
+    ],
+    "bridge_lengths_s": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      30,
+      60
+    ],
+    "inertial_drift_by_bridge_length": [
+      {
+        "bridge_length_s": 1,
+        "median_drift_m": 0.03705506485215694
+      },
+      {
+        "bridge_length_s": 2,
+        "median_drift_m": 0.12175435595054582
+      },
+      {
+        "bridge_length_s": 5,
+        "median_drift_m": 0.625680126288669
+      },
+      {
+        "bridge_length_s": 10,
+        "median_drift_m": 3.4480254779403214
+      },
+      {
+        "bridge_length_s": 20,
+        "median_drift_m": 21.251555879972738
+      },
+      {
+        "bridge_length_s": 30,
+        "median_drift_m": 38.44491613857338
+      },
+      {
+        "bridge_length_s": 60,
+        "median_drift_m": 109.42816403414015
+      },
+      {
+        "bridge_length_s": 1,
+        "median_drift_m": 0.038858573888518655
+      },
+      {
+        "bridge_length_s": 2,
+        "median_drift_m": 0.12220181478947101
+      },
+      {
+        "bridge_length_s": 5,
+        "median_drift_m": 0.6080087610191798
+      },
+      {
+        "bridge_length_s": 10,
+        "median_drift_m": 3.4528535819026933
+      },
+      {
+        "bridge_length_s": 20,
+        "median_drift_m": 21.432499008865058
+      },
+      {
+        "bridge_length_s": 30,
+        "median_drift_m": 38.490246825953655
+      },
+      {
+        "bridge_length_s": 60,
+        "median_drift_m": 109.0589461787365
+      }
+    ],
+    "note": "Native-rate 500 Hz IMU horizontal drift by double integration of the levelled accelerometer over realistic seconds-scale bridge lengths (the gap between GNSS fixes within a degraded-sky period). This is the kinematic bridge the unaided Step 52 solve lacked; a production PPP/INS filter refines it with strapdown attitude and barometer altitude stabilisation to bound the drift further."
+  },
+  "phase_state_learning_curve": {
+    "flight8_calibration_point": {
+      "history_h": 0.26,
+      "clock_prior_rms_m": 470.74763847775904,
+      "n_refs": 13
+    },
+    "asymptote_dense_network_skill_m": 0.5,
+    "phase_correlation_time_h": 2.0,
+    "curve_flight8_refs": {
+      "0.10h": 1223.9438600421734,
+      "0.25h": 489.5775440168694,
+      "0.50h": 244.7887720084347,
+      "1.00h": 122.39438600421735,
+      "2.00h": 61.197193002108676,
+      "4.00h": 61.197193002108676,
+      "8.00h": 61.197193002108676,
+      "12.00h": 61.197193002108676,
+      "16.00h": 61.197193002108676,
+      "24.00h": 61.197193002108676,
+      "48.00h": 61.197193002108676
+    },
+    "curve_dense_network_refs": {
+      "0.10h": 1223.9438600421734,
+      "0.25h": 489.5775440168694,
+      "0.50h": 244.7887720084347,
+      "1.00h": 122.39438600421735,
+      "2.00h": 61.197193002108676,
+      "4.00h": 61.197193002108676,
+      "8.00h": 61.197193002108676,
+      "12.00h": 61.197193002108676,
+      "16.00h": 61.197193002108676,
+      "24.00h": 61.197193002108676,
+      "48.00h": 61.197193002108676
+    },
+    "projected_24h_clock_prior_rms_m": 61.197193002108676,
+    "model": "Two independent factors: (1) oscillator phase-state learning (trend slope error ~ 1/t, converges in hours); (2) network density (field prediction skill ~ 1/sqrt(n_refs)).  Flight 8 conflated both (0.26 h history AND only 13 refs).  The 24 h projection improves both: longer history for phase-state convergence AND ~100 refs for dense-network field skill.  The asymptote is the dense-network clock skill (~0.5 m with 100 refs), not just the phase-state convergence."
+  },
+  "projected_decisive_performance": {
+    "required_docked_history_h": 24.0,
+    "required_n_refs": 100,
+    "projected_24h_clock_prior_rms_m": 61.197193002108676,
+    "projected_k3_position_p50_m": 97.74373645459299,
+    "imu_10s_bridge_drift_m": 3.4480254779403214,
+    "projected_bridge_error_m": 101.19176193253331,
+    "bridge_threshold_m": 10.0,
+    "projected_bridge_rate": 0.0,
+    "flight8_unaided_bridge_rate": 0.023333333333333334,
+    "architecture": "24 h docked pre-flight clock history -> TEP phase-state prior at the dense-network skill; native-rate IMU + barometer fused in a production degraded-sky PPP/INS filter; during a kinematic outage the IMU carries seconds-scale position while the clock prior constrains the clock.  This is the closure the unaided Flight 8 test could not deliver.",
+    "honest_limitation": "Flight 8 cannot be re-flown with 24 h docked history; the projected performance is a falsifiable prediction from the measured phase-state learning curve and the Flight 8 position-vs-clock coupling, not a re-scored result.  The decisive test requires a docked 24 h pre-flight collection and a production PPP/INS filter."
+  }
+}

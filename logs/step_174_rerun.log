@@ -1,0 +1,12 @@
+[Step 174] Running 114+ window live causal audit...
+  -> 120 windows (28.35 h): causal unscaled mean +39.54% (median +42.76%, wins 119/120, p=9.10e-35)
+[Step 174] Running cryptographic sealed-envelope suite & falsification battery...
+  -> Walk-forward sealed (n=24): full=+39.61% (wins 24/24), network-only=+39.56% (wins 24/24)
+  -> Strict future epoch slices (n=221): full=-4.14% (wins 95/221)
+     full-weight band (h<=5400s, n=167): -7.17% | tapered tail (h>5400s, n=221): -2.25%
+  -> Resubstitution bound (in-sample, n=23): +46.81% vs OOS walk-forward +39.61%
+  -> ORACLE-REPLAY echo ceiling (n=24): +47.48% | CLEAN-ORIGIN fit-half seals (n=24, ZERO epoch overlap): -1.29% (wins 9/24)
+     clean position bands: h=0_1800s +3.2% | h=1800_3600s -4.2% | h=3600_5400s -5.0% | h=5400_7300s +0.1%
+  -> Station permutation null (N=100): +31.36% vs -1.08% +/- 1.82% (z=17.82 sigma)
+  -> Common-mode stripped: +30.48% (97.2% retained) | >360 km only: +17.79% | >1000 km only: +6.45%
+[Step 174] Wrote results/outputs/step_174_sealed_envelope_prediction.json in 1004.52s

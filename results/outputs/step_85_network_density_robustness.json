@@ -1,0 +1,219 @@
+{
+  "step": 85,
+  "title": "Network density robustness of TEP outage prediction",
+  "timestamp": "2026-09-03T15:27:41.272812+00:00",
+  "design": "Re-runs the Step 55 causal outage prediction at controlled reference densities (5, 8, 12, 16, 20, and all-available stations).  For each density the reference pool is randomly subsampled (seeded) before the kriging solve; the TEP covariance remains physics-fixed (Gaussian, lambda = 4,200 km, nugget = 0.35) with no re-tuning at any density. 15-day subset, gaps of 30 min / 1 h / 4 h.",
+  "n_days": 15,
+  "density_levels": [
+    5,
+    8,
+    12,
+    16,
+    20,
+    99
+  ],
+  "gap_labels_s": [
+    1800,
+    3600,
+    14400
+  ],
+  "station_counts_sample": {
+    "2024001": 28,
+    "2024027": 29,
+    "2024053": 30
+  },
+  "sweep": {
+    "5": {
+      "1800": {
+        "n_eval": 18300,
+        "rms_tep_m": 6.040581975433951,
+        "rms_pers_m": 7.627061199661703,
+        "rms_net_mean_m": 6.156746361919412,
+        "tep_vs_pers_pct": 20.800662046583806,
+        "tep_vs_net_mean_pct": 1.8867820705423033,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 17795,
+        "rms_tep_m": 7.613985914604166,
+        "rms_pers_m": 10.901355761042725,
+        "rms_net_mean_m": 7.745223578192208,
+        "tep_vs_pers_pct": 30.155605582439215,
+        "tep_vs_net_mean_pct": 1.6944335081244155,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15039,
+        "rms_tep_m": 15.006504695546338,
+        "rms_pers_m": 25.048418874392162,
+        "rms_net_mean_m": 15.344194047966935,
+        "tep_vs_pers_pct": 40.090012184809034,
+        "tep_vs_net_mean_pct": 2.200763046693477,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "8": {
+      "1800": {
+        "n_eval": 18872,
+        "rms_tep_m": 5.8740710281295785,
+        "rms_pers_m": 7.634544323591313,
+        "rms_net_mean_m": 6.002996122201865,
+        "tep_vs_pers_pct": 23.05931069155942,
+        "tep_vs_net_mean_pct": 2.1476791163576148,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 18500,
+        "rms_tep_m": 7.397345023028193,
+        "rms_pers_m": 10.894104133625218,
+        "rms_net_mean_m": 7.56544795705948,
+        "tep_vs_pers_pct": 32.09772063591807,
+        "tep_vs_net_mean_pct": 2.221982557879165,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15930,
+        "rms_tep_m": 14.471915647209025,
+        "rms_pers_m": 25.006664138966237,
+        "rms_net_mean_m": 14.88874831285308,
+        "tep_vs_pers_pct": 42.127764156041934,
+        "tep_vs_net_mean_pct": 2.7996488145629606,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "12": {
+      "1800": {
+        "n_eval": 18863,
+        "rms_tep_m": 5.724425308172541,
+        "rms_pers_m": 7.63510487547646,
+        "rms_net_mean_m": 5.891150583345485,
+        "tep_vs_pers_pct": 25.02492891015705,
+        "tep_vs_net_mean_pct": 2.8300969872385062,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 18487,
+        "rms_tep_m": 7.20837876651913,
+        "rms_pers_m": 10.895037251322735,
+        "rms_net_mean_m": 7.435719166111025,
+        "tep_vs_pers_pct": 33.83796126402431,
+        "tep_vs_net_mean_pct": 3.0574097072953,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15907,
+        "rms_tep_m": 14.053394777960564,
+        "rms_pers_m": 24.996123680399155,
+        "rms_net_mean_m": 14.637736013936227,
+        "tep_vs_pers_pct": 43.77770346455515,
+        "tep_vs_net_mean_pct": 3.992019226329302,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "16": {
+      "1800": {
+        "n_eval": 18852,
+        "rms_tep_m": 5.6364908492874495,
+        "rms_pers_m": 7.635416694547566,
+        "rms_net_mean_m": 5.835898731955029,
+        "tep_vs_pers_pct": 26.179656267974806,
+        "tep_vs_net_mean_pct": 3.4169181445130703,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 18477,
+        "rms_tep_m": 7.103753557854331,
+        "rms_pers_m": 10.892435947041104,
+        "rms_net_mean_m": 7.376137682339894,
+        "tep_vs_pers_pct": 34.78269147146976,
+        "tep_vs_net_mean_pct": 3.692774406010757,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15883,
+        "rms_tep_m": 13.78248227817977,
+        "rms_pers_m": 24.99052669667284,
+        "rms_net_mean_m": 14.505882062780373,
+        "tep_vs_pers_pct": 44.849172466562194,
+        "tep_vs_net_mean_pct": 4.986941031712389,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "20": {
+      "1800": {
+        "n_eval": 18847,
+        "rms_tep_m": 5.5751671775465,
+        "rms_pers_m": 7.636191351480147,
+        "rms_net_mean_m": 5.8078288491777945,
+        "tep_vs_pers_pct": 26.9902112069802,
+        "tep_vs_net_mean_pct": 4.006000825321021,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 18457,
+        "rms_tep_m": 7.021187839059575,
+        "rms_pers_m": 10.895816997249097,
+        "rms_net_mean_m": 7.338395639117385,
+        "tep_vs_pers_pct": 35.560703333836855,
+        "tep_vs_net_mean_pct": 4.3225769726414125,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15857,
+        "rms_tep_m": 13.599072142034393,
+        "rms_pers_m": 24.983509356627636,
+        "rms_net_mean_m": 14.438126730828117,
+        "tep_vs_pers_pct": 45.56780655626018,
+        "tep_vs_net_mean_pct": 5.81138124381596,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "99": {
+      "1800": {
+        "n_eval": 18838,
+        "rms_tep_m": 5.53636226018177,
+        "rms_pers_m": 7.636764751161929,
+        "rms_net_mean_m": 5.79333900208441,
+        "tep_vs_pers_pct": 27.503826023455602,
+        "tep_vs_net_mean_pct": 4.435727683295965,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "3600": {
+        "n_eval": 18449,
+        "rms_tep_m": 6.9716850591676405,
+        "rms_pers_m": 10.895271675364054,
+        "rms_net_mean_m": 7.322668374076029,
+        "tep_vs_pers_pct": 36.011829104438654,
+        "tep_vs_net_mean_pct": 4.793106788106805,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 15835,
+        "rms_tep_m": 13.45502421274721,
+        "rms_pers_m": 24.96574708797695,
+        "rms_net_mean_m": 14.381633720746596,
+        "tep_vs_pers_pct": 46.1060621765775,
+        "tep_vs_net_mean_pct": 6.443005892040499,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    }
+  }
+}

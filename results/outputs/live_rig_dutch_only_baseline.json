@@ -1,0 +1,38 @@
+{
+  "captured_utc": "2026-09-06T22:46:15.528697+00:00",
+  "configuration": "AGRS-NL only (23 Dutch CORS, 269-497 km)",
+  "purpose": "Baseline record before adding the RENEP (Portugal/Azores) caster. This configuration produces real OPERATIONAL skill but cannot test spatial structure: all stations lie in a narrow annulus, so kriging weights span only 3.9% and permuting the geometry is a no-op.",
+  "network": {
+    "n_stations": 23,
+    "nearest_km": 268.56400993916446,
+    "farthest_km": 496.7561892222311,
+    "kernel_weight_relative_spread_pct": 3.9
+  },
+  "coverage": 0.684,
+  "clock": {
+    "tep_rmse_m": 13.296,
+    "persist_rmse_m": 13.7445,
+    "free_rmse_m": 13.7445,
+    "tep_vs_persist_pct": 3.26
+  },
+  "position_degraded_k4": {
+    "tep_rmse_3d_m": 37.977,
+    "persist_rmse_3d_m": 45.945,
+    "free_rmse_3d_m": 42.419,
+    "tep_vs_persist_pct_3d": 17.34,
+    "tep_vs_persist_pct_2d": 13.34,
+    "degenerated": false
+  },
+  "specificity_controls": {
+    "permuted_rmse_m": 13.2916,
+    "common_mode_removed_rmse_m": 13.7597,
+    "tep_rmse_m": 13.296,
+    "persist_rmse_m": 13.7445,
+    "tep_vs_persist_pct": 3.26,
+    "permuted_vs_persist_pct": 3.3,
+    "geometry_contribution_pct": -0.04,
+    "cm_removed_vs_persist_pct": -0.11,
+    "note": "Controls share the data, kernel, alpha and gating with the TEP arm; only the geometry (permuted) or the common mode (removed) differ."
+  },
+  "interpretation": "Operational skill is real and substantial. The specificity controls read ~0, so on THIS network the skill is network common mode with no detectable spatial structure \u2014 as expected from a 3.9% kriging-weight spread."
+}

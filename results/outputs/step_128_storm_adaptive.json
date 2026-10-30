@@ -1,0 +1,88 @@
+{
+  "step": 128,
+  "title": "Storm-adaptive TEP prior: exploiting geomagnetic storm modulation",
+  "timestamp": "2026-09-06T19:02:21.787997+00:00",
+  "product": "clk_cod",
+  "lambdas": {
+    "control": 2009.0,
+    "storm": 3097.0,
+    "recovery": 5190.0,
+    "fixed": 4200.0
+  },
+  "results": {
+    "control": {
+      "n_days": 5,
+      "adaptive_vs_fixed_pct": {
+        "median": 0.9936266653437609,
+        "ci95": [
+          -0.10545806753192721,
+          1.5436130556649164
+        ],
+        "n": 5,
+        "frac_positive": 0.8
+      },
+      "adaptive_vs_emp_pct": {
+        "median": 0.6191253790573725,
+        "ci95": [
+          -0.40142252007711043,
+          4.092821517492262
+        ],
+        "n": 5,
+        "frac_positive": 0.8
+      },
+      "median_rms_m": {
+        "fixed": 0.6106742719693645,
+        "adaptive": 0.604606449564683,
+        "empirical": 0.6125784861998672
+      }
+    },
+    "storm": {
+      "n_days": 2,
+      "adaptive_vs_fixed_pct": {
+        "median": null,
+        "ci95": null,
+        "n": 2
+      },
+      "adaptive_vs_emp_pct": {
+        "median": null,
+        "ci95": null,
+        "n": 2
+      },
+      "median_rms_m": {
+        "fixed": 5920.45626582702,
+        "adaptive": 5864.044565014297,
+        "empirical": 5671.606856613508
+      }
+    },
+    "recovery": {
+      "n_days": 5,
+      "adaptive_vs_fixed_pct": {
+        "median": -0.5274032417250885,
+        "ci95": [
+          -0.596616032007935,
+          -0.29207718720996034
+        ],
+        "n": 5,
+        "frac_positive": 0.0
+      },
+      "adaptive_vs_emp_pct": {
+        "median": -5.44412570691597,
+        "ci95": [
+          -6.780406533199335,
+          -4.144918362759786
+        ],
+        "n": 5,
+        "frac_positive": 0.0
+      },
+      "median_rms_m": {
+        "fixed": 2.108297692823878,
+        "adaptive": 2.118234833825423,
+        "empirical": 1.9837298832223849
+      }
+    }
+  },
+  "interpretation": [
+    "During control periods, adaptive vs fixed: +0.99% (CI95 [-0.11, +1.54])."
+  ],
+  "pre_registered_prediction": "The storm-adaptive TEP kernel (lambda=3097 km during storm, from Step 114) should beat the fixed kernel (lambda=4200 km) during storm periods, because the storm-modulated correlation length captures the amplified TEP field structure.  This exploits the atmospheric storm modulation as a predictive strength."
+}

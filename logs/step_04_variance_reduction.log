@@ -1,0 +1,72 @@
+[22:07:47] [INFO] 
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] STEP 04: DISTANCE-CONTROLLED ANISOTROPY AND CMB ALIGNMENT
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] 
+[22:07:47] [INFO] 9 stations x 7 days, 30s sampling
+[22:07:47] [INFO] Method: Partial correlation controlling for inter-station distance
+[22:07:47] [INFO] 
+[22:07:47] [INFO] Loaded 9 stations, dt=30s
+[22:07:47] [INFO] 
+[22:07:47] [INFO] 
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] === DISTANCE-PA CONFOUND CHECK ===
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] 
+[22:07:47] [INFO] PA vs distance: r=-0.6808, p=0.000005
+[22:07:47] [INFO]   (This confound MUST be controlled for in anisotropy analysis)
+[22:07:47] [INFO] 
+[22:07:47] [INFO] 
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] === NAIVE EW/NS (WITH DISTANCE AUDIT) ===
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] 
+[22:07:47] [INFO] EW pairs: n=23, mean dist=7468 km, mean PA=-0.2346
+[22:07:47] [INFO] NS pairs: n=13, mean dist=4207 km, mean PA=0.8385
+[22:07:47] [INFO] EW/NS mean distance ratio: 1.78 (distance confound)
+[22:07:47] [WARNING]   Naive comparison is INVALID due to distance confound
+[22:07:47] [INFO] 
+[22:07:47] [INFO] 
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] === CMB FRAME ALIGNMENT (DISTANCE-CONTROLLED) ===
+[22:07:47] [INFO] ================================================================================
+[22:07:47] [INFO] 
+[22:07:47] [INFO] CMB dipole: RA=168.0°, Dec=-7.0°
+[22:07:48] [INFO] Best-fit direction: RA=50.0°, Dec=-80.0°
+[22:07:48] [INFO] Best-fit partial correlation: r=0.6816
+[22:07:48] [INFO] Angular separation from CMB dipole: 87.8°
+[22:07:48] [INFO] CMB dipole direction partial correlation: r=-0.6354, p=0.000031
+[22:07:48] [WARNING]   NS > EW in CMB direction (inconsistent with framework)
+[22:07:48] [INFO] 
+[22:07:48] [INFO] 
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] === PERMUTATION TEST (BEST-FIT DIRECTION) ===
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] 
+[22:07:48] [INFO] Permutation z-score: 4.09 sigma
+[22:07:48] [INFO] Permutation p-value: 0.0000
+[22:07:48] [INFO] 
+[22:07:48] [INFO] 
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] === SHORT-BASELINE ANISOTROPY (< 1000 km, DISTANCE-MATCHED) ===
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] 
+[22:07:48] [INFO] EW (<1000km): n=4, mean dist=328 km, mean PA=0.9932
+[22:07:48] [INFO] NS (<1000km): n=7, mean dist=584 km, mean PA=0.9938
+[22:07:48] [INFO]   Distance ratio: 0.56 (closer to matched)
+[22:07:48] [WARNING]   NS > EW at short baselines (needs investigation)
+[22:07:48] [SUCCESS] Saved figure: results/figures/step_04_variance_reduction.png
+[22:07:48] [SUCCESS] Saved summary: results/outputs/step_04_variance_reduction.json
+[22:07:48] [INFO] 
+[22:07:48] [INFO] 
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] === SUMMARY ===
+[22:07:48] [INFO] ================================================================================
+[22:07:48] [INFO] 
+[22:07:48] [INFO] Distance-PA confound: r=-0.6808 (p=0.000005)
+[22:07:48] [INFO] Best-fit anisotropy axis: RA=50°, Dec=-80°
+[22:07:48] [INFO]   Partial correlation: r=0.6816 (4.1σ, p=0.0000)
+[22:07:48] [INFO]   Angular separation from CMB: 88°
+[22:07:48] [INFO] CMB dipole direction partial corr: r=-0.6354 (p=0.000031)
+[22:07:48] [WARNING]   NS > EW in CMB direction: limited by 9-station sky coverage
+[22:07:48] [INFO]   (Paper 2: 18.2° from CMB with 474 stations; Paper 14: 92° with 256 stations)

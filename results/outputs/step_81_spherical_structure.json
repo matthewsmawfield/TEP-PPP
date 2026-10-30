@@ -1,0 +1,447 @@
+{
+  "step": 81,
+  "title": "Spherical structure: fit-range bound and angular quadrupole",
+  "timestamp": "2026-09-02T23:02:44.519974+00:00",
+  "angular_profile": [
+    {
+      "gc_km": 250.0,
+      "chord_km": 249.98396070721978,
+      "central_angle_deg": 2.2483040147968265,
+      "n_pair_days": 27936,
+      "phase_alignment": 0.17878370484625472
+    },
+    {
+      "gc_km": 750.0,
+      "chord_km": 749.5670057728997,
+      "central_angle_deg": 6.744912044390479,
+      "n_pair_days": 50800,
+      "phase_alignment": 0.15309912145490875
+    },
+    {
+      "gc_km": 1250.0,
+      "chord_km": 1247.996014349533,
+      "central_angle_deg": 11.241520073984132,
+      "n_pair_days": 54171,
+      "phase_alignment": 0.17464483388409444
+    },
+    {
+      "gc_km": 1750.0,
+      "chord_km": 1744.503603056225,
+      "central_angle_deg": 15.738128103577784,
+      "n_pair_days": 54772,
+      "phase_alignment": 0.16430956447603565
+    },
+    {
+      "gc_km": 2250.0,
+      "chord_km": 2238.325346738129,
+      "central_angle_deg": 20.234736133171438,
+      "n_pair_days": 51554,
+      "phase_alignment": 0.1338173385488523
+    },
+    {
+      "gc_km": 2750.0,
+      "chord_km": 2728.7009553786033,
+      "central_angle_deg": 24.73134416276509,
+      "n_pair_days": 44538,
+      "phase_alignment": 0.13580305730632106
+    },
+    {
+      "gc_km": 3250.0,
+      "chord_km": 3214.8754446448906,
+      "central_angle_deg": 29.22795219235874,
+      "n_pair_days": 46769,
+      "phase_alignment": 0.0960839533705132
+    },
+    {
+      "gc_km": 3750.0,
+      "chord_km": 3696.100298265149,
+      "central_angle_deg": 33.724560221952395,
+      "n_pair_days": 45587,
+      "phase_alignment": 0.07622588220514348
+    },
+    {
+      "gc_km": 4250.0,
+      "chord_km": 4171.634620447226,
+      "central_angle_deg": 38.22116825154605,
+      "n_pair_days": 49813,
+      "phase_alignment": 0.03573539299497446
+    },
+    {
+      "gc_km": 4750.0,
+      "chord_km": 4640.746276564909,
+      "central_angle_deg": 42.7177762811397,
+      "n_pair_days": 54225,
+      "phase_alignment": 0.021237099280470205
+    },
+    {
+      "gc_km": 5250.0,
+      "chord_km": 5102.713020355453,
+      "central_angle_deg": 47.21438431073335,
+      "n_pair_days": 58600,
+      "phase_alignment": -0.010094832451182553
+    },
+    {
+      "gc_km": 5750.0,
+      "chord_km": 5556.823605892938,
+      "central_angle_deg": 51.710992340327,
+      "n_pair_days": 59315,
+      "phase_alignment": -0.01214778134860891
+    },
+    {
+      "gc_km": 6250.0,
+      "chord_km": 6002.378882625462,
+      "central_angle_deg": 56.207600369920655,
+      "n_pair_days": 66631,
+      "phase_alignment": -0.05047187297122619
+    },
+    {
+      "gc_km": 6750.0,
+      "chord_km": 6438.692871790251,
+      "central_angle_deg": 60.70420839951431,
+      "n_pair_days": 67748,
+      "phase_alignment": -0.027723058598917147
+    },
+    {
+      "gc_km": 7250.0,
+      "chord_km": 6865.093822549423,
+      "central_angle_deg": 65.20081642910797,
+      "n_pair_days": 78543,
+      "phase_alignment": -0.025723089624900535
+    },
+    {
+      "gc_km": 7750.0,
+      "chord_km": 7280.925246220374,
+      "central_angle_deg": 69.69742445870162,
+      "n_pair_days": 91769,
+      "phase_alignment": -0.046427292816881065
+    },
+    {
+      "gc_km": 8250.0,
+      "chord_km": 7685.546927008508,
+      "central_angle_deg": 74.19403248829528,
+      "n_pair_days": 97537,
+      "phase_alignment": -0.04633916699948049
+    },
+    {
+      "gc_km": 8750.0,
+      "chord_km": 8078.3359076861225,
+      "central_angle_deg": 78.69064051788892,
+      "n_pair_days": 94856,
+      "phase_alignment": -0.03732101300364739
+    },
+    {
+      "gc_km": 9250.0,
+      "chord_km": 8458.687448699979,
+      "central_angle_deg": 83.18724854748258,
+      "n_pair_days": 94216,
+      "phase_alignment": -0.04871607904438098
+    },
+    {
+      "gc_km": 9750.0,
+      "chord_km": 8826.01595923082,
+      "central_angle_deg": 87.68385657707623,
+      "n_pair_days": 77139,
+      "phase_alignment": -0.06026617924084222
+    },
+    {
+      "gc_km": 10250.0,
+      "chord_km": 9179.755898771456,
+      "central_angle_deg": 92.18046460666989,
+      "n_pair_days": 58772,
+      "phase_alignment": -0.07390641879214786
+    },
+    {
+      "gc_km": 10750.0,
+      "chord_km": 9519.362647835276,
+      "central_angle_deg": 96.67707263626353,
+      "n_pair_days": 62405,
+      "phase_alignment": -0.05505019123159432
+    },
+    {
+      "gc_km": 11250.0,
+      "chord_km": 9844.313346454692,
+      "central_angle_deg": 101.17368066585719,
+      "n_pair_days": 58610,
+      "phase_alignment": -0.05120033161667358
+    },
+    {
+      "gc_km": 11750.0,
+      "chord_km": 10154.10769917851,
+      "central_angle_deg": 105.67028869545084,
+      "n_pair_days": 58601,
+      "phase_alignment": -0.03170405208235354
+    },
+    {
+      "gc_km": 12250.0,
+      "chord_km": 10448.26874532892,
+      "central_angle_deg": 110.1668967250445,
+      "n_pair_days": 58097,
+      "phase_alignment": -0.03606966812082713
+    },
+    {
+      "gc_km": 12750.0,
+      "chord_km": 10726.343593332116,
+      "central_angle_deg": 114.66350475463815,
+      "n_pair_days": 55214,
+      "phase_alignment": -0.022578755341129894
+    },
+    {
+      "gc_km": 13250.0,
+      "chord_km": 10987.904117992071,
+      "central_angle_deg": 119.16011278423179,
+      "n_pair_days": 56880,
+      "phase_alignment": -0.04123732432395146
+    },
+    {
+      "gc_km": 13750.0,
+      "chord_km": 11232.547619633873,
+      "central_angle_deg": 123.65672081382544,
+      "n_pair_days": 50112,
+      "phase_alignment": -0.021114369961258008
+    },
+    {
+      "gc_km": 14250.0,
+      "chord_km": 11459.897444101814,
+      "central_angle_deg": 128.1533288434191,
+      "n_pair_days": 44648,
+      "phase_alignment": -0.03089100334822053
+    },
+    {
+      "gc_km": 14750.0,
+      "chord_km": 11669.603562657716,
+      "central_angle_deg": 132.64993687301276,
+      "n_pair_days": 45538,
+      "phase_alignment": -0.0225222110159623
+    },
+    {
+      "gc_km": 15250.0,
+      "chord_km": 11861.343110886617,
+      "central_angle_deg": 137.1465449026064,
+      "n_pair_days": 41838,
+      "phase_alignment": -0.028666082702005942
+    },
+    {
+      "gc_km": 15750.0,
+      "chord_km": 12034.820885780191,
+      "central_angle_deg": 141.64315293220005,
+      "n_pair_days": 46814,
+      "phase_alignment": -0.0037857939820558637
+    },
+    {
+      "gc_km": 16250.0,
+      "chord_km": 12189.769800232512,
+      "central_angle_deg": 146.1397609617937,
+      "n_pair_days": 44536,
+      "phase_alignment": 0.01563712362190781
+    },
+    {
+      "gc_km": 16750.0,
+      "chord_km": 12325.951294248494,
+      "central_angle_deg": 150.63636899138737,
+      "n_pair_days": 37691,
+      "phase_alignment": 0.027416243971977863
+    },
+    {
+      "gc_km": 17250.0,
+      "chord_km": 12443.155702231845,
+      "central_angle_deg": 155.132977020981,
+      "n_pair_days": 24933,
+      "phase_alignment": 0.04344937772324442
+    },
+    {
+      "gc_km": 17750.0,
+      "chord_km": 12541.202575787089,
+      "central_angle_deg": 159.62958505057466,
+      "n_pair_days": 23075,
+      "phase_alignment": 0.045062292594014265
+    },
+    {
+      "gc_km": 18250.0,
+      "chord_km": 12619.940961538685,
+      "central_angle_deg": 164.12619308016832,
+      "n_pair_days": 18708,
+      "phase_alignment": 0.057358948643650515
+    },
+    {
+      "gc_km": 18750.0,
+      "chord_km": 12679.249633539452,
+      "central_angle_deg": 168.62280110976198,
+      "n_pair_days": 12198,
+      "phase_alignment": 0.05284534338018464
+    },
+    {
+      "gc_km": 19250.0,
+      "chord_km": 12719.037279910564,
+      "central_angle_deg": 173.1194091393556,
+      "n_pair_days": 7553,
+      "phase_alignment": 0.039699045335956036
+    },
+    {
+      "gc_km": 19750.0,
+      "chord_km": 12739.242643425687,
+      "central_angle_deg": 177.61601716894927,
+      "n_pair_days": 2984,
+      "phase_alignment": 0.1185028839286561
+    }
+  ],
+  "fit_range_scan": [
+    {
+      "dmax_km": 8000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4569.275627860811,
+      "R2": 0.9409133778869562,
+      "n_bins": 38,
+      "n_pair_days": 898589
+    },
+    {
+      "dmax_km": 10000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4406.948289532641,
+      "R2": 0.9489331425144248,
+      "n_bins": 38,
+      "n_pair_days": 1262337
+    },
+    {
+      "dmax_km": 12000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4409.463363541563,
+      "R2": 0.9630226597873797,
+      "n_bins": 38,
+      "n_pair_days": 1500725
+    },
+    {
+      "dmax_km": 13000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4298.269044472374,
+      "R2": 0.9515145939623237,
+      "n_bins": 38,
+      "n_pair_days": 1614036
+    },
+    {
+      "dmax_km": 14000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4251.514976119083,
+      "R2": 0.9595137294824007,
+      "n_bins": 38,
+      "n_pair_days": 1721028
+    },
+    {
+      "dmax_km": 15000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4189.63218615531,
+      "R2": 0.9519020969073528,
+      "n_bins": 38,
+      "n_pair_days": 1811214
+    },
+    {
+      "dmax_km": 16000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4108.78408092429,
+      "R2": 0.9410368971059014,
+      "n_bins": 38,
+      "n_pair_days": 1899866
+    },
+    {
+      "dmax_km": 17000.0,
+      "best_model": "gaussian",
+      "lambda_km": 4029.6663177764776,
+      "R2": 0.923585083238506,
+      "n_bins": 38,
+      "n_pair_days": 1982093
+    },
+    {
+      "dmax_km": 18000.0,
+      "best_model": "gaussian",
+      "lambda_km": 3961.8921800458315,
+      "R2": 0.878455832380368,
+      "n_bins": 39,
+      "n_pair_days": 2030101
+    },
+    {
+      "dmax_km": 20000.0,
+      "best_model": "gaussian",
+      "lambda_km": 3897.6753079207406,
+      "R2": 0.8470552462223409,
+      "n_bins": 39,
+      "n_pair_days": 2071544
+    }
+  ],
+  "legendre_expansion": [
+    {
+      "lmax": 0,
+      "R2": 0.0,
+      "AIC": 224.3252116304367,
+      "coefficients": [
+        0.0038569072270889836
+      ]
+    },
+    {
+      "lmax": 1,
+      "R2": 0.23998238612373857,
+      "AIC": 215.34866483774277,
+      "coefficients": [
+        -0.004054032447275642,
+        0.057377837071048134
+      ]
+    },
+    {
+      "lmax": 2,
+      "R2": 0.893826534331767,
+      "AIC": 138.61796947613772,
+      "coefficients": [
+        -0.00971796365912432,
+        0.03463768988796244,
+        0.11740450404364798
+      ]
+    },
+    {
+      "lmax": 3,
+      "R2": 0.9394832212745401,
+      "AIC": 118.13182690682599,
+      "coefficients": [
+        -0.00989812254100784,
+        0.029935717081270703,
+        0.10676930466080631,
+        0.037886652145607685
+      ]
+    },
+    {
+      "lmax": 4,
+      "R2": 0.9714635698144852,
+      "AIC": 90.06226139631954,
+      "coefficients": [
+        -0.011303737005526731,
+        0.027178846482880225,
+        0.10256520636425819,
+        0.029375843030354107,
+        0.03630596013732739
+      ]
+    }
+  ],
+  "verdict": {
+    "n_pair_days": 2075726,
+    "n_days": 40,
+    "product": "clk_cod_ops",
+    "profile_minimum_km": 10250.0,
+    "profile_minimum_central_angle_deg": 92.18046460666989,
+    "profile_minimum_value": -0.07390641879214786,
+    "zero_crossings_km": [
+      5250.0,
+      16250.0
+    ],
+    "fit_valid_plateau_km": [
+      8000.0,
+      16000.0
+    ],
+    "lambda_range_on_plateau_km": [
+      4108.78408092429,
+      4569.275627860811
+    ],
+    "corpus_lambda_km": "4201 +/- 1967 (Paper 2)",
+    "lambda_stable_on_plateau": true,
+    "quadrupole_delta_AIC_vs_dipole": 76.73069536160506,
+    "quadrupole_coefficient_a2": 0.11740450404364798,
+    "quadrupole_dominant": true,
+    "interpretation": "C(theta) is non-monotone on the sphere: it crosses zero, bottoms near 90 deg and rebounds toward the antipode, so a monotone decay model is misspecified beyond the rebound. R2 sits on a plateau over the valid range with lambda stable, which is why the fit bound is 13,000 km. The angular structure is quadrupole-dominated, the signature of a field with a preferred axis."
+  }
+}

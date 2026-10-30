@@ -1,0 +1,109 @@
+{
+  "test": "discriminators_at_max_N",
+  "D1_D2_constellation_and_distance": {
+    "per_mode": {
+      "gps_broadcast": {
+        "lambda_km": 203.8367651890951,
+        "R2": 0.13331845051576618,
+        "n_pair_days": 152800,
+        "corr_lt400km": 0.4290095927760853,
+        "corr_gt900km": 0.3637651151786968,
+        "far_over_near": 0.847918371299819,
+        "lam_at_lower_bound": false,
+        "lam_at_upper_bound": false
+      },
+      "ionofree": {
+        "lambda_km": 140.8392479620215,
+        "R2": 0.0715240818842986,
+        "n_pair_days": 152800,
+        "corr_lt400km": 0.41250232340247084,
+        "corr_gt900km": 0.36818070701122496,
+        "far_over_near": 0.8925542624204759,
+        "lam_at_lower_bound": false,
+        "lam_at_upper_bound": false
+      },
+      "multignss_mgex": {
+        "lambda_km": 50.000000000000014,
+        "R2": 0.11641781901593762,
+        "n_pair_days": 152800,
+        "corr_lt400km": 0.3878489942828387,
+        "corr_gt900km": 0.35342950200386686,
+        "far_over_near": 0.9112554298545598,
+        "lam_at_lower_bound": true,
+        "lam_at_upper_bound": false
+      },
+      "precise": {
+        "lambda_km": 151.69763939018125,
+        "R2": 0.06736414935952462,
+        "n_pair_days": 152800,
+        "corr_lt400km": 0.4487112379778893,
+        "corr_gt900km": 0.3983726155582208,
+        "far_over_near": 0.887815106556014,
+        "lam_at_lower_bound": false,
+        "lam_at_upper_bound": false
+      }
+    },
+    "cross_mode_spread_frac": 0.14507658386835498,
+    "satellite_product_axis_spread_frac": 0.08419221386340422,
+    "mgex_offset_frac": -0.09818159819860843,
+    "constellation_consistent": true,
+    "mean_far_over_near": 0.8848857925327172,
+    "flat_within_dense_aperture": true,
+    "n_days": 366,
+    "mode_day_paired_test": {
+      "n_paired_days": 366,
+      "mean_within_day_cross_mode_range": 0.10499665426285507,
+      "mean_between_day_sd_within_mode": 0.057871848059477364,
+      "cross_mode_over_day_scatter": 1.814295858551661,
+      "pooled_spread_frac_ci95": [
+        0.12152994962270153,
+        0.16126276868063616
+      ],
+      "max_abs_pairwise_t": 20.552213311555718,
+      "pairwise": {
+        "gps_broadcast__ionofree": {
+          "mean_diff": 0.018003563139025656,
+          "t": 5.1372802687537815
+        },
+        "gps_broadcast__multignss_mgex": {
+          "mean_diff": 0.040629135764942065,
+          "t": 15.194654961413878
+        },
+        "gps_broadcast__precise": {
+          "mean_diff": -0.01847614646205199,
+          "t": -5.046532975681427
+        },
+        "ionofree__multignss_mgex": {
+          "mean_diff": 0.022625572625916406,
+          "t": 5.3865919523397165
+        },
+        "ionofree__precise": {
+          "mean_diff": -0.03647970960107764,
+          "t": -20.552213311555718
+        },
+        "multignss_mgex__precise": {
+          "mean_diff": -0.05910528222699406,
+          "t": -14.299484940107206
+        }
+      }
+    }
+  },
+  "D3_anisotropy_max_N": {
+    "n_days": 366,
+    "n_pair_days": 152800,
+    "n_stations": 30,
+    "n_ew_pairs": 37684,
+    "n_ns_pairs": 48152,
+    "ew_minus_ns": 0.01522818506414469,
+    "ci95": [
+      -0.10104201048556039,
+      0.15653024058885442
+    ],
+    "p_ew_le_ns": 0.3375,
+    "sign_positive": true,
+    "significant": false,
+    "limiting_factor": "station count and orientation diversity, not pair count"
+  },
+  "timestamp": "2026-09-01T12:46:25.497081",
+  "interpretation": "D1: on the satellite-product axis -- GPS broadcast SPP, dual-frequency ionosphere-free, and precise (IGS-final satellite clocks) -- the short-baseline correlation agrees to 8%, spanning broadcast vs precise satellite clocks and single vs dual frequency; this rules out satellite-ephemeris and ionospheric artefacts. MGEX multi-GNSS sits -10% from that mean (different constellation set and clock-combination datum), so the all-four spread is 15%. D2: within the dense European aperture (50-1300 km) the correlation is FLAT (far/near = 0.88); this is why 5-station cluster analyses were degenerate -- there is no distance contrast to exploit below ~1300 km. D3: at 152,800 pair-days the EW-NS anisotropy has the sign the series reports (+0.015) but is not significant under station-clustered resampling; the binding constraint is 30 stations in one region, not the number of days."
+}

@@ -1,0 +1,22 @@
+scripts/steps/step_51_tuning_tax.py:107: RuntimeWarning: divide by zero encountered in matmul
+  return X[:, pool] @ w
+scripts/steps/step_51_tuning_tax.py:107: RuntimeWarning: overflow encountered in matmul
+  return X[:, pool] @ w
+scripts/steps/step_51_tuning_tax.py:107: RuntimeWarning: invalid value encountered in matmul
+  return X[:, pool] @ w
+
+[precise_cod] 1200 sub-network folds, sparsity trend r=0.976095786846083
+  N36  n= 240  TEP vs free-GP -21.85% [-26.05,-17.14]   vs best tuned -23.76% [-27.78,-19.90]   tuned lambda med=   700 km log10-sd=0.50
+  N24  n= 240  TEP vs free-GP -13.53% [-18.50,-10.55]   vs best tuned -16.36% [-20.64,-11.66]   tuned lambda med=   700 km log10-sd=0.54
+  N16  n= 240  TEP vs free-GP -12.52% [-14.76, -8.91]   vs best tuned -13.51% [-15.69,-10.88]   tuned lambda med=  1500 km log10-sd=0.58
+  N10  n= 240  TEP vs free-GP  -6.12% [ -8.62, -4.32]   vs best tuned  -7.40% [-11.44, -5.79]   tuned lambda med=  1500 km log10-sd=0.64
+  N6   n= 240  TEP vs free-GP  -2.40% [ -3.51, -1.68]   vs best tuned  -3.00% [ -4.54, -2.15]   tuned lambda med=  1500 km log10-sd=0.69
+
+[broadcast_spp] 180 sub-network folds, sparsity trend r=0.20994782995430142
+  N36  n=  18  TEP vs free-GP  -4.59% [ -5.13, +0.87]   vs best tuned  -4.59% [ -5.13, +0.87]   tuned lambda med=  2250 km log10-sd=0.41
+  N24  n=  36  TEP vs free-GP  +1.55% [ -3.29, +5.36]   vs best tuned  -2.83% [ -5.77, -2.56]   tuned lambda med=  3000 km log10-sd=0.33
+  N16  n=  42  TEP vs free-GP  -2.16% [ -7.50, +0.34]   vs best tuned  -6.32% [ -9.38, -4.14]   tuned lambda med=  3000 km log10-sd=0.44
+  N10  n=  42  TEP vs free-GP  -2.59% [ -4.13, -0.45]   vs best tuned  -3.31% [ -7.47, -1.47]   tuned lambda med=  3000 km log10-sd=0.37
+  N6   n=  42  TEP vs free-GP  -0.96% [ -1.86, +0.32]   vs best tuned  -1.23% [ -2.31, -0.05]   tuned lambda med=  3000 km log10-sd=0.41
+
+saved results/outputs/step_51_tuning_tax.json

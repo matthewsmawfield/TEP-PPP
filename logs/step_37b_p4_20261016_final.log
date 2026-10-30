@@ -1,0 +1,93 @@
+[0;37m[2026-10-16 11:24:32] [INFO    ] [0m
+[0;37m[2026-10-16 11:24:32] [INFO    ] ================================================================================[0m
+[0;37m[2026-10-16 11:24:32] [INFO    ] STEP 37b: Live NTRIP Stream Processing[0m
+[0;37m[2026-10-16 11:24:32] [INFO    ] ================================================================================[0m
+[0;37m[2026-10-16 11:24:32] [INFO    ] [0m
+[0;34m[2026-10-16 11:24:32] [PROCESS ] Processing AMEL...[0m
+[0;37m[2026-10-16 11:24:34] [INFO    ]   AMEL: 1268 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:24:34] [PROCESS ] Processing AVI1...[0m
+[0;37m[2026-10-16 11:24:38] [INFO    ]   AVI1: 8890 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:24:38] [PROCESS ] Processing AVI1...[0m
+[0;37m[2026-10-16 11:24:39] [INFO    ]   AVI1: no valid data[0m
+[0;34m[2026-10-16 11:24:39] [PROCESS ] Processing AVI1...[0m
+[0;37m[2026-10-16 11:24:50] [INFO    ]   AVI1: 16671 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:24:50] [PROCESS ] Processing BAIO...[0m
+[0;37m[2026-10-16 11:24:53] [INFO    ]   BAIO: 8891 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:24:53] [PROCESS ] Processing BAIO...[0m
+[0;37m[2026-10-16 11:24:53] [INFO    ]   BAIO: no valid data[0m
+[0;34m[2026-10-16 11:24:53] [PROCESS ] Processing BAIO...[0m
+[0;37m[2026-10-16 11:25:01] [INFO    ]   BAIO: 16669 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:25:01] [PROCESS ] Processing BRAG...[0m
+[0;37m[2026-10-16 11:25:04] [INFO    ]   BRAG: 8890 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:25:04] [PROCESS ] Processing BRAG...[0m
+[0;37m[2026-10-16 11:25:04] [INFO    ]   BRAG: no valid data[0m
+[0;34m[2026-10-16 11:25:04] [PROCESS ] Processing BRAG...[0m
+[0;37m[2026-10-16 11:25:14] [INFO    ]   BRAG: 16670 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:25:14] [PROCESS ] Processing CASC...[0m
+[0;37m[2026-10-16 11:25:16] [INFO    ]   CASC: 6195 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:25:16] [PROCESS ] Processing CASC...[0m
+[0;37m[2026-10-16 11:25:16] [INFO    ]   CASC: no valid data[0m
+[0;34m[2026-10-16 11:25:16] [PROCESS ] Processing CASC...[0m
+[0;37m[2026-10-16 11:25:31] [INFO    ]   CASC: 16671 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:25:31] [PROCESS ] Processing DELF...[0m
+[0;37m[2026-10-16 11:25:32] [INFO    ]   DELF: 1268 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:25:32] [PROCESS ] Processing DLF1...[0m
+[0;37m[2026-10-16 11:25:49] [INFO    ]   DLF1: 13908 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:25:49] [PROCESS ] Processing DLF1...[0m
+[0;37m[2026-10-16 11:26:24] [INFO    ]   DLF1: 34200 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:26:24] [PROCESS ] Processing EIJS...[0m
+[0;37m[2026-10-16 11:26:25] [INFO    ]   EIJS: 1268 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:25] [PROCESS ] Processing EIJS...[0m
+[0;37m[2026-10-16 11:26:26] [INFO    ]   EIJS: 1268 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:26:26] [PROCESS ] Processing GAIA...[0m
+[0;37m[2026-10-16 11:26:29] [INFO    ]   GAIA: 10132 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:29] [PROCESS ] Processing GAIA...[0m
+[0;37m[2026-10-16 11:26:29] [INFO    ]   GAIA: 965 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:29] [PROCESS ] Processing GAIA...[0m
+[0;37m[2026-10-16 11:26:41] [INFO    ]   GAIA: 34200 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:41] [PROCESS ] Processing GUAD...[0m
+[0;37m[2026-10-16 11:26:44] [INFO    ]   GUAD: 7437 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:44] [PROCESS ] Processing GUAD...[0m
+[0;37m[2026-10-16 11:26:44] [INFO    ]   GUAD: 970 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:44] [PROCESS ] Processing GUAD...[0m
+[0;37m[2026-10-16 11:26:55] [INFO    ]   GUAD: 34199 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:55] [PROCESS ] Processing KOS1...[0m
+[0;37m[2026-10-16 11:26:57] [INFO    ]   KOS1: 1268 epochs (own_stream nav)[0m
+[0;34m[2026-10-16 11:26:57] [PROCESS ] Processing MERT...[0m
+[0;37m[2026-10-16 11:26:59] [INFO    ]   MERT: 7431 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:59] [PROCESS ] Processing MERT...[0m
+[0;37m[2026-10-16 11:26:59] [INFO    ]   MERT: 965 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:26:59] [PROCESS ] Processing MERT...[0m
+[0;37m[2026-10-16 11:27:11] [INFO    ]   MERT: 34199 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:11] [PROCESS ] Processing MIRA...[0m
+[0;37m[2026-10-16 11:27:14] [INFO    ]   MIRA: 10135 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:14] [PROCESS ] Processing MIRA...[0m
+[0;37m[2026-10-16 11:27:15] [INFO    ]   MIRA: 972 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:15] [PROCESS ] Processing MIRA...[0m
+[0;37m[2026-10-16 11:27:28] [INFO    ]   MIRA: 34199 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:28] [PROCESS ] Processing VSEU...[0m
+[0;37m[2026-10-16 11:27:31] [INFO    ]   VSEU: 7434 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:31] [PROCESS ] Processing VSEU...[0m
+[0;37m[2026-10-16 11:27:31] [INFO    ]   VSEU: 968 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:31] [PROCESS ] Processing VSEU...[0m
+[0;37m[2026-10-16 11:27:43] [INFO    ]   VSEU: 34200 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:43] [PROCESS ] Processing WSRT...[0m
+[0;37m[2026-10-16 11:27:45] [INFO    ]   WSRT: 1268 epochs (pooled_broadcast nav)[0m
+[0;34m[2026-10-16 11:27:46] [PROCESS ] 
+Building kernel prior from archived training data...[0m
+[0;37m[2026-10-16 11:27:50] [INFO    ]   Trained on 2024100, 45 stations, sigma=3.67 m[0m
+[0;37m[2026-10-16 11:27:50] [INFO    ]   Contemporaneous field available: 52 stations, 14.4 h span[0m
+[0;34m[2026-10-16 11:27:50] [PROCESS ] 
+Running obstruction protocol...[0m
+[0;37m[2026-10-16 11:28:29] [INFO    ]   AVI1: 3600s hold=3.4 kernel=3.4 m (+0% vs hold)[0m
+[0;37m[2026-10-16 11:29:08] [INFO    ]   BAIO: 3600s hold=2.9 kernel=2.8 m (+3% vs hold)[0m
+[0;37m[2026-10-16 11:29:46] [INFO    ]   BRAG: 3600s hold=3.2 kernel=3.1 m (+4% vs hold)[0m
+[0;37m[2026-10-16 11:30:19] [INFO    ]   CASC: 3600s hold=3.4 kernel=2.9 m (+14% vs hold)[0m
+[0;37m[2026-10-16 11:31:52] [INFO    ]   DLF1: 3600s hold=3.1 kernel=3.2 m (-2% vs hold)[0m
+[0;37m[2026-10-16 11:33:15] [INFO    ]   GAIA: 3600s hold=3.0 kernel=3.0 m (-1% vs hold)[0m
+[0;37m[2026-10-16 11:34:31] [INFO    ]   GUAD: 3600s hold=3.6 kernel=3.3 m (+9% vs hold)[0m
+[0;37m[2026-10-16 11:36:05] [INFO    ]   MERT: 3600s hold=3.6 kernel=3.5 m (+3% vs hold)[0m
+[0;37m[2026-10-16 11:37:38] [INFO    ]   MIRA: 3600s hold=3.8 kernel=3.7 m (+2% vs hold)[0m
+[0;37m[2026-10-16 11:39:10] [INFO    ]   VSEU: 3600s hold=3.5 kernel=3.3 m (+6% vs hold)[0m
+[1;32m[2026-10-16 11:39:10] [SUCCESS ] 
+Saved results/outputs/step_37b_ntrip_process.json[0m

@@ -1,0 +1,106 @@
+{
+  "step": 148,
+  "title": "Finer frequency bands (9-band)",
+  "timestamp": "2026-09-06T20:40:29.874700+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 57,
+  "bands": [
+    {
+      "name": "tidal_diurnal",
+      "f_lo_uhz": 10.0,
+      "f_hi_uhz": 20.0,
+      "lambda_km": 3920.0
+    },
+    {
+      "name": "tidal_semidiurnal",
+      "f_lo_uhz": 20.0,
+      "f_hi_uhz": 30.0,
+      "lambda_km": 4701.0
+    },
+    {
+      "name": "post_tidal_30_40",
+      "f_lo_uhz": 30.0,
+      "f_hi_uhz": 40.0,
+      "lambda_km": 2453.0
+    },
+    {
+      "name": "post_tidal_40_50",
+      "f_lo_uhz": 40.0,
+      "f_hi_uhz": 50.0,
+      "lambda_km": 1410.0
+    },
+    {
+      "name": "post_tidal_50_75",
+      "f_lo_uhz": 50.0,
+      "f_hi_uhz": 75.0,
+      "lambda_km": 1192.0
+    },
+    {
+      "name": "post_tidal_75_100",
+      "f_lo_uhz": 75.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1067.0
+    },
+    {
+      "name": "intermediate_100_200",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 200.0,
+      "lambda_km": 1260.0
+    },
+    {
+      "name": "intermediate_200_350",
+      "f_lo_uhz": 200.0,
+      "f_hi_uhz": 350.0,
+      "lambda_km": 1383.0
+    },
+    {
+      "name": "intermediate_350_500",
+      "f_lo_uhz": 350.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1432.0
+    }
+  ],
+  "results": {
+    "n_days": 57,
+    "multi9_vs_full_band_pct": {
+      "median": 1.8604285876308468,
+      "ci95": [
+        0.946460067607624,
+        3.0964911082471125
+      ],
+      "n": 57,
+      "frac_positive": 0.7894736842105263
+    },
+    "multi9_vs_empirical_pct": {
+      "median": 0.4892562129254818,
+      "ci95": [
+        0.025565221305845487,
+        0.7704102831978865
+      ],
+      "n": 57,
+      "frac_positive": 0.6666666666666666
+    },
+    "multi9_vs_multi3_pct": {
+      "median": -0.2942285339628148,
+      "ci95": [
+        -0.4690169053919835,
+        -0.007894986938516979
+      ],
+      "n": 57,
+      "frac_positive": 0.3684210526315789
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "multi3": 1.31922915487668,
+      "multi9": 1.3719257300262,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "9-band vs full-band: median +1.86%, CI95 [+0.95, +3.10].",
+    "9-band vs empirical: median +0.49%, CI95 [+0.03, +0.77].",
+    "9-band vs 3-band: median -0.29%, CI95 [-0.47, -0.01]."
+  ],
+  "pre_registered_prediction": "The 9-band kernel should outperform the 3-band kernel by capturing the full frequency-dependent spatial structure measured by Paper 1."
+}

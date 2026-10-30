@@ -1,0 +1,85 @@
+{
+  "step": 118,
+  "title": "Sub-band scale-free test: is the TEP clock field scale-free?",
+  "timestamp": "2026-09-06T17:41:04.108718+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "subbands": [
+    [
+      "low",
+      "10",
+      "50"
+    ],
+    [
+      "mid",
+      "50",
+      "100"
+    ],
+    [
+      "high",
+      "100",
+      "500"
+    ]
+  ],
+  "results": {
+    "low": {
+      "n_pairs": 180542,
+      "n_bins": 32,
+      "exponential_lambda_km": 3748.819417708386,
+      "exponential_R2": 0.8901495571142108,
+      "best_model": "gaussian",
+      "R2": 0.897699201769607,
+      "tep_band_mean_alignment": 0.11815211909542377,
+      "n_tep_band": 40961
+    },
+    "mid": {
+      "n_pairs": 180542,
+      "n_bins": 32,
+      "exponential_lambda_km": 1329.5748643314373,
+      "exponential_R2": 0.8133981574219297,
+      "best_model": "gaussian",
+      "R2": 0.8218687759831406,
+      "tep_band_mean_alignment": 0.048701255990746956,
+      "n_tep_band": 40961
+    },
+    "high": {
+      "n_pairs": 180542,
+      "n_bins": 32,
+      "exponential_lambda_km": 2181.2390144885726,
+      "exponential_R2": 0.8519665861384288,
+      "best_model": "exponential",
+      "R2": 0.8519665861384288,
+      "tep_band_mean_alignment": 0.07583067759840965,
+      "n_tep_band": 40961
+    },
+    "full": {
+      "n_pairs": 180542,
+      "n_bins": 32,
+      "exponential_lambda_km": 3601.637138033869,
+      "exponential_R2": 0.9009490405953864,
+      "best_model": "gaussian",
+      "R2": 0.9042219095421056,
+      "tep_band_mean_alignment": 0.12275382436350608,
+      "n_tep_band": 40961
+    }
+  },
+  "lambda_comparison": {
+    "full": 3601.637138033869,
+    "low": 3748.819417708386,
+    "mid": 1329.5748643314373,
+    "high": 2181.2390144885726,
+    "lambda_range_km": 2419.2445533769487,
+    "lambda_cv": 0.41405557063639525
+  },
+  "interpretation": [
+    "Sub-band lambda coefficient of variation = 0.414 (>= 0.20) \u2014 the correlation length VARIES with frequency. This is more consistent with an atmospheric/ionospheric interpretation (frequency-dependent processes) than with a scale-free TEP field.",
+    "Full-band lambda = 3601.6 km.  Sub-band lambdas: low=3748.819417708386, mid=1329.5748643314373, high=2181.2390144885726.",
+    "For reference: tropospheric ZTD correlation ~500 km, ionospheric TEC correlation ~1000-2000 km, synoptic weather ~1000-3000 km. The measured clock correlation scale (3601.637138033869 km) is much larger than these atmospheric scales."
+  ],
+  "pre_registered_prediction": "Under TEP, the clock correlation field should be scale-free within the 10-500 uHz band \u2014 the same correlation length in every sub-band.  Under an atmospheric/ionospheric interpretation, the correlation length should vary with frequency because different atmospheric processes dominate at different periods.  A coefficient of variation < 0.20 across sub-bands supports TEP; >= 0.20 supports atmospheric.",
+  "atmospheric_reference_scales": {
+    "tropospheric_ZTD_km": "~500",
+    "ionospheric_TEC_km": "~1000-2000",
+    "synoptic_weather_km": "~1000-3000"
+  }
+}

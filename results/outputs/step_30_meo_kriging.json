@@ -1,0 +1,57 @@
+{
+  "description": "MEO Spatio-Kinematic Validation",
+  "satellites": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05"
+  ],
+  "days": [
+    {
+      "doy": 100,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 2.997845681760747,
+      "clock_pred_rmse_ns": 0.2882749115771279
+    },
+    {
+      "doy": 101,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 3.0041871378643306,
+      "clock_pred_rmse_ns": 0.3073558185615904
+    },
+    {
+      "doy": 102,
+      "successful_epochs": 177,
+      "mean_velocity_kms": 3.002606465675265,
+      "clock_pred_rmse_ns": 0.3754063357432226
+    },
+    {
+      "doy": 103,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 2.9979290199879705,
+      "clock_pred_rmse_ns": 0.31355956799997303
+    },
+    {
+      "doy": 104,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 2.997950607645711,
+      "clock_pred_rmse_ns": 0.3185179570465779
+    },
+    {
+      "doy": 105,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 2.9979676258306913,
+      "clock_pred_rmse_ns": 1.0853133008046025
+    },
+    {
+      "doy": 106,
+      "successful_epochs": 288,
+      "mean_velocity_kms": 2.997980768408656,
+      "clock_pred_rmse_ns": 0.28864516027100884
+    }
+  ],
+  "total_epochs": 1905,
+  "overall_mean_velocity_kms": 2.9993140508010376,
+  "overall_clock_pred_rmse_ns": 0.5106997490286611
+}

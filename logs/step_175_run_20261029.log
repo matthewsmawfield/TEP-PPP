@@ -1,0 +1,4 @@
+AZ/EL MULTIPATH SEPARATION FOR THE HOLONOMY (per-station per-satellite site-frame map)
+  prewarm: 266 station-days across 266 needed
+gunzip: data/rinex/obs/2024/099/WSRT00NLD_R_20240990000_01D_30S_MO.crx.gz: not in gzip format
+gunzip: data/rinex/obs/2024/099/REDU00BEL_R_20240990000_01D_30S_MO.crx.gz: not in gzip format

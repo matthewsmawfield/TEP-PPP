@@ -1,0 +1,129 @@
+{
+  "test": "lambda_meta_analysis_dependence_aware",
+  "timestamp": "2026-09-01T20:02:00.267641",
+  "method": "Block-bootstrap over dependency groups: COD precise (3 shared-product measurements), GFZ precise, GRG precise, JPL precise, Broadcast free-GP. Per-day lambda resampling for groups with daily data; conservative MAD-based noise for single-day centres; IQR-based noise for free-GP.",
+  "n_bootstrap": 20000,
+  "seed": 20260901,
+  "tep_band_km": [
+    1000.0,
+    5000.0
+  ],
+  "all_measurements_km": [
+    3628.41534347027,
+    2339.0,
+    4232.723559100773,
+    1817.0,
+    3759.0,
+    2942.0,
+    1500.0
+  ],
+  "measurement_labels": [
+    "T1 precise (Step 14)",
+    "COD per-AC (Step 14)",
+    "T5 global (Step 42)",
+    "GFZ per-AC (Step 14)",
+    "GRG per-AC (Step 14)",
+    "JPL per-AC (Step 14)",
+    "Free-GP baseline-restricted (Step 43)"
+  ],
+  "dependency_groups": {
+    "COD_precise": {
+      "measurements": [
+        3628.41534347027,
+        2339.0,
+        4232.723559100773
+      ],
+      "labels": [
+        "T1 (Step 14, 30-day binned Gaussian)",
+        "COD per-AC (Step 14, 90-day per-day median)",
+        "T5 (Step 42, 7-day binned fit)"
+      ],
+      "group_mean": 3400.0463008570136,
+      "bootstrap_median": 3371.900746712705,
+      "bootstrap_ci95": [
+        3321.654151263659,
+        3442.667499920061
+      ],
+      "n_per_day": 90
+    },
+    "GFZ_precise": {
+      "measurements": [
+        1817.0
+      ],
+      "labels": [
+        "GFZ per-AC (Step 14, 90-day per-day median)"
+      ],
+      "group_mean": 1817.0,
+      "bootstrap_median": 2531.4787217746216,
+      "bootstrap_ci95": [
+        2325.947437978597,
+        3006.631488561442
+      ],
+      "n_per_day": 90
+    },
+    "GRG_precise": {
+      "measurements": [
+        3759.0
+      ],
+      "labels": [
+        "GRG per-AC (Step 14, 1-day binned fit)"
+      ],
+      "group_mean": 3759.0,
+      "bootstrap_median": 3764.639474596799,
+      "bootstrap_ci95": [
+        2306.513943156568,
+        5221.7143248405355
+      ],
+      "n_per_day": 1
+    },
+    "JPL_precise": {
+      "measurements": [
+        2942.0
+      ],
+      "labels": [
+        "JPL per-AC (Step 14, 1-day binned fit)"
+      ],
+      "group_mean": 2942.0,
+      "bootstrap_median": 2955.943325974697,
+      "bootstrap_ci95": [
+        1480.7458234834496,
+        4402.077632440015
+      ],
+      "n_per_day": 1
+    },
+    "Broadcast_freeGP": {
+      "measurements": [
+        1500.0
+      ],
+      "labels": [
+        "Free-GP baseline-restricted >1000 km (Step 43)"
+      ],
+      "group_mean": 1500.0,
+      "bootstrap_median": 1503.2795064835368,
+      "bootstrap_ci95": [
+        967.4761480474799,
+        2047.1044830167777
+      ],
+      "n_per_day": null
+    }
+  },
+  "combined": {
+    "median_km": 2822.0546394506623,
+    "mean_km": 2830.8685335183086,
+    "ci95_km": [
+      1948.654618013235,
+      3763.3127858638313
+    ],
+    "in_tep_band": true,
+    "ci_in_tep_band": true
+  },
+  "naive_combined_ignoring_dependencies": {
+    "mean_km": 2888.305557510149,
+    "ci95_km": [
+      2117.6586835231305,
+      3658.9524314971673
+    ],
+    "note": "Naive interval treating all 7 measurements as independent; understates uncertainty because measurements share products, stations, and days."
+  },
+  "headline": "Dependence-aware combined lambda: median 2822 km, 95% CI [1949, 3763] km (naive ignoring dependencies: 2888 km, CI [2118, 3659] km). The dependence-aware CI is wider, as expected. The combined median is in the TEP-predicted 1000-5000 km band."
+}

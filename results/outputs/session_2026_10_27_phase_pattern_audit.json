@@ -1,0 +1,40 @@
+{
+  "session": "2026-10-27 ~22:00 Mac",
+  "topic": "phase-pattern coverage audit + lunar-month echo enablement",
+  "corpus": {
+    "n_windows": 226,
+    "span_days": 3.94,
+    "note": "raw_window pkl union (results+snap dirs); raw_archive chunks span 22.2 d (raw, unsolved)"
+  },
+  "diurnal_common_mode_gain_screen": {
+    "script": "tmp/diurnal_gain_screen.py",
+    "per_window_alpha_vs_sid_phase": {
+      "corr_cos": -0.081,
+      "corr_sin": 0.115,
+      "R": 0.141
+    },
+    "causal_transfer_half_split": {
+      "fixed_pool": {
+        "mean_pct": 0.02,
+        "pos": "75/113"
+      },
+      "sidereal_binned": {
+        "mean_pct": -0.09,
+        "pos": "58/113",
+        "delta_vs_fixed": -0.11
+      },
+      "solar_binned": {
+        "mean_pct": -2.85,
+        "pos": "46/113",
+        "delta_vs_fixed": -2.87
+      },
+      "shuffle_control_mean": -0.27
+    },
+    "verdict": "FALSIFIED: common_mode_method='diurnal' transfers nothing causal; consistent with net-channel ~0 transfer. 'seasonal' structurally untestable on 3.9 d (orbital azimuth ~1 deg of sweep)."
+  },
+  "monthly_echo_feasibility": {
+    "verdict": "untestable on corpus: max residual span 3.9 d vs 27.5/29.5 d lags",
+    "fix": "sid_template decimated long tier (TEP_SID_TPL_LONG_KEEP_D=40) + archive-only self_moon_corr (29.530589d) / self_ano_corr (27.55455d) channels via lag_delta_s; silent until coverage; screen with sid_lags-style scan when ~30 d accrues"
+  },
+  "tests": "176/176 pass"
+}

@@ -1,0 +1,15 @@
+[Step 174] Running 114+ window live causal audit...
+  -> 167 windows (46.18 h): causal unscaled mean +36.10% (median +38.49%, wins 164/167, p=4.15e-45)
+[Step 174] Running cryptographic sealed-envelope suite & falsification battery...
+  -> Walk-forward sealed (n=24): full=+42.60% (wins 24/24), network-only=+42.52% (wins 24/24)
+  -> Strict future epoch slices (n=221): full=-5.04% (wins 91/221)
+     full-weight band (h<=5400s, n=167): -7.83% | tapered tail (h>5400s, n=221): -2.21%
+  -> Resubstitution bound (in-sample, n=23): +56.88% vs OOS walk-forward +42.60%
+  -> ORACLE-REPLAY echo ceiling (n=24): +47.48% | CLEAN-ORIGIN fit-half seals (n=24, ZERO epoch overlap): composite -5.78% (wins 5/24) | pure -6.33% (wins 5/24) | diag -159.25% (wins 0/24)
+     clean pure position bands: h=0_1800s -8.2% | h=1800_3600s -9.0% | h=3600_5400s -9.0% | h=5400_7300s -1.3%
+     disjoint-seal map cosine: clean 0.031 | holdout 0.061 (n=8) | pred-space clean 0.067 | pred-space holdout 0.190
+     clean pure lambda grid: lam=10000 -4.4% (4/24) | lam=50000 -2.4% (7/24) | lam=200000 -0.4% (11/24) | lam=1000000 +1.8% (16/24) | lam=2000000 +2.4% (18/24) | lam=5000000 +2.6% (20/24) | lam=10000000 +2.4% (22/24) | lam=20000000 +1.8% (23/24)
+     causal inner-CV lam: ho -1.67% (15/24) | fit +1.81% (23/24)
+  -> Station permutation null (N=100): +36.30% vs -2.36% +/- 2.23% (z=17.36 sigma)
+  -> Common-mode stripped: +35.29% (97.2% retained) | >360 km only: +20.73% | >1000 km only: +7.71%
+[Step 174] Wrote results/outputs/step_174_sealed_envelope_prediction.json in 3799.79s

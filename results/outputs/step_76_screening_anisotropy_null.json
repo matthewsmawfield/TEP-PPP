@@ -1,0 +1,235 @@
+{
+  "step": 76,
+  "title": "Clock-label permutation control on the quartz-only anisotropy",
+  "timestamp": "2026-09-02T20:42:04.202283+00:00",
+  "band_km": [
+    500.0,
+    800.0
+  ],
+  "arms": {
+    "clk_cod": {
+      "band_sweep": {
+        "300-800": {
+          "qq_anisotropy": 0.3080399145230947,
+          "n_ew_pairs": 19,
+          "n_ns_pairs": 24,
+          "null_mean": 0.15917199617777983,
+          "z": 0.8098070421765813,
+          "p": 0.186
+        },
+        "500-800": {
+          "qq_anisotropy": 0.3109964283874487,
+          "n_ew_pairs": 15,
+          "n_ns_pairs": 17,
+          "null_mean": 0.13414258626435502,
+          "z": 0.7729663679891766,
+          "p": 0.21
+        },
+        "300-1500": {
+          "qq_anisotropy": 0.12473595961094236,
+          "n_ew_pairs": 69,
+          "n_ns_pairs": 81,
+          "null_mean": 0.010999464176044782,
+          "z": 1.6228241786380253,
+          "p": 0.06
+        },
+        "500-2000": {
+          "qq_anisotropy": 0.0009486165171322392,
+          "n_ew_pairs": 110,
+          "n_ns_pairs": 110,
+          "null_mean": -0.02486072820407536,
+          "z": 0.46627987374076907,
+          "p": 0.328
+        },
+        "800-3000": {
+          "qq_anisotropy": -0.06489881979616258,
+          "n_ew_pairs": 189,
+          "n_ns_pairs": 177,
+          "null_mean": -0.03315695251819147,
+          "z": -0.8892850401218562,
+          "p": 0.81
+        },
+        "300-6000": {
+          "qq_anisotropy": -0.05332263408973653,
+          "n_ew_pairs": 625,
+          "n_ns_pairs": 523,
+          "null_mean": -0.04457507323674066,
+          "z": -0.4122065920384014,
+          "p": 0.654
+        }
+      },
+      "n_pair_days": 714376,
+      "n_stations": 175,
+      "n_quartz": 126,
+      "n_atomic": 49,
+      "qq_anisotropy": 0.3109964283874487,
+      "n_unique_qq_ew_pairs": 15,
+      "n_unique_qq_ns_pairs": 17,
+      "clock_label_perm_null_mean": -0.044958058949564214,
+      "clock_label_perm_null_sd": 0.021246697533530194,
+      "clock_label_perm_z": 16.75340305359306,
+      "clock_label_perm_p": 0.0,
+      "pair_clustered_ci95": [
+        -0.19497293042541652,
+        0.6818666672653759
+      ],
+      "pair_clustered_p_gt_0": 0.887,
+      "survives_geography_control": true,
+      "significant_pair_clustered": false
+    },
+    "broadcast": {
+      "band_sweep": {
+        "300-800": {
+          "qq_anisotropy": 0.2671245977165488,
+          "n_ew_pairs": 38,
+          "n_ns_pairs": 54,
+          "null_mean": 0.05623047395180298,
+          "z": 2.430810287099673,
+          "p": 0.002
+        },
+        "500-800": {
+          "qq_anisotropy": 0.35551048008156616,
+          "n_ew_pairs": 20,
+          "n_ns_pairs": 25,
+          "null_mean": 0.08698971132587113,
+          "z": 1.9412216982575723,
+          "p": 0.036
+        },
+        "300-1500": {
+          "qq_anisotropy": 0.2722208600705335,
+          "n_ew_pairs": 71,
+          "n_ns_pairs": 80,
+          "null_mean": 0.025221102850036592,
+          "z": 3.0994256416618695,
+          "p": 0.0
+        },
+        "500-2000": {
+          "qq_anisotropy": 0.3326714873371494,
+          "n_ew_pairs": 63,
+          "n_ns_pairs": 64,
+          "null_mean": 0.03340839709525295,
+          "z": 2.750011659668383,
+          "p": 0.002
+        },
+        "800-3000": {
+          "qq_anisotropy": 0.2801895138694622,
+          "n_ew_pairs": 44,
+          "n_ns_pairs": 54,
+          "null_mean": 0.030209059031738143,
+          "z": 1.550221978381729,
+          "p": 0.084
+        },
+        "300-6000": {
+          "qq_anisotropy": 0.2206369068052338,
+          "n_ew_pairs": 142,
+          "n_ns_pairs": 115,
+          "null_mean": -0.018049054125578223,
+          "z": 2.956979006534656,
+          "p": 0.002
+        }
+      },
+      "n_pair_days": 118910,
+      "n_stations": 83,
+      "n_quartz": 53,
+      "n_atomic": 30,
+      "qq_anisotropy": 0.35551048008156616,
+      "n_unique_qq_ew_pairs": 20,
+      "n_unique_qq_ns_pairs": 25,
+      "clock_label_perm_null_mean": -0.017640168086458387,
+      "clock_label_perm_null_sd": 0.07657914355634937,
+      "clock_label_perm_z": 4.872745121436993,
+      "clock_label_perm_p": 0.0,
+      "pair_clustered_ci95": [
+        0.010820531738613652,
+        0.6352785531619286
+      ],
+      "pair_clustered_p_gt_0": 0.978,
+      "survives_geography_control": true,
+      "significant_pair_clustered": true
+    },
+    "precise": {
+      "band_sweep": {
+        "300-800": {
+          "qq_anisotropy": 0.3576507298719147,
+          "n_ew_pairs": 26,
+          "n_ns_pairs": 38,
+          "null_mean": 0.05318843426306603,
+          "z": 2.653784245093516,
+          "p": 0.0
+        },
+        "500-800": {
+          "qq_anisotropy": 0.4430377309323635,
+          "n_ew_pairs": 10,
+          "n_ns_pairs": 18,
+          "null_mean": 0.07307782786689719,
+          "z": 2.0757225631423726,
+          "p": 0.022
+        },
+        "300-1500": {
+          "qq_anisotropy": 0.36062168779657017,
+          "n_ew_pairs": 36,
+          "n_ns_pairs": 54,
+          "null_mean": -0.009229602123838299,
+          "z": 3.31594949433391,
+          "p": 0.0
+        },
+        "500-2000": {
+          "qq_anisotropy": 0.4330295640312844,
+          "n_ew_pairs": 20,
+          "n_ns_pairs": 34,
+          "null_mean": 0.011998451545202904,
+          "z": 2.919886796898886,
+          "p": 0.004
+        },
+        "800-3000": {
+          "qq_anisotropy": 0.4108978301258844,
+          "n_ew_pairs": 10,
+          "n_ns_pairs": 16,
+          "null_mean": -0.027816604658757554,
+          "z": 2.3357023365605425,
+          "p": 0.015184381778741865
+        },
+        "300-6000": {
+          "qq_anisotropy": 0.36062168779657017,
+          "n_ew_pairs": 36,
+          "n_ns_pairs": 54,
+          "null_mean": -0.003751383518122992,
+          "z": 3.3808350318309017,
+          "p": 0.002
+        }
+      },
+      "n_pair_days": 129030,
+      "n_stations": 27,
+      "n_quartz": 15,
+      "n_atomic": 12,
+      "qq_anisotropy": 0.4430377309323635,
+      "n_unique_qq_ew_pairs": 10,
+      "n_unique_qq_ns_pairs": 18,
+      "clock_label_perm_null_mean": -0.002489272857133311,
+      "clock_label_perm_null_sd": 0.10561421598602695,
+      "clock_label_perm_z": 4.218437827048219,
+      "clock_label_perm_p": 0.0,
+      "pair_clustered_ci95": [
+        0.07669503512337615,
+        0.7823199102756664
+      ],
+      "pair_clustered_p_gt_0": 0.994,
+      "survives_geography_control": true,
+      "significant_pair_clustered": true
+    }
+  },
+  "verdict": {
+    "question": "is the quartz-only 500-800 km anisotropy screening, or station geography?",
+    "arms_surviving_clock_label_permutation": [
+      "clk_cod",
+      "broadcast",
+      "precise"
+    ],
+    "arms_significant_pair_clustered": [
+      "broadcast",
+      "precise"
+    ],
+    "n_arms": 3,
+    "conclusion": "screening: survives on clk_cod, broadcast, precise"
+  }
+}

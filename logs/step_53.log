@@ -1,0 +1,46 @@
+scripts/steps/step_53_coherent_lambda.py:229: RuntimeWarning: divide by zero encountered in matmul
+  Uh = w @ U[order]
+scripts/steps/step_53_coherent_lambda.py:229: RuntimeWarning: overflow encountered in matmul
+  Uh = w @ U[order]
+scripts/steps/step_53_coherent_lambda.py:229: RuntimeWarning: invalid value encountered in matmul
+  Uh = w @ U[order]
+
+[precise_cod] 20 days, 129258 pairs, 18 distance bins
+  (A) phase-cos lambda = nan km (constant, R2=0.000, 0.0 sigma vs phase-randomised null)
+  (B) phase-prediction profile (achieved alignment, higher = better):
+      lambda=     200 km  alignment=0.2027
+      lambda=     400 km  alignment=0.1988
+      lambda=     700 km  alignment=0.1958
+      lambda=    1000 km  alignment=0.1974  [TEP band]
+      lambda=    1500 km  alignment=0.1980  [TEP band]
+      lambda=    2000 km  alignment=0.2048  [TEP band]
+      lambda=    2500 km  alignment=0.2026  [TEP band]
+      lambda=    3000 km  alignment=0.2031  [TEP band]
+      lambda=    3480 km  alignment=0.2048  <-- argmax  [TEP band]
+      lambda=    4200 km  alignment=0.2022  [TEP band]
+      lambda=    5000 km  alignment=0.1954  [TEP band]
+      lambda=    7000 km  alignment=0.1955
+      lambda=   10000 km  alignment=0.1938
+      lambda=   20000 km  alignment=0.1925
+      best in-band lambda costs 0.00% vs the argmax
+
+[broadcast_spp] 7 days, 4933 pairs, 17 distance bins
+  (A) phase-cos lambda = nan km (constant, R2=0.000, 0.0 sigma vs phase-randomised null)
+  (B) phase-prediction profile (achieved alignment, higher = better):
+      lambda=     200 km  alignment=0.7872
+      lambda=     400 km  alignment=0.7931  <-- argmax
+      lambda=     700 km  alignment=0.7893
+      lambda=    1000 km  alignment=0.7766  [TEP band]
+      lambda=    1500 km  alignment=0.7599  [TEP band]
+      lambda=    2000 km  alignment=0.7413  [TEP band]
+      lambda=    2500 km  alignment=0.7351  [TEP band]
+      lambda=    3000 km  alignment=0.7214  [TEP band]
+      lambda=    3480 km  alignment=0.7051  [TEP band]
+      lambda=    4200 km  alignment=0.6843  [TEP band]
+      lambda=    5000 km  alignment=0.6627  [TEP band]
+      lambda=    7000 km  alignment=0.5925
+      lambda=   10000 km  alignment=0.4953
+      lambda=   20000 km  alignment=0.3930
+      best in-band lambda costs 2.08% vs the argmax
+
+saved results/outputs/step_53_coherent_lambda.json

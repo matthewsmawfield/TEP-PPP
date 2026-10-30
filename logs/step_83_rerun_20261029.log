@@ -1,0 +1,52 @@
+
+=== precise_ops (clk_cod_ops), 361 days ===
+    20/361 days, 56,910 pairs
+    40/361 days, 58,265 pairs
+    60/361 days, 58,603 pairs
+    80/361 days, 59,274 pairs
+    100/361 days, 59,276 pairs
+    120/361 days, 59,290 pairs
+    140/361 days, 59,297 pairs
+    160/361 days, 59,614 pairs
+    180/361 days, 59,615 pairs
+    200/361 days, 59,948 pairs
+    220/361 days, 59,948 pairs
+    240/361 days, 59,957 pairs
+    260/361 days, 59,958 pairs
+    280/361 days, 59,972 pairs
+    300/361 days, 59,972 pairs
+    320/361 days, 59,972 pairs
+    340/361 days, 59,972 pairs
+    360/361 days, 59,976 pairs
+  stage 1: 58,492 pairs (pooled kappa = +0.0477)
+  pairs 58492   partial corr(alpha, log d | Jbar) = -0.0261   | Jbar+cos-dlon = -0.0260   OOS gain = +0.0002
+  null |pc| mean 0.0261  z = +1.79   meets frozen S2 (>0.15): False
+  distance fit on alpha: gaussian lambda 3695 km  R2 0.785
+
+=== broadcast_spp (broadcast), 361 days ===
+    60/361 days, 435 pairs
+    80/361 days, 435 pairs
+    100/361 days, 3,285 pairs
+    120/361 days, 3,363 pairs
+    140/361 days, 3,363 pairs
+    160/361 days, 3,363 pairs
+    180/361 days, 3,363 pairs
+    200/361 days, 3,363 pairs
+    220/361 days, 3,363 pairs
+    240/361 days, 3,363 pairs
+    260/361 days, 3,363 pairs
+    280/361 days, 3,363 pairs
+    300/361 days, 3,363 pairs
+    320/361 days, 3,363 pairs
+    340/361 days, 3,363 pairs
+    360/361 days, 3,363 pairs
+  stage 1: 435 pairs (pooled kappa = -0.3123)
+  pairs 435   partial corr(alpha, log d | Jbar) = -0.0016   | Jbar+cos-dlon = +0.0210   OOS gain = +0.0013
+  null |pc| mean 0.0016  z = +6.28   meets frozen S2 (>0.15): False
+  distance fit on alpha: constant lambda -1 km  R2 0.000
+
+VERDICT: {
+ "question": "does the frozen S2 criterion pass when T4 uses the corpus's own estimator instead of band-passed Pearson?",
+ "arms_meeting_S2": [],
+ "n_arms": 2
+}

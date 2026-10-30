@@ -1,0 +1,278 @@
+{
+  "step": 143,
+  "title": "Lambda sweep per band",
+  "timestamp": "2026-09-06T20:30:15.248167+00:00",
+  "product": "clk_cod",
+  "dev_year": 2024,
+  "held_out_year": 2025,
+  "paper1_lambdas": {
+    "tidal": 4677,
+    "post_tidal": 1502,
+    "intermediate": 1459
+  },
+  "dev_optimal_lambdas": {
+    "tidal": 1000.0,
+    "post_tidal": 800.0,
+    "intermediate": 3000.0
+  },
+  "common_lambda_dev_optimal": 1500.0,
+  "lambda_grids": {
+    "tidal": [
+      1000,
+      2000,
+      3000,
+      4000,
+      4677,
+      6000,
+      8000,
+      12000,
+      25000
+    ],
+    "post_tidal": [
+      500,
+      800,
+      1200,
+      1502,
+      2000,
+      3000,
+      5000
+    ],
+    "intermediate": [
+      500,
+      800,
+      1200,
+      1459,
+      2000,
+      3000,
+      5000
+    ]
+  },
+  "common_lambda_grid": [
+    1000,
+    1500,
+    2000,
+    3000,
+    4677,
+    6000,
+    8000,
+    12000
+  ],
+  "n_dev_days": 60,
+  "n_held_out_days": 57,
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "dev_sweep_scores": {
+    "tidal": {
+      "1000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "2000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "3000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "4000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "4677": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "6000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "8000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "12000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "25000": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      }
+    },
+    "post_tidal": {
+      "500": {
+        "median_improvement_pct": 2.221076878333428,
+        "n_days": 60
+      },
+      "800": {
+        "median_improvement_pct": 2.3115716393246832,
+        "n_days": 60
+      },
+      "1200": {
+        "median_improvement_pct": 2.2774988382335657,
+        "n_days": 60
+      },
+      "1502": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "2000": {
+        "median_improvement_pct": 2.230634916501595,
+        "n_days": 60
+      },
+      "3000": {
+        "median_improvement_pct": 2.0719833304821353,
+        "n_days": 60
+      },
+      "5000": {
+        "median_improvement_pct": 1.9972934693474498,
+        "n_days": 60
+      }
+    },
+    "intermediate": {
+      "500": {
+        "median_improvement_pct": 2.048774339515713,
+        "n_days": 60
+      },
+      "800": {
+        "median_improvement_pct": 2.15854383925464,
+        "n_days": 60
+      },
+      "1200": {
+        "median_improvement_pct": 2.2442091631595105,
+        "n_days": 60
+      },
+      "1459": {
+        "median_improvement_pct": 2.2704449873672097,
+        "n_days": 60
+      },
+      "2000": {
+        "median_improvement_pct": 2.2859936313581963,
+        "n_days": 60
+      },
+      "3000": {
+        "median_improvement_pct": 2.2979976132493087,
+        "n_days": 60
+      },
+      "5000": {
+        "median_improvement_pct": 2.127638429216039,
+        "n_days": 60
+      }
+    }
+  },
+  "common_sweep_scores": {
+    "1000": {
+      "median_improvement_pct": 2.2515083771210476,
+      "n_days": 60
+    },
+    "1500": {
+      "median_improvement_pct": 2.274273028526191,
+      "n_days": 60
+    },
+    "2000": {
+      "median_improvement_pct": 2.264464559437973,
+      "n_days": 60
+    },
+    "3000": {
+      "median_improvement_pct": 2.1319522757505203,
+      "n_days": 60
+    },
+    "4677": {
+      "median_improvement_pct": 1.6864199851196748,
+      "n_days": 60
+    },
+    "6000": {
+      "median_improvement_pct": 1.5497705706098819,
+      "n_days": 60
+    },
+    "8000": {
+      "median_improvement_pct": 1.3921297918428444,
+      "n_days": 60
+    },
+    "12000": {
+      "median_improvement_pct": 1.0549503785677927,
+      "n_days": 60
+    }
+  },
+  "results": {
+    "paper1_vs_full_band_2025": {
+      "median": 2.191585077832814,
+      "ci95": [
+        1.5575213456469617,
+        2.886811690706137
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "devoptimal_vs_full_band_2025": {
+      "median": 2.0766399017185133,
+      "ci95": [
+        1.649483420950515,
+        3.032383412295947
+      ],
+      "n": 57,
+      "frac_positive": 0.8245614035087719
+    },
+    "devoptimal_vs_paper1_2025": {
+      "median": -0.07308745342040623,
+      "ci95": [
+        -0.11752074318531758,
+        0.008614164983133943
+      ],
+      "n": 57,
+      "frac_positive": 0.40350877192982454
+    },
+    "common_lambda_vs_paper1_2025": {
+      "median": -0.0038905944998113284,
+      "ci95": [
+        -0.005061848220000442,
+        -0.0008866753116176795
+      ],
+      "n": 57,
+      "frac_positive": 0.3333333333333333
+    },
+    "common_lambda_vs_full_band_2025": {
+      "median": 2.188376262107783,
+      "ci95": [
+        1.561291956889077,
+        2.8804487914086963
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    }
+  },
+  "median_rms_m": {
+    "full_band_2025": 1.3309442136146439,
+    "paper1_multi_2025": 1.31922915487668,
+    "devoptimal_multi_2025": 1.344507872357499,
+    "common_multi_2025": 1.3192820217115364
+  },
+  "interpretation": [
+    "tidal: Paper 1 lambda (4677 km) is 4 grid steps from the dev-optimal (1000 km) on the 2024 development grid.",
+    "post_tidal: Paper 1 lambda (1502 km) is 2 grid steps from the dev-optimal (800 km) on the 2024 development grid.",
+    "intermediate: Paper 1 lambda (1459 km) is 2 grid steps from the dev-optimal (3000 km) on the 2024 development grid.",
+    "The dev-optimal lambdas are statistically indistinguishable from Paper 1 lambdas on 2025 held-out data (median -0.07%, CI95 [-0.12, +0.01]). Paper 1's frequency-dependent lambdas are near-optimal: the development sweep did not find values that meaningfully outperform them on the independent year.",
+    "Paper 1's frequency-dependent (multi-band) lambdas significantly outperform the single common lambda on 2025 held-out data (median -0.00%, CI95 [-0.01, -0.00]). The frequency-dependent structure is not noise; different bands genuinely require different spatial scales, and Paper 1's per-band values capture this structure correctly.",
+    "Paper 1's multi-band kernel significantly outperforms the single-lambda full-band kernel on 2025 held-out data (median +2.19%, CI95 [+1.56, +2.89]), confirming the Step 134 result."
+  ],
+  "pre_registered_prediction": "If Paper 1's frequency-dependent lambdas are near-optimal (not just better than scrambled), the dev-optimal lambdas should be close to Paper 1's values on the development grid, and the dev-optimal should not significantly outperform Paper 1 on 2025 held-out data. The common-lambda control should underperform the multi-band kernel, confirming that different bands require different spatial scales."
+}

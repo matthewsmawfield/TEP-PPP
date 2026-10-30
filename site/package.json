@@ -1,0 +1,36 @@
+{
+  "name": "tep-ppp-site",
+  "version": "0.1.0",
+  "description": "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging",
+  "comment": "Package version matches manuscript version v0.1 (Pune)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "node dev-server.js",
+    "start": "python3 -m http.server 8000",
+    "build": "node build.js",
+    "build:markdown": "npm run build && node html-to-markdown.js",
+    "markdown": "node html-to-markdown.js"
+  },
+  "keywords": [
+    "TEP-PPP",
+    "GNSS",
+    "Precise Point Positioning",
+    "Spatial Correlation",
+    "Clock Noise",
+    "Temporal Equivalence Principle"
+  ],
+  "author": "Matthew Lukin Smawfield",
+  "license": "CC-BY-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewsmawfield/TEP-PPP.git"
+  },
+  "homepage": "https://mlsmawfield.com/tep/ppp/",
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

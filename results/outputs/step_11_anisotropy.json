@@ -1,0 +1,171 @@
+{
+  "test": "T2_ew_ns_anisotropy",
+  "global_broadcast": {
+    "label": "global_broadcast",
+    "n_stations": 52,
+    "n_pair_days": 5000,
+    "full_range": {
+      "ratio": 0.12759353303960078,
+      "lam_ew": 5103.74132158403,
+      "lam_ns": 39999.99999999999,
+      "ci95": [
+        0.09127274358777987,
+        3.3310997739212582
+      ],
+      "p_ratio_le_1": 0.8633333333333333,
+      "lam_at_boundary": true,
+      "ratio_identifiable": false
+    },
+    "longitude_matched": {
+      "ratio": 1.626611861110736,
+      "lam_ew": 23718.00175035334,
+      "lam_ns": 14581.230050884691,
+      "ci95": [
+        0.020686067052542258,
+        11.324940313365087
+      ],
+      "p_ratio_le_1": 0.42953020134228187,
+      "lam_at_boundary": false,
+      "ratio_identifiable": true
+    },
+    "distance_strata": {
+      "100_500km": {
+        "corr_ew": 0.9178249742518052,
+        "corr_ns": 0.9609221149782986,
+        "ew_minus_ns": -0.0430971407264934,
+        "ew_minus_ns_ci95": [
+          -0.20813316733262116,
+          0.027455748851807196
+        ],
+        "ew_minus_ns_p_le_0": 0.7396694214876033,
+        "n_ew": 76,
+        "n_ns": 62
+      },
+      "500_1000km": {
+        "corr_ew": 0.8651829213812744,
+        "corr_ns": 0.9210547232403924,
+        "ew_minus_ns": -0.055871801859118,
+        "ew_minus_ns_ci95": [
+          -0.1893189621349505,
+          0.02248275164240775
+        ],
+        "ew_minus_ns_p_le_0": 0.8597194388777555,
+        "n_ew": 124,
+        "n_ns": 124
+      },
+      "1000_3000km": {
+        "corr_ew": 0.7419401469736724,
+        "corr_ns": 0.7780129322738483,
+        "ew_minus_ns": -0.03607278530017588,
+        "ew_minus_ns_ci95": [
+          -0.27634061588427383,
+          0.36042654265280716
+        ],
+        "ew_minus_ns_p_le_0": 0.6748971193415638,
+        "n_ew": 117,
+        "n_ns": 67
+      },
+      "3000_20000km": {
+        "corr_ew": -0.17970605625439623,
+        "corr_ns": 0.4732607352109866,
+        "ew_minus_ns": -0.6529667914653828,
+        "ew_minus_ns_ci95": [
+          -0.942379044880133,
+          -0.3931069890256488
+        ],
+        "ew_minus_ns_p_le_0": 1.0,
+        "n_ew": 551,
+        "n_ns": 854
+      }
+    },
+    "T2_pass": false,
+    "T2_ratio_pass": false,
+    "T2_stratum_pass": false
+  },
+  "timestamp": "2026-09-01T18:46:11.102707",
+  "T2_pass_global": false,
+  "global_precise_clk": {
+    "label": "global_precise_clk",
+    "n_stations": 178,
+    "n_pair_days": 2360507,
+    "full_range": {
+      "ratio": 0.9286920278110696,
+      "lam_ew": 2477.6358492086715,
+      "lam_ns": 2667.8767287886253,
+      "ci95": [
+        0.023733116049013542,
+        7.692347214051587
+      ],
+      "p_ratio_le_1": 0.6133333333333333,
+      "lam_at_boundary": false,
+      "ratio_identifiable": true
+    },
+    "longitude_matched": {
+      "ratio": 11.767925770857486,
+      "lam_ew": 39999.99999999999,
+      "lam_ns": 3399.0697068346085,
+      "ci95": [
+        0.007905716543629532,
+        73.4432135124702
+      ],
+      "p_ratio_le_1": 0.48,
+      "lam_at_boundary": true,
+      "ratio_identifiable": false
+    },
+    "distance_strata": {
+      "100_500km": {
+        "corr_ew": 0.1513036114650696,
+        "corr_ns": 0.20107717432467442,
+        "ew_minus_ns": -0.049773562859604825,
+        "ew_minus_ns_ci95": [
+          -0.5481885067735423,
+          0.5001278958459169
+        ],
+        "ew_minus_ns_p_le_0": 0.6472945891783567,
+        "n_ew": 2118,
+        "n_ns": 2813
+      },
+      "500_1000km": {
+        "corr_ew": 0.2428070959697373,
+        "corr_ns": 0.18832195665387114,
+        "ew_minus_ns": 0.054485139315866155,
+        "ew_minus_ns_ci95": [
+          -0.20695876593802434,
+          0.33897907011379447
+        ],
+        "ew_minus_ns_p_le_0": 0.346,
+        "n_ew": 8873,
+        "n_ns": 10370
+      },
+      "1000_3000km": {
+        "corr_ew": 0.14294423466774162,
+        "corr_ns": 0.14774029706709196,
+        "ew_minus_ns": -0.004796062399350348,
+        "ew_minus_ns_ci95": [
+          -0.10832325704820053,
+          0.09773640661737609
+        ],
+        "ew_minus_ns_p_le_0": 0.542,
+        "n_ew": 43362,
+        "n_ns": 36743
+      },
+      "3000_20000km": {
+        "corr_ew": -0.011837078311218248,
+        "corr_ns": 0.006326253947014523,
+        "ew_minus_ns": -0.018163332258232773,
+        "ew_minus_ns_ci95": [
+          -0.042177375689387266,
+          0.0029788156967526266
+        ],
+        "ew_minus_ns_p_le_0": 0.952,
+        "n_ew": 436453,
+        "n_ns": 483707
+      }
+    },
+    "T2_pass": false,
+    "T2_ratio_pass": false,
+    "T2_stratum_pass": false,
+    "T2_note": "Ratio is non-identifiable: one or both correlation lengths hit the optimization boundary. The lambda-ratio statistic is ill-conditioned at this aperture; the direct EW-NS correlation difference in the distance strata above is the robust alternative."
+  },
+  "T2_pass": false
+}

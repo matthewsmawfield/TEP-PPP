@@ -1,0 +1,27 @@
+[08:51:52] [PROCESS] Loading data from data/ppp_processed...
+[08:51:52] [INFO] Loaded ZIMM: 2879 epochs (DOY 100 2024)
+[08:51:52] [INFO] Loaded GRAS: 2879 epochs (DOY 100 2024)
+[08:51:52] [INFO] Loaded GENO: 2879 epochs (DOY 100 2024)
+[08:51:52] [INFO] Loaded BRUX: 2879 epochs (DOY 100 2024)
+[08:51:52] [INFO] Loaded WTZR: 2879 epochs (DOY 100 2024)
+[08:51:52] [INFO] Starting analysis for 2879 epochs (Interval: 30.0s)
+[08:51:52] [INFO] 
+[08:51:52] [INFO] ================================================================================
+[08:51:52] [INFO] NETWORK-WIDE LEAVE-ONE-OUT VALIDATION
+[08:51:52] [INFO] ================================================================================
+[08:51:52] [INFO] 
+[08:51:52] [INFO] Target   Stat%      StatRMSE   Dyn%       DynRMSE   
+[08:51:52] [PROCESS] Processing Target: ZIMM
+[08:51:54] [INFO] ZIMM     61.30     % 19.736     53.31     % 23.810    
+[08:51:54] [PROCESS] Processing Target: GRAS
+[08:51:56] [INFO] GRAS     57.89     % 24.123     48.42     % 29.553    
+[08:51:56] [PROCESS] Processing Target: GENO
+[08:51:58] [INFO] GENO     58.60     % 23.417     49.22     % 28.720    
+[08:51:58] [PROCESS] Processing Target: BRUX
+[08:52:00] [INFO] BRUX     61.27     % 18.646     53.09     % 22.586    
+[08:52:00] [PROCESS] Processing Target: WTZR
+[08:52:03] [INFO] WTZR     59.29     % 20.344     51.33     % 24.322    
+[08:52:03] [SUCCESS] AVERAGE  59.67     % 21.253     51.07     % 25.798    
+[08:52:03] [SUCCESS] Saved summary metrics to results/outputs/step_3_tep_summary.json
+[08:52:03] [SUCCESS] Saved plotting data to results/outputs/step_3_tep_analysis_results.npz
+[08:52:03] [SUCCESS] Analysis Complete

@@ -1,0 +1,882 @@
+{
+  "step": 92,
+  "title": "Frozen 2025 independent-year P1 replication",
+  "timestamp": "2026-09-03T14:34:05.411236+00:00",
+  "status": "FAIL",
+  "p1_pass": false,
+  "independence": {
+    "development_year": 2024,
+    "confirmatory_year": 2025,
+    "analysis_centre": "CODE final 30 s receiver clocks",
+    "scope": "independent time period; same analysis centre/product family",
+    "formal_external_preregistration": false
+  },
+  "registration": {
+    "evaluation_doys": [
+      3,
+      9,
+      15,
+      21,
+      28,
+      34,
+      40,
+      46,
+      52,
+      58,
+      64,
+      70,
+      77,
+      83,
+      89,
+      95,
+      101,
+      107,
+      113,
+      120,
+      126,
+      132,
+      138,
+      144,
+      150,
+      156,
+      163,
+      169,
+      175,
+      181,
+      187,
+      193,
+      199,
+      205,
+      212,
+      218,
+      224,
+      230,
+      236,
+      242,
+      248,
+      255,
+      261,
+      267,
+      273,
+      279,
+      285,
+      291,
+      298,
+      304,
+      310,
+      316,
+      322,
+      328,
+      334,
+      340,
+      347,
+      353,
+      359,
+      365
+    ],
+    "planned_evaluation_days": 60,
+    "available_complete_pairs": 57,
+    "missing_centre_day_tags": [
+      "2025014",
+      "2025015",
+      "2025138",
+      "2025143",
+      "2025144"
+    ],
+    "minimum_valid_days": 50,
+    "rng_seed": 20260902,
+    "model": "preceding-day phase Gram x fixed isotropic multiscale exponential TEP covariance at 4,200/1.6, 4,200, and 4,200*1.6 km; nugget 0.70",
+    "pass_rule": "at least 50 days and positive lower 95% day-cluster interval versus tuned conventional, empirical, equal-information phase-only, geometry-scramble, and phase-scramble controls",
+    "source_sha256": {
+      "scripts/steps/step_64_maximal_tep_p1.py": "9bd1ee039dd1c9b31912feceef76b1d52574a9ceba8a295585805199bb26ad23",
+      "scripts/lib/tep_phase.py": "2f15dab6065f5ab6797303066dd5a7e0d6729480a4894980f415a8aadc5d95c9",
+      "scripts/lib/tep_data.py": "5816cb5d517d7bc283b15a78d5f428ba29cfd9e5fc7e7f9a20cd06e942f2e609"
+    },
+    "source_hashes_verified": true
+  },
+  "component_pass": {
+    "enough_days": true,
+    "vs_tuned_conventional": true,
+    "vs_empirical_covariance": false,
+    "vs_phase_only_equal_information": true,
+    "vs_geometry_label_scramble": true,
+    "vs_phase_label_scramble": true
+  },
+  "result": {
+    "n_days_used": 57,
+    "phasecos_vs_tuned_conventional_pct": {
+      "median": -0.23976814595130236,
+      "ci95": [
+        -0.6992591214837862,
+        0.7123416729621024
+      ],
+      "n": 57,
+      "frac_positive": 0.42105263157894735
+    },
+    "phasecos_vs_empirical_covariance_pct": {
+      "median": -4.079174985866452,
+      "ci95": [
+        -5.2611717048995255,
+        -2.463930762716937
+      ],
+      "n": 57,
+      "frac_positive": 0.14035087719298245
+    },
+    "full_arsenal_vs_phasecos_pct": {
+      "median": 2.5549210878689443,
+      "ci95": [
+        2.2057026557007586,
+        2.802918377884056
+      ],
+      "n": 57,
+      "frac_positive": 1.0
+    },
+    "full_arsenal_vs_tuned_conventional_pct": {
+      "median": 2.1949997818401568,
+      "ci95": [
+        1.4813999222708318,
+        2.760923845984342
+      ],
+      "n": 57,
+      "frac_positive": 0.7017543859649122
+    },
+    "full_arsenal_vs_empirical_covariance_pct": {
+      "median": -0.9288958147224857,
+      "ci95": [
+        -2.352124284346324,
+        0.022851750165442386
+      ],
+      "n": 57,
+      "frac_positive": 0.40350877192982454
+    },
+    "full_arsenal_vs_phase_only_pct": {
+      "median": 1.4258458436524624,
+      "ci95": [
+        0.7235017654841802,
+        2.0953747962166203
+      ],
+      "n": 57,
+      "frac_positive": 0.7894736842105263
+    },
+    "full_arsenal_vs_geometry_scramble_pct": {
+      "median": 2.0153007079643848,
+      "ci95": [
+        0.8663389172006708,
+        2.4280775173718627
+      ],
+      "n": 57,
+      "frac_positive": 0.7368421052631579
+    },
+    "full_arsenal_vs_phase_scramble_pct": {
+      "median": 1.801072641506296,
+      "ci95": [
+        1.0164461517354173,
+        2.5068466454151728
+      ],
+      "n": 57,
+      "frac_positive": 0.7368421052631579
+    },
+    "median_rms_m": {
+      "phasecos": 1.4087095828934615,
+      "full_arsenal": 1.3309442136146439,
+      "phase_only": 1.4585961975967514,
+      "tuned_conventional": 1.3837990369349196,
+      "empirical_covariance": 1.3109799418092287
+    },
+    "development_gate_pass": false,
+    "p1_pass": false,
+    "p1_requires_independent_year": true
+  },
+  "input_manifest": [
+    {
+      "tag": "2025002",
+      "file": "COD0MGXFIN_20250020000_01D_30S_CLK.CLK.gz",
+      "bytes": 5251844,
+      "sha256": "216f49f58db320bdc18e202d37a28c50ed1dcf5bbc4c5ca683dc6af901ff6523"
+    },
+    {
+      "tag": "2025003",
+      "file": "COD0MGXFIN_20250030000_01D_30S_CLK.CLK.gz",
+      "bytes": 5269729,
+      "sha256": "455081d0b35d1bec8f45a956d7717e258e3f91d9831bf7ab1995a3d9c3043cdd"
+    },
+    {
+      "tag": "2025008",
+      "file": "COD0MGXFIN_20250080000_01D_30S_CLK.CLK.gz",
+      "bytes": 5217026,
+      "sha256": "763d88eb75b4ea407ddb29fd0a268fe45ed530fe847f4d89df801d2a8bad933e"
+    },
+    {
+      "tag": "2025009",
+      "file": "COD0MGXFIN_20250090000_01D_30S_CLK.CLK.gz",
+      "bytes": 5239618,
+      "sha256": "e428fab97a3f0ed48501ca75fdc2af3fd2594e89c19f5f61654bfbf34a963bb3"
+    },
+    {
+      "tag": "2025020",
+      "file": "COD0MGXFIN_20250200000_01D_30S_CLK.CLK.gz",
+      "bytes": 5169354,
+      "sha256": "c988f188bc886bffedb05cfc6b865abccca9d52af2e906e4be537dcbd069168a"
+    },
+    {
+      "tag": "2025021",
+      "file": "COD0MGXFIN_20250210000_01D_30S_CLK.CLK.gz",
+      "bytes": 5168324,
+      "sha256": "9a7d3e58f124747ad79a0131ea3417e6883a43b9ded70bdf67f7b86507380a81"
+    },
+    {
+      "tag": "2025027",
+      "file": "COD0MGXFIN_20250270000_01D_30S_CLK.CLK.gz",
+      "bytes": 5153829,
+      "sha256": "dca68a4c14e94d3923e5189037e02e612ba59000d091cf5ad83412f14cb0b110"
+    },
+    {
+      "tag": "2025028",
+      "file": "COD0MGXFIN_20250280000_01D_30S_CLK.CLK.gz",
+      "bytes": 5174611,
+      "sha256": "8c20db40ea6ef557d8df993e3c4bd4b0b99119ff484eb7f09d5e3f5fde2277f8"
+    },
+    {
+      "tag": "2025033",
+      "file": "COD0MGXFIN_20250330000_01D_30S_CLK.CLK.gz",
+      "bytes": 5169768,
+      "sha256": "3b379c7a1132f217b2682db35bc1d2f712d95b25d5d35b41fe855dddd137ff11"
+    },
+    {
+      "tag": "2025034",
+      "file": "COD0MGXFIN_20250340000_01D_30S_CLK.CLK.gz",
+      "bytes": 5174206,
+      "sha256": "44e19e2fba15997561f0264109af67150050dee16d5a205123e66d8dbad49123"
+    },
+    {
+      "tag": "2025039",
+      "file": "COD0MGXFIN_20250390000_01D_30S_CLK.CLK.gz",
+      "bytes": 5158489,
+      "sha256": "a75c625409e20a50ac04ee4334a37412c17214f2c1c820fa27a94a735604cb27"
+    },
+    {
+      "tag": "2025040",
+      "file": "COD0MGXFIN_20250400000_01D_30S_CLK.CLK.gz",
+      "bytes": 5190069,
+      "sha256": "acd128d7ddd28d90d257decd4448dffa18b969ad7782ab74e35aebdcf91a5a30"
+    },
+    {
+      "tag": "2025045",
+      "file": "COD0MGXFIN_20250450000_01D_30S_CLK.CLK.gz",
+      "bytes": 5206052,
+      "sha256": "88f58fa097ed73e002cc7a3cef95e8b3da4d3c8f8539a363bb599e5a2bf1a487"
+    },
+    {
+      "tag": "2025046",
+      "file": "COD0MGXFIN_20250460000_01D_30S_CLK.CLK.gz",
+      "bytes": 5186314,
+      "sha256": "ba1930b5c7be877231081d5a98ff73c0a368facfb90048fe98fc01ffa7afe1d8"
+    },
+    {
+      "tag": "2025051",
+      "file": "COD0MGXFIN_20250510000_01D_30S_CLK.CLK.gz",
+      "bytes": 5195437,
+      "sha256": "efc44cac0feea38ab711c8967e9cdaa34952afb4e675ae7ab083a322c3324c2f"
+    },
+    {
+      "tag": "2025052",
+      "file": "COD0MGXFIN_20250520000_01D_30S_CLK.CLK.gz",
+      "bytes": 5216432,
+      "sha256": "4b475961b9366aa9093d8c66d61cd3e44ea390f4ba10e9a5df88a63fc3df2e5a"
+    },
+    {
+      "tag": "2025057",
+      "file": "COD0MGXFIN_20250570000_01D_30S_CLK.CLK.gz",
+      "bytes": 5196609,
+      "sha256": "be53991e38a86149f60c86ee36c18706472ae7bc57b461e69ed00c79929bf721"
+    },
+    {
+      "tag": "2025058",
+      "file": "COD0MGXFIN_20250580000_01D_30S_CLK.CLK.gz",
+      "bytes": 5173529,
+      "sha256": "2de68e04c101b10e35a7040d01eeb7a827938775c8546b8f0f4da3ec6722265f"
+    },
+    {
+      "tag": "2025063",
+      "file": "COD0MGXFIN_20250630000_01D_30S_CLK.CLK.gz",
+      "bytes": 5204736,
+      "sha256": "acd56a5f43ea963d878c7456e04c0f12f53f41180a3bd9defc8dc138e4d85287"
+    },
+    {
+      "tag": "2025064",
+      "file": "COD0MGXFIN_20250640000_01D_30S_CLK.CLK.gz",
+      "bytes": 5205186,
+      "sha256": "6124dfb5eb6f18acb3de1ebc5b0c47bbea623d65f4ba220e82271563c88ab6e9"
+    },
+    {
+      "tag": "2025069",
+      "file": "COD0MGXFIN_20250690000_01D_30S_CLK.CLK.gz",
+      "bytes": 5233814,
+      "sha256": "ecc0cbc45fa78b097a7b6e3990622951c7988359fed8c95442b6c335061b6352"
+    },
+    {
+      "tag": "2025070",
+      "file": "COD0MGXFIN_20250700000_01D_30S_CLK.CLK.gz",
+      "bytes": 5239721,
+      "sha256": "32c98eccecd19309b51406c7667ed3de57f6b6efd6a051a930a738a3111a09f4"
+    },
+    {
+      "tag": "2025076",
+      "file": "COD0MGXFIN_20250760000_01D_30S_CLK.CLK.gz",
+      "bytes": 5164763,
+      "sha256": "6a42912a77e3259da26cee6b1d3875044cc359ae2a0d9ce38277f83643ae2994"
+    },
+    {
+      "tag": "2025077",
+      "file": "COD0MGXFIN_20250770000_01D_30S_CLK.CLK.gz",
+      "bytes": 5197024,
+      "sha256": "692d784562ca1b9224fb5ff0bbe1fd8e9e96717766791f7798a2e253e6f5cf0b"
+    },
+    {
+      "tag": "2025082",
+      "file": "COD0MGXFIN_20250820000_01D_30S_CLK.CLK.gz",
+      "bytes": 5221035,
+      "sha256": "63d5651a6b148e3ca3d39cdf0b778e3aedb51ba58053d37f26fba9a9f5e240b9"
+    },
+    {
+      "tag": "2025083",
+      "file": "COD0MGXFIN_20250830000_01D_30S_CLK.CLK.gz",
+      "bytes": 5171764,
+      "sha256": "a389acc3c5ccc56d1849f9cab9eb238c702b09a210897e3c327a76d9d3f720bf"
+    },
+    {
+      "tag": "2025088",
+      "file": "COD0MGXFIN_20250880000_01D_30S_CLK.CLK.gz",
+      "bytes": 5206063,
+      "sha256": "0060b089607bd511fac913ad0711cdd89d097908779c9b22abcf3175ce07eba9"
+    },
+    {
+      "tag": "2025089",
+      "file": "COD0MGXFIN_20250890000_01D_30S_CLK.CLK.gz",
+      "bytes": 5183383,
+      "sha256": "9178a7f6f6a69204df720bbadf969f3d6b9eaabe4b1f52b6eae412304e040f67"
+    },
+    {
+      "tag": "2025094",
+      "file": "COD0MGXFIN_20250940000_01D_30S_CLK.CLK.gz",
+      "bytes": 5228248,
+      "sha256": "0c77f9f21e367b3c72befb66c757f7eb6010f2090b356b36b2d1348217d09670"
+    },
+    {
+      "tag": "2025095",
+      "file": "COD0MGXFIN_20250950000_01D_30S_CLK.CLK.gz",
+      "bytes": 5190466,
+      "sha256": "4c5762130475b546fc5cca3f765ed4f3522f61f0b98b0753cab7d8dfc0343108"
+    },
+    {
+      "tag": "2025100",
+      "file": "COD0MGXFIN_20251000000_01D_30S_CLK.CLK.gz",
+      "bytes": 5168828,
+      "sha256": "14dbf6373235dce8c406d9b2cbd266f6b3a777176847cdbcb06800e66c6c3490"
+    },
+    {
+      "tag": "2025101",
+      "file": "COD0MGXFIN_20251010000_01D_30S_CLK.CLK.gz",
+      "bytes": 5169994,
+      "sha256": "6ce62222c9530f4b6bf36e7e66592f2c32b387d7a8d4d3ae319bbb15285d2ff0"
+    },
+    {
+      "tag": "2025106",
+      "file": "COD0MGXFIN_20251060000_01D_30S_CLK.CLK.gz",
+      "bytes": 5169224,
+      "sha256": "bd39cd52677a4549b5c94dc15eee4cfb818907fc6eca43bf092e2f235c2a74f0"
+    },
+    {
+      "tag": "2025107",
+      "file": "COD0MGXFIN_20251070000_01D_30S_CLK.CLK.gz",
+      "bytes": 5195207,
+      "sha256": "fe4ca6c971beea088736f6fe643df5f15dc558817bea4205485b18f66b3e9e6d"
+    },
+    {
+      "tag": "2025112",
+      "file": "COD0MGXFIN_20251120000_01D_30S_CLK.CLK.gz",
+      "bytes": 5179860,
+      "sha256": "a77c00fc92c634d952e4834dcc11efbfb16ab3540e61819a5e72e028fc1efcf3"
+    },
+    {
+      "tag": "2025113",
+      "file": "COD0MGXFIN_20251130000_01D_30S_CLK.CLK.gz",
+      "bytes": 5207625,
+      "sha256": "b2ce7cb33d4c0e8edaca24a94d7730224dea64fec480107e844e25543e7b5cf2"
+    },
+    {
+      "tag": "2025119",
+      "file": "COD0MGXFIN_20251190000_01D_30S_CLK.CLK.gz",
+      "bytes": 5187604,
+      "sha256": "74934eef3fb13fc5a99d1e7cf92380522e56b7db2746ce2c4b225fe7a595343e"
+    },
+    {
+      "tag": "2025120",
+      "file": "COD0MGXFIN_20251200000_01D_30S_CLK.CLK.gz",
+      "bytes": 5172288,
+      "sha256": "8933dc0c3c416ef226b9689ee4cd629456a9b8325f808129a3120179a898e801"
+    },
+    {
+      "tag": "2025125",
+      "file": "COD0MGXFIN_20251250000_01D_30S_CLK.CLK.gz",
+      "bytes": 5175169,
+      "sha256": "7e442c17d6f4a69ab35d1e9c9876cad1011c7a006c40007cdd2bf074dc011815"
+    },
+    {
+      "tag": "2025126",
+      "file": "COD0MGXFIN_20251260000_01D_30S_CLK.CLK.gz",
+      "bytes": 5202422,
+      "sha256": "c01aab371c6adc4f29c991009d0332d501296a553ec2e7aa9868d263832e3806"
+    },
+    {
+      "tag": "2025131",
+      "file": "COD0MGXFIN_20251310000_01D_30S_CLK.CLK.gz",
+      "bytes": 5206872,
+      "sha256": "6857bb24d7f5bc039eae5f5dea4d0d3654af55b077f2daf8512b98a090cb9dbb"
+    },
+    {
+      "tag": "2025132",
+      "file": "COD0MGXFIN_20251320000_01D_30S_CLK.CLK.gz",
+      "bytes": 5200453,
+      "sha256": "61fad9f53ffa8a0fe8bea31b836e2ec63cf4f6033dd12a2defb1a1ad65676e9c"
+    },
+    {
+      "tag": "2025137",
+      "file": "COD0MGXFIN_20251370000_01D_30S_CLK.CLK.gz",
+      "bytes": 5200163,
+      "sha256": "535c30de6524d7503644163576149e1ebe79c8792c4c5899ad12c1ab3966b91c"
+    },
+    {
+      "tag": "2025149",
+      "file": "COD0MGXFIN_20251490000_01D_30S_CLK.CLK.gz",
+      "bytes": 5209229,
+      "sha256": "d471f00dda192602a9b1bff8091174d61878407bf41700964b3ace8d61029bda"
+    },
+    {
+      "tag": "2025150",
+      "file": "COD0MGXFIN_20251500000_01D_30S_CLK.CLK.gz",
+      "bytes": 5203033,
+      "sha256": "cb4432b131b6b09d9c6b52f4a51a4c4f086b0a2e8eafd8e4660c844ff5e08df4"
+    },
+    {
+      "tag": "2025155",
+      "file": "COD0MGXFIN_20251550000_01D_30S_CLK.CLK.gz",
+      "bytes": 5183742,
+      "sha256": "470e87bae28c4b6b5178f4643d620513e8c3a58390131d17f5dddddf39ae0d63"
+    },
+    {
+      "tag": "2025156",
+      "file": "COD0MGXFIN_20251560000_01D_30S_CLK.CLK.gz",
+      "bytes": 5231283,
+      "sha256": "706f01f5f6da7bb5259ab69ffb151c90acb30bbb58160a3b1d0e817e7d393c1d"
+    },
+    {
+      "tag": "2025162",
+      "file": "COD0MGXFIN_20251620000_01D_30S_CLK.CLK.gz",
+      "bytes": 5210889,
+      "sha256": "6f898a2914af084b566e3953d167b8253a133ec5ed3ae3333684948eb2209ccf"
+    },
+    {
+      "tag": "2025163",
+      "file": "COD0MGXFIN_20251630000_01D_30S_CLK.CLK.gz",
+      "bytes": 5187502,
+      "sha256": "16335b7b6bc08070304be2de3a07dfd2a5f7a2530f391db3d15bcaefc95d3cd6"
+    },
+    {
+      "tag": "2025168",
+      "file": "COD0MGXFIN_20251680000_01D_30S_CLK.CLK.gz",
+      "bytes": 5239866,
+      "sha256": "fc17ee2e7a3121c613dd9a6ac04ecdb5a665d3a01c93f4f4f596eea92776cf4c"
+    },
+    {
+      "tag": "2025169",
+      "file": "COD0MGXFIN_20251690000_01D_30S_CLK.CLK.gz",
+      "bytes": 5231830,
+      "sha256": "43f5d03b66494cdf8e17b96b6d7c3bca3fa66c3832fab2e13247ac2de55ebc58"
+    },
+    {
+      "tag": "2025174",
+      "file": "COD0MGXFIN_20251740000_01D_30S_CLK.CLK.gz",
+      "bytes": 5261200,
+      "sha256": "f11779d0cb478c5b01ad5f1289a6269fd5550c5d806eac8fad50e769c033be2c"
+    },
+    {
+      "tag": "2025175",
+      "file": "COD0MGXFIN_20251750000_01D_30S_CLK.CLK.gz",
+      "bytes": 5272969,
+      "sha256": "1d7dcfd296049f308e026ef0bc8de4af8c5ade5011ba19cc16d05f8537a74ce3"
+    },
+    {
+      "tag": "2025180",
+      "file": "COD0MGXFIN_20251800000_01D_30S_CLK.CLK.gz",
+      "bytes": 5255721,
+      "sha256": "c5da026f56f8ab8f5e7a35872410ad941404d44f34f4758c0d9fc21c97e5e982"
+    },
+    {
+      "tag": "2025181",
+      "file": "COD0MGXFIN_20251810000_01D_30S_CLK.CLK.gz",
+      "bytes": 5239566,
+      "sha256": "be08fc30a15352c22942fdbbf6d985295f57df462fd756f885c4707e6b6c4222"
+    },
+    {
+      "tag": "2025186",
+      "file": "COD0MGXFIN_20251860000_01D_30S_CLK.CLK.gz",
+      "bytes": 5200899,
+      "sha256": "7fb2773b15772ca8bb9b556342c58241948adc2593c1293cf152f368d739d9f0"
+    },
+    {
+      "tag": "2025187",
+      "file": "COD0MGXFIN_20251870000_01D_30S_CLK.CLK.gz",
+      "bytes": 5213089,
+      "sha256": "3ee4fe2e8c9eae5a207dea480442b37bc0297065df4a46bf09e751aaa6fd11f5"
+    },
+    {
+      "tag": "2025192",
+      "file": "COD0MGXFIN_20251920000_01D_30S_CLK.CLK.gz",
+      "bytes": 5259116,
+      "sha256": "002cf6d28691a138f69b87ab96de1a2aefeb9051b8f91cd1f113f0b352cdf180"
+    },
+    {
+      "tag": "2025193",
+      "file": "COD0MGXFIN_20251930000_01D_30S_CLK.CLK.gz",
+      "bytes": 5253845,
+      "sha256": "c3b818832f55e84f5665f0413cfba6531807e96c2eadbf90419d7d4d04692866"
+    },
+    {
+      "tag": "2025198",
+      "file": "COD0MGXFIN_20251980000_01D_30S_CLK.CLK.gz",
+      "bytes": 5239795,
+      "sha256": "1f5f578d079cfca5b02e3a1340a247a657e29fad6746c5f4c2e7369768fc819b"
+    },
+    {
+      "tag": "2025199",
+      "file": "COD0MGXFIN_20251990000_01D_30S_CLK.CLK.gz",
+      "bytes": 5262285,
+      "sha256": "3e623ceb0300050bc800b1e797d11758d4163e134aa130e86cc48cbd47014342"
+    },
+    {
+      "tag": "2025204",
+      "file": "COD0MGXFIN_20252040000_01D_30S_CLK.CLK.gz",
+      "bytes": 5233765,
+      "sha256": "a453c8d941bc1292cf847f59ac481e434a0694c4fb1c8963268defe6758fa691"
+    },
+    {
+      "tag": "2025205",
+      "file": "COD0MGXFIN_20252050000_01D_30S_CLK.CLK.gz",
+      "bytes": 5252730,
+      "sha256": "9018f414235594a56190c1ccba11012ed716b5328ed392920d135a84563f2958"
+    },
+    {
+      "tag": "2025211",
+      "file": "COD0MGXFIN_20252110000_01D_30S_CLK.CLK.gz",
+      "bytes": 5263674,
+      "sha256": "d8b800f644ad683af85147e55ae6563143780ff16e447a387d1f00fcf94afc9b"
+    },
+    {
+      "tag": "2025212",
+      "file": "COD0MGXFIN_20252120000_01D_30S_CLK.CLK.gz",
+      "bytes": 5253296,
+      "sha256": "ffa3cbe002a78860c9176a5d0dc7718c2c2f3a92cc7229db3a5dbca38ff4c0e5"
+    },
+    {
+      "tag": "2025217",
+      "file": "COD0MGXFIN_20252170000_01D_30S_CLK.CLK.gz",
+      "bytes": 5213640,
+      "sha256": "1769ba90a694d24da8640a68d0404c8aed443adbc735a64319c82b07dc40e0a5"
+    },
+    {
+      "tag": "2025218",
+      "file": "COD0MGXFIN_20252180000_01D_30S_CLK.CLK.gz",
+      "bytes": 5196301,
+      "sha256": "7a7868b6694e8bc7347f21a0e2ba97cd358c296a7195d873a80e781dbdb08307"
+    },
+    {
+      "tag": "2025223",
+      "file": "COD0MGXFIN_20252230000_01D_30S_CLK.CLK.gz",
+      "bytes": 5194373,
+      "sha256": "a89ca8639fc91712fa0b5e843b7106b1579d0caff7d23762e07fcf9ad835c22c"
+    },
+    {
+      "tag": "2025224",
+      "file": "COD0MGXFIN_20252240000_01D_30S_CLK.CLK.gz",
+      "bytes": 5192080,
+      "sha256": "9e252e6ffb95992f1244392cce8050ce91d68804cbd0feb0259e98d47eda1312"
+    },
+    {
+      "tag": "2025229",
+      "file": "COD0MGXFIN_20252290000_01D_30S_CLK.CLK.gz",
+      "bytes": 5202326,
+      "sha256": "1ecaec65a87f3842d1cbbcf230b8b38fe22b3d6275ddf63b7dda84f342936434"
+    },
+    {
+      "tag": "2025230",
+      "file": "COD0MGXFIN_20252300000_01D_30S_CLK.CLK.gz",
+      "bytes": 5145664,
+      "sha256": "c66f6bba065cc72cb546b8bb6c488e60a260c15f62c57f4d48ede72da232e5de"
+    },
+    {
+      "tag": "2025235",
+      "file": "COD0MGXFIN_20252350000_01D_30S_CLK.CLK.gz",
+      "bytes": 5232098,
+      "sha256": "9eee435ca83744c78114fbaebf251d0c13e1cbf5e908af44e7d55ac291f58dd6"
+    },
+    {
+      "tag": "2025236",
+      "file": "COD0MGXFIN_20252360000_01D_30S_CLK.CLK.gz",
+      "bytes": 5248458,
+      "sha256": "c073b9889c506efdb6cf9357bb4146584f88b22643a428101cd4209ecd6ca373"
+    },
+    {
+      "tag": "2025241",
+      "file": "COD0MGXFIN_20252410000_01D_30S_CLK.CLK.gz",
+      "bytes": 5208213,
+      "sha256": "365b4891c8d36d55fea4a8e6432b5367eae92f106cf32c47d907fd41fffaedca"
+    },
+    {
+      "tag": "2025242",
+      "file": "COD0MGXFIN_20252420000_01D_30S_CLK.CLK.gz",
+      "bytes": 5203420,
+      "sha256": "16378051d83c34af4522a98939663cddcf5f1aca83a7bacc4861c4eb72073f2e"
+    },
+    {
+      "tag": "2025247",
+      "file": "COD0MGXFIN_20252470000_01D_30S_CLK.CLK.gz",
+      "bytes": 5207855,
+      "sha256": "46d48a07da9363b7c1cec85fbb89c896c94ac73415539a665394b7df3ebcc4f2"
+    },
+    {
+      "tag": "2025248",
+      "file": "COD0MGXFIN_20252480000_01D_30S_CLK.CLK.gz",
+      "bytes": 5220696,
+      "sha256": "03f83464c4fc80c2a95efa05cc29e4f5cdaf6f843a09f90bd7844c1fb2b6ded7"
+    },
+    {
+      "tag": "2025254",
+      "file": "COD0MGXFIN_20252540000_01D_30S_CLK.CLK.gz",
+      "bytes": 5221964,
+      "sha256": "40fc5dbe7de0d9ff0db9f0f51152471de1ab24e1ba1c88ee4980a837d8152d9b"
+    },
+    {
+      "tag": "2025255",
+      "file": "COD0MGXFIN_20252550000_01D_30S_CLK.CLK.gz",
+      "bytes": 5232946,
+      "sha256": "1973ce8e1194a92d079417173d1264e4cc8200bedb291b1dc05d7e5da8ae1e2f"
+    },
+    {
+      "tag": "2025260",
+      "file": "COD0MGXFIN_20252600000_01D_30S_CLK.CLK.gz",
+      "bytes": 5214542,
+      "sha256": "6b4a397ea8268a3c7e87e79d059747b71c5b5676bc73655257e346e5231f1a16"
+    },
+    {
+      "tag": "2025261",
+      "file": "COD0MGXFIN_20252610000_01D_30S_CLK.CLK.gz",
+      "bytes": 5201803,
+      "sha256": "5929e511711f8c5ec46f54d3de83180c6acd26a9363edb7a5696d440c3edbcbc"
+    },
+    {
+      "tag": "2025266",
+      "file": "COD0MGXFIN_20252660000_01D_30S_CLK.CLK.gz",
+      "bytes": 5205330,
+      "sha256": "95e4bb629ef90623e4b3703bf51424c4d3438f3005ffddfebba89bcb0cde0830"
+    },
+    {
+      "tag": "2025267",
+      "file": "COD0MGXFIN_20252670000_01D_30S_CLK.CLK.gz",
+      "bytes": 5195004,
+      "sha256": "e29b8514497a851e8fde2db52d912fc93851ec465f19d9a49ec683f870abd52f"
+    },
+    {
+      "tag": "2025272",
+      "file": "COD0MGXFIN_20252720000_01D_30S_CLK.CLK.gz",
+      "bytes": 5195335,
+      "sha256": "ecff0a5c0c9a53d8ee76599b8856d2d9fb539c54d2066a976a188f41cd5967eb"
+    },
+    {
+      "tag": "2025273",
+      "file": "COD0MGXFIN_20252730000_01D_30S_CLK.CLK.gz",
+      "bytes": 5270426,
+      "sha256": "d9b0c805cd0bf47ace7088c4e52052be975444bebb9d9d654ee5861e1c1b5070"
+    },
+    {
+      "tag": "2025278",
+      "file": "COD0MGXFIN_20252780000_01D_30S_CLK.CLK.gz",
+      "bytes": 5271576,
+      "sha256": "21279366104297959f45e471c769103db83676b0f85369abf6cf40cbb8a2d60c"
+    },
+    {
+      "tag": "2025279",
+      "file": "COD0MGXFIN_20252790000_01D_30S_CLK.CLK.gz",
+      "bytes": 5311200,
+      "sha256": "5c17198e73d30e58016c15c8f0377187bbdd2846efabb310e4e5402d7bccc65a"
+    },
+    {
+      "tag": "2025284",
+      "file": "COD0MGXFIN_20252840000_01D_30S_CLK.CLK.gz",
+      "bytes": 5296347,
+      "sha256": "9e249e074b0840cea7dc4773cd79ff4110a1898ea039516c149e664e316e3503"
+    },
+    {
+      "tag": "2025285",
+      "file": "COD0MGXFIN_20252850000_01D_30S_CLK.CLK.gz",
+      "bytes": 5271831,
+      "sha256": "1648007998e779e78f76d3d95dc4c231761363bd2a6a5ee7b7174b8de25b94d8"
+    },
+    {
+      "tag": "2025290",
+      "file": "COD0MGXFIN_20252900000_01D_30S_CLK.CLK.gz",
+      "bytes": 5287388,
+      "sha256": "b4a926fed128ca648e4383f456e57b9c524bd08cb6d7d9fe1971760533295eb6"
+    },
+    {
+      "tag": "2025291",
+      "file": "COD0MGXFIN_20252910000_01D_30S_CLK.CLK.gz",
+      "bytes": 5244785,
+      "sha256": "31365f411298db45952c7a72da4d927c86cb2c846099c46dbf8e6d9a558cdc13"
+    },
+    {
+      "tag": "2025297",
+      "file": "COD0MGXFIN_20252970000_01D_30S_CLK.CLK.gz",
+      "bytes": 5331283,
+      "sha256": "64f867a2bf23ea0366f78a848e66c2b4a0ead86036be563a51851cdf105c0ab7"
+    },
+    {
+      "tag": "2025298",
+      "file": "COD0MGXFIN_20252980000_01D_30S_CLK.CLK.gz",
+      "bytes": 5295646,
+      "sha256": "64174adad7f23a1f2ad39c8a9a707aff8351236f8507cb2b6d9b3a29489acd83"
+    },
+    {
+      "tag": "2025303",
+      "file": "COD0MGXFIN_20253030000_01D_30S_CLK.CLK.gz",
+      "bytes": 5262439,
+      "sha256": "e6b533919fad4ee6304536ee63c8c0a29791c3e51c3ff9995805745d0ec85778"
+    },
+    {
+      "tag": "2025304",
+      "file": "COD0MGXFIN_20253040000_01D_30S_CLK.CLK.gz",
+      "bytes": 5274843,
+      "sha256": "e1bc028dd51cfed7492d5ca6a5f4411be0c74d633a0a4cce4cb01dcc1524c537"
+    },
+    {
+      "tag": "2025309",
+      "file": "COD0MGXFIN_20253090000_01D_30S_CLK.CLK.gz",
+      "bytes": 5204916,
+      "sha256": "b176b448435253396670a31eb1ac0bcd75ef6c1571cf0ed95620135369135790"
+    },
+    {
+      "tag": "2025310",
+      "file": "COD0MGXFIN_20253100000_01D_30S_CLK.CLK.gz",
+      "bytes": 5212403,
+      "sha256": "ed334045953b565bc5b217990d599b4d97a307c3080be7e2189b4bbaf3a771fc"
+    },
+    {
+      "tag": "2025315",
+      "file": "COD0MGXFIN_20253150000_01D_30S_CLK.CLK.gz",
+      "bytes": 5241073,
+      "sha256": "f424a3879e014dd2f34f711c3d68c46d2d4228c1a4300b6ed7dbf4a1a9fcb9f2"
+    },
+    {
+      "tag": "2025316",
+      "file": "COD0MGXFIN_20253160000_01D_30S_CLK.CLK.gz",
+      "bytes": 5123121,
+      "sha256": "f06b177438de63b564b2c9b16f2be285f791fa3f2b34ac810df6e1606c2342c9"
+    },
+    {
+      "tag": "2025321",
+      "file": "COD0MGXFIN_20253210000_01D_30S_CLK.CLK.gz",
+      "bytes": 5242457,
+      "sha256": "2f0ef9058b564e868e4003f1e8336814b42fccfaef58a3347ce729b0f6270aba"
+    },
+    {
+      "tag": "2025322",
+      "file": "COD0MGXFIN_20253220000_01D_30S_CLK.CLK.gz",
+      "bytes": 5262235,
+      "sha256": "ad820462e35ffdc9a2db59ae090dafb2b3c184a32a19443e993d38d362644ab7"
+    },
+    {
+      "tag": "2025327",
+      "file": "COD0MGXFIN_20253270000_01D_30S_CLK.CLK.gz",
+      "bytes": 5298068,
+      "sha256": "8f9afb9c2742d525461c49b3801876323fd9eb00972ff7f2a3c66a92273204df"
+    },
+    {
+      "tag": "2025328",
+      "file": "COD0MGXFIN_20253280000_01D_30S_CLK.CLK.gz",
+      "bytes": 5196139,
+      "sha256": "ddcea56f54987b0f127fd745b81ce1ed098c8ce5e32330867ea776255d6295a7"
+    },
+    {
+      "tag": "2025333",
+      "file": "COD0MGXFIN_20253330000_01D_30S_CLK.CLK.gz",
+      "bytes": 5229428,
+      "sha256": "f488ff41a0478f0a354ab07e39e5f2d6cddcabb79bf45be8e5380155bf441b28"
+    },
+    {
+      "tag": "2025334",
+      "file": "COD0MGXFIN_20253340000_01D_30S_CLK.CLK.gz",
+      "bytes": 5247398,
+      "sha256": "cc9a6e87777ae808bd3df1cae6ae850efb7b3540d7695bade06428de91f5abc4"
+    },
+    {
+      "tag": "2025339",
+      "file": "COD0MGXFIN_20253390000_01D_30S_CLK.CLK.gz",
+      "bytes": 5269636,
+      "sha256": "526c613459ed546aaf52273b4b3d117baeab07596a46d477f68403416509295d"
+    },
+    {
+      "tag": "2025340",
+      "file": "COD0MGXFIN_20253400000_01D_30S_CLK.CLK.gz",
+      "bytes": 5282008,
+      "sha256": "ab116f5564ac0904821ed44d502f00383b59fb0c6095f60c44e6637de8a9001f"
+    },
+    {
+      "tag": "2025346",
+      "file": "COD0MGXFIN_20253460000_01D_30S_CLK.CLK.gz",
+      "bytes": 5161411,
+      "sha256": "a8392009eae0f78c4dba77b4adeb5ab51f7a9c12ec4ab7af5c763ff4c1587de6"
+    },
+    {
+      "tag": "2025347",
+      "file": "COD0MGXFIN_20253470000_01D_30S_CLK.CLK.gz",
+      "bytes": 5223714,
+      "sha256": "94a8e2b262858b81131da477197d72351d6b06669fb39164b9bbf0e6af6f25c5"
+    },
+    {
+      "tag": "2025352",
+      "file": "COD0MGXFIN_20253520000_01D_30S_CLK.CLK.gz",
+      "bytes": 5225303,
+      "sha256": "00fd4b9b68a8053c8d05b5c48da547b43a556e307a857d3dd7c24ca9975f62c9"
+    },
+    {
+      "tag": "2025353",
+      "file": "COD0MGXFIN_20253530000_01D_30S_CLK.CLK.gz",
+      "bytes": 5311619,
+      "sha256": "8389a8dbfe8fa36817dad5a52648e23c3b840cbf2f32de8c93ca275864ce79f0"
+    },
+    {
+      "tag": "2025358",
+      "file": "COD0MGXFIN_20253580000_01D_30S_CLK.CLK.gz",
+      "bytes": 5228122,
+      "sha256": "480009c82f71041b21901d7d93c5a7daf3b776e15fae308b02265893ca123aa4"
+    },
+    {
+      "tag": "2025359",
+      "file": "COD0MGXFIN_20253590000_01D_30S_CLK.CLK.gz",
+      "bytes": 5229086,
+      "sha256": "37c7f5adce4cd10be01dd2ee6acf19ebc62fe4bd7bf4027e97ae22421606aafc"
+    },
+    {
+      "tag": "2025364",
+      "file": "COD0MGXFIN_20253640000_01D_30S_CLK.CLK.gz",
+      "bytes": 5200196,
+      "sha256": "10c231e6d8436c266c78f2810a4365081bd583c3a07900bc052a44572d1cc909"
+    },
+    {
+      "tag": "2025365",
+      "file": "COD0MGXFIN_20253650000_01D_30S_CLK.CLK.gz",
+      "bytes": 5212022,
+      "sha256": "56f2b06ff4377e1799fd4f91a336ab54dcbbb69db3e252ac768d4fa7eae62b92"
+    }
+  ]
+}

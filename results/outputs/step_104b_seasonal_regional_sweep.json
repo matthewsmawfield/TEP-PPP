@@ -1,0 +1,2575 @@
+{
+  "step": 104,
+  "title": "Regional x seasonal sweep of the frozen leftover-clock predictor (P5)",
+  "product": "clk_cod_ops",
+  "season_bins_doy": {
+    "DJF": "<60 or >=335",
+    "MAM": "60-151",
+    "JJA": "152-243",
+    "SON": "244-334"
+  },
+  "cells": {
+    "clk_cod_ops_2024_GLOBAL": {
+      "mid": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 44.83454745618134,
+            "ci95": [
+              38.412259574692655,
+              48.5552105502838
+            ],
+            "n": 42,
+            "frac_positive": 0.9761904761904762
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 32.49908612810668,
+            "ci95": [
+              27.47135158628499,
+              37.61651624037514
+            ],
+            "n": 42,
+            "frac_positive": 0.9523809523809523
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 21.53043503717538,
+            "ci95": [
+              15.922400889536503,
+              28.94653812834037
+            ],
+            "n": 42,
+            "frac_positive": 0.8809523809523809
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 6.34839599728036,
+            "ci95": [
+              4.010185686515233,
+              9.396840660468676
+            ],
+            "n": 42,
+            "frac_positive": 0.8333333333333334
+          },
+          "tep_lfmf_gated_rms_median_m": 2.3675179908969404
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 40.58561169299409,
+            "ci95": [
+              35.46122144142362,
+              46.64664058031216
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 36.0089393241349,
+            "ci95": [
+              30.037937537312153,
+              42.46945896694435
+            ],
+            "n": 43,
+            "frac_positive": 0.9302325581395349
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 14.282886916522298,
+            "ci95": [
+              11.366685931956056,
+              22.43427004682015
+            ],
+            "n": 43,
+            "frac_positive": 0.8372093023255814
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 9.892278376213826,
+            "ci95": [
+              4.8889121372463595,
+              11.781640043417552
+            ],
+            "n": 43,
+            "frac_positive": 0.7906976744186046
+          },
+          "tep_lfmf_gated_rms_median_m": 2.1732255234010065
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 44.115302182006864,
+            "ci95": [
+              40.988293133376786,
+              46.71044629623737
+            ],
+            "n": 41,
+            "frac_positive": 0.9024390243902439
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 19.96895464919357,
+            "ci95": [
+              14.493909294350749,
+              26.971976949032637
+            ],
+            "n": 41,
+            "frac_positive": 0.8780487804878049
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 28.728732433395233,
+            "ci95": [
+              24.86640897457987,
+              32.67137041450755
+            ],
+            "n": 41,
+            "frac_positive": 0.926829268292683
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 4.609122104803931,
+            "ci95": [
+              0.5049579094007606,
+              6.508256466477702
+            ],
+            "n": 41,
+            "frac_positive": 0.6829268292682927
+          },
+          "tep_lfmf_gated_rms_median_m": 1.78857465874351
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 41.24343445389227,
+            "ci95": [
+              26.914931876825964,
+              49.11463443528986
+            ],
+            "n": 43,
+            "frac_positive": 0.7674418604651163
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 25.758712490337533,
+            "ci95": [
+              -4.560908935147379,
+              35.42190779072867
+            ],
+            "n": 43,
+            "frac_positive": 0.5813953488372093
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 16.162849360441133,
+            "ci95": [
+              12.669637613465955,
+              29.582785749674102
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.8924375347415978,
+            "ci95": [
+              -2.9769295513278893,
+              4.877741672843905
+            ],
+            "n": 43,
+            "frac_positive": 0.46511627906976744
+          },
+          "tep_lfmf_gated_rms_median_m": 3.310715418342943
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 58.82104810416527,
+            "ci95": [
+              49.76315458233385,
+              67.3853406276076
+            ],
+            "n": 42,
+            "frac_positive": 0.8095238095238095
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 39.1500216043535,
+            "ci95": [
+              30.002352245451885,
+              47.102868669722156
+            ],
+            "n": 42,
+            "frac_positive": 0.7857142857142857
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 16.62301957351991,
+            "ci95": [
+              2.756270646228498,
+              35.83310122394953
+            ],
+            "n": 42,
+            "frac_positive": 0.6666666666666666
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 2.3537980746026808,
+            "ci95": [
+              -2.211151854433191,
+              5.567843092772412
+            ],
+            "n": 42,
+            "frac_positive": 0.5714285714285714
+          },
+          "tep_lfmf_gated_rms_median_m": 7.2363809424377745
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 65.3525498654901,
+            "ci95": [
+              56.53756690241944,
+              72.27540990295213
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 51.26549407876024,
+            "ci95": [
+              41.69780576932214,
+              63.97122587017194
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 11.01389132179147,
+            "ci95": [
+              3.75437243433,
+              36.327439790143025
+            ],
+            "n": 43,
+            "frac_positive": 0.6511627906976745
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 2.509491902114247,
+            "ci95": [
+              -0.5549197324700605,
+              5.591467396499872
+            ],
+            "n": 43,
+            "frac_positive": 0.627906976744186
+          },
+          "tep_lfmf_gated_rms_median_m": 6.455878698862633
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 20.472429804252467,
+            "ci95": [
+              -1.5675421266824197,
+              49.21475070801953
+            ],
+            "n": 41,
+            "frac_positive": 0.5121951219512195
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -1.904988643586214,
+            "ci95": [
+              -5.6264005719699695,
+              23.9160509801985
+            ],
+            "n": 41,
+            "frac_positive": 0.4634146341463415
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 13.012727584630346,
+            "ci95": [
+              -0.6875143515050031,
+              22.810932004486595
+            ],
+            "n": 41,
+            "frac_positive": 0.6097560975609756
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -3.4734506994660963,
+            "ci95": [
+              -6.087604934361646,
+              -0.11843544218308466
+            ],
+            "n": 41,
+            "frac_positive": 0.3170731707317073
+          },
+          "tep_lfmf_gated_rms_median_m": 12.501912290178625
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 3.933213413478154,
+            "ci95": [
+              -1.17508216536939,
+              39.47061716586169
+            ],
+            "n": 43,
+            "frac_positive": 0.5813953488372093
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -0.05625625125702527,
+            "ci95": [
+              -5.02822729007899,
+              15.225533329484065
+            ],
+            "n": 43,
+            "frac_positive": 0.4883720930232558
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": -0.05078034150587385,
+            "ci95": [
+              -2.1342645706603047,
+              10.40353372448999
+            ],
+            "n": 43,
+            "frac_positive": 0.4883720930232558
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -2.6929751211851594,
+            "ci95": [
+              -6.1246627791287755,
+              -0.8587685235234899
+            ],
+            "n": 43,
+            "frac_positive": 0.27906976744186046
+          },
+          "tep_lfmf_gated_rms_median_m": 41.723083705729714
+        }
+      }
+    },
+    "clk_cod_ops_2024_EUROPE": {
+      "mid": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 38.830299005531224,
+            "ci95": [
+              33.14570357390211,
+              43.01855454746894
+            ],
+            "n": 42,
+            "frac_positive": 0.9761904761904762
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 27.199024491278223,
+            "ci95": [
+              20.08458105051485,
+              33.322918777305965
+            ],
+            "n": 42,
+            "frac_positive": 0.9523809523809523
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 26.40002716167104,
+            "ci95": [
+              23.379224731354054,
+              29.193318332235062
+            ],
+            "n": 42,
+            "frac_positive": 0.9761904761904762
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.268394611126698,
+            "ci95": [
+              9.380061141879708,
+              13.610883415787022
+            ],
+            "n": 42,
+            "frac_positive": 0.9523809523809523
+          },
+          "tep_lfmf_gated_rms_median_m": 0.738407876464628
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 45.22386034021045,
+            "ci95": [
+              41.204331197132824,
+              46.660193413475405
+            ],
+            "n": 43,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 24.73778605758654,
+            "ci95": [
+              22.967959374711445,
+              29.17613137007946
+            ],
+            "n": 43,
+            "frac_positive": 0.9302325581395349
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 38.39475749830213,
+            "ci95": [
+              35.079219021199236,
+              39.766163718541826
+            ],
+            "n": 43,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 15.99250438731471,
+            "ci95": [
+              13.247883850900898,
+              18.17842252864238
+            ],
+            "n": 43,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_rms_median_m": 0.7931226691532088
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 52.721310806534035,
+            "ci95": [
+              46.215608265421324,
+              55.42504015149847
+            ],
+            "n": 41,
+            "frac_positive": 0.9512195121951219
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 47.40581653456082,
+            "ci95": [
+              41.08349310594722,
+              51.464400182918865
+            ],
+            "n": 41,
+            "frac_positive": 0.926829268292683
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 31.59410031145574,
+            "ci95": [
+              25.443199734585843,
+              33.0735536850287
+            ],
+            "n": 41,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 24.070746862139114,
+            "ci95": [
+              20.73620598148117,
+              25.895233403390826
+            ],
+            "n": 41,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_rms_median_m": 0.7756729335942825
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 44.50919639163262,
+            "ci95": [
+              43.058127158062845,
+              47.980132837251745
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 40.4459528291219,
+            "ci95": [
+              37.07170716226981,
+              44.687464028733345
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 28.63319565696809,
+            "ci95": [
+              22.555990296812755,
+              34.93530996251341
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 22.93888459290142,
+            "ci95": [
+              19.278131363691998,
+              29.9425607150965
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_lfmf_gated_rms_median_m": 0.8698352998186517
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 41.47816577963903,
+            "ci95": [
+              28.791666993993587,
+              48.612029345103295
+            ],
+            "n": 42,
+            "frac_positive": 0.8333333333333334
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 19.0000811242069,
+            "ci95": [
+              12.410211226204947,
+              28.44689467142504
+            ],
+            "n": 42,
+            "frac_positive": 0.7619047619047619
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 38.9909526097713,
+            "ci95": [
+              35.98097122708194,
+              42.70466490444119
+            ],
+            "n": 42,
+            "frac_positive": 0.8095238095238095
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 17.856300650906515,
+            "ci95": [
+              12.957753531131205,
+              21.350869098184198
+            ],
+            "n": 42,
+            "frac_positive": 0.7857142857142857
+          },
+          "tep_lfmf_gated_rms_median_m": 2.580265058927333
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 58.38330765960175,
+            "ci95": [
+              50.958993070442006,
+              63.55701094148092
+            ],
+            "n": 43,
+            "frac_positive": 0.8372093023255814
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 37.25172666164648,
+            "ci95": [
+              31.420541062968432,
+              40.315119617407156
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 40.86553950432745,
+            "ci95": [
+              38.06463986155498,
+              47.1898103099307
+            ],
+            "n": 43,
+            "frac_positive": 0.9069767441860465
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 17.427039677677726,
+            "ci95": [
+              14.719834934518804,
+              18.931585535952898
+            ],
+            "n": 43,
+            "frac_positive": 0.8837209302325582
+          },
+          "tep_lfmf_gated_rms_median_m": 2.6796670493273504
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 62.3363885811822,
+            "ci95": [
+              42.811691691265054,
+              65.94443564002867
+            ],
+            "n": 41,
+            "frac_positive": 0.7073170731707317
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 56.74950954299658,
+            "ci95": [
+              37.04623074711362,
+              61.75808760100101
+            ],
+            "n": 41,
+            "frac_positive": 0.7073170731707317
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 16.675342675966863,
+            "ci95": [
+              12.93284627489858,
+              25.90230302194242
+            ],
+            "n": 41,
+            "frac_positive": 0.8536585365853658
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 13.4166387631259,
+            "ci95": [
+              7.83149886126454,
+              18.132685063401087
+            ],
+            "n": 41,
+            "frac_positive": 0.8536585365853658
+          },
+          "tep_lfmf_gated_rms_median_m": 2.44063330688792
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 55.91412954611846,
+            "ci95": [
+              50.47104054213414,
+              61.065055818455136
+            ],
+            "n": 43,
+            "frac_positive": 0.7906976744186046
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 55.4683030660574,
+            "ci95": [
+              47.28689970510782,
+              57.8387144001274
+            ],
+            "n": 43,
+            "frac_positive": 0.7906976744186046
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 15.106600038446027,
+            "ci95": [
+              10.715480999716808,
+              19.24703576786143
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.959279211414387,
+            "ci95": [
+              9.498511555023248,
+              17.501514011271023
+            ],
+            "n": 43,
+            "frac_positive": 0.8604651162790697
+          },
+          "tep_lfmf_gated_rms_median_m": 2.657261374676295
+        }
+      }
+    },
+    "clk_cod_ops_2024_NORTH_AMERICA": {
+      "mid": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 63.681461115219165,
+            "ci95": [
+              58.973971117847555,
+              67.26761116886675
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -17.946483795950307,
+            "ci95": [
+              -34.81977022273486,
+              -9.129305877577043
+            ],
+            "n": 42,
+            "frac_positive": 0.2857142857142857
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 69.78352991302725,
+            "ci95": [
+              64.98506229308725,
+              71.75748295587847
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -2.698284401050577,
+            "ci95": [
+              -5.484154115861517,
+              2.6942285442857097
+            ],
+            "n": 42,
+            "frac_positive": 0.47619047619047616
+          },
+          "tep_lfmf_gated_rms_median_m": 1.1533060403988191
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 50.0966563980052,
+            "ci95": [
+              44.62124953149247,
+              53.58122576543954
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -49.227858336324104,
+            "ci95": [
+              -78.97810356635108,
+              -34.48174683418597
+            ],
+            "n": 43,
+            "frac_positive": 0.23255813953488372
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 66.65057266103825,
+            "ci95": [
+              63.26861828690371,
+              71.02164599017458
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -4.028538203220777,
+            "ci95": [
+              -9.09145795209312,
+              -1.150525422698978
+            ],
+            "n": 43,
+            "frac_positive": 0.3023255813953488
+          },
+          "tep_lfmf_gated_rms_median_m": 1.1135123856870854
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 46.913394447888635,
+            "ci95": [
+              39.43769459724189,
+              50.335685287933664
+            ],
+            "n": 41,
+            "frac_positive": 0.975609756097561
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -91.92726540916665,
+            "ci95": [
+              -105.0502176344708,
+              -65.10911325460668
+            ],
+            "n": 41,
+            "frac_positive": 0.024390243902439025
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 72.23401330477903,
+            "ci95": [
+              69.1330252254327,
+              73.44375378985791
+            ],
+            "n": 41,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -2.717663337943055,
+            "ci95": [
+              -4.763353317690289,
+              0.320361011977921
+            ],
+            "n": 41,
+            "frac_positive": 0.3902439024390244
+          },
+          "tep_lfmf_gated_rms_median_m": 1.0208562492029007
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 10.626024271620738,
+            "ci95": [
+              2.576559837161352,
+              26.80171436342633
+            ],
+            "n": 43,
+            "frac_positive": 0.6976744186046512
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -49.459639173700396,
+            "ci95": [
+              -65.49433916737483,
+              -23.989588573772114
+            ],
+            "n": 43,
+            "frac_positive": 0.18604651162790697
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 36.05670189847652,
+            "ci95": [
+              24.4716138469632,
+              46.39828676129706
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -9.34636736231056,
+            "ci95": [
+              -11.84787355862802,
+              -2.869853668067801
+            ],
+            "n": 43,
+            "frac_positive": 0.23255813953488372
+          },
+          "tep_lfmf_gated_rms_median_m": 5.226157738410246
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 65.55691065881751,
+            "ci95": [
+              60.70178819078848,
+              68.5378145145945
+            ],
+            "n": 42,
+            "frac_positive": 0.9523809523809523
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -39.852056270829834,
+            "ci95": [
+              -49.10391206358579,
+              -12.357796350434068
+            ],
+            "n": 42,
+            "frac_positive": 0.19047619047619047
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 76.1315065702046,
+            "ci95": [
+              71.11242932587609,
+              79.62286621888248
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 1.1223005628157146,
+            "ci95": [
+              -4.855176282373463,
+              4.279658300401162
+            ],
+            "n": 42,
+            "frac_positive": 0.5238095238095238
+          },
+          "tep_lfmf_gated_rms_median_m": 4.4267524665618705
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 60.1338904554795,
+            "ci95": [
+              52.38541740660463,
+              62.91060397007697
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -76.01918805648778,
+            "ci95": [
+              -90.40064293046808,
+              -43.26879190766142
+            ],
+            "n": 43,
+            "frac_positive": 0.18604651162790697
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 76.7708703121612,
+            "ci95": [
+              76.13641280612613,
+              77.90686156389512
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.0760839582497184,
+            "ci95": [
+              -3.5476432305847405,
+              2.237666109852199
+            ],
+            "n": 43,
+            "frac_positive": 0.4418604651162791
+          },
+          "tep_lfmf_gated_rms_median_m": 3.764016971071111
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 51.287474554456615,
+            "ci95": [
+              45.15022535044053,
+              59.96721845246883
+            ],
+            "n": 41,
+            "frac_positive": 0.9512195121951219
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -91.08494641553548,
+            "ci95": [
+              -126.16063222297083,
+              -58.62250931451436
+            ],
+            "n": 41,
+            "frac_positive": 0.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 77.4574436765923,
+            "ci95": [
+              77.19928560922408,
+              78.02422701154926
+            ],
+            "n": 41,
+            "frac_positive": 0.975609756097561
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -3.0369231623561754,
+            "ci95": [
+              -5.716721203085218,
+              -1.9105703988910205
+            ],
+            "n": 41,
+            "frac_positive": 0.2682926829268293
+          },
+          "tep_lfmf_gated_rms_median_m": 3.815645883546531
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 2.2923771575836693,
+            "ci95": [
+              -3.675969858784711,
+              13.293807448881767
+            ],
+            "n": 43,
+            "frac_positive": 0.5348837209302325
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -23.799231979566258,
+            "ci95": [
+              -47.01593884728344,
+              -7.283952544842065
+            ],
+            "n": 43,
+            "frac_positive": 0.20930232558139536
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 18.421989517902958,
+            "ci95": [
+              8.987463466433098,
+              30.47105692812686
+            ],
+            "n": 43,
+            "frac_positive": 0.7441860465116279
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -5.839267131334047,
+            "ci95": [
+              -8.610384765494139,
+              -2.852547685203821
+            ],
+            "n": 43,
+            "frac_positive": 0.18604651162790697
+          },
+          "tep_lfmf_gated_rms_median_m": 25.358959208077923
+        }
+      }
+    },
+    "clk_cod_ops_2024_EAST_ASIA": {
+      "mid": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 57.65824181501391,
+            "ci95": [
+              52.53139938835904,
+              65.09064336073732
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 54.877762572834186,
+            "ci95": [
+              46.73063849715563,
+              60.45932717788245
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 8.397838055305733,
+            "ci95": [
+              5.253349814494651,
+              12.43485597172072
+            ],
+            "n": 42,
+            "frac_positive": 0.8809523809523809
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.6050245008979225,
+            "ci95": [
+              -5.155034621445642,
+              5.725212025518123
+            ],
+            "n": 42,
+            "frac_positive": 0.4523809523809524
+          },
+          "tep_lfmf_gated_rms_median_m": 1.5643938892507583
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 45.43627707806242,
+            "ci95": [
+              38.87448046111065,
+              56.10438548897223
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 41.6986501445162,
+            "ci95": [
+              34.368865792867986,
+              50.048544905463444
+            ],
+            "n": 43,
+            "frac_positive": 0.9069767441860465
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 9.693085754905173,
+            "ci95": [
+              5.193461333231653,
+              11.464620642097334
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 1.6443239147780897,
+            "ci95": [
+              -2.7853633530627198,
+              4.017853726411258
+            ],
+            "n": 43,
+            "frac_positive": 0.5348837209302325
+          },
+          "tep_lfmf_gated_rms_median_m": 1.6232387632652223
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 48.90738645590174,
+            "ci95": [
+              46.191046525111105,
+              56.46951123768837
+            ],
+            "n": 41,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 45.92113229401546,
+            "ci95": [
+              38.5236519103928,
+              51.189250920166174
+            ],
+            "n": 41,
+            "frac_positive": 0.975609756097561
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 19.74934599076893,
+            "ci95": [
+              12.874488841614273,
+              27.89855785648244
+            ],
+            "n": 41,
+            "frac_positive": 0.8292682926829268
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 4.949265887392995,
+            "ci95": [
+              -1.914462075599066,
+              13.812090510731224
+            ],
+            "n": 41,
+            "frac_positive": 0.6341463414634146
+          },
+          "tep_lfmf_gated_rms_median_m": 1.1714315497775167
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 51.48897622481989,
+            "ci95": [
+              41.56720708469494,
+              61.47487622517135
+            ],
+            "n": 43,
+            "frac_positive": 0.9302325581395349
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 48.4616435667571,
+            "ci95": [
+              33.00388361678791,
+              56.95680647066622
+            ],
+            "n": 43,
+            "frac_positive": 0.8837209302325582
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 5.832153227409565,
+            "ci95": [
+              2.260866970313624,
+              12.616134160719284
+            ],
+            "n": 43,
+            "frac_positive": 0.7209302325581395
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.2115791246263052,
+            "ci95": [
+              -6.923078102693592,
+              2.627174424051293
+            ],
+            "n": 43,
+            "frac_positive": 0.46511627906976744
+          },
+          "tep_lfmf_gated_rms_median_m": 1.9283399477629726
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 89.32832089829134,
+            "ci95": [
+              87.73868509602356,
+              90.70273557564492
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 88.53449394224884,
+            "ci95": [
+              87.46990599886887,
+              89.47266659734576
+            ],
+            "n": 42,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 9.604289260205302,
+            "ci95": [
+              4.741957467537061,
+              11.809328838049204
+            ],
+            "n": 42,
+            "frac_positive": 0.7857142857142857
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 1.3173407228842748,
+            "ci95": [
+              -5.163093813829467,
+              5.926636887077169
+            ],
+            "n": 42,
+            "frac_positive": 0.5238095238095238
+          },
+          "tep_lfmf_gated_rms_median_m": 1.9597125215017375
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 82.52525032657194,
+            "ci95": [
+              81.56911645452423,
+              85.88436917747345
+            ],
+            "n": 43,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 80.92192436930384,
+            "ci95": [
+              78.55996409528233,
+              83.29854182944455
+            ],
+            "n": 43,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 9.002980672560568,
+            "ci95": [
+              6.514736795064103,
+              18.684575711389428
+            ],
+            "n": 43,
+            "frac_positive": 0.8372093023255814
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 0.8002556819734385,
+            "ci95": [
+              -5.429226259563302,
+              2.709391760722324
+            ],
+            "n": 43,
+            "frac_positive": 0.5348837209302325
+          },
+          "tep_lfmf_gated_rms_median_m": 2.2084493849227433
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 84.55678049055142,
+            "ci95": [
+              82.07318067546375,
+              85.32935485023576
+            ],
+            "n": 41,
+            "frac_positive": 0.975609756097561
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 81.64512853396718,
+            "ci95": [
+              80.62065549341486,
+              84.23176302146152
+            ],
+            "n": 41,
+            "frac_positive": 0.975609756097561
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 15.939158118743912,
+            "ci95": [
+              13.02856058358638,
+              16.973015872787588
+            ],
+            "n": 41,
+            "frac_positive": 0.926829268292683
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 2.360243799549344,
+            "ci95": [
+              -1.425340741643888,
+              7.96568582060303
+            ],
+            "n": 41,
+            "frac_positive": 0.5853658536585366
+          },
+          "tep_lfmf_gated_rms_median_m": 1.8255890961596657
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 85.87304063916586,
+            "ci95": [
+              83.55781969363582,
+              87.67320553768663
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 84.6059385687144,
+            "ci95": [
+              81.997414069723,
+              86.94555734116088
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 8.916382277911216,
+            "ci95": [
+              5.84589710718414,
+              16.498426833693813
+            ],
+            "n": 43,
+            "frac_positive": 0.7441860465116279
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 0.36925509844653037,
+            "ci95": [
+              -2.623441614722566,
+              6.714217689887125
+            ],
+            "n": 43,
+            "frac_positive": 0.5116279069767442
+          },
+          "tep_lfmf_gated_rms_median_m": 2.543523518657083
+        }
+      }
+    },
+    "clk_cod_ops_2024_ASIA_OCEANIA": {
+      "mid": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 33.19965122595541,
+            "ci95": [
+              21.37098778453923,
+              45.61821402031559
+            ],
+            "n": 42,
+            "frac_positive": 0.9047619047619048
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 40.168263744754654,
+            "ci95": [
+              22.74374227648434,
+              51.77357178215456
+            ],
+            "n": 42,
+            "frac_positive": 0.9285714285714286
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 6.184564957828637,
+            "ci95": [
+              -0.35655153059422906,
+              15.4003706483137
+            ],
+            "n": 42,
+            "frac_positive": 0.6190476190476191
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 14.569860776928518,
+            "ci95": [
+              10.984151201078348,
+              18.124558197491325
+            ],
+            "n": 42,
+            "frac_positive": 0.8333333333333334
+          },
+          "tep_lfmf_gated_rms_median_m": 2.574319695618545
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 39.83230476390208,
+            "ci95": [
+              34.052337229337795,
+              44.512589300143226
+            ],
+            "n": 43,
+            "frac_positive": 0.9767441860465116
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 37.48583940274296,
+            "ci95": [
+              32.00789421031869,
+              47.94895787541164
+            ],
+            "n": 43,
+            "frac_positive": 0.9534883720930233
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 11.283770516157732,
+            "ci95": [
+              4.80534465232375,
+              18.918094372424466
+            ],
+            "n": 43,
+            "frac_positive": 0.7441860465116279
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.796795292344298,
+            "ci95": [
+              8.548370258253957,
+              18.10638782196645
+            ],
+            "n": 43,
+            "frac_positive": 0.8837209302325582
+          },
+          "tep_lfmf_gated_rms_median_m": 2.197751156433123
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 36.571267157600694,
+            "ci95": [
+              33.48935000084406,
+              38.955921802104996
+            ],
+            "n": 41,
+            "frac_positive": 0.8292682926829268
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 46.69291397487593,
+            "ci95": [
+              33.676992437808686,
+              51.87533610211833
+            ],
+            "n": 41,
+            "frac_positive": 0.8292682926829268
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 3.568061754449592,
+            "ci95": [
+              1.0006385775301774,
+              6.1421091343431655
+            ],
+            "n": 41,
+            "frac_positive": 0.6829268292682927
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.190769012605429,
+            "ci95": [
+              6.806027571926732,
+              15.371524910196676
+            ],
+            "n": 41,
+            "frac_positive": 0.8292682926829268
+          },
+          "tep_lfmf_gated_rms_median_m": 1.8022070776305552
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 37.605698776692606,
+            "ci95": [
+              20.189949918074756,
+              42.51232691216668
+            ],
+            "n": 43,
+            "frac_positive": 0.8372093023255814
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 43.177052578211395,
+            "ci95": [
+              32.76120932552058,
+              49.859173014173805
+            ],
+            "n": 43,
+            "frac_positive": 0.813953488372093
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 3.437005673095439,
+            "ci95": [
+              -3.35495602189948,
+              6.785530602631362
+            ],
+            "n": 43,
+            "frac_positive": 0.5813953488372093
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.478820114612043,
+            "ci95": [
+              8.646267290981513,
+              16.039410311034274
+            ],
+            "n": 43,
+            "frac_positive": 0.8604651162790697
+          },
+          "tep_lfmf_gated_rms_median_m": 2.7697615830721922
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 42,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 52.449631564070195,
+            "ci95": [
+              48.8695257922083,
+              59.164395804908146
+            ],
+            "n": 42,
+            "frac_positive": 0.9523809523809523
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 69.26791410815056,
+            "ci95": [
+              62.18628116024838,
+              74.71021610917825
+            ],
+            "n": 42,
+            "frac_positive": 0.9761904761904762
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": -22.836751245948747,
+            "ci95": [
+              -45.03287938660014,
+              -12.206608418919195
+            ],
+            "n": 42,
+            "frac_positive": 0.2619047619047619
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 4.1304402622665775,
+            "ci95": [
+              2.6105898865475705,
+              5.821768882265904
+            ],
+            "n": 42,
+            "frac_positive": 0.7142857142857143
+          },
+          "tep_lfmf_gated_rms_median_m": 9.47837523497764
+        },
+        "MAM": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 63.32936044277033,
+            "ci95": [
+              51.075135470915356,
+              73.19406841842613
+            ],
+            "n": 43,
+            "frac_positive": 0.9302325581395349
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 75.33509750840278,
+            "ci95": [
+              68.9920909201432,
+              78.46342996970282
+            ],
+            "n": 43,
+            "frac_positive": 0.9302325581395349
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 3.694789441899393,
+            "ci95": [
+              -0.8012825241623389,
+              15.488534618668703
+            ],
+            "n": 43,
+            "frac_positive": 0.6046511627906976
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 10.57176238041908,
+            "ci95": [
+              6.975711741434054,
+              16.910782663650316
+            ],
+            "n": 43,
+            "frac_positive": 0.9069767441860465
+          },
+          "tep_lfmf_gated_rms_median_m": 6.403483074266531
+        },
+        "JJA": {
+          "n_days": 41,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 0.3523781549978233,
+            "ci95": [
+              -2.9448915836962852,
+              14.814519616320032
+            ],
+            "n": 41,
+            "frac_positive": 0.5121951219512195
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -1.598312051449402,
+            "ci95": [
+              -3.472361356700304,
+              21.620034982840853
+            ],
+            "n": 41,
+            "frac_positive": 0.43902439024390244
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 2.5049873003596845,
+            "ci95": [
+              0.8394393905106656,
+              4.615465003614494
+            ],
+            "n": 41,
+            "frac_positive": 0.7073170731707317
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 4.701850330484724,
+            "ci95": [
+              3.5225615652899944,
+              5.371898902928152
+            ],
+            "n": 41,
+            "frac_positive": 0.926829268292683
+          },
+          "tep_lfmf_gated_rms_median_m": 41.089472141729885
+        },
+        "SON": {
+          "n_days": 43,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 49.121968818210824,
+            "ci95": [
+              18.4250256956592,
+              55.48150765516976
+            ],
+            "n": 43,
+            "frac_positive": 0.7209302325581395
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 75.78727379198708,
+            "ci95": [
+              21.665319285401786,
+              80.40179178893754
+            ],
+            "n": 43,
+            "frac_positive": 0.7209302325581395
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 1.726175527628948,
+            "ci95": [
+              -19.950403801624784,
+              6.552812080063896
+            ],
+            "n": 43,
+            "frac_positive": 0.5581395348837209
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 9.494595449686017,
+            "ci95": [
+              5.989110194747749,
+              15.318336283522472
+            ],
+            "n": 43,
+            "frac_positive": 0.8837209302325582
+          },
+          "tep_lfmf_gated_rms_median_m": 10.143143170304525
+        }
+      }
+    },
+    "clk_cod_ops_2025_GLOBAL": {
+      "mid": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 47.47162139472094,
+            "ci95": [
+              43.02542909964238,
+              49.658156513806766
+            ],
+            "n": 52,
+            "frac_positive": 0.9615384615384616
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 32.89259499024027,
+            "ci95": [
+              30.252520300032778,
+              36.98703583131641
+            ],
+            "n": 52,
+            "frac_positive": 0.9423076923076923
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 23.83671556162024,
+            "ci95": [
+              19.775506364812838,
+              28.502077524091497
+            ],
+            "n": 52,
+            "frac_positive": 0.8653846153846154
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 7.690594199425216,
+            "ci95": [
+              3.161395572001935,
+              9.81529582343843
+            ],
+            "n": 52,
+            "frac_positive": 0.7884615384615384
+          },
+          "tep_lfmf_gated_rms_median_m": 2.3477691396799414
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 39.92709177534522,
+            "ci95": [
+              27.08440473701504,
+              46.88665799617102
+            ],
+            "n": 20,
+            "frac_positive": 0.85
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 29.335061763935812,
+            "ci95": [
+              1.5468544842220378,
+              34.91460695960811
+            ],
+            "n": 20,
+            "frac_positive": 0.7
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 21.343879585449454,
+            "ci95": [
+              15.461864593385162,
+              28.573792350183492
+            ],
+            "n": 20,
+            "frac_positive": 0.85
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 3.0351779366406983,
+            "ci95": [
+              -2.041885193988946,
+              10.93446986032059
+            ],
+            "n": 20,
+            "frac_positive": 0.65
+          },
+          "tep_lfmf_gated_rms_median_m": 2.94243154826406
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 52.75668423135463,
+            "ci95": [
+              25.798401458106724,
+              65.09350800403877
+            ],
+            "n": 52,
+            "frac_positive": 0.6923076923076923
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 31.684493924975765,
+            "ci95": [
+              14.066048080537119,
+              38.23149536231766
+            ],
+            "n": 52,
+            "frac_positive": 0.6923076923076923
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 10.56361232931874,
+            "ci95": [
+              1.812095112581802,
+              32.64906224590168
+            ],
+            "n": 52,
+            "frac_positive": 0.6923076923076923
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.5941793282863381,
+            "ci95": [
+              -4.264088873030925,
+              3.888853485331075
+            ],
+            "n": 52,
+            "frac_positive": 0.4807692307692308
+          },
+          "tep_lfmf_gated_rms_median_m": 9.433354505918025
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 24.223259944424125,
+            "ci95": [
+              2.801263762290651,
+              60.581268628717844
+            ],
+            "n": 20,
+            "frac_positive": 0.7
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 10.39600786964952,
+            "ci95": [
+              -6.4560739495875925,
+              47.59819286155336
+            ],
+            "n": 20,
+            "frac_positive": 0.55
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 20.4253190167032,
+            "ci95": [
+              -1.744971374990345,
+              44.635163307202106
+            ],
+            "n": 20,
+            "frac_positive": 0.6
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -3.382063636086552,
+            "ci95": [
+              -5.059457927598143,
+              5.642952775035088
+            ],
+            "n": 20,
+            "frac_positive": 0.4
+          },
+          "tep_lfmf_gated_rms_median_m": 25.230850854212825
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      }
+    },
+    "clk_cod_ops_2025_EUROPE": {
+      "mid": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 44.02781982663296,
+            "ci95": [
+              37.244244740872595,
+              46.325876792860974
+            ],
+            "n": 52,
+            "frac_positive": 0.9423076923076923
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 36.94541488229263,
+            "ci95": [
+              33.07187642207258,
+              40.98745386171529
+            ],
+            "n": 52,
+            "frac_positive": 0.9423076923076923
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 17.574597964211108,
+            "ci95": [
+              13.843896211833684,
+              20.931293737762257
+            ],
+            "n": 52,
+            "frac_positive": 0.9423076923076923
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 11.6109267086484,
+            "ci95": [
+              10.010523231501312,
+              15.504754244827524
+            ],
+            "n": 52,
+            "frac_positive": 0.9038461538461539
+          },
+          "tep_lfmf_gated_rms_median_m": 0.769248778989486
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 38.41493267987447,
+            "ci95": [
+              34.95404753317169,
+              48.87709284429131
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 33.149438291148364,
+            "ci95": [
+              29.618820203180377,
+              44.13742948246706
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 26.19670391293117,
+            "ci95": [
+              19.004376684870692,
+              32.049062808524354
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 19.38390977624902,
+            "ci95": [
+              13.628992372750126,
+              26.900507170789812
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_rms_median_m": 0.849364287032927
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 54.2577555204561,
+            "ci95": [
+              48.754149847106675,
+              56.590431350021795
+            ],
+            "n": 52,
+            "frac_positive": 0.9038461538461539
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 48.10738731540121,
+            "ci95": [
+              45.28649393498887,
+              54.077168688758036
+            ],
+            "n": 52,
+            "frac_positive": 0.8846153846153846
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 15.503822738393502,
+            "ci95": [
+              12.71414473373207,
+              21.175626546857316
+            ],
+            "n": 52,
+            "frac_positive": 0.9038461538461539
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 10.94124025979587,
+            "ci95": [
+              7.2745514939555225,
+              15.36277519779094
+            ],
+            "n": 52,
+            "frac_positive": 0.8846153846153846
+          },
+          "tep_lfmf_gated_rms_median_m": 2.4249676637124917
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 55.84902948003932,
+            "ci95": [
+              45.6698076106418,
+              67.54330935385434
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 54.89666080823235,
+            "ci95": [
+              44.912077878520776,
+              67.49093630402919
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 15.793953174261171,
+            "ci95": [
+              8.80761446557084,
+              21.008651209222872
+            ],
+            "n": 20,
+            "frac_positive": 0.85
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 10.287489621139228,
+            "ci95": [
+              2.557361228112237,
+              15.026115113107647
+            ],
+            "n": 20,
+            "frac_positive": 0.75
+          },
+          "tep_lfmf_gated_rms_median_m": 2.4539300418529972
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      }
+    },
+    "clk_cod_ops_2025_NORTH_AMERICA": {
+      "mid": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 64.33214859092699,
+            "ci95": [
+              62.17557158405034,
+              67.93367621976498
+            ],
+            "n": 52,
+            "frac_positive": 0.9615384615384616
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -56.63242504316777,
+            "ci95": [
+              -65.4810959592807,
+              -41.408023977826986
+            ],
+            "n": 52,
+            "frac_positive": 0.038461538461538464
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 77.37805304296649,
+            "ci95": [
+              74.3003711393506,
+              78.7417382467799
+            ],
+            "n": 52,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 0.9613246368281481,
+            "ci95": [
+              -2.8753278588309006,
+              3.3629488992904797
+            ],
+            "n": 52,
+            "frac_positive": 0.5192307692307693
+          },
+          "tep_lfmf_gated_rms_median_m": 1.0404092052744427
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 11.152275154687224,
+            "ci95": [
+              2.7315116426981314,
+              34.17235331671963
+            ],
+            "n": 20,
+            "frac_positive": 0.75
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -51.11954095244495,
+            "ci95": [
+              -107.1031039506899,
+              -22.32025055090586
+            ],
+            "n": 20,
+            "frac_positive": 0.2
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 55.578763298354986,
+            "ci95": [
+              31.161985221981197,
+              69.10489416259502
+            ],
+            "n": 20,
+            "frac_positive": 0.9
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 0.5264610494413124,
+            "ci95": [
+              -5.21981409506127,
+              5.698552512395233
+            ],
+            "n": 20,
+            "frac_positive": 0.5
+          },
+          "tep_lfmf_gated_rms_median_m": 4.142231204280441
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 60.78222313645666,
+            "ci95": [
+              54.67552593927768,
+              63.777393046638224
+            ],
+            "n": 52,
+            "frac_positive": 0.8846153846153846
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -76.65275690029654,
+            "ci95": [
+              -86.24488369369006,
+              -56.116152155261666
+            ],
+            "n": 52,
+            "frac_positive": 0.019230769230769232
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 79.55439404655252,
+            "ci95": [
+              78.32626957575684,
+              80.21419531665771
+            ],
+            "n": 52,
+            "frac_positive": 0.9423076923076923
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 1.8906713553130783,
+            "ci95": [
+              -1.9461761179814907,
+              3.333962485767117
+            ],
+            "n": 52,
+            "frac_positive": 0.5576923076923077
+          },
+          "tep_lfmf_gated_rms_median_m": 4.645547239202184
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 0.26919367398691163,
+            "ci95": [
+              -5.860443037702179,
+              54.5269154132714
+            ],
+            "n": 20,
+            "frac_positive": 0.5
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": -45.46315351505169,
+            "ci95": [
+              -99.8266569499576,
+              -12.14806939782137
+            ],
+            "n": 20,
+            "frac_positive": 0.05
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 51.17114746460368,
+            "ci95": [
+              2.4535247478546687,
+              76.75538643891058
+            ],
+            "n": 20,
+            "frac_positive": 0.8
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 1.6111808267078032,
+            "ci95": [
+              -2.9142807558655504,
+              4.137700091712277
+            ],
+            "n": 20,
+            "frac_positive": 0.55
+          },
+          "tep_lfmf_gated_rms_median_m": 36.79728926492554
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      }
+    },
+    "clk_cod_ops_2025_EAST_ASIA": {
+      "mid": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 47.780153875173596,
+            "ci95": [
+              42.19893808391498,
+              54.70822596671226
+            ],
+            "n": 52,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 48.854130684722996,
+            "ci95": [
+              42.20579361123667,
+              53.60648966273328
+            ],
+            "n": 52,
+            "frac_positive": 0.9807692307692307
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 6.301418571223155,
+            "ci95": [
+              -1.0030510263177028,
+              13.563975778344473
+            ],
+            "n": 52,
+            "frac_positive": 0.6153846153846154
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 2.3558623689226565,
+            "ci95": [
+              -0.4203958840500843,
+              8.103138717583075
+            ],
+            "n": 52,
+            "frac_positive": 0.5961538461538461
+          },
+          "tep_lfmf_gated_rms_median_m": 1.6769543094256634
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 45.2858792228532,
+            "ci95": [
+              40.30826699486002,
+              61.319943620686516
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 45.26909058815331,
+            "ci95": [
+              26.323470783359042,
+              59.659717233363594
+            ],
+            "n": 20,
+            "frac_positive": 0.9
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 7.57629890456763,
+            "ci95": [
+              -3.2821687896009477,
+              21.439614444742645
+            ],
+            "n": 20,
+            "frac_positive": 0.65
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -3.0009362755218483,
+            "ci95": [
+              -19.43382671998529,
+              13.35028935211519
+            ],
+            "n": 20,
+            "frac_positive": 0.45
+          },
+          "tep_lfmf_gated_rms_median_m": 2.097009853622243
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 86.37148669054122,
+            "ci95": [
+              82.75522471699485,
+              88.26869306996834
+            ],
+            "n": 52,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 86.42550525752458,
+            "ci95": [
+              84.66265835817107,
+              87.8612719878679
+            ],
+            "n": 52,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 7.684250705922386,
+            "ci95": [
+              5.78138789981189,
+              10.870944463164895
+            ],
+            "n": 52,
+            "frac_positive": 0.75
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": -1.1624123846644685,
+            "ci95": [
+              -2.5842996246147942,
+              3.0519750473184226
+            ],
+            "n": 52,
+            "frac_positive": 0.4807692307692308
+          },
+          "tep_lfmf_gated_rms_median_m": 2.09305009540837
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 84.80015547513915,
+            "ci95": [
+              83.76076600657689,
+              88.06679661946274
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 85.18011985679618,
+            "ci95": [
+              81.50765306989197,
+              87.36978570762925
+            ],
+            "n": 20,
+            "frac_positive": 1.0
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 12.154492554763568,
+            "ci95": [
+              8.157654881514642,
+              18.177290268281343
+            ],
+            "n": 20,
+            "frac_positive": 0.9
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 2.530582873660875,
+            "ci95": [
+              -2.6352374360484765,
+              13.328555801431175
+            ],
+            "n": 20,
+            "frac_positive": 0.55
+          },
+          "tep_lfmf_gated_rms_median_m": 2.6347905072330575
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      }
+    },
+    "clk_cod_ops_2025_ASIA_OCEANIA": {
+      "mid": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 28.54705201901175,
+            "ci95": [
+              22.860575123761926,
+              42.38739550959479
+            ],
+            "n": 52,
+            "frac_positive": 0.8653846153846154
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 41.334780933095445,
+            "ci95": [
+              33.749680344748306,
+              48.38909524094542
+            ],
+            "n": 52,
+            "frac_positive": 0.8653846153846154
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 2.328132719740034,
+            "ci95": [
+              -4.212574467819663,
+              7.773092955948141
+            ],
+            "n": 52,
+            "frac_positive": 0.5384615384615384
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 14.239320819606132,
+            "ci95": [
+              9.411189739903486,
+              15.631177847555259
+            ],
+            "n": 52,
+            "frac_positive": 0.9038461538461539
+          },
+          "tep_lfmf_gated_rms_median_m": 2.6868890971227954
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 33.543492883439264,
+            "ci95": [
+              23.000864790454084,
+              47.02173595155969
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 36.18965064338158,
+            "ci95": [
+              21.51938173580327,
+              49.26598404988198
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": 12.396434535248265,
+            "ci95": [
+              6.322129417592521,
+              21.8768787457861
+            ],
+            "n": 20,
+            "frac_positive": 0.85
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 16.60440877311523,
+            "ci95": [
+              6.895471753245997,
+              20.145557884084383
+            ],
+            "n": 20,
+            "frac_positive": 0.85
+          },
+          "tep_lfmf_gated_rms_median_m": 2.607069982240017
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      },
+      "long": {
+        "DJF": {
+          "n_days": 52,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 48.74529033535971,
+            "ci95": [
+              38.48432218407463,
+              58.95353030962117
+            ],
+            "n": 52,
+            "frac_positive": 0.8653846153846154
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 75.17174856175025,
+            "ci95": [
+              63.88905750573749,
+              79.19768936376424
+            ],
+            "n": 52,
+            "frac_positive": 0.8846153846153846
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": -14.015116858719857,
+            "ci95": [
+              -55.03227216208609,
+              0.9968366234699932
+            ],
+            "n": 52,
+            "frac_positive": 0.36538461538461536
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 7.519897396892911,
+            "ci95": [
+              5.334017143922903,
+              9.607381806639998
+            ],
+            "n": 52,
+            "frac_positive": 0.8846153846153846
+          },
+          "tep_lfmf_gated_rms_median_m": 9.939582800860123
+        },
+        "MAM": {
+          "n_days": 20,
+          "tep_lfmf_gated_vs_linrate": {
+            "median": 58.69727259648673,
+            "ci95": [
+              53.1250325530431,
+              62.00529890462298
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_bandpass_vs_linrate": {
+            "median": 67.13546990322833,
+            "ci95": [
+              60.597210776433485,
+              74.95770287995862
+            ],
+            "n": 20,
+            "frac_positive": 0.95
+          },
+          "tep_lfmf_gated_vs_empirical_cov": {
+            "median": -8.930397515705124e-06,
+            "ci95": [
+              -33.46982650735154,
+              6.59619359399502
+            ],
+            "n": 20,
+            "frac_positive": 0.5
+          },
+          "tep_bandpass_vs_empirical_cov": {
+            "median": 4.988305029240448,
+            "ci95": [
+              2.111706197453506,
+              7.183942448867475
+            ],
+            "n": 20,
+            "frac_positive": 0.8
+          },
+          "tep_lfmf_gated_rms_median_m": 7.664172692411193
+        },
+        "JJA": {
+          "n_days": 0
+        },
+        "SON": {
+          "n_days": 0
+        }
+      }
+    }
+  },
+  "summary": {
+    "clk_cod_ops_2024_GLOBAL": {
+      "seasons_evaluated": 4,
+      "seasons_positive_ci": 4
+    },
+    "clk_cod_ops_2024_EUROPE": {
+      "seasons_evaluated": 4,
+      "seasons_positive_ci": 4
+    },
+    "clk_cod_ops_2024_NORTH_AMERICA": {
+      "seasons_evaluated": 4,
+      "seasons_positive_ci": 4
+    },
+    "clk_cod_ops_2024_EAST_ASIA": {
+      "seasons_evaluated": 4,
+      "seasons_positive_ci": 4
+    },
+    "clk_cod_ops_2024_ASIA_OCEANIA": {
+      "seasons_evaluated": 4,
+      "seasons_positive_ci": 4
+    },
+    "clk_cod_ops_2025_GLOBAL": {
+      "seasons_evaluated": 2,
+      "seasons_positive_ci": 2
+    },
+    "clk_cod_ops_2025_EUROPE": {
+      "seasons_evaluated": 2,
+      "seasons_positive_ci": 2
+    },
+    "clk_cod_ops_2025_NORTH_AMERICA": {
+      "seasons_evaluated": 2,
+      "seasons_positive_ci": 2
+    },
+    "clk_cod_ops_2025_EAST_ASIA": {
+      "seasons_evaluated": 2,
+      "seasons_positive_ci": 2
+    },
+    "clk_cod_ops_2025_ASIA_OCEANIA": {
+      "seasons_evaluated": 2,
+      "seasons_positive_ci": 2
+    }
+  }
+}

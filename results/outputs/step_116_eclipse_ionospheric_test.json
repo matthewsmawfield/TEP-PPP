@@ -1,0 +1,274 @@
+{
+  "step": 116,
+  "title": "April 8 2024 total solar eclipse: ionospheric perturbation vs TEP clock field stability",
+  "timestamp": "2026-09-06T17:37:34.122658+00:00",
+  "eclipse": {
+    "date": "2024-04-08",
+    "doy": "2024099",
+    "path": "Mexico -> Texas -> Oklahoma -> Arkansas -> Missouri -> Illinois -> Indiana -> Ohio -> Pennsylvania -> New York -> Vermont -> Maine",
+    "near_path_box": {
+      "lat": [
+        25.0,
+        55.0
+      ],
+      "lon": [
+        -130.0,
+        -60.0
+      ]
+    }
+  },
+  "product": "clk_cod",
+  "results": {
+    "eclipse": {
+      "label": "eclipse",
+      "doy": "2024099",
+      "n_all": 131,
+      "n_near": 13,
+      "n_europe": 21,
+      "n_southern": 31,
+      "near_near": {
+        "n_pairs": 77,
+        "mean_alignment": 0.355123301621841,
+        "tep_band_mean": 0.3263370032645882,
+        "n_tep_band": 66
+      },
+      "near_far": {
+        "n_pairs": 1197,
+        "mean_alignment": -0.0006877967579276257,
+        "tep_band_mean": 0.24653385549619797,
+        "n_tep_band": 246
+      },
+      "far_far": {
+        "n_pairs": 5053,
+        "mean_alignment": 0.0014486276462974746,
+        "tep_band_mean": 0.06857094699781363,
+        "n_tep_band": 1125
+      },
+      "europe_europe": {
+        "n_pairs": 210,
+        "mean_alignment": -0.025467824143935693,
+        "tep_band_mean": -0.0053041825881699825,
+        "n_tep_band": 150
+      },
+      "southern_southern": {
+        "n_pairs": 435,
+        "mean_alignment": 0.19259810323654317,
+        "tep_band_mean": 0.25741214287916264,
+        "n_tep_band": 137
+      },
+      "far_far_fit": {
+        "exponential_lambda_km": 5346.710679982154,
+        "R2": 0.46610897170114074,
+        "best_model": "gaussian"
+      }
+    },
+    "control_2024097": {
+      "label": "control_2024097",
+      "doy": "2024097",
+      "n_all": 131,
+      "n_near": 14,
+      "n_europe": 21,
+      "n_southern": 30,
+      "near_near": {
+        "n_pairs": 90,
+        "mean_alignment": -0.0932126399578369,
+        "tep_band_mean": -0.11838530757236512,
+        "n_tep_band": 75
+      },
+      "near_far": {
+        "n_pairs": 1286,
+        "mean_alignment": -0.024739141841003127,
+        "tep_band_mean": -0.017170535644895152,
+        "n_tep_band": 267
+      },
+      "far_far": {
+        "n_pairs": 4989,
+        "mean_alignment": 0.024801806785940468,
+        "tep_band_mean": 0.09446970036368592,
+        "n_tep_band": 1114
+      },
+      "europe_europe": {
+        "n_pairs": 210,
+        "mean_alignment": 0.0033939271754101948,
+        "tep_band_mean": -0.03232931571795534,
+        "n_tep_band": 143
+      },
+      "southern_southern": {
+        "n_pairs": 412,
+        "mean_alignment": 0.21846044248261276,
+        "tep_band_mean": 0.3759708360836396,
+        "n_tep_band": 129
+      },
+      "far_far_fit": {
+        "exponential_lambda_km": 7497.483078070145,
+        "R2": 0.41053866394821303,
+        "best_model": "gaussian"
+      }
+    },
+    "control_2024098": {
+      "label": "control_2024098",
+      "doy": "2024098",
+      "n_all": 130,
+      "n_near": 13,
+      "n_europe": 20,
+      "n_southern": 31,
+      "near_near": {
+        "n_pairs": 77,
+        "mean_alignment": -0.07931825756127574,
+        "tep_band_mean": -0.1621128153097966,
+        "n_tep_band": 66
+      },
+      "near_far": {
+        "n_pairs": 1188,
+        "mean_alignment": -0.03556546681544908,
+        "tep_band_mean": -0.010528580323286468,
+        "n_tep_band": 246
+      },
+      "far_far": {
+        "n_pairs": 4965,
+        "mean_alignment": 0.021265368188794254,
+        "tep_band_mean": 0.08248684861869175,
+        "n_tep_band": 1112
+      },
+      "europe_europe": {
+        "n_pairs": 190,
+        "mean_alignment": -0.009695495151905327,
+        "tep_band_mean": -0.0622804191486616,
+        "n_tep_band": 134
+      },
+      "southern_southern": {
+        "n_pairs": 432,
+        "mean_alignment": 0.188450647399117,
+        "tep_band_mean": 0.2550675261310855,
+        "n_tep_band": 127
+      },
+      "far_far_fit": {
+        "exponential_lambda_km": 17571.10568749173,
+        "R2": 0.38526001012121347,
+        "best_model": "gaussian"
+      }
+    },
+    "recovery_2024100": {
+      "label": "recovery_2024100",
+      "doy": "2024100",
+      "n_all": 128,
+      "n_near": 12,
+      "n_europe": 23,
+      "n_southern": 31,
+      "near_near": {
+        "n_pairs": 66,
+        "mean_alignment": 0.2373992067708691,
+        "tep_band_mean": 0.1554277917954254,
+        "n_tep_band": 57
+      },
+      "near_far": {
+        "n_pairs": 1101,
+        "mean_alignment": 0.05898289848885431,
+        "tep_band_mean": 0.15340191894699365,
+        "n_tep_band": 222
+      },
+      "far_far": {
+        "n_pairs": 4912,
+        "mean_alignment": 0.04845953093860714,
+        "tep_band_mean": 0.12670980214954997,
+        "n_tep_band": 1117
+      },
+      "europe_europe": {
+        "n_pairs": 253,
+        "mean_alignment": 0.09319322435047608,
+        "tep_band_mean": 0.01205699064020947,
+        "n_tep_band": 176
+      },
+      "southern_southern": {
+        "n_pairs": 432,
+        "mean_alignment": 0.33031795793702373,
+        "tep_band_mean": 0.35536245208545036,
+        "n_tep_band": 126
+      },
+      "far_far_fit": {
+        "exponential_lambda_km": 7911.2459970541595,
+        "R2": 0.5099342322748037,
+        "best_model": "gaussian"
+      }
+    },
+    "recovery_2024101": {
+      "label": "recovery_2024101",
+      "doy": "2024101",
+      "n_all": 129,
+      "n_near": 11,
+      "n_europe": 21,
+      "n_southern": 32,
+      "near_near": {
+        "n_pairs": 55,
+        "mean_alignment": -0.029312108329212886,
+        "tep_band_mean": -0.12774041441142872,
+        "n_tep_band": 47
+      },
+      "near_far": {
+        "n_pairs": 1007,
+        "mean_alignment": -0.02565808489727092,
+        "tep_band_mean": -0.0800230290157755,
+        "n_tep_band": 204
+      },
+      "far_far": {
+        "n_pairs": 5065,
+        "mean_alignment": 0.02414886940762209,
+        "tep_band_mean": 0.09432120670987455,
+        "n_tep_band": 1109
+      },
+      "europe_europe": {
+        "n_pairs": 210,
+        "mean_alignment": 0.15481402092862653,
+        "tep_band_mean": 0.1631864241870027,
+        "n_tep_band": 138
+      },
+      "southern_southern": {
+        "n_pairs": 463,
+        "mean_alignment": 0.21188842474944405,
+        "tep_band_mean": 0.3777090457215345,
+        "n_tep_band": 141
+      },
+      "far_far_fit": {
+        "exponential_lambda_km": 2596.9747187156836,
+        "R2": 0.6251859797034213,
+        "best_model": "gaussian"
+      }
+    }
+  },
+  "summary": {
+    "near_near": {
+      "eclipse_mean_alignment": 0.355123301621841,
+      "control_mean_alignment": -0.08626544875955633,
+      "recovery_mean_alignment": 0.1040435492208281,
+      "delta_alignment_abs": 0.44138875038139735
+    },
+    "near_far": {
+      "eclipse_mean_alignment": -0.0006877967579276257,
+      "control_mean_alignment": -0.030152304328226104,
+      "recovery_mean_alignment": 0.016662406795791694,
+      "delta_alignment_abs": 0.02946450757029848
+    },
+    "far_far": {
+      "eclipse_mean_alignment": 0.0014486276462974746,
+      "control_mean_alignment": 0.023033587487367363,
+      "recovery_mean_alignment": 0.036304200173114615,
+      "delta_alignment_abs": -0.021584959841069888
+    },
+    "europe_europe": {
+      "eclipse_mean_alignment": -0.025467824143935693,
+      "control_mean_alignment": -0.003150783988247566,
+      "recovery_mean_alignment": 0.12400362263955131,
+      "delta_alignment_abs": -0.022317040155688125
+    },
+    "southern_southern": {
+      "eclipse_mean_alignment": 0.19259810323654317,
+      "control_mean_alignment": 0.20345554494086487,
+      "recovery_mean_alignment": 0.2711031913432339,
+      "delta_alignment_abs": -0.010857441704321708
+    }
+  },
+  "interpretation": [
+    "Near-path-involving pairs changed by +0.0295, far-field by -0.0216 \u2014 the pattern is ambiguous. More control days would help."
+  ],
+  "pre_registered_prediction": "Under TEP, the eclipse does not change the clock correlation field \u2014 the Moon's shadow blocks sunlight but does not change the proper-time field.  Under an ionospheric common-mode interpretation, the clock correlation SHOULD change along the shadow path.  The discriminating signature: if TEP, both near-path and far-field groups are stable; if ionospheric, only the near-path group changes."
+}

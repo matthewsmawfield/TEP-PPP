@@ -1,0 +1,44 @@
+=== broadcast ===
+    40 days, 761 pair-days
+    80 days, 13,565 pair-days
+    120 days, 30,740 pair-days
+    160 days, 44,923 pair-days
+    200 days, 58,789 pair-days
+    240 days, 73,178 pair-days
+    280 days, 87,506 pair-days
+    320 days, 101,971 pair-days
+    360 days, 114,949 pair-days
+=== clk_cod ===
+    40 days, 14,303 pair-days
+    80 days, 28,386 pair-days
+    120 days, 43,474 pair-days
+    160 days, 58,711 pair-days
+    200 days, 74,190 pair-days
+    240 days, 90,422 pair-days
+    280 days, 106,864 pair-days
+    320 days, 122,361 pair-days
+    360 days, 139,183 pair-days
+
+=== broadcast: kappa=-0.3223 ===
+  300-500: raw +0.0233 (z +0.30)   alpha +0.0206 (z +0.25)   jbar -0.0084
+  500-800: raw +0.1304 (z +1.98)   alpha +0.1255 (z +1.91)   jbar -0.0150
+  300-800: raw +0.0852 (z +1.67)   alpha +0.0810 (z +1.56)   jbar -0.0129
+  300-1500: raw +0.0366 (z +1.08)   alpha +0.0340 (z +1.07)   jbar -0.0082
+  500-2000: raw +0.0134 (z +0.43)   alpha +0.0129 (z +0.42)   jbar -0.0015
+  300-500 wide: raw +0.0452 (z +0.77)   alpha +0.0427 (z +0.74)   jbar -0.0078
+  500-800 wide: raw +0.0972 (z +2.18)   alpha +0.0962 (z +2.13)   jbar -0.0031
+  300-800 wide: raw +0.0735 (z +2.11)   alpha +0.0731 (z +2.02)   jbar -0.0012
+  300-1500 wide: raw +0.0477 (z +2.11)   alpha +0.0483 (z +2.17)   jbar +0.0019
+  500-2000 wide: raw +0.0355 (z +1.71)   alpha +0.0366 (z +1.78)   jbar +0.0033
+
+=== clk_cod: kappa=+0.1741 ===
+  300-500: raw -0.0523 (z -0.27)   alpha -0.0525 (z -0.30)   jbar +0.0011
+  500-800: raw +0.0188 (z +0.14)   alpha +0.0212 (z +0.18)   jbar -0.0138
+  300-800: raw +0.0494 (z +0.51)   alpha +0.0532 (z +0.55)   jbar -0.0217
+  300-1500: raw -0.0060 (z -0.13)   alpha -0.0038 (z -0.08)   jbar -0.0128
+  500-2000: raw -0.0183 (z -0.41)   alpha -0.0179 (z -0.39)   jbar -0.0026
+  300-500 wide: raw +0.0791 (z +0.69)   alpha +0.0794 (z +0.70)   jbar -0.0021
+  500-800 wide: raw -0.0252 (z -0.26)   alpha -0.0237 (z -0.25)   jbar -0.0090
+  300-800 wide: raw +0.0310 (z +0.42)   alpha +0.0336 (z +0.47)   jbar -0.0147
+  300-1500 wide: raw +0.0226 (z +0.59)   alpha +0.0231 (z +0.63)   jbar -0.0031
+  500-2000 wide: raw -0.0089 (z -0.28)   alpha -0.0099 (z -0.28)   jbar +0.0055

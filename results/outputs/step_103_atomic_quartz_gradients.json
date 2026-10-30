@@ -1,0 +1,56 @@
+{
+  "step": 103,
+  "title": "Phase-aligned oscillator dependence and independent gradients",
+  "timestamp": "2026-09-03T23:54:31.056704+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "observable": "Phase alignment index cos(arg(sum_f conj(Fi) * Fj)) over 10-500 uHz (Paper 1 / Step 53).  This is the corrected phase observable that gives lambda ~ 4200 km with R^2 ~ 0.90 and z ~ 27 vs the phase-randomised null on independent products.  Amplitude-based metrics fail because GNSS processing suppresses spatially correlated amplitudes when phases are aligned.",
+  "result": {
+    "quartz": {
+      "n_pairs": 54307,
+      "lambda_km": 2453.8214970614135,
+      "R2": 0.9360147522018171,
+      "best_model": "exponential",
+      "z_vs_phase_null": 10.495145286939751,
+      "p_vs_phase_null": 0.004975124378109453,
+      "null_R2_mean": 0.034689407906841,
+      "null_R2_std": 0.08588021600964334,
+      "n_null": 200,
+      "mean_phase_alignment_tep_band": 0.2163523637411465,
+      "n_pairs_tep_band": 13239
+    },
+    "atomic": {
+      "n_pairs": 7817,
+      "lambda_km": null,
+      "R2": 0.30883114474255424,
+      "best_model": "power_law",
+      "z_vs_phase_null": 3.170484886985438,
+      "p_vs_phase_null": 0.029850746268656716,
+      "null_R2_mean": 0.028364122069845527,
+      "null_R2_std": 0.08846187024073233,
+      "n_null": 200,
+      "mean_phase_alignment_tep_band": 0.05604653277299704,
+      "n_pairs_tep_band": 1512
+    },
+    "tep_scale_comparison": {
+      "quartz_mean_pa_tep": 0.2163523637411465,
+      "atomic_mean_pa_tep": 0.05604653277299704,
+      "difference_q_minus_a": 0.16030583096814946
+    }
+  },
+  "independent_gradients": {
+    "n_triplets": 80,
+    "gradient_magnitude_m_per_km": {
+      "n": 80,
+      "median": 7.250740595662282e-06
+    }
+  },
+  "localization": {
+    "single_scalar_constraints": 1,
+    "single_scalar_ambiguity_dim": 2,
+    "independent_gradients_available": 80,
+    "gradients_needed_for_3d": 2,
+    "sufficient_for_3d": true
+  },
+  "interpretation": "The phase alignment index is computed separately for quartz-quartz and atomic-atomic pairs.  If TEP couples to quartz but not atomic (Step 65 screening), quartz pairs should show a clear Gaussian decay at ~4200 km (high R^2, large z vs the phase-randomised null) while atomic pairs should not (low R^2, small z).  The difference is the differential field coupling that conventional physics does not predict: the atomic transition screens the field, so atomic clocks do not develop the phase-coherent spatial structure that quartz clocks do."
+}

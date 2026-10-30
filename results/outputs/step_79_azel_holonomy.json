@@ -1,0 +1,93 @@
+{
+  "step": 79,
+  "title": "Non-exact sector via a site-frame az/el multipath model",
+  "timestamp": "2026-09-02T21:37:04.878678+00:00",
+  "grid": {
+    "n_az": 12,
+    "n_el": 6
+  },
+  "pairs": [
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 11465,
+      "slope": 0.3840270297492245,
+      "z": 9.382441590921017,
+      "injection_recovery": 1.000000000000012
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 21696,
+      "slope": -0.005354706663163251,
+      "z": -14.354615031233676,
+      "injection_recovery": 1.0000000000000022
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 12805,
+      "slope": 0.28541249692607334,
+      "z": 10.70171683551477,
+      "injection_recovery": 1.0000000000000064
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 22386,
+      "slope": 0.015897581971865284,
+      "z": 30.434225220947397,
+      "injection_recovery": 0.9999999999999984
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 19354,
+      "slope": -0.382169772468996,
+      "z": -53.21057130687555,
+      "injection_recovery": 0.9999999999999998
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 21709,
+      "slope": 0.005636353167685573,
+      "z": 2.1236464174442538,
+      "injection_recovery": 0.9999999999999992
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.33314385641043,
+      "n_obs": 20306,
+      "slope": -0.382805802326823,
+      "z": -27.561287142708522,
+      "injection_recovery": 1.0000000000000036
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 21095,
+      "slope": 0.10917560086421634,
+      "z": 31.974941531950723,
+      "injection_recovery": 0.9999999999999988
+    }
+  ],
+  "verdict": {
+    "median_injection_recovery": 1.0000000000000009,
+    "estimator_has_power": true,
+    "comparison": "sidereal template recovered 0.00 (Step 72); this must be near 1.0 for the measured slope to mean anything",
+    "n_pairs_detected_z_gt_5": 7,
+    "pairs_detected": [
+      "WTZR-WTZZ",
+      "ZIM2-ZIMM",
+      "WAB2-ZIMM",
+      "PADO-VEN1",
+      "BRUX-REDU",
+      "GRAS-IENG",
+      "BRUX-WSRT"
+    ],
+    "slope_vs_baseline_spearman": -0.04761904761904763,
+    "holonomy_signature": "flux scales with enclosed loop area, so |slope| must grow with baseline; rho > 0.6 with detections is the signature",
+    "conclusion": "estimator has power; no holonomy above the multipath-modelled floor"
+  }
+}

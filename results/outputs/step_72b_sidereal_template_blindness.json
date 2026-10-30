@@ -1,0 +1,92 @@
+{
+  "step": 72,
+  "title": "Injection test: is the sidereal template blind to a static holonomy?",
+  "timestamp": "2026-09-02T17:38:15.891657+00:00",
+  "injected_slopes_m_per_unit_T": [
+    0.005,
+    0.02,
+    0.05
+  ],
+  "pairs": [
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 11339,
+      "regressor_T_sidereal_repeating_fraction": 0.9999488215509391,
+      "recovery_static_before_cleaning": 1.0000000000000009,
+      "recovery_static_after_cleaning": 0.00022781690642551975,
+      "recovery_dayvarying_after_cleaning": 1.2419001431348922
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 21556,
+      "regressor_T_sidereal_repeating_fraction": 0.999122743822333,
+      "recovery_static_before_cleaning": 1.0000000000000002,
+      "recovery_static_after_cleaning": 0.0017345769720256137,
+      "recovery_dayvarying_after_cleaning": 1.3135629689632973
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 12498,
+      "regressor_T_sidereal_repeating_fraction": 0.9999499435662588,
+      "recovery_static_before_cleaning": 0.9999999999999998,
+      "recovery_static_after_cleaning": 0.00033796487144596715,
+      "recovery_dayvarying_after_cleaning": 1.2053919306157437
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 22348,
+      "regressor_T_sidereal_repeating_fraction": 0.9983550711372023,
+      "recovery_static_before_cleaning": 0.9999999999999982,
+      "recovery_static_after_cleaning": 0.0033702705484186133,
+      "recovery_dayvarying_after_cleaning": 1.3707990566197286
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 19225,
+      "regressor_T_sidereal_repeating_fraction": 0.999429956442618,
+      "recovery_static_before_cleaning": 1.0000000000000024,
+      "recovery_static_after_cleaning": 0.0014156809443431964,
+      "recovery_dayvarying_after_cleaning": 1.2314349937813511
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 21697,
+      "regressor_T_sidereal_repeating_fraction": 0.9984349319186182,
+      "recovery_static_before_cleaning": 0.999999999999999,
+      "recovery_static_after_cleaning": 0.0028268050441671803,
+      "recovery_dayvarying_after_cleaning": 1.2815910826130528
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.33314385641043,
+      "n_obs": 20258,
+      "regressor_T_sidereal_repeating_fraction": 0.9990021807656543,
+      "recovery_static_before_cleaning": 0.9999999999999982,
+      "recovery_static_after_cleaning": 0.0019300701396604135,
+      "recovery_dayvarying_after_cleaning": 1.2027985488172825
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 21070,
+      "regressor_T_sidereal_repeating_fraction": 0.9982818989132666,
+      "recovery_static_before_cleaning": 1.0000000000000013,
+      "recovery_static_after_cleaning": 0.003012802742773801,
+      "recovery_dayvarying_after_cleaning": 1.2993013485985887
+    }
+  ],
+  "verdict": {
+    "median_T_sidereal_repeating_fraction": 0.9990624622939936,
+    "median_static_recovery_before_cleaning": 1.0,
+    "median_static_recovery_after_cleaning": 0.0018323235558430136,
+    "median_dayvarying_recovery_after_cleaning": 1.2617456128739724,
+    "template_is_blind_to_static_holonomy": true,
+    "interpretation": "The leave-one-day-out sidereal template removes 100% of the holonomy regressor T itself, because T is a function of satellite geometry and GPS geometry is what repeats every sidereal day. A synthetic STATIC holonomy injected into the real double difference is recovered at 1.00 of its true slope before cleaning but only 0.00 after -- while a day-modulated injection survives at 1.26. Step 69's post-cleaning null is therefore NOT a bound on a static non-exact sector: the cleaning removes any geometry-locked signal along with the multipath. Step 69's 96.7% figure remains valid as a MULTIPATH characterisation; its holonomy null bounds only a day-to-day-VARYING component."
+  }
+}

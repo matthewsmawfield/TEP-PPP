@@ -1,0 +1,341 @@
+{
+  "step": 59,
+  "title": "Is the network-mean clock the distance-structured TEP field?",
+  "timestamp": "2026-09-02T10:35:59.710718+00:00",
+  "band_uHz": [
+    10.0,
+    500.0
+  ],
+  "arms": {
+    "epn_precise": {
+      "label": "epn_precise",
+      "product": "precise",
+      "n_days_used": 60,
+      "gaussian_lambda_km": null,
+      "curve": [
+        {
+          "sep_lo_km": 400.0,
+          "sep_hi_km": 700.0,
+          "n": 234,
+          "real_corr": 0.840828587171901,
+          "phase_random_null": -0.03897743079696196,
+          "identity_shuffle_null": 0.0553745898766643,
+          "cos_argS": 0.99572333186282
+        },
+        {
+          "sep_lo_km": 700.0,
+          "sep_hi_km": 1100.0,
+          "n": 117,
+          "real_corr": 0.766158433567728,
+          "phase_random_null": -0.016728429530704542,
+          "identity_shuffle_null": 0.05444753513556913,
+          "cos_argS": 0.9899081431646087
+        }
+      ]
+    },
+    "cod_regional": {
+      "label": "cod_regional",
+      "product": "clk_cod",
+      "n_days_used": 69,
+      "gaussian_lambda_km": 2943.514644351464,
+      "curve": [
+        {
+          "sep_lo_km": 400.0,
+          "sep_hi_km": 700.0,
+          "n": 11,
+          "real_corr": 0.1423031141509263,
+          "phase_random_null": 0.06553388191578255,
+          "identity_shuffle_null": 0.27018568252421443,
+          "cos_argS": -0.5397104455821627
+        },
+        {
+          "sep_lo_km": 700.0,
+          "sep_hi_km": 1100.0,
+          "n": 74,
+          "real_corr": 0.3766151982210858,
+          "phase_random_null": 0.015086670064173635,
+          "identity_shuffle_null": 0.04692214269283134,
+          "cos_argS": 0.8949506555639317
+        },
+        {
+          "sep_lo_km": 1100.0,
+          "sep_hi_km": 1600.0,
+          "n": 67,
+          "real_corr": 0.41610338760909527,
+          "phase_random_null": 0.05963071358704663,
+          "identity_shuffle_null": 0.04862195893474131,
+          "cos_argS": 0.8472543883254507
+        },
+        {
+          "sep_lo_km": 1600.0,
+          "sep_hi_km": 2300.0,
+          "n": 73,
+          "real_corr": 0.25494422966053404,
+          "phase_random_null": 0.03281196144731634,
+          "identity_shuffle_null": 0.18408091757199818,
+          "cos_argS": 0.9249954954301718
+        },
+        {
+          "sep_lo_km": 2300.0,
+          "sep_hi_km": 3200.0,
+          "n": 98,
+          "real_corr": 0.10845413802800766,
+          "phase_random_null": 0.022489689393233432,
+          "identity_shuffle_null": -0.02191795846370841,
+          "cos_argS": 0.5609776905685929
+        },
+        {
+          "sep_lo_km": 3200.0,
+          "sep_hi_km": 4500.0,
+          "n": 90,
+          "real_corr": -0.1192824526418228,
+          "phase_random_null": -0.024259519237813443,
+          "identity_shuffle_null": -0.316734129550924,
+          "cos_argS": 0.47332176243920043
+        },
+        {
+          "sep_lo_km": 4500.0,
+          "sep_hi_km": 6500.0,
+          "n": 75,
+          "real_corr": 0.07871410094704573,
+          "phase_random_null": -0.0261808997252711,
+          "identity_shuffle_null": 0.053140888079581755,
+          "cos_argS": 0.49638352826767806
+        },
+        {
+          "sep_lo_km": 6500.0,
+          "sep_hi_km": 10000.0,
+          "n": 467,
+          "real_corr": -0.1098957788886599,
+          "phase_random_null": 0.023707810934062077,
+          "identity_shuffle_null": -0.1025700650008401,
+          "cos_argS": -0.6795238211313154
+        },
+        {
+          "sep_lo_km": 10000.0,
+          "sep_hi_km": 16000.0,
+          "n": 330,
+          "real_corr": 0.01169995794956851,
+          "phase_random_null": 0.040134645854871746,
+          "identity_shuffle_null": 0.02958546283904488,
+          "cos_argS": -0.10988404576721295
+        }
+      ]
+    },
+    "broadcast": {
+      "label": "broadcast",
+      "product": "broadcast",
+      "n_days_used": 39,
+      "gaussian_lambda_km": null,
+      "curve": [
+        {
+          "sep_lo_km": 400.0,
+          "sep_hi_km": 700.0,
+          "n": 156,
+          "real_corr": 0.8470195422593687,
+          "phase_random_null": 0.04172015811383801,
+          "identity_shuffle_null": 0.33071201932031374,
+          "cos_argS": 0.9984218949366236
+        },
+        {
+          "sep_lo_km": 700.0,
+          "sep_hi_km": 1100.0,
+          "n": 78,
+          "real_corr": 0.7573103683275337,
+          "phase_random_null": -0.004518278077146577,
+          "identity_shuffle_null": 0.2729799733340877,
+          "cos_argS": 0.9948463245080561
+        }
+      ]
+    }
+  },
+  "spectral_signature": {
+    "bands": [
+      {
+        "freq_lo_uHz": 8,
+        "freq_hi_uHz": 14,
+        "period_h": 25.3,
+        "coherent_fraction_median": 0.8058564931602135,
+        "n": 6102,
+        "contains_gps_orbital": false,
+        "contains_diurnal": true
+      },
+      {
+        "freq_lo_uHz": 20,
+        "freq_hi_uHz": 27,
+        "period_h": 11.8,
+        "coherent_fraction_median": 0.7220338108076174,
+        "n": 6102,
+        "contains_gps_orbital": true,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 27,
+        "freq_hi_uHz": 40,
+        "period_h": 8.3,
+        "coherent_fraction_median": 0.9777028176862492,
+        "n": 6102,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 40,
+        "freq_hi_uHz": 60,
+        "period_h": 5.6,
+        "coherent_fraction_median": 0.9645574227716872,
+        "n": 12204,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 60,
+        "freq_hi_uHz": 95,
+        "period_h": 3.6,
+        "coherent_fraction_median": 0.9451043058204498,
+        "n": 18306,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 95,
+        "freq_hi_uHz": 160,
+        "period_h": 2.2,
+        "coherent_fraction_median": 0.8332362319485757,
+        "n": 30510,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 160,
+        "freq_hi_uHz": 260,
+        "period_h": 1.3,
+        "coherent_fraction_median": 0.6854760145057242,
+        "n": 54918,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 260,
+        "freq_hi_uHz": 400,
+        "period_h": 0.8,
+        "coherent_fraction_median": 0.4701852413828193,
+        "n": 73224,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 400,
+        "freq_hi_uHz": 520,
+        "period_h": 0.6,
+        "coherent_fraction_median": 0.24762166358757692,
+        "n": 61020,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      }
+    ],
+    "orbital_band_coherent_fraction": 0.7220338108076174,
+    "neighbouring_bands_coherent_fraction": 0.9301501945567404,
+    "orbital_enhancement": 0.7762550769036821,
+    "verdict": "broadband, no orbital or diurnal enhancement -- inconsistent with orbit error or tropospheric/tidal common mode"
+  },
+  "spectral_signature_broadcast": {
+    "bands": [
+      {
+        "freq_lo_uHz": 8,
+        "freq_hi_uHz": 14,
+        "period_h": 25.3,
+        "coherent_fraction_median": 0.985622400392377,
+        "n": 3893,
+        "contains_gps_orbital": false,
+        "contains_diurnal": true
+      },
+      {
+        "freq_lo_uHz": 20,
+        "freq_hi_uHz": 27,
+        "period_h": 11.8,
+        "coherent_fraction_median": 0.9721422642056063,
+        "n": 3893,
+        "contains_gps_orbital": true,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 27,
+        "freq_hi_uHz": 40,
+        "period_h": 8.3,
+        "coherent_fraction_median": 0.9533375617539774,
+        "n": 3893,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 40,
+        "freq_hi_uHz": 60,
+        "period_h": 5.6,
+        "coherent_fraction_median": 0.9241436247385358,
+        "n": 7786,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 60,
+        "freq_hi_uHz": 95,
+        "period_h": 3.6,
+        "coherent_fraction_median": 0.9161676130620545,
+        "n": 11679,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 95,
+        "freq_hi_uHz": 160,
+        "period_h": 2.2,
+        "coherent_fraction_median": 0.853806455437419,
+        "n": 19465,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 160,
+        "freq_hi_uHz": 260,
+        "period_h": 1.3,
+        "coherent_fraction_median": 0.8071450725102703,
+        "n": 35037,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 260,
+        "freq_hi_uHz": 400,
+        "period_h": 0.8,
+        "coherent_fraction_median": 0.6910794514209081,
+        "n": 46716,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      },
+      {
+        "freq_lo_uHz": 400,
+        "freq_hi_uHz": 520,
+        "period_h": 0.6,
+        "coherent_fraction_median": 0.5319605428406261,
+        "n": 38930,
+        "contains_gps_orbital": false,
+        "contains_diurnal": false
+      }
+    ],
+    "orbital_band_coherent_fraction": 0.9721422642056063,
+    "neighbouring_bands_coherent_fraction": 0.9118638137479967,
+    "orbital_enhancement": 1.06610466338153,
+    "verdict": "broadband, no orbital or diurnal enhancement -- inconsistent with orbit error or tropospheric/tidal common mode"
+  },
+  "headline": {
+    "cluster_mean_lambda_km": {
+      "cod_regional": 2943.514644351464
+    },
+    "short_range_cluster_mean_corr": {
+      "epn_precise": 0.840828587171901,
+      "cod_regional": 0.3766151982210858,
+      "broadcast": 0.8470195422593687
+    },
+    "interpretation": "The mean band-limited clock of one region correlates with the mean of another region, decaying with inter-region separation at a Gaussian length of ~2,000-3,000 km -- the TEP scale (Steps 53, 58) -- not separation-independent (which a datum / time-scale common mode would give). It survives on precise products, where the satellite-clock common mode is already removed. The network-mean 'common mode' is therefore substantially the TEP field itself: the operational skill measured against persistence / predict-zero (Steps 55, 58) is the TEP contribution, and the skill measured against a bulk mean is a lower bound that removes most of the field."
+  }
+}

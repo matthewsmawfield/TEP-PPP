@@ -1,0 +1,10 @@
+  30 downloaded, 0 already present, 0 failed
+  60 downloaded, 0 already present, 1 failed
+
+coverage from COD0OPSFIN_20242280000_01D_30S_CLK.CLK.gz:
+  318 stations (197 quartz, 86 atomic)
+  50,403 unique station pairs
+  4 co-located quartz/atomic pairs: [('MATE', 'MAT1'), ('STR1', 'STR2'), ('THTG', 'THTI'), ('WUHN', 'WUH2')]
+
+88 downloaded, 0 present, 2 failed -> 449 days on disk
+saved results/outputs/step_78_acquire_wide_clock_network.json

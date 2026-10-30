@@ -1,0 +1,61 @@
+[08:53:44] [INFO] 
+[08:53:44] [INFO] ================================================================================
+[08:53:44] [INFO] STEP 41: URBAN CANYON — SATELLITE DROPOUT RESILIENCE
+[08:53:44] [INFO] ================================================================================
+[08:53:44] [INFO] 
+[08:53:44] [INFO] 3 dropout events (8→3 sats for 10.0 min each)
+[08:53:44] [INFO] Tests whether TEP constrains clock during dropout for faster recovery
+[08:53:44] [INFO] 
+[08:53:44] [INFO] Sampled 30 days from 2024
+[08:53:44] [INFO] 
+[08:53:44] [INFO]   [1/30] 2024004: Dropout 2697636/3334 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:45] [INFO]   [2/30] 2024013: Dropout 2697644/3353 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:45] [INFO]   [3/30] 2024014: Dropout 2697638/3367 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:45] [INFO]   [4/30] 2024016: Dropout 2697645/3354 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:46] [INFO]   [5/30] 2024017: Dropout 2697636/3371 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:46] [INFO]   [6/30] 2024045: Dropout 2697643/3386 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:46] [INFO]   [7/30] 2024048: Dropout 2697643/3346 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:47] [INFO]   [8/30] 2024053: Dropout 2697651/3412 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:47] [INFO]   [9/30] 2024059: Dropout 2697634/3292 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:47] [INFO]   [10/30] 2024074: Dropout 2697643/3376 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:48] [INFO]   [11/30] 2024083: Dropout 2697631/3443 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:48] [INFO]   [12/30] 2024085: Dropout 2697640/3937 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:48] [INFO]   [13/30] 2024106: Dropout 2697641/3327 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:49] [INFO]   [14/30] 2024118: Dropout 2697635/3445 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:49] [INFO]   [15/30] 2024119: Dropout 2697639/3384 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:49] [INFO]   [16/30] 2024120: Dropout 2697648/3321 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:50] [INFO]   [17/30] 2024122: Dropout 2697646/3337 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:50] [INFO]   [18/30] 2024127: Dropout 2697638/3423 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:50] [INFO]   [19/30] 2024133: Dropout 2697648/3462 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:51] [INFO]   [20/30] 2024148: Dropout 2697638/3316 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:51] [INFO]   [21/30] 2024150: Dropout 2697639/3338 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:51] [INFO]   [22/30] 2024184: Dropout 2697647/3352 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:52] [INFO]   [23/30] 2024224: Dropout 2697654/3342 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:52] [INFO]   [24/30] 2024226: Dropout 2697634/3445 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:52] [INFO]   [25/30] 2024239: Dropout 2697636/3381 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:53] [INFO]   [26/30] 2024271: Dropout 2697635/3396 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:53] [INFO]   [27/30] 2024295: Dropout 2697640/3313 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:53] [INFO]   [28/30] 2024303: Dropout 2697643/3325 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:54] [INFO]   [29/30] 2024317: Dropout 2697637/3499 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:54] [INFO]   [30/30] 2024318: Dropout 2697643/3401 cm (+100%), Recovery 3906/3906 cm (+0%)
+[08:53:54] [INFO] 
+[08:53:54] [INFO] 
+[08:53:54] [INFO] ================================================================================
+[08:53:54] [INFO] === URBAN CANYON SUMMARY (30 days, 2024) ===
+[08:53:54] [INFO] ================================================================================
+[08:53:54] [INFO] 
+[08:53:54] [INFO] Metric                         Standard PPP       TEP-PPP            Improvement   
+[08:53:54] [INFO] --------------------------------------------------------------------------------
+[08:53:54] [INFO] overall_rms_cm                 3905.68            3905.68            +0.0          %
+[08:53:54] [INFO] dropout_pos_rms_cm             2697640.81         3392.62            +99.9         %
+[08:53:54] [INFO] recovery_pos_rms_cm            3906.20            3906.20            +0.0          %
+[08:53:54] [INFO] normal_pos_rms_cm              3906.62            3906.62            +0.0          %
+[08:53:54] [INFO] overall_clk_rms_ns             63.99              64.01              -0.0          %
+[08:53:54] [INFO] dropout_clk_rms_ns             79924.75           19.04              +100.0        %
+[08:53:54] [INFO] recovery_clk_rms_ns            66.31              66.33              -0.0          %
+[08:53:54] [INFO] 
+[08:53:54] [INFO] TEP-PPP better during dropout: 30/30 days
+[08:53:54] [INFO] TEP-PPP better during recovery: 30/30 days
+[08:53:54] [INFO] Mean recovery improvement: +0.0%
+[08:53:54] [INFO] Mean dropout improvement: +99.9%
+[08:53:54] [SUCCESS] Saved: results/outputs/step_41_urban_canyon.json

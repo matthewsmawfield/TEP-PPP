@@ -1,0 +1,142 @@
+{
+  "step": "169_gfz",
+  "title": "GFZ replication of corrected gravitational phase test",
+  "timestamp": "2026-09-07T20:18:45.981629+00:00",
+  "n_perm": 10000,
+  "results": {
+    "GFZ_2024": {
+      "M2": {
+        "r": 0.030663322961080305,
+        "p_perm_station": 0.0537946205379462,
+        "p_naive_pairs": 0.06379613976097853,
+        "p_corrected_dof": 0.779274345089114,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "N2": {
+        "r": -0.020867161662100217,
+        "p_perm_station": 0.13058694130586943,
+        "p_naive_pairs": 0.2072139751882307,
+        "p_corrected_dof": 0.8487581784611639,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "S2": {
+        "r": 0.12740360841910278,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 1.0647278563961267e-14,
+        "p_corrected_dof": 0.24241394538045055,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "O1": {
+        "r": 0.025813968343524386,
+        "p_perm_station": 0.08659134086591341,
+        "p_naive_pairs": 0.11867699581720959,
+        "p_corrected_dof": 0.8134907077801451,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "K1": {
+        "r": 0.017711397844816464,
+        "p_perm_station": 0.22467753224677534,
+        "p_naive_pairs": 0.2843994705874114,
+        "p_corrected_dof": 0.8714177081069235,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "S1": {
+        "r": 0.00525450555949493,
+        "p_perm_station": 0.7586241375862414,
+        "p_naive_pairs": 0.750816404108181,
+        "p_corrected_dof": 0.9617038428189397,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "P1": {
+        "r": 0.014773115185721587,
+        "p_perm_station": 0.34556544345565443,
+        "p_naive_pairs": 0.37192385929547933,
+        "p_corrected_dof": 0.8926096212114405,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "Q1": {
+        "r": 0.05808888025055223,
+        "p_perm_station": 0.0086991300869913,
+        "p_naive_pairs": 0.000442041799856989,
+        "p_corrected_dof": 0.5952383981988032,
+        "n_stations": 86,
+        "n_pairs": 3655
+      },
+      "_control_mean_r": 0.014555583997292832
+    },
+    "GFZ_2025": {
+      "M2": {
+        "r": -0.027325565214413886,
+        "p_perm_station": 0.09969003099690031,
+        "p_naive_pairs": 0.1794643568735163,
+        "p_corrected_dof": 0.8223313234238148,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "N2": {
+        "r": 0.032683304940947955,
+        "p_perm_station": 0.06669333066693331,
+        "p_naive_pairs": 0.10833069147217403,
+        "p_corrected_dof": 0.788240380698963,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "S2": {
+        "r": 0.13248753499514013,
+        "p_perm_station": 0.00019998000199980003,
+        "p_naive_pairs": 6.30806235755053e-11,
+        "p_corrected_dof": 0.2742446867498779,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "O1": {
+        "r": 0.004957220484002811,
+        "p_perm_station": 0.8148185181481852,
+        "p_naive_pairs": 0.8076286797904405,
+        "p_corrected_dof": 0.967512315727479,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "K1": {
+        "r": 0.06970515527520087,
+        "p_perm_station": 0.007999200079992,
+        "p_naive_pairs": 0.0006082863028757149,
+        "p_corrected_dof": 0.5663789706418162,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "S1": {
+        "r": 0.11334655378238208,
+        "p_perm_station": 0.0012998700129987,
+        "p_naive_pairs": 2.3333257030335585e-08,
+        "p_corrected_dof": 0.35016695283193233,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "P1": {
+        "r": 0.09263883603428914,
+        "p_perm_station": 0.0015998400159984002,
+        "p_naive_pairs": 5.116112055588526e-06,
+        "p_corrected_dof": 0.44560727297638525,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "Q1": {
+        "r": 0.04910846202046121,
+        "p_perm_station": 0.0292970702929707,
+        "p_naive_pairs": 0.015798969251147016,
+        "p_corrected_dof": 0.6864211334810406,
+        "n_stations": 70,
+        "n_pairs": 2415
+      },
+      "_control_mean_r": 0.011475533711663568
+    }
+  }
+}

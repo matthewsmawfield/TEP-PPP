@@ -1,0 +1,59 @@
+{
+  "generated": "2026-10-29T23:02:16+00:00",
+  "source": "data/ppp_live/results/last_result_window_*.json :: clock_prediction.specificity.tep_vs_persist_pct",
+  "metric": "deployed causal predictor vs persistence, 2 h clock holdover RMSE improvement (%)",
+  "all_windows": {
+    "n_windows": 276,
+    "n_positive": 275,
+    "frac_positive": 0.9963768115942029,
+    "mean_pct": 42.9281884057971,
+    "median_pct": 44.3,
+    "min_pct": -11.53,
+    "max_pct": 71.47,
+    "sign_test_p_one_sided": 2.2813975236522304e-81,
+    "wall_clock_span_h": 95.6259571613889,
+    "first_window": "2026-10-25T23:02:14.929395+00:00",
+    "last_window": "2026-10-29T22:39:48.375176+00:00"
+  },
+  "valid_only": {
+    "n_windows": 76,
+    "n_positive": 75,
+    "frac_positive": 0.9868421052631579,
+    "mean_pct": 43.00723684210527,
+    "median_pct": 44.56,
+    "min_pct": -11.53,
+    "max_pct": 71.47,
+    "sign_test_p_one_sided": 1.0190865146653301e-21,
+    "wall_clock_span_h": 94.97152658527779,
+    "first_window": "2026-10-25T23:02:14.929395+00:00",
+    "last_window": "2026-10-29T22:00:32.425102+00:00"
+  },
+  "epoch_disjoint": {
+    "n_windows": 22,
+    "n_positive": 22,
+    "frac_positive": 1.0,
+    "mean_pct": 38.143181818181816,
+    "median_pct": 41.3,
+    "min_pct": 4.9,
+    "max_pct": 59.91,
+    "sign_test_p_one_sided": 2.384185791015625e-07,
+    "wall_clock_span_h": 94.97152658527779,
+    "first_window": "2026-10-25T23:02:14.929395+00:00",
+    "last_window": "2026-10-29T22:00:32.425102+00:00"
+  },
+  "post_warmup": {
+    "n_windows": 229,
+    "n_positive": 229,
+    "frac_positive": 1.0,
+    "mean_pct": 42.40283842794759,
+    "median_pct": 43.27,
+    "min_pct": 0.05,
+    "max_pct": 67.05,
+    "sign_test_p_one_sided": 1.1591269220898192e-69,
+    "wall_clock_span_h": 71.31806338611112,
+    "first_window": "2026-10-26T23:20:43.346986+00:00",
+    "last_window": "2026-10-29T22:39:48.375176+00:00"
+  },
+  "epoch_disjoint_rule": "greedy keep if start >= last kept start + 14,400 s (the 4 h capture span)",
+  "n_alpha_degenerate": 200
+}

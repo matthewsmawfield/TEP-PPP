@@ -1,0 +1,52 @@
+{
+  "step": "74b",
+  "title": "Pair-clustered control on short-baseline EW/NS anisotropy",
+  "note": "day-clustered z from step_74 (+8.1/+9.3) is inflated by pair-level pseudo-replication; these pair-clustered intervals supersede it",
+  "arms": {
+    "precise": {
+      "band_km": [
+        500.0,
+        800.0
+      ],
+      "n_pair_days": 26141,
+      "n_unique_pairs": 150,
+      "n_ew_pairs": 60,
+      "n_ns_pairs": 90,
+      "observed_diff": 0.061944158376547986,
+      "pair_clustered_ci95": [
+        -0.08457694631328776,
+        0.20747733243120828
+      ],
+      "pair_clustered_p_gt_0": 0.8015,
+      "loso_min": 0.009566831413521548,
+      "loso_max": 0.11017638955244335,
+      "loso_all_positive": true,
+      "n_loso_stations": 30
+    },
+    "broadcast": {
+      "band_km": [
+        500.0,
+        800.0
+      ],
+      "n_pair_days": 23077,
+      "n_unique_pairs": 202,
+      "n_ew_pairs": 93,
+      "n_ns_pairs": 109,
+      "observed_diff": 0.08211577710369633,
+      "pair_clustered_ci95": [
+        -0.06565373238274098,
+        0.22482692092955014
+      ],
+      "pair_clustered_p_gt_0": 0.8675,
+      "loso_min": 0.04002479505491374,
+      "loso_max": 0.12333103098845688,
+      "loso_all_positive": true,
+      "n_loso_stations": 60
+    }
+  },
+  "verdict": {
+    "sign_robust": true,
+    "significant_pair_clustered": false,
+    "limiting_resource": "independent station pairs, not observation days"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "step": 104,
+  "title": "Moving-platform clock bridging (Swarm-A LEO vs terrestrial TEP field)",
+  "timestamp": "2026-09-04T09:53:02.136111+00:00",
+  "satellite": "Swarm-A (TU Delft kinematic SP3, 1 s)",
+  "ground_network": "clk_cod_ops (300+ stations, 300 s)",
+  "lambda_km": 4200.0,
+  "pre_window_s": 3600.0,
+  "method": "simulated GNSS gap; predict the receiver-clock innovation the pre-window linear trend leaves; TEP = Gaussian-kernel kriging of the ground network's residual innovations to the target location; controls = network mean and distance-scrambled",
+  "leo": {
+    "600": {
+      "n": 1845,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 1.0297630839164331,
+        "tep": 1.1254515941625842,
+        "netmean": 1.1091813553882297,
+        "distscr": 1.1163423753392607
+      },
+      "tep_vs_persist_pct": -9.29228399625912,
+      "tep_vs_persist_ci95": [
+        -12.100988503670624,
+        -6.801834970954896
+      ],
+      "tep_vs_netmean_pct": -1.4668691188610694,
+      "tep_vs_distscr_pct": -0.8159879105686718
+    },
+    "1800": {
+      "n": 1818,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 1.137730617169972,
+        "tep": 1.4080706085603252,
+        "netmean": 1.3595999306979485,
+        "distscr": 1.3759333354385157
+      },
+      "tep_vs_persist_pct": -23.76133570728769,
+      "tep_vs_persist_ci95": [
+        -30.649201835405652,
+        -19.03599269697502
+      ],
+      "tep_vs_netmean_pct": -3.565069162477408,
+      "tep_vs_distscr_pct": -2.335670798437861
+    },
+    "3600": {
+      "n": 1782,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 1.3135517499528147,
+        "tep": 1.8078825099469416,
+        "netmean": 1.7384751404299732,
+        "distscr": 1.7875372440672315
+      },
+      "tep_vs_persist_pct": -37.63313931193684,
+      "tep_vs_persist_ci95": [
+        -47.242816085511826,
+        -30.660295714572054
+      ],
+      "tep_vs_netmean_pct": -3.9924280711774784,
+      "tep_vs_distscr_pct": -1.1381729777790728
+    },
+    "7200": {
+      "n": 1701,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 1.8537693612333925,
+        "tep": 2.858440077835823,
+        "netmean": 2.7382745213675035,
+        "distscr": 2.8061526638647316
+      },
+      "tep_vs_persist_pct": -54.19610106912005,
+      "tep_vs_persist_ci95": [
+        -63.04158533404348,
+        -47.866939042868495
+      ],
+      "tep_vs_netmean_pct": -4.388367767023893,
+      "tep_vs_distscr_pct": -1.8633132346790982
+    }
+  },
+  "ground_control": {
+    "600": {
+      "n": 46107,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 2.126025648100582,
+        "tep": 2.104697880809765,
+        "netmean": 2.1151674458371006,
+        "distscr": 2.118098076112204
+      },
+      "tep_vs_persist_pct": 1.003175446630733,
+      "tep_vs_persist_ci95": [
+        0.7911601827143777,
+        1.219639511695348
+      ],
+      "tep_vs_netmean_pct": 0.4949757073815064,
+      "tep_vs_distscr_pct": 0.6326522578706695
+    },
+    "1800": {
+      "n": 45415,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 3.35812420924354,
+        "tep": 3.2296264944020128,
+        "netmean": 3.275452763757173,
+        "distscr": 3.280060652290877
+      },
+      "tep_vs_persist_pct": 3.826472960345706,
+      "tep_vs_persist_ci95": [
+        3.3534506019595067,
+        4.278496953997701
+      ],
+      "tep_vs_netmean_pct": 1.3990819792068843,
+      "tep_vs_distscr_pct": 1.53759833232473
+    },
+    "3600": {
+      "n": 44497,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 4.727082274454471,
+        "tep": 4.516150685554171,
+        "netmean": 4.585296686547423,
+        "distscr": 4.5904127978893925
+      },
+      "tep_vs_persist_pct": 4.462194153890464,
+      "tep_vs_persist_ci95": [
+        3.8849530057439616,
+        4.99535434048682
+      ],
+      "tep_vs_netmean_pct": 1.5079940453169738,
+      "tep_vs_distscr_pct": 1.6177654517120055
+    },
+    "7200": {
+      "n": 42397,
+      "n_days": 9,
+      "rms_m": {
+        "persist": 7.7889643714881815,
+        "tep": 7.387562559892274,
+        "netmean": 7.505492531128201,
+        "distscr": 7.515926164904074
+      },
+      "tep_vs_persist_pct": 5.153468323276133,
+      "tep_vs_persist_ci95": [
+        4.497747904859926,
+        5.789711620270877
+      ],
+      "tep_vs_netmean_pct": 1.5712489319898215,
+      "tep_vs_distscr_pct": 1.7078880525889018
+    }
+  },
+  "verdict": {
+    "leo_clock_bridgeable_from_ground": false,
+    "ground_control_reproduces_step56": true,
+    "interpretation": "A fast orbital receiver traverses ~a full TEP correlation length per gap, so there is no stable spatial relationship between the LEO and a fixed ground network to exploit -- the ground prior does not beat persistence and progressively hurts as the gap (and ground-track distance) grows.  The ground-to-ground control reproduces the small positive Step 55/56 result on the same machinery, so the LEO negative is physical, not a pipeline artefact.  The TEP clock-transfer benefit requires the receiver to be quasi-stationary relative to the field's correlation length over the outage -- satisfied by urban/pedestrian/IoT/maritime/fixed/slow-vehicle receivers and timing holdover, not by a 7.5 km/s orbital platform."
+  }
+}

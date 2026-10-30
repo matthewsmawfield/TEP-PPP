@@ -1,0 +1,62 @@
+{
+  "step": 159,
+  "title": "Clock-type-specific multi-band advantage",
+  "timestamp": "2026-09-07T01:10:08.659379+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "results": {
+    "quartz": {
+      "n_targets": 597,
+      "mean_advantage_pct": 2.187865276298878,
+      "median_advantage_pct": 1.1365495780479296,
+      "std_advantage_pct": 4.235275056780007,
+      "ci": {
+        "median": 1.1365495780479296,
+        "ci95": [
+          0.9632241859415247,
+          1.3153611280160682
+        ],
+        "n": 597,
+        "frac_positive": 0.7018425460636516
+      },
+      "frac_positive": 0.7018425460636516
+    },
+    "atomic": {
+      "n_targets": 198,
+      "mean_advantage_pct": 7.38388358993232,
+      "median_advantage_pct": 2.3818394369027605,
+      "std_advantage_pct": 12.276549322396843,
+      "ci": {
+        "median": 2.3818394369027605,
+        "ci95": [
+          1.6210189595431745,
+          3.311063277996651
+        ],
+        "n": 198,
+        "frac_positive": 0.7676767676767676
+      },
+      "frac_positive": 0.7676767676767676
+    },
+    "difference_test": {
+      "quartz_minus_atomic_mean": -5.1960183136334415,
+      "t_statistic": -5.827049718833321,
+      "t_p_value": 2.0686522038201303e-08,
+      "mannwhitney_u": 46328.0,
+      "mannwhitney_p": 0.9999974712486491,
+      "bootstrap_ci95": [
+        -6.9794161232174226,
+        -3.5335104213230477
+      ]
+    }
+  },
+  "interpretation": [
+    "Clock-type-specific multi-band advantage: 597 quartz, 198 atomic targets",
+    "  Quartz:  multi vs full = +1.14% CI[0.9632241859415247, 1.3153611280160682] (frac_pos=0.70)",
+    "  Atomic:  multi vs full = +2.38% CI[1.6210189595431745, 3.311063277996651] (frac_pos=0.77)",
+    "  Difference (Q-A): -5.20%",
+    "  t-test: t=-5.83, p=0.0000",
+    "  Mann-Whitney (Q>A): p=1.0000",
+    "  Bootstrap CI: [-6.98, -3.53]"
+  ],
+  "pre_registered_prediction": "If TEP is real, the multi-band kernel's advantage over the single-lambda kernel should be LARGER for quartz targets than atomic targets, because the frequency-dependent spatial structure captures a field that couples to quartz but not atomic."
+}

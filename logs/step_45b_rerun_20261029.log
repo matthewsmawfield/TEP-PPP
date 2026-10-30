@@ -1,0 +1,16 @@
+[broadcast_global] 7 days, 4933 pair-days, 52 stations
+[precise_cod] 20 days, 29686 pair-days, 155 stations
+
+saved results/outputs/step_45b_t4_forensic.json
+
+[broadcast_global] corr(d,Jbar)=-0.946
+  specs surviving null: 1/13   lambda in TEP band: 11/13
+  LOSO stable: True   LODO stable: True   bootstrap CI in band: False
+  partial corr ever significant (|pc|>0.1): True
+  bootstrap lambda 7118 km CI [2734.045101597038, 24167.35544205093], R^2 0.93 CI [0.7978254306022566, 0.9791119348907593]
+
+[precise_cod] corr(d,Jbar)=-0.930
+  specs surviving null: 1/13   lambda in TEP band: 3/13
+  LOSO stable: False   LODO stable: False   bootstrap CI in band: True
+  partial corr ever significant (|pc|>0.1): False
+  bootstrap lambda 1996 km CI [1152.8781705530387, 3054.9958486321157], R^2 0.69 CI [0.41178374935595435, 0.8816362851821054]

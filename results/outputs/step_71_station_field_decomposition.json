@@ -1,0 +1,532 @@
+{
+  "step": 71,
+  "identifiability": {
+    "note": "fraction of the field basis absorbed by the station-noise column space; at >0.9 the design is effectively blind to that scale",
+    "absorbed_fraction_by_lambda_km": {
+      "80": 0.9739239004661631,
+      "200": 0.9145688286125331,
+      "500": 0.8031893261926969,
+      "1000": 0.7731800648487988,
+      "2800": 0.7637922351482613,
+      "4348": 0.762976819992792
+    },
+    "n_pairs": 37,
+    "n_stations": 23
+  },
+  "orthogonal_component_bounds": {
+    "all_pairs": {
+      "L_km": 2000.0,
+      "sigma2_m2": -0.01762224525731211,
+      "sigma2_se_m2": 0.015491380241722585,
+      "z": -1.1375516566206616,
+      "amplitude_mm": 0.0,
+      "upper_95_mm": 112.8754181230978,
+      "detected": false
+    },
+    "excluding_REDU": {
+      "L_km": 80.0,
+      "sigma2_m2": -0.0004913512208354194,
+      "sigma2_se_m2": 0.00031727274206352793,
+      "z": -1.5486713974849926,
+      "amplitude_mm": 0.0,
+      "upper_95_mm": 11.423806441335364,
+      "detected": false
+    },
+    "well_behaved_only": {
+      "L_km": 80.0,
+      "sigma2_m2": -0.0004207246080353626,
+      "sigma2_se_m2": 0.0002858907790380118,
+      "z": -1.471627064891881,
+      "amplitude_mm": 0.0,
+      "upper_95_mm": 11.81614653256892,
+      "detected": false
+    }
+  },
+  "station_attribution": {
+    "BRUX": {
+      "n_pairs": 7,
+      "median_rms_mm": 13.768902764731367,
+      "median_sidereal_fraction": 0.9767730745575334,
+      "rho_rms_vs_distance": -0.7252139345549332
+    },
+    "GOPE": {
+      "n_pairs": 7,
+      "median_rms_mm": 46.12663770118649,
+      "median_sidereal_fraction": -0.19771293114389055,
+      "rho_rms_vs_distance": 0.12295267085690385
+    },
+    "IENG": {
+      "n_pairs": 6,
+      "median_rms_mm": 27.872427922106688,
+      "median_sidereal_fraction": 0.8864396220213984,
+      "rho_rms_vs_distance": 0.24089744198655658
+    },
+    "MEDI": {
+      "n_pairs": 5,
+      "median_rms_mm": 15.456026825063432,
+      "median_sidereal_fraction": 0.9726317647693572,
+      "rho_rms_vs_distance": 0.36961461659496225
+    },
+    "PTBB": {
+      "n_pairs": 7,
+      "median_rms_mm": 15.712335451407766,
+      "median_sidereal_fraction": 0.9766300758677043,
+      "rho_rms_vs_distance": 0.06390839273097339
+    },
+    "REDU": {
+      "n_pairs": 8,
+      "median_rms_mm": 125.76951513914332,
+      "median_sidereal_fraction": -0.015125722737277747,
+      "rho_rms_vs_distance": -0.48390593827257244
+    },
+    "WAB2": {
+      "n_pairs": 9,
+      "median_rms_mm": 15.712335451407766,
+      "median_sidereal_fraction": 0.9767730745575334,
+      "rho_rms_vs_distance": -0.2563485292392629
+    },
+    "WSRT": {
+      "n_pairs": 7,
+      "median_rms_mm": 15.02021994781562,
+      "median_sidereal_fraction": 0.9801629598382936,
+      "rho_rms_vs_distance": -0.25408511401918693
+    },
+    "WTZR": {
+      "n_pairs": 9,
+      "median_rms_mm": 39.37553759489699,
+      "median_sidereal_fraction": 0.8772779354791335,
+      "rho_rms_vs_distance": 0.013001171059675257
+    },
+    "WTZZ": {
+      "n_pairs": 9,
+      "median_rms_mm": 14.83745368705914,
+      "median_sidereal_fraction": 0.9784227707284072,
+      "rho_rms_vs_distance": -0.04016119025334441
+    }
+  },
+  "worst_station": "REDU",
+  "title": "Per-station noise vs spatial field, sidereal-cleaned carrier phase",
+  "timestamp": "2026-09-02T17:32:48.090664+00:00",
+  "model": "D_AB = n_A + n_B + 2 sigma^2 [1 - exp(-(d/L)^2/2)]",
+  "pairs": [
+    {
+      "pair": "WTZR-WTZZ",
+      "A": "WTZR",
+      "B": "WTZZ",
+      "sep_km": 0.0033023053674794203,
+      "D_m2": 0.001550432960887146,
+      "rms_mm": 39.37553759489699,
+      "sidereal_fraction": 0.8772779354791335
+    },
+    {
+      "pair": "BRUX-REDU",
+      "A": "BRUX",
+      "B": "REDU",
+      "sep_km": 104.77193734153582,
+      "D_m2": 0.01741743650835681,
+      "rms_mm": 131.97513594748372,
+      "sidereal_fraction": -0.0023388395030206066
+    },
+    {
+      "pair": "GOPE-WTZZ",
+      "A": "GOPE",
+      "B": "WTZZ",
+      "sep_km": 162.41590941055222,
+      "D_m2": 0.0008696635306754347,
+      "rms_mm": 29.49005816670145,
+      "sidereal_fraction": -0.4221156157650343
+    },
+    {
+      "pair": "GOPE-WTZR",
+      "A": "GOPE",
+      "B": "WTZR",
+      "sep_km": 162.4174654063461,
+      "D_m2": 0.002257614460067418,
+      "rms_mm": 47.51436056675306,
+      "sidereal_fraction": -0.2018898812515586
+    },
+    {
+      "pair": "IENG-WAB2",
+      "A": "IENG",
+      "B": "WAB2",
+      "sep_km": 212.58280638462494,
+      "D_m2": 0.0007524531134418616,
+      "rms_mm": 27.430878831015633,
+      "sidereal_fraction": 0.9160016525914247
+    },
+    {
+      "pair": "PTBB-WSRT",
+      "A": "PTBB",
+      "B": "WSRT",
+      "sep_km": 270.04485255650354,
+      "D_m2": 0.0002704429711374472,
+      "rms_mm": 16.445150383546125,
+      "sidereal_fraction": 0.9880756845901912
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "A": "BRUX",
+      "B": "WSRT",
+      "sep_km": 281.7366138430005,
+      "D_m2": 0.0001633434837526875,
+      "rms_mm": 12.780590117544945,
+      "sidereal_fraction": 0.9801629598382936
+    },
+    {
+      "pair": "IENG-MEDI",
+      "A": "IENG",
+      "B": "MEDI",
+      "sep_km": 321.92296728866575,
+      "D_m2": 0.00080168129430389,
+      "rms_mm": 28.31397701319774,
+      "sidereal_fraction": 0.882976090552286
+    },
+    {
+      "pair": "REDU-WSRT",
+      "A": "REDU",
+      "B": "WSRT",
+      "sep_km": 339.5631017356614,
+      "D_m2": 0.017406847659209704,
+      "rms_mm": 131.93501301477826,
+      "sidereal_fraction": 0.017010364539154166
+    },
+    {
+      "pair": "REDU-WAB2",
+      "A": "REDU",
+      "B": "WAB2",
+      "sep_km": 382.7476733349011,
+      "D_m2": 0.008372972647848852,
+      "rms_mm": 91.50394881014071,
+      "sidereal_fraction": 0.07441957027015311
+    },
+    {
+      "pair": "PTBB-WTZZ",
+      "A": "PTBB",
+      "B": "WTZZ",
+      "sep_km": 389.9468252286727,
+      "D_m2": 0.00022015003191562489,
+      "rms_mm": 14.83745368705914,
+      "sidereal_fraction": 0.9826901194539535
+    },
+    {
+      "pair": "PTBB-WTZR",
+      "A": "PTBB",
+      "B": "WTZR",
+      "sep_km": 389.9499150566831,
+      "D_m2": 0.00016396755949251942,
+      "rms_mm": 12.804981823201446,
+      "sidereal_fraction": 0.9766300758677043
+    },
+    {
+      "pair": "GOPE-PTBB",
+      "A": "GOPE",
+      "B": "PTBB",
+      "sep_km": 402.385553709805,
+      "D_m2": 0.0026461374277135467,
+      "rms_mm": 51.44062040560502,
+      "sidereal_fraction": -0.16205107769902138
+    },
+    {
+      "pair": "MEDI-WAB2",
+      "A": "MEDI",
+      "B": "WAB2",
+      "sep_km": 421.0355136105131,
+      "D_m2": 0.00019375413511334738,
+      "rms_mm": 13.919559443938855,
+      "sidereal_fraction": 0.9843319265741439
+    },
+    {
+      "pair": "PTBB-REDU",
+      "A": "PTBB",
+      "B": "REDU",
+      "sep_km": 450.8275463699141,
+      "D_m2": 0.020324045558497688,
+      "rms_mm": 142.56242688204242,
+      "sidereal_fraction": -0.13657037610931422
+    },
+    {
+      "pair": "BRUX-PTBB",
+      "A": "BRUX",
+      "B": "PTBB",
+      "sep_km": 454.607154800102,
+      "D_m2": 0.00018958268334462705,
+      "rms_mm": 13.768902764731367,
+      "sidereal_fraction": 0.9742511502258249
+    },
+    {
+      "pair": "WAB2-WTZR",
+      "A": "WAB2",
+      "B": "WTZR",
+      "sep_km": 473.0685572626851,
+      "D_m2": 0.0019384168412060953,
+      "rms_mm": 44.02745553863061,
+      "sidereal_fraction": 0.8639926538616364
+    },
+    {
+      "pair": "WAB2-WTZZ",
+      "A": "WAB2",
+      "B": "WTZZ",
+      "sep_km": 473.06994276542355,
+      "D_m2": 0.00017059978755215607,
+      "rms_mm": 13.06138536113823,
+      "sidereal_fraction": 0.9846904685858144
+    },
+    {
+      "pair": "BRUX-WAB2",
+      "A": "BRUX",
+      "B": "WAB2",
+      "sep_km": 487.2066530690173,
+      "D_m2": 0.0002461698366084875,
+      "rms_mm": 15.689800400530515,
+      "sidereal_fraction": 0.9767730745575334
+    },
+    {
+      "pair": "MEDI-WTZR",
+      "A": "MEDI",
+      "B": "WTZR",
+      "sep_km": 522.4520178939147,
+      "D_m2": 0.0002388887652170804,
+      "rms_mm": 15.456026825063432,
+      "sidereal_fraction": 0.9726317647693572
+    },
+    {
+      "pair": "MEDI-WTZZ",
+      "A": "MEDI",
+      "B": "WTZZ",
+      "sep_km": 522.4551885383295,
+      "D_m2": 0.00010272256980134414,
+      "rms_mm": 10.135214344124357,
+      "sidereal_fraction": 0.991967747905087
+    },
+    {
+      "pair": "REDU-WTZZ",
+      "A": "REDU",
+      "B": "WTZZ",
+      "sep_km": 567.0517366668313,
+      "D_m2": 0.014305120945569617,
+      "rms_mm": 119.6040172635084,
+      "sidereal_fraction": -0.027912605971534887
+    },
+    {
+      "pair": "REDU-WTZR",
+      "A": "REDU",
+      "B": "WTZR",
+      "sep_km": 567.0527086805193,
+      "D_m2": 0.018688895373308846,
+      "rms_mm": 136.7073347458316,
+      "sidereal_fraction": -0.09455540665510509
+    },
+    {
+      "pair": "IENG-REDU",
+      "A": "IENG",
+      "B": "REDU",
+      "sep_km": 585.1056089808447,
+      "D_m2": 0.01347396926928609,
+      "rms_mm": 116.07742790605799,
+      "sidereal_fraction": 0.017773157436121623
+    },
+    {
+      "pair": "IENG-WTZR",
+      "A": "IENG",
+      "B": "WTZR",
+      "sep_km": 607.0038629662547,
+      "D_m2": 0.002349291756416067,
+      "rms_mm": 48.469493048886605,
+      "sidereal_fraction": 0.8646656082933759
+    },
+    {
+      "pair": "IENG-WTZZ",
+      "A": "IENG",
+      "B": "WTZZ",
+      "sep_km": 607.0060884388396,
+      "D_m2": 0.00044657655437249617,
+      "rms_mm": 21.132357993666872,
+      "sidereal_fraction": 0.8981748085576503
+    },
+    {
+      "pair": "WSRT-WTZZ",
+      "A": "WSRT",
+      "B": "WTZZ",
+      "sep_km": 607.4082747425192,
+      "D_m2": 0.00011726252065153748,
+      "rms_mm": 10.828782048390183,
+      "sidereal_fraction": 0.9784227707284072
+    },
+    {
+      "pair": "WSRT-WTZR",
+      "A": "WSRT",
+      "B": "WTZR",
+      "sep_km": 607.4108224806245,
+      "D_m2": 0.00014203108563368605,
+      "rms_mm": 11.917679540652452,
+      "sidereal_fraction": 0.9856514763355863
+    },
+    {
+      "pair": "GOPE-WAB2",
+      "A": "GOPE",
+      "B": "WAB2",
+      "sep_km": 635.1543102131571,
+      "D_m2": 0.0017796229456880318,
+      "rms_mm": 42.18557746064443,
+      "sidereal_fraction": -0.13381890528089024
+    },
+    {
+      "pair": "PTBB-WAB2",
+      "A": "PTBB",
+      "B": "WAB2",
+      "sep_km": 635.1719785957185,
+      "D_m2": 0.00024687748533756533,
+      "rms_mm": 15.712335451407766,
+      "sidereal_fraction": 0.9822644403910876
+    },
+    {
+      "pair": "BRUX-WTZZ",
+      "A": "BRUX",
+      "B": "WTZZ",
+      "sep_km": 637.6717536355504,
+      "D_m2": 0.00011984736748506109,
+      "rms_mm": 10.947482244108054,
+      "sidereal_fraction": 0.9894602595091117
+    },
+    {
+      "pair": "BRUX-WTZR",
+      "A": "BRUX",
+      "B": "WTZR",
+      "sep_km": 637.6731229544679,
+      "D_m2": 0.00011962790451113369,
+      "rms_mm": 10.937454206127388,
+      "sidereal_fraction": 0.9786335145764256
+    },
+    {
+      "pair": "GOPE-MEDI",
+      "A": "GOPE",
+      "B": "MEDI",
+      "sep_km": 644.6704684092388,
+      "D_m2": 0.0021276667056165186,
+      "rms_mm": 46.12663770118649,
+      "sidereal_fraction": -0.19771293114389055
+    },
+    {
+      "pair": "GOPE-WSRT",
+      "A": "GOPE",
+      "B": "WSRT",
+      "sep_km": 659.0301325543086,
+      "D_m2": 0.0024734300769751086,
+      "rms_mm": 49.733591032370754,
+      "sidereal_fraction": -0.08499412817670748
+    },
+    {
+      "pair": "WAB2-WSRT",
+      "A": "WAB2",
+      "B": "WSRT",
+      "sep_km": 668.9174085657475,
+      "D_m2": 0.0002256070072807583,
+      "rms_mm": 15.02021994781562,
+      "sidereal_fraction": 0.9807473963949663
+    },
+    {
+      "pair": "BRUX-IENG",
+      "A": "BRUX",
+      "B": "IENG",
+      "sep_km": 687.6979405480446,
+      "D_m2": 0.0006639912510473841,
+      "rms_mm": 25.76802769028674,
+      "sidereal_fraction": 0.8899031534905106
+    },
+    {
+      "pair": "GOPE-REDU",
+      "A": "GOPE",
+      "B": "REDU",
+      "sep_km": 691.1122338301961,
+      "D_m2": 0.0010339634461548318,
+      "rms_mm": 32.155301991348665,
+      "sidereal_fraction": -0.5454174710763044
+    }
+  ],
+  "station_noise_mm": {
+    "BRUX": 16.43283334909537,
+    "BZR2": 0.0,
+    "DLF1": 9.878167619740788e-07,
+    "GENO": 0.0,
+    "GOP6": 0.0,
+    "GOPE": 0.0,
+    "GRAS": 0.0,
+    "GRAZ": 0.0,
+    "IENG": 23.4915791683122,
+    "KOS1": 0.0,
+    "MEDI": 22.441357272902046,
+    "OBE4": 0.0,
+    "PADO": 0.0,
+    "POTS": 0.0,
+    "PTBB": 36.1828701583036,
+    "REDU": 116.04518452268509,
+    "VEN1": 0.0,
+    "WAB2": 0.0,
+    "WSRT": 27.667555140024724,
+    "WTZR": 35.68559712717759,
+    "WTZZ": 8.950588673072165,
+    "ZIM2": 0.0,
+    "ZIMM": 0.0
+  },
+  "verdict": {
+    "n_pairs": 37,
+    "n_stations": 23,
+    "field_amplitude_mm": 0.0,
+    "correlation_length_km": 5.0,
+    "variance_explained_over_noise_only_model": 0.0,
+    "field_significant": false,
+    "median_sidereal_fraction": 0.8899031534905106,
+    "quietest_stations_mm": [
+      [
+        0.0,
+        "BZR2"
+      ],
+      [
+        0.0,
+        "GENO"
+      ],
+      [
+        0.0,
+        "GOP6"
+      ],
+      [
+        0.0,
+        "GOPE"
+      ],
+      [
+        0.0,
+        "GRAS"
+      ],
+      [
+        0.0,
+        "GRAZ"
+      ]
+    ],
+    "noisiest_stations_mm": [
+      [
+        22.441357272902046,
+        "MEDI"
+      ],
+      [
+        23.4915791683122,
+        "IENG"
+      ],
+      [
+        27.667555140024724,
+        "WSRT"
+      ],
+      [
+        35.68559712717759,
+        "WTZR"
+      ],
+      [
+        36.1828701583036,
+        "PTBB"
+      ],
+      [
+        116.04518452268509,
+        "REDU"
+      ]
+    ]
+  }
+}

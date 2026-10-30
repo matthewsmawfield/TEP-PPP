@@ -1,0 +1,122 @@
+{
+  "test": "bandpass_sensitivity",
+  "description": "T1 correlation-length fit under alternative band-pass configurations",
+  "bands": {
+    "default": {
+      "band_lo_uhz": 10.0,
+      "band_hi_uhz": 500.0,
+      "broadcast": {
+        "lambda_km": 27536,
+        "R2": 0.707,
+        "null_separation_sigma": 12.7,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 37,
+        "n_days": 7
+      },
+      "precise": {
+        "lambda_km": 2352,
+        "R2": 0.888,
+        "null_separation_sigma": 25.4,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 38,
+        "n_days": 30
+      }
+    },
+    "wide": {
+      "band_lo_uhz": 5.0,
+      "band_hi_uhz": 1000.0,
+      "broadcast": {
+        "lambda_km": 27740,
+        "R2": 0.708,
+        "null_separation_sigma": 12.5,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 37,
+        "n_days": 7
+      },
+      "precise": {
+        "lambda_km": 2371,
+        "R2": 0.887,
+        "null_separation_sigma": 18.0,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 38,
+        "n_days": 30
+      }
+    },
+    "narrow_lo": {
+      "band_lo_uhz": 20.0,
+      "band_hi_uhz": 500.0,
+      "broadcast": {
+        "lambda_km": 28759,
+        "R2": 0.749,
+        "null_separation_sigma": 16.9,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 37,
+        "n_days": 7
+      },
+      "precise": {
+        "lambda_km": 2297,
+        "R2": 0.868,
+        "null_separation_sigma": 15.2,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 38,
+        "n_days": 30
+      }
+    },
+    "narrow_hi": {
+      "band_lo_uhz": 10.0,
+      "band_hi_uhz": 200.0,
+      "broadcast": {
+        "lambda_km": 26897,
+        "R2": 0.706,
+        "null_separation_sigma": 11.1,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 37,
+        "n_days": 7
+      },
+      "precise": {
+        "lambda_km": 2326,
+        "R2": 0.888,
+        "null_separation_sigma": 27.5,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 38,
+        "n_days": 30
+      }
+    },
+    "raw": {
+      "band_lo_uhz": null,
+      "band_hi_uhz": null,
+      "broadcast": {
+        "lambda_km": 28063,
+        "R2": 0.708,
+        "null_separation_sigma": 13.9,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 37,
+        "n_days": 7
+      },
+      "precise": {
+        "lambda_km": 2393,
+        "R2": 0.888,
+        "null_separation_sigma": 32.0,
+        "null_empirical_p": 0.038461538461538464,
+        "null_statistic": "fitted_R2",
+        "n_bins": 38,
+        "n_days": 30
+      }
+    }
+  },
+  "robustness_by_product": {
+    "broadcast": false,
+    "precise": true
+  },
+  "robust": false,
+  "timestamp": "2026-09-01T18:16:46.740301"
+}

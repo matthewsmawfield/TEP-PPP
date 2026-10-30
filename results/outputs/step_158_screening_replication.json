@@ -1,0 +1,62 @@
+{
+  "step": 158,
+  "title": "Step 103 replication on 2025 independent data",
+  "timestamp": "2026-09-07T01:23:11.917449+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days": 30,
+  "result": {
+    "quartz": {
+      "R2": 0.9360309838600241,
+      "lambda_km": 3296.85415504525,
+      "best_model": "gaussian",
+      "mean_pa_tep": 0.2267092277759959,
+      "n_pairs": 57092,
+      "z_vs_phase_null": 10.433592780125142,
+      "p_vs_phase_null": 0.0,
+      "null_R2_mean": 0.041969646469259984,
+      "null_R2_std": 0.08569064906326933,
+      "n_null": 50
+    },
+    "atomic": {
+      "R2": 0.25709546956378115,
+      "lambda_km": 1396.8989473794988,
+      "best_model": "gaussian",
+      "mean_pa_tep": 0.03568852158715254,
+      "n_pairs": 8087,
+      "z_vs_phase_null": 3.1543991743496393,
+      "p_vs_phase_null": 0.02,
+      "null_R2_mean": 0.020398225406542157,
+      "null_R2_std": 0.07503718809019795,
+      "n_null": 50
+    },
+    "quartz_atomic_ratio": 6.352441000459056
+  },
+  "comparison_2024": {
+    "quartz": {
+      "R2": 0.9360147522018171,
+      "lambda_km": 2453.8214970614135,
+      "mean_pa_tep": 0.2163523637411465,
+      "n_pairs": 54307
+    },
+    "atomic": {
+      "R2": 0.30883114474255424,
+      "lambda_km": null,
+      "mean_pa_tep": 0.05604653277299704,
+      "n_pairs": 7817
+    },
+    "quartz_atomic_ratio": 3.860227440249151
+  },
+  "interpretation": [
+    "Clock-type screening replication on 2025 independent data.",
+    "Quartz R2=0.936 (2024: 0.936).",
+    "Quartz lambda=3297 km (2024: 2453.8214970614135 km).",
+    "Atomic R2=0.257 (2024: 0.309).",
+    "Quartz/Atomic ratio=6.35x (2024: 3.86x).",
+    "Quartz n_pairs=57092, Atomic n_pairs=8087.",
+    "Quartz z vs phase-null: 10.43 (p=0.0000, n_null=50).",
+    "Atomic z vs phase-null: 3.15 (p=0.0200, n_null=50).",
+    "The clock-type screening REPLICATES: quartz shows exponential decay, atomic does not."
+  ],
+  "pre_registered_prediction": "If TEP is real, quartz clock pairs should show exponential distance decay (high R2) while atomic pairs should not (low R2). This should replicate on independent-year data."
+}

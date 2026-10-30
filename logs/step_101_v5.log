@@ -1,0 +1,248 @@
+STEP 101  |  full-field predictor at the TEP scale | 40 days
+{
+  "n_days_used": 40,
+  "gaps_s": [
+    3600,
+    14400
+  ],
+  "lambda_sweep_km": [
+    500.0,
+    2000.0,
+    4200.0,
+    8000.0
+  ],
+  "by_gap": {
+    "3600": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 1.5121131528436917,
+        "phase_filtered_krige": 1.5220675187726964,
+        "phase_only_krige": 5.215341900017508,
+        "persistence": 1.5282793851347396
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 0.9259115397771633,
+        "ci95": [
+          -0.559646193689578,
+          2.050442312895062
+        ],
+        "n": 40,
+        "frac_positive": 0.575
+      },
+      "phase_filtered_vs_persistence_pct": {
+        "median": 0.41600139244796774,
+        "ci95": [
+          -0.8182871651229107,
+          1.1139254921382957
+        ],
+        "n": 40,
+        "frac_positive": 0.525
+      },
+      "phase_filtered_vs_amplitude_pct": {
+        "median": -0.8641386192305256,
+        "ci95": [
+          -1.1977823573647517,
+          -0.07901416586467702
+        ],
+        "n": 40,
+        "frac_positive": 0.3
+      },
+      "phase_only_vs_persistence_pct": {
+        "median": -250.0036946082759,
+        "ci95": [
+          -262.63300701364955,
+          -243.0619476429968
+        ],
+        "n": 40,
+        "frac_positive": 0.0
+      },
+      "phase_only_vs_amplitude_pct": {
+        "median": -252.30662491337694,
+        "ci95": [
+          -269.0303553510241,
+          -245.7517774550607
+        ],
+        "n": 40,
+        "frac_positive": 0.0
+      },
+      "amplitude_beats_persistence": false,
+      "phase_filtered_beats_amplitude": false
+    },
+    "14400": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 2.731458757832685,
+        "phase_filtered_krige": 2.733492122860431,
+        "phase_only_krige": 10.639581492883634,
+        "persistence": 3.0984836130601283
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 11.00329774847884,
+        "ci95": [
+          10.026802574674976,
+          12.84256327094704
+        ],
+        "n": 40,
+        "frac_positive": 1.0
+      },
+      "phase_filtered_vs_persistence_pct": {
+        "median": 10.421611040011419,
+        "ci95": [
+          8.93177582810436,
+          12.271008258311689
+        ],
+        "n": 40,
+        "frac_positive": 0.975
+      },
+      "phase_filtered_vs_amplitude_pct": {
+        "median": -0.6524370140429614,
+        "ci95": [
+          -1.6084531820379722,
+          0.534695845507932
+        ],
+        "n": 40,
+        "frac_positive": 0.475
+      },
+      "phase_only_vs_persistence_pct": {
+        "median": -249.80007675346565,
+        "ci95": [
+          -266.3600764317646,
+          -238.76105808874752
+        ],
+        "n": 40,
+        "frac_positive": 0.0
+      },
+      "phase_only_vs_amplitude_pct": {
+        "median": -296.8183877029267,
+        "ci95": [
+          -311.1579281081055,
+          -285.53796657984356
+        ],
+        "n": 40,
+        "frac_positive": 0.0
+      },
+      "amplitude_beats_persistence": true,
+      "phase_filtered_beats_amplitude": false
+    }
+  },
+  "lambda_sweep_at_long_gap": {
+    "500": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 2.907108993069163,
+        "persistence": 3.0984836130601283
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 5.3399721771385575,
+        "ci95": [
+          4.422704524839737,
+          6.1390267418418745
+        ],
+        "n": 40,
+        "frac_positive": 0.975
+      }
+    },
+    "2000": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 2.6717430345423177,
+        "persistence": 3.0984836130601283
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 13.199719560117229,
+        "ci95": [
+          10.827020349363892,
+          14.75000134860136
+        ],
+        "n": 40,
+        "frac_positive": 0.975
+      }
+    },
+    "4200": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 2.731458757832685,
+        "persistence": 3.0984836130601283
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 11.00329774847884,
+        "ci95": [
+          9.97351479907404,
+          12.84256327094704
+        ],
+        "n": 40,
+        "frac_positive": 1.0
+      }
+    },
+    "8000": {
+      "n_days_used": 40,
+      "median_rms_m": {
+        "amplitude_krige": 2.8345077098622955,
+        "persistence": 3.0984836130601283
+      },
+      "amplitude_vs_persistence_pct": {
+        "median": 7.541530417047904,
+        "ci95": [
+          6.996961296510712,
+          8.426585500425777
+        ],
+        "n": 40,
+        "frac_positive": 1.0
+      }
+    }
+  },
+  "median_rms_m": {
+    "amplitude_krige": 2.731458757832685,
+    "phase_filtered_krige": 2.733492122860431,
+    "phase_only_krige": 10.639581492883634,
+    "persistence": 3.0984836130601283
+  },
+  "amplitude_vs_persistence_pct": {
+    "median": 11.00329774847884,
+    "ci95": [
+      10.026802574674976,
+      12.84256327094704
+    ],
+    "n": 40,
+    "frac_positive": 1.0
+  },
+  "phase_filtered_vs_persistence_pct": {
+    "median": 10.421611040011419,
+    "ci95": [
+      8.93177582810436,
+      12.271008258311689
+    ],
+    "n": 40,
+    "frac_positive": 0.975
+  },
+  "phase_filtered_vs_amplitude_pct": {
+    "median": -0.6524370140429614,
+    "ci95": [
+      -1.6084531820379722,
+      0.534695845507932
+    ],
+    "n": 40,
+    "frac_positive": 0.475
+  },
+  "phase_only_vs_persistence_pct": {
+    "median": -249.80007675346565,
+    "ci95": [
+      -266.3600764317646,
+      -238.76105808874752
+    ],
+    "n": 40,
+    "frac_positive": 0.0
+  },
+  "phase_only_vs_amplitude_pct": {
+    "median": -296.8183877029267,
+    "ci95": [
+      -311.1579281081055,
+      -285.53796657984356
+    ],
+    "n": 40,
+    "frac_positive": 0.0
+  },
+  "amplitude_beats_persistence": true,
+  "phase_filtered_beats_amplitude": false
+}
+saved results/outputs/step_101_full_field_predictor.json

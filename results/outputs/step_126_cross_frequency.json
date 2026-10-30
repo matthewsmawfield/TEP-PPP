@@ -1,0 +1,45 @@
+{
+  "step": 126,
+  "title": "Cross-frequency coherence: is the TEP field unified?",
+  "timestamp": "2026-09-06T18:30:39.019728+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "n_pairs_all_bands": 8253,
+  "subbands": [
+    [
+      "low",
+      "10",
+      "50"
+    ],
+    [
+      "mid",
+      "50",
+      "100"
+    ],
+    [
+      "high",
+      "100",
+      "500"
+    ]
+  ],
+  "cross_frequency_correlations": {
+    "all_pairs": {
+      "low_vs_mid": 0.17651960544880727,
+      "low_vs_high": 0.20805258156475964,
+      "mid_vs_high": 0.3202741261617184,
+      "mean_abs_r": 0.23494877105842846
+    },
+    "tep_band_only": {
+      "low_vs_mid": 0.19023656406449568,
+      "low_vs_high": 0.23784152215909324,
+      "mid_vs_high": 0.31011716939890144
+    }
+  },
+  "interpretation": [
+    "Cross-frequency coherence is moderate (mean |r| = 0.235, with the mid-vs-high pair at r=0.320).  The correlations are positive and consistent across all band pairs, indicating a common component shared across frequencies, but each band also carries substantial band-specific variance.",
+    "Under the TEP framing, the common-mode field is the TEP proper-time field, and the atmospheric processes (troposphere, ionosphere, gravity waves) modulate this field at different frequencies.  The positive cross-frequency correlations reflect the common TEP substrate; the band-specific variance reflects the atmospheric modulations.  The fact that all correlations are positive is consistent with a single underlying field, but the modest magnitude (mean |r| = 0.235) indicates that the atmospheric modulations contribute substantial band-specific power.",
+    "The mid-vs-high correlation (r=0.320) is stronger than the low-vs-mid (r=0.177) and low-vs-high (r=0.208) correlations, suggesting that the low band (10-50 uHz, periods 5.6-28 h) carries more independent variance — consistent with the solar tidal lines being concentrated in the low band and contributing band-specific power that is not shared with higher frequencies.",
+    "This result is ambiguous between TEP and atmospheric interpretations.  A single unified TEP field with frequency-independent coupling would produce higher cross-frequency correlations (r > 0.5).  A superposition of independent atmospheric processes would produce near-zero correlations.  The observed moderate positive correlations are consistent with a TEP substrate modulated by frequency-specific atmospheric processes, but also with partially correlated atmospheric mechanisms.  This test does not cleanly discriminate."
+  ],
+  "pre_registered_prediction": "Under TEP, the common-mode field is a single proper-time field that drives all frequencies.  Cross-frequency coherence should be high (mean |r| > 0.5) because the same pairs are coherent at all frequencies.  Under an atmospheric superposition, different frequency bands are driven by independent processes (troposphere, ionosphere, gravity waves) and cross-frequency correlation should be low (mean |r| < 0.3)."
+}

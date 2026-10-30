@@ -1,0 +1,48 @@
+{
+  "probe": "pruned_lf_spatial_basis_clean_origin",
+  "motivation": "v0.2 peer-review proposal: prune the 5,990-col RRR basis to ~164 physics-projected LF/spatial features (16 macro-modes + 2x68 station residuals), shrink toward a fixed 3-band kriging prior w0 instead of zero, and replace the tail taper with a horizon-growing envelope; expected to raise clean-origin forward skill above +3.39% by removing >200uHz 'timestamp fingerprinting' columns.",
+  "implementation": "scripts/lib/rrr_pruned_basis.py + /tmp/pruned_probe.py; identical corpus (40 windows <= 1793132392), identical member-Gram convention (fit-half, r_f = lev - b_pre), identical decay ring (K=16, hl=1.25), identical scoring (pure correction, demeaned, +-8 m clip) as the committed clean arm.",
+  "clean_origin_arm": {
+    "standard_to_zero_ridge_untapered_pct_by_lam": {
+      "1e2": -97.53,
+      "1e3": -68.04,
+      "1e4": -50.44,
+      "5e4": -39.52,
+      "1e5": -33.99,
+      "5e5": -24.69,
+      "1e6": -22.64,
+      "5e6": -20.41,
+      "1e7": -19.26
+    },
+    "prior_centered_untapered_pct_by_lam_macro": {
+      "1e2": -61.87,
+      "1e3": -49.0,
+      "1e4": -34.32,
+      "1e5": -28.08,
+      "1e6": -38.51
+    },
+    "w0_physics_prior_only_pct": -193.4,
+    "verdict": "uniformly negative at every lambda; the w0 kriging blend is a large anti-correction"
+  },
+  "deployed_regime_holdout_grams_pct_by_lam": {
+    "1e3": 9.82,
+    "1e5": 2.89,
+    "1e6": 0.72,
+    "5e6": 0.49,
+    "reference_full_basis_lam2000": 42.66,
+    "verdict": "pruned basis retains ~23% of retrodiction skill at best; the 'noise' columns carry the map"
+  },
+  "diagnostics": {
+    "in_sample_fit_half_gain_pct": 22.36,
+    "eval_dep_rms_m": 7.95,
+    "eval_target_rms_m": 3.01,
+    "corr_eval_dep_vs_target": -0.339,
+    "macro_mode_target_corr_fit_half": "~0 (-0.04..-0.15)",
+    "macro_mode_target_corr_eval": "+0.31..+0.41",
+    "mechanism": "macro kriging modes correlate with the ramp-inclusive holdout target (+0.35) but ~0 with the level-anchored fit-half target; the regime gap, not HF fingerprinting, bounds clean-origin transfer"
+  },
+  "conclusion": "The reviewer's prescription is refuted on the pinned corpus: pruning to LF spatial macro-modes does not raise the clean-origin forward component (uniformly negative, -19..-98%) and loses ~77% of deployed-regime skill (+9.82% best vs +42.66%). The high-frequency per-station columns carry the genuine spatial map \u2014 consistent with the station-permutation null (z~6-7), which proves that map is spatially specific rather than epoch-fingerprint noise. The +2.6-3.4% clean-origin ceiling is set by the fit/holdout regime gap plus the ~90-min coherence bound, not by basis dimensionality.",
+  "caveat": "one implementation of the proposed basis; the w0 arm result is implementation-independent (their formula), and the sign-flip mechanism is structural",
+  "timestamp": "2026-10-30T00:05:00+00:00",
+  "figure": null
+}

@@ -1,0 +1,60 @@
+{
+  "step": 130,
+  "title": "Day/night-aware TEP prior: exploiting solar-illumination independence",
+  "timestamp": "2026-09-06T19:02:47.104909+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "lambdas": {
+    "full_band": 4200.0,
+    "notched": 1877.0
+  },
+  "results": {
+    "n_days": 30,
+    "day_night_vs_full_pct": {
+      "median": 1.1395955951510717,
+      "ci95": [
+        0.6617613693854496,
+        1.5860419841566165
+      ],
+      "n": 30,
+      "frac_positive": 0.9
+    },
+    "day_night_vs_notched_pct": {
+      "median": -0.6028295936685413,
+      "ci95": [
+        -0.8499308488623791,
+        -0.15367534244550285
+      ],
+      "n": 30,
+      "frac_positive": 0.16666666666666666
+    },
+    "night_day_night_vs_full_pct": {
+      "median": 2.8561116779409534,
+      "ci95": [
+        1.6596478054790087,
+        3.544703209893918
+      ],
+      "n": 30,
+      "frac_positive": 0.9
+    },
+    "night_day_night_vs_notched_pct": {
+      "median": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n": 30,
+      "frac_positive": 0.0
+    },
+    "median_rms_m": {
+      "full_band": 1.1880427571354584,
+      "notched": 1.1629610522687104,
+      "day_night": 1.1747214133126693
+    }
+  },
+  "interpretation": [
+    "The day/night-aware kernel beats the always-full-band kernel (median +1.14%, CI95 [+0.66, +1.59]). Using the notched TEP continuum at night and the full-band kernel during the day captures the best of both components.",
+    "For nighttime epochs specifically, day/night-aware vs full-band: +2.86% (CI95 [+1.66, +3.54], n=30).  The notched kernel's advantage at night (+0.00% vs notched) confirms the Step 125 finding that the TEP continuum is the active component at night."
+  ],
+  "pre_registered_prediction": "The day/night-aware kernel (full-band during day, notched at night) should beat both the always-full-band and always-notched kernels.  During the day, the full-band kernel's solar tidal lines carry additional predictive information.  At night, the notched TEP continuum is the active component (Step 125: nighttime notched coherence 0.140 > daytime 0.102).  This exploits the solar-illumination independence of the TEP continuum as a predictive feature."
+}

@@ -1,0 +1,174 @@
+{
+  "step": 140,
+  "title": "Multi-band TEP prior with full null controls and ablation",
+  "timestamp": "2026-09-06T20:01:58.392848+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 57,
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "lambda_scramble": [
+    1502.0,
+    4677.0,
+    1459.0
+  ],
+  "results": {
+    "n_days": 57,
+    "multi_vs_full_band_pct": {
+      "median": 2.191585077832814,
+      "ci95": [
+        1.5575213456469617,
+        2.886811690706137
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "multi_vs_empirical_pct": {
+      "median": 0.5578954704332229,
+      "ci95": [
+        0.37107301141755533,
+        1.2336412027968757
+      ],
+      "n": 57,
+      "frac_positive": 0.6842105263157895
+    },
+    "multi_vs_geometry_scramble_pct": {
+      "median": 1.0976445977805227,
+      "ci95": [
+        0.9340473760921397,
+        1.4592032795441967
+      ],
+      "n": 57,
+      "frac_positive": 0.8421052631578947
+    },
+    "multi_vs_phase_scramble_pct": {
+      "median": 1.1090284958508612,
+      "ci95": [
+        0.3202078714329981,
+        1.7480888758963253
+      ],
+      "n": 57,
+      "frac_positive": 0.7017543859649122
+    },
+    "multi_vs_lambda_scramble_pct": {
+      "median": 0.6777582812183214,
+      "ci95": [
+        0.454066029818434,
+        0.7765781746479461
+      ],
+      "n": 57,
+      "frac_positive": 0.7894736842105263
+    },
+    "multi_vs_no_tidal_pct": {
+      "median": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "n": 57,
+      "frac_positive": 0.0
+    },
+    "multi_vs_no_post_tidal_pct": {
+      "median": 0.16577935565684765,
+      "ci95": [
+        0.019108761118025175,
+        0.3160324725015484
+      ],
+      "n": 57,
+      "frac_positive": 0.7017543859649122
+    },
+    "multi_vs_no_intermediate_pct": {
+      "median": 0.6626386130052508,
+      "ci95": [
+        0.5537675915438856,
+        0.8718322162568959
+      ],
+      "n": 57,
+      "frac_positive": 0.9122807017543859
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "multi_band": 1.31922915487668,
+      "empirical": 1.3109799418092287,
+      "geometry_scramble": 1.423376788845813,
+      "phase_scramble": 1.319374909036198,
+      "lambda_scramble": 1.3168299459563841,
+      "no_tidal": 1.31922915487668,
+      "no_post_tidal": 1.3812971553776277,
+      "no_intermediate": 1.2985829464359653
+    },
+    "gate_pass": false,
+    "gate_checks": {
+      "full_band": {
+        "median": 2.191585077832814,
+        "ci95_lower": 1.5575213456469617,
+        "passed": true
+      },
+      "empirical": {
+        "median": 0.5578954704332229,
+        "ci95_lower": 0.37107301141755533,
+        "passed": true
+      },
+      "geometry_scramble": {
+        "median": 1.0976445977805227,
+        "ci95_lower": 0.9340473760921397,
+        "passed": true
+      },
+      "phase_scramble": {
+        "median": 1.1090284958508612,
+        "ci95_lower": 0.3202078714329981,
+        "passed": true
+      },
+      "lambda_scramble": {
+        "median": 0.6777582812183214,
+        "ci95_lower": 0.454066029818434,
+        "passed": true
+      },
+      "no_tidal": {
+        "median": 0.0,
+        "ci95_lower": 0.0,
+        "passed": false
+      },
+      "no_post_tidal": {
+        "median": 0.16577935565684765,
+        "ci95_lower": 0.019108761118025175,
+        "passed": true
+      },
+      "no_intermediate": {
+        "median": 0.6626386130052508,
+        "ci95_lower": 0.5537675915438856,
+        "passed": true
+      }
+    }
+  },
+  "interpretation": [
+    "Multi-band vs full-band single-lambda: BEATS (median +2.19%, CI95 [+1.56, +2.89])",
+    "Multi-band vs empirical covariance: BEATS (median +0.56%, CI95 [+0.37, +1.23])",
+    "Multi-band vs geometry scramble: BEATS (median +1.10%, CI95 [+0.93, +1.46])",
+    "Multi-band vs phase scramble: BEATS (median +1.11%, CI95 [+0.32, +1.75])",
+    "Multi-band vs lambda scramble: BEATS (median +0.68%, CI95 [+0.45, +0.78])",
+    "Multi-band vs no_tidal (ablation): band may not contribute (median +0.00%, CI95 [+0.00, +0.00])",
+    "Multi-band vs no_post_tidal (ablation): band contributes (median +0.17%, CI95 [+0.02, +0.32])",
+    "Multi-band vs no_intermediate (ablation): band contributes (median +0.66%, CI95 [+0.55, +0.87])",
+    "GATE PARTIAL: the multi-band kernel does not beat: ['no_tidal']. The result needs further investigation."
+  ],
+  "pre_registered_prediction": "The multi-band kernel must beat all null controls (geometry scramble, phase scramble, lambda scramble) and all ablations (no_tidal, no_post_tidal, no_intermediate) with positive CI lower bounds. If it passes, the frequency-dependent lambdas from Paper 1 carry genuine physics-fixed predictive structure."
+}

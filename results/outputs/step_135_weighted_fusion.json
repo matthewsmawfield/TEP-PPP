@@ -1,0 +1,100 @@
+{
+  "step": 135,
+  "title": "Weighted band fusion for multi-band TEP prior",
+  "timestamp": "2026-09-06T19:35:39.285971+00:00",
+  "product": "clk_cod",
+  "n_dev_days": 30,
+  "n_eval_days": 57,
+  "frozen_fusion_weights": {
+    "tidal": 2.25,
+    "post_tidal": 1.75,
+    "intermediate": 1.0
+  },
+  "results": {
+    "n_days": 57,
+    "frozen_fusion_weights": {
+      "tidal": 2.25,
+      "post_tidal": 1.75,
+      "intermediate": 1.0
+    },
+    "dev_vs_full_band_pct": {
+      "median": 2.159287386765796,
+      "ci95": [
+        1.5576853944191504,
+        2.7640432128180903
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "dev_vs_avg_pct": {
+      "median": -0.034587904736582686,
+      "ci95": [
+        -0.04761446415646464,
+        -0.02252231401389526
+      ],
+      "n": 57,
+      "frac_positive": 0.22807017543859648
+    },
+    "dev_vs_empirical_pct": {
+      "median": 0.5770484858674485,
+      "ci95": [
+        0.2536504572759113,
+        1.2001421264769219
+      ],
+      "n": 57,
+      "frac_positive": 0.6842105263157895
+    },
+    "iv_vs_full_band_pct": {
+      "median": 1.9646725011896793,
+      "ci95": [
+        1.5875955335272085,
+        3.0422369797232784
+      ],
+      "n": 57,
+      "frac_positive": 0.8245614035087719
+    },
+    "iv_vs_empirical_pct": {
+      "median": 0.5133482743788553,
+      "ci95": [
+        0.27841865451824144,
+        1.1747598762687272
+      ],
+      "n": 57,
+      "frac_positive": 0.7192982456140351
+    },
+    "energy_vs_full_band_pct": {
+      "median": 2.191585077832814,
+      "ci95": [
+        1.5575213456469617,
+        2.886811690706137
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "energy_vs_empirical_pct": {
+      "median": 0.5578954704332229,
+      "ci95": [
+        0.37107301141755533,
+        1.2336412027968757
+      ],
+      "n": 57,
+      "frac_positive": 0.6842105263157895
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "avg": 1.31922915487668,
+      "dev_tuned": 1.3132666016999757,
+      "inv_var": 1.3501013502659978,
+      "energy": 1.31922915487668,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "The dev-tuned weighted multi-band kernel BEATS the single-lambda full-band kernel on independent-year data (median +2.16%, CI95 [+1.56, +2.76]). The frozen fusion weights (tidal=2.25, post_tidal=1.75, intermediate=1.00) were tuned on 2024 development data and applied without modification to 2025.",
+    "The dev-tuned weights do not beat the simple average (-0.03%).  Uniform fusion is sufficient.",
+    "The dev-tuned multi-band kernel BEATS empirical covariance on independent-year data (median +0.58%, CI95 [+0.25, +1.20]). The physics-fixed frequency-dependent lambdas with tuned fusion generalise where the data-driven covariance overfits.",
+    "Inverse-variance fusion vs full-band: +1.96% (CI95 [+1.59, +3.04]).",
+    "Energy-weighted fusion vs full-band: +2.19% (CI95 [+1.56, +2.89])."
+  ],
+  "pre_registered_prediction": "The dev-tuned weighted fusion should beat the simple average (Step 134) because the bands carry different amounts of predictive power.  The frozen weights (tuned on 2024, applied to 2025) preserve the independent-year protocol."
+}

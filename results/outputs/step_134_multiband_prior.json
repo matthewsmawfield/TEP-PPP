@@ -1,0 +1,61 @@
+{
+  "step": 134,
+  "title": "Multi-band frequency-dependent TEP prior",
+  "timestamp": "2026-09-07T00:24:32.800809+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 57,
+  "multi_band_fallback_count": 0,
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "fusion_method": "simple average of per-band predictions",
+  "results": {
+    "n_days": 57,
+    "multi_band_vs_full_band_pct": {
+      "median": 2.191585077832814,
+      "ci95": [
+        1.5575213456469617,
+        2.886811690706137
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "multi_band_vs_empirical_pct": {
+      "median": 0.5578954704332229,
+      "ci95": [
+        0.37107301141755533,
+        1.2336412027968757
+      ],
+      "n": 57,
+      "frac_positive": 0.6842105263157895
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "multi_band": 1.31922915487668,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "The multi-band frequency-dependent TEP kernel BEATS the single-lambda full-band kernel on independent-year data (median +2.19%, CI95 [+1.56, +2.89]). Using the correct physics-fixed lambda for each frequency band (tidal=4677 km, post-tidal=1502 km, intermediate=1459 km, from Paper 1) captures more predictive power than a single compromise lambda.  The gravitational tidal band gets its proper long scale and the continuum gets its proper shorter scale.",
+    "The multi-band TEP kernel BEATS empirical covariance on independent-year data (median +0.56%, CI95 [+0.37, +1.23]). The physics-fixed frequency-dependent lambdas generalise where the data-driven covariance overfits.  This is the first positive P1 result on independent-year data using the full gravitational structure of the TEP field."
+  ],
+  "pre_registered_prediction": "The multi-band kernel uses the correct physics-fixed lambda for each frequency band (Paper 1: tidal=4677 km, post-tidal=1502 km, intermediate=1459 km).  It should beat the single-lambda full-band kernel (4200 km) because each band gets its proper spatial scale.  It should beat empirical covariance because the physics-fixed scales generalise where the data-driven covariance overfits."
+}

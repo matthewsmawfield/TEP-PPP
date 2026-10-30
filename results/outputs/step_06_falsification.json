@@ -1,0 +1,39 @@
+{
+  "tep_dynamic_pct": 50.11145186709676,
+  "network_mean_pct": 59.57082348240767,
+  "uniform_kriging_scaled_mean_pct": 58.31495224605151,
+  "mean_optimal_beta_refsonly_pct": 59.660300548850955,
+  "iso_4200km_pct": 57.74406134113821,
+  "geometry_gain_vs_scaled_mean_pp": -0.5708909049132984,
+  "iso_lambda_sweep_pct": {
+    "300": 27.03113337057985,
+    "1000": 51.16789543425984,
+    "2000": 56.05365966421668,
+    "4200": 57.74406134113821,
+    "10000": 58.21646384882571,
+    "40000": 58.312274516571094,
+    "200000": 58.315665389936655
+  },
+  "lambda_sweep_spread_pp": 2.2620057257199733,
+  "scrambled_geometry_null_pct_mean": 56.574596478974996,
+  "scrambled_geometry_null_95ci": [
+    55.83767822531262,
+    57.60352794935222
+  ],
+  "time_shuffled_pct": -12.493960103601676,
+  "time_shuffled_std": 3.461081787683962,
+  "time_shuffled_percentile_range": [
+    -19.2085006317993,
+    -5.504733244884044
+  ],
+  "time_shuffled_n_trials": 200,
+  "test_A_beats_network_mean": false,
+  "test_Aprime_beats_scaled_mean": false,
+  "test_B_lambda_dependent": false,
+  "test_C_geometry_dependent": true,
+  "test_D_time_coherent": true,
+  "tep_specific_information_demonstrated": false,
+  "falsification_success": false,
+  "n_days": 7,
+  "timestamp": "2026-09-03T23:34:25.327047"
+}

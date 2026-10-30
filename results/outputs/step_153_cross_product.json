@@ -1,0 +1,87 @@
+{
+  "step": 153,
+  "title": "Cross-product replication",
+  "timestamp": "2026-09-06T23:26:23.373623+00:00",
+  "year": 2025,
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "results": {
+    "clk_cod": {
+      "n_days": 88,
+      "multi_band_vs_full_band_pct": {
+        "median": 2.3414354503640435,
+        "ci95": [
+          2.063981928363534,
+          2.6088858520433025
+        ],
+        "n": 88,
+        "frac_positive": 0.9659090909090909
+      },
+      "multi_band_vs_empirical_pct": {
+        "median": 1.546128081925513,
+        "ci95": [
+          0.3776502401463322,
+          2.1045899763532994
+        ],
+        "n": 88,
+        "frac_positive": 0.6363636363636364
+      },
+      "median_rms_m": {
+        "full_band": 0.930214148934003,
+        "multi_band": 0.9090968604617959,
+        "empirical": 0.9230918642694035
+      }
+    },
+    "clk_gfz": {
+      "n_days": 49,
+      "multi_band_vs_full_band_pct": {
+        "median": 2.2440609502199504,
+        "ci95": [
+          1.6754106582421158,
+          3.0061436764625804
+        ],
+        "n": 49,
+        "frac_positive": 0.9387755102040817
+      },
+      "multi_band_vs_empirical_pct": {
+        "median": 1.1762385434546108,
+        "ci95": [
+          0.4255536753908662,
+          2.694790267961922
+        ],
+        "n": 49,
+        "frac_positive": 0.6530612244897959
+      },
+      "median_rms_m": {
+        "full_band": 1.6098806433006627,
+        "multi_band": 1.5966990885374053,
+        "empirical": 1.587801742539964
+      }
+    }
+  },
+  "interpretation": [
+    "clk_cod: multi vs full-band +2.34% (CI [+2.06, +2.61]), multi vs empirical +1.55% (CI [+0.38, +2.10]).",
+    "clk_gfz: multi vs full-band +2.24% (CI [+1.68, +3.01]), multi vs empirical +1.18% (CI [+0.43, +2.69]).",
+    "Cross-product: COD multi vs full = +2.34%, GFZ multi vs full = +2.24%. Difference = -0.10%.",
+    "The multi-band advantage replicates on GFZ with a positive CI. This rules out a COD-specific processing artefact."
+  ],
+  "pre_registered_prediction": "If the multi-band advantage is a real TEP field effect, it should replicate on GFZ (different analysis centre, different processing pipeline). If it is a COD-specific artefact, it will not."
+}

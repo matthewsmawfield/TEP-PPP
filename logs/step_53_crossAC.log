@@ -1,0 +1,23 @@
+
+[precise_cod] 30 days, 144,397 pairs, 32 bins
+  BEST: gaussian  lambda = 4348 km  R2 = 0.898   in TEP band: True
+     exponential  lambda=    3820 km  R2=0.894  AIC=143.1
+     gaussian     lambda=    4348 km  R2=0.898  AIC=137.5
+  null phase-randomise  : R2 0.0041 -> 27.0 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+  null distance-scramble: R2 0.0113 -> 17.6 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+
+[precise_gfz] 30 days, 117,689 pairs, 30 bins
+  BEST: exponential  lambda = 4076 km  R2 = 0.955   in TEP band: True
+     exponential  lambda=    4076 km  R2=0.955  AIC=78.7
+     gaussian     lambda=    4763 km  R2=0.928  AIC=122.0
+  null phase-randomise  : R2 0.0051 -> 25.6 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+  null distance-scramble: R2 0.0092 -> 19.3 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+
+[broadcast_spp] 7 days, 3,883 pairs, 26 bins
+  BEST: gaussian  lambda = 2778 km  R2 = 0.683   in TEP band: True
+     exponential  lambda=    2590 km  R2=0.650  AIC=282.9
+     gaussian     lambda=    2778 km  R2=0.683  AIC=257.0
+  null phase-randomise  : R2 0.0093 -> 12.5 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+  null distance-scramble: R2 0.0027 -> 25.1 sigma, 0/200 nulls reached the observed R2 (p = 0.0050)
+
+saved results/outputs/step_53_coherent_lambda.json

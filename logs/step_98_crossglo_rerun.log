@@ -1,0 +1,56 @@
+STEP 98  |  satellite-channel flagship | 180 SP3 days (of 366 available)
+  loaded 180 usable days  (median 114 sats/day)
+  band RMS per constellation: {'C': 3.6228, 'E': 2.3289, 'G': 5.7645, 'R': 19.4989}
+
+[gps_only]  lambda = 40000 +/- 4699 km   R2 = 0.627   A=0.5002 C0=-0.2413   (87,081 pair-days, 20 bins)
+  model comparison: best=power_law  dAIC(exp vs best)=0.1
+  structure: c_near=0.520  c_far=-0.026  contrast=+0.546  log_slope=-0.2685
+scripts/lib/tep_stats.py:530: OptimizeWarning: Covariance of the parameters could not be estimated
+  popt, pcov = curve_fit(power_model, d, v, p0=[1.0, 1.0, float(np.median(v))],
+scripts/lib/tep_stats.py:530: OptimizeWarning: Covariance of the parameters could not be estimated
+  popt, pcov = curve_fit(power_model, d, v, p0=[1.0, 1.0, float(np.median(v))],
+scripts/lib/tep_stats.py:530: OptimizeWarning: Covariance of the parameters could not be estimated
+  popt, pcov = curve_fit(power_model, d, v, p0=[1.0, 1.0, float(np.median(v))],
+  null phase_randomise : contrast +0.004±0.034 (p=0.000, z=+15.9)   slope -0.0009 (p=0.000, z=+34.6)
+  null pair_shuffle    : contrast -0.004±0.032 (p=0.000, z=+17.3)   slope +0.0016 (p=0.000, z=+34.9)
+
+[galileo_only]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0261   (59,335 pair-days, 12 bins)
+  model comparison: best=constant  dAIC(exp vs best)=2.3
+  structure: c_near=0.310  c_far=0.066  contrast=+0.244  log_slope=+0.0568
+  null phase_randomise : contrast +0.000±0.028 (p=0.000, z=+8.6)   slope +0.0001 (p=1.000, z=-5.0)
+  null pair_shuffle    : contrast -0.001±0.025 (p=0.000, z=+9.6)   slope -0.0004 (p=1.000, z=-5.1)
+
+[glonass_only]  lambda = 4352 +/- 5068 km   R2 = 0.512   A=2.4391 C0=-0.0085   (36,124 pair-days, 11 bins)
+  model comparison: best=exponential  dAIC(exp vs best)=0.0
+  structure: c_near=0.024  c_far=-0.011  contrast=+0.035  log_slope=-0.0281
+  null phase_randomise : contrast -0.005±0.044 (p=0.200, z=+0.9)   slope +0.0006 (p=0.025, z=+1.8)
+  null pair_shuffle    : contrast -0.001±0.040 (p=0.175, z=+0.9)   slope -0.0025 (p=0.058, z=+1.6)
+
+[beidou_only]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0125   (110,252 pair-days, 22 bins)
+  model comparison: best=constant  dAIC(exp vs best)=1.4
+  structure: c_near=0.163  c_far=0.013  contrast=+0.150  log_slope=-0.0407
+  null phase_randomise : contrast +0.000±0.032 (p=0.000, z=+4.7)   slope +0.0001 (p=0.000, z=+6.2)
+  null pair_shuffle    : contrast +0.000±0.036 (p=0.008, z=+4.1)   slope -0.0001 (p=0.000, z=+5.8)
+
+[cross_gps_galileo]  lambda = 8140 +/- 795 km   R2 = 0.655   A=1.5189 C0=-0.0099   (148,682 pair-days, 16 bins)
+  model comparison: best=exponential  dAIC(exp vs best)=0.0
+  structure: c_near=0.117  c_far=0.013  contrast=+0.105  log_slope=-0.1723
+  null phase_randomise : contrast -0.001±0.048 (p=0.017, z=+2.2)   slope +0.0003 (p=0.000, z=+26.4)
+  null pair_shuffle    : contrast -0.006±0.052 (p=0.008, z=+2.1)   slope +0.0001 (p=0.000, z=+23.1)
+
+[all_meo]  lambda = 14291 +/- 419 km   R2 = 0.707   A=0.3271 C0=0.0034   (1,154,218 pair-days, 22 bins)
+  model comparison: best=gaussian  dAIC(exp vs best)=3.6
+  structure: c_near=0.256  c_far=0.005  contrast=+0.250  log_slope=-0.0814
+  null phase_randomise : contrast +0.001±0.027 (p=0.000, z=+9.3)   slope -0.0003 (p=0.000, z=+36.8)
+  null pair_shuffle    : contrast +0.004±0.024 (p=0.000, z=+10.4)   slope -0.0001 (p=0.000, z=+32.6)
+
+[cross_glonass]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0044   (344,423 pair-days, 18 bins)
+  model comparison: best=constant  dAIC(exp vs best)=1.3
+  structure: c_near=0.033  c_far=0.008  contrast=+0.025  log_slope=+0.0046
+  null phase_randomise : contrast -0.002±0.016 (p=0.042, z=+1.7)   slope +0.0001 (p=0.917, z=-1.2)
+  null pair_shuffle    : contrast -0.001±0.016 (p=0.075, z=+1.6)   slope +0.0002 (p=0.833, z=-1.0)
+
+  detection arms: ['gps_only', 'galileo_only', 'all_meo']
+  cross-constellation lambda = 8139.67678556573 km  z = 2.188884324942166
+  universality consistent: True
+saved results/outputs/step_98_satellite_channel_flagship.json

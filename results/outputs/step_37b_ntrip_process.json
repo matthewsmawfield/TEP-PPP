@@ -1,0 +1,1472 @@
+{
+  "test": "ntrip_live_position_demo",
+  "method": "Live NTRIP RTCM3 streams recorded from public NTRIP casters, converted to RINEX via RTKLIB convbin, processed via RTKLIB SPP (rnx2rtkp -p 0 -y 2).  Stations whose streams carry no in-band ephemeris use a pooled broadcast nav merged from the same capture's nav streams plus the live system's shared_nav product (broadcast ephemeris are receiver-independent).  Obstruction windows of 10/30/60/120/240 min, 5 satellites kept.  Clock anchored from last full-sky epoch, propagated by persistence, linear extrapolation, or network kernel.  Kernel trained on archived broadcast set (DOY 100-106, 2024); live data is held-out.  Actual 3-D position error vs median SPP position.",
+  "status": "ok",
+  "n_stations": 10,
+  "nav_fallback_stations": [
+    "AVI1",
+    "BAIO",
+    "BRAG",
+    "CASC",
+    "GAIA",
+    "GUAD",
+    "MERT",
+    "MIRA",
+    "VSEU"
+  ],
+  "recording_start_utc": "2026-10-15T19:31:27+00:00",
+  "recording_duration_s": 53483.1,
+  "caster": "agrs_nl+renep",
+  "kernel_prior": {
+    "sigma_m": 3.6656064954106644,
+    "train_day": "2024100",
+    "n_train_stations": 45
+  },
+  "by_gap_length_s": {
+    "600": {
+      "n_stations": 10,
+      "pos_error_median_m": {
+        "hold": 2.842621802960485,
+        "linrate": 5.07747307362977,
+        "kernel": 2.860477887931103
+      },
+      "kernel_vs_hold_pct": -0.6281554919483678,
+      "kernel_vs_linrate_pct": 43.66335682236888
+    },
+    "1800": {
+      "n_stations": 10,
+      "pos_error_median_m": {
+        "hold": 2.9406847259117463,
+        "linrate": 7.283732184524567,
+        "kernel": 2.8785624655396638
+      },
+      "kernel_vs_hold_pct": 2.1125100499449823,
+      "kernel_vs_linrate_pct": 60.479567444069104
+    },
+    "3600": {
+      "n_stations": 10,
+      "pos_error_median_m": {
+        "hold": 3.3582348516572997,
+        "linrate": 9.127111908605691,
+        "kernel": 3.2239774659875797
+      },
+      "kernel_vs_hold_pct": 3.997855766503755,
+      "kernel_vs_linrate_pct": 64.67691534550175
+    },
+    "7200": {
+      "n_stations": 10,
+      "pos_error_median_m": {
+        "hold": 3.533640308727713,
+        "linrate": 12.796056665494785,
+        "kernel": 3.3495571498164383
+      },
+      "kernel_vs_hold_pct": 5.20944812794355,
+      "kernel_vs_linrate_pct": 73.82352050027498
+    },
+    "14400": {
+      "n_stations": 6,
+      "pos_error_median_m": {
+        "hold": 3.751683183798342,
+        "linrate": 31.59768789878124,
+        "kernel": 3.183611218758546
+      },
+      "kernel_vs_hold_pct": 15.141789357188184,
+      "kernel_vs_linrate_pct": 89.92454375473041
+    }
+  },
+  "per_station": [
+    {
+      "station": "AVI1",
+      "n_epochs": 25561,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 39,
+          "n_gap_epochs": 22244,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.2940000000000005,
+            "linrate": 3.081822033898305,
+            "kernel": 1.267660658805026
+          },
+          "pos_error_median_m": {
+            "hold": 2.5774267179766515,
+            "linrate": 3.6198776033594187,
+            "kernel": 2.6238510084508357
+          },
+          "kernel_vs_hold_pct": -1.8011876011989392,
+          "kernel_vs_linrate_pct": 27.515477152714308
+        },
+        "1800": {
+          "n_gaps": 13,
+          "n_gap_epochs": 22124,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.8969999999999998,
+            "linrate": 6.297279661016954,
+            "kernel": 2.0576231889988197
+          },
+          "pos_error_median_m": {
+            "hold": 2.9451281751817078,
+            "linrate": 3.485658863409054,
+            "kernel": 2.921835494011522
+          },
+          "kernel_vs_hold_pct": 0.7908885381108566,
+          "kernel_vs_linrate_pct": 16.175517785641812
+        },
+        "3600": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18644,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 3.0824999999999996,
+            "linrate": 15.497847457627119,
+            "kernel": 2.9497342991374658
+          },
+          "pos_error_median_m": {
+            "hold": 3.3564565299271973,
+            "linrate": 4.816399074258354,
+            "kernel": 3.3522172121087155
+          },
+          "kernel_vs_hold_pct": 0.12630337323551455,
+          "kernel_vs_linrate_pct": 30.399928236326602
+        },
+        "7200": {
+          "n_gaps": 3,
+          "n_gap_epochs": 15104,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 3.1499999999999995,
+            "linrate": 54.29249152542374,
+            "kernel": 2.967629893505724
+          },
+          "pos_error_median_m": {
+            "hold": 2.9762059502050655,
+            "linrate": 7.9641719136876565,
+            "kernel": 2.827845014947555
+          },
+          "kernel_vs_hold_pct": 4.98490150680897,
+          "kernel_vs_linrate_pct": 64.4929184654155
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18644,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 3.0824999999999996,
+            "linrate": 15.497847457627119,
+            "kernel": 2.9497342991374658
+          },
+          "pos_error_median_m": {
+            "hold": 3.3564565299271973,
+            "linrate": 4.816399074258354,
+            "kernel": 3.3522172121087155
+          },
+          "kernel_vs_hold_pct": 0.12630337323551455,
+          "kernel_vs_linrate_pct": 30.399928236326602
+        },
+        "random": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18644,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 3.0824999999999996,
+            "linrate": 15.497847457627119,
+            "kernel": 2.9497342991374658
+          },
+          "pos_error_median_m": {
+            "hold": 2.9192591265357994,
+            "linrate": 3.8016470555315367,
+            "kernel": 3.0249232617266193
+          },
+          "kernel_vs_hold_pct": -3.6195531335448283,
+          "kernel_vs_linrate_pct": 20.431244207027465
+        },
+        "lowest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18644,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 3.0824999999999996,
+            "linrate": 15.497847457627119,
+            "kernel": 2.9497342991374658
+          },
+          "pos_error_median_m": {
+            "hold": 6.2851958563733845,
+            "linrate": 9.487293030743583,
+            "kernel": 5.983437613673884
+          },
+          "kernel_vs_hold_pct": 4.801095297507851,
+          "kernel_vs_linrate_pct": 36.932088064692984
+        }
+      }
+    },
+    {
+      "station": "BAIO",
+      "n_epochs": 25560,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 39,
+          "n_gap_epochs": 21979,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.5729999999748543,
+            "linrate": 7.559694915253203,
+            "kernel": 1.5608395351446234
+          },
+          "pos_error_median_m": {
+            "hold": 2.6116017258340647,
+            "linrate": 4.486201172801504,
+            "kernel": 2.612718455145004
+          },
+          "kernel_vs_hold_pct": -0.04276032213843539,
+          "kernel_vs_linrate_pct": 41.76100548087022
+        },
+        "1800": {
+          "n_gaps": 13,
+          "n_gap_epochs": 21798,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.5895000000018626,
+            "linrate": 22.63971186443814,
+            "kernel": 1.5248345829895698
+          },
+          "pos_error_median_m": {
+            "hold": 2.619469914510571,
+            "linrate": 6.2044223382607395,
+            "kernel": 2.5687391455097663
+          },
+          "kernel_vs_hold_pct": 1.9366807276457343,
+          "kernel_vs_linrate_pct": 58.59825451163838
+        },
+        "3600": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18318,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2370000000228174,
+            "linrate": 28.392516949243145,
+            "kernel": 2.1338246191153303
+          },
+          "pos_error_median_m": {
+            "hold": 2.8724320985227214,
+            "linrate": 5.426473426374152,
+            "kernel": 2.791205100719922
+          },
+          "kernel_vs_hold_pct": 2.8278126346163,
+          "kernel_vs_linrate_pct": 48.56318493786594
+        },
+        "7200": {
+          "n_gaps": 3,
+          "n_gap_epochs": 14778,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.985000000015134,
+            "linrate": 68.594830506976,
+            "kernel": 2.6362887984141707
+          },
+          "pos_error_median_m": {
+            "hold": 2.8675977853224968,
+            "linrate": 11.136370605920167,
+            "kernel": 2.7320855212587096
+          },
+          "kernel_vs_hold_pct": 4.725637073560063,
+          "kernel_vs_linrate_pct": 75.46700250971968
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18318,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2370000000228174,
+            "linrate": 28.392516949243145,
+            "kernel": 2.1338246191153303
+          },
+          "pos_error_median_m": {
+            "hold": 2.8724320985227214,
+            "linrate": 5.426473426374152,
+            "kernel": 2.791205100719922
+          },
+          "kernel_vs_hold_pct": 2.8278126346163,
+          "kernel_vs_linrate_pct": 48.56318493786594
+        },
+        "random": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18318,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.2370000000228174,
+            "linrate": 28.392516949243145,
+            "kernel": 2.1338246191153303
+          },
+          "pos_error_median_m": {
+            "hold": 2.8058995128516075,
+            "linrate": 2.964704934237248,
+            "kernel": 2.7385954170611857
+          },
+          "kernel_vs_hold_pct": 2.3986637968378743,
+          "kernel_vs_linrate_pct": 7.626712343777808
+        },
+        "lowest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18318,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.2370000000228174,
+            "linrate": 28.392516949243145,
+            "kernel": 2.1338246191153303
+          },
+          "pos_error_median_m": {
+            "hold": 4.599736791261655,
+            "linrate": 12.671691370211946,
+            "kernel": 4.4442471331365505
+          },
+          "kernel_vs_hold_pct": 3.3804033835261205,
+          "kernel_vs_linrate_pct": 64.92775113207152
+        }
+      }
+    },
+    {
+      "station": "BRAG",
+      "n_epochs": 25560,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 39,
+          "n_gap_epochs": 21917,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.327,
+            "linrate": 2.8443728813559326,
+            "kernel": 1.3675153735340428
+          },
+          "pos_error_median_m": {
+            "hold": 2.5603762056684576,
+            "linrate": 3.4640175767879464,
+            "kernel": 2.5878225215676505
+          },
+          "kernel_vs_hold_pct": -1.0719641839519234,
+          "kernel_vs_linrate_pct": 25.294186181143996
+        },
+        "1800": {
+          "n_gaps": 13,
+          "n_gap_epochs": 21737,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.6249999999999998,
+            "linrate": 11.414033898305089,
+            "kernel": 1.816825100896824
+          },
+          "pos_error_median_m": {
+            "hold": 2.8564297974486386,
+            "linrate": 4.701323655258091,
+            "kernel": 2.8352894370678055
+          },
+          "kernel_vs_hold_pct": 0.7400973200782257,
+          "kernel_vs_linrate_pct": 39.69167738756426
+        },
+        "3600": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18257,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.4895,
+            "linrate": 10.072661016949152,
+            "kernel": 2.5518066321208304
+          },
+          "pos_error_median_m": {
+            "hold": 3.164137327202758,
+            "linrate": 6.517414979173321,
+            "kernel": 3.0526959235514997
+          },
+          "kernel_vs_hold_pct": 3.5220153908356977,
+          "kernel_vs_linrate_pct": 53.160939831106035
+        },
+        "7200": {
+          "n_gaps": 3,
+          "n_gap_epochs": 14717,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2495000000000003,
+            "linrate": 42.1496949152542,
+            "kernel": 2.260612964632549
+          },
+          "pos_error_median_m": {
+            "hold": 2.8015990563717876,
+            "linrate": 7.239078662624223,
+            "kernel": 2.758134896032645
+          },
+          "kernel_vs_hold_pct": 1.5514054461251425,
+          "kernel_vs_linrate_pct": 61.8993655881507
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18257,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.4895,
+            "linrate": 10.072661016949152,
+            "kernel": 2.5518066321208304
+          },
+          "pos_error_median_m": {
+            "hold": 3.164137327202758,
+            "linrate": 6.517414979173321,
+            "kernel": 3.0526959235514997
+          },
+          "kernel_vs_hold_pct": 3.5220153908356977,
+          "kernel_vs_linrate_pct": 53.160939831106035
+        },
+        "random": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18257,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.4895,
+            "linrate": 10.072661016949152,
+            "kernel": 2.5518066321208304
+          },
+          "pos_error_median_m": {
+            "hold": 2.9324692495985767,
+            "linrate": 3.993991701434326,
+            "kernel": 2.8697306014263315
+          },
+          "kernel_vs_hold_pct": 2.139447777017045,
+          "kernel_vs_linrate_pct": 28.148809112553963
+        },
+        "lowest": {
+          "n_gaps": 6,
+          "n_gap_epochs": 18257,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.4895,
+            "linrate": 10.072661016949152,
+            "kernel": 2.5518066321208304
+          },
+          "pos_error_median_m": {
+            "hold": 5.401161319510307,
+            "linrate": 14.118718666989395,
+            "kernel": 5.53633678307174
+          },
+          "kernel_vs_hold_pct": -2.502711094244603,
+          "kernel_vs_linrate_pct": 60.78725758580271
+        }
+      }
+    },
+    {
+      "station": "CASC",
+      "n_epochs": 22866,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 34,
+          "n_gap_epochs": 19237,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 0.9179999999999993,
+            "linrate": 2.8975593220338993,
+            "kernel": 0.9746075834005348
+          },
+          "pos_error_median_m": {
+            "hold": 2.051319685991264,
+            "linrate": 3.4586360253452053,
+            "kernel": 2.184948636980664
+          },
+          "kernel_vs_hold_pct": -6.514291843537112,
+          "kernel_vs_linrate_pct": 36.82629160833467
+        },
+        "1800": {
+          "n_gaps": 12,
+          "n_gap_epochs": 19597,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.63,
+            "linrate": 7.699813559322033,
+            "kernel": 1.380915084509124
+          },
+          "pos_error_median_m": {
+            "hold": 2.5692244413150926,
+            "linrate": 5.714488066794238,
+            "kernel": 2.34956707222141
+          },
+          "kernel_vs_hold_pct": 8.549559375250526,
+          "kernel_vs_linrate_pct": 58.88403222198887
+        },
+        "3600": {
+          "n_gaps": 5,
+          "n_gap_epochs": 16057,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.819,
+            "linrate": 20.605135593220346,
+            "kernel": 2.334992003211057
+          },
+          "pos_error_median_m": {
+            "hold": 3.360013173387402,
+            "linrate": 3.4516615206248633,
+            "kernel": 2.881072200573369
+          },
+          "kernel_vs_hold_pct": 14.254139733957881,
+          "kernel_vs_linrate_pct": 16.530859606077453
+        },
+        "7200": {
+          "n_gaps": 2,
+          "n_gap_epochs": 12517,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.8679999999999994,
+            "linrate": 5.632152542372887,
+            "kernel": 2.6389225073751885
+          },
+          "pos_error_median_m": {
+            "hold": 3.507141711033084,
+            "linrate": 3.284872805539055,
+            "kernel": 3.312991569989808
+          },
+          "kernel_vs_hold_pct": 5.535851044527251,
+          "kernel_vs_linrate_pct": -0.8560077091368079
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 5,
+          "n_gap_epochs": 16057,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.819,
+            "linrate": 20.605135593220346,
+            "kernel": 2.334992003211057
+          },
+          "pos_error_median_m": {
+            "hold": 3.360013173387402,
+            "linrate": 3.4516615206248633,
+            "kernel": 2.881072200573369
+          },
+          "kernel_vs_hold_pct": 14.254139733957881,
+          "kernel_vs_linrate_pct": 16.530859606077453
+        },
+        "random": {
+          "n_gaps": 5,
+          "n_gap_epochs": 16057,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.819,
+            "linrate": 20.605135593220346,
+            "kernel": 2.334992003211057
+          },
+          "pos_error_median_m": {
+            "hold": 3.104576201883796,
+            "linrate": 2.476263247733909,
+            "kernel": 2.783575425819406
+          },
+          "kernel_vs_hold_pct": 10.33960048619883,
+          "kernel_vs_linrate_pct": -12.41031939422137
+        },
+        "lowest": {
+          "n_gaps": 5,
+          "n_gap_epochs": 16057,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.819,
+            "linrate": 20.605135593220346,
+            "kernel": 2.334992003211057
+          },
+          "pos_error_median_m": {
+            "hold": 6.981968299157623,
+            "linrate": 9.32443691237057,
+            "kernel": 5.192497639710208
+          },
+          "kernel_vs_hold_pct": 25.629888059837157,
+          "kernel_vs_linrate_pct": 44.31301655522587
+        }
+      }
+    },
+    {
+      "station": "DLF1",
+      "n_epochs": 48108,
+      "nav_source": "own_stream",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 72,
+          "n_gap_epochs": 42600,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 0.47299999999999986,
+            "linrate": 1.7290000000000016,
+            "kernel": 0.5297937121835998
+          },
+          "pos_error_median_m": {
+            "hold": 2.8567712949297244,
+            "linrate": 4.132195578220348,
+            "kernel": 2.9565412001532057
+          },
+          "kernel_vs_hold_pct": -3.4924008582890576,
+          "kernel_vs_linrate_pct": 28.45108262212198
+        },
+        "1800": {
+          "n_gaps": 26,
+          "n_gap_epochs": 45828,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 0.6800000000000006,
+            "linrate": 5.931466101694914,
+            "kernel": 0.664769444830537
+          },
+          "pos_error_median_m": {
+            "hold": 2.9464500063853603,
+            "linrate": 7.83055725628493,
+            "kernel": 2.9901244962249813
+          },
+          "kernel_vs_hold_pct": -1.482274932375316,
+          "kernel_vs_linrate_pct": 61.814665312292306
+        },
+        "3600": {
+          "n_gaps": 12,
+          "n_gap_epochs": 42468,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 0.7484999999999999,
+            "linrate": 7.3007118644067965,
+            "kernel": 0.8572742916622587
+          },
+          "pos_error_median_m": {
+            "hold": 3.105993422281357,
+            "linrate": 9.713910605432996,
+            "kernel": 3.175076999651069
+          },
+          "kernel_vs_hold_pct": -2.2242023075171202,
+          "kernel_vs_linrate_pct": 67.31412168982442
+        },
+        "7200": {
+          "n_gaps": 5,
+          "n_gap_epochs": 35388,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.0439999999999996,
+            "linrate": 19.0463220338983,
+            "kernel": 0.9345637835110132
+          },
+          "pos_error_median_m": {
+            "hold": 3.1752113855236193,
+            "linrate": 14.313796190389809,
+            "kernel": 3.021700335860541
+          },
+          "kernel_vs_hold_pct": 4.834671806827206,
+          "kernel_vs_linrate_pct": 78.88959507548884
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 28248,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 3.7329999999999997,
+            "linrate": 13.140830508474536,
+            "kernel": 3.131087305425911
+          },
+          "pos_error_median_m": {
+            "hold": 6.350437449777565,
+            "linrate": 13.620972059225977,
+            "kernel": 5.6861223463575215
+          },
+          "kernel_vs_hold_pct": 10.460934521027554,
+          "kernel_vs_linrate_pct": 58.254650830840625
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 12,
+          "n_gap_epochs": 42468,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 0.7484999999999999,
+            "linrate": 7.3007118644067965,
+            "kernel": 0.8572742916622587
+          },
+          "pos_error_median_m": {
+            "hold": 3.105993422281357,
+            "linrate": 9.713910605432996,
+            "kernel": 3.175076999651069
+          },
+          "kernel_vs_hold_pct": -2.2242023075171202,
+          "kernel_vs_linrate_pct": 67.31412168982442
+        },
+        "random": {
+          "n_gaps": 12,
+          "n_gap_epochs": 42468,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 0.7484999999999999,
+            "linrate": 7.3007118644067965,
+            "kernel": 0.8572742916622587
+          },
+          "pos_error_median_m": {
+            "hold": 2.30652328070746,
+            "linrate": 4.79457429484736,
+            "kernel": 2.4746429828264818
+          },
+          "kernel_vs_hold_pct": -7.288879480438459,
+          "kernel_vs_linrate_pct": 48.386596376534726
+        },
+        "lowest": {
+          "n_gaps": 12,
+          "n_gap_epochs": 42468,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 0.7484999999999999,
+            "linrate": 7.3007118644067965,
+            "kernel": 0.8572742916622587
+          },
+          "pos_error_median_m": {
+            "hold": 5.262717931325786,
+            "linrate": 26.226168764833993,
+            "kernel": 5.642766203295568
+          },
+          "kernel_vs_hold_pct": -7.221520836364492,
+          "kernel_vs_linrate_pct": 78.48421454962262
+        }
+      }
+    },
+    {
+      "station": "GAIA",
+      "n_epochs": 45297,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 68,
+          "n_gap_epochs": 40084,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.138,
+            "linrate": 5.02193220338983,
+            "kernel": 1.1950663057333992
+          },
+          "pos_error_median_m": {
+            "hold": 2.8284723109912457,
+            "linrate": 5.753286910779228,
+            "kernel": 2.834530949766454
+          },
+          "kernel_vs_hold_pct": -0.2142018061009443,
+          "kernel_vs_linrate_pct": 50.731972979554676
+        },
+        "1800": {
+          "n_gaps": 24,
+          "n_gap_epochs": 40864,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.428,
+            "linrate": 13.314864406779662,
+            "kernel": 1.3839877400122274
+          },
+          "pos_error_median_m": {
+            "hold": 2.864412004670195,
+            "linrate": 7.507783426733223,
+            "kernel": 2.7632629042611363
+          },
+          "kernel_vs_hold_pct": 3.5312343421317616,
+          "kernel_vs_linrate_pct": 63.19469080019155
+        },
+        "3600": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38752,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.714,
+            "linrate": 28.708703389830504,
+            "kernel": 1.9072225786208143
+          },
+          "pos_error_median_m": {
+            "hold": 2.9979400244576118,
+            "linrate": 8.540313211778388,
+            "kernel": 3.0399003599368672
+          },
+          "kernel_vs_hold_pct": -1.3996389232918904,
+          "kernel_vs_linrate_pct": 64.40528251651962
+        },
+        "7200": {
+          "n_gaps": 6,
+          "n_gap_epochs": 39777,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.331,
+            "linrate": 44.60723728813558,
+            "kernel": 2.2438408877306757
+          },
+          "pos_error_median_m": {
+            "hold": 3.6907859494987263,
+            "linrate": 11.27831714059976,
+            "kernel": 3.7446125949295546
+          },
+          "kernel_vs_hold_pct": -1.4584060459571946,
+          "kernel_vs_linrate_pct": 66.79812645585508
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 25437,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.8229999999999995,
+            "linrate": 122.08794915254222,
+            "kernel": 1.5951420717590226
+          },
+          "pos_error_median_m": {
+            "hold": 3.1140418398593255,
+            "linrate": 36.16710783515765,
+            "kernel": 2.942795895351769
+          },
+          "kernel_vs_hold_pct": 5.499153618157305,
+          "kernel_vs_linrate_pct": 91.86333640841718
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38752,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.714,
+            "linrate": 28.708703389830504,
+            "kernel": 1.9072225786208143
+          },
+          "pos_error_median_m": {
+            "hold": 2.9979400244576118,
+            "linrate": 8.540313211778388,
+            "kernel": 3.0399003599368672
+          },
+          "kernel_vs_hold_pct": -1.3996389232918904,
+          "kernel_vs_linrate_pct": 64.40528251651962
+        },
+        "random": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38752,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 1.714,
+            "linrate": 28.708703389830504,
+            "kernel": 1.9072225786208143
+          },
+          "pos_error_median_m": {
+            "hold": 2.8897124011339805,
+            "linrate": 4.244906585076213,
+            "kernel": 2.9424231082101913
+          },
+          "kernel_vs_hold_pct": -1.8240814226192947,
+          "kernel_vs_linrate_pct": 30.683442633229042
+        },
+        "lowest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38752,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 1.714,
+            "linrate": 28.708703389830504,
+            "kernel": 1.9072225786208143
+          },
+          "pos_error_median_m": {
+            "hold": 4.43923086350763,
+            "linrate": 15.517991483257688,
+            "kernel": 4.650055768466141
+          },
+          "kernel_vs_hold_pct": -4.749131357226366,
+          "kernel_vs_linrate_pct": 70.03442247353291
+        }
+      }
+    },
+    {
+      "station": "GUAD",
+      "n_epochs": 42606,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 64,
+          "n_gap_epochs": 37581,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.452999999979511,
+            "linrate": 7.480084745504428,
+            "kernel": 1.393611182749737
+          },
+          "pos_error_median_m": {
+            "hold": 2.902460763376653,
+            "linrate": 6.547392119596783,
+            "kernel": 2.8864248260957517
+          },
+          "kernel_vs_hold_pct": 0.5524945412955562,
+          "kernel_vs_linrate_pct": 55.91489293185161
+        },
+        "1800": {
+          "n_gaps": 22,
+          "n_gap_epochs": 39597,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.084000000031665,
+            "linrate": 17.742355932248756,
+            "kernel": 1.9208336580195464
+          },
+          "pos_error_median_m": {
+            "hold": 3.4992490382948653,
+            "linrate": 7.246105251743986,
+            "kernel": 3.3531906399382683
+          },
+          "kernel_vs_hold_pct": 4.173992669803495,
+          "kernel_vs_linrate_pct": 53.72423497255681
+        },
+        "3600": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37027,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2189999999827705,
+            "linrate": 35.186576270265505,
+            "kernel": 1.8498665407532826
+          },
+          "pos_error_median_m": {
+            "hold": 3.590788393633643,
+            "linrate": 10.215677405503234,
+            "kernel": 3.2728779323240906
+          },
+          "kernel_vs_hold_pct": 8.853500302975181,
+          "kernel_vs_linrate_pct": 67.96220355821949
+        },
+        "7200": {
+          "n_gaps": 5,
+          "n_gap_epochs": 29887,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 4.0,
+            "linrate": 211.66120338992914,
+            "kernel": 3.4189996227505617
+          },
+          "pos_error_median_m": {
+            "hold": 5.290967015362594,
+            "linrate": 73.94039889513917,
+            "kernel": 4.730146494041397
+          },
+          "kernel_vs_hold_pct": 10.599584531387674,
+          "kernel_vs_linrate_pct": 93.60275767412399
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 22747,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 5.0420000000158325,
+            "linrate": 304.3604745748453,
+            "kernel": 4.412282292672899
+          },
+          "pos_error_median_m": {
+            "hold": 5.68065159940482,
+            "linrate": 107.0246945609113,
+            "kernel": 5.175646546305472
+          },
+          "kernel_vs_hold_pct": 8.889914198439119,
+          "kernel_vs_linrate_pct": 95.16406324022738
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37027,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2189999999827705,
+            "linrate": 35.186576270265505,
+            "kernel": 1.8498665407532826
+          },
+          "pos_error_median_m": {
+            "hold": 3.590788393633643,
+            "linrate": 10.215677405503234,
+            "kernel": 3.2728779323240906
+          },
+          "kernel_vs_hold_pct": 8.853500302975181,
+          "kernel_vs_linrate_pct": 67.96220355821949
+        },
+        "random": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37027,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.2189999999827705,
+            "linrate": 35.186576270265505,
+            "kernel": 1.8498665407532826
+          },
+          "pos_error_median_m": {
+            "hold": 3.460879843659475,
+            "linrate": 4.815523771335029,
+            "kernel": 3.26857748864092
+          },
+          "kernel_vs_hold_pct": 5.556458580059164,
+          "kernel_vs_linrate_pct": 32.12415421770917
+        },
+        "lowest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37027,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.2189999999827705,
+            "linrate": 35.186576270265505,
+            "kernel": 1.8498665407532826
+          },
+          "pos_error_median_m": {
+            "hold": 6.133671216429122,
+            "linrate": 28.366486490117268,
+            "kernel": 5.295022281129002
+          },
+          "kernel_vs_hold_pct": 13.672870711651242,
+          "kernel_vs_linrate_pct": 81.33352791868052
+        }
+      }
+    },
+    {
+      "station": "MERT",
+      "n_epochs": 42595,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 64,
+          "n_gap_epochs": 37570,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.4099999999743886,
+            "linrate": 5.427186440909281,
+            "kernel": 1.4426428044389468
+          },
+          "pos_error_median_m": {
+            "hold": 2.980046289312517,
+            "linrate": 6.0656525525575145,
+            "kernel": 3.046275608870811
+          },
+          "kernel_vs_hold_pct": -2.222425866195965,
+          "kernel_vs_linrate_pct": 49.77827063987726
+        },
+        "1800": {
+          "n_gaps": 22,
+          "n_gap_epochs": 39590,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.4899999999906868,
+            "linrate": 20.50185593299102,
+            "kernel": 2.4844771045609377
+          },
+          "pos_error_median_m": {
+            "hold": 3.8914674968279774,
+            "linrate": 7.539036080920735,
+            "kernel": 3.8759577874532587
+          },
+          "kernel_vs_hold_pct": 0.398556826887575,
+          "kernel_vs_linrate_pct": 48.588151776295895
+        },
+        "3600": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37015,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.3069999999715947,
+            "linrate": 39.956644068006426,
+            "kernel": 2.048898984270636
+          },
+          "pos_error_median_m": {
+            "hold": 3.6211897358743252,
+            "linrate": 12.683107297549432,
+            "kernel": 3.5212928277861106
+          },
+          "kernel_vs_hold_pct": 2.758676439915808,
+          "kernel_vs_linrate_pct": 72.23635545158183
+        },
+        "7200": {
+          "n_gaps": 5,
+          "n_gap_epochs": 29876,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.280499999964377,
+            "linrate": 34.454161018074956,
+            "kernel": 1.9306686444033403
+          },
+          "pos_error_median_m": {
+            "hold": 3.8194950392035434,
+            "linrate": 15.026858867707237,
+            "kernel": 3.5727164436480088
+          },
+          "kernel_vs_hold_pct": 6.461026733182873,
+          "kernel_vs_linrate_pct": 76.22446264318229
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 22736,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.8690000000060536,
+            "linrate": 61.786881358129904,
+            "kernel": 2.160479912243318
+          },
+          "pos_error_median_m": {
+            "hold": 4.083663984758625,
+            "linrate": 19.214293924527283,
+            "kernel": 3.424426542165323
+          },
+          "kernel_vs_hold_pct": 16.14328321462688,
+          "kernel_vs_linrate_pct": 82.17771334394963
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37015,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.3069999999715947,
+            "linrate": 39.956644068006426,
+            "kernel": 2.048898984270636
+          },
+          "pos_error_median_m": {
+            "hold": 3.6211897358743252,
+            "linrate": 12.683107297549432,
+            "kernel": 3.5212928277861106
+          },
+          "kernel_vs_hold_pct": 2.758676439915808,
+          "kernel_vs_linrate_pct": 72.23635545158183
+        },
+        "random": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37015,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.3069999999715947,
+            "linrate": 39.956644068006426,
+            "kernel": 2.048898984270636
+          },
+          "pos_error_median_m": {
+            "hold": 3.600653727276738,
+            "linrate": 5.434990683201621,
+            "kernel": 3.525746355914194
+          },
+          "kernel_vs_hold_pct": 2.0803825370677376,
+          "kernel_vs_linrate_pct": 35.12875069295863
+        },
+        "lowest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37015,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.3069999999715947,
+            "linrate": 39.956644068006426,
+            "kernel": 2.048898984270636
+          },
+          "pos_error_median_m": {
+            "hold": 6.648277610404242,
+            "linrate": 29.698147620816414,
+            "kernel": 6.227689316476023
+          },
+          "kernel_vs_hold_pct": 6.326274541695098,
+          "kernel_vs_linrate_pct": 79.03004121337578
+        }
+      }
+    },
+    {
+      "station": "MIRA",
+      "n_epochs": 45306,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 68,
+          "n_gap_epochs": 40094,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.452999999979511,
+            "linrate": 5.897186440619407,
+            "kernel": 1.476028876582859
+          },
+          "pos_error_median_m": {
+            "hold": 3.077100748303903,
+            "linrate": 6.356397422770348,
+            "kernel": 3.089743446657737
+          },
+          "kernel_vs_hold_pct": -0.4108639718995999,
+          "kernel_vs_linrate_pct": 51.39159430797336
+        },
+        "1800": {
+          "n_gaps": 24,
+          "n_gap_epochs": 40874,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.6230000000214204,
+            "linrate": 18.709381355991354,
+            "kernel": 1.5865869113185909
+          },
+          "pos_error_median_m": {
+            "hold": 2.936241276641785,
+            "linrate": 7.400185465553242,
+            "kernel": 2.8227771502671852
+          },
+          "kernel_vs_hold_pct": 3.8642644007909954,
+          "kernel_vs_linrate_pct": 61.85531885103703
+        },
+        "3600": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38755,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.8619999999646097,
+            "linrate": 59.11147457617335,
+            "kernel": 2.8000504079973325
+          },
+          "pos_error_median_m": {
+            "hold": 3.7831677499589618,
+            "linrate": 20.648255201634754,
+            "kernel": 3.699774632570483
+          },
+          "kernel_vs_hold_pct": 2.204319842528357,
+          "kernel_vs_linrate_pct": 82.0819018534914
+        },
+        "7200": {
+          "n_gaps": 6,
+          "n_gap_epochs": 39787,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.363000000012107,
+            "linrate": 41.41584745491855,
+            "kernel": 2.239896002225578
+          },
+          "pos_error_median_m": {
+            "hold": 3.560138906422342,
+            "linrate": 15.849498511466022,
+            "kernel": 3.3861227296430685
+          },
+          "kernel_vs_hold_pct": 4.88790413389083,
+          "kernel_vs_linrate_pct": 78.63577369849625
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 25447,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.2629999999771826,
+            "linrate": 185.2412711912184,
+            "kernel": 2.1003216385142878
+          },
+          "pos_error_median_m": {
+            "hold": 3.019777105677868,
+            "linrate": 73.61225447102913,
+            "kernel": 2.9279520279694053
+          },
+          "kernel_vs_hold_pct": 3.0407899157792406,
+          "kernel_vs_linrate_pct": 96.02246657297837
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38755,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.8619999999646097,
+            "linrate": 59.11147457617335,
+            "kernel": 2.8000504079973325
+          },
+          "pos_error_median_m": {
+            "hold": 3.7831677499589618,
+            "linrate": 20.648255201634754,
+            "kernel": 3.699774632570483
+          },
+          "kernel_vs_hold_pct": 2.204319842528357,
+          "kernel_vs_linrate_pct": 82.0819018534914
+        },
+        "random": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38755,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 2.8619999999646097,
+            "linrate": 59.11147457617335,
+            "kernel": 2.8000504079973325
+          },
+          "pos_error_median_m": {
+            "hold": 3.496783379700558,
+            "linrate": 5.689297910717988,
+            "kernel": 3.465618975118184
+          },
+          "kernel_vs_hold_pct": 0.8912306310790874,
+          "kernel_vs_linrate_pct": 39.085296120820935
+        },
+        "lowest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 38755,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 2.8619999999646097,
+            "linrate": 59.11147457617335,
+            "kernel": 2.8000504079973325
+          },
+          "pos_error_median_m": {
+            "hold": 7.7875453460529735,
+            "linrate": 50.146867047828074,
+            "kernel": 7.6066705205664515
+          },
+          "kernel_vs_hold_pct": 2.322616658382559,
+          "kernel_vs_linrate_pct": 84.83121485274143
+        }
+      }
+    },
+    {
+      "station": "VSEU",
+      "n_epochs": 42602,
+      "nav_source": "pooled_broadcast",
+      "kernel_variant": "contemporaneous_field",
+      "by_gap_s": {
+        "600": {
+          "n_gaps": 64,
+          "n_gap_epochs": 37576,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.3379999999888241,
+            "linrate": 6.486838983051712,
+            "kernel": 1.3804030337778386
+          },
+          "pos_error_median_m": {
+            "hold": 2.960406424079647,
+            "linrate": 5.668744974458036,
+            "kernel": 3.0426964855366956
+          },
+          "kernel_vs_hold_pct": -2.779687977559764,
+          "kernel_vs_linrate_pct": 46.325041975845906
+        },
+        "1800": {
+          "n_gaps": 22,
+          "n_gap_epochs": 39594,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.8084999999846332,
+            "linrate": 17.064313559647417,
+            "kernel": 1.8135191507462878
+          },
+          "pos_error_median_m": {
+            "hold": 3.2771640291957436,
+            "linrate": 7.321359117305148,
+            "kernel": 3.295013958184356
+          },
+          "kernel_vs_hold_pct": -0.5446760927921179,
+          "kernel_vs_linrate_pct": 54.9945043619553
+        },
+        "3600": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37022,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.9720000000088476,
+            "linrate": 45.107720339583466,
+            "kernel": 1.7369256538513582
+          },
+          "pos_error_median_m": {
+            "hold": 3.4819625370886467,
+            "linrate": 15.570062010121895,
+            "kernel": 3.288663642512285
+          },
+          "kernel_vs_hold_pct": 5.55143521842667,
+          "kernel_vs_linrate_pct": 78.87828808662182
+        },
+        "7200": {
+          "n_gaps": 5,
+          "n_gap_epochs": 29882,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 3.477000000013504,
+            "linrate": 71.8888983053912,
+            "kernel": 2.9508941690146457
+          },
+          "pos_error_median_m": {
+            "hold": 4.7499488526795695,
+            "linrate": 21.67488644601609,
+            "kernel": 4.15961367666012
+          },
+          "kernel_vs_hold_pct": 12.428242794370847,
+          "kernel_vs_linrate_pct": 80.80906358139343
+        },
+        "14400": {
+          "n_gaps": 2,
+          "n_gap_epochs": 22742,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 2.8020000000251457,
+            "linrate": 136.44175423608976,
+            "kernel": 2.2521832970087416
+          },
+          "pos_error_median_m": {
+            "hold": 3.419702382838059,
+            "linrate": 27.028267962404822,
+            "kernel": 2.925811758824264
+          },
+          "kernel_vs_hold_pct": 14.442503139817342,
+          "kernel_vs_linrate_pct": 89.17499351829002
+        }
+      },
+      "by_strategy_3600s": {
+        "highest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37022,
+          "strategy": "highest",
+          "clock_error_median_m": {
+            "hold": 1.9720000000088476,
+            "linrate": 45.107720339583466,
+            "kernel": 1.7369256538513582
+          },
+          "pos_error_median_m": {
+            "hold": 3.4819625370886467,
+            "linrate": 15.570062010121895,
+            "kernel": 3.288663642512285
+          },
+          "kernel_vs_hold_pct": 5.55143521842667,
+          "kernel_vs_linrate_pct": 78.87828808662182
+        },
+        "random": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37022,
+          "strategy": "random",
+          "clock_error_median_m": {
+            "hold": 1.9720000000088476,
+            "linrate": 45.107720339583466,
+            "kernel": 1.7369256538513582
+          },
+          "pos_error_median_m": {
+            "hold": 3.3105958994384723,
+            "linrate": 4.936849578258813,
+            "kernel": 3.2076794324743165
+          },
+          "kernel_vs_hold_pct": 3.1086991614292736,
+          "kernel_vs_linrate_pct": 35.02578149027503
+        },
+        "lowest": {
+          "n_gaps": 11,
+          "n_gap_epochs": 37022,
+          "strategy": "lowest",
+          "clock_error_median_m": {
+            "hold": 1.9720000000088476,
+            "linrate": 45.107720339583466,
+            "kernel": 1.7369256538513582
+          },
+          "pos_error_median_m": {
+            "hold": 5.835124552217261,
+            "linrate": 33.63328267529576,
+            "kernel": 5.39977469203811
+          },
+          "kernel_vs_hold_pct": 7.460849486301435,
+          "kernel_vs_linrate_pct": 83.94514521770324
+        }
+      }
+    }
+  ],
+  "timestamp": "2026-10-16T10:39:17.818914+00:00"
+}

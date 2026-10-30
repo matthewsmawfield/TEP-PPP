@@ -1,0 +1,343 @@
+{
+  "test": "meo_inertial_spatial_gradient",
+  "n_days": 366,
+  "gps": {
+    "n_epochs": 3336114,
+    "n_sat_days": 11585,
+    "gradient_dir_eci": [
+      0.029060785529500206,
+      -0.2824754141181002,
+      -0.9588342459274263
+    ],
+    "gradient_mag_ns": 0.010539773464210098,
+    "cmb_alignment_abs": 0.02905782754626586,
+    "apex_alignment_abs": 0.20032459752650686,
+    "null_mag_ns": 0.0034233153552827343,
+    "null_mag_sd": 0.0014132826787913774,
+    "null_mag_p997": 0.007958571370254195,
+    "sigma_vs_null": 5.035410261999294
+  },
+  "galileo": {
+    "n_epochs": 2764278,
+    "n_sat_days": 9600,
+    "gradient_dir_eci": [
+      -0.2990068430927505,
+      -0.48292399656173446,
+      -0.8230305713207432
+    ],
+    "gradient_mag_ns": 0.013363473449378013,
+    "cmb_alignment_abs": 0.2895509676354297,
+    "null_mag_ns": 0.006926692279116582,
+    "null_mag_sd": 0.0019162362508986178,
+    "null_mag_p997": 0.012276408193322758,
+    "sigma_vs_null": 3.359074938637567
+  },
+  "cross_constellation_cosine": 0.9168746794049162,
+  "injection_self_test": {
+    "injected_amplitude_ns": 0.3,
+    "inertially_fixed_recovered_mag_ns": 0.2999801924420446,
+    "inertially_fixed_recovered_cmb_align": 0.9999999261211844,
+    "sun_tracking_recovered_mag_ns": 0.006389498170918073,
+    "note": "An inertially-fixed injected signal is recovered at ~full amplitude with |cos CMB| ~ 1 -- so if a CMB-fixed field existed in the MEO clocks the full-year fit would find it.  A Sun-tracking injected signal is smeared to a small residual, because its direction rotates 360 deg over the year -- so the full-year fit is blind to a Sun-locked component (which is degenerate with solar-radiation pressure and with a heliocentric field the 26,000 km satellite excursion cannot resolve)."
+  },
+  "joint_shared_gradient": {
+    "dir_eci": [
+      -0.13860351825331338,
+      -0.38730908280825616,
+      -0.9114717434468448
+    ],
+    "cmb_alignment_abs": 0.1643545043003771,
+    "cmb_alignment_abs_ci95": [
+      0.010802711769731393,
+      0.41508367351742825
+    ]
+  },
+  "sun_tracking_test": {
+    "windows": [
+      {
+        "days": [
+          1,
+          15
+        ],
+        "grad_ra_deg": 323.8947466784964,
+        "sun_ra_deg": 288.6178321848007,
+        "deg_from_cmb_axis": 24.045253321503594,
+        "deg_from_sun_axis": 35.2769144936957,
+        "cmb_alignment_abs": 0.7966981517312656
+      },
+      {
+        "days": [
+          16,
+          30
+        ],
+        "grad_ra_deg": 343.4653020007831,
+        "sun_ra_deg": 304.71678560356764,
+        "deg_from_cmb_axis": 4.4746979992169145,
+        "deg_from_sun_axis": 38.74851639721544,
+        "cmb_alignment_abs": 0.9886765448088475
+      },
+      {
+        "days": [
+          31,
+          45
+        ],
+        "grad_ra_deg": 346.04694768296264,
+        "sun_ra_deg": 320.1155441241242,
+        "deg_from_cmb_axis": 1.893052317037359,
+        "deg_from_sun_axis": 25.93140355883844,
+        "cmb_alignment_abs": 0.9992920710986999
+      },
+      {
+        "days": [
+          46,
+          60
+        ],
+        "grad_ra_deg": 19.549667237392146,
+        "sun_ra_deg": 334.7838827104956,
+        "deg_from_cmb_axis": 31.60966723739216,
+        "deg_from_sun_axis": 44.76578452689654,
+        "cmb_alignment_abs": 0.8477652538358618
+      },
+      {
+        "days": [
+          61,
+          75
+        ],
+        "grad_ra_deg": 25.96250925728886,
+        "sun_ra_deg": 348.8674118176002,
+        "deg_from_cmb_axis": 38.022509257288846,
+        "deg_from_sun_axis": 37.09509743968863,
+        "cmb_alignment_abs": 0.7837768732726524
+      },
+      {
+        "days": [
+          76,
+          90
+        ],
+        "grad_ra_deg": 40.588000035003304,
+        "sun_ra_deg": 2.611398446537139,
+        "deg_from_cmb_axis": 52.64800003500329,
+        "deg_from_sun_axis": 37.97660158846617,
+        "cmb_alignment_abs": 0.6135426961674462
+      },
+      {
+        "days": [
+          91,
+          105
+        ],
+        "grad_ra_deg": 62.98377068538644,
+        "sun_ra_deg": 16.295596721299393,
+        "deg_from_cmb_axis": 75.04377068538645,
+        "deg_from_sun_axis": 46.68817396408704,
+        "cmb_alignment_abs": 0.24785991322158712
+      },
+      {
+        "days": [
+          106,
+          120
+        ],
+        "grad_ra_deg": 68.95236361934305,
+        "sun_ra_deg": 30.185443935885043,
+        "deg_from_cmb_axis": 81.01236361934303,
+        "deg_from_sun_axis": 38.766919683458,
+        "cmb_alignment_abs": 0.16369965352024196
+      },
+      {
+        "days": [
+          121,
+          135
+        ],
+        "grad_ra_deg": 78.84907952797164,
+        "sun_ra_deg": 44.488280514550446,
+        "deg_from_cmb_axis": 89.09092047202836,
+        "deg_from_sun_axis": 34.36079901342119,
+        "cmb_alignment_abs": 0.02117772374740743
+      },
+      {
+        "days": [
+          136,
+          150
+        ],
+        "grad_ra_deg": 93.85518464148325,
+        "sun_ra_deg": 59.30617583149141,
+        "deg_from_cmb_axis": 74.08481535851675,
+        "deg_from_sun_axis": 34.54900880999184,
+        "cmb_alignment_abs": 0.2647088561801253
+      },
+      {
+        "days": [
+          151,
+          165
+        ],
+        "grad_ra_deg": 95.97429197866295,
+        "sun_ra_deg": 74.59352372006282,
+        "deg_from_cmb_axis": 71.96570802133705,
+        "deg_from_sun_axis": 21.380768258600128,
+        "cmb_alignment_abs": 0.29579410941424306
+      },
+      {
+        "days": [
+          166,
+          180
+        ],
+        "grad_ra_deg": 105.28178479789901,
+        "sun_ra_deg": 90.14843434692366,
+        "deg_from_cmb_axis": 62.65821520210099,
+        "deg_from_sun_axis": 15.133350450975342,
+        "cmb_alignment_abs": 0.4156535927564924
+      },
+      {
+        "days": [
+          181,
+          195
+        ],
+        "grad_ra_deg": 137.65568878372434,
+        "sun_ra_deg": 105.66768717441683,
+        "deg_from_cmb_axis": 30.284311216275654,
+        "deg_from_sun_axis": 31.988001609307517,
+        "cmb_alignment_abs": 0.7159379234627596
+      },
+      {
+        "days": [
+          196,
+          210
+        ],
+        "grad_ra_deg": 154.86189001937288,
+        "sun_ra_deg": 120.85524631672102,
+        "deg_from_cmb_axis": 13.078109980627119,
+        "deg_from_sun_axis": 34.00664370265186,
+        "cmb_alignment_abs": 0.9685330835890323
+      },
+      {
+        "days": [
+          211,
+          225
+        ],
+        "grad_ra_deg": 165.9981031907954,
+        "sun_ra_deg": 135.52622309072655,
+        "deg_from_cmb_axis": 1.941896809204593,
+        "deg_from_sun_axis": 30.47188010006886,
+        "cmb_alignment_abs": 0.9864078483268327
+      },
+      {
+        "days": [
+          226,
+          240
+        ],
+        "grad_ra_deg": 197.478215984785,
+        "sun_ra_deg": 149.6526660876693,
+        "deg_from_cmb_axis": 29.538215984785012,
+        "deg_from_sun_axis": 47.82554989711571,
+        "cmb_alignment_abs": 0.8638924928992305
+      },
+      {
+        "days": [
+          241,
+          255
+        ],
+        "grad_ra_deg": 207.45489190776874,
+        "sun_ra_deg": 163.34859689290008,
+        "deg_from_cmb_axis": 39.51489190776874,
+        "deg_from_sun_axis": 44.106295014868664,
+        "cmb_alignment_abs": 0.7751062353379001
+      },
+      {
+        "days": [
+          256,
+          270
+        ],
+        "grad_ra_deg": 218.85465189800354,
+        "sun_ra_deg": 176.82659824358015,
+        "deg_from_cmb_axis": 50.91465189800354,
+        "deg_from_sun_axis": 42.02805365442339,
+        "cmb_alignment_abs": 0.6361677788847606
+      },
+      {
+        "days": [
+          271,
+          285
+        ],
+        "grad_ra_deg": 237.76761144997064,
+        "sun_ra_deg": 190.35332745892092,
+        "deg_from_cmb_axis": 69.82761144997065,
+        "deg_from_sun_axis": 47.41428399104973,
+        "cmb_alignment_abs": 0.3570204342329645
+      },
+      {
+        "days": [
+          286,
+          300
+        ],
+        "grad_ra_deg": 257.33649017868345,
+        "sun_ra_deg": 204.21027333558774,
+        "deg_from_cmb_axis": 89.39649017868345,
+        "deg_from_sun_axis": 53.126216843095705,
+        "cmb_alignment_abs": 0.043528452939189693
+      },
+      {
+        "days": [
+          301,
+          315
+        ],
+        "grad_ra_deg": 254.7959775136672,
+        "sun_ra_deg": 218.65060281629863,
+        "deg_from_cmb_axis": 86.8559775136672,
+        "deg_from_sun_axis": 36.14537469736857,
+        "cmb_alignment_abs": 0.10333608627820098
+      },
+      {
+        "days": [
+          316,
+          330
+        ],
+        "grad_ra_deg": 270.65218300842463,
+        "sun_ra_deg": 233.8395638934613,
+        "deg_from_cmb_axis": 77.28781699157537,
+        "deg_from_sun_axis": 36.812619114963326,
+        "cmb_alignment_abs": 0.17531430606095627
+      },
+      {
+        "days": [
+          331,
+          345
+        ],
+        "grad_ra_deg": 274.1529515217278,
+        "sun_ra_deg": 249.77959847381157,
+        "deg_from_cmb_axis": 73.7870484782722,
+        "deg_from_sun_axis": 24.373353047916225,
+        "cmb_alignment_abs": 0.24213272577151942
+      },
+      {
+        "days": [
+          346,
+          360
+        ],
+        "grad_ra_deg": 283.88702059592504,
+        "sun_ra_deg": 266.2557485404381,
+        "deg_from_cmb_axis": 64.05297940407496,
+        "deg_from_sun_axis": 17.63127205548693,
+        "cmb_alignment_abs": 0.3166462747030892
+      },
+      {
+        "days": [
+          361,
+          366
+        ],
+        "grad_ra_deg": 311.0328546391812,
+        "sun_ra_deg": 277.8965530878202,
+        "deg_from_cmb_axis": 36.90714536081879,
+        "deg_from_sun_axis": 33.13630155136099,
+        "cmb_alignment_abs": 0.6076384989908545
+      }
+    ],
+    "mean_deg_from_cmb_axis": 50.797444827995285,
+    "sd_deg_from_cmb_axis": 27.890521671511753,
+    "mean_deg_from_sun_axis": 35.589567338600474,
+    "sd_deg_from_sun_axis": 9.29644921236617,
+    "note": "If the gradient is a cosmological field its direction stays fixed on the CMB axis (deg_from_cmb_axis ~ const, small); if it is a solar-radiation-pressure orbit error it moves with the Sun (deg_from_sun_axis ~ const, small).  Over this ~6-week baseline the two candidate directions are only ~30-40 deg apart, so they are not cleanly separable; a full-year baseline (Sun sweeps 360 deg, CMB axis fixed) would be decisive."
+  },
+  "note": "The gradient direction is expressed in an Earth-Centred Inertial frame (GMST rotation).  A random direction aligns with the CMB dipole at |cos| ~ 0.50 (median); p95 ~ 0.95.  The shuffled-clock null destroys the clock-position relationship while preserving geometry, so the sigma-vs-null figure isolates a genuine clock-position signal from a fitting artefact.",
+  "timestamp": "2026-10-29T13:04:09.099988",
+  "verdict": "no_inertially_fixed_component__sun_synchronous_signal_remains",
+  "headline": "FULL-YEAR RESULT (366 days).  The pipeline recovers an INJECTED inertially-fixed signal at full amplitude (0.30 of 0.30 ns, |cos CMB| = 1.00), so it WOULD see a CMB-fixed field if one were present.  It is not: over the full year the GPS gradient is 5 sigma above the null with CMB alignment |cos| = 0.03 (random) and GPS/Galileo do not agree (cosine +0.92).  The CMB alignment seen over any single ~6-week window (|cos| up to 0.97) is a seasonal alias: the real MEO signal is Sun-synchronous -- across 25 windows spanning the year its direction stays a constant 36 +/- 9 deg from the Sun while swinging 51 +/- 28 deg from the CMB axis.  A Sun-synchronous signal is degenerate: solar-radiation-pressure orbit mismodelling produces exactly this, and so would a heliocentric field component that the 26,000 km satellite excursion cannot resolve from an AU-scale gradient.  CONCLUSION: the MEO route neither confirms nor refutes the TEP field; it rules out only a CMB-fixed MEO gradient, and T4 is not closed by this route."
+}

@@ -1,0 +1,175 @@
+{
+  "verdict": "FAIL",
+  "checks": {
+    "P1_phase_alignment_gt_null_p99": false,
+    "P2_band_selectivity": false,
+    "P3_sign_replication": false,
+    "P4_surrogate_fails": true
+  },
+  "captures": [
+    {
+      "tag": "synthetic_coupled",
+      "valid": true,
+      "n_ticks": 259200,
+      "span_h": 72.0,
+      "dt_s": 1.0,
+      "resolved_band_uhz": [
+        30.9,
+        493.8
+      ],
+      "n_inband_bins": 16,
+      "n_segments": 8,
+      "phase_alignment": 0.9846,
+      "pa_oob": 0.1713,
+      "pa_phase_randomised": -0.0953,
+      "pa_surrogate": -0.1246,
+      "null_abs_mean": 0.2328,
+      "null_abs_p99": 0.8401,
+      "p_shift": 0.0,
+      "z_shift": 4.26,
+      "P1_pa_gt_null_p99": true,
+      "P2_band_selective": true,
+      "P4_surrogate_fails": true,
+      "simulated": true
+    },
+    {
+      "tag": "synthetic_uncoupled",
+      "valid": true,
+      "n_ticks": 259200,
+      "span_h": 72.0,
+      "dt_s": 1.0,
+      "resolved_band_uhz": [
+        30.9,
+        493.8
+      ],
+      "n_inband_bins": 16,
+      "n_segments": 8,
+      "phase_alignment": 0.0655,
+      "pa_oob": -0.0452,
+      "pa_phase_randomised": 0.186,
+      "pa_surrogate": 0.1062,
+      "null_abs_mean": 0.0725,
+      "null_abs_p99": 0.198,
+      "p_shift": 0.496,
+      "z_shift": -0.14,
+      "P1_pa_gt_null_p99": false,
+      "P2_band_selective": false,
+      "P4_surrogate_fails": true,
+      "simulated": true
+    },
+    {
+      "tag": "ticks_20261027_1403_seg00",
+      "valid": true,
+      "n_ticks": 18330,
+      "span_h": 5.689,
+      "dt_s": 1.1489,
+      "resolved_band_uhz": [
+        189.9,
+        474.8
+      ],
+      "n_inband_bins": 4,
+      "n_segments": 2,
+      "phase_alignment": 0.768,
+      "pa_oob": -0.2151,
+      "pa_phase_randomised": -0.6281,
+      "pa_surrogate": -0.6615,
+      "null_abs_mean": 0.4385,
+      "null_abs_p99": 0.8292,
+      "p_shift": 0.117,
+      "z_shift": 1.4,
+      "P1_pa_gt_null_p99": false,
+      "P2_band_selective": true,
+      "P4_surrogate_fails": true
+    },
+    {
+      "tag": "ticks_20261027_1403_seg01",
+      "valid": false,
+      "reason": "capture resolves 259 uHz upward -- nothing in the TEP band; extend the capture"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg02",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg03",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg04",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg05",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg06",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg07",
+      "valid": true,
+      "n_ticks": 20008,
+      "span_h": 6.352,
+      "dt_s": 1.15,
+      "resolved_band_uhz": [
+        173.8,
+        434.6
+      ],
+      "n_inband_bins": 4,
+      "n_segments": 2,
+      "phase_alignment": -0.2488,
+      "pa_oob": 0.3324,
+      "pa_phase_randomised": 0.0743,
+      "pa_surrogate": 0.0394,
+      "null_abs_mean": 0.3355,
+      "null_abs_p99": 0.7953,
+      "p_shift": 0.61,
+      "z_shift": -0.42,
+      "P1_pa_gt_null_p99": false,
+      "P2_band_selective": false,
+      "P4_surrogate_fails": true
+    },
+    {
+      "tag": "ticks_20261027_1403_seg08",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg09",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg10",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg11",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg12",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg13",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    },
+    {
+      "tag": "ticks_20261027_1403_seg14",
+      "valid": false,
+      "reason": "only 0 resolvable in-band bins"
+    }
+  ]
+}
+wrote results/outputs/step_172_satellite_free_holdover.json

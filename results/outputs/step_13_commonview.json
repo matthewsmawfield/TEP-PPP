@@ -1,0 +1,70 @@
+{
+  "test": "T4_common_view_vs_distance",
+  "global_broadcast": {
+    "label": "global_broadcast",
+    "n_pairs": 5000,
+    "corr_dist_covis": -0.9470497096901646,
+    "partial_corr_distance_given_covis": -0.029034454597690044,
+    "partial_corr_covis_given_distance": 0.3526338310945154,
+    "oos_r2_covis_only": 0.4306226732073857,
+    "oos_r2_covis_plus_distance": 0.43506135846563765,
+    "oos_r2_covis_plus_distance_fold_lambda": 0.4711917204055688,
+    "oos_r2_gain": 0.004438685258251973,
+    "covis_residual_lambda_km": 50.00000000000001,
+    "covis_residual_R2": 0.6508622188786966,
+    "within_covis_band_corr_vs_distance": [
+      {
+        "covis": [
+          0,
+          0.03
+        ],
+        "n": 999,
+        "corr_vs_distance": -0.587
+      },
+      {
+        "covis": [
+          0.03,
+          0.15
+        ],
+        "n": 998,
+        "corr_vs_distance": 0.19
+      },
+      {
+        "covis": [
+          0.15,
+          0.28
+        ],
+        "n": 1001,
+        "corr_vs_distance": -0.18
+      },
+      {
+        "covis": [
+          0.28,
+          0.82
+        ],
+        "n": 1000,
+        "corr_vs_distance": -0.752
+      },
+      {
+        "covis": [
+          0.82,
+          1.01
+        ],
+        "n": 1002,
+        "corr_vs_distance": -0.237
+      }
+    ],
+    "T4_pass_rule": "prereg: |partial_corr(corr, log-dist | covis)| > 0.15 and OOS R2 gain from the distance term > 0.02",
+    "T4_descriptive_residual_structure": false,
+    "T4_descriptive_within_band_negative": true,
+    "T4_pass": false
+  },
+  "eu_precise_residual": {
+    "n_pairs": 18191,
+    "lambda_km": 721.2832789764223,
+    "R2": 0.7433534171524853,
+    "structure_survives_cm_removal": true
+  },
+  "timestamp": "2026-09-01T18:46:05.731010",
+  "T4_pass": false
+}

@@ -1,0 +1,1116 @@
+{
+  "step": 55,
+  "title": "Causal outage clock prediction on a dense reference network",
+  "timestamp": "2026-09-03T18:09:49.450471+00:00",
+  "network": "dense EUREF/EPN precise clocks (~25 stations, median nearest reference ~130 km)",
+  "design": "causal outage sweep; the network estimates the receiver clock residual directly from reference residuals at t0+G (causal per-station trends on the 2 h pre-anchor window); TEP covariance fixed (Gaussian, lambda = 4,200 km; nuisance nugget = 0.35 frozen from the earlier Step 25 precise-clock nested CV), compared with temporal, nearest-neighbour, IDW, flat/shrunk mean, and causally CV-selected spatial covariance controls. Day membership is sampled in advance; per-anchor station availability uses only the causal window and reference values available at the prediction epoch.",
+  "n_days": 90,
+  "tep_kernel_form": "legendre",
+  "causal_cv_spatial_selections": {
+    "('gaussian', 100.0, 0.15)": 7495,
+    "('gaussian', 500.0, 0.35)": 5279,
+    "('gaussian', 250.0, 0.15)": 5411,
+    "('exponential', 250.0, 0.7)": 6658,
+    "('gaussian', 250.0, 0.35)": 4205,
+    "('gaussian', 20000.0, 0.7)": 15952,
+    "('exponential', 500.0, 0.7)": 1713,
+    "('gaussian', 100.0, 0.7)": 9400,
+    "('gaussian', 500.0, 0.15)": 9725,
+    "('gaussian', 4200.0, 0.15)": 5004,
+    "('gaussian', 250.0, 0.7)": 5381,
+    "('exponential', 100.0, 0.15)": 4938,
+    "('exponential', 250.0, 0.35)": 1644,
+    "('exponential', 500.0, 0.15)": 2520,
+    "('gaussian', 1000.0, 0.15)": 10935,
+    "('exponential', 500.0, 0.35)": 731,
+    "('exponential', 100.0, 0.7)": 16539,
+    "('exponential', 20000.0, 0.7)": 2397,
+    "('exponential', 250.0, 0.15)": 3051,
+    "('gaussian', 20000.0, 0.35)": 4787,
+    "('gaussian', 1000.0, 0.35)": 3579,
+    "('gaussian', 100.0, 0.35)": 2422,
+    "('exponential', 8000.0, 0.15)": 1709,
+    "('gaussian', 4200.0, 0.35)": 2075,
+    "('exponential', 20000.0, 0.35)": 1819,
+    "('gaussian', 2000.0, 0.35)": 3619,
+    "('gaussian', 8000.0, 0.15)": 2413,
+    "('gaussian', 2000.0, 0.15)": 13235,
+    "('gaussian', 8000.0, 0.7)": 1352,
+    "('gaussian', 1000.0, 0.7)": 2503,
+    "('gaussian', 500.0, 0.7)": 4823,
+    "('gaussian', 4200.0, 0.7)": 2235,
+    "('exponential', 4200.0, 0.15)": 1787,
+    "('exponential', 20000.0, 0.15)": 2018,
+    "('gaussian', 2000.0, 0.7)": 2951,
+    "('exponential', 1000.0, 0.7)": 1135,
+    "('exponential', 8000.0, 0.35)": 261,
+    "('exponential', 2000.0, 0.7)": 1318,
+    "('gaussian', 20000.0, 0.15)": 5551,
+    "('exponential', 100.0, 0.35)": 2051,
+    "('exponential', 2000.0, 0.15)": 1920,
+    "('exponential', 1000.0, 0.35)": 703,
+    "('exponential', 4200.0, 0.7)": 1585,
+    "('exponential', 8000.0, 0.7)": 1744,
+    "('exponential', 1000.0, 0.15)": 2110,
+    "('gaussian', 8000.0, 0.35)": 437,
+    "('exponential', 4200.0, 0.35)": 525,
+    "('exponential', 2000.0, 0.35)": 439
+  },
+  "by_gap": {
+    "600": {
+      "n_eval": 191197,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 8.951107624573119,
+        "ar1": 9.06095766771326,
+        "best_temporal": 9.05856603402281,
+        "linear_30m": 9.240795013277879,
+        "linear_60m": 9.072931584472654,
+        "net_mean": 8.591397218852219,
+        "shrink_mean": 8.590030263597962,
+        "nearest": 9.29972215371746,
+        "idw1": 8.514348610019358,
+        "idw2": 8.54813192025334,
+        "causal_cv_spatial": 8.506456992529158,
+        "tep": 8.466122404119865,
+        "tep_scramble": 8.614410670898556
+      },
+      "p99_m": {
+        "pers": 16.647982410322594,
+        "ar1": 15.868918407673892,
+        "best_temporal": 15.875035257586896,
+        "linear_30m": 17.75058681131986,
+        "linear_60m": 16.209343925542306,
+        "net_mean": 13.899471598419385,
+        "shrink_mean": 13.894800494894916,
+        "nearest": 17.354438054082927,
+        "idw1": 13.617908598969747,
+        "idw2": 13.776886708417697,
+        "causal_cv_spatial": 13.633882886458398,
+        "tep": 13.39901855641577,
+        "tep_scramble": 14.008705780024387
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 8.951107624573119
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "causal_cv_spatial",
+        "rms_m": 8.506456992529158
+      },
+      "tep_vs_pers_rms_pct": 5.418158744084844,
+      "tep_vs_best_temporal_rms_pct": 6.540148050782024,
+      "tep_vs_net_mean_rms_pct": 1.4581425062906161,
+      "tep_vs_pers_rms_pct_dayclustered": 16.34330516791749,
+      "tep_vs_net_mean_rms_pct_dayclustered": 4.786337778204263,
+      "tep_vs_best_temporal_posthoc_rms_pct": 5.418158744084844,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 0.47416437236696973,
+      "scramble_vs_net_mean_rms_pct": -0.2678662324661074,
+      "tep_vs_pers_p99_pct": 19.51566126050387,
+      "tep_vs_pers_ci95": [
+        2.387821749671838,
+        15.472349395632612
+      ],
+      "tep_vs_best_temporal_ci95": [
+        2.9747672519370294,
+        17.94043347716626
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.6538356107253385,
+        4.570678498620842
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        2.3387831964765904,
+        15.441973050841208
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.1954608558187343,
+        1.518687788964856
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 1115,
+        "references_rejected": 1164,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 2,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 25200.0,
+          "prediction_s": 25800.0,
+          "gap_s": 600.0,
+          "truth_m": 238089.06187226824,
+          "pretrend_prediction_m": -209920.33773189702,
+          "endpoint_deviation_m": 448009.3996041652,
+          "deviation_us": 1494.3985001923072
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 49500.0,
+          "prediction_s": 50100.0,
+          "gap_s": 600.0,
+          "truth_m": 59.68299872599805,
+          "pretrend_prediction_m": -340929.5597808854,
+          "endpoint_deviation_m": 340989.2427796114,
+          "deviation_us": 1137.4176824008407
+        }
+      ]
+    },
+    "1800": {
+      "n_eval": 186463,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 13.099564892506205,
+        "ar1": 13.405077544211405,
+        "best_temporal": 13.404982840057508,
+        "linear_30m": 14.658033997495988,
+        "linear_60m": 13.622538788208908,
+        "net_mean": 12.155493363117458,
+        "shrink_mean": 12.15360422552975,
+        "nearest": 12.751824604714669,
+        "idw1": 12.046327774555264,
+        "idw2": 12.06141797931532,
+        "causal_cv_spatial": 12.095734627254942,
+        "tep": 11.980022288581537,
+        "tep_scramble": 12.178364395056283
+      },
+      "p99_m": {
+        "pers": 21.469301672963244,
+        "ar1": 21.219723525223827,
+        "best_temporal": 21.234064101675376,
+        "linear_30m": 28.576113239981535,
+        "linear_60m": 22.97023035123359,
+        "net_mean": 16.242199374804432,
+        "shrink_mean": 16.24000141987429,
+        "nearest": 19.795839087069876,
+        "idw1": 15.752963683396995,
+        "idw2": 15.834435558068183,
+        "causal_cv_spatial": 16.061729181174787,
+        "tep": 15.344235259476243,
+        "tep_scramble": 16.36943945459607
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 13.099564892506205
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "idw1",
+        "rms_m": 12.046327774555264
+      },
+      "tep_vs_pers_rms_pct": 8.546410610669353,
+      "tep_vs_best_temporal_rms_pct": 10.630081130859981,
+      "tep_vs_net_mean_rms_pct": 1.443553702792022,
+      "tep_vs_pers_rms_pct_dayclustered": 30.67228065684544,
+      "tep_vs_net_mean_rms_pct_dayclustered": 6.638399247620508,
+      "tep_vs_best_temporal_posthoc_rms_pct": 8.546410610669353,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 0.5504207358011604,
+      "scramble_vs_net_mean_rms_pct": -0.18815387624020463,
+      "tep_vs_pers_p99_pct": 28.529416125352736,
+      "tep_vs_pers_ci95": [
+        3.7815948394944625,
+        26.77626908116439
+      ],
+      "tep_vs_best_temporal_ci95": [
+        4.809532364771292,
+        31.305560568226102
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.6500434080168136,
+        5.714767045451494
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        3.748123352147747,
+        26.991350228060004
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.25352363146282003,
+        2.1838649875616927
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 1569,
+        "references_rejected": 1841,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 6,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 24300.0,
+          "prediction_s": 26100.0,
+          "gap_s": 1800.0,
+          "truth_m": 238085.5205738581,
+          "pretrend_prediction_m": -209920.1807155971,
+          "endpoint_deviation_m": 448005.7012894552,
+          "deviation_us": 1494.386163942307
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 25200.0,
+          "prediction_s": 27000.0,
+          "gap_s": 1800.0,
+          "truth_m": 238086.27005500311,
+          "pretrend_prediction_m": -209924.98774353016,
+          "endpoint_deviation_m": 448011.2577985333,
+          "deviation_us": 1494.4046984615381
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 37800.0,
+          "prediction_s": 39600.0,
+          "gap_s": 1800.0,
+          "truth_m": -340969.32684687246,
+          "pretrend_prediction_m": 74.41498907291223,
+          "endpoint_deviation_m": -341043.74183594534,
+          "deviation_us": -1137.5994716849927
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 38700.0,
+          "prediction_s": 40500.0,
+          "gap_s": 1800.0,
+          "truth_m": -340969.85148367396,
+          "pretrend_prediction_m": 76.77266205860653,
+          "endpoint_deviation_m": -341046.62414573255,
+          "deviation_us": -1137.6090860355553
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 48600.0,
+          "prediction_s": 50400.0,
+          "gap_s": 1800.0,
+          "truth_m": 55.949000772213836,
+          "pretrend_prediction_m": -340929.67612342,
+          "endpoint_deviation_m": 340985.6251241922,
+          "deviation_us": 1137.4056152012745
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 49500.0,
+          "prediction_s": 51300.0,
+          "gap_s": 1800.0,
+          "truth_m": 66.70900020490319,
+          "pretrend_prediction_m": -340923.2582587231,
+          "endpoint_deviation_m": 340989.967258928,
+          "deviation_us": 1137.4200990037182
+        }
+      ]
+    },
+    "3600": {
+      "n_eval": 181651,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 18.41701619328869,
+        "ar1": 18.783473328252764,
+        "best_temporal": 18.767568374829953,
+        "linear_30m": 22.226696211028752,
+        "linear_60m": 19.672955232673583,
+        "net_mean": 16.58808511746887,
+        "shrink_mean": 16.58631943618922,
+        "nearest": 17.164788903933474,
+        "idw1": 16.441498201695637,
+        "idw2": 16.445730543283954,
+        "causal_cv_spatial": 16.56580823587589,
+        "tep": 16.358545046421362,
+        "tep_scramble": 16.61530001943139
+      },
+      "p99_m": {
+        "pers": 27.662680440706968,
+        "ar1": 28.509045637490477,
+        "best_temporal": 28.410021294478238,
+        "linear_30m": 46.40569132529684,
+        "linear_60m": 33.1720374156613,
+        "net_mean": 19.750860841332454,
+        "shrink_mean": 19.754436749401016,
+        "nearest": 23.677801533892225,
+        "idw1": 19.03388527609814,
+        "idw2": 19.125764185162556,
+        "causal_cv_spatial": 19.749291842964507,
+        "tep": 18.480972430785155,
+        "tep_scramble": 19.940316347558074
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 18.41701619328869
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "idw1",
+        "rms_m": 16.441498201695637
+      },
+      "tep_vs_pers_rms_pct": 11.17700677060517,
+      "tep_vs_best_temporal_rms_pct": 12.836097251892486,
+      "tep_vs_net_mean_rms_pct": 1.383764728852166,
+      "tep_vs_pers_rms_pct_dayclustered": 41.21374176951581,
+      "tep_vs_net_mean_rms_pct_dayclustered": 8.083563818851236,
+      "tep_vs_best_temporal_posthoc_rms_pct": 11.17700677060517,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 0.5045352574117645,
+      "scramble_vs_net_mean_rms_pct": -0.16406295102657786,
+      "tep_vs_pers_p99_pct": 33.191678693618165,
+      "tep_vs_pers_ci95": [
+        4.8167759742209055,
+        37.16757125655598
+      ],
+      "tep_vs_best_temporal_ci95": [
+        5.4382826521993275,
+        40.44922164298031
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.5976413819954732,
+        6.717062389523337
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        4.761135274023596,
+        37.20061403324274
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.22217676754802906,
+        2.4755718212764433
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 2264,
+        "references_rejected": 2527,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 12,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 22500.0,
+          "prediction_s": 26100.0,
+          "gap_s": 3600.0,
+          "truth_m": 238085.5205738581,
+          "pretrend_prediction_m": -209905.5543892691,
+          "endpoint_deviation_m": 447991.0749631272,
+          "deviation_us": 1494.3373757692304
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 23400.0,
+          "prediction_s": 27000.0,
+          "gap_s": 3600.0,
+          "truth_m": 238086.27005500311,
+          "pretrend_prediction_m": -209913.8246254421,
+          "endpoint_deviation_m": 448000.0946804452,
+          "deviation_us": 1494.3674623076915
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 24300.0,
+          "prediction_s": 27900.0,
+          "gap_s": 3600.0,
+          "truth_m": 238089.30545364035,
+          "pretrend_prediction_m": -209925.99008808294,
+          "endpoint_deviation_m": 448015.29554172326,
+          "deviation_us": 1494.4181669230761
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 25200.0,
+          "prediction_s": 28800.0,
+          "gap_s": 3600.0,
+          "truth_m": 238096.6128948041,
+          "pretrend_prediction_m": -209931.96276097986,
+          "endpoint_deviation_m": 448028.575655784,
+          "deviation_us": 1494.462464615384
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 36000.0,
+          "prediction_s": 39600.0,
+          "gap_s": 3600.0,
+          "truth_m": -340969.32684687246,
+          "pretrend_prediction_m": 66.79618453369466,
+          "endpoint_deviation_m": -341036.12303140614,
+          "deviation_us": -1137.5740580885667
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 36900.0,
+          "prediction_s": 40500.0,
+          "gap_s": 3600.0,
+          "truth_m": -340969.85148367396,
+          "pretrend_prediction_m": 70.0896349847513,
+          "endpoint_deviation_m": -341039.9411186587,
+          "deviation_us": -1137.5867938567644
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 37800.0,
+          "prediction_s": 41400.0,
+          "gap_s": 3600.0,
+          "truth_m": -340969.2893728152,
+          "pretrend_prediction_m": 75.5710787855618,
+          "endpoint_deviation_m": -341044.8604516008,
+          "deviation_us": -1137.6032029851826
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 38700.0,
+          "prediction_s": 42300.0,
+          "gap_s": 3600.0,
+          "truth_m": -340961.0825542775,
+          "pretrend_prediction_m": 78.41133595675463,
+          "endpoint_deviation_m": -341039.49389023427,
+          "deviation_us": -1137.585302063317
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 46800.0,
+          "prediction_s": 50400.0,
+          "gap_s": 3600.0,
+          "truth_m": 55.949000772213836,
+          "pretrend_prediction_m": -340955.1011182163,
+          "endpoint_deviation_m": 341011.0501189885,
+          "deviation_us": 1137.4904238551208
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 47700.0,
+          "prediction_s": 51300.0,
+          "gap_s": 3600.0,
+          "truth_m": 66.70900020490319,
+          "pretrend_prediction_m": -340934.3257314864,
+          "endpoint_deviation_m": 341001.0347316913,
+          "deviation_us": 1137.4570161191023
+        }
+      ]
+    },
+    "7200": {
+      "n_eval": 172615,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 27.050103227867336,
+        "ar1": 27.4112655888048,
+        "best_temporal": 27.26709838297038,
+        "linear_30m": 36.28297802515232,
+        "linear_60m": 30.181177047144775,
+        "net_mean": 23.62195502641994,
+        "shrink_mean": 23.62017131233654,
+        "nearest": 24.405994425124216,
+        "idw1": 23.412554123106272,
+        "idw2": 23.414807220497053,
+        "causal_cv_spatial": 23.643327916468657,
+        "tep": 23.226751747394093,
+        "tep_scramble": 23.664213302470948
+      },
+      "p99_m": {
+        "pers": 40.57537505634281,
+        "ar1": 41.56139241797549,
+        "best_temporal": 41.219602642370106,
+        "linear_30m": 83.8927707116275,
+        "linear_60m": 55.58242448004845,
+        "net_mean": 27.656588190373544,
+        "shrink_mean": 27.72263294222167,
+        "nearest": 32.01605821178096,
+        "idw1": 26.66257948414864,
+        "idw2": 26.57449778616992,
+        "causal_cv_spatial": 28.041879690977886,
+        "tep": 25.009707740827324,
+        "tep_scramble": 28.01190356384055
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 27.050103227867336
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "idw1",
+        "rms_m": 23.412554123106272
+      },
+      "tep_vs_pers_rms_pct": 14.134332310179065,
+      "tep_vs_best_temporal_rms_pct": 14.817662586715418,
+      "tep_vs_net_mean_rms_pct": 1.6730337458683353,
+      "tep_vs_pers_rms_pct_dayclustered": 48.76257570425413,
+      "tep_vs_net_mean_rms_pct_dayclustered": 10.7406773860371,
+      "tep_vs_best_temporal_posthoc_rms_pct": 14.134332310179065,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 0.7936014786563028,
+      "scramble_vs_net_mean_rms_pct": -0.1788940669971817,
+      "tep_vs_pers_p99_pct": 38.362349809215715,
+      "tep_vs_pers_ci95": [
+        6.000521882081779,
+        45.36781769644748
+      ],
+      "tep_vs_best_temporal_ci95": [
+        6.31569254934829,
+        46.670800241043
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.6899268417268073,
+        9.291878191619514
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        5.988104384404286,
+        45.415838659025745
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.3109271151872789,
+        4.241807364503085
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 3615,
+        "references_rejected": 3808,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 24,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 18900.0,
+          "prediction_s": 26100.0,
+          "gap_s": 7200.0,
+          "truth_m": 238085.5205738581,
+          "pretrend_prediction_m": -209906.66460145425,
+          "endpoint_deviation_m": 447992.18517531233,
+          "deviation_us": 1494.3410790384605
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 19800.0,
+          "prediction_s": 27000.0,
+          "gap_s": 7200.0,
+          "truth_m": 238086.27005500311,
+          "pretrend_prediction_m": -209907.75959340725,
+          "endpoint_deviation_m": 447994.0296484104,
+          "deviation_us": 1494.3472315384613
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 20700.0,
+          "prediction_s": 27900.0,
+          "gap_s": 7200.0,
+          "truth_m": 238089.30545364035,
+          "pretrend_prediction_m": -209904.92470980244,
+          "endpoint_deviation_m": 447994.2301634428,
+          "deviation_us": 1494.3479003846146
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 21600.0,
+          "prediction_s": 28800.0,
+          "gap_s": 7200.0,
+          "truth_m": 238096.6128948041,
+          "pretrend_prediction_m": -209899.24439220442,
+          "endpoint_deviation_m": 447995.85728700855,
+          "deviation_us": 1494.3533278846146
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 22500.0,
+          "prediction_s": 29700.0,
+          "gap_s": 7200.0,
+          "truth_m": 238091.96611170511,
+          "pretrend_prediction_m": -209908.40628033056,
+          "endpoint_deviation_m": 448000.3723920357,
+          "deviation_us": 1494.3683886538456
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 23400.0,
+          "prediction_s": 30600.0,
+          "gap_s": 7200.0,
+          "truth_m": 238106.37488671773,
+          "pretrend_prediction_m": -209920.34770576132,
+          "endpoint_deviation_m": 448026.7225924791,
+          "deviation_us": 1494.4562834615376
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 24300.0,
+          "prediction_s": 31500.0,
+          "gap_s": 7200.0,
+          "truth_m": 238103.39569916637,
+          "pretrend_prediction_m": -209937.60883305463,
+          "endpoint_deviation_m": 448041.004532221,
+          "deviation_us": 1494.5039228846144
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 25200.0,
+          "prediction_s": 32400.0,
+          "gap_s": 7200.0,
+          "truth_m": 238108.32353769473,
+          "pretrend_prediction_m": -209945.91279587927,
+          "endpoint_deviation_m": 448054.236333574,
+          "deviation_us": 1494.548059423076
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 32400.0,
+          "prediction_s": 39600.0,
+          "gap_s": 7200.0,
+          "truth_m": -340969.32684687246,
+          "pretrend_prediction_m": 71.11435929399902,
+          "endpoint_deviation_m": -341040.44120616646,
+          "deviation_us": -1137.5884619691349
+        },
+        {
+          "day": "2024017",
+          "station": "OP71",
+          "anchor_s": 33300.0,
+          "prediction_s": 40500.0,
+          "gap_s": 7200.0,
+          "truth_m": -340969.85148367396,
+          "pretrend_prediction_m": 62.825866988702124,
+          "endpoint_deviation_m": -341032.67735066265,
+          "deviation_us": -1137.5625645347714
+        }
+      ]
+    },
+    "14400": {
+      "n_eval": 155250,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 40.74056414941381,
+        "ar1": 41.133880143111895,
+        "best_temporal": 40.97581133621255,
+        "linear_30m": 62.46835586258873,
+        "linear_60m": 48.218010291755455,
+        "net_mean": 35.218705149962325,
+        "shrink_mean": 35.21615123137728,
+        "nearest": 36.48013164904676,
+        "idw1": 34.94388458418835,
+        "idw2": 34.979398872176155,
+        "causal_cv_spatial": 35.22445582070031,
+        "tep": 34.67063940092841,
+        "tep_scramble": 35.26649670418488
+      },
+      "p99_m": {
+        "pers": 66.29184066817534,
+        "ar1": 68.45329848970522,
+        "best_temporal": 67.17721107777261,
+        "linear_30m": 157.94244285129045,
+        "linear_60m": 97.18805848410726,
+        "net_mean": 43.5292909993766,
+        "shrink_mean": 43.60680362614785,
+        "nearest": 52.63436542442336,
+        "idw1": 42.469812418759034,
+        "idw2": 43.074971962946094,
+        "causal_cv_spatial": 44.28914180886355,
+        "tep": 40.027347680017236,
+        "tep_scramble": 44.16627112824671
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 40.74056414941381
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "idw1",
+        "rms_m": 34.94388458418835
+      },
+      "tep_vs_pers_rms_pct": 14.898970780631016,
+      "tep_vs_best_temporal_rms_pct": 15.387546285659315,
+      "tep_vs_net_mean_rms_pct": 1.5561780215945897,
+      "tep_vs_pers_rms_pct_dayclustered": 48.37745187242637,
+      "tep_vs_net_mean_rms_pct_dayclustered": 8.910130773797231,
+      "tep_vs_best_temporal_posthoc_rms_pct": 14.898970780631016,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 0.7819542289342007,
+      "scramble_vs_net_mean_rms_pct": -0.1356993507258597,
+      "tep_vs_pers_p99_pct": 39.61949573798284,
+      "tep_vs_pers_ci95": [
+        6.372532706436168,
+        45.61684737426525
+      ],
+      "tep_vs_best_temporal_ci95": [
+        6.501186134016499,
+        46.46890928627129
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.6245411408291061,
+        8.401756473474915
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        6.3541102929497955,
+        45.499859635319226
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.3082811537926511,
+        4.435056933798007
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 4868,
+        "references_rejected": 5107,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 44,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 11700.0,
+          "prediction_s": 26100.0,
+          "gap_s": 14400.0,
+          "truth_m": 238085.5205738581,
+          "pretrend_prediction_m": -209862.0877690451,
+          "endpoint_deviation_m": 447947.6083429032,
+          "deviation_us": 1494.192386730767
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 12600.0,
+          "prediction_s": 27000.0,
+          "gap_s": 14400.0,
+          "truth_m": 238086.27005500311,
+          "pretrend_prediction_m": -209882.2229835726,
+          "endpoint_deviation_m": 447968.49303857575,
+          "deviation_us": 1494.262050576922
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 13500.0,
+          "prediction_s": 27900.0,
+          "gap_s": 14400.0,
+          "truth_m": 238089.30545364035,
+          "pretrend_prediction_m": -209880.7756778292,
+          "endpoint_deviation_m": 447970.0811314696,
+          "deviation_us": 1494.2673478846143
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 14400.0,
+          "prediction_s": 28800.0,
+          "gap_s": 14400.0,
+          "truth_m": 238096.6128948041,
+          "pretrend_prediction_m": -209880.879221532,
+          "endpoint_deviation_m": 447977.4921163361,
+          "deviation_us": 1494.2920682692297
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 15300.0,
+          "prediction_s": 29700.0,
+          "gap_s": 14400.0,
+          "truth_m": 238091.96611170511,
+          "pretrend_prediction_m": -209900.11880609076,
+          "endpoint_deviation_m": 447992.08491779584,
+          "deviation_us": 1494.3407446153828
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 16200.0,
+          "prediction_s": 30600.0,
+          "gap_s": 14400.0,
+          "truth_m": 238106.37488671773,
+          "pretrend_prediction_m": -209909.59351611618,
+          "endpoint_deviation_m": 448015.9684028339,
+          "deviation_us": 1494.4204113461517
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 17100.0,
+          "prediction_s": 31500.0,
+          "gap_s": 14400.0,
+          "truth_m": 238103.39569916637,
+          "pretrend_prediction_m": -209924.54889349313,
+          "endpoint_deviation_m": 448027.9445926595,
+          "deviation_us": 1494.4603596153827
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 18000.0,
+          "prediction_s": 32400.0,
+          "gap_s": 14400.0,
+          "truth_m": 238108.32353769473,
+          "pretrend_prediction_m": -209932.68405010324,
+          "endpoint_deviation_m": 448041.00758779794,
+          "deviation_us": 1494.503933076922
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 18900.0,
+          "prediction_s": 33300.0,
+          "gap_s": 14400.0,
+          "truth_m": 238093.67118131,
+          "pretrend_prediction_m": -209914.78978419938,
+          "endpoint_deviation_m": 448008.4609655094,
+          "deviation_us": 1494.3953692307678
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 19800.0,
+          "prediction_s": 34200.0,
+          "gap_s": 14400.0,
+          "truth_m": 238084.26519294025,
+          "pretrend_prediction_m": -209916.36144616068,
+          "endpoint_deviation_m": 448000.62663910096,
+          "deviation_us": 1494.3692367307685
+        }
+      ]
+    },
+    "28800": {
+      "n_eval": 121233,
+      "n_days": 90,
+      "rms_m": {
+        "pers": 62.984426424811865,
+        "ar1": 63.46099776355497,
+        "best_temporal": 63.26096880013574,
+        "linear_30m": 110.69176373770338,
+        "linear_60m": 79.6677831705657,
+        "net_mean": 51.8171342237037,
+        "shrink_mean": 51.81084610736409,
+        "nearest": 54.51816330663523,
+        "idw1": 51.302977168815644,
+        "idw2": 51.4257325652996,
+        "causal_cv_spatial": 51.90361242806509,
+        "tep": 50.73279453296019,
+        "tep_scramble": 51.920958558883434
+      },
+      "p99_m": {
+        "pers": 117.54422088556137,
+        "ar1": 119.02176064736241,
+        "best_temporal": 118.03156536968159,
+        "linear_30m": 294.64385220630754,
+        "linear_60m": 176.7156899610615,
+        "net_mean": 75.772168413338,
+        "shrink_mean": 75.90144149359084,
+        "nearest": 92.86314436843936,
+        "idw1": 74.96314470960442,
+        "idw2": 77.24956777414526,
+        "causal_cv_spatial": 78.04960376510272,
+        "tep": 69.94076257330616,
+        "tep_scramble": 76.56370329767186
+      },
+      "best_temporal_posthoc": {
+        "method": "pers",
+        "rms_m": 62.984426424811865
+      },
+      "best_conventional_spatial_posthoc": {
+        "method": "idw1",
+        "rms_m": 51.302977168815644
+      },
+      "tep_vs_pers_rms_pct": 19.45184323695819,
+      "tep_vs_best_temporal_rms_pct": 19.803955748380297,
+      "tep_vs_net_mean_rms_pct": 2.0926276742017746,
+      "tep_vs_pers_rms_pct_dayclustered": 48.928608552581835,
+      "tep_vs_net_mean_rms_pct_dayclustered": 8.715652378725313,
+      "tep_vs_best_temporal_posthoc_rms_pct": 19.45184323695819,
+      "tep_vs_best_conventional_spatial_posthoc_rms_pct": 1.1114026267505461,
+      "scramble_vs_net_mean_rms_pct": -0.20036680286390496,
+      "tep_vs_pers_p99_pct": 40.49834007458431,
+      "tep_vs_pers_ci95": [
+        8.673202141980322,
+        47.23048974326376
+      ],
+      "tep_vs_best_temporal_ci95": [
+        8.90709864737743,
+        47.694905743948766
+      ],
+      "tep_vs_net_mean_ci95": [
+        0.8106850435637512,
+        8.836334229615762
+      ],
+      "tep_vs_best_temporal_posthoc_ci95": [
+        8.692396298988575,
+        47.1656045072732
+      ],
+      "tep_vs_best_conventional_spatial_posthoc_ci95": [
+        0.42324398647189065,
+        4.941108592127553
+      ],
+      "reference_integrity": {
+        "events_with_rejection": 5478,
+        "references_rejected": 5700,
+        "rule": "abs(innovation - median) <= max(10 m, 8*MAD_sigma)"
+      },
+      "target_reset_like_events": 65,
+      "target_reset_like_examples": [
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 7200.0,
+          "prediction_s": 36000.0,
+          "gap_s": 28800.0,
+          "truth_m": 238097.868275722,
+          "pretrend_prediction_m": -209808.32719825263,
+          "endpoint_deviation_m": 447906.1954739746,
+          "deviation_us": 1494.05424826923
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 8100.0,
+          "prediction_s": 36900.0,
+          "gap_s": 28800.0,
+          "truth_m": 238099.53587126962,
+          "pretrend_prediction_m": -209809.5344394197,
+          "endpoint_deviation_m": 447909.0703106893,
+          "deviation_us": 1494.0638376923055
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 9000.0,
+          "prediction_s": 37800.0,
+          "gap_s": 28800.0,
+          "truth_m": 238109.1292299256,
+          "pretrend_prediction_m": -209809.26370376913,
+          "endpoint_deviation_m": 447918.39293369476,
+          "deviation_us": 1494.0949346153825
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 9900.0,
+          "prediction_s": 38700.0,
+          "gap_s": 28800.0,
+          "truth_m": 238091.49768598948,
+          "pretrend_prediction_m": -209820.39978288364,
+          "endpoint_deviation_m": 447911.8974688731,
+          "deviation_us": 1494.0732680769213
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 10800.0,
+          "prediction_s": 39600.0,
+          "gap_s": 28800.0,
+          "truth_m": 238103.37696213773,
+          "pretrend_prediction_m": -209828.96099069834,
+          "endpoint_deviation_m": 447932.33795283607,
+          "deviation_us": 1494.1414501923064
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 11700.0,
+          "prediction_s": 40500.0,
+          "gap_s": 28800.0,
+          "truth_m": 238091.36652678912,
+          "pretrend_prediction_m": -209837.26356986465,
+          "endpoint_deviation_m": 447928.63009665377,
+          "deviation_us": 1494.1290821153805
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 12600.0,
+          "prediction_s": 41400.0,
+          "gap_s": 28800.0,
+          "truth_m": 238096.44426154648,
+          "pretrend_prediction_m": -209874.38594750102,
+          "endpoint_deviation_m": 447970.83020904753,
+          "deviation_us": 1494.2698465384594
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 13500.0,
+          "prediction_s": 42300.0,
+          "gap_s": 28800.0,
+          "truth_m": 238101.05357058824,
+          "pretrend_prediction_m": -209873.07769933625,
+          "endpoint_deviation_m": 447974.13126992446,
+          "deviation_us": 1494.2808576923055
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 14400.0,
+          "prediction_s": 43200.0,
+          "gap_s": 28800.0,
+          "truth_m": 238096.81900211898,
+          "pretrend_prediction_m": -209873.41577298508,
+          "endpoint_deviation_m": 447970.2347751041,
+          "deviation_us": 1494.2678603846134
+        },
+        {
+          "day": "2024005",
+          "station": "GRAZ",
+          "anchor_s": 15300.0,
+          "prediction_s": 44100.0,
+          "gap_s": 28800.0,
+          "truth_m": 238093.8960256535,
+          "pretrend_prediction_m": -209907.74483439315,
+          "endpoint_deviation_m": 448001.6408600466,
+          "deviation_us": 1494.3726198076893
+        }
+      ]
+    }
+  },
+  "headline": {
+    "tep_vs_persistence_rms_pct": {
+      "600": 5.418158744084844,
+      "1800": 8.546410610669353,
+      "3600": 11.17700677060517,
+      "7200": 14.134332310179065,
+      "14400": 14.898970780631016,
+      "28800": 19.45184323695819
+    },
+    "tep_vs_best_temporal_rms_pct": {
+      "600": 6.540148050782024,
+      "1800": 10.630081130859981,
+      "3600": 12.836097251892486,
+      "7200": 14.817662586715418,
+      "14400": 15.387546285659315,
+      "28800": 19.803955748380297
+    },
+    "tep_vs_net_mean_rms_pct": {
+      "600": 1.4581425062906161,
+      "1800": 1.443553702792022,
+      "3600": 1.383764728852166,
+      "7200": 1.6730337458683353,
+      "14400": 1.5561780215945897,
+      "28800": 2.0926276742017746
+    },
+    "tep_vs_best_temporal_posthoc_rms_pct": {
+      "600": 5.418158744084844,
+      "1800": 8.546410610669353,
+      "3600": 11.17700677060517,
+      "7200": 14.134332310179065,
+      "14400": 14.898970780631016,
+      "28800": 19.45184323695819
+    },
+    "tep_vs_best_conventional_spatial_posthoc_rms_pct": {
+      "600": 0.47416437236696973,
+      "1800": 0.5504207358011604,
+      "3600": 0.5045352574117645,
+      "7200": 0.7936014786563028,
+      "14400": 0.7819542289342007,
+      "28800": 1.1114026267505461
+    },
+    "distance_scramble_vs_net_mean_rms_pct": {
+      "600": -0.2678662324661074,
+      "1800": -0.18815387624020463,
+      "3600": -0.16406295102657786,
+      "7200": -0.1788940669971817,
+      "14400": -0.1356993507258597,
+      "28800": -0.20036680286390496
+    },
+    "min_tep_vs_best_temporal_pct": 6.540148050782024,
+    "max_tep_vs_best_temporal_pct": 19.803955748380297,
+    "interpretation": "Result-dependent interpretation intentionally omitted from the executable. Promotion requires positive paired day-cluster confidence intervals against the strongest temporal and conventional spatial controls, a near-zero distance-scramble result, and independent end-to-end position validation."
+  }
+}

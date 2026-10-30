@@ -1,0 +1,222 @@
+{
+  "step": 79,
+  "title": "Non-exact sector via a site-frame az/el multipath model",
+  "timestamp": "2026-09-03T07:56:20.969337+00:00",
+  "grid": {
+    "n_az": 12,
+    "n_el": 6
+  },
+  "pairs": [
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 5304,
+      "slope": -0.1279030000089641,
+      "z": 1.4447449199238507,
+      "injection_recovery": 0.9999999999995576,
+      "slopes_by_grid": {
+        "12x6": -0.1279030000089641,
+        "24x12": -0.3931677291109893
+      },
+      "grid_instability": 0.6746859150974273,
+      "stable_under_refinement": false
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 11387,
+      "slope": -0.006251596309035355,
+      "z": -17.581939361497575,
+      "injection_recovery": 1.0000000000000266,
+      "slopes_by_grid": {
+        "12x6": -0.006251596309035355,
+        "24x12": -0.006033411370794773
+      },
+      "grid_instability": 0.03490067615614306,
+      "stable_under_refinement": true
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 7330,
+      "slope": -0.45495892658738774,
+      "z": -25.257311684866202,
+      "injection_recovery": 1.0000000000003428,
+      "slopes_by_grid": {
+        "12x6": -0.45495892658738774,
+        "24x12": -0.5706266775686384
+      },
+      "grid_instability": 0.20270302025502032,
+      "stable_under_refinement": true
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 9482,
+      "slope": 0.006352310476642274,
+      "z": 15.87378383130554,
+      "injection_recovery": 0.9999999999998971,
+      "slopes_by_grid": {
+        "12x6": 0.006352310476642274,
+        "24x12": 0.007585838689711258
+      },
+      "grid_instability": 0.16260933873297745,
+      "stable_under_refinement": true
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 11638,
+      "slope": -0.17455091626782546,
+      "z": -52.71032591050249,
+      "injection_recovery": 0.9999999999996037,
+      "slopes_by_grid": {
+        "12x6": -0.17455091626782546,
+        "24x12": -0.16762776360292775
+      },
+      "grid_instability": 0.039662654387187746,
+      "stable_under_refinement": true
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 11718,
+      "slope": 0.002359457278565651,
+      "z": 10.268732940529741,
+      "injection_recovery": 1.0000000000002278,
+      "slopes_by_grid": {
+        "12x6": 0.002359457278565651,
+        "24x12": 0.008080574582254696
+      },
+      "grid_instability": 0.7080087245593741,
+      "stable_under_refinement": false
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.33314385641043,
+      "n_obs": 10675,
+      "slope": -0.19937533321732734,
+      "z": -23.125880989816483,
+      "injection_recovery": 0.999999999999275,
+      "slopes_by_grid": {
+        "12x6": -0.19937533321732734,
+        "24x12": -0.21034875888903135
+      },
+      "grid_instability": 0.0521677699914217,
+      "stable_under_refinement": true
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 11493,
+      "slope": 0.0901144166137931,
+      "z": 39.682158593906514,
+      "injection_recovery": 1.0000000000013136,
+      "slopes_by_grid": {
+        "12x6": 0.0901144166137931,
+        "24x12": 0.09788453068831121
+      },
+      "grid_instability": 0.07938040893570908,
+      "stable_under_refinement": true
+    }
+  ],
+  "verdict": {
+    "grid_sweep": [
+      {
+        "pair": "WTZR-WTZZ",
+        "n_az": 12,
+        "n_el": 6,
+        "n_cells": 72,
+        "slope": -0.1279030000089641,
+        "z": 1.6788736010491307,
+        "injection_recovery": 0.9999999999995576,
+        "is_zero_area_control": true
+      },
+      {
+        "pair": "WTZR-WTZZ",
+        "n_az": 24,
+        "n_el": 12,
+        "n_cells": 288,
+        "slope": -0.3931677291109893,
+        "z": -9.77578694495183,
+        "injection_recovery": 0.999999999999519,
+        "is_zero_area_control": true
+      },
+      {
+        "pair": "WTZR-WTZZ",
+        "n_az": 36,
+        "n_el": 18,
+        "n_cells": 648,
+        "slope": -0.43786150125005935,
+        "z": -13.526514873767498,
+        "injection_recovery": 0.9999999999993814,
+        "is_zero_area_control": true
+      },
+      {
+        "pair": "BRUX-WSRT",
+        "n_az": 12,
+        "n_el": 6,
+        "n_cells": 72,
+        "slope": 0.0901144166137931,
+        "z": 36.681267253804236,
+        "injection_recovery": 1.0000000000013136,
+        "is_zero_area_control": false
+      },
+      {
+        "pair": "BRUX-WSRT",
+        "n_az": 24,
+        "n_el": 12,
+        "n_cells": 288,
+        "slope": 0.09788453068831121,
+        "z": 49.05712677936881,
+        "injection_recovery": 1.000000000002014,
+        "is_zero_area_control": false
+      },
+      {
+        "pair": "BRUX-WSRT",
+        "n_az": 36,
+        "n_el": 18,
+        "n_cells": 648,
+        "slope": 0.09921070779136719,
+        "z": 57.12721125687305,
+        "injection_recovery": 1.0000000000018716,
+        "is_zero_area_control": false
+      }
+    ],
+    "control_slope_shrinks_with_resolution": false,
+    "test_slope_stable_with_resolution": true,
+    "floor_is_model_not_physics": false,
+    "grid_note": "a zero-area control whose slope falls as the az/el grid is refined was never a holonomy floor -- it was unmodelled multipath; a test slope that holds while the control falls is not multipath",
+    "median_injection_recovery": 0.9999999999999618,
+    "estimator_has_power": true,
+    "comparison": "sidereal template recovered 0.00 (Step 72); this must be near 1.0 for the measured slope to mean anything",
+    "n_pairs_detected_z_gt_5": 7,
+    "pairs_detected": [
+      "ZIM2-ZIMM",
+      "WAB2-ZIMM",
+      "PADO-VEN1",
+      "BRUX-REDU",
+      "BRUX-DLF1",
+      "GRAS-IENG",
+      "BRUX-WSRT"
+    ],
+    "slope_vs_baseline_spearman": 0.0,
+    "n_stable_under_refinement": 6,
+    "stable_pairs": [
+      "ZIM2-ZIMM",
+      "WAB2-ZIMM",
+      "PADO-VEN1",
+      "BRUX-REDU",
+      "GRAS-IENG",
+      "BRUX-WSRT"
+    ],
+    "unstable_pairs": [
+      "WTZR-WTZZ",
+      "BRUX-DLF1"
+    ],
+    "slope_vs_baseline_spearman_stable_only": 0.2571428571428572,
+    "stability_note": "a coefficient that moves with the resolution of the nuisance model is a leak from that nuisance, not a measurement; only stable pairs are interpretable",
+    "holonomy_signature": "flux scales with enclosed loop area, so |slope| must grow with baseline; rho > 0.6 with detections is the signature",
+    "conclusion": "estimator has power; no holonomy above the multipath-modelled floor"
+  }
+}

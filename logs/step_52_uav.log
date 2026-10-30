@@ -1,0 +1,7 @@
+
+=== step_52: ign_fixed_wing_uav_flight8 (drone) ===
+  epochs: 2532, CORS: 13, systems: ['G'], jam epochs: 600
+  k3: n=300, TEP p50=157332.3655297492, free p50=None, TCXO p50=157336.1131484108, RTK p50=None
+  k4: n=300, TEP p50=30374.651542623353, free p50=4.013231454414925, TCXO p50=4.013231454414925, RTK p50=None
+
+saved results/outputs/step_52_drone_kinematic.json

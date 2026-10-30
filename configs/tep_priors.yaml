@@ -1,0 +1,46 @@
+# TEP-PPP Priors and Configuration
+# Paper 33, Pune v0.1
+# These parameters define the TEP-PPP analysis configuration.
+# Do not duplicate these values in project scripts — import from configs/ or core/.
+
+version: "0.1"
+codename: "Pune"
+paper: 33
+
+# Spatial correlation length (km)
+lambda_t_km: 1000.0
+lambda_t_ci95_low_km: 497
+lambda_t_ci95_high_km: 972
+
+# Receiver clock noise parameters
+sigma_ns: 20.0
+
+# Unified Physics coupling strengths
+velocity_coupling: 0.35
+diurnal_coupling: 0.10
+seasonal_coupling: -0.20
+chandler_coupling: 0.15
+
+# Network configuration
+network:
+  stations:
+    - ZIMM
+    - GRAS
+    - GENO
+    - BRUX
+    - WTZR
+  sampling_interval_s: 30
+  reference_doy: 100
+  reference_year: 2024
+
+# Longitudinal analysis
+longitudinal:
+  period: "2022-2024"
+  n_days: 986
+  n_epochs_approx: 284000
+
+# Falsification stress test
+falsification:
+  tidal_model: full  # Solid Earth Tides + Ocean Tide Loading + Pole Tide
+  ztd_estimation: true
+  step: 24

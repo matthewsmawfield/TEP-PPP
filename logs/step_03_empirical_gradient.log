@@ -1,0 +1,55 @@
+[22:07:46] [INFO] 
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] STEP 03: MULTI-DAY PHASE-COHERENT SPATIAL CORRELATION
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] 
+[22:07:46] [INFO] 9 stations x 7 days (DOY 100-106, 2024), 30s sampling
+[22:07:46] [INFO] TEP band: 10-500 uHz (periods 28h-33min)
+[22:07:46] [INFO] 
+[22:07:46] [INFO] Loaded 63 station-days (9 stations)
+[22:07:46] [INFO] Sampling: dt=30s, fs=0.033333 Hz, n_epochs=2879/day
+[22:07:46] [INFO] Latitude range: -33.6° to 50.6°
+[22:07:46] [INFO] Total pairs: 36 x 7 days = 252 pair-days
+[22:07:46] [INFO] 
+[22:07:46] [INFO] 
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] === PAIRWISE PHASE-COHERENT CORRELATION (7-DAY AVERAGE) ===
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] 
+[22:07:46] [INFO]   36 pairs, 252 pair-days
+[22:07:46] [INFO]   Mean PA (7-day avg): +0.1529 +/- 0.7720
+[22:07:46] [INFO]   Mean PA (all pair-days): +0.1529 +/- 0.7941
+[22:07:46] [INFO]   Distance range: 24 - 12323 km
+[22:07:46] [INFO] 
+[22:07:46] [INFO] 
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] === MONTE CARLO NULL TEST ===
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] 
+[22:07:46] [INFO] MC null (all pair-days): -0.0002 +/- 0.0433
+[22:07:46] [INFO] Z-score: 3.53 sigma
+[22:07:46] [INFO] p-value: 0.000000
+[22:07:46] [INFO] 
+[22:07:46] [INFO] 
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] === SPATIAL DECAY ANALYSIS ===
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] 
+[22:07:46] [INFO] Exponential fit: lambda_T = 5000 km, A=0.500, C0=0.000
+[22:07:46] [INFO] R^2 = 0.319 (6 bins)
+[22:07:46] [INFO] 
+[22:07:46] [INFO] 
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] === DAY-TO-DAY CONSISTENCY ===
+[22:07:46] [INFO] ================================================================================
+[22:07:46] [INFO] 
+[22:07:46] [INFO]   DOY 100: mean PA = +0.1054 (36 pairs)
+[22:07:46] [INFO]   DOY 101: mean PA = +0.0781 (36 pairs)
+[22:07:46] [INFO]   DOY 102: mean PA = +0.1201 (36 pairs)
+[22:07:46] [INFO]   DOY 103: mean PA = +0.2154 (36 pairs)
+[22:07:46] [INFO]   DOY 104: mean PA = +0.1992 (36 pairs)
+[22:07:46] [INFO]   DOY 105: mean PA = +0.1540 (36 pairs)
+[22:07:46] [INFO]   DOY 106: mean PA = +0.1982 (36 pairs)
+[22:07:46] [SUCCESS] Saved figure: results/figures/step_03_empirical_gradient.png
+[22:07:46] [SUCCESS] Saved summary: results/outputs/step_03_empirical_gradient.json
+[22:07:46] [SUCCESS] SIGNIFICANT: Phase-coherent spatial correlation at 3.5 sigma

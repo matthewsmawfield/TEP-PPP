@@ -1,0 +1,17 @@
+{
+  "description": "MEO Spatio-Kinematic Anisotropy (T2) \u2014 velocity-coupling factor metric",
+  "metric": "mean exp(alpha_v * v_hat_target . v_hat_ref) over reference satellites",
+  "velocity_frame": "ECEF (Earth-fixed); inertial velocity is the strictly correct quantity for Sagnac claims",
+  "total_epochs": 1905,
+  "ew_epochs": 375,
+  "ns_epochs": 1193,
+  "ew_mean_coupling": 1.0425304962208972,
+  "ns_mean_coupling": 0.9686196708733317,
+  "anisotropy_ratio": 1.0763053111247738,
+  "ci95": [
+    1.06878576761367,
+    1.0840281675622923
+  ],
+  "p_ratio_le_1": 0.0,
+  "t2_pass": true
+}

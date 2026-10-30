@@ -1,0 +1,781 @@
+{
+  "step": 152,
+  "title": "Lunar tidal detection in GNSS receiver clock bias (corrected)",
+  "timestamp": "2026-09-06T23:24:42.137694+00:00",
+  "n_days": 45,
+  "n_stations": 7,
+  "freq_resolution_uhz": 0.257201646090535,
+  "correction_note": "Original Step 152 used a 52-day grid with 7 days of flat-line interpolation (DOY 46-52 missing). This inflated amplitudes by ~30% and created a spurious clock-type screening effect (p=0.002 -> p=0.19). This version uses 45-day contiguous data only.",
+  "ppp_config": {
+    "tidecorr": "1 (solid Earth tides)",
+    "ocean_loading": "NOT corrected (no BLQ)"
+  },
+  "per_station": {
+    "BRUX": {
+      "clock_type": "ATOMIC",
+      "n_jumps_removed": 14,
+      "residual_std_ns": 116.57549357204307,
+      "O1_lunar": {
+        "amp_ns": 6.278455726748209,
+        "phase": -1.2194533007289539,
+        "snr": 15.087080238230122
+      },
+      "Q1_lunar": {
+        "amp_ns": 5.0730508276553605,
+        "phase": 1.473233894181145,
+        "snr": 12.190501648897843
+      },
+      "K1_lunar": {
+        "amp_ns": 37.90520292490931,
+        "phase": -0.7879199540696451,
+        "snr": 91.08590756451733,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 2.405919615142682,
+        "phase": 1.1760181666115501,
+        "snr": 5.7814061068786575
+      },
+      "S2_solar": {
+        "amp_ns": 22.598249583731942,
+        "phase": 0.3006948884443384,
+        "snr": 54.30341783900698
+      },
+      "24h_solar": {
+        "amp_ns": 79.50471685386222,
+        "phase": 2.848575771073717,
+        "snr": 191.04921571426578
+      },
+      "significance": {
+        "O1": {
+          "amp": 6.278455726748209,
+          "random_median": 5.039530130008815,
+          "p": 0.2692307692307692
+        },
+        "M2": {
+          "amp": 2.405919615142676,
+          "random_median": 2.0700151206112007,
+          "p": 0.3956043956043956
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "ATOMIC",
+        "M2_observed_ns": 2.405919615142682,
+        "M2_ocean_loading_ns": 0.0030020768567833684,
+        "M2_ratio": 801.4183946378207,
+        "O1_observed_ns": 6.278455726748209,
+        "O1_ocean_loading_ns": 0.0010006922855944561,
+        "O1_ratio": 6274.112249220073,
+        "blq_source": "estimated"
+      }
+    },
+    "GENO": {
+      "clock_type": "QUARTZ",
+      "n_jumps_removed": 361,
+      "residual_std_ns": 100.12906826418791,
+      "O1_lunar": {
+        "amp_ns": 7.2935877002601455,
+        "phase": -1.3036356745320996,
+        "snr": 23.778824845025255
+      },
+      "Q1_lunar": {
+        "amp_ns": 1.0475351043094838,
+        "phase": 1.9933738857766168,
+        "snr": 3.4152127578450897
+      },
+      "K1_lunar": {
+        "amp_ns": 30.243049462920602,
+        "phase": -1.7216656926856844,
+        "snr": 98.5995103524393,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 2.8613312925319603,
+        "phase": -1.2368505424149192,
+        "snr": 9.328618291143659
+      },
+      "S2_solar": {
+        "amp_ns": 21.001465205221642,
+        "phase": 0.8068824929434105,
+        "snr": 68.46975495832397
+      },
+      "24h_solar": {
+        "amp_ns": 65.66135662416819,
+        "phase": -3.1157998101082653,
+        "snr": 214.0715875942843
+      },
+      "significance": {
+        "O1": {
+          "amp": 7.2935877002601455,
+          "random_median": 4.2558495506257925,
+          "p": 0.2214765100671141
+        },
+        "M2": {
+          "amp": 2.861331292531979,
+          "random_median": 1.943599687004349,
+          "p": 0.21264367816091953
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 2.8613312925319603,
+        "M2_ocean_loading_ns": 0.006004153713566737,
+        "M2_ratio": 476.55863407804077,
+        "O1_observed_ns": 7.2935877002601455,
+        "O1_ocean_loading_ns": 0.0020013845711889123,
+        "O1_ratio": 3644.270973832594,
+        "blq_source": "estimated"
+      }
+    },
+    "GRAS": {
+      "clock_type": "QUARTZ",
+      "n_jumps_removed": 20,
+      "residual_std_ns": 103.31357512671428,
+      "O1_lunar": {
+        "amp_ns": 9.09791797128967,
+        "phase": -1.5727192173429427,
+        "snr": 25.814044384608422
+      },
+      "Q1_lunar": {
+        "amp_ns": 2.4004998134924067,
+        "phase": 2.5483220069857824,
+        "snr": 6.811075778687549
+      },
+      "K1_lunar": {
+        "amp_ns": 11.76272345527023,
+        "phase": -0.6557531425845665,
+        "snr": 33.37504979891322,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 1.736155139605626,
+        "phase": 1.4816646783840528,
+        "snr": 4.926092538290124
+      },
+      "S2_solar": {
+        "amp_ns": 20.807519991438667,
+        "phase": 0.19274944610268596,
+        "snr": 59.038369689376836
+      },
+      "24h_solar": {
+        "amp_ns": 73.48115808058905,
+        "phase": -3.135910341058307,
+        "snr": 208.4923036359128
+      },
+      "significance": {
+        "O1": {
+          "amp": 9.09791797128967,
+          "random_median": 2.8751500374731185,
+          "p": 0.0
+        },
+        "M2": {
+          "amp": 1.736155139605622,
+          "random_median": 2.137282865219387,
+          "p": 0.7277777777777777
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 1.736155139605626,
+        "M2_ocean_loading_ns": 0.005003461427972281,
+        "M2_ratio": 346.9908111811359,
+        "O1_observed_ns": 9.09791797128967,
+        "O1_ocean_loading_ns": 0.00160110765695113,
+        "O1_ratio": 5682.264981865215,
+        "blq_source": "estimated"
+      }
+    },
+    "TLSE": {
+      "clock_type": "QUARTZ",
+      "n_jumps_removed": 20,
+      "residual_std_ns": 118.8700013315141,
+      "O1_lunar": {
+        "amp_ns": 6.868664718959934,
+        "phase": -2.0359129237799976,
+        "snr": 16.14896958050911
+      },
+      "Q1_lunar": {
+        "amp_ns": 5.969042412586438,
+        "phase": 1.2151498543179473,
+        "snr": 14.033860770572483
+      },
+      "K1_lunar": {
+        "amp_ns": 49.45638906129507,
+        "phase": -0.5831081528537528,
+        "snr": 116.27729044745303,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 3.6075692631046485,
+        "phase": 1.618250359123602,
+        "snr": 8.481783384861192
+      },
+      "S2_solar": {
+        "amp_ns": 26.94006211001547,
+        "phase": 0.43048850311938086,
+        "snr": 63.33898382181371
+      },
+      "24h_solar": {
+        "amp_ns": 87.33125135715066,
+        "phase": 2.8961648331061074,
+        "snr": 205.32516570527446
+      },
+      "significance": {
+        "O1": {
+          "amp": 6.868664718959934,
+          "random_median": 4.4307074314370505,
+          "p": 0.13138686131386862
+        },
+        "M2": {
+          "amp": 3.607569263104658,
+          "random_median": 1.6460167188212613,
+          "p": 0.1411042944785276
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 3.6075692631046485,
+        "M2_ocean_loading_ns": 0.0030020768567833684,
+        "M2_ratio": 1201.691174212657,
+        "O1_observed_ns": 6.868664718959934,
+        "O1_ocean_loading_ns": 0.0010006922855944561,
+        "O1_ratio": 6863.91293091626,
+        "blq_source": "estimated"
+      }
+    },
+    "WTZR": {
+      "clock_type": "ATOMIC",
+      "n_jumps_removed": 337,
+      "residual_std_ns": 116.47246302673156,
+      "O1_lunar": {
+        "amp_ns": 5.2554215576783765,
+        "phase": -1.378021684673747,
+        "snr": 12.832215585885317
+      },
+      "Q1_lunar": {
+        "amp_ns": 4.079333176173477,
+        "phase": 0.5906160722242383,
+        "snr": 9.960548775926737
+      },
+      "K1_lunar": {
+        "amp_ns": 37.99730883841466,
+        "phase": -1.0809373442767507,
+        "snr": 92.77841051316139,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 1.4917954266547098,
+        "phase": 0.23842264480797143,
+        "snr": 3.6425318720440742
+      },
+      "S2_solar": {
+        "amp_ns": 22.492849931432076,
+        "phase": -0.027215566184023477,
+        "snr": 54.92101752320856
+      },
+      "24h_solar": {
+        "amp_ns": 80.29085698349088,
+        "phase": 2.6775945830827728,
+        "snr": 196.0469916789678
+      },
+      "significance": {
+        "O1": {
+          "amp": 5.2554215576783765,
+          "random_median": 3.008192909348214,
+          "p": 0.08666666666666667
+        },
+        "M2": {
+          "amp": 1.4917954266546556,
+          "random_median": 2.0999611975698746,
+          "p": 0.6994219653179191
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "ATOMIC",
+        "M2_observed_ns": 1.4917954266547098,
+        "M2_ocean_loading_ns": 0.005003461427972281,
+        "M2_ratio": 298.1526785266494,
+        "O1_observed_ns": 5.2554215576783765,
+        "O1_ocean_loading_ns": 0.00160110765695113,
+        "O1_ratio": 3282.366138755394,
+        "blq_source": "estimated"
+      }
+    },
+    "YEBE": {
+      "clock_type": "UNKNOWN",
+      "n_jumps_removed": 15,
+      "residual_std_ns": 130.81262557677582,
+      "O1_lunar": {
+        "amp_ns": 6.2828788996017755,
+        "phase": -2.419572542476788,
+        "snr": 13.231364079858515
+      },
+      "Q1_lunar": {
+        "amp_ns": 4.627459755374078,
+        "phase": 0.6212522787843099,
+        "snr": 9.745151190504117
+      },
+      "K1_lunar": {
+        "amp_ns": 43.93745272451526,
+        "phase": -0.3189818071986683,
+        "snr": 92.52962583386422,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 4.410139836778547,
+        "phase": 1.2258927153810546,
+        "snr": 9.28748854720139
+      },
+      "S2_solar": {
+        "amp_ns": 24.559865743585014,
+        "phase": 0.2621045264736095,
+        "snr": 51.72159619794919
+      },
+      "24h_solar": {
+        "amp_ns": 93.51159444688699,
+        "phase": 3.047851714125521,
+        "snr": 196.92977878234447
+      },
+      "significance": {
+        "O1": {
+          "amp": 6.2828788996017755,
+          "random_median": 4.241135913922926,
+          "p": 0.04929577464788732
+        },
+        "M2": {
+          "amp": 4.410139836778538,
+          "random_median": 1.983974149368731,
+          "p": 0.029069767441860465
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "UNKNOWN",
+        "M2_observed_ns": 4.410139836778547,
+        "M2_ocean_loading_ns": 0.004002769142377825,
+        "M2_ratio": 1101.7722181596328,
+        "O1_observed_ns": 6.2828788996017755,
+        "O1_ocean_loading_ns": 0.0014009691998322384,
+        "O1_ratio": 4484.665972923694,
+        "blq_source": "estimated"
+      }
+    },
+    "ZIMM": {
+      "clock_type": "QUARTZ",
+      "n_jumps_removed": 4,
+      "residual_std_ns": 76.99298374081611,
+      "O1_lunar": {
+        "amp_ns": 6.084075634897198,
+        "phase": -1.9301390115803978,
+        "snr": 32.49684647060088
+      },
+      "Q1_lunar": {
+        "amp_ns": 2.9978980308977143,
+        "phase": -0.9443012251678822,
+        "snr": 16.01265958723504
+      },
+      "K1_lunar": {
+        "amp_ns": 37.98984960263391,
+        "phase": -1.3308036647036643,
+        "snr": 202.91501685101454,
+        "note": "Degenerate with sidereal (0.15 bins)"
+      },
+      "M2_lunar": {
+        "amp_ns": 1.751827997558409,
+        "phase": 1.0965889989622506,
+        "snr": 9.357031190247145
+      },
+      "S2_solar": {
+        "amp_ns": 21.45927886718333,
+        "phase": 0.8164868543771021,
+        "snr": 114.62035197536623
+      },
+      "24h_solar": {
+        "amp_ns": 71.22725687256244,
+        "phase": 3.0191787497339617,
+        "snr": 380.44583434058893
+      },
+      "significance": {
+        "O1": {
+          "amp": 6.084075634897198,
+          "random_median": 2.246587128771925,
+          "p": 0.18115942028985507
+        },
+        "M2": {
+          "amp": 1.7518279975583981,
+          "random_median": 1.065390521848372,
+          "p": 0.1497005988023952
+        }
+      },
+      "ocean_loading": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 1.751827997558409,
+        "M2_ocean_loading_ns": 0.01386959507833916,
+        "M2_ratio": 126.30707584926732,
+        "O1_observed_ns": 6.084075634897198,
+        "O1_ocean_loading_ns": 0.0018813014969175773,
+        "O1_ratio": 3233.971612134294,
+        "blq_source": "published ZIM2 BLQ"
+      }
+    }
+  },
+  "stacking": {
+    "O1": {
+      "stack_amp_ns": 6.737286029919355,
+      "stack_snr": 27.315674812342852,
+      "mean_single_station_amp_ns": 6.73728602991933,
+      "expected_coherent_amp_ns": 17.82518334667622,
+      "n_stations": 7,
+      "p_value": 0.038011695906432746
+    },
+    "M2": {
+      "stack_amp_ns": 2.6092483673395073,
+      "stack_snr": 10.57894522963212,
+      "mean_single_station_amp_ns": 2.6092483673395113,
+      "expected_coherent_amp_ns": 6.9034222887816545,
+      "n_stations": 7,
+      "p_value": 0.04640371229698376
+    }
+  },
+  "m2_phase_prediction": {
+    "r": 0.7260286589772641,
+    "p": 0.00019454626470828852,
+    "pairs": [
+      {
+        "pair": "BRUX-GENO",
+        "phase_diff": 2.412868709026469,
+        "expected_corr": -0.7460247580470621,
+        "actual_corr": -0.23880856415890261
+      },
+      {
+        "pair": "BRUX-GRAS",
+        "phase_diff": -0.3056465117725027,
+        "expected_corr": 0.9536526101650147,
+        "actual_corr": 0.8187121528597346
+      },
+      {
+        "pair": "BRUX-TLSE",
+        "phase_diff": -0.4422321925120518,
+        "expected_corr": 0.9037986310804116,
+        "actual_corr": 0.9052904010903111
+      },
+      {
+        "pair": "BRUX-WTZR",
+        "phase_diff": 0.9375955218035787,
+        "expected_corr": 0.5917280740713652,
+        "actual_corr": 0.5765956188019072
+      },
+      {
+        "pair": "BRUX-YEBE",
+        "phase_diff": -0.04987454876950448,
+        "expected_corr": 0.9987565224840625,
+        "actual_corr": 0.8731897098482901
+      },
+      {
+        "pair": "BRUX-ZIMM",
+        "phase_diff": 0.07942916764929953,
+        "expected_corr": 0.9968471617890553,
+        "actual_corr": 0.47433713259087157
+      },
+      {
+        "pair": "GENO-GRAS",
+        "phase_diff": -2.718515220798972,
+        "expected_corr": -0.9118297631607056,
+        "actual_corr": 0.15380235507909304
+      },
+      {
+        "pair": "GENO-TLSE",
+        "phase_diff": -2.8551009015385214,
+        "expected_corr": -0.9592411678293142,
+        "actual_corr": -0.3621048963707063
+      },
+      {
+        "pair": "GENO-WTZR",
+        "phase_diff": -1.4752731872228906,
+        "expected_corr": 0.095377936310357,
+        "actual_corr": 0.3415572140519143
+      },
+      {
+        "pair": "GENO-YEBE",
+        "phase_diff": -2.4627432577959736,
+        "expected_corr": -0.7782956957792114,
+        "actual_corr": -0.010030719512819884
+      },
+      {
+        "pair": "GENO-ZIMM",
+        "phase_diff": -2.33343954137717,
+        "expected_corr": -0.69083493339083,
+        "actual_corr": -0.8849399656425432
+      },
+      {
+        "pair": "GRAS-TLSE",
+        "phase_diff": -0.13658568073954913,
+        "expected_corr": 0.9906866682774172,
+        "actual_corr": 0.8383493320752792
+      },
+      {
+        "pair": "GRAS-WTZR",
+        "phase_diff": 1.2432420335760814,
+        "expected_corr": 0.3217283193983808,
+        "actual_corr": 0.7090912152562837
+      },
+      {
+        "pair": "GRAS-YEBE",
+        "phase_diff": 0.2557719630029982,
+        "expected_corr": 0.9674682832565048,
+        "actual_corr": 0.8591355112589029
+      },
+      {
+        "pair": "GRAS-ZIMM",
+        "phase_diff": 0.3850756794218022,
+        "expected_corr": 0.9267700079208292,
+        "actual_corr": -0.008831116718800462
+      },
+      {
+        "pair": "TLSE-WTZR",
+        "phase_diff": 1.3798277143156306,
+        "expected_corr": 0.18980998778993485,
+        "actual_corr": 0.41078648395549766
+      },
+      {
+        "pair": "TLSE-YEBE",
+        "phase_diff": 0.39235764374254734,
+        "expected_corr": 0.9240101413048765,
+        "actual_corr": 0.892951141076036
+      },
+      {
+        "pair": "TLSE-ZIMM",
+        "phase_diff": 0.5216613601613513,
+        "expected_corr": 0.8669924855502001,
+        "actual_corr": 0.4309544828023601
+      },
+      {
+        "pair": "WTZR-YEBE",
+        "phase_diff": -0.9874700705730832,
+        "expected_corr": 0.5508031890946722,
+        "actual_corr": 0.5477518369325228
+      },
+      {
+        "pair": "WTZR-ZIMM",
+        "phase_diff": -0.8581663541542792,
+        "expected_corr": 0.6538259854215648,
+        "actual_corr": -0.018860330646865524
+      },
+      {
+        "pair": "YEBE-ZIMM",
+        "phase_diff": 0.129303716418804,
+        "expected_corr": 0.9916519154726028,
+        "actual_corr": 0.1833668112751399
+      }
+    ]
+  },
+  "ocean_loading_comparison": {
+    "per_station": {
+      "BRUX": {
+        "clock_type": "ATOMIC",
+        "M2_observed_ns": 2.405919615142682,
+        "M2_ocean_loading_ns": 0.0030020768567833684,
+        "M2_ratio": 801.4183946378207,
+        "O1_observed_ns": 6.278455726748209,
+        "O1_ocean_loading_ns": 0.0010006922855944561,
+        "O1_ratio": 6274.112249220073,
+        "blq_source": "estimated"
+      },
+      "GENO": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 2.8613312925319603,
+        "M2_ocean_loading_ns": 0.006004153713566737,
+        "M2_ratio": 476.55863407804077,
+        "O1_observed_ns": 7.2935877002601455,
+        "O1_ocean_loading_ns": 0.0020013845711889123,
+        "O1_ratio": 3644.270973832594,
+        "blq_source": "estimated"
+      },
+      "GRAS": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 1.736155139605626,
+        "M2_ocean_loading_ns": 0.005003461427972281,
+        "M2_ratio": 346.9908111811359,
+        "O1_observed_ns": 9.09791797128967,
+        "O1_ocean_loading_ns": 0.00160110765695113,
+        "O1_ratio": 5682.264981865215,
+        "blq_source": "estimated"
+      },
+      "TLSE": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 3.6075692631046485,
+        "M2_ocean_loading_ns": 0.0030020768567833684,
+        "M2_ratio": 1201.691174212657,
+        "O1_observed_ns": 6.868664718959934,
+        "O1_ocean_loading_ns": 0.0010006922855944561,
+        "O1_ratio": 6863.91293091626,
+        "blq_source": "estimated"
+      },
+      "WTZR": {
+        "clock_type": "ATOMIC",
+        "M2_observed_ns": 1.4917954266547098,
+        "M2_ocean_loading_ns": 0.005003461427972281,
+        "M2_ratio": 298.1526785266494,
+        "O1_observed_ns": 5.2554215576783765,
+        "O1_ocean_loading_ns": 0.00160110765695113,
+        "O1_ratio": 3282.366138755394,
+        "blq_source": "estimated"
+      },
+      "YEBE": {
+        "clock_type": "UNKNOWN",
+        "M2_observed_ns": 4.410139836778547,
+        "M2_ocean_loading_ns": 0.004002769142377825,
+        "M2_ratio": 1101.7722181596328,
+        "O1_observed_ns": 6.2828788996017755,
+        "O1_ocean_loading_ns": 0.0014009691998322384,
+        "O1_ratio": 4484.665972923694,
+        "blq_source": "estimated"
+      },
+      "ZIMM": {
+        "clock_type": "QUARTZ",
+        "M2_observed_ns": 1.751827997558409,
+        "M2_ocean_loading_ns": 0.01386959507833916,
+        "M2_ratio": 126.30707584926732,
+        "O1_observed_ns": 6.084075634897198,
+        "O1_ocean_loading_ns": 0.0018813014969175773,
+        "O1_ratio": 3233.971612134294,
+        "blq_source": "published ZIM2 BLQ"
+      }
+    },
+    "mean_M2_ratio": 621.8415695207434,
+    "mean_O1_ratio": 4780.794979949646,
+    "formula": "dt = d_radial * <sin(e)> / c, <sin(e)>=0.6"
+  },
+  "clock_type_45day": {
+    "O1": {
+      "quartz_mean": 7.3360615063517365,
+      "quartz_std": 1.1058786785214567,
+      "quartz_n": 4,
+      "atomic_mean": 5.766938642213293,
+      "atomic_std": 0.5115170845349164,
+      "atomic_n": 2,
+      "t_statistic": 1.9179828412614597,
+      "p_value": 0.13507356960313022
+    },
+    "M2": {
+      "quartz_mean": 2.489220923200161,
+      "quartz_std": 0.7905734528711934,
+      "quartz_n": 4,
+      "atomic_mean": 1.948857520898696,
+      "atomic_std": 0.45706209424398614,
+      "atomic_n": 2,
+      "t_statistic": 0.8365508107773655,
+      "p_value": 0.46431743406391784
+    },
+    "S2": {
+      "quartz_mean": 22.552081543464777,
+      "quartz_std": 2.544430053025075,
+      "quartz_n": 4,
+      "atomic_mean": 22.54554975758201,
+      "atomic_std": 0.05269982614993296,
+      "atomic_n": 2,
+      "t_statistic": 0.004443475343332638,
+      "p_value": 0.9967329270599135
+    },
+    "24h": {
+      "quartz_mean": 74.42525573361758,
+      "quartz_std": 7.976358312679835,
+      "quartz_n": 4,
+      "atomic_mean": 79.89778691867656,
+      "atomic_std": 0.3930700648143315,
+      "atomic_n": 2,
+      "t_statistic": -1.1840443049923015,
+      "p_value": 0.32056709497349084
+    }
+  },
+  "clock_type_7day": {
+    "O1": {
+      "quartz_mean": 20.353318511060802,
+      "quartz_std": 13.38742997588678,
+      "quartz_n": 35,
+      "atomic_mean": 19.92048200176277,
+      "atomic_std": 25.57532668448198,
+      "atomic_n": 19,
+      "t_statistic": 0.06710037633388147,
+      "p_value": 0.9470732714428163,
+      "mannwhitney_p": 0.06733267398488377,
+      "bootstrap_diff": 0.3543051221552086,
+      "bootstrap_ci95": [
+        -12.712944620520105,
+        11.67156811356272
+      ]
+    },
+    "M2": {
+      "quartz_mean": 7.837992184907331,
+      "quartz_std": 6.035224782196134,
+      "quartz_n": 35,
+      "atomic_mean": 9.190444284902496,
+      "atomic_std": 11.334159103362317,
+      "atomic_n": 19,
+      "t_statistic": -0.47206266744598163,
+      "p_value": 0.641230826272938,
+      "mannwhitney_p": 0.5143494915393354,
+      "bootstrap_diff": -1.3556779160659338,
+      "bootstrap_ci95": [
+        -7.298258892883782,
+        3.516890630899238
+      ]
+    },
+    "S2": {
+      "quartz_mean": 15.184478377342838,
+      "quartz_std": 11.338467269289065,
+      "quartz_n": 35,
+      "atomic_mean": 12.510786024772122,
+      "atomic_std": 12.031322940432586,
+      "atomic_n": 19,
+      "t_statistic": 0.7775838447316117,
+      "p_value": 0.4420643524099299,
+      "mannwhitney_p": 0.1860770719411161,
+      "bootstrap_diff": 2.709062571908176,
+      "bootstrap_ci95": [
+        -4.128702424024879,
+        9.011612357601111
+      ]
+    },
+    "24h": {
+      "quartz_mean": 89.92615979871896,
+      "quartz_std": 28.817336988455665,
+      "quartz_n": 35,
+      "atomic_mean": 70.37918184722234,
+      "atomic_std": 15.035082285270406,
+      "atomic_n": 19,
+      "t_statistic": 3.2142326285551204,
+      "p_value": 0.0022488429537089083,
+      "mannwhitney_p": 0.0033423574214175283,
+      "bootstrap_diff": 19.52856612233636,
+      "bootstrap_ci95": [
+        8.068616430910765,
+        31.548554235507495
+      ]
+    }
+  },
+  "summary": {
+    "M2_lunar_mean_amp_ns": 2.6092483673395113,
+    "O1_lunar_mean_amp_ns": 6.73728602991933,
+    "S2_solar_mean_amp_ns": 22.837041633229735,
+    "solar_24h_mean_amp_ns": 78.7154558883872,
+    "M2_observed_over_ocean_loading": 621.8415695207434,
+    "O1_observed_over_ocean_loading": 4780.794979949646
+  },
+  "interpretation": [
+    "O1 lunar diurnal (25.82h): detected at all 7 stations, mean amplitude 6.74 ns. Stack p=0.0380.",
+    "M2 lunar semidiurnal (12.42h): detected at all 7 stations, mean amplitude 2.61 ns. Stack p=0.0464.",
+    "Ocean loading ruled out: M2 is 622x larger than OL, O1 is 4781x larger. ZIMM uses published ZIM2 BLQ.",
+    "Clock-type screening NOT confirmed: 45-day O1 p=0.13507356960313022, 7-day O1 p=0.9470732714428163 (35 quartz vs 19 atomic). The original 52-day clock-type effect (p=0.002) was an artefact of flat-line interpolation. The 7-day 24h solar tide shows significant clock-type dependence (p=0.0022488429537089083), likely an atmospheric/pressure effect on quartz oscillators.",
+    "M2 phase prediction: r=0.726, p=0.0002."
+  ],
+  "caveats": [
+    "The original 52-day analysis had a flat-line bias from 7 missing days (DOY 46-52). This corrected version uses 45 contiguous days. Amplitudes are ~30% smaller.",
+    "Clock-type screening is NOT confirmed. The 45-day (p=0.19) and 7-day (p=0.95) analyses both fail to show significant O1 clock-type dependence. The original 52-day result (p=0.002) was an artefact.",
+    "Only 2 atomic stations in the 45-day analysis (BRUX, WTZR).",
+    "K1 is degenerate with sidereal (0.15 bins apart).",
+    "Ocean loading BLQ coefficients for 6/7 stations are estimated, not computed.",
+    "The 7-day 24h solar clock-type dependence (p=0.002) is likely atmospheric, not TEP.",
+    "The lunar tides are still far above ocean loading (127-6864x), but without clock-type screening, the evidence is suggestive rather than strong."
+  ],
+  "pre_registered_prediction": "If TEP is correct, purely gravitational lunar tides (M2, O1) should appear in GNSS receiver clock bias. Standard physics predicts zero amplitude after solid Earth tide correction. Ocean loading produces at most 0.014 ns. Quartz oscillators should show larger amplitudes than atomic (screening)."
+}

@@ -1,0 +1,48 @@
+
+[precise_cod] 2748 targets
+  lambda profile (median held-out RMS, m):
+     lambda=     200 km  rms=1.1149  <-- argmin
+     lambda=     400 km  rms=1.1296
+     lambda=     700 km  rms=1.2746
+     lambda=    1000 km  rms=1.3597  [TEP band]
+     lambda=    1500 km  rms=1.5327  [TEP band]
+     lambda=    2000 km  rms=1.5481  [TEP band]
+     lambda=    2500 km  rms=1.6134  [TEP band]
+     lambda=    3000 km  rms=1.6227  [TEP band]
+     lambda=    3480 km  rms=1.6114  [TEP band]
+     lambda=    4200 km  rms=1.6721  [TEP band]
+     lambda=    5000 km  rms=1.6486  [TEP band]
+     lambda=    7000 km  rms=1.5882
+     lambda=   10000 km  rms=1.5268
+     lambda=   20000 km  rms=1.5004
+  best in-band lambda costs 21.95% vs the global argmin
+  extrapolation trend r=0.35167634789840796
+     d_nn      0-300km n=  282  TEP vs freeGP  -1.58% [ -6.93, +2.27]   TEP skill   +5.8%  freeGP skill   +9.8%
+     d_nn    300-700km n=  955  TEP vs freeGP -19.89% [-22.88,-15.48]   TEP skill  -21.5%  freeGP skill   +3.7%
+     d_nn   700-1200km n=  652  TEP vs freeGP  -6.08% [ -9.37, -2.88]   TEP skill   -3.5%  freeGP skill   +1.3%
+     d_nn  1200-2000km n=  617  TEP vs freeGP  +2.15% [ +0.04, +4.42]   TEP skill   +8.0%  freeGP skill   +0.3%
+     d_nn 2000-20000km n=  242  TEP vs freeGP  -1.72% [ -7.12, +0.88]   TEP skill   -1.3%  freeGP skill   +0.0%
+
+[broadcast_spp] 221 targets
+  lambda profile (median held-out RMS, m):
+     lambda=     200 km  rms=6.1290
+     lambda=     400 km  rms=4.7030
+     lambda=     700 km  rms=4.1810
+     lambda=    1000 km  rms=4.1303  [TEP band]
+     lambda=    1500 km  rms=4.1349  [TEP band]
+     lambda=    2000 km  rms=4.2501  [TEP band]
+     lambda=    2500 km  rms=4.1032  <-- argmin  [TEP band]
+     lambda=    3000 km  rms=4.3229  [TEP band]
+     lambda=    3480 km  rms=4.3958  [TEP band]
+     lambda=    4200 km  rms=4.5165  [TEP band]
+     lambda=    5000 km  rms=4.6656  [TEP band]
+     lambda=    7000 km  rms=4.6955
+     lambda=   10000 km  rms=5.9918
+     lambda=   20000 km  rms=7.5439
+  best in-band lambda costs 0.00% vs the global argmin
+  extrapolation trend r=0.9188919508894514
+     d_nn      0-300km n=  149  TEP vs freeGP  -5.47% [ -9.82, -0.58]   TEP skill  +76.9%  freeGP skill  +77.4%
+     d_nn    300-700km n=   36  TEP vs freeGP  -2.99% [ -6.79, +8.42]   TEP skill  +66.1%  freeGP skill  +65.4%
+     d_nn 2000-20000km n=   26  TEP vs freeGP  -3.11% [-15.42, +2.92]   TEP skill   +1.5%  freeGP skill   +7.8%
+
+saved results/outputs/step_52_extrapolation_regime.json

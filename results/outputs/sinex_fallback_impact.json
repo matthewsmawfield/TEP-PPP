@@ -1,0 +1,204 @@
+{
+  "note": "Comparison of Step 33 position-domain metrics split by truth source. The 24h SPP-mean fallback has smaller absolute position errors because it is circular, and its percentage improvements are therefore larger. The SINEX-only numbers are the externally-validated result.",
+  "all_station_days": {
+    "600": {
+      "n_station_days": 203,
+      "pos_error_median_m": {
+        "hold": 19.858419143355214,
+        "linrate": 20.583217462913804,
+        "kernel": 20.000583132500957
+      },
+      "kernel_vs_hold_pct_median": 0.43425230148933525,
+      "kernel_vs_hold_pct_ci95": [
+        -13.334930064008248,
+        7.934418565852977
+      ]
+    },
+    "1800": {
+      "n_station_days": 203,
+      "pos_error_median_m": {
+        "hold": 20.659557910380897,
+        "linrate": 23.52723127165643,
+        "kernel": 20.556461801883497
+      },
+      "kernel_vs_hold_pct_median": -1.0346343440705543,
+      "kernel_vs_hold_pct_ci95": [
+        -13.475486376806282,
+        11.804246547212575
+      ]
+    },
+    "3600": {
+      "n_station_days": 203,
+      "pos_error_median_m": {
+        "hold": 21.854726325566812,
+        "linrate": 29.633358192968423,
+        "kernel": 21.207432215436235
+      },
+      "kernel_vs_hold_pct_median": 0.7634772034429416,
+      "kernel_vs_hold_pct_ci95": [
+        -8.35706624229625,
+        16.606920198524712
+      ]
+    },
+    "7200": {
+      "n_station_days": 203,
+      "pos_error_median_m": {
+        "hold": 21.69698529380794,
+        "linrate": 42.26426895954593,
+        "kernel": 20.686077390930862
+      },
+      "kernel_vs_hold_pct_median": 4.453367795216085,
+      "kernel_vs_hold_pct_ci95": [
+        -6.716963857401133,
+        12.840857348358483
+      ]
+    },
+    "14400": {
+      "n_station_days": 203,
+      "pos_error_median_m": {
+        "hold": 22.91114119758378,
+        "linrate": 71.07742956581471,
+        "kernel": 20.824882892597444
+      },
+      "kernel_vs_hold_pct_median": 8.744727549069436,
+      "kernel_vs_hold_pct_ci95": [
+        -5.629757322048678,
+        28.870041052232022
+      ]
+    }
+  },
+  "sinex_only": {
+    "600": {
+      "n_station_days": 170,
+      "pos_error_median_m": {
+        "hold": 20.826230778601293,
+        "linrate": 21.733509262933005,
+        "kernel": 20.882200228796407
+      },
+      "kernel_vs_hold_pct_median": 0.49679730736233996,
+      "kernel_vs_hold_pct_ci95": [
+        -14.073984687747254,
+        8.053233793705676
+      ]
+    },
+    "1800": {
+      "n_station_days": 170,
+      "pos_error_median_m": {
+        "hold": 21.38209283727725,
+        "linrate": 24.239433350222704,
+        "kernel": 21.479295179014215
+      },
+      "kernel_vs_hold_pct_median": -0.5176765170548802,
+      "kernel_vs_hold_pct_ci95": [
+        -12.092861137302302,
+        12.159805187706453
+      ]
+    },
+    "3600": {
+      "n_station_days": 170,
+      "pos_error_median_m": {
+        "hold": 22.827149810201952,
+        "linrate": 30.33822514524904,
+        "kernel": 22.323693853869507
+      },
+      "kernel_vs_hold_pct_median": 0.7634772034429416,
+      "kernel_vs_hold_pct_ci95": [
+        -7.786462572935815,
+        17.820128687661597
+      ]
+    },
+    "7200": {
+      "n_station_days": 170,
+      "pos_error_median_m": {
+        "hold": 22.69552064920573,
+        "linrate": 43.112187564293876,
+        "kernel": 21.32399976333239
+      },
+      "kernel_vs_hold_pct_median": 4.2184561762859,
+      "kernel_vs_hold_pct_ci95": [
+        -6.766899332546304,
+        12.982787845029671
+      ]
+    },
+    "14400": {
+      "n_station_days": 170,
+      "pos_error_median_m": {
+        "hold": 23.620187910036975,
+        "linrate": 71.45186674675037,
+        "kernel": 21.802810323400756
+      },
+      "kernel_vs_hold_pct_median": 8.207796804801875,
+      "kernel_vs_hold_pct_ci95": [
+        -6.463234650656653,
+        29.594488029648947
+      ]
+    }
+  },
+  "spp_fallback_only": {
+    "600": {
+      "n_station_days": 33,
+      "pos_error_median_m": {
+        "hold": 10.613552796877888,
+        "linrate": 12.06618645666357,
+        "kernel": 10.196084372493274
+      },
+      "kernel_vs_hold_pct_median": -2.80779097316208,
+      "kernel_vs_hold_pct_ci95": [
+        -7.480786937992802,
+        7.096893068228783
+      ]
+    },
+    "1800": {
+      "n_station_days": 33,
+      "pos_error_median_m": {
+        "hold": 10.436302018346327,
+        "linrate": 17.305829558536853,
+        "kernel": 10.810298829906396
+      },
+      "kernel_vs_hold_pct_median": -1.1595812703660884,
+      "kernel_vs_hold_pct_ci95": [
+        -22.60634087674786,
+        0.6218537171656344
+      ]
+    },
+    "3600": {
+      "n_station_days": 33,
+      "pos_error_median_m": {
+        "hold": 11.442895269896182,
+        "linrate": 25.743362986892535,
+        "kernel": 11.373033050120915
+      },
+      "kernel_vs_hold_pct_median": -1.7690658691474286,
+      "kernel_vs_hold_pct_ci95": [
+        -14.18921418786525,
+        7.610549960125175
+      ]
+    },
+    "7200": {
+      "n_station_days": 33,
+      "pos_error_median_m": {
+        "hold": 12.502406148640066,
+        "linrate": 40.70546978983879,
+        "kernel": 11.584455970715208
+      },
+      "kernel_vs_hold_pct_median": 6.126780269557077,
+      "kernel_vs_hold_pct_ci95": [
+        -5.537992179108585,
+        9.078216754820604
+      ]
+    },
+    "14400": {
+      "n_station_days": 33,
+      "pos_error_median_m": {
+        "hold": 14.561234066068986,
+        "linrate": 69.68922344966563,
+        "kernel": 12.065308488332425
+      },
+      "kernel_vs_hold_pct_median": 16.31878944469241,
+      "kernel_vs_hold_pct_ci95": [
+        8.861730396672785,
+        20.045585320413714
+      ]
+    }
+  }
+}

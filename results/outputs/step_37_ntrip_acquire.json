@@ -1,0 +1,327 @@
+{
+  "test": "ntrip_acquire",
+  "status": "ok",
+  "caster": "agrs_nl+renep",
+  "start_utc": "2026-10-15T19:31:27+00:00",
+  "duration_s": 53483.1,
+  "stations_requested": [
+    "AMEL",
+    "AVI1",
+    "BAIO",
+    "BRAG",
+    "CASC",
+    "DELF",
+    "DLF1",
+    "EIJS",
+    "GAIA",
+    "GUAD",
+    "KOS1",
+    "MERT",
+    "MIRA",
+    "VSEU",
+    "WSRT"
+  ],
+  "stations_recorded": [
+    "AMEL",
+    "AVI1",
+    "BAIO",
+    "BRAG",
+    "CASC",
+    "DELF",
+    "DLF1",
+    "EIJS",
+    "GAIA",
+    "GUAD",
+    "KOS1",
+    "MERT",
+    "MIRA",
+    "VSEU",
+    "WSRT"
+  ],
+  "total_bytes": 272178679,
+  "n_mountpoints": 35,
+  "n_ok": 35,
+  "files": [
+    {
+      "mountpoint": "AMEL00NLD0_20261015",
+      "station_id": "AMEL",
+      "file": "data/ntrip_live/AMEL00NLD0_20261015_193127.rtcm3",
+      "bytes": 3227746,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "AVI1_20261015",
+      "station_id": "AVI1",
+      "file": "data/ntrip_live/AVI1_20261015_193133.rtcm3",
+      "bytes": 3546168,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "AVI1_20261015",
+      "station_id": "AVI1",
+      "file": "data/ntrip_live/AVI1_20261015_230140.rtcm3",
+      "bytes": 337929,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "AVI1_20261016",
+      "station_id": "AVI1",
+      "file": "data/ntrip_live/AVI1_20261016_005250.rtcm3",
+      "bytes": 12386038,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BAIO_20261015",
+      "station_id": "BAIO",
+      "file": "data/ntrip_live/BAIO_20261015_193133.rtcm3",
+      "bytes": 2983406,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BAIO_20261015",
+      "station_id": "BAIO",
+      "file": "data/ntrip_live/BAIO_20261015_230140.rtcm3",
+      "bytes": 300998,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BAIO_20261016",
+      "station_id": "BAIO",
+      "file": "data/ntrip_live/BAIO_20261016_005250.rtcm3",
+      "bytes": 11166103,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BRAG_20261015",
+      "station_id": "BRAG",
+      "file": "data/ntrip_live/BRAG_20261015_193133.rtcm3",
+      "bytes": 3381533,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BRAG_20261015",
+      "station_id": "BRAG",
+      "file": "data/ntrip_live/BRAG_20261015_230140.rtcm3",
+      "bytes": 321386,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "BRAG_20261016",
+      "station_id": "BRAG",
+      "file": "data/ntrip_live/BRAG_20261016_005250.rtcm3",
+      "bytes": 11856394,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "CASC_20261015",
+      "station_id": "CASC",
+      "file": "data/ntrip_live/CASC_20261015_201628.rtcm3",
+      "bytes": 2428234,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "CASC_20261015",
+      "station_id": "CASC",
+      "file": "data/ntrip_live/CASC_20261015_230142.rtcm3",
+      "bytes": 322554,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "CASC_20261016",
+      "station_id": "CASC",
+      "file": "data/ntrip_live/CASC_20261016_005250.rtcm3",
+      "bytes": 11980259,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "DELF00NLD0_20261015",
+      "station_id": "DELF",
+      "file": "data/ntrip_live/DELF00NLD0_20261015_193127.rtcm3",
+      "bytes": 3579790,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "DLF100NLD0_20261015",
+      "station_id": "DLF1",
+      "file": "data/ntrip_live/DLF100NLD0_20261015_201631.rtcm3",
+      "bytes": 34653851,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "DLF100NLD0_20261016",
+      "station_id": "DLF1",
+      "file": "data/ntrip_live/DLF100NLD0_20261016_005250.rtcm3",
+      "bytes": 84804198,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "EIJS00NLD0_20261015",
+      "station_id": "EIJS",
+      "file": "data/ntrip_live/EIJS00NLD0_20261015_193127.rtcm3",
+      "bytes": 3498955,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "EIJS0_20261015",
+      "station_id": "EIJS",
+      "file": "data/ntrip_live/EIJS0_20261015_193127.rtcm3",
+      "bytes": 647737,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GAIA_20261015",
+      "station_id": "GAIA",
+      "file": "data/ntrip_live/GAIA_20261015_193133.rtcm3",
+      "bytes": 2722585,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GAIA_20261015",
+      "station_id": "GAIA",
+      "file": "data/ntrip_live/GAIA_20261015_230140.rtcm3",
+      "bytes": 272832,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GAIA_20261016",
+      "station_id": "GAIA",
+      "file": "data/ntrip_live/GAIA_20261016_005250.rtcm3",
+      "bytes": 9774051,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GUAD_20261015",
+      "station_id": "GUAD",
+      "file": "data/ntrip_live/GUAD_20261015_201628.rtcm3",
+      "bytes": 2584919,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GUAD_20261015",
+      "station_id": "GUAD",
+      "file": "data/ntrip_live/GUAD_20261015_230142.rtcm3",
+      "bytes": 323964,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "GUAD_20261016",
+      "station_id": "GUAD",
+      "file": "data/ntrip_live/GUAD_20261016_005250.rtcm3",
+      "bytes": 12206330,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "KOS100NLD0_20261015",
+      "station_id": "KOS1",
+      "file": "data/ntrip_live/KOS100NLD0_20261015_193127.rtcm3",
+      "bytes": 3800917,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MERT_20261015",
+      "station_id": "MERT",
+      "file": "data/ntrip_live/MERT_20261015_201628.rtcm3",
+      "bytes": 2356240,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MERT_20261015",
+      "station_id": "MERT",
+      "file": "data/ntrip_live/MERT_20261015_230142.rtcm3",
+      "bytes": 328012,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MERT_20261016",
+      "station_id": "MERT",
+      "file": "data/ntrip_live/MERT_20261016_005250.rtcm3",
+      "bytes": 11584895,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MIRA_20261015",
+      "station_id": "MIRA",
+      "file": "data/ntrip_live/MIRA_20261015_193133.rtcm3",
+      "bytes": 3355656,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MIRA_20261015",
+      "station_id": "MIRA",
+      "file": "data/ntrip_live/MIRA_20261015_230140.rtcm3",
+      "bytes": 311553,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "MIRA_20261016",
+      "station_id": "MIRA",
+      "file": "data/ntrip_live/MIRA_20261016_005250.rtcm3",
+      "bytes": 11977114,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "VSEU_20261015",
+      "station_id": "VSEU",
+      "file": "data/ntrip_live/VSEU_20261015_201628.rtcm3",
+      "bytes": 2687413,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "VSEU_20261015",
+      "station_id": "VSEU",
+      "file": "data/ntrip_live/VSEU_20261015_230142.rtcm3",
+      "bytes": 334569,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "VSEU_20261016",
+      "station_id": "VSEU",
+      "file": "data/ntrip_live/VSEU_20261016_005250.rtcm3",
+      "bytes": 12533486,
+      "connected": false,
+      "error": null
+    },
+    {
+      "mountpoint": "WSRT00NLD0_20261015",
+      "station_id": "WSRT",
+      "file": "data/ntrip_live/WSRT00NLD0_20261015_193127.rtcm3",
+      "bytes": 3600864,
+      "connected": false,
+      "error": null
+    }
+  ],
+  "note": "merged manifest rebuilt by scripts/p4_merge_manifest.py"
+}

@@ -1,0 +1,11 @@
+  DOY 100: 40 stations with full-sky clocks
+  DOY 101: 40 stations with full-sky clocks
+  DOY 102: 40 stations with full-sky clocks
+  DOY 103: 40 stations with full-sky clocks
+  DOY 104: 40 stations with full-sky clocks
+  DOY 105: 40 stations with full-sky clocks
+  DOY 106: 40 stations with full-sky clocks
+
+Three-satellite challenge (raw obs, SINEX truth, TEP covariance FIXED by the physics): at the reported satellite count the network-aided clock gives 3-D RMS 44200.33 m (p99 348291.8 m, >25 m failure 5.0%, availability 92%). Conventional (clock solved from the same satellites): INFEASIBLE.
+Summary: TEP vs best conventional (k=4/5/6): median -0.3%, 0% positive cells, k=3 TEP availability 92% (conventional INFEASIBLE)
+saved results/outputs/step_48_three_satellite.json

@@ -1,0 +1,35 @@
+[2026-09-03 23:33:33] [INFO    ] 
+[2026-09-03 23:33:33] [INFO    ] ================================================================================
+[2026-09-03 23:33:33] [INFO    ] STEP 06: FALSIFICATION / CONTROL BATTERY
+[2026-09-03 23:33:33] [INFO    ] ================================================================================
+[2026-09-03 23:33:33] [INFO    ] 
+[2026-09-03 23:33:33] [INFO    ] Loaded 7 complete days: [100, 101, 102, 103, 104, 105, 106]
+[2026-09-03 23:34:25] [INFO    ] 
+[2026-09-03 23:34:25] [INFO    ] 
+[2026-09-03 23:34:25] [INFO    ] ================================================================================
+[2026-09-03 23:34:25] [INFO    ] === HONEST OUT-OF-SAMPLE RMSE REDUCTION (%) ===
+[2026-09-03 23:34:25] [INFO    ] ================================================================================
+[2026-09-03 23:34:25] [INFO    ] 
+[2026-09-03 23:34:25] [INFO    ]   TEP dynamic kernel           :  50.11 +/- 1.33
+[2026-09-03 23:34:25] [INFO    ]   Network mean (raw, scale=1)  :  59.57 +/- 4.89
+[2026-09-03 23:34:25] [INFO    ]   Uniform kriging (scaled mean):  58.31 +/- 2.37
+[2026-09-03 23:34:25] [INFO    ]   Mean, optimal beta (refs only):  59.66 +/- 4.94
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=    300 km  :  27.03
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=   1000 km  :  51.17
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=   2000 km  :  56.05
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=   4200 km  :  57.74
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=  10000 km  :  58.22
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda=  40000 km  :  58.31
+[2026-09-03 23:34:25] [INFO    ]   iso kriging lambda= 200000 km  :  58.32
+[2026-09-03 23:34:25] [INFO    ]   Scrambled-geometry null       :  56.57  95% CI [55.84, 57.60]
+[2026-09-03 23:34:25] [INFO    ]   Time-shuffled references (200 trials): -12.49 +/- 3.46  95% CI [-19.21, -5.50]
+[2026-09-03 23:34:25] [INFO    ] 
+[2026-09-03 23:34:25] [INFO    ]   (A)  TEP kernel beats raw network mean by >1pp .. False
+[2026-09-03 23:34:25] [INFO    ]   (A') iso4200 beats scaled mean (geometry gain) .. False (gain -0.57pp)
+[2026-09-03 23:34:25] [INFO    ]   (B)  reduction depends on lambda_T ............. False (spread 2.26pp)
+[2026-09-03 23:34:25] [INFO    ]   (C)  reduction needs correct geometry ......... True
+[2026-09-03 23:34:25] [INFO    ]   (D)  reduction needs same-epoch coherence ..... True
+[2026-09-03 23:34:25] [INFO    ] 
+[2026-09-03 23:34:25] [WARNING ] VERDICT: reduction is consistent with generic common-mode removal; no TEP-specific spatial information demonstrated.
+[2026-09-03 23:34:25] [SUCCESS ] Saved summary: results/outputs/step_06_falsification.json
+[2026-09-03 23:34:25] [SUCCESS ] Saved figure: results/figures/step_06_falsification.png

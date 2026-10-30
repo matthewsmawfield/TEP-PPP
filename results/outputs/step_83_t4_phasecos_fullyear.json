@@ -1,0 +1,35 @@
+{
+  "step": 83,
+  "title": "T4 co-visibility separation with the phase-alignment index",
+  "timestamp": "2026-09-04T08:12:12.110397+00:00",
+  "arms": {
+    "precise_ops": {
+      "product": "clk_cod_ops",
+      "n_days": 361,
+      "n_pairs": 49879,
+      "estimator": "phase-alignment index cos(arg(sum_f S_ij(f)))",
+      "partial_corr_alpha_logdist_given_covis": 0.010460087005246275,
+      "partial_corr_alpha_covis_given_logdist": 0.026870914390602338,
+      "frozen_S2_threshold": 0.15,
+      "meets_S2_partial_corr": false,
+      "null_partial_corr_abs_mean": 0.010063023465355916,
+      "z_vs_null": 0.06168709232019863,
+      "distance_fit": {
+        "best_model": "gaussian",
+        "lambda_km": 5396.712278911858,
+        "R2": 0.8087008824087009,
+        "n_bins": 32
+      },
+      "mean_beta_covisibility": -0.10316741215561674,
+      "step45_bandpassed_partial_corr": {
+        "broadcast": 0.038,
+        "precise": -0.006
+      }
+    }
+  },
+  "verdict": {
+    "question": "does the frozen S2 criterion pass when T4 uses the corpus's own estimator instead of band-passed Pearson?",
+    "arms_meeting_S2": [],
+    "n_arms": 1
+  }
+}

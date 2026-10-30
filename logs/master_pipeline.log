@@ -1,0 +1,108 @@
+[08:51:51] [INFO] 
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] TEP-PPP ANALYTICAL PIPELINE START
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+[08:51:51] [INFO] Enforcing full data provenance from raw CDDIS downloads to final figures.
+[08:51:51] [INFO] Temporal Window: Year 2024, DOY 100-106
+[08:51:51] [INFO] 
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+--- Phase 1: Data Acquisition ---
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+[08:51:51] [PROCESS] EXECUTING: step_01_acquire_data.py
+[08:51:51] [INFO] 
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+--- Phase 2: Clock Residual Extraction ---
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+[08:51:51] [PROCESS] EXECUTING: step_02_process_ppp.py
+[08:51:51] [INFO] 
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+--- Phase 3: Kernel Validation (LOO-CV) ---
+[08:51:51] [INFO] ================================================================================
+[08:51:51] [INFO] 
+[08:51:51] [PROCESS] EXECUTING: step_03_kernel_validation.py
+[08:52:03] [INFO] 
+[08:52:03] [INFO] ================================================================================
+[08:52:03] [INFO] 
+--- Phase 3b: Controls (common-mode / lambda / geometry) ---
+[08:52:03] [INFO] ================================================================================
+[08:52:03] [INFO] 
+[08:52:03] [PROCESS] EXECUTING: step_03b_controls.py
+[08:52:51] [INFO] 
+[08:52:51] [INFO] ================================================================================
+[08:52:51] [INFO] 
+--- Phase 4: Convergence Test (13.7% RMS Improvement) ---
+[08:52:51] [INFO] ================================================================================
+[08:52:51] [INFO] 
+[08:52:51] [PROCESS] EXECUTING: step_04_convergence_test.py
+[08:52:55] [INFO] 
+[08:52:55] [INFO] ================================================================================
+[08:52:55] [INFO] 
+--- Phase 5: Longitudinal Stability ---
+[08:52:55] [INFO] ================================================================================
+[08:52:55] [INFO] 
+[08:52:55] [PROCESS] EXECUTING: step_05_longitudinal_stability.py
+[08:52:56] [INFO] 
+[08:52:56] [INFO] ================================================================================
+[08:52:56] [INFO] 
+--- Phase 6: Falsification Stress Test ---
+[08:52:56] [INFO] ================================================================================
+[08:52:56] [INFO] 
+[08:52:56] [PROCESS] EXECUTING: step_06_falsification.py
+[08:53:44] [INFO] 
+[08:53:44] [INFO] ================================================================================
+[08:53:44] [INFO] 
+--- Phase 7: Urban Canyon / Virtual Satellite ---
+[08:53:44] [INFO] ================================================================================
+[08:53:44] [INFO] 
+[08:53:44] [PROCESS] EXECUTING: step_07_urban_canyon.py
+[08:53:54] [INFO] 
+[08:53:54] [INFO] ================================================================================
+[08:53:54] [INFO] 
+--- Phase 8: Integrity Monitoring (Spoofing) ---
+[08:53:54] [INFO] ================================================================================
+[08:53:54] [INFO] 
+[08:53:54] [PROCESS] EXECUTING: step_08_integrity_monitoring.py
+[08:54:00] [INFO] 
+[08:54:00] [INFO] ================================================================================
+[08:54:00] [INFO] 
+--- Phase 1: Global evidence battery (T1-T4) ---
+[08:54:00] [INFO] ================================================================================
+[08:54:00] [INFO] 
+[08:54:00] [PROCESS] EXECUTING: step_10_global_correlation.py
+[08:58:54] [PROCESS] EXECUTING: step_11_anisotropy.py
+[08:58:58] [PROCESS] EXECUTING: step_12_resolvability.py
+[08:59:00] [PROCESS] EXECUTING: step_13_commonview.py
+[08:59:03] [PROCESS] EXECUTING: step_14_precise_global.py
+[09:01:33] [PROCESS] EXECUTING: step_15_csd_crosscheck.py
+[09:11:02] [PROCESS] EXECUTING: step_16_draconitic_falsification.py
+[09:11:03] [INFO] 
+[09:11:03] [INFO] ================================================================================
+[09:11:03] [INFO] 
+--- Phase 2: Authoritative operational evidence (nested CV) ---
+[09:11:03] [INFO] ================================================================================
+[09:11:03] [INFO] 
+[09:11:03] [PROCESS] EXECUTING: step_25_kernel_selection.py
+[09:18:53] [PROCESS] EXECUTING: step_26_operational_gain.py
+[09:38:49] [PROCESS] EXECUTING: step_27_discriminators.py
+[09:39:29] [PROCESS] EXECUTING: step_28_publication_figures.py
+[09:39:30] [PROCESS] EXECUTING: step_19_phase1_report.py
+[09:39:30] [INFO] 
+[09:39:30] [INFO] ================================================================================
+[09:39:30] [INFO] 
+--- Phase 2 (exploratory, not relied on): operational EKF ---
+[09:39:30] [INFO] ================================================================================
+[09:39:30] [INFO] 
+[09:39:30] [PROCESS] EXECUTING: step_20_operational_ekf.py
+[09:40:07] [INFO] 
+[09:40:07] [INFO] ================================================================================
+[09:40:07] [INFO] 
+TEP-PPP ANALYTICAL PIPELINE COMPLETED SUCCESSFULLY
+[09:40:07] [INFO] ================================================================================
+[09:40:07] [INFO] 
+[09:40:07] [SUCCESS] All artifacts, logs, and publication-ready figures have been generated.

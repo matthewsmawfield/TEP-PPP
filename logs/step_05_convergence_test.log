@@ -1,0 +1,19 @@
+[21:43:54] [INFO] 
+[21:43:54] [INFO] ================================================================================
+[21:43:54] [INFO] STEP 05: OPERATIONAL CONVERGENCE AND EKF EVALUATION
+[21:43:54] [INFO] ================================================================================
+[21:43:54] [INFO] 
+[21:43:54] [INFO] Simulating EKF for 9 stations on DOY 101...
+[21:43:54] [PROCESS] Running Standard PPP...
+[21:43:55] [PROCESS] Running TEP-PPP (Constrained)...
+[21:43:56] [INFO] 
+[21:43:56] [INFO] ================================================================================
+[21:43:56] [INFO] --- Results ---
+[21:43:56] [INFO] ================================================================================
+[21:43:56] [INFO] 
+[21:43:56] [INFO] Convergence Time (Standard): 1402.5 mins
+[21:43:56] [INFO] Convergence Time (TEP-PPP):  1402.5 mins
+[21:43:56] [INFO] Steady-State RMS (Standard): 91.94 cm
+[21:43:56] [INFO] Steady-State RMS (TEP-PPP):  79.37 cm
+[21:43:56] [WARNING] TEP-PPP RMS Degradation:     -13.7%
+[21:43:56] [SUCCESS] Saved figure: results/figures/step_05_convergence.png

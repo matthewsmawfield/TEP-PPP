@@ -1,0 +1,46 @@
+{
+  "step": 133,
+  "title": "Tidal-enhanced TEP prior: amplifying the gravitational signal",
+  "timestamp": "2026-09-06T19:13:47.060558+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 57,
+  "tidal_weight": 3.0,
+  "tidal_periods_h": [
+    24.0,
+    12.0,
+    8.0,
+    6.0,
+    23.934444444444445,
+    12.42
+  ],
+  "lambda_km": 4200.0,
+  "results": {
+    "n_days": 57,
+    "enhanced_vs_full_band_pct": {
+      "median": -0.6003398573290797,
+      "ci95": [
+        -0.7024755116980863,
+        -0.4997426831800489
+      ],
+      "n": 57,
+      "frac_positive": 0.05263157894736842
+    },
+    "enhanced_vs_empirical_pct": {
+      "median": -1.9127279514788098,
+      "ci95": [
+        -2.9488514339520266,
+        -0.7718584688612529
+      ],
+      "n": 57,
+      "frac_positive": 0.24561403508771928
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "enhanced": 1.3364229826273553,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [],
+  "pre_registered_prediction": "Amplifying the gravitational tidal frequencies (3x weight) in the phase Gram should improve prediction by extracting more power from the strongest, most spatially coherent component of the TEP field.  The tidal-enhanced kernel should beat both the full-band kernel (which under-weights the tides) and empirical covariance (which cannot distinguish gravitational from atmospheric components)."
+}

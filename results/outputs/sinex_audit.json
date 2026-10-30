@@ -1,0 +1,188 @@
+{
+  "n_sinex_days_parsed": 66,
+  "n_station_days_total": 203,
+  "n_sinex_station_days": 170,
+  "n_fallback_station_days": 33,
+  "fallback_stations": [
+    "ESOC",
+    "JPRE",
+    "KOS1",
+    "MSGR",
+    "TIDV",
+    "USCL"
+  ],
+  "spp_mean_offset_vs_sinex_m": {
+    "median": 14.585283652893462,
+    "mean": 15.156624164086331,
+    "std": 2.1110205881285156,
+    "min": 11.89565808425828,
+    "p95": 20.042088707019694,
+    "max": 22.985744013540664
+  },
+  "per_station_summary": {
+    "BRST": {
+      "n": 6,
+      "median_offset_m": 16.264490210809207
+    },
+    "BRUX": {
+      "n": 7,
+      "median_offset_m": 14.393417282438921
+    },
+    "CORD": {
+      "n": 4,
+      "median_offset_m": 16.46163979896364
+    },
+    "CUIB": {
+      "n": 6,
+      "median_offset_m": 20.010780437019264
+    },
+    "DLF1": {
+      "n": 3,
+      "median_offset_m": 13.580344498299747
+    },
+    "FAA1": {
+      "n": 7,
+      "median_offset_m": 21.02126919486448
+    },
+    "FALK": {
+      "n": 7,
+      "median_offset_m": 12.312937790590968
+    },
+    "GODE": {
+      "n": 7,
+      "median_offset_m": 15.75998857393404
+    },
+    "GOP6": {
+      "n": 4,
+      "median_offset_m": 13.559254032134522
+    },
+    "GOPE": {
+      "n": 7,
+      "median_offset_m": 14.18282505531555
+    },
+    "HARB": {
+      "n": 5,
+      "median_offset_m": 16.950072314523503
+    },
+    "HERS": {
+      "n": 7,
+      "median_offset_m": 14.107743432606963
+    },
+    "IENG": {
+      "n": 4,
+      "median_offset_m": 14.084747818420949
+    },
+    "KERG": {
+      "n": 2,
+      "median_offset_m": 13.813434546983515
+    },
+    "KOUC": {
+      "n": 3,
+      "median_offset_m": 18.34237384825321
+    },
+    "LROC": {
+      "n": 7,
+      "median_offset_m": 14.719984075674711
+    },
+    "MAR7": {
+      "n": 3,
+      "median_offset_m": 13.302224362443498
+    },
+    "MARS": {
+      "n": 1,
+      "median_offset_m": 14.548499288453273
+    },
+    "MOBS": {
+      "n": 5,
+      "median_offset_m": 15.131501202343177
+    },
+    "NRMD": {
+      "n": 2,
+      "median_offset_m": 17.185318807001046
+    },
+    "PADO": {
+      "n": 7,
+      "median_offset_m": 14.566319858997398
+    },
+    "PTBB": {
+      "n": 7,
+      "median_offset_m": 14.3155639214509
+    },
+    "RIGA": {
+      "n": 3,
+      "median_offset_m": 13.76700281502923
+    },
+    "SANT": {
+      "n": 7,
+      "median_offset_m": 16.284801954781315
+    },
+    "STJ3": {
+      "n": 7,
+      "median_offset_m": 13.709326482987002
+    },
+    "STJO": {
+      "n": 6,
+      "median_offset_m": 13.445889638529689
+    },
+    "ABPO": {
+      "n": 3,
+      "median_offset_m": 15.627526329694193
+    },
+    "GRAS": {
+      "n": 3,
+      "median_offset_m": 13.416553051348213
+    },
+    "ONS1": {
+      "n": 3,
+      "median_offset_m": 13.933160998796515
+    },
+    "STPM": {
+      "n": 4,
+      "median_offset_m": 16.59576548209366
+    },
+    "RGDG": {
+      "n": 1,
+      "median_offset_m": 12.5776358317151
+    },
+    "STR1": {
+      "n": 5,
+      "median_offset_m": 14.564382806220836
+    },
+    "SUTH": {
+      "n": 5,
+      "median_offset_m": 13.522273383296875
+    },
+    "PARK": {
+      "n": 2,
+      "median_offset_m": 15.100756333735543
+    },
+    "SYDN": {
+      "n": 2,
+      "median_offset_m": 15.751018898915136
+    },
+    "SYOG": {
+      "n": 1,
+      "median_offset_m": 12.286916273556962
+    },
+    "USN8": {
+      "n": 3,
+      "median_offset_m": 16.370159554489295
+    },
+    "WTZS": {
+      "n": 1,
+      "median_offset_m": 14.654047463450768
+    },
+    "WTZZ": {
+      "n": 1,
+      "median_offset_m": 14.864895254614078
+    },
+    "ZIM2": {
+      "n": 1,
+      "median_offset_m": 14.44727025436105
+    },
+    "ZIM3": {
+      "n": 1,
+      "median_offset_m": 14.446997209183102
+    }
+  }
+}

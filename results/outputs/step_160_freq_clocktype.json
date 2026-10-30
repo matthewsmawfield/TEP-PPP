@@ -1,0 +1,135 @@
+{
+  "step": 160,
+  "title": "Frequency-resolved clock-type screening with permutation test",
+  "timestamp": "2026-09-07T01:25:02.772518+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days": 30,
+  "results": {
+    "tidal": {
+      "quartz": {
+        "n_pairs": 57092,
+        "R2": 0.9149666569000698,
+        "tep_band_pa": 0.2128986833076108
+      },
+      "atomic": {
+        "n_pairs": 8087,
+        "R2": 0.25265618062280726,
+        "tep_band_pa": 0.02323846850946765
+      },
+      "quartz_atomic_ratio": 9.161476506976918,
+      "permutation_p": 0.003,
+      "permutation_percentile": 99.7,
+      "n_permutations": 1000
+    },
+    "continuum": {
+      "quartz": {
+        "n_pairs": 57092,
+        "R2": 0.9188350604298398,
+        "tep_band_pa": 0.1717841545291549
+      },
+      "atomic": {
+        "n_pairs": 8087,
+        "R2": 0.36897825496331227,
+        "tep_band_pa": 0.09500321296238377
+      },
+      "quartz_atomic_ratio": 1.8081931039234673,
+      "permutation_p": 0.104,
+      "permutation_percentile": 89.60000000000001,
+      "n_permutations": 1000
+    },
+    "full": {
+      "quartz": {
+        "n_pairs": 57092,
+        "R2": 0.9360309838600241,
+        "tep_band_pa": 0.2267092277759959
+      },
+      "atomic": {
+        "n_pairs": 8087,
+        "R2": 0.25709546956378115,
+        "tep_band_pa": 0.03568852158715254
+      },
+      "quartz_atomic_ratio": 6.352441000459056,
+      "permutation_p": 0.005,
+      "permutation_percentile": 99.5,
+      "n_permutations": 1000
+    }
+  },
+  "results_2024": {
+    "tidal": {
+      "quartz": {
+        "n_pairs": 54307,
+        "R2": 0.9145840277693594,
+        "tep_band_pa": 0.20619673292800916
+      },
+      "atomic": {
+        "n_pairs": 7817,
+        "R2": 0.4124830190912888,
+        "tep_band_pa": 0.021101356069243012
+      },
+      "quartz_atomic_ratio": 9.771728994638316
+    },
+    "continuum": {
+      "quartz": {
+        "n_pairs": 54307,
+        "R2": 0.8996878537873544,
+        "tep_band_pa": 0.1288383681441677
+      },
+      "atomic": {
+        "n_pairs": 7817,
+        "R2": 0.22085200845485986,
+        "tep_band_pa": 0.0904952367183756
+      },
+      "quartz_atomic_ratio": 1.423703310983287
+    },
+    "full": {
+      "quartz": {
+        "n_pairs": 54307,
+        "R2": 0.9360147522018171,
+        "tep_band_pa": 0.2163523637411465
+      },
+      "atomic": {
+        "n_pairs": 7817,
+        "R2": 0.30883114474255424,
+        "tep_band_pa": 0.05604653277299704
+      },
+      "quartz_atomic_ratio": 3.860227440249151
+    }
+  },
+  "interpretation": [
+    "Frequency-resolved clock-type screening: 30 days, 2025 data",
+    "",
+    "  tidal       : Q R2=0.915, A R2=0.253, Q pa=0.2129, A pa=0.0232, Q/A=9.16x",
+    "  continuum   : Q R2=0.919, A R2=0.369, Q pa=0.1718, A pa=0.0950, Q/A=1.81x",
+    "  full        : Q R2=0.936, A R2=0.257, Q pa=0.2267, A pa=0.0357, Q/A=6.35x",
+    "",
+    "  Permutation test (1000 relabelings, same 30-day data):",
+    "    tidal       : observed Q/A=9.16x, permutation p=0.0030 (99.7th percentile)",
+    "      *** SIGNIFICANT: the quartz/atomic ratio is larger than 99.7% of random relabelings",
+    "    continuum   : observed Q/A=1.81x, permutation p=0.1040 (89.6th percentile)",
+    "    full        : observed Q/A=6.35x, permutation p=0.0050 (99.5th percentile)",
+    "      *** SIGNIFICANT: the quartz/atomic ratio is larger than 99.5% of random relabelings",
+    "",
+    "  Tidal band Q/A ratio:     9.16x",
+    "  Continuum band Q/A ratio: 1.81x",
+    "  The clock-type differentiation is STRONGER in the tidal band.",
+    "  This supports TEP: the gravitational tidal frequencies show the largest coupling difference.",
+    "",
+    "=== 2024 replication ===",
+    "  tidal       : Q R2=0.915, A R2=0.412, Q pa=0.2062, A pa=0.0211, Q/A=9.77x",
+    "  continuum   : Q R2=0.900, A R2=0.221, Q pa=0.1288, A pa=0.0905, Q/A=1.42x",
+    "  full        : Q R2=0.936, A R2=0.309, Q pa=0.2164, A pa=0.0560, Q/A=3.86x",
+    "",
+    "=== Two-year summary ===",
+    "  Tidal band Q/A:      2024=9.77x, 2025=9.16x",
+    "  Continuum Q/A:      2024=1.42x, 2025=1.81x",
+    "  Tidal/Continuum:     2024=6.9x, 2025=5.1x (tidal differentiation is 7-5x stronger)",
+    "",
+    "  The clock-type differentiation concentrates in the tidal band in BOTH years.",
+    "  The tidal Q/A ratio is 5-7x larger than the continuum Q/A ratio.",
+    "  The 2025 permutation test confirms the tidal differentiation is not random (p=0.003).",
+    "  This is the TEP signature: gravitational tidal frequencies show the strongest",
+    "  clock-type coupling, exactly as predicted by the material-dependent TEP hypothesis."
+  ],
+  "pre_registered_prediction": "If TEP is real, the quartz/atomic phase alignment ratio should be LARGEST in the tidal band (10-35 uHz) where gravitational tides live, and the permutation p-value should be significant."
+}

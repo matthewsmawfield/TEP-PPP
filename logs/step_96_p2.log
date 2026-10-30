@@ -1,0 +1,68 @@
+
+=== clk_cod_ops / 2024 (dev_frozen) / EUROPE : 32 days ===
+scripts/steps/step_96_leftover_clock_supremacy.py:480: RuntimeWarning: divide by zero encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:480: RuntimeWarning: overflow encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:480: RuntimeWarning: invalid value encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: divide by zero encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: overflow encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: invalid value encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+  mid-horizon rms: {'zero': 1.09, 'linrate': 1.37, 'ar1': 1.42, 'free_gp': 1.05, 'empirical_cov': 1.15, 'empirical_cov_full': 0.88, 'empirical_cov_full_hybrid': 1.19, 'tep_bandpass': 0.97, 'tep_lfmf': 0.92, 'tep_lfmf_hybrid': 1.23, 'tep_bandpass_hybrid': 1.24, 'tep_lfmf_gated': 0.8, 'tep_lfmf_gated_screened': 0.75}
+  tep_bandpass mid vs baselines: {'zero': 17.7, 'linrate': 31.9, 'ar1': 32.8, 'free_gp': 11.5, 'empirical_cov': 19.0, 'empirical_cov_full': -5.0, 'empirical_cov_full_hybrid': 21.1}
+  tep_lfmf mid vs baselines: {'zero': 19.7, 'linrate': 35.9, 'ar1': 37.4, 'free_gp': 14.5, 'empirical_cov': 23.0, 'empirical_cov_full': 0.1, 'empirical_cov_full_hybrid': 24.6}
+  tep_lfmf_hybrid mid vs baselines: {'zero': 0.2, 'linrate': 13.2, 'ar1': 17.9, 'free_gp': -1.3, 'empirical_cov': -0.4, 'empirical_cov_full': -36.1, 'empirical_cov_full_hybrid': 0.1}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -2.1, 'linrate': 8.2, 'ar1': 13.0, 'free_gp': -10.1, 'empirical_cov': -2.9, 'empirical_cov_full': -36.7, 'empirical_cov_full_hybrid': -5.1}
+  tep_lfmf_gated mid vs baselines: {'zero': 34.9, 'linrate': 42.9, 'ar1': 44.8, 'free_gp': 25.7, 'empirical_cov': 33.5, 'empirical_cov_full': 12.6, 'empirical_cov_full_hybrid': 31.9}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 33.2, 'linrate': 44.0, 'ar1': 46.2, 'free_gp': 27.5, 'empirical_cov': 33.8, 'empirical_cov_full': 14.6, 'empirical_cov_full_hybrid': 32.2}
+
+=== clk_cod_ops / 2024 (dev_frozen) / NORTH_AMERICA : 32 days ===
+  mid-horizon rms: {'zero': 4.01, 'linrate': 3.18, 'ar1': 3.44, 'free_gp': 3.99, 'empirical_cov': 3.64, 'empirical_cov_full': 3.76, 'empirical_cov_full_hybrid': 2.6, 'tep_bandpass': 3.84, 'tep_lfmf': 3.5, 'tep_lfmf_hybrid': 2.42, 'tep_bandpass_hybrid': 2.99, 'tep_lfmf_gated': 1.67, 'tep_lfmf_gated_screened': 1.65}
+  tep_bandpass mid vs baselines: {'zero': 3.3, 'linrate': -34.5, 'ar1': -27.8, 'free_gp': 0.3, 'empirical_cov': -1.7, 'empirical_cov_full': -3.0, 'empirical_cov_full_hybrid': -77.6}
+  tep_lfmf mid vs baselines: {'zero': 12.2, 'linrate': -16.7, 'ar1': -19.6, 'free_gp': 4.3, 'empirical_cov': 6.3, 'empirical_cov_full': 1.7, 'empirical_cov_full_hybrid': -57.6}
+  tep_lfmf_hybrid mid vs baselines: {'zero': 44.6, 'linrate': 18.6, 'ar1': 17.7, 'free_gp': 46.1, 'empirical_cov': 42.4, 'empirical_cov_full': 36.9, 'empirical_cov_full_hybrid': 0.9}
+  tep_bandpass_hybrid mid vs baselines: {'zero': 35.9, 'linrate': 5.7, 'ar1': 10.0, 'free_gp': 34.4, 'empirical_cov': 33.0, 'empirical_cov_full': 33.9, 'empirical_cov_full_hybrid': -9.0}
+  tep_lfmf_gated mid vs baselines: {'zero': 53.9, 'linrate': 32.8, 'ar1': 33.9, 'free_gp': 54.4, 'empirical_cov': 58.8, 'empirical_cov_full': 56.4, 'empirical_cov_full_hybrid': 20.3}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 55.9, 'linrate': 32.9, 'ar1': 36.1, 'free_gp': 53.8, 'empirical_cov': 58.1, 'empirical_cov_full': 57.3, 'empirical_cov_full_hybrid': 18.0}
+
+=== clk_cod_ops / 2024 (dev_frozen) / ASIA_OCEANIA : 32 days ===
+  mid-horizon rms: {'zero': 2.56, 'linrate': 4.06, 'ar1': 3.82, 'free_gp': 2.17, 'empirical_cov': 2.52, 'empirical_cov_full': 1.92, 'empirical_cov_full_hybrid': 3.19, 'tep_bandpass': 2.05, 'tep_lfmf': 1.9, 'tep_lfmf_hybrid': 3.05, 'tep_bandpass_hybrid': 3.4, 'tep_lfmf_gated': 2.77, 'tep_lfmf_gated_screened': 2.81}
+  tep_bandpass mid vs baselines: {'zero': 16.5, 'linrate': 39.2, 'ar1': 39.3, 'free_gp': 4.2, 'empirical_cov': 11.2, 'empirical_cov_full': -5.1, 'empirical_cov_full_hybrid': 26.9}
+  tep_lfmf mid vs baselines: {'zero': 26.0, 'linrate': 39.2, 'ar1': 42.2, 'free_gp': 13.6, 'empirical_cov': 20.2, 'empirical_cov_full': 0.7, 'empirical_cov_full_hybrid': 35.2}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -8.9, 'linrate': 13.6, 'ar1': 13.3, 'free_gp': -28.4, 'empirical_cov': -10.1, 'empirical_cov_full': -43.4, 'empirical_cov_full_hybrid': 1.3}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -13.0, 'linrate': 6.6, 'ar1': 5.4, 'free_gp': -27.9, 'empirical_cov': -11.2, 'empirical_cov_full': -52.5, 'empirical_cov_full_hybrid': -2.4}
+  tep_lfmf_gated mid vs baselines: {'zero': -2.7, 'linrate': 17.0, 'ar1': 14.7, 'free_gp': -16.1, 'empirical_cov': -1.3, 'empirical_cov_full': -26.3, 'empirical_cov_full_hybrid': 4.8}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': -2.1, 'linrate': 20.9, 'ar1': 19.4, 'free_gp': -16.7, 'empirical_cov': -2.7, 'empirical_cov_full': -23.1, 'empirical_cov_full_hybrid': 5.3}
+
+=== clk_cod_ops / 2025 (independent) / EUROPE : 32 days ===
+  mid-horizon rms: {'zero': 0.95, 'linrate': 1.38, 'ar1': 1.45, 'free_gp': 0.9, 'empirical_cov': 0.96, 'empirical_cov_full': 0.78, 'empirical_cov_full_hybrid': 1.11, 'tep_bandpass': 0.82, 'tep_lfmf': 0.79, 'tep_lfmf_hybrid': 1.1, 'tep_bandpass_hybrid': 1.16, 'tep_lfmf_gated': 0.72, 'tep_lfmf_gated_screened': 0.7}
+  tep_bandpass mid vs baselines: {'zero': 11.3, 'linrate': 38.7, 'ar1': 42.3, 'free_gp': 4.8, 'empirical_cov': 12.0, 'empirical_cov_full': -4.7, 'empirical_cov_full_hybrid': 26.9}
+  tep_lfmf mid vs baselines: {'zero': 16.4, 'linrate': 43.7, 'ar1': 45.4, 'free_gp': 11.2, 'empirical_cov': 18.2, 'empirical_cov_full': -1.6, 'empirical_cov_full_hybrid': 29.2}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -26.1, 'linrate': 18.4, 'ar1': 21.5, 'free_gp': -31.6, 'empirical_cov': -24.6, 'empirical_cov_full': -40.9, 'empirical_cov_full_hybrid': -0.4}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -32.6, 'linrate': 12.8, 'ar1': 15.8, 'free_gp': -38.3, 'empirical_cov': -27.3, 'empirical_cov_full': -47.6, 'empirical_cov_full_hybrid': -5.5}
+  tep_lfmf_gated mid vs baselines: {'zero': 22.9, 'linrate': 46.9, 'ar1': 50.2, 'free_gp': 19.1, 'empirical_cov': 24.2, 'empirical_cov_full': 8.9, 'empirical_cov_full_hybrid': 37.0}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 22.8, 'linrate': 48.5, 'ar1': 49.7, 'free_gp': 18.7, 'empirical_cov': 24.8, 'empirical_cov_full': 8.6, 'empirical_cov_full_hybrid': 37.4}
+
+=== clk_cod_ops / 2025 (independent) / NORTH_AMERICA : 32 days ===
+  mid-horizon rms: {'zero': 5.05, 'linrate': 3.12, 'ar1': 3.07, 'free_gp': 4.89, 'empirical_cov': 4.62, 'empirical_cov_full': 4.91, 'empirical_cov_full_hybrid': 2.12, 'tep_bandpass': 4.68, 'tep_lfmf': 4.53, 'tep_lfmf_hybrid': 2.06, 'tep_bandpass_hybrid': 2.32, 'tep_lfmf_gated': 1.62, 'tep_lfmf_gated_screened': 1.69}
+  tep_bandpass mid vs baselines: {'zero': 5.4, 'linrate': -55.0, 'ar1': -59.3, 'free_gp': 2.6, 'empirical_cov': 0.5, 'empirical_cov_full': 2.1, 'empirical_cov_full_hybrid': -114.0}
+  tep_lfmf mid vs baselines: {'zero': 7.0, 'linrate': -58.2, 'ar1': -58.9, 'free_gp': 2.6, 'empirical_cov': 1.7, 'empirical_cov_full': 5.2, 'empirical_cov_full_hybrid': -106.9}
+  tep_lfmf_hybrid mid vs baselines: {'zero': 57.8, 'linrate': 31.7, 'ar1': 32.7, 'free_gp': 55.6, 'empirical_cov': 56.1, 'empirical_cov_full': 55.5, 'empirical_cov_full_hybrid': 1.5}
+  tep_bandpass_hybrid mid vs baselines: {'zero': 50.7, 'linrate': 22.2, 'ar1': 19.4, 'free_gp': 50.1, 'empirical_cov': 49.8, 'empirical_cov_full': 50.8, 'empirical_cov_full_hybrid': -6.8}
+  tep_lfmf_gated mid vs baselines: {'zero': 68.5, 'linrate': 49.0, 'ar1': 49.8, 'free_gp': 67.8, 'empirical_cov': 65.6, 'empirical_cov_full': 67.2, 'empirical_cov_full_hybrid': 28.5}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 67.6, 'linrate': 50.4, 'ar1': 50.7, 'free_gp': 66.5, 'empirical_cov': 66.1, 'empirical_cov_full': 68.2, 'empirical_cov_full_hybrid': 29.2}
+
+=== clk_cod_ops / 2025 (independent) / ASIA_OCEANIA : 32 days ===
+  mid-horizon rms: {'zero': 2.6, 'linrate': 3.71, 'ar1': 3.72, 'free_gp': 2.03, 'empirical_cov': 2.38, 'empirical_cov_full': 1.76, 'empirical_cov_full_hybrid': 3.3, 'tep_bandpass': 1.96, 'tep_lfmf': 1.69, 'tep_lfmf_hybrid': 3.04, 'tep_bandpass_hybrid': 3.12, 'tep_lfmf_gated': 2.83, 'tep_lfmf_gated_screened': 2.79}
+  tep_bandpass mid vs baselines: {'zero': 22.9, 'linrate': 48.6, 'ar1': 46.3, 'free_gp': 3.5, 'empirical_cov': 15.4, 'empirical_cov_full': -4.7, 'empirical_cov_full_hybrid': 39.3}
+  tep_lfmf mid vs baselines: {'zero': 33.7, 'linrate': 50.9, 'ar1': 50.9, 'free_gp': 14.9, 'empirical_cov': 24.6, 'empirical_cov_full': 3.0, 'empirical_cov_full_hybrid': 44.5}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -16.3, 'linrate': 19.6, 'ar1': 22.4, 'free_gp': -46.6, 'empirical_cov': -29.7, 'empirical_cov_full': -59.5, 'empirical_cov_full_hybrid': 1.5}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -25.1, 'linrate': 9.6, 'ar1': 11.8, 'free_gp': -50.3, 'empirical_cov': -34.6, 'empirical_cov_full': -82.8, 'empirical_cov_full_hybrid': -2.1}
+  tep_lfmf_gated mid vs baselines: {'zero': -9.3, 'linrate': 26.9, 'ar1': 24.5, 'free_gp': -35.0, 'empirical_cov': -17.5, 'empirical_cov_full': -40.9, 'empirical_cov_full_hybrid': 9.8}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': -9.0, 'linrate': 29.2, 'ar1': 25.6, 'free_gp': -28.6, 'empirical_cov': -15.0, 'empirical_cov_full': -38.3, 'empirical_cov_full_hybrid': 12.1}
+
+Level 1 PASS -- saved results/outputs/step_96_leftover_OPSFIN_protected.json

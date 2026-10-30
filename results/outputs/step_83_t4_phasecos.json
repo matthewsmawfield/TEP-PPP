@@ -1,0 +1,82 @@
+{
+  "step": 83,
+  "title": "T4 co-visibility separation with the phase-alignment index",
+  "timestamp": "2026-10-29T13:38:16.793626+00:00",
+  "arms": {
+    "precise_ops": {
+      "product": "clk_cod_ops",
+      "n_days": 361,
+      "n_pairs": 58492,
+      "estimator": "phase-alignment index cos(arg(sum_f S_ij(f)))",
+      "stage1": "pooled common-view kappa with pair fixed effects",
+      "pooled_common_view_kappa": 0.04770344011840008,
+      "n_days_real_sp3_covis": 361,
+      "partial_corr_alpha_logdist_given_covis": -0.026103312795672517,
+      "partial_corr_alpha_cosdlon_given_covis": -0.002059275974122565,
+      "partial_corr_alpha_logdist_given_covis_cosdlon": -0.02603194744022218,
+      "oos_r2_gain_distance": 0.00020938486340913443,
+      "oos_r2_gain_distance_with_dlon_base": 0.00021099737512168663,
+      "partial_corr_alpha_covis_given_logdist": 0.015047822459445189,
+      "frozen_S2_threshold": 0.15,
+      "meets_S2_partial_corr": false,
+      "null_partial_corr_abs_mean": 0.003039955917127362,
+      "null_partial_corr_abs_sd": 0.0024646833786933584,
+      "p_vs_null": 0.0,
+      "z_vs_null": 9.357533335893269,
+      "kappa_null_mean": 0.0005561288408137264,
+      "kappa_null_sd": 0.005316451935879339,
+      "z_kappa": 13.059195530495433,
+      "pc_station_boot_ci95": [
+        -0.05117591933034132,
+        -0.007241923739995371
+      ],
+      "distance_fit": {
+        "best_model": "gaussian",
+        "lambda_km": 3694.566031490181,
+        "R2": 0.7853200823461247,
+        "n_bins": 32
+      },
+      "mean_beta_covisibility": 0.0477034401184001
+    },
+    "broadcast_spp": {
+      "product": "broadcast",
+      "n_days": 361,
+      "n_pairs": 435,
+      "estimator": "phase-alignment index cos(arg(sum_f S_ij(f)))",
+      "stage1": "pooled common-view kappa with pair fixed effects",
+      "pooled_common_view_kappa": -0.31225307709644307,
+      "n_days_real_sp3_covis": 316,
+      "partial_corr_alpha_logdist_given_covis": -0.0016499762912780304,
+      "partial_corr_alpha_cosdlon_given_covis": -0.06144353342743746,
+      "partial_corr_alpha_logdist_given_covis_cosdlon": 0.020988351783036176,
+      "oos_r2_gain_distance": -0.0005378017714770186,
+      "oos_r2_gain_distance_with_dlon_base": 0.011771882729661582,
+      "partial_corr_alpha_covis_given_logdist": -0.000337614688076987,
+      "frozen_S2_threshold": 0.15,
+      "meets_S2_partial_corr": false,
+      "null_partial_corr_abs_mean": 0.04263640269662763,
+      "null_partial_corr_abs_sd": 0.02758481497023658,
+      "p_vs_null": 0.9666666666666667,
+      "z_vs_null": -1.4858329283547147,
+      "kappa_null_mean": 0.0007417321180692592,
+      "kappa_null_sd": 0.040098272521296704,
+      "z_kappa": 10.724910233924048,
+      "pc_station_boot_ci95": [
+        -0.1537355354340926,
+        0.13874944954558857
+      ],
+      "distance_fit": {
+        "best_model": "constant",
+        "lambda_km": null,
+        "R2": 0.0,
+        "n_bins": 10
+      },
+      "mean_beta_covisibility": -0.31225307709644307
+    }
+  },
+  "verdict": {
+    "question": "does the frozen S2 criterion pass when T4 uses the corpus's own estimator instead of band-passed Pearson?",
+    "arms_meeting_S2": [],
+    "n_arms": 2
+  }
+}

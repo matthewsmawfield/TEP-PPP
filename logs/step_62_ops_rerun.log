@@ -1,0 +1,19 @@
+thinned RINEX to k=4 GPS -> /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/step62_la2n852h/thinned_k4.rnx
+passA: full-day free-clock trend (clean sky)
+Traceback (most recent call last):
+  File "scripts/steps/step_62_ppp_convergence.py", line 658, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "scripts/steps/step_62_ppp_convergence.py", line 357, in main
+    full_free, _ = run_window("passA", 0, 86370, None, degrade=False)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "scripts/steps/step_62_ppp_convergence.py", line 311, in run_window
+    subprocess.run([str(PRIDE / "bin" / "lsq"), cfg.name, local_obs.name],
+  File "cpython-3.12.15-macos-x86_64-none/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cpython-3.12.15-macos-x86_64-none/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "cpython-3.12.15-macos-x86_64-none/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+OSError: [Errno 86] Bad CPU type in executable: 'archive/PRIDE-PPPAR/bin/lsq'

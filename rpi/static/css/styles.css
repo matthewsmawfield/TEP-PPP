@@ -1,0 +1,753 @@
+/* ==========================================================================
+   TEP-PPP Real-Time Precision Navigation Rig — Vanilla CSS Design System
+   Aesthetic: High-contrast Dark Metrology / Deep Space Glassmorphism
+   Zero Tailwind CSS
+   ========================================================================== */
+
+:root {
+  /* Color Palette */
+  --bg-deep: #060911;
+  --bg-surface: rgba(13, 19, 33, 0.78);
+  --bg-surface-elevated: rgba(20, 29, 49, 0.85);
+  --bg-card-subtle: rgba(255, 255, 255, 0.03);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(255, 255, 255, 0.16);
+
+  /* Arm Accents */
+  --tep-emerald: #10b981;
+  --tep-emerald-glow: rgba(16, 185, 129, 0.28);
+  --tep-emerald-subtle: rgba(16, 185, 129, 0.12);
+  --persist-amber: #f59e0b;
+  --persist-amber-glow: rgba(245, 158, 11, 0.25);
+  --persist-amber-subtle: rgba(245, 158, 11, 0.12);
+  --free-crimson: #ef4444;
+  --free-crimson-glow: rgba(239, 68, 68, 0.25);
+  --free-crimson-subtle: rgba(239, 68, 68, 0.12);
+
+  /* Metrology Accents */
+  --cyan-kriging: #06b6d4;
+  --cyan-kriging-subtle: rgba(6, 182, 212, 0.12);
+  --purple-astro: #a855f7;
+  --purple-astro-subtle: rgba(168, 85, 247, 0.12);
+
+  /* Neutral Text */
+  --text-bright: #f8fafc;
+  --text-standard: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Elevations */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  --shadow-glow-emerald: 0 0 24px rgba(16, 185, 129, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(168, 85, 247, 0.04) 0%, transparent 50%);
+  color: var(--text-standard);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Tabular Numerals */
+.mono-nums {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Card Style */
+.card-glass {
+  background: var(--bg-surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  box-shadow: var(--shadow-glass);
+  padding: 18px;
+  position: relative;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-glass:hover {
+  border-color: var(--border-active);
+}
+
+/* App Header */
+.app-header {
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(6, 9, 17, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 12px 28px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-badge {
+  background: var(--tep-emerald-subtle);
+  border: 1px solid var(--tep-emerald);
+  border-radius: 6px;
+  color: var(--tep-emerald);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.brand-title {
+  color: var(--text-bright);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand-sub {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.meta-pill {
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.meta-pill strong {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--text-faint);
+  display: inline-block;
+}
+
+.status-dot.live {
+  background-color: var(--tep-emerald);
+  box-shadow: 0 0 10px var(--tep-emerald);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+/* Main Container Layout */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 20px 28px;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: HERO RESULTS SCORECARD (Load-Bearing Figures of Merit)
+   -------------------------------------------------------------------------- */
+.hero-scorecard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 132px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--border-subtle);
+}
+
+.kpi-card.highlight-emerald::before {
+  background: var(--tep-emerald);
+  box-shadow: 0 0 12px var(--tep-emerald);
+}
+
+.kpi-card.highlight-cyan::before {
+  background: var(--cyan-kriging);
+  box-shadow: 0 0 12px var(--cyan-kriging);
+}
+
+.kpi-card.highlight-amber::before {
+  background: var(--persist-amber);
+}
+
+.kpi-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.kpi-label {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.kpi-badge {
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+}
+
+.badge-emerald {
+  background: var(--tep-emerald-subtle);
+  border: 1px solid var(--tep-emerald);
+  color: var(--tep-emerald);
+}
+
+.badge-amber {
+  background: var(--persist-amber-subtle);
+  border: 1px solid var(--persist-amber);
+  color: var(--persist-amber);
+}
+
+.badge-muted {
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid #64748b;
+  color: var(--text-muted);
+}
+
+.badge-crimson {
+  background: var(--free-crimson-subtle);
+  border: 1px solid var(--free-crimson);
+  color: var(--free-crimson);
+}
+
+.kpi-value-row {
+  align-items: baseline;
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 4px 0;
+}
+
+.kpi-main-val {
+  color: var(--text-bright);
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.kpi-unit {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.kpi-footer-sub {
+  color: var(--text-muted);
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: CENTRAL COMPARATIVE RESULTS ARENA
+   -------------------------------------------------------------------------- */
+.arena-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1180px) {
+  .arena-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.arena-header {
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+}
+
+.arena-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arena-title {
+  color: var(--text-bright);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.arena-subtitle {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.canvas-container {
+  background: rgba(8, 12, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.arena-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.swatch-tep {
+  background: var(--tep-emerald);
+  box-shadow: 0 0 6px var(--tep-emerald);
+}
+
+.swatch-persist {
+  background: var(--persist-amber);
+}
+
+.swatch-free {
+  background: var(--free-crimson);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: SCIENTIFIC AUDIT & METROLOGY DECK
+   -------------------------------------------------------------------------- */
+.audit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 12.5px;
+}
+
+.metric-row:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  color: var(--text-muted);
+}
+
+.metric-val {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+/* Astronomical Phase Gauge */
+.phase-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.phase-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phase-bar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.phase-bar-fill {
+  background: linear-gradient(90deg, var(--cyan-kriging), var(--purple-astro));
+  border-radius: 4px;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: CONTEXTUAL TELEMETRY (Drawer / Multi-tab)
+   -------------------------------------------------------------------------- */
+.telemetry-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  background: var(--bg-card-subtle);
+  color: var(--text-bright);
+}
+
+.tab-btn.active {
+  background: var(--bg-surface-elevated);
+  border-color: var(--tep-emerald);
+  color: var(--tep-emerald);
+}
+
+.telemetry-pane {
+  display: none;
+}
+
+.telemetry-pane.active {
+  display: block;
+}
+
+/* Skyplot Container */
+.skyplot-wrapper {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .skyplot-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sat-table-scroll {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+.sat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.sat-table th {
+  background: rgba(10, 14, 26, 0.9);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 8px 10px;
+  position: sticky;
+  top: 0;
+  text-align: left;
+}
+
+.sat-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 6px 10px;
+}
+
+.snr-meter {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  display: inline-block;
+  height: 6px;
+  width: 70px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.snr-fill {
+  background: var(--tep-emerald);
+  height: 100%;
+}
+
+/* Map & Globe containers */
+#map-view {
+  height: 360px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+#globe-view {
+  height: 360px;
+  border-radius: 8px;
+  width: 100%;
+  background: #020408;
+}
+
+/* Caveats Banner */
+.caveats-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 8px;
+  color: var(--persist-amber);
+  font-size: 11.5px;
+  padding: 10px 14px;
+  margin-top: 14px;
+}
+
+.caveats-box ul {
+  margin-left: 18px;
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   SKILL OBSERVATORY EXTENSION: Banner, Ledger & Interactive Charts
+   -------------------------------------------------------------------------- */
+.skill-hero-banner {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.08) 55%, rgba(168, 85, 247, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 0 28px rgba(16, 185, 129, 0.12);
+}
+
+.skill-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-banner-pill {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid var(--tep-emerald);
+  color: var(--tep-emerald);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.skill-banner-title {
+  color: var(--text-bright);
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.skill-banner-sub {
+  color: var(--text-muted);
+  font-size: 11.5px;
+}
+
+.skill-banner-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.skill-stat-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-stat-chip:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.skill-stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.skill-stat-val {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--tep-emerald);
+}
+
+.kpi-card.highlight-purple::before {
+  background: var(--purple-astro);
+  box-shadow: 0 0 12px var(--purple-astro);
+}
+
+.badge-cyan {
+  background: var(--cyan-kriging-subtle);
+  border: 1px solid var(--cyan-kriging);
+  color: var(--cyan-kriging);
+}
+
+.badge-purple {
+  background: var(--purple-astro-subtle);
+  border: 1px solid var(--purple-astro);
+  color: var(--purple-astro);
+}
+
+.swatch-cyan {
+  background: var(--cyan-kriging);
+  box-shadow: 0 0 6px var(--cyan-kriging);
+}
+
+.swatch-purple {
+  background: var(--purple-astro);
+  box-shadow: 0 0 6px var(--purple-astro);
+}
+
+/* Ledger Table */
+.ledger-scroll {
+  max-height: 310px;
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+
+.ledger-table th {
+  background: rgba(10, 14, 26, 0.94);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 8px 10px;
+  position: sticky;
+  top: 0;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  z-index: 2;
+}
+
+.ledger-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.035);
+  padding: 6px 10px;
+}
+
+.ledger-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.gain-bar-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gain-bar-bg {
+  width: 64px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.gain-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--cyan-kriging), var(--tep-emerald));
+}

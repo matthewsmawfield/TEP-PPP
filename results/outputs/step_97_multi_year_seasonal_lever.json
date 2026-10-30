@@ -1,0 +1,300 @@
+{
+  "step": 97,
+  "title": "Multi-year seasonal lever and decade N_eff projection",
+  "timestamp": "2026-09-03T21:47:40.686474+00:00",
+  "product": "clk_cod",
+  "windows": [
+    {
+      "jd": 2460317.0,
+      "ew_minus_ns": -0.05426519525997367,
+      "n_pairs": 387
+    },
+    {
+      "jd": 2460332.0,
+      "ew_minus_ns": -0.16950534912985127,
+      "n_pairs": 302
+    },
+    {
+      "jd": 2460347.0,
+      "ew_minus_ns": 0.014618495453754987,
+      "n_pairs": 306
+    },
+    {
+      "jd": 2460362.0,
+      "ew_minus_ns": -0.14548426521478164,
+      "n_pairs": 293
+    },
+    {
+      "jd": 2460377.0,
+      "ew_minus_ns": -0.09729361722057764,
+      "n_pairs": 315
+    },
+    {
+      "jd": 2460392.0,
+      "ew_minus_ns": -0.11278834575477187,
+      "n_pairs": 371
+    },
+    {
+      "jd": 2460407.0,
+      "ew_minus_ns": -0.05979496507944984,
+      "n_pairs": 350
+    },
+    {
+      "jd": 2460422.0,
+      "ew_minus_ns": -0.04525654140745336,
+      "n_pairs": 369
+    },
+    {
+      "jd": 2460437.0,
+      "ew_minus_ns": -0.010143361619505381,
+      "n_pairs": 371
+    },
+    {
+      "jd": 2460452.0,
+      "ew_minus_ns": 0.09502446632925013,
+      "n_pairs": 334
+    },
+    {
+      "jd": 2460467.0,
+      "ew_minus_ns": -0.010251109227132404,
+      "n_pairs": 414
+    },
+    {
+      "jd": 2460482.0,
+      "ew_minus_ns": 0.06516129962628736,
+      "n_pairs": 359
+    },
+    {
+      "jd": 2460497.0,
+      "ew_minus_ns": 0.014377304277444686,
+      "n_pairs": 344
+    },
+    {
+      "jd": 2460512.0,
+      "ew_minus_ns": -0.09245591940738007,
+      "n_pairs": 346
+    },
+    {
+      "jd": 2460527.0,
+      "ew_minus_ns": -0.06096145186187579,
+      "n_pairs": 389
+    },
+    {
+      "jd": 2460542.0,
+      "ew_minus_ns": -0.09226586364060774,
+      "n_pairs": 442
+    },
+    {
+      "jd": 2460557.0,
+      "ew_minus_ns": -0.06666092532992587,
+      "n_pairs": 312
+    },
+    {
+      "jd": 2460572.0,
+      "ew_minus_ns": -0.10508213599134561,
+      "n_pairs": 374
+    },
+    {
+      "jd": 2460587.0,
+      "ew_minus_ns": 0.00917014449431866,
+      "n_pairs": 374
+    },
+    {
+      "jd": 2460602.0,
+      "ew_minus_ns": -0.031833791967068564,
+      "n_pairs": 364
+    },
+    {
+      "jd": 2460617.0,
+      "ew_minus_ns": 0.051613536288529466,
+      "n_pairs": 366
+    },
+    {
+      "jd": 2460632.0,
+      "ew_minus_ns": -0.07164925093821195,
+      "n_pairs": 431
+    },
+    {
+      "jd": 2460647.0,
+      "ew_minus_ns": 0.022657418955210534,
+      "n_pairs": 420
+    },
+    {
+      "jd": 2460662.0,
+      "ew_minus_ns": 0.0158839815739813,
+      "n_pairs": 405
+    },
+    {
+      "jd": 2460677.0,
+      "ew_minus_ns": -0.08134315667892075,
+      "n_pairs": 455
+    },
+    {
+      "jd": 2460699.0,
+      "ew_minus_ns": -0.05129056302822574,
+      "n_pairs": 457
+    },
+    {
+      "jd": 2460714.0,
+      "ew_minus_ns": -0.043013410140569724,
+      "n_pairs": 404
+    },
+    {
+      "jd": 2460729.0,
+      "ew_minus_ns": -0.03541043290323237,
+      "n_pairs": 350
+    },
+    {
+      "jd": 2460744.0,
+      "ew_minus_ns": -0.01474177532992077,
+      "n_pairs": 303
+    },
+    {
+      "jd": 2460759.0,
+      "ew_minus_ns": -0.024599993333538295,
+      "n_pairs": 378
+    },
+    {
+      "jd": 2460789.0,
+      "ew_minus_ns": 0.0021116882793169867,
+      "n_pairs": 388
+    },
+    {
+      "jd": 2460845.0,
+      "ew_minus_ns": 0.0598976866264011,
+      "n_pairs": 361
+    },
+    {
+      "jd": 2460893.0,
+      "ew_minus_ns": 0.07851598261573331,
+      "n_pairs": 349
+    },
+    {
+      "jd": 2460937.0,
+      "ew_minus_ns": 0.14208279718195344,
+      "n_pairs": 379
+    },
+    {
+      "jd": 2460985.0,
+      "ew_minus_ns": -0.09490035266237373,
+      "n_pairs": 355
+    },
+    {
+      "jd": 2461023.0,
+      "ew_minus_ns": -0.030120023649335054,
+      "n_pairs": 355
+    }
+  ],
+  "verdict": {
+    "years_processed": [
+      2021,
+      2024,
+      2025
+    ],
+    "n_windows": 36,
+    "window_days": 15,
+    "span_years": 1.9329226557152634,
+    "band_km": [
+      300.0,
+      1500.0
+    ],
+    "pairs_per_window_median": 367,
+    "lag1_autocorrelation": 0.23236121873577628,
+    "n_eff_bartlett_now": 22.424428572867257,
+    "n_eff_bartlett_decade_projection": 116.01306708554908,
+    "raw_windows_per_year": 18.624645892351275,
+    "decade_windows_projected": 186.24645892351276,
+    "min_detectable_abs_r_now": 0.41861732053056605,
+    "min_detectable_abs_r_decade": 0.18241330023954383,
+    "models": {
+      "dipolar_v_dot_n": {
+        "best_axis_ra_deg": 35.0,
+        "best_axis_dec_deg": -7.5,
+        "r_at_best_axis": 0.3536942450065943,
+        "scanned_null_p_block_permutation": 0.46738315421144716,
+        "separation_from_deg": {
+          "CMB_dipole": 49.06392379064981,
+          "paper2_axis": 31.13849347477632,
+          "paper3_axis": 29.698302798200316,
+          "solar_apex": 56.948317843527235
+        },
+        "r_at_named_axes": {
+          "CMB_dipole": {
+            "r": -0.27700245287611663,
+            "p_block_permutation": 0.46613346663334165,
+            "bartlett_n_eff": 23.816200656210555
+          },
+          "paper2_axis": {
+            "r": -0.3263470097944758,
+            "p_block_permutation": 0.24493876530867284,
+            "bartlett_n_eff": 23.82747131184303
+          },
+          "paper3_axis": {
+            "r": -0.33144915339876946,
+            "p_block_permutation": 0.2999250187453137,
+            "bartlett_n_eff": 23.822154065848856
+          },
+          "solar_apex": {
+            "r": -0.1848453358369183,
+            "p_block_permutation": 0.5433641589602599,
+            "bartlett_n_eff": 23.27310192386855
+          }
+        },
+        "significant_vs_scanned_null": false,
+        "aligns_with_corpus_axis": true
+      },
+      "quadrupolar_v_dot_n_sq": {
+        "best_axis_ra_deg": 145.0,
+        "best_axis_dec_deg": -12.5,
+        "r_at_best_axis": 0.3370295666737313,
+        "scanned_null_p_block_permutation": 0.5023744063984004,
+        "separation_from_deg": {
+          "CMB_dipole": 23.311944265398918,
+          "paper2_axis": 41.39895269358788,
+          "paper3_axis": 43.099805082211745,
+          "solar_apex": 52.75744440147266
+        },
+        "r_at_named_axes": {
+          "CMB_dipole": {
+            "r": 0.2600077041978236,
+            "p_block_permutation": 0.3886528367908023,
+            "bartlett_n_eff": 26.19138487159911
+          },
+          "paper2_axis": {
+            "r": 0.11574650584836313,
+            "p_block_permutation": 0.583104223944014,
+            "bartlett_n_eff": 26.348928169593027
+          },
+          "paper3_axis": {
+            "r": 0.09087983197966758,
+            "p_block_permutation": 0.7140714821294676,
+            "bartlett_n_eff": 26.32901960346974
+          },
+          "solar_apex": {
+            "r": -0.17504624079789272,
+            "p_block_permutation": 0.4926268432891777,
+            "bartlett_n_eff": 26.349046083691672
+          }
+        },
+        "significant_vs_scanned_null": false,
+        "aligns_with_corpus_axis": true
+      }
+    },
+    "corpus_reference": {
+      "CMB_dipole": [
+        168.0,
+        -7.0
+      ],
+      "paper2": [
+        186.0,
+        -4.0
+      ],
+      "paper3": [
+        188.0,
+        -5.0
+      ],
+      "paper2_reported_r": -0.888
+    },
+    "interpretation": "The multi-year corpus lifts N_eff from the single-year ~7.7 to 22.4.  At the measured lag-1 autocorrelation (+0.23) a full decade of the CODE operational product is projected to yield N_eff ~ 116, sufficient to test the CMB alignment at |r| >= 0.18 (alpha = 0.05) versus the single-year floor |r| >= 0.42.  The seasonal lever, not the daily rotation, is the route to a celestial right ascension."
+  }
+}

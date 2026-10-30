@@ -1,0 +1,83 @@
+{
+  "title": "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging",
+  "author": "Matthew Lukin Smawfield",
+  "version": "v0.1 (Pune)",
+  "language": "en",
+  "codename": "Pune",
+  "date": "29 October 2026",
+  "first_published": "29 October 2026",
+  "doi": "10.5281/zenodo.23704946",
+  "paper_number": 33,
+  "sections": [
+    {
+      "id": "section-abstract",
+      "title": "Abstract",
+      "file": "00_abstract.html",
+      "order": 1
+    },
+    {
+      "id": "section-introduction",
+      "title": "1. Introduction",
+      "file": "01_introduction.html",
+      "order": 2
+    },
+    {
+      "id": "section-methodology",
+      "title": "2. Methodology",
+      "file": "02_methodology.html",
+      "order": 3
+    },
+    {
+      "id": "section-results",
+      "title": "3. Results",
+      "file": "03_results.html",
+      "order": 4
+    },
+    {
+      "id": "section-discussion",
+      "title": "4. Discussion",
+      "file": "04_discussion.html",
+      "order": 5
+    },
+    {
+      "id": "section-conclusion",
+      "title": "5. Conclusion",
+      "file": "05_conclusion.html",
+      "order": 6
+    },
+    {
+      "id": "section-reproducibility",
+      "title": "Data Availability & Reproducibility",
+      "file": "08_reproducibility.html",
+      "order": 7
+    },
+    {
+      "id": "section-references",
+      "title": "References",
+      "file": "07_references.html",
+      "order": 8
+    },
+    {
+      "id": "section-appendix",
+      "title": "Appendix A — Supplementary Audit Detail",
+      "file": "10_supplementary_audit.html",
+      "order": 9
+    }
+  ],
+  "icons": [
+    {
+      "src": "public/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "public/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#220126"
+}

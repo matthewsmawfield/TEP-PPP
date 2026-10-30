@@ -1,0 +1,104 @@
+{
+  "step": 122,
+  "title": "Latitude-controlled quartz-vs-atomic screening",
+  "timestamp": "2026-09-06T18:13:09.782470+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "latitude_bands": [
+    [
+      "high",
+      50.0,
+      90.0
+    ],
+    [
+      "mid",
+      30.0,
+      50.0
+    ],
+    [
+      "low",
+      0.0,
+      30.0
+    ]
+  ],
+  "results": {
+    "atomic_high": {
+      "oscillator": "atomic",
+      "latitude_band": "high",
+      "n_pairs": 235,
+      "n_tep_band": 18,
+      "tep_band_alignment": null,
+      "exponential_lambda_km": null,
+      "R2": null
+    },
+    "atomic_low": {
+      "oscillator": "atomic",
+      "latitude_band": "low",
+      "n_pairs": 666,
+      "n_tep_band": 166,
+      "tep_band_alignment": -0.04548624799614842,
+      "exponential_lambda_km": 373.1710497818397,
+      "R2": 0.0
+    },
+    "atomic_mid": {
+      "oscillator": "atomic",
+      "latitude_band": "mid",
+      "n_pairs": 3966,
+      "n_tep_band": 742,
+      "tep_band_alignment": 0.1140643485113354,
+      "exponential_lambda_km": 39999.999999999745,
+      "R2": 0.2997453293501967
+    },
+    "quartz_high": {
+      "oscillator": "quartz",
+      "latitude_band": "high",
+      "n_pairs": 4688,
+      "n_tep_band": 2993,
+      "tep_band_alignment": 0.06673042246270038,
+      "exponential_lambda_km": 1919.5034605968679,
+      "R2": 0.6137925968779139
+    },
+    "quartz_low": {
+      "oscillator": "quartz",
+      "latitude_band": "low",
+      "n_pairs": 13299,
+      "n_tep_band": 4007,
+      "tep_band_alignment": 0.293211861934418,
+      "exponential_lambda_km": 5626.809899584175,
+      "R2": 0.9134854721332295
+    },
+    "quartz_mid": {
+      "oscillator": "quartz",
+      "latitude_band": "mid",
+      "n_pairs": 10323,
+      "n_tep_band": 2495,
+      "tep_band_alignment": 0.20729063423012267,
+      "exponential_lambda_km": 1450.0534706776396,
+      "R2": 0.847660722424972
+    }
+  },
+  "screening_by_latitude": {
+    "high": {
+      "qq_alignment": 0.06673042246270038,
+      "aa_alignment": null,
+      "screening_ratio": null,
+      "screening_diff": null
+    },
+    "mid": {
+      "qq_alignment": 0.20729063423012267,
+      "aa_alignment": 0.1140643485113354,
+      "screening_ratio": 1.8173130950686376,
+      "screening_diff": 0.09322628571878727
+    },
+    "low": {
+      "qq_alignment": 0.293211861934418,
+      "aa_alignment": -0.04548624799614842,
+      "screening_ratio": -6.4461650466146585,
+      "screening_diff": 0.3386981099305664
+    }
+  },
+  "interpretation": [
+    "Quartz TEP-band alignment by latitude: high=0.0667, mid=0.2073, low=0.2932 (range 0.2265)."
+  ],
+  "pre_registered_prediction": "Under TEP, the quartz-vs-atomic screening effect should be latitude-independent.  Under an ionospheric interpretation, the screening should be stronger at high latitudes (auroral ionosphere) or at low latitudes (equatorial ionosphere). A latitude-independent screening supports TEP; a latitude-dependent screening supports atmospheric/ionospheric."
+}

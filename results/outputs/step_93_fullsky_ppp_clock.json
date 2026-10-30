@@ -1,0 +1,33 @@
+{
+  "step": 93,
+  "title": "Held-out leftover PPP clocks at full sky (no 3-D position)",
+  "timestamp": "2026-09-03T13:20:40.519061+00:00",
+  "product": "precise IGS/MGEX receiver clocks = leftover time after production PPP",
+  "kernel": {
+    "form": "gaussian",
+    "lambda_km": 4200.0,
+    "nugget": 0.35
+  },
+  "preprocessing": "raw leftover PPP clocks; per-station bias is not kriged. TEP predicts the causal increment from other stations and adds it to the target hold. No full-day detrend, no network-mean removal.",
+  "n_days": 8,
+  "n_predictions": 16674,
+  "rms_m": {
+    "persistence": 132270.5351480878,
+    "ar1": 107168.24557088973,
+    "tep": 132270.5364775728
+  },
+  "rms_clip50_m": {
+    "persistence": 4.804665856059753,
+    "ar1": 4.768439864710241,
+    "tep": 4.816667084046414
+  },
+  "p50_abs_m": {
+    "persistence": 3.3324995915348543,
+    "ar1": 3.446169019764426,
+    "tep": 3.4104669402014727
+  },
+  "tep_vs_persistence_rms_pct": -1.005125604969237e-06,
+  "tep_vs_ar1_rms_pct": -23.423254503199264,
+  "tep_vs_persistence_p50_pct": -2.339605648104781,
+  "note": "If TEP beats persistence/AR1 here, 8+ satellites did not absorb the field: the leftover PPP clock still has TEP spatial structure. Position RMS at k>=4 is not this test."
+}

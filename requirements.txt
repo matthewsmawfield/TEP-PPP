@@ -1,0 +1,9 @@
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+requests>=2.31.0
+hatanaka>=2.8.1
+psutil>=5.9.0
+astropy>=5.0
+joblib>=1.5.0

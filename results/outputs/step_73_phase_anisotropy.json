@@ -1,0 +1,209 @@
+{
+  "step": 73,
+  "title": "EW/NS correlation-length anisotropy in the phase-alignment index",
+  "timestamp": "2026-09-02T19:51:51.466108+00:00",
+  "azimuth_profile": {
+    "N/S": {
+      "az_range": [
+        0.0,
+        22.5
+      ],
+      "n_pair_days": 193855,
+      "lambda_best_km": 4403.091038647352,
+      "lambda_exponential_km": 3467.2399501807577,
+      "best_model": "gaussian",
+      "R2": 0.5950226226003059
+    },
+    "NNE": {
+      "az_range": [
+        22.5,
+        45.0
+      ],
+      "n_pair_days": 289177,
+      "lambda_best_km": 2489.1016002338474,
+      "lambda_exponential_km": 2489.1016002338474,
+      "best_model": "exponential",
+      "R2": 0.6003544358115371
+    },
+    "NE/SW": {
+      "az_range": [
+        45.0,
+        67.5
+      ],
+      "n_pair_days": 278454,
+      "lambda_best_km": 3413.379389270332,
+      "lambda_exponential_km": 2776.031239983074,
+      "best_model": "gaussian",
+      "R2": 0.7644921147324099
+    },
+    "ENE": {
+      "az_range": [
+        67.5,
+        90.0
+      ],
+      "n_pair_days": 294670,
+      "lambda_best_km": 7026.76039494866,
+      "lambda_exponential_km": 7026.76039494866,
+      "best_model": "exponential",
+      "R2": 0.6370479755034997
+    },
+    "E/W": {
+      "az_range": [
+        90.0,
+        112.5
+      ],
+      "n_pair_days": 333483,
+      "lambda_best_km": 3084.469720822028,
+      "lambda_exponential_km": 3084.469720822028,
+      "best_model": "exponential",
+      "R2": 0.6772878328982279
+    },
+    "ESE": {
+      "az_range": [
+        112.5,
+        135.0
+      ],
+      "n_pair_days": 304707,
+      "lambda_best_km": 3610.3753431999485,
+      "lambda_exponential_km": 3610.3753431999485,
+      "best_model": "exponential",
+      "R2": 0.5252959820482026
+    },
+    "SE/NW": {
+      "az_range": [
+        135.0,
+        157.5
+      ],
+      "n_pair_days": 279577,
+      "lambda_best_km": 5250.1226899317,
+      "lambda_exponential_km": 5486.736855537451,
+      "best_model": "gaussian",
+      "R2": 0.466641362545981
+    },
+    "SSE": {
+      "az_range": [
+        157.5,
+        180.0
+      ],
+      "n_pair_days": 232675,
+      "lambda_best_km": 4989.090468419254,
+      "lambda_exponential_km": 6249.276006183584,
+      "best_model": "gaussian",
+      "R2": 0.6117744399358482
+    }
+  },
+  "verdict": {
+    "product": "clk_cod",
+    "azimuth_convention": "great-circle midpoint bearing (initial-bearing is biased: 20.5 deg mean error, reclassifies 35.8% of pairs, error grows with baseline and strips long EW pairs from the EW sector)",
+    "ratio_exponential_initial_bearing_biased": 1.0992797129057228,
+    "windows_30day": [
+      {
+        "window_start_day": 0,
+        "lambda_ew": 2285.3683446978553,
+        "lambda_ns": 2806.7065713567836,
+        "ratio": 0.8142526789300567
+      },
+      {
+        "window_start_day": 30,
+        "lambda_ew": 2787.65575562335,
+        "lambda_ns": 3034.7170154675537,
+        "ratio": 0.9185883696618286
+      },
+      {
+        "window_start_day": 60,
+        "lambda_ew": 2838.6996718187193,
+        "lambda_ns": 3280.251893843289,
+        "ratio": 0.8653907576874447
+      },
+      {
+        "window_start_day": 90,
+        "lambda_ew": 11692.096134038562,
+        "lambda_ns": 6694.2599835452875,
+        "ratio": 1.7465853078276197
+      },
+      {
+        "window_start_day": 120,
+        "lambda_ew": 3256.7100773011957,
+        "lambda_ns": 7142.709394540588,
+        "ratio": 0.45594884201650543
+      },
+      {
+        "window_start_day": 150,
+        "lambda_ew": 5049.084773904119,
+        "lambda_ns": 3131.3609184994357,
+        "ratio": 1.612425046271468
+      },
+      {
+        "window_start_day": 180,
+        "lambda_ew": 39999.99999999999,
+        "lambda_ns": 39999.99999999999,
+        "ratio": 1.0
+      },
+      {
+        "window_start_day": 210,
+        "lambda_ew": 3359.67360892552,
+        "lambda_ns": 19662.63679229025,
+        "ratio": 0.1708658734032484
+      },
+      {
+        "window_start_day": 240,
+        "lambda_ew": 10842.559814877917,
+        "lambda_ns": 39999.99999999097,
+        "ratio": 0.2710639953720091
+      },
+      {
+        "window_start_day": 270,
+        "lambda_ew": 9187.95448784622,
+        "lambda_ns": 4482.24919673662,
+        "ratio": 2.049853563370745
+      },
+      {
+        "window_start_day": 300,
+        "lambda_ew": 5292.96813347127,
+        "lambda_ns": 4251.919774858941,
+        "ratio": 1.2448419569832703
+      },
+      {
+        "window_start_day": 330,
+        "lambda_ew": 2942.262421685853,
+        "lambda_ns": 3207.849367831754,
+        "ratio": 0.917207164148915
+      },
+      {
+        "window_start_day": 360,
+        "lambda_ew": 4308.032610710498,
+        "lambda_ns": 3487.48393124832,
+        "ratio": 1.2352838595498472
+      }
+    ],
+    "window_ratio_mean": 1.0232544165556121,
+    "window_ratio_median": 0.9185883696618286,
+    "n_days": 366,
+    "n_pair_days": 2206598,
+    "n_ew": 628153,
+    "n_ns": 426530,
+    "method": "Paper 2 geometry (azimuth sector x log distance bins x decay fit to bin means) applied to the Step 53 phase-cos observable",
+    "lambda_ew_km": 4391.958781676661,
+    "lambda_ns_km": 4628.0998668882585,
+    "lambda_ew_exponential_km": 4391.958781676661,
+    "lambda_ns_exponential_km": 4516.262233107781,
+    "ratio_best_model": 0.9489766660177172,
+    "ratio_exponential": 0.9724764761178221,
+    "ratio_ci95_day_clustered": [
+      0.8321974776569891,
+      1.101804018577026
+    ],
+    "ratio_exponential_ci95_day_clustered": [
+      0.8137294912278547,
+      1.1293682831175704
+    ],
+    "azimuth_shuffle_z": -0.538714716505923,
+    "azimuth_shuffle_mean": 0.998872292778937,
+    "paper2_reported_ratio": 2.16,
+    "ew_exceeds_ns": false,
+    "primary_statistic": "ratio_exponential (Paper 2 fits an exponential decay)",
+    "ew_exceeds_ns_exponential": false,
+    "consistent_with_paper2": false,
+    "matches_paper2_magnitude": false
+  }
+}

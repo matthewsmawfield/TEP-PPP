@@ -1,0 +1,270 @@
+{
+  "generated": "2026-09-07T20:15:11Z",
+  "stations": [
+    "AMEL",
+    "APEL",
+    "ARDL",
+    "BNA1",
+    "BORS",
+    "BRGN",
+    "CBW1",
+    "DELF",
+    "DELZ",
+    "DHEL",
+    "EASN",
+    "EIJS",
+    "EPL1",
+    "FLRS",
+    "FRNS",
+    "FUN1",
+    "GAIA",
+    "HARL",
+    "HHO2",
+    "HKNO",
+    "HKWA",
+    "HKZU",
+    "HOOB",
+    "IGP0",
+    "IJMU",
+    "KOS1",
+    "LAGO",
+    "LEED",
+    "LEEK",
+    "LEIR",
+    "LINO",
+    "PDEL",
+    "SCHI",
+    "SKEE",
+    "SWAN",
+    "TAVI",
+    "TEDD",
+    "TERC",
+    "TERS",
+    "TXE2",
+    "VLIE",
+    "VLIS",
+    "WSRA",
+    "WSRT"
+  ],
+  "n_stations": 44,
+  "span_h": 6.48,
+  "baseline_km": [
+    10.5,
+    3249.2
+  ],
+  "n_clusters": 4,
+  "results": [
+    {
+      "horizon_s": 900,
+      "lambda_km": 250,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 11,
+      "n_stations": 44,
+      "base_rms_m": 1.9535,
+      "tep_rms_m": 1.3127,
+      "gain_pct": 32.8,
+      "gain_ci": [
+        28.4,
+        36.65
+      ],
+      "global_null_pct": 4.79,
+      "within_cluster_null_pct": 17.62,
+      "geometry_vs_within_cluster_pct": 18.44,
+      "geometry_ci": [
+        14.5,
+        22.61
+      ],
+      "beats_within_cluster_draws": "20/20",
+      "common_mode_removed_pct": 24.88,
+      "common_mode_ci": [
+        19.42,
+        29.12
+      ],
+      "reportable": true
+    },
+    {
+      "horizon_s": 900,
+      "lambda_km": 500,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 11,
+      "n_stations": 44,
+      "base_rms_m": 1.9535,
+      "tep_rms_m": 1.3386,
+      "gain_pct": 31.48,
+      "gain_ci": [
+        27.29,
+        34.73
+      ],
+      "global_null_pct": 6.27,
+      "within_cluster_null_pct": 19.03,
+      "geometry_vs_within_cluster_pct": 15.38,
+      "geometry_ci": [
+        12.41,
+        18.8
+      ],
+      "beats_within_cluster_draws": "20/20",
+      "common_mode_removed_pct": 23.41,
+      "common_mode_ci": [
+        18.52,
+        27.01
+      ],
+      "reportable": true
+    },
+    {
+      "horizon_s": 1800,
+      "lambda_km": 250,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 6,
+      "n_stations": 44,
+      "base_rms_m": 2.2204,
+      "tep_rms_m": 1.3907,
+      "gain_pct": 37.37,
+      "gain_ci": [
+        33.7,
+        41.43
+      ],
+      "global_null_pct": 5.63,
+      "within_cluster_null_pct": 20.69,
+      "geometry_vs_within_cluster_pct": 21.04,
+      "geometry_ci": [
+        16.34,
+        26.37
+      ],
+      "beats_within_cluster_draws": "20/20",
+      "common_mode_removed_pct": 28.99,
+      "common_mode_ci": [
+        24.11,
+        32.25
+      ],
+      "reportable": true
+    },
+    {
+      "horizon_s": 1800,
+      "lambda_km": 500,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 6,
+      "n_stations": 44,
+      "base_rms_m": 2.2204,
+      "tep_rms_m": 1.4094,
+      "gain_pct": 36.52,
+      "gain_ci": [
+        32.71,
+        40.48
+      ],
+      "global_null_pct": 7.2,
+      "within_cluster_null_pct": 22.31,
+      "geometry_vs_within_cluster_pct": 18.3,
+      "geometry_ci": [
+        13.43,
+        23.76
+      ],
+      "beats_within_cluster_draws": "20/20",
+      "common_mode_removed_pct": 28.06,
+      "common_mode_ci": [
+        23.34,
+        31.12
+      ],
+      "reportable": true
+    },
+    {
+      "horizon_s": 3600,
+      "lambda_km": 1000,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 3,
+      "n_stations": 44,
+      "base_rms_m": 2.6084,
+      "tep_rms_m": 1.7707,
+      "gain_pct": 32.11,
+      "gain_ci": [
+        16.0,
+        34.91
+      ],
+      "global_null_pct": 7.9,
+      "within_cluster_null_pct": 17.4,
+      "geometry_vs_within_cluster_pct": 17.82,
+      "geometry_ci": [
+        9.23,
+        22.63
+      ],
+      "beats_within_cluster_draws": "20/20",
+      "common_mode_removed_pct": 24.22,
+      "common_mode_ci": [
+        15.68,
+        27.47
+      ],
+      "reportable": false
+    }
+  ],
+  "spatial_null": [
+    {
+      "horizon_s": 900,
+      "lambda_km": 250,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 11,
+      "n_stations": 44,
+      "base_rms_m": 2.2592,
+      "tep_rms_m": 2.3804,
+      "gain_pct": -5.36,
+      "gain_ci": [
+        -7.29,
+        -3.47
+      ],
+      "global_null_pct": -6.05,
+      "within_cluster_null_pct": -5.07,
+      "geometry_vs_within_cluster_pct": -0.28,
+      "geometry_ci": [
+        -1.38,
+        0.89
+      ],
+      "beats_within_cluster_draws": "7/20",
+      "common_mode_removed_pct": -4.09,
+      "common_mode_ci": [
+        -5.93,
+        -2.17
+      ],
+      "reportable": true
+    },
+    {
+      "horizon_s": 1800,
+      "lambda_km": 250,
+      "nugget": 0.7,
+      "n_cases": 3960,
+      "n_blocks": 6,
+      "n_stations": 44,
+      "base_rms_m": 3.1661,
+      "tep_rms_m": 3.3349,
+      "gain_pct": -5.33,
+      "gain_ci": [
+        -7.55,
+        -2.91
+      ],
+      "global_null_pct": -5.97,
+      "within_cluster_null_pct": -4.8,
+      "geometry_vs_within_cluster_pct": -0.5,
+      "geometry_ci": [
+        -1.48,
+        0.81
+      ],
+      "beats_within_cluster_draws": "6/20",
+      "common_mode_removed_pct": -4.02,
+      "common_mode_ci": [
+        -6.48,
+        -1.55
+      ],
+      "reportable": true
+    }
+  ],
+  "spatial_null_clean": true,
+  "reportable_horizons_s": [
+    900,
+    1800
+  ],
+  "verdict": "PASS",
+  "criterion": "PASS requires: >=4 h capture; >=2 DISTINCT horizons reportable, each with >=5 independent time blocks; every reportable cell's within-cluster geometry CI and common-mode-removed CI excluding zero; and an amplitude-matched spatially-independent null that does NOT reproduce the geometry contribution"
+}

@@ -1,0 +1,1060 @@
+{
+  "step": 80,
+  "title": "Clock-field fingerprint localisation replay",
+  "timestamp": "2026-09-04T00:21:38.728962+00:00",
+  "fixed_lambda_km": 4201.0,
+  "target_coordinates_used_by_estimator": false,
+  "target_coordinates_used_for_scoring_and_null_only": true,
+  "clock_metadata_audit": "results/outputs/step_82_clock_metadata_audit.json",
+  "source_observable": "internal-minus-external-atomic phase-cos fingerprint vs global reference clocks",
+  "sites": {
+    "MAT1-MATE": {
+      "n_reference_stations": 317,
+      "primary_free_atomic_anchor": true,
+      "receiver_model_matched_through_2024": true,
+      "internal_oscillator_material_confirmed": false,
+      "fits": {
+        "exponential": {
+          "estimated_lat_deg": 41.70000000000004,
+          "estimated_lon_deg": 30.800000000000068,
+          "true_lat_deg": 40.649135020465955,
+          "true_lon_deg": 16.704464788628574,
+          "surface_error_km": 1184.1883945412685,
+          "best_signed_correlation": 0.3159268608160183,
+          "truth_signed_correlation": 0.293514721155489,
+          "truth_score_percentile_among_global_grid": 0.9883895131086142,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 1119.1985899365352,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.00998003992015968,
+            "median_localisation_error_km": 9197.606679347893
+          }
+        },
+        "gaussian": {
+          "estimated_lat_deg": 41.60000000000004,
+          "estimated_lon_deg": 38.400000000000034,
+          "true_lat_deg": 40.649135020465955,
+          "true_lon_deg": 16.704464788628574,
+          "surface_error_km": 1815.5230514994819,
+          "best_signed_correlation": 0.30607731955255213,
+          "truth_signed_correlation": 0.2871739966531119,
+          "truth_score_percentile_among_global_grid": 0.9816479400749064,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 1780.0071932066319,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.017964071856287425,
+            "median_localisation_error_km": 9459.989037468938
+          }
+        }
+      },
+      "multimode_fits": {
+        "exponential": {
+          "all_modes": {
+            "estimated_lat_deg": 39.70000000000004,
+            "estimated_lon_deg": 20.500000000000057,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 339.2732735805356,
+            "best_signed_correlation": 0.43669926312002905,
+            "truth_signed_correlation": 0.43311219641836435,
+            "truth_score_percentile_among_global_grid": 0.999438202247191,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 288.5293133859362,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.003992015968063872,
+              "median_localisation_error_km": 9078.160594404999
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 39.30000000000003,
+            "estimated_lon_deg": 20.400000000000034,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 348.77082737738766,
+            "best_signed_correlation": 0.4274949095140899,
+            "truth_signed_correlation": 0.42380532339187404,
+            "truth_score_percentile_among_global_grid": 0.9992509363295881,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 288.5293133859362,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.001996007984031936,
+              "median_localisation_error_km": 9692.578798317529
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 40.00000000000004,
+            "estimated_lon_deg": 20.500000000000057,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 329.7300607365341,
+            "best_signed_correlation": 0.4371053460054605,
+            "truth_signed_correlation": 0.43364159306993283,
+            "truth_score_percentile_among_global_grid": 0.9995630461922597,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 288.5293133859362,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.001996007984031936,
+              "median_localisation_error_km": 8797.386903976902
+            }
+          },
+          "odd_even_estimate_separation_km": 78.30587269664942
+        },
+        "gaussian": {
+          "all_modes": {
+            "estimated_lat_deg": 34.70000000000005,
+            "estimated_lon_deg": 19.80000000000004,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 715.283378840222,
+            "best_signed_correlation": 0.37814427287210367,
+            "truth_signed_correlation": 0.37521775158889353,
+            "truth_score_percentile_among_global_grid": 0.9976279650436953,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 794.5339430141868,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.007984031936127744,
+              "median_localisation_error_km": 8804.010609779234
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 34.40000000000005,
+            "estimated_lon_deg": 19.80000000000004,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 746.4305193733051,
+            "best_signed_correlation": 0.37210794639787104,
+            "truth_signed_correlation": 0.3689921430533516,
+            "truth_score_percentile_among_global_grid": 0.9975031210986267,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 794.5339430141868,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.005988023952095809,
+              "median_localisation_error_km": 9001.315094025475
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 34.900000000000055,
+            "estimated_lon_deg": 19.80000000000004,
+            "true_lat_deg": 40.649135020465955,
+            "true_lon_deg": 16.704464788628574,
+            "surface_error_km": 694.6322113431513,
+            "best_signed_correlation": 0.37644752730136194,
+            "truth_signed_correlation": 0.3737715689743687,
+            "truth_score_percentile_among_global_grid": 0.9978776529338327,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 794.5339430141868,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.001996007984031936,
+              "median_localisation_error_km": 9205.417845647386
+            }
+          },
+          "odd_even_estimate_separation_km": 55.597463322280156
+        }
+      },
+      "temporal_half_multimode_exponential": {
+        "first_half": {
+          "estimated_lat_deg": 41.00000000000006,
+          "estimated_lon_deg": 20.900000000000034,
+          "true_lat_deg": 40.649135020465955,
+          "true_lon_deg": 16.704464788628574,
+          "surface_error_km": 355.1382824866278,
+          "best_signed_correlation": 0.3940149061938095,
+          "truth_signed_correlation": 0.38749518960220986,
+          "truth_score_percentile_among_global_grid": 0.9992509363295881,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 454.61590234196797,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.003992015968063872,
+            "median_localisation_error_km": 9040.52347264348
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        },
+        "second_half": {
+          "estimated_lat_deg": 37.80000000000004,
+          "estimated_lon_deg": 17.69999999999999,
+          "true_lat_deg": 40.649135020465955,
+          "true_lon_deg": 16.704464788628574,
+          "surface_error_km": 328.20344008680763,
+          "best_signed_correlation": 0.44522596018997557,
+          "truth_signed_correlation": 0.4419523261966602,
+          "truth_score_percentile_among_global_grid": 0.998689138576779,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 314.93370080869886,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.001996007984031936,
+            "median_localisation_error_km": 9165.585834250025
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        }
+      }
+    },
+    "HERT-HERS": {
+      "n_reference_stations": 317,
+      "primary_free_atomic_anchor": false,
+      "receiver_model_matched_through_2024": false,
+      "internal_oscillator_material_confirmed": false,
+      "fits": {
+        "exponential": {
+          "estimated_lat_deg": -51.099999999999945,
+          "estimated_lon_deg": 13.299999999999983,
+          "true_lat_deg": 50.867316683309376,
+          "true_lon_deg": 0.3362761410396015,
+          "surface_error_km": 11404.106532612406,
+          "best_signed_correlation": 0.21882388855977053,
+          "truth_signed_correlation": -0.00042333709327052604,
+          "truth_score_percentile_among_global_grid": 0.5684769038701623,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 11510.281726242432,
+            "p_best_score_ge_observed": 0.007984031936127744,
+            "p_localisation_error_le_observed": 0.6726546906187625,
+            "median_localisation_error_km": 8968.52422673309
+          }
+        },
+        "gaussian": {
+          "estimated_lat_deg": -50.79999999999997,
+          "estimated_lon_deg": 15.299999999999983,
+          "true_lat_deg": 50.867316683309376,
+          "true_lon_deg": 0.3362761410396015,
+          "surface_error_km": 11393.013294334818,
+          "best_signed_correlation": 0.23134392423375216,
+          "truth_signed_correlation": -0.020724816945349313,
+          "truth_score_percentile_among_global_grid": 0.468039950062422,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 11313.817796740661,
+            "p_best_score_ge_observed": 0.005988023952095809,
+            "p_localisation_error_le_observed": 0.626746506986028,
+            "median_localisation_error_km": 9457.546418268143
+          }
+        }
+      },
+      "multimode_fits": {
+        "exponential": {
+          "all_modes": {
+            "estimated_lat_deg": 41.90000000000004,
+            "estimated_lon_deg": 12.5,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 1362.131439431034,
+            "best_signed_correlation": 0.30144881527999023,
+            "truth_signed_correlation": 0.25347766957455553,
+            "truth_score_percentile_among_global_grid": 0.9737203495630462,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1327.7125500193722,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.029940119760479042,
+              "median_localisation_error_km": 9279.66643018634
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 47.80000000000004,
+            "estimated_lon_deg": 19.19999999999999,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 1404.5231909632932,
+            "best_signed_correlation": 0.161789673883081,
+            "truth_signed_correlation": 0.12592399897744466,
+            "truth_score_percentile_among_global_grid": 0.9660424469413234,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1313.0098626102542,
+              "p_best_score_ge_observed": 0.10179640718562874,
+              "p_localisation_error_le_observed": 0.01996007984031936,
+              "median_localisation_error_km": 9191.952658925235
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 40.30000000000005,
+            "estimated_lon_deg": 9.899999999999977,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 1388.3385704290868,
+            "best_signed_correlation": 0.33205503054758073,
+            "truth_signed_correlation": 0.2824208802337128,
+            "truth_score_percentile_among_global_grid": 0.9748439450686641,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1421.6643518392725,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.033932135728542916,
+              "median_localisation_error_km": 9476.040700757374
+            }
+          },
+          "odd_even_estimate_separation_km": 1115.4918270974679
+        },
+        "gaussian": {
+          "all_modes": {
+            "estimated_lat_deg": 21.300000000000033,
+            "estimated_lon_deg": 14.799999999999983,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 3520.8868663039075,
+            "best_signed_correlation": 0.278030483144817,
+            "truth_signed_correlation": 0.22818604681584143,
+            "truth_score_percentile_among_global_grid": 0.9484394506866417,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 3485.916064866763,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.06387225548902195,
+              "median_localisation_error_km": 9217.823624413228
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 32.900000000000055,
+            "estimated_lon_deg": 39.30000000000007,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 3731.170877685557,
+            "best_signed_correlation": 0.14046529736915025,
+            "truth_signed_correlation": 0.1047404199435162,
+            "truth_score_percentile_among_global_grid": 0.9073657927590512,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 3715.20453451196,
+              "p_best_score_ge_observed": 0.15169660678642716,
+              "p_localisation_error_le_observed": 0.05588822355289421,
+              "median_localisation_error_km": 9412.778045473591
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 21.00000000000003,
+            "estimated_lon_deg": 11.799999999999983,
+            "true_lat_deg": 50.867316683309376,
+            "true_lon_deg": 0.3362761410396015,
+            "surface_error_km": 3468.5117576358357,
+            "best_signed_correlation": 0.3116955042831517,
+            "truth_signed_correlation": 0.2630565168223809,
+            "truth_score_percentile_among_global_grid": 0.9588639200998752,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 3365.902791814746,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.05189620758483034,
+              "median_localisation_error_km": 9347.403774665672
+            }
+          },
+          "odd_even_estimate_separation_km": 3017.165894724259
+        }
+      },
+      "temporal_half_multimode_exponential": {
+        "first_half": {
+          "estimated_lat_deg": 11.69999999999999,
+          "estimated_lon_deg": 15.399999999999977,
+          "true_lat_deg": 50.867316683309376,
+          "true_lon_deg": 0.3362761410396015,
+          "surface_error_km": 4565.213081800765,
+          "best_signed_correlation": 0.21038827839438656,
+          "truth_signed_correlation": 0.14312780883251325,
+          "truth_score_percentile_among_global_grid": 0.9108614232209737,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 4549.6040871064815,
+            "p_best_score_ge_observed": 0.011976047904191617,
+            "p_localisation_error_le_observed": 0.1377245508982036,
+            "median_localisation_error_km": 8968.52422673309
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        },
+        "second_half": {
+          "estimated_lat_deg": 43.400000000000034,
+          "estimated_lon_deg": 6.699999999999989,
+          "true_lat_deg": 50.867316683309376,
+          "true_lon_deg": 0.3362761410396015,
+          "surface_error_km": 958.9441576447607,
+          "best_signed_correlation": 0.30411300043130585,
+          "truth_signed_correlation": 0.2693738472624328,
+          "truth_score_percentile_among_global_grid": 0.9895755305867665,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 873.7928488216413,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.005988023952095809,
+            "median_localisation_error_km": 8929.079393811584
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        }
+      }
+    },
+    "WUH2-WUHN": {
+      "n_reference_stations": 317,
+      "primary_free_atomic_anchor": false,
+      "receiver_model_matched_through_2024": false,
+      "internal_oscillator_material_confirmed": false,
+      "fits": {
+        "exponential": {
+          "estimated_lat_deg": -32.19999999999996,
+          "estimated_lon_deg": 159.99999999999983,
+          "true_lat_deg": 30.5316507364414,
+          "true_lon_deg": 114.357268985962,
+          "surface_error_km": 8470.881565156797,
+          "best_signed_correlation": 0.23319221647502464,
+          "truth_signed_correlation": 0.09228705919175431,
+          "truth_score_percentile_among_global_grid": 0.8149812734082397,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 8453.691258264778,
+            "p_best_score_ge_observed": 0.003992015968063872,
+            "p_localisation_error_le_observed": 0.37924151696606784,
+            "median_localisation_error_km": 9932.446343064345
+          }
+        },
+        "gaussian": {
+          "estimated_lat_deg": -12.500000000000009,
+          "estimated_lon_deg": 161.19999999999987,
+          "true_lat_deg": 30.5316507364414,
+          "true_lon_deg": 114.357268985962,
+          "surface_error_km": 6924.541855928047,
+          "best_signed_correlation": 0.24696462144201076,
+          "truth_signed_correlation": 0.09283910187486907,
+          "truth_score_percentile_among_global_grid": 0.8102372034956304,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 6947.653731053731,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.29141716566866266,
+            "median_localisation_error_km": 9596.626661054546
+          }
+        }
+      },
+      "multimode_fits": {
+        "exponential": {
+          "all_modes": {
+            "estimated_lat_deg": 31.800000000000068,
+            "estimated_lon_deg": 130.5999999999999,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 1550.4069277355509,
+            "best_signed_correlation": 0.12883686171352352,
+            "truth_signed_correlation": 0.11678091866215462,
+            "truth_score_percentile_among_global_grid": 0.9700374531835206,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1693.6917151491452,
+              "p_best_score_ge_observed": 0.27944111776447106,
+              "p_localisation_error_le_observed": 0.021956087824351298,
+              "median_localisation_error_km": 9964.823775987845
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 27.500000000000064,
+            "estimated_lon_deg": 28.900000000000063,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 8099.127715190427,
+            "best_signed_correlation": 0.15786003227876166,
+            "truth_signed_correlation": 0.06085463490522021,
+            "truth_score_percentile_among_global_grid": 0.7944444444444444,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 8253.274635485126,
+              "p_best_score_ge_observed": 0.08982035928143713,
+              "p_localisation_error_le_observed": 0.3712574850299401,
+              "median_localisation_error_km": 9704.019525282016
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 24.000000000000043,
+            "estimated_lon_deg": 133.4999999999999,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 2023.2127893164122,
+            "best_signed_correlation": 0.14390825407618335,
+            "truth_signed_correlation": 0.12532270351440455,
+            "truth_score_percentile_among_global_grid": 0.983832709113608,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 2069.228233708029,
+              "p_best_score_ge_observed": 0.15768463073852296,
+              "p_localisation_error_le_observed": 0.041916167664670656,
+              "median_localisation_error_km": 9930.948546751755
+            }
+          },
+          "odd_even_estimate_separation_km": 10112.338016902273
+        },
+        "gaussian": {
+          "all_modes": {
+            "estimated_lat_deg": 4.3000000000000025,
+            "estimated_lon_deg": 29.200000000000045,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 9301.456708675683,
+            "best_signed_correlation": 0.12551863499809351,
+            "truth_signed_correlation": 0.117043448669578,
+            "truth_score_percentile_among_global_grid": 0.980649188514357,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 9433.187055348671,
+              "p_best_score_ge_observed": 0.2435129740518962,
+              "p_localisation_error_le_observed": 0.4411177644710579,
+              "median_localisation_error_km": 10430.321113360205
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 15.499999999999991,
+            "estimated_lon_deg": 31.50000000000003,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 8470.208545576093,
+            "best_signed_correlation": 0.15611308805308388,
+            "truth_signed_correlation": 0.05782684725471346,
+            "truth_score_percentile_among_global_grid": 0.7850187265917603,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 8396.759443449546,
+              "p_best_score_ge_observed": 0.08582834331337326,
+              "p_localisation_error_le_observed": 0.37924151696606784,
+              "median_localisation_error_km": 10380.977468109664
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 15.199999999999992,
+            "estimated_lon_deg": 118.99999999999989,
+            "true_lat_deg": 30.5316507364414,
+            "true_lon_deg": 114.357268985962,
+            "surface_error_km": 1769.3290050231562,
+            "best_signed_correlation": 0.13964493067548892,
+            "truth_signed_correlation": 0.1287450301516087,
+            "truth_score_percentile_among_global_grid": 0.984956304619226,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1714.7594687371482,
+              "p_best_score_ge_observed": 0.15768463073852296,
+              "p_localisation_error_le_observed": 0.015968063872255488,
+              "median_localisation_error_km": 9493.910305203004
+            }
+          },
+          "odd_even_estimate_separation_km": 9301.27704781619
+        }
+      },
+      "temporal_half_multimode_exponential": {
+        "first_half": {
+          "estimated_lat_deg": 31.80000000000004,
+          "estimated_lon_deg": 130.69999999999993,
+          "true_lat_deg": 30.5316507364414,
+          "true_lon_deg": 114.357268985962,
+          "surface_error_km": 1559.8560677904773,
+          "best_signed_correlation": 0.11741098356727243,
+          "truth_signed_correlation": 0.09980897811745497,
+          "truth_score_percentile_among_global_grid": 0.9531835205992509,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 1682.9153556268664,
+            "p_best_score_ge_observed": 0.3972055888223553,
+            "p_localisation_error_le_observed": 0.023952095808383235,
+            "median_localisation_error_km": 9253.538583954793
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        },
+        "second_half": {
+          "estimated_lat_deg": 4.700000000000003,
+          "estimated_lon_deg": 22.500000000000057,
+          "true_lat_deg": 30.5316507364414,
+          "true_lon_deg": 114.357268985962,
+          "surface_error_km": 9919.597365161604,
+          "best_signed_correlation": 0.17424257141314542,
+          "truth_signed_correlation": 0.0494510856789033,
+          "truth_score_percentile_among_global_grid": 0.735705368289638,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 10006.932529091157,
+            "p_best_score_ge_observed": 0.06387225548902195,
+            "p_localisation_error_le_observed": 0.5029940119760479,
+            "median_localisation_error_km": 9988.69977204642
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        }
+      }
+    },
+    "STR2-STR1": {
+      "n_reference_stations": 317,
+      "primary_free_atomic_anchor": true,
+      "receiver_model_matched_through_2024": false,
+      "internal_oscillator_material_confirmed": false,
+      "fits": {
+        "exponential": {
+          "estimated_lat_deg": 74.69999999999979,
+          "estimated_lon_deg": 113.99999999999983,
+          "true_lat_deg": -35.315523648970775,
+          "true_lon_deg": 149.01005639133504,
+          "surface_error_km": 12499.449432546115,
+          "best_signed_correlation": 0.24547220179808726,
+          "truth_signed_correlation": -0.2071741513475726,
+          "truth_score_percentile_among_global_grid": 0.2548689138576779,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 12432.280992856113,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.6586826347305389,
+            "median_localisation_error_km": 10426.3791822499
+          }
+        },
+        "gaussian": {
+          "estimated_lat_deg": 75.19999999999987,
+          "estimated_lon_deg": 94.49999999999977,
+          "true_lat_deg": -35.315523648970775,
+          "true_lon_deg": 149.01005639133504,
+          "surface_error_km": 12895.192474456731,
+          "best_signed_correlation": 0.24354975046618252,
+          "truth_signed_correlation": -0.19236511636285233,
+          "truth_score_percentile_among_global_grid": 0.2745318352059925,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 12964.975900057249,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.7305389221556886,
+            "median_localisation_error_km": 10374.300740578477
+          }
+        }
+      },
+      "multimode_fits": {
+        "exponential": {
+          "all_modes": {
+            "estimated_lat_deg": 67.79999999999984,
+            "estimated_lon_deg": -127.90000000000018,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 13329.664002633863,
+            "best_signed_correlation": 0.19457800509351636,
+            "truth_signed_correlation": -0.11425558447120482,
+            "truth_score_percentile_among_global_grid": 0.28863920099875157,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 13333.68462703265,
+              "p_best_score_ge_observed": 0.011976047904191617,
+              "p_localisation_error_le_observed": 0.7245508982035929,
+              "median_localisation_error_km": 10240.3371778461
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 70.29999999999981,
+            "estimated_lon_deg": -30.69999999999996,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 16124.951379403388,
+            "best_signed_correlation": 0.22932511810574124,
+            "truth_signed_correlation": -0.1021244938538638,
+            "truth_score_percentile_among_global_grid": 0.34662921348314607,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 16157.88266001568,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.9221556886227545,
+              "median_localisation_error_km": 10204.025297029239
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": 2.6999999999999993,
+            "estimated_lon_deg": -75.20000000000022,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 14199.112857342236,
+            "best_signed_correlation": 0.24572239281871633,
+            "truth_signed_correlation": -0.048291743853726886,
+            "truth_score_percentile_among_global_grid": 0.3752808988764045,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 14081.109776841358,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.7524950099800399,
+              "median_localisation_error_km": 10587.432690277605
+            }
+          },
+          "odd_even_estimate_separation_km": 8169.501716666394
+        },
+        "gaussian": {
+          "all_modes": {
+            "estimated_lat_deg": 68.19999999999982,
+            "estimated_lon_deg": -135.90000000000018,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 13044.012615910691,
+            "best_signed_correlation": 0.1914563561320653,
+            "truth_signed_correlation": -0.1079874527792878,
+            "truth_score_percentile_among_global_grid": 0.29756554307116106,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 13030.05288374696,
+              "p_best_score_ge_observed": 0.011976047904191617,
+              "p_localisation_error_le_observed": 0.7005988023952096,
+              "median_localisation_error_km": 10484.326072572554
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": 81.29999999999987,
+            "estimated_lon_deg": -34.599999999999966,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 14899.676963148104,
+            "best_signed_correlation": 0.23293557852686667,
+            "truth_signed_correlation": -0.08311890068498423,
+            "truth_score_percentile_among_global_grid": 0.3710362047440699,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 14822.638081225636,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.8223552894211577,
+              "median_localisation_error_km": 10682.33804198293
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": -2.6000000000000085,
+            "estimated_lon_deg": -81.90000000000018,
+            "true_lat_deg": -35.315523648970775,
+            "true_lon_deg": 149.01005639133504,
+            "surface_error_km": 13253.673564103732,
+            "best_signed_correlation": 0.24617598023428666,
+            "truth_signed_correlation": -0.061131105403124934,
+            "truth_score_percentile_among_global_grid": 0.3315230961298377,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 13291.38990790234,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.7485029940119761,
+              "median_localisation_error_km": 9914.454824411658
+            }
+          },
+          "odd_even_estimate_separation_km": 9640.16410742618
+        }
+      },
+      "temporal_half_multimode_exponential": {
+        "first_half": {
+          "estimated_lat_deg": 55.30000000000003,
+          "estimated_lon_deg": -117.10000000000022,
+          "true_lat_deg": -35.315523648970775,
+          "true_lon_deg": 149.01005639133504,
+          "surface_error_km": 13393.36188400833,
+          "best_signed_correlation": 0.21742803648658898,
+          "truth_signed_correlation": -0.1305540774545259,
+          "truth_score_percentile_among_global_grid": 0.22690387016229713,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 13365.847455969279,
+            "p_best_score_ge_observed": 0.005988023952095809,
+            "p_localisation_error_le_observed": 0.6986027944111777,
+            "median_localisation_error_km": 10894.82209260299
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        },
+        "second_half": {
+          "estimated_lat_deg": 16.599999999999987,
+          "estimated_lon_deg": 107.99999999999983,
+          "true_lat_deg": -35.315523648970775,
+          "true_lon_deg": 149.01005639133504,
+          "surface_error_km": 7211.465490430422,
+          "best_signed_correlation": 0.14170723136799834,
+          "truth_signed_correlation": -0.038661273299254166,
+          "truth_score_percentile_among_global_grid": 0.36398252184769037,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 7157.729019600886,
+            "p_best_score_ge_observed": 0.19760479041916168,
+            "p_localisation_error_le_observed": 0.21157684630738524,
+            "median_localisation_error_km": 10766.253656848174
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        }
+      }
+    },
+    "THTI-THTG": {
+      "n_reference_stations": 317,
+      "primary_free_atomic_anchor": true,
+      "receiver_model_matched_through_2024": false,
+      "internal_oscillator_material_confirmed": false,
+      "fits": {
+        "exponential": {
+          "estimated_lat_deg": -23.099999999999945,
+          "estimated_lon_deg": -167.6000000000002,
+          "true_lat_deg": -17.57705655855502,
+          "true_lon_deg": -149.6064460328617,
+          "surface_error_km": 1972.141495510204,
+          "best_signed_correlation": 0.2496408743638773,
+          "truth_signed_correlation": 0.2028128709126919,
+          "truth_score_percentile_among_global_grid": 0.9486891385767791,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 2038.8181199353835,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.027944111776447105,
+            "median_localisation_error_km": 10294.132016022111
+          }
+        },
+        "gaussian": {
+          "estimated_lat_deg": -32.39999999999996,
+          "estimated_lon_deg": -162.60000000000014,
+          "true_lat_deg": -17.57705655855502,
+          "true_lon_deg": -149.6064460328617,
+          "surface_error_km": 2101.0668424740693,
+          "best_signed_correlation": 0.27645815180029276,
+          "truth_signed_correlation": 0.23640148675831396,
+          "truth_score_percentile_among_global_grid": 0.970848938826467,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 2030.4360958197647,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.02594810379241517,
+            "median_localisation_error_km": 10639.340754608535
+          }
+        }
+      },
+      "multimode_fits": {
+        "exponential": {
+          "all_modes": {
+            "estimated_lat_deg": -21.699999999999953,
+            "estimated_lon_deg": -155.20000000000022,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 743.7053853800679,
+            "best_signed_correlation": 0.4312509987656167,
+            "truth_signed_correlation": 0.4230112642045709,
+            "truth_score_percentile_among_global_grid": 0.996816479400749,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 830.0645566060153,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.01996007984031936,
+              "median_localisation_error_km": 10044.364991514369
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": -19.699999999999953,
+            "estimated_lon_deg": -152.10000000000016,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 353.1844604754443,
+            "best_signed_correlation": 0.43223038138665637,
+            "truth_signed_correlation": 0.43041020738722346,
+            "truth_score_percentile_among_global_grid": 0.9995006242197253,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 368.8647626429305,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.001996007984031936,
+              "median_localisation_error_km": 10504.41906655037
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": -22.09999999999996,
+            "estimated_lon_deg": -158.90000000000012,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 1094.0424788581638,
+            "best_signed_correlation": 0.4046702236619545,
+            "truth_signed_correlation": 0.38687794948397985,
+            "truth_score_percentile_among_global_grid": 0.9903870162297128,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1006.1970533628286,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.013972055888223553,
+              "median_localisation_error_km": 10258.369775929736
+            }
+          },
+          "odd_even_estimate_separation_km": 754.9872246880425
+        },
+        "gaussian": {
+          "all_modes": {
+            "estimated_lat_deg": -31.59999999999995,
+            "estimated_lon_deg": -154.00000000000017,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 1620.8265226592305,
+            "best_signed_correlation": 0.4158081421426464,
+            "truth_signed_correlation": 0.3986102911999807,
+            "truth_score_percentile_among_global_grid": 0.9844569288389513,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1663.4396758302255,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.023952095808383235,
+              "median_localisation_error_km": 10794.217431298104
+            }
+          },
+          "even_frequency_bins": {
+            "estimated_lat_deg": -27.799999999999955,
+            "estimated_lon_deg": -152.60000000000014,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 1177.3306574307824,
+            "best_signed_correlation": 0.41389115675027305,
+            "truth_signed_correlation": 0.4024596643033729,
+            "truth_score_percentile_among_global_grid": 0.9930711610486891,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 1184.5608967334397,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.013972055888223553,
+              "median_localisation_error_km": 10489.362297508307
+            }
+          },
+          "odd_frequency_bins": {
+            "estimated_lat_deg": -39.799999999999955,
+            "estimated_lon_deg": -157.4000000000002,
+            "true_lat_deg": -17.57705655855502,
+            "true_lon_deg": -149.6064460328617,
+            "surface_error_km": 2582.653762311154,
+            "best_signed_correlation": 0.3926774499443254,
+            "truth_signed_correlation": 0.36761615130308506,
+            "truth_score_percentile_among_global_grid": 0.9402621722846441,
+            "geometry_null": {
+              "n_permutations": 500,
+              "candidate_grid_step_deg": 2.0,
+              "observed_comparison_error_km": 2620.8812388790725,
+              "p_best_score_ge_observed": 0.001996007984031936,
+              "p_localisation_error_le_observed": 0.0499001996007984,
+              "median_localisation_error_km": 9887.835848889412
+            }
+          },
+          "odd_even_estimate_separation_km": 1405.507222666313
+        }
+      },
+      "temporal_half_multimode_exponential": {
+        "first_half": {
+          "estimated_lat_deg": -17.299999999999947,
+          "estimated_lon_deg": -158.60000000000014,
+          "true_lat_deg": -17.57705655855502,
+          "true_lon_deg": -149.6064460328617,
+          "surface_error_km": 954.4828088909981,
+          "best_signed_correlation": 0.42659040566489337,
+          "truth_signed_correlation": 0.41630997878453585,
+          "truth_score_percentile_among_global_grid": 0.9963171036204744,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 889.8657537658573,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.013972055888223553,
+            "median_localisation_error_km": 10467.358654440839
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        },
+        "second_half": {
+          "estimated_lat_deg": -50.29999999999996,
+          "estimated_lon_deg": 146.69999999999982,
+          "true_lat_deg": -17.57705655855502,
+          "true_lon_deg": -149.6064460328617,
+          "surface_error_km": 6655.374775468736,
+          "best_signed_correlation": 0.29274705997033523,
+          "truth_signed_correlation": 0.19220994549086423,
+          "truth_score_percentile_among_global_grid": 0.8416978776529338,
+          "geometry_null": {
+            "n_permutations": 500,
+            "candidate_grid_step_deg": 2.0,
+            "observed_comparison_error_km": 6699.830360001889,
+            "p_best_score_ge_observed": 0.001996007984031936,
+            "p_localisation_error_le_observed": 0.22355289421157684,
+            "median_localisation_error_km": 10164.48084770155
+          },
+          "n_reference_stations": 317,
+          "independent_time_partition": true
+        }
+      }
+    }
+  },
+  "summary": {
+    "n_sites": 5,
+    "n_primary_free_atomic_anchors": 3,
+    "primary_exponential_error_km": [
+      1184.1883945412685,
+      12499.449432546115,
+      1972.141495510204
+    ],
+    "primary_gaussian_error_km": [
+      1815.5230514994819,
+      12895.192474456731,
+      2101.0668424740693
+    ],
+    "primary_multimode_exponential_error_km": [
+      339.2732735805356,
+      13329.664002633863,
+      743.7053853800679
+    ],
+    "primary_temporal_half_multimode_exponential_error_km": {
+      "first_half": [
+        355.1382824866278,
+        13393.36188400833,
+        954.4828088909981
+      ],
+      "second_half": [
+        328.20344008680763,
+        7211.465490430422,
+        6655.374775468736
+      ]
+    }
+  },
+  "interpretation_boundary": "This is a blinded coordinate inversion of GNSS-derived precise-clock products. It tests clock-field spatial information and algorithmic observability; it is not a live satellite-free navigation demonstration.",
+  "hardware_requirements_for_live_zero_satellite_test": [
+    "co-located free-running atomic and explicitly characterised quartz outputs on the mobile platform",
+    "direct local phase comparison independent of GNSS receiver clock estimation",
+    "three or more independent field modes/gradients, or sequential IMU/barometer constraints",
+    "a separately trained live anchor network and held-out route truth"
+  ]
+}

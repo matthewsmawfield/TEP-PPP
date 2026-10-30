@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEP-PPP Live Skill Observatory — Causal Field Holdover & GNSS Precision Rig</title>
+
+  <!-- External Map & 3D Dependencies -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Bespoke Vanilla CSS Design System -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       APP HEADER: Hardware State & Telemetry Ticker
+       ======================================================================== -->
+  <header class="app-header">
+    <div class="header-brand">
+      <span class="brand-badge">TEP-PPP</span>
+      <div>
+        <h1 class="brand-title">Temporal Equivalence Principle — Live Skill Observatory</h1>
+        <p class="brand-sub">Walk-Forward Causal Clock Field Holdover (4,400+ Multi-Resolution CORS Features) &amp; Centimetre GNSS Rig</p>
+      </div>
+    </div>
+
+    <div class="header-meta mono-nums">
+      <div class="meta-pill">
+        <span class="status-dot" id="status-indicator"></span>
+        <span id="status-text">CONNECTING...</span>
+      </div>
+      <div class="meta-pill">
+        <span>Hardware:</span>
+        <strong id="hdr-hw">LC29H(BS) L1+L5</strong>
+      </div>
+      <div class="meta-pill">
+        <span>Sats:</span>
+        <strong id="hdr-sats">--</strong>
+      </div>
+      <div class="meta-pill">
+        <span>Fix:</span>
+        <strong id="hdr-fix">--</strong>
+      </div>
+      <div class="meta-pill">
+        <span>PDOP:</span>
+        <strong id="hdr-pdop">--</strong>
+      </div>
+      <div class="meta-pill">
+        <span>Pos:</span>
+        <strong id="hdr-lat">--</strong>, <strong id="hdr-lon">--</strong>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-layout">
+
+    <!-- ========================================================================
+         SECTION 0: CAUSAL WALK-FORWARD SKILL BANNER
+         ======================================================================== -->
+    <section class="skill-hero-banner">
+      <div class="skill-banner-left">
+        <span class="skill-banner-pill" id="banner-pill">CAUSAL RRR LIVE</span>
+        <div>
+          <div class="skill-banner-title" id="banner-title">
+            Strictly Causal Out-of-Sample Clock Field Skill — Zero Oracle Leakage
+          </div>
+          <div class="skill-banner-sub mono-nums" id="banner-sub">
+            Loading rolling archive corpus...
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-banner-stats mono-nums">
+        <div class="skill-stat-chip">
+          <span class="skill-stat-label">Corpus Win Rate</span>
+          <span class="skill-stat-val" id="banner-winrate">--</span>
+        </div>
+        <div class="skill-stat-chip">
+          <span class="skill-stat-label">Median Skill Gain</span>
+          <span class="skill-stat-val" id="banner-med-gain">--</span>
+        </div>
+        <div class="skill-stat-chip">
+          <span class="skill-stat-label">90th Pct / Max Gain</span>
+          <span class="skill-stat-val" id="banner-max-gain" style="color: var(--cyan-kriging);">--</span>
+        </div>
+        <div class="skill-stat-chip">
+          <span class="skill-stat-label">Active Ridge Basis</span>
+          <span class="skill-stat-val" id="banner-basis" style="color: var(--purple-astro);">--</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 1: HERO RESULTS SCORECARD (5 Load-Bearing Figures of Merit)
+         ======================================================================== -->
+    <section class="hero-scorecard-grid">
+
+      <!-- Card 1: Deployed Causal Clock Skill Gain (Primary TEP Headline) -->
+      <div class="card-glass kpi-card highlight-emerald">
+        <div class="kpi-top">
+          <span class="kpi-label">Causal Clock Skill Gain (Current 2h Window)</span>
+          <span class="kpi-badge badge-emerald" id="kpi-gain-badge">TEP FIELD SKILL</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val mono-nums" id="kpi-gain-val" style="color: var(--tep-emerald);">--</span>
+        </div>
+        <div class="kpi-footer-sub mono-nums" id="kpi-gain-meta">
+          TEP Deployed: --  ·  Persist: --  ·  Free: --
+        </div>
+      </div>
+
+      <!-- Card 2: Walk-Forward Corpus Record (120+ Windows) -->
+      <div class="card-glass kpi-card highlight-cyan">
+        <div class="kpi-top">
+          <span class="kpi-label">Walk-Forward Corpus Skill (Median / Mean)</span>
+          <span class="kpi-badge badge-cyan" id="kpi-corpus-badge">OUT-OF-SAMPLE</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val mono-nums" id="kpi-corpus-val">--</span>
+        </div>
+        <div class="kpi-footer-sub mono-nums" id="kpi-corpus-meta">
+          Win Rate: --  ·  Max: --  ·  Worst: --
+        </div>
+      </div>
+
+      <!-- Card 3: Timing Holdover vs ITU-T G.8272 (ns) -->
+      <div class="card-glass kpi-card highlight-amber">
+        <div class="kpi-top">
+          <span class="kpi-label">2h Timing Holdover Error (vs ITU-T 100 ns)</span>
+          <span class="kpi-badge badge-emerald" id="kpi-holdover-badge">ITU-T PASS</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val mono-nums" id="kpi-holdover-val">--</span>
+        </div>
+        <div class="kpi-footer-sub mono-nums" id="kpi-holdover-meta">
+          Persist: --  ·  Free Drift: --
+        </div>
+      </div>
+
+      <!-- Card 4: Full-Sky PPP & PPP-AR Converged Accuracy -->
+      <div class="card-glass kpi-card highlight-cyan">
+        <div class="kpi-top">
+          <span class="kpi-label">PPP / PPP-AR Converged 3-D Accuracy</span>
+          <span class="kpi-badge badge-emerald" id="kpi-ppp-badge">CM-LEVEL</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val mono-nums" id="kpi-fullsky-val">--</span>
+          <span class="kpi-unit mono-nums" id="kpi-pppar-prec" style="font-size:12px;"></span>
+        </div>
+        <div class="kpi-footer-sub mono-nums" id="kpi-fullsky-meta">
+          Dual-Band L1+L5 IF  ·  Source: --
+        </div>
+        <div id="kpi-pppar-meta" style="display:none;"></div>
+        <span id="kpi-pppar-badge" style="display:none;"></span>
+      </div>
+
+      <!-- Card 5: Degraded-Sky Outage Position Latch (ZUPT + HUPT + LUPT) -->
+      <div class="card-glass kpi-card highlight-purple">
+        <div class="kpi-top">
+          <span class="kpi-label" id="kpi-degraded-label">Degraded-Sky Outage Hold (LUPT/HUPT)</span>
+          <span class="kpi-badge badge-purple" id="kpi-degraded-badge">CM LATCHED</span>
+        </div>
+        <div class="kpi-value-row">
+          <span class="kpi-main-val mono-nums" id="kpi-degraded-3d">--</span>
+        </div>
+        <div class="kpi-footer-sub mono-nums" id="kpi-degraded-meta">
+          Free: --  ·  Persist: --
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         SECTION 2: PRIMARY SKILL ARENA (122-Window History + 2h Holdout Anatomy)
+         ======================================================================== -->
+    <section class="arena-grid">
+
+      <!-- Panel A: Rolling Walk-Forward Skill Gain & Clock RMSE History -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <div class="arena-title-group">
+            <h2 class="arena-title">Walk-Forward Causal Skill History (All Archived Windows)</h2>
+          </div>
+          <span class="arena-subtitle mono-nums" id="history-subtitle">Click or hover any window to inspect</span>
+        </div>
+
+        <div class="canvas-container" style="height: 360px;">
+          <canvas id="skill-history-canvas"></canvas>
+        </div>
+
+        <div class="arena-legend">
+          <div class="legend-item">
+            <span class="legend-swatch swatch-tep"></span>
+            <strong>Causal RRR Gain % vs Persist (Bars, Left Axis)</strong>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-persist"></span>
+            <span>Persistence Clock RMSE (m, Line)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-cyan"></span>
+            <span>Deployed TEP Clock RMSE (m, Line)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel B: Current 2-Hour Holdout Clock Trajectory & TEP Field Reconstruction -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <div class="arena-title-group">
+            <h2 class="arena-title">2-Hour Holdout Clock Field Reconstruction (Horizon 0 &rarr; 7,080 s)</h2>
+          </div>
+          <span class="arena-subtitle mono-nums" id="holdout-subtitle">Realized Clock Deviation vs Causal TEP Prediction</span>
+        </div>
+
+        <div class="canvas-container" style="height: 360px;">
+          <canvas id="holdout-curve-canvas"></canvas>
+        </div>
+
+        <div class="arena-legend">
+          <div class="legend-item">
+            <span class="legend-swatch swatch-persist"></span>
+            <span>Realized Clock Drift from Persistence (b<sub>ho</sub> &minus; p<sub>pred</sub>)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-cyan"></span>
+            <strong>Causal TEP Field Correction (&minus;dep<sub>m</sub>)</strong>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-tep"></span>
+            <strong>Residual Error After TEP Correction (m)</strong>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: DISTANCE-STRUCTURED FIELD & ROLLING-RIDGE DECOMPOSITION
+         ======================================================================== -->
+    <section class="arena-grid">
+
+      <!-- Panel C: Distance-Structured CORS Network Field Profile (1.6 km to 2,827 km) -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <div class="arena-title-group">
+            <h2 class="arena-title">Distance-Structured CORS Network Field Profile (55 Stations)</h2>
+          </div>
+          <span class="arena-subtitle mono-nums" id="stations-subtitle">Log-Distance vs Station Residual Correlation &amp; Amplitude</span>
+        </div>
+
+        <div class="canvas-container" style="height: 320px;">
+          <canvas id="station-field-canvas"></canvas>
+        </div>
+
+        <div class="arena-legend">
+          <div class="legend-item">
+            <span class="legend-swatch swatch-tep"></span>
+            <strong>Near-Field UK OS Net (1.6 &ndash; 350 km)</strong>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-cyan"></span>
+            <span>Mid-Band EU / AGRS-NL (350 &ndash; 700 km)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-swatch swatch-purple"></span>
+            <span>Far-Arc Iberia / Atlantic RENEP (1,500 &ndash; 2,830 km)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel D: Recent Live Windows Skill Ledger & Ridge Decomposition -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <div class="arena-title-group">
+            <h2 class="arena-title">Live Window-by-Window Skill Ledger (Newest First)</h2>
+          </div>
+          <span class="arena-subtitle mono-nums" id="ledger-subtitle">Comparing Free, Persist, Fixed Stack &amp; Deployed RRR</span>
+        </div>
+
+        <div class="ledger-scroll">
+          <table class="ledger-table mono-nums">
+            <thead>
+              <tr>
+                <th>Window</th>
+                <th>Free (m)</th>
+                <th>Persist (m)</th>
+                <th>TEP Dep (m)</th>
+                <th>Fixed Stack</th>
+                <th>Causal RRR Gain</th>
+                <th>Ridge / Stack RMS</th>
+              </tr>
+            </thead>
+            <tbody id="skill-ledger-body">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: METROLOGY AUDIT & SCIENTIFIC VERIFICATION DECK
+         ======================================================================== -->
+    <section class="audit-grid">
+
+      <!-- Deck Card 1: Rolling-Ridge Refit (RRR) Engine Diagnostics -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <h3 class="arena-title">Rolling-Ridge Refit (RRR) Engine</h3>
+          <span class="kpi-badge badge-purple" id="rrr-status-badge">4,403 FEATS</span>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Active Feature Basis (n_feat)</span>
+          <span class="metric-val" id="rrr-nfeat">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Trailing Gram Window / Half-Life</span>
+          <span class="metric-val" id="rrr-window-hl">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Ridge Regularization (&lambda;) / Cap</span>
+          <span class="metric-val" id="rrr-lam-cap">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Horizon Taper Profile [T0, T1, T2, T3]</span>
+          <span class="metric-val" id="rrr-taper">0, 450, 5400, 8100 s</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Current Window Ridge vs Stack RMS</span>
+          <span class="metric-val" id="rrr-rms-split">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Fixed Causal Stack Gain (Pre-RRR)</span>
+          <span class="metric-val" id="rrr-fixed-gain">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">RRR Net Lift Over Fixed Stack</span>
+          <span class="metric-val" id="rrr-net-lift" style="color: var(--tep-emerald);">--</span>
+        </div>
+      </div>
+
+      <!-- Deck Card 1B: TEP Physics & Falsification Battery -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <h3 class="arena-title">TEP Physics &amp; Falsification Battery</h3>
+          <span class="kpi-badge badge-emerald" id="attr-z-badge">12.78&sigma; GEOMETRY</span>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Station-Permutation Null (N=100)</span>
+          <span class="metric-val" id="attr-perm-null" style="color: var(--tep-emerald);">+26.5% vs -2.7%&plusmn;2.3% (12.8&sigma;)</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Global Common-Mode Removed (CM-Free)</span>
+          <span class="metric-val" id="attr-cm-removed" style="color: var(--cyan-kriging);">+25.8% mean / +28.9% med (97.6% retained)</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Global Common-Mode Alone (CM-Only)</span>
+          <span class="metric-val" id="attr-cm-only">+1.57% mean / +1.56% med</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Beyond-Troposphere (&gt;360 km, 29 CORS)</span>
+          <span class="metric-val" id="attr-gt360" style="color: var(--tep-emerald);">+25.1% mean / +28.5% med</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Far-Arc Iberia/Atlantic (&gt;1,000 km)</span>
+          <span class="metric-val" id="attr-far">+20.7% mean / +22.1% med</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Near-UK (&lt;360 km) / Mid-EU (360-1000 km)</span>
+          <span class="metric-val" id="attr-near-mid">+22.5% / +23.8% mean</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Pure Spatial (sta+wv) vs Sidereal vs Local</span>
+          <span class="metric-val" id="attr-family-split">+26.5% vs +8.1% vs +8.4%</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Unlatched Pos Gain (k=3 3D/Vert &middot; k=4)</span>
+          <span class="metric-val" id="attr-unlatched-pos" style="color: var(--tep-emerald);">+29.6% / +46.7% &middot; +14.0% (+62.9% vs Free)</span>
+        </div>
+      </div>
+
+      <!-- Deck Card 2: Full-Sky Convergence Engine -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <h3 class="arena-title">Full-Sky PPP Precision Engine</h3>
+          <span class="brand-badge" id="fullsky-converged-val">--</span>
+        </div>
+
+        <div class="canvas-container" style="height: 150px; margin-bottom: 12px;">
+          <canvas id="convergence-canvas"></canvas>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Convergence Status</span>
+          <span class="metric-val" id="fullsky-meta">Settling float ambiguities...</span>
+        </div>
+
+        <div class="metric-row mono-nums" id="ppp-ar-row" style="display:none;">
+          <span class="metric-label">PPP-AR (L1/L5 WL+NL)</span>
+          <span class="metric-val" id="ppp-ar-meta">--</span>
+        </div>
+        <div class="metric-row mono-nums" id="ppp-ar-fix-row" style="display:none;">
+          <span class="metric-label">Fixed / Float Epochs</span>
+          <span class="metric-val" id="ppp-ar-fix">--</span>
+        </div>
+        <div class="metric-row mono-nums" id="ppp-ar-rmse-row" style="display:none;">
+          <span class="metric-label">Fixed 3-D RMSE (all epochs)</span>
+          <span class="metric-val" id="ppp-ar-rmse">--</span>
+        </div>
+        <div class="metric-row mono-nums" id="ppp-ar-conv-row" style="display:none;">
+          <span class="metric-label">Fixed Conv. Accuracy (last 5%)</span>
+          <span class="metric-val" id="ppp-ar-conv">--</span>
+        </div>
+        <div class="metric-row mono-nums" id="ppp-ar-prec-row" style="display:none;">
+          <span class="metric-label">Fixed Precision (internal scatter)</span>
+          <span class="metric-val" id="ppp-ar-prec-val">--</span>
+        </div>
+      </div>
+
+      <!-- Deck Card 3: Kriging Network Covariance & Geometry -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <h3 class="arena-title">Network Kriging Field Covariance</h3>
+          <span class="kpi-badge badge-emerald">SPATIAL PRIOR</span>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Target Station Baseline</span>
+          <span class="metric-val" id="kriging-dist">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Spatial Correlation &rho;(d)</span>
+          <span class="metric-val" id="kriging-corr">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Field Residual Variance &sigma;&sup2;<sub>k</sub></span>
+          <span class="metric-val" id="kriging-var">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Common-Mode Removed</span>
+          <span class="metric-val" id="kriging-common-mode">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Network Residual (applied)</span>
+          <span class="metric-val" id="kriging-resid">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Target Station Source</span>
+          <span class="metric-val" id="kriging-target">--</span>
+        </div>
+
+        <div id="multiband-container" style="display:none; margin-top:12px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.06);">
+          <div class="arena-header" style="margin-bottom:6px;">
+            <h4 class="arena-title" style="font-size:0.85em; color:var(--cyan-kriging);">Multi-Band Kriging (Paper 1 &lambda;(f))</h4>
+          </div>
+          <div class="metric-row mono-nums">
+            <span class="metric-label">Multi-band error (LOO target)</span>
+            <span class="metric-val" id="multiband-err">--</span>
+          </div>
+          <div class="metric-row mono-nums" style="font-size:0.85em;">
+            <span class="metric-val" id="multiband-comparison" style="color:var(--text-faint);">--</span>
+          </div>
+          <div id="multiband-bands" style="margin-top:4px; line-height:1.6;"></div>
+        </div>
+      </div>
+
+      <!-- Deck Card 4: Scientific Provenance & Integrity Ledger -->
+      <div class="card-glass">
+        <div class="arena-header">
+          <h3 class="arena-title">Scientific Provenance &amp; Audit</h3>
+          <span class="kpi-badge badge-emerald">ZERO SYNTHESIS</span>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Truth Reference</span>
+          <span class="metric-val" id="prov-truth-ref">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Frequency Combination</span>
+          <span class="metric-val" id="prov-freq-mode">Dual-Band L1+L5 IF</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">PPP Solution Source</span>
+          <span class="metric-val" id="prov-ppp-source">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Kinematic RMSE (cross-check)</span>
+          <span class="metric-val" id="prov-kinematic-rmse">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Network Reference Source</span>
+          <span class="metric-val" id="prov-network-source">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Nearest CORS Station</span>
+          <span class="metric-val" id="prov-nearest-station">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Tropospheric Zenith Delay (ZTD)</span>
+          <span class="metric-val" id="prov-ztd">--</span>
+        </div>
+        <div class="metric-row mono-nums" style="font-size: 11px;">
+          <span class="metric-label">TEP Band Status</span>
+          <span class="metric-val" id="tep-band-status">Resolving...</span>
+        </div>
+      </div>
+
+      <!-- Deck Card 5: RTK Ground-Truth Cross-Check vs OS Net -->
+      <div class="card-glass" id="rtk-card" style="display:none;">
+        <div class="arena-header">
+          <h3 class="arena-title">RTK Ground-Truth Cross-Check</h3>
+          <span class="kpi-badge badge-emerald" id="rtk-badge">OS NET</span>
+        </div>
+
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Reference Station</span>
+          <span class="metric-val" id="rtk-station">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Integer Fixes (Q=1)</span>
+          <span class="metric-val" id="rtk-fixed">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Verified &le;0.5 m of Antenna</span>
+          <span class="metric-val" id="rtk-verified">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">Fix Accuracy (median)</span>
+          <span class="metric-val" id="rtk-accuracy">--</span>
+        </div>
+        <div class="metric-row mono-nums" id="rtk-veto-row" style="display:none;">
+          <span class="metric-label">Consensus Veto (df-float)</span>
+          <span class="metric-val" id="rtk-veto">--</span>
+        </div>
+        <div class="metric-row mono-nums">
+          <span class="metric-label">G+E L1+L2+L5 Float (median)</span>
+          <span class="metric-val" id="rtk-df-float">--</span>
+        </div>
+        <div class="metric-row mono-nums" style="font-size: 11px;">
+          <span class="metric-label">Scored Arc</span>
+          <span class="metric-val" id="rtk-arc">--</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         SECTION 5: CONTEXTUAL TELEMETRY DRAWER (Tabbed)
+         ======================================================================== -->
+    <section class="card-glass">
+      <div class="telemetry-tabs">
+        <button class="tab-btn active" data-target="pane-skyplot">Satellite Constellation Skyplot &amp; SNR</button>
+        <button class="tab-btn" data-target="pane-dispersion">Position Latch &amp; 3-D Outage Trace</button>
+        <button class="tab-btn" data-target="pane-map">Geodetic Trajectory Map</button>
+        <button class="tab-btn" data-target="pane-globe">3-D Orbit Earth Horizon</button>
+      </div>
+
+      <!-- Tab 1: Skyplot -->
+      <div class="telemetry-pane active" id="pane-skyplot">
+        <div class="skyplot-wrapper">
+          <div style="display: flex; justify-content: center;">
+            <canvas id="skyplot-canvas"></canvas>
+          </div>
+          <div class="sat-table-scroll">
+            <table class="sat-table mono-nums">
+              <thead>
+                <tr>
+                  <th>PRN</th>
+                  <th>Elevation</th>
+                  <th>Azimuth</th>
+                  <th>Signal Strength (C/N0)</th>
+                  <th>Tracking</th>
+                </tr>
+              </thead>
+              <tbody id="sat-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Position Dispersion & 3D Trace -->
+      <div class="telemetry-pane" id="pane-dispersion">
+        <div class="arena-grid">
+          <div>
+            <div class="arena-header">
+              <h3 class="arena-title">2-D Horizontal Dispersion &amp; 95% Confidence Ellipses</h3>
+              <span class="arena-subtitle">East-North Deviations from Truth (m)</span>
+            </div>
+            <div class="canvas-container" style="height: 320px;">
+              <canvas id="dispersion-canvas"></canvas>
+            </div>
+          </div>
+          <div>
+            <div class="arena-header">
+              <h3 class="arena-title">Multi-Arm 3-D Position Error Trace</h3>
+              <span class="arena-subtitle">Degraded-Sky Outage Position Hold (m)</span>
+            </div>
+            <div class="canvas-container" style="height: 320px;">
+              <canvas id="timeseries-canvas"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Map -->
+      <div class="telemetry-pane" id="pane-map">
+        <div id="map-view"></div>
+      </div>
+
+      <!-- Tab 4: Globe -->
+      <div class="telemetry-pane" id="pane-globe">
+        <div id="globe-view"></div>
+      </div>
+    </section>
+
+    <!-- Hidden legacy astronomical IDs for backward compatibility -->
+    <div style="display:none;">
+      <span id="astro-q-scale"></span>
+      <div id="phase-bar-chandler"></div>
+      <div id="phase-bar-nodal"></div>
+      <div id="phase-bar-semiannual"></div>
+    </div>
+
+    <!-- Caveats Box -->
+    <div class="caveats-box" id="caveats-container" style="display: none;">
+      <strong>Operational &amp; Metrological Caveats:</strong>
+      <ul id="caveats-list"></ul>
+    </div>
+
+    <!-- TEP Configuration Sweep Leaderboard -->
+    <div class="caveats-box" id="sweep-container" style="display: none;">
+      <strong>TEP Configuration Sweep</strong>
+      <span style="font-size: 0.85em; color: #888;">
+        (<span id="sweep-n-configs">0</span> configs evaluated in parallel on this live window)
+      </span>
+      <div style="margin-top: 8px; max-height: 400px; overflow-y: auto;">
+        <table style="width: 100%; font-size: 0.85em; border-collapse: collapse;">
+          <thead>
+            <tr style="text-align: left; border-bottom: 1px solid #444;">
+              <th style="padding: 4px 8px;">#</th>
+              <th style="padding: 4px 8px;">Config</th>
+              <th style="padding: 4px 8px; text-align: right;">RMSE 3D (m)</th>
+              <th style="padding: 4px 8px; text-align: right;">vs persist</th>
+              <th style="padding: 4px 8px;">Stage</th>
+            </tr>
+          </thead>
+          <tbody id="sweep-leaderboard"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modular Scripts -->
+  <script src="/static/js/results_arena.js"></script>
+  <script src="/static/js/audit_panels.js"></script>
+  <script src="/static/js/skyplot.js"></script>
+  <script src="/static/js/map.js"></script>
+  <script src="/static/js/globe.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

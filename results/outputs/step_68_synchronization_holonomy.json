@@ -1,0 +1,731 @@
+{
+  "step": 68,
+  "title": "Synchronization holonomy -- the non-exact (disformal) TEP sector",
+  "timestamp": "2026-09-02T15:46:35.320054+00:00",
+  "observable": "double-difference carrier phase = closed synchronization loop A->sat1->B->sat2->A; cancels all clocks, hence removes the exact (conformal/scalar) sector by construction; regressed on the signed loop invariant T=(e_k x e_ref).b against an unsigned atmospheric term",
+  "per_day": [
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 1590,
+      "antennas": [
+        "LEIAR25.R3      LEIT",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.118579121923985,
+      "holonomy_slope": 0.22307494745062395,
+      "holonomy_slope_ci95": [
+        0.11206136533166511,
+        0.3207865971646063
+      ],
+      "atmos_slope": -0.06102428276157568,
+      "tropo_gradient_N": -0.032414059781479876,
+      "tropo_gradient_E": 0.018897724478039318,
+      "circshift_null_mean": -0.01412998442644734,
+      "circshift_null_sd": 0.10996858044061453,
+      "holonomy_z": 2.1570245876290746,
+      "post_fit_rms_m": 0.11446219818293389,
+      "variance_explained_by_holonomy": 0.005764539441323935,
+      "detected": false,
+      "doy": 100
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 3141,
+      "antennas": [
+        "TRM59800.00     NONE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.006505255023696026,
+      "holonomy_slope": -0.004345834514415102,
+      "holonomy_slope_ci95": [
+        -0.0059145489168789395,
+        -0.0028698424871459113
+      ],
+      "atmos_slope": 0.0008587647795740197,
+      "tropo_gradient_N": 0.0006058746196763848,
+      "tropo_gradient_E": -0.00012687896113527,
+      "circshift_null_mean": 0.00014179671983105018,
+      "circshift_null_sd": 0.001156497331906331,
+      "holonomy_z": -3.8803645373300544,
+      "post_fit_rms_m": 0.006468713849510364,
+      "variance_explained_by_holonomy": 0.0039402885948324196,
+      "detected": false,
+      "doy": 100
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 1804,
+      "antennas": [
+        "SEPCHOKE_B3E6   SPKE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.14554721044454094,
+      "holonomy_slope": 0.3770637594097446,
+      "holonomy_slope_ci95": [
+        0.30317355043115285,
+        0.4547077655738749
+      ],
+      "atmos_slope": 0.8428161907976428,
+      "tropo_gradient_N": 0.11976099824045744,
+      "tropo_gradient_E": 0.0067389028651451514,
+      "circshift_null_mean": 0.003478340098882088,
+      "circshift_null_sd": 0.07468720532641468,
+      "holonomy_z": 5.0020002445952585,
+      "post_fit_rms_m": 0.08856766159668882,
+      "variance_explained_by_holonomy": -0.058584629221783535,
+      "detected": true,
+      "doy": 100
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 3159,
+      "antennas": [
+        "STXSA1500       STXG",
+        "LEIAR20         NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.013040602385031996,
+      "holonomy_slope": 0.015863930557656874,
+      "holonomy_slope_ci95": [
+        0.014123851648362546,
+        0.01755842463496372
+      ],
+      "atmos_slope": -0.0006240123776149462,
+      "tropo_gradient_N": 0.0006499666970918922,
+      "tropo_gradient_E": 0.013116205192579014,
+      "circshift_null_mean": 1.413425022936786e-06,
+      "circshift_null_sd": 0.0016769597601474858,
+      "holonomy_z": 9.459092286888778,
+      "post_fit_rms_m": 0.007542113908475271,
+      "variance_explained_by_holonomy": 0.05746435673023331,
+      "detected": true,
+      "doy": 100
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 2825,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "SEPCHOKE_B3E6   NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.12317770483407378,
+      "holonomy_slope": -0.41021047648625814,
+      "holonomy_slope_ci95": [
+        -0.42741327168710663,
+        -0.39669444402539
+      ],
+      "atmos_slope": 0.4082891332558922,
+      "tropo_gradient_N": -0.04225301778762783,
+      "tropo_gradient_E": 0.02136591164513763,
+      "circshift_null_mean": -0.0033896670565337714,
+      "circshift_null_sd": 0.03240330380983662,
+      "holonomy_z": -12.554917603995257,
+      "post_fit_rms_m": 0.03321099105231406,
+      "variance_explained_by_holonomy": 0.24749280613871805,
+      "detected": true,
+      "doy": 100
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 3128,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.07693331150401539,
+      "holonomy_slope": 0.019410113184138517,
+      "holonomy_slope_ci95": [
+        0.008795692280031499,
+        0.029858087066350764
+      ],
+      "atmos_slope": 0.25141755767737534,
+      "tropo_gradient_N": 0.04971471053930796,
+      "tropo_gradient_E": -0.00275722556619441,
+      "circshift_null_mean": 0.0005381292102623928,
+      "circshift_null_sd": 0.012986416652626252,
+      "holonomy_z": 1.453209494095481,
+      "post_fit_rms_m": 0.024277729958556774,
+      "variance_explained_by_holonomy": 0.0006485842654739837,
+      "detected": false,
+      "doy": 100
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.3331561508994,
+      "n_obs": 2760,
+      "antennas": [
+        "ASH701945E_M    NONE",
+        "SEPCHOKE_MC     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.12944227369231404,
+      "holonomy_slope": -0.11698013111225389,
+      "holonomy_slope_ci95": [
+        -0.14272473203493147,
+        -0.09272075600050793
+      ],
+      "atmos_slope": -0.5978184569630348,
+      "tropo_gradient_N": 0.04668364005143644,
+      "tropo_gradient_E": 0.03449933624725254,
+      "circshift_null_mean": 0.006138693545034175,
+      "circshift_null_sd": 0.01921923570880455,
+      "holonomy_z": -6.406020849251873,
+      "post_fit_rms_m": 0.03596427912410043,
+      "variance_explained_by_holonomy": -0.019679082873469422,
+      "detected": true,
+      "doy": 100
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 3047,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R4      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.08971127628060616,
+      "holonomy_slope": 0.06896340093255718,
+      "holonomy_slope_ci95": [
+        0.05465325404622505,
+        0.08362564149553696
+      ],
+      "atmos_slope": -0.02843740646011273,
+      "tropo_gradient_N": 0.09854858089330931,
+      "tropo_gradient_E": 0.058426617258008455,
+      "circshift_null_mean": 0.008040284276423334,
+      "circshift_null_sd": 0.01279282746047042,
+      "holonomy_z": 4.762287058461864,
+      "post_fit_rms_m": 0.027918443650829974,
+      "variance_explained_by_holonomy": 0.08767344305931435,
+      "detected": false,
+      "doy": 100
+    },
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 1590,
+      "antennas": [
+        "LEIAR25.R3      LEIT",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.1245114791615868,
+      "holonomy_slope": 0.12777488664117123,
+      "holonomy_slope_ci95": [
+        0.014466528459952019,
+        0.23635012536111044
+      ],
+      "atmos_slope": -0.061351290689975274,
+      "tropo_gradient_N": -0.046179428107909336,
+      "tropo_gradient_E": 0.023120501197610967,
+      "circshift_null_mean": 0.0047232224654651595,
+      "circshift_null_sd": 0.1123884405984439,
+      "holonomy_z": 1.0948782946047015,
+      "post_fit_rms_m": 0.11895832271567158,
+      "variance_explained_by_holonomy": -0.0012889618712470519,
+      "detected": false,
+      "doy": 101
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 3166,
+      "antennas": [
+        "TRM59800.00     NONE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.006542583973195671,
+      "holonomy_slope": -0.004297953565842763,
+      "holonomy_slope_ci95": [
+        -0.005649964328517452,
+        -0.0028160750551539803
+      ],
+      "atmos_slope": 0.0009538452646414106,
+      "tropo_gradient_N": 0.0004902152405128635,
+      "tropo_gradient_E": -0.0002234077226679667,
+      "circshift_null_mean": 4.924587856368987e-05,
+      "circshift_null_sd": 0.0010868728291269078,
+      "holonomy_z": -3.9997314569898545,
+      "post_fit_rms_m": 0.006503142206860933,
+      "variance_explained_by_holonomy": 0.006427029392749861,
+      "detected": false,
+      "doy": 101
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 1912,
+      "antennas": [
+        "SEPCHOKE_B3E6   SPKE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.14518698149716308,
+      "holonomy_slope": 0.37548434152387317,
+      "holonomy_slope_ci95": [
+        0.30819737468056785,
+        0.4501005022624352
+      ],
+      "atmos_slope": 0.8458802483355892,
+      "tropo_gradient_N": 0.12167264119325286,
+      "tropo_gradient_E": 0.0011265529810753532,
+      "circshift_null_mean": -0.007446018803507298,
+      "circshift_null_sd": 0.07510669036374872,
+      "holonomy_z": 5.098485347614347,
+      "post_fit_rms_m": 0.08503253177740175,
+      "variance_explained_by_holonomy": -0.05628946111741162,
+      "detected": true,
+      "doy": 101
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 3174,
+      "antennas": [
+        "STXSA1500       STXG",
+        "LEIAR20         NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.015067369546933653,
+      "holonomy_slope": 0.013959821675711383,
+      "holonomy_slope_ci95": [
+        0.011643822659532215,
+        0.01631499437692263
+      ],
+      "atmos_slope": -0.006847837326924094,
+      "tropo_gradient_N": 0.0009214795921005743,
+      "tropo_gradient_E": 0.01462731290972649,
+      "circshift_null_mean": 0.00012267553052967123,
+      "circshift_null_sd": 0.0016901952679638202,
+      "holonomy_z": 8.186714521956587,
+      "post_fit_rms_m": 0.00887072947555861,
+      "variance_explained_by_holonomy": 0.04149700862818906,
+      "detected": true,
+      "doy": 101
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 2765,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "SEPCHOKE_B3E6   NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.12230135570799595,
+      "holonomy_slope": -0.41018509267578873,
+      "holonomy_slope_ci95": [
+        -0.42710883984369574,
+        -0.3947233186410657
+      ],
+      "atmos_slope": 0.4253631773219028,
+      "tropo_gradient_N": -0.04024834889337595,
+      "tropo_gradient_E": 0.022544174658457174,
+      "circshift_null_mean": -0.002327513262352398,
+      "circshift_null_sd": 0.033397990364135724,
+      "holonomy_z": -12.21203955587137,
+      "post_fit_rms_m": 0.03301108281732526,
+      "variance_explained_by_holonomy": 0.23784310962706334,
+      "detected": true,
+      "doy": 101
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 3120,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.07774228346398297,
+      "holonomy_slope": 0.007035921328740553,
+      "holonomy_slope_ci95": [
+        -0.00398263286121439,
+        0.017643059609705775
+      ],
+      "atmos_slope": 0.25109067351015185,
+      "tropo_gradient_N": 0.0526468753219153,
+      "tropo_gradient_E": -0.0034609838500950394,
+      "circshift_null_mean": -0.002725089669704037,
+      "circshift_null_sd": 0.01168300304744153,
+      "holonomy_z": 0.8354881838862621,
+      "post_fit_rms_m": 0.024460062164654257,
+      "variance_explained_by_holonomy": 0.00028599143002394634,
+      "detected": false,
+      "doy": 101
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.33303151986706,
+      "n_obs": 3013,
+      "antennas": [
+        "ASH701945E_M    NONE",
+        "SEPCHOKE_MC     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.07386294460665807,
+      "holonomy_slope": -0.27342573156991967,
+      "holonomy_slope_ci95": [
+        -0.2815988244501906,
+        -0.2651349884461562
+      ],
+      "atmos_slope": -0.26295550495413944,
+      "tropo_gradient_N": 0.05393944254906399,
+      "tropo_gradient_E": 0.018034227054605563,
+      "circshift_null_mean": 0.0001609706546677008,
+      "circshift_null_sd": 0.022994312756896482,
+      "holonomy_z": -11.8980160493178,
+      "post_fit_rms_m": 0.013548937031158817,
+      "variance_explained_by_holonomy": -0.10135673976258763,
+      "detected": true,
+      "doy": 101
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 3026,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R4      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.08762183496152878,
+      "holonomy_slope": 0.0770686011471515,
+      "holonomy_slope_ci95": [
+        0.06311703293863118,
+        0.09159101212124192
+      ],
+      "atmos_slope": -0.010087957925705295,
+      "tropo_gradient_N": 0.10141184474997786,
+      "tropo_gradient_E": 0.06019321563309352,
+      "circshift_null_mean": 0.009320214538976227,
+      "circshift_null_sd": 0.01209978160782201,
+      "holonomy_z": 5.59914127411843,
+      "post_fit_rms_m": 0.024385680307710107,
+      "variance_explained_by_holonomy": 0.09193997179152713,
+      "detected": true,
+      "doy": 101
+    },
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_obs": 1580,
+      "antennas": [
+        "LEIAR25.R3      LEIT",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.12131471833355989,
+      "holonomy_slope": 0.13744957199222238,
+      "holonomy_slope_ci95": [
+        0.021639321287665925,
+        0.2477207423068622
+      ],
+      "atmos_slope": -0.06696396321521453,
+      "tropo_gradient_N": -0.04210907913729894,
+      "tropo_gradient_E": 0.025140610306524286,
+      "circshift_null_mean": 0.012605408928604797,
+      "circshift_null_sd": 0.10973158129507257,
+      "holonomy_z": 1.1377231749527665,
+      "post_fit_rms_m": 0.1162187893025322,
+      "variance_explained_by_holonomy": -0.0018549603701822903,
+      "detected": false,
+      "doy": 102
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_obs": 3140,
+      "antennas": [
+        "TRM59800.00     NONE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.0065154577616600585,
+      "holonomy_slope": -0.005180934672676901,
+      "holonomy_slope_ci95": [
+        -0.006647690573780698,
+        -0.0037331678148619725
+      ],
+      "atmos_slope": 0.001017250029520688,
+      "tropo_gradient_N": 0.0005590344914746765,
+      "tropo_gradient_E": -0.00027236736566070373,
+      "circshift_null_mean": 8.504735450849102e-05,
+      "circshift_null_sd": 0.0011154234640236302,
+      "holonomy_z": -4.721060832080391,
+      "post_fit_rms_m": 0.006458117834417233,
+      "variance_explained_by_holonomy": 0.010074703362559445,
+      "detected": false,
+      "doy": 102
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_obs": 1838,
+      "antennas": [
+        "SEPCHOKE_B3E6   SPKE",
+        "TRM29659.00     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.14600791828599144,
+      "holonomy_slope": 0.3904488628320584,
+      "holonomy_slope_ci95": [
+        0.3126437819564252,
+        0.46788017661847936
+      ],
+      "atmos_slope": 0.8492950776719507,
+      "tropo_gradient_N": 0.1205409165903702,
+      "tropo_gradient_E": 0.0026914536234340218,
+      "circshift_null_mean": -0.006185653167117173,
+      "circshift_null_sd": 0.07945742363178435,
+      "holonomy_z": 4.991786769191379,
+      "post_fit_rms_m": 0.0859260169455687,
+      "variance_explained_by_holonomy": -0.054797892092180556,
+      "detected": false,
+      "doy": 102
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_obs": 3120,
+      "antennas": [
+        "STXSA1500       STXG",
+        "LEIAR20         NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.012835484346273195,
+      "holonomy_slope": 0.013957121217883239,
+      "holonomy_slope_ci95": [
+        0.012313513804933864,
+        0.015704737194830273
+      ],
+      "atmos_slope": -0.0032728385002030445,
+      "tropo_gradient_N": 0.0013735822971589265,
+      "tropo_gradient_E": 0.013019101311027742,
+      "circshift_null_mean": 0.00029397650149009825,
+      "circshift_null_sd": 0.0014031412331348564,
+      "holonomy_z": 9.737540593734352,
+      "post_fit_rms_m": 0.007000278974809324,
+      "variance_explained_by_holonomy": 0.05605970895976686,
+      "detected": true,
+      "doy": 102
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_obs": 2751,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "SEPCHOKE_B3E6   NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.12377596430199199,
+      "holonomy_slope": -0.4127419571034774,
+      "holonomy_slope_ci95": [
+        -0.4283207632711407,
+        -0.3960695612949024
+      ],
+      "atmos_slope": 0.424807348260902,
+      "tropo_gradient_N": -0.042035067078181845,
+      "tropo_gradient_E": 0.02215088384475717,
+      "circshift_null_mean": -0.0010818893295987259,
+      "circshift_null_sd": 0.0340613608380918,
+      "holonomy_z": -12.085837372460682,
+      "post_fit_rms_m": 0.03233460020060952,
+      "variance_explained_by_holonomy": 0.24793760186035296,
+      "detected": true,
+      "doy": 102
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_obs": 3115,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R3      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.0794553210465895,
+      "holonomy_slope": 0.020174065606988086,
+      "holonomy_slope_ci95": [
+        0.008069146458784753,
+        0.031767903835034195
+      ],
+      "atmos_slope": 0.26771206024512567,
+      "tropo_gradient_N": 0.05372745375215674,
+      "tropo_gradient_E": -0.003988791079072685,
+      "circshift_null_mean": 0.0009085283288242178,
+      "circshift_null_sd": 0.013209349058967557,
+      "holonomy_z": 1.4584774156668143,
+      "post_fit_rms_m": 0.02501112687826976,
+      "variance_explained_by_holonomy": 0.0008417548384188622,
+      "detected": false,
+      "doy": 102
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.33339535403744,
+      "n_obs": 3030,
+      "antennas": [
+        "ASH701945E_M    NONE",
+        "SEPCHOKE_MC     NONE"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.08245790328893761,
+      "holonomy_slope": -0.5037971063832773,
+      "holonomy_slope_ci95": [
+        -0.5246539662807097,
+        -0.479570756899369
+      ],
+      "atmos_slope": -0.15132260965422897,
+      "tropo_gradient_N": -0.004188470119531293,
+      "tropo_gradient_E": 0.012822687492987352,
+      "circshift_null_mean": -4.260125596582731e-05,
+      "circshift_null_sd": 0.046967015330532644,
+      "holonomy_z": -10.725708278078027,
+      "post_fit_rms_m": 0.05386565359264462,
+      "variance_explained_by_holonomy": 0.33001686967178956,
+      "detected": true,
+      "doy": 102
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_obs": 3002,
+      "antennas": [
+        "JAVRINGANT_DM   SCIS",
+        "LEIAR25.R4      LEIT"
+      ],
+      "n_obs_without_pcv": 0,
+      "dd_residual_rms_m": 0.08761410136925853,
+      "holonomy_slope": 0.0714714731156486,
+      "holonomy_slope_ci95": [
+        0.05799601059731125,
+        0.0827858436566314
+      ],
+      "atmos_slope": 0.006783984761111967,
+      "tropo_gradient_N": 0.10569074195053231,
+      "tropo_gradient_E": 0.06063828981690037,
+      "circshift_null_mean": 0.0075284092912124125,
+      "circshift_null_sd": 0.011827002659422175,
+      "holonomy_z": 5.406531618008464,
+      "post_fit_rms_m": 0.023468173412022217,
+      "variance_explained_by_holonomy": 0.08597586679347047,
+      "detected": true,
+      "doy": 102
+    }
+  ],
+  "summary": [
+    {
+      "pair": "WTZR-WTZZ",
+      "baseline_km": 0.0033023053674794203,
+      "n_days": 3,
+      "dd_residual_rms_mm": 121.3147183335599,
+      "holonomy_slope_median": 0.13744957199222238,
+      "holonomy_z_median": 1.1377231749527665,
+      "slope_sign_consistent": true,
+      "detected_all_days": false
+    },
+    {
+      "pair": "ZIM2-ZIMM",
+      "baseline_km": 0.018771100979916886,
+      "n_days": 3,
+      "dd_residual_rms_mm": 6.515457761660058,
+      "holonomy_slope_median": -0.004345834514415102,
+      "holonomy_z_median": -3.9997314569898545,
+      "slope_sign_consistent": true,
+      "detected_all_days": false
+    },
+    {
+      "pair": "WAB2-ZIMM",
+      "baseline_km": 5.199186024511033,
+      "n_days": 3,
+      "dd_residual_rms_mm": 145.54721044454095,
+      "holonomy_slope_median": 0.3770637594097446,
+      "holonomy_z_median": 5.0020002445952585,
+      "slope_sign_consistent": true,
+      "detected_all_days": false
+    },
+    {
+      "pair": "PADO-VEN1",
+      "baseline_km": 35.91289102394428,
+      "n_days": 3,
+      "dd_residual_rms_mm": 13.040602385031995,
+      "holonomy_slope_median": 0.013959821675711383,
+      "holonomy_z_median": 9.459092286888778,
+      "slope_sign_consistent": true,
+      "detected_all_days": true
+    },
+    {
+      "pair": "BRUX-REDU",
+      "baseline_km": 104.77193734153582,
+      "n_days": 3,
+      "dd_residual_rms_mm": 123.17770483407378,
+      "holonomy_slope_median": -0.41021047648625814,
+      "holonomy_z_median": -12.21203955587137,
+      "slope_sign_consistent": true,
+      "detected_all_days": true
+    },
+    {
+      "pair": "BRUX-DLF1",
+      "baseline_km": 132.18239375898176,
+      "n_days": 3,
+      "dd_residual_rms_mm": 77.74228346398297,
+      "holonomy_slope_median": 0.019410113184138517,
+      "holonomy_z_median": 1.453209494095481,
+      "slope_sign_consistent": true,
+      "detected_all_days": false
+    },
+    {
+      "pair": "GRAS-IENG",
+      "baseline_km": 151.3331561508994,
+      "n_days": 3,
+      "dd_residual_rms_mm": 82.45790328893762,
+      "holonomy_slope_median": -0.27342573156991967,
+      "holonomy_z_median": -10.725708278078027,
+      "slope_sign_consistent": true,
+      "detected_all_days": true
+    },
+    {
+      "pair": "BRUX-WSRT",
+      "baseline_km": 281.7366138430005,
+      "n_days": 3,
+      "dd_residual_rms_mm": 87.62183496152878,
+      "holonomy_slope_median": 0.0714714731156486,
+      "holonomy_z_median": 5.406531618008464,
+      "slope_sign_consistent": true,
+      "detected_all_days": false
+    }
+  ],
+  "verdict": {
+    "control_pairs_null": true,
+    "n_test_pairs_detected": 3,
+    "n_test_pairs": 6,
+    "slope_grows_with_baseline": null,
+    "slope_baseline_spearman": -0.14285714285714288,
+    "corrections_applied": [
+      "precise ephemerides + light-time/Sagnac geometry",
+      "horizontal tropospheric gradients (Chen-Herring N/E)",
+      "antenna PCO+PCV from igs20_2317.atx (0 uncorrected observations)"
+    ],
+    "slope_vs_baseline_spearman": -0.14285714285714288,
+    "slope_vs_dd_noise_spearman": 0.8857142857142858,
+    "holonomy_detected": false,
+    "interpretation": "Properly controlled test of the NON-EXACT (disformal) TEP sector via the closed synchronization loop A->sat1->B->sat2->A, i.e. the double difference. Co-located controls are null as required (WTZR-WTZZ, identical LEIAR25.R3 antennas, z=+1.1). A significant direction-dependent term survives tropospheric-gradient and antenna PCV correction, but it does NOT carry the holonomy signature: the flux must scale with enclosed loop area, and |slope| vs baseline gives Spearman -0.14 while |slope| vs the pair's own DD noise gives +0.89. The term therefore tracks site-specific systematics (multipath, which ANTEX cannot remove since it is an antenna-model average, not a site calibration), not loop geometry. NO evidence for a non-exact sector at the 10-150 mm DD-residual level; any holonomy lies below the multipath floor. THIS DOES NOT BEAR ON THE SCALAR SECTOR, which is established (Papers 1-2 distance-structured cos-phase correlation; reproduced here at 27 sigma in Step 53, and operationally exploited in the Step 64 P1 pass).",
+    "next_discriminator": "Sidereal-day multipath stacking: GPS geometry repeats every 23h56m04s, so multipath repeats with it while a proper-time field effect does not. Stack N days aligned to sidereal time and subtract to suppress multipath by sqrt(N), then re-test the area scaling."
+  }
+}

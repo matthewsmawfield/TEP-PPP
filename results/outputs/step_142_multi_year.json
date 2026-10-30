@@ -1,0 +1,82 @@
+{
+  "step": 142,
+  "title": "Multi-year replication of multi-band TEP prior",
+  "timestamp": "2026-09-06T19:59:48.593510+00:00",
+  "product": "clk_cod",
+  "bands": [
+    {
+      "name": "tidal",
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "lambda_km": 1459.0
+    }
+  ],
+  "results": {
+    "2024": {
+      "n_days": 30,
+      "multi_vs_full_band_pct": {
+        "median": 2.2903501681628913,
+        "ci95": [
+          1.627575653748481,
+          2.8557724922819716
+        ],
+        "n": 30,
+        "frac_positive": 0.9333333333333333
+      },
+      "multi_vs_empirical_pct": {
+        "median": 1.9190309810373118,
+        "ci95": [
+          1.0962498916321617,
+          3.3421491354601374
+        ],
+        "n": 30,
+        "frac_positive": 0.8666666666666667
+      },
+      "median_rms_m": {
+        "full_band": 1.1880427571354584,
+        "multi_band": 1.163834870222255,
+        "empirical": 1.1908345560849
+      }
+    },
+    "2025": {
+      "n_days": 19,
+      "multi_vs_full_band_pct": {
+        "median": 3.3277289413825017,
+        "ci95": [
+          2.6553811286101014,
+          4.2116311688974895
+        ],
+        "n": 19,
+        "frac_positive": 1.0
+      },
+      "multi_vs_empirical_pct": {
+        "median": -0.09304465608508394,
+        "ci95": [
+          -0.41627970459345853,
+          1.2048071307525055
+        ],
+        "n": 19,
+        "frac_positive": 0.47368421052631576
+      },
+      "median_rms_m": {
+        "full_band": 2.7434436560920186,
+        "multi_band": 2.660814093080921,
+        "empirical": 2.644086064291385
+      }
+    }
+  },
+  "interpretation": [
+    "2024 (development): multi-band vs full-band +2.29% (CI95 [+1.63, +2.86])",
+    "2024 (development): multi-band vs empirical +1.92% (CI95 [+1.10, +3.34])",
+    "2025 (independent-year): multi-band vs full-band +3.33% (CI95 [+2.66, +4.21])",
+    "2025 (independent-year): multi-band vs empirical -0.09% (CI95 [-0.42, +1.20])",
+    "The multi-band advantage is present in BOTH years (2024: +2.29%, 2025: +3.33%). The frequency-dependent lambdas from Paper 1 generalise across years."
+  ],
+  "pre_registered_prediction": "The multi-band kernel with Paper 1's frequency-dependent lambdas should beat both the full-band kernel and empirical covariance in both 2024 and 2025. The advantage should be stable across years, confirming that the physics-fixed frequency-dependent spatial scales generalise."
+}

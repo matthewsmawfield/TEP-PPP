@@ -1,0 +1,61 @@
+{
+  "generated": "2026-09-08T10:53:43Z",
+  "n_stations": 43,
+  "span_h": 22.01,
+  "baseline_km": [
+    10.5,
+    3249.2
+  ],
+  "horizon_s": 1800.0,
+  "median_km": {
+    "tep": 214.7,
+    "permuted": 2764.7,
+    "centroid": 683.7,
+    "spatial_null": 2268.3
+  },
+  "ci_km": {
+    "tep": [
+      188.8,
+      284.6
+    ],
+    "permuted": [
+      2006.9,
+      2949.8
+    ],
+    "spatial_null": [
+      2033.2,
+      2720.1
+    ]
+  },
+  "sign_test": {
+    "vs_permuted": [
+      32,
+      43,
+      0.0009569805006321985
+    ],
+    "vs_centroid": [
+      32,
+      43,
+      0.0009569805006321985
+    ]
+  },
+  "peripheral_failures": [
+    "BNA1",
+    "BRGN",
+    "FLRS",
+    "FUN1",
+    "GAIA",
+    "IGP0",
+    "LAGO",
+    "LEIR",
+    "PDEL",
+    "TAVI",
+    "TERC"
+  ],
+  "enclosed_median_km": 191.8,
+  "enclosed_n": 32,
+  "spatial_null_clean": true,
+  "verdict": "PASS",
+  "criterion": "PASS requires sign tests against BOTH the permuted-geometry and centroid nulls at p<0.01, AND an amplitude-matched spatially-independent null that does not localise (median error > 2x the measured one)",
+  "scope": "field-scale localisation, NOT navigation: ~200 km is the resolution of the clock field, not a position fix"
+}

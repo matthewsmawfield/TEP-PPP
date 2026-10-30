@@ -1,0 +1,38 @@
+
+=== clk_cod / 2024 (dev_frozen) / GLOBAL : 30 days ===
+scripts/lib/tep_phase.py:38: RuntimeWarning: divide by zero encountered in matmul
+  den = float(q @ q)
+scripts/lib/tep_phase.py:38: RuntimeWarning: overflow encountered in matmul
+  den = float(q @ q)
+scripts/lib/tep_phase.py:38: RuntimeWarning: invalid value encountered in matmul
+  den = float(q @ q)
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: divide by zero encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: overflow encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:485: RuntimeWarning: invalid value encountered in matmul
+  C_cm = (Pcm.T @ Pcm) / Pcm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:490: RuntimeWarning: divide by zero encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:490: RuntimeWarning: overflow encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+scripts/steps/step_96_leftover_clock_supremacy.py:490: RuntimeWarning: invalid value encountered in matmul
+  S_full = (Ptm.T @ Ptm) / Ptm.shape[0]
+  mid-horizon rms: {'zero': 2.69, 'linrate': 4.37, 'ar1': 4.24, 'free_gp': 2.56, 'empirical_cov': 2.68, 'empirical_cov_full': 2.26, 'empirical_cov_full_hybrid': 4.0, 'tep_bandpass': 2.47, 'tep_lfmf': 2.31, 'tep_lfmf_hybrid': 4.01, 'tep_bandpass_hybrid': 4.14, 'tep_lfmf_gated': 2.38, 'tep_lfmf_gated_screened': 2.3}
+  tep_bandpass mid vs baselines: {'zero': 8.1, 'linrate': 39.3, 'ar1': 36.9, 'free_gp': 4.1, 'empirical_cov': 5.9, 'empirical_cov_full': -7.2, 'empirical_cov_full_hybrid': 34.9}
+  tep_lfmf mid vs baselines: {'zero': 12.0, 'linrate': 44.9, 'ar1': 42.9, 'free_gp': 11.0, 'empirical_cov': 12.9, 'empirical_cov_full': -1.3, 'empirical_cov_full_hybrid': 37.9}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -39.5, 'linrate': 6.1, 'ar1': 2.6, 'free_gp': -40.8, 'empirical_cov': -38.6, 'empirical_cov_full': -63.6, 'empirical_cov_full_hybrid': -0.3}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -47.1, 'linrate': 1.8, 'ar1': -1.5, 'free_gp': -52.0, 'empirical_cov': -45.7, 'empirical_cov_full': -74.0, 'empirical_cov_full_hybrid': -5.2}
+  tep_lfmf_gated mid vs baselines: {'zero': 10.5, 'linrate': 42.2, 'ar1': 41.8, 'free_gp': 11.2, 'empirical_cov': 9.9, 'empirical_cov_full': -0.4, 'empirical_cov_full_hybrid': 37.1}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 11.3, 'linrate': 43.5, 'ar1': 42.5, 'free_gp': 12.2, 'empirical_cov': 11.1, 'empirical_cov_full': -0.0, 'empirical_cov_full_hybrid': 37.4}
+
+=== clk_cod / 2024 (dev_frozen) / EUROPE : 30 days ===
+  mid-horizon rms: {'zero': 1.13, 'linrate': 1.37, 'ar1': 1.49, 'free_gp': 1.11, 'empirical_cov': 1.11, 'empirical_cov_full': 0.98, 'empirical_cov_full_hybrid': 1.17, 'tep_bandpass': 1.01, 'tep_lfmf': 0.97, 'tep_lfmf_hybrid': 1.21, 'tep_bandpass_hybrid': 1.22, 'tep_lfmf_gated': 0.9, 'tep_lfmf_gated_screened': 0.86}
+  tep_bandpass mid vs baselines: {'zero': 10.8, 'linrate': 26.6, 'ar1': 26.0, 'free_gp': 5.7, 'empirical_cov': 9.5, 'empirical_cov_full': -3.8, 'empirical_cov_full_hybrid': 14.1}
+  tep_lfmf mid vs baselines: {'zero': 12.4, 'linrate': 27.4, 'ar1': 31.1, 'free_gp': 9.9, 'empirical_cov': 8.6, 'empirical_cov_full': 0.4, 'empirical_cov_full_hybrid': 21.2}
+  tep_lfmf_hybrid mid vs baselines: {'zero': -6.5, 'linrate': 12.5, 'ar1': 10.9, 'free_gp': -5.4, 'empirical_cov': -6.8, 'empirical_cov_full': -22.3, 'empirical_cov_full_hybrid': -1.3}
+  tep_bandpass_hybrid mid vs baselines: {'zero': -8.4, 'linrate': 9.3, 'ar1': 6.7, 'free_gp': -11.0, 'empirical_cov': -9.4, 'empirical_cov_full': -28.0, 'empirical_cov_full_hybrid': -5.3}
+  tep_lfmf_gated mid vs baselines: {'zero': 18.1, 'linrate': 36.6, 'ar1': 36.2, 'free_gp': 13.3, 'empirical_cov': 18.2, 'empirical_cov_full': 0.7, 'empirical_cov_full_hybrid': 24.2}
+  tep_lfmf_gated_screened mid vs baselines: {'zero': 20.2, 'linrate': 39.3, 'ar1': 38.1, 'free_gp': 15.1, 'empirical_cov': 20.2, 'empirical_cov_full': 2.0, 'empirical_cov_full_hybrid': 25.3}
+
+=== clk_cod / 2024 (dev_frozen) / NORTH_AMERICA : 30 days ===

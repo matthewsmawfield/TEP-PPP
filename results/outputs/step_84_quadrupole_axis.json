@@ -1,0 +1,86 @@
+{
+  "step": 84,
+  "title": "Preferred-axis scan of the quadrupole vs the CMB dipole",
+  "timestamp": "2026-09-03T08:23:58.903520+00:00",
+  "verdict": {
+    "n_pair_days": 2417853,
+    "n_days": 60,
+    "product": "clk_cod_ops",
+    "distance_controlled": true,
+    "best_axis_ra_deg": 164.00695556137964,
+    "best_axis_dec_deg": 69.6863691089077,
+    "b_at_best_axis": 0.16619213443401584,
+    "quadrupole_eigenvalue": 18584.106370047615,
+    "eigenvalues": [
+      -13052.42501187748,
+      -5531.681358168988,
+      18584.106370047615
+    ],
+    "scanned_null_p": 0.0,
+    "scanned_null_z": 76.40356977903744,
+    "separation_from_deg": {
+      "CMB_dipole": 76.73561232164332,
+      "paper2_axis": 75.18531170846688,
+      "paper3_axis": 76.45433067870636,
+      "solar_apex": 67.60206656256187
+    },
+    "b_at_named_axes": {
+      "CMB_dipole": {
+        "u_M_u": -8133.10044931086,
+        "z": 32.96844407623633,
+        "p": 0.0
+      },
+      "paper2_axis": {
+        "u_M_u": -9834.396363693166,
+        "z": 41.589736716333675,
+        "p": 0.0
+      },
+      "paper3_axis": {
+        "u_M_u": -10322.574767840315,
+        "z": 44.53923016763343,
+        "p": 0.0
+      },
+      "solar_apex": {
+        "u_M_u": -2796.6926656473056,
+        "z": 11.496193269390169,
+        "p": 0.0
+      }
+    },
+    "corpus_reference": {
+      "CMB_dipole": [
+        168.0,
+        -7.0
+      ],
+      "paper2": [
+        186.0,
+        -4.0
+      ],
+      "paper3": [
+        188.0,
+        -5.0
+      ],
+      "solar_apex": [
+        271.0,
+        30.0
+      ]
+    },
+    "axis_significant_vs_scanned_null": true,
+    "blindness_control": {
+      "true_axis_ra_deg": 164.00695556137964,
+      "true_axis_dec_deg": 69.68636910890773,
+      "shuffled_gmst_axes_ra_deg": [
+        163.03837366791203,
+        161.8128655960429,
+        160.41012381863246,
+        159.75827819547342,
+        166.06748019995106
+      ],
+      "median_delta_ra_under_shuffle_deg": 2.1940899653367296,
+      "daily_statistic_blind_to_RA": true
+    },
+    "axis_claim_permitted": false,
+    "aligns_with_corpus_axis": null,
+    "why_no_axis_claim": "phase-cos requires a full day (10-500 uHz) and Earth rotates 360 deg within it, so each baseline sweeps a circle in inertial space during the measurement.  Shuffling which day receives which sidereal rotation leaves the recovered axis unchanged, so the daily statistic carries no celestial right-ascension information and NO alignment claim -- for or against the CMB dipole -- can be made from it.  The declination reflects Earth-fixed network geometry.  Locating the axis needs the seasonal lever Papers 2-3 use: track the anisotropy over 30-day windows across the year and correlate with orbital velocity.",
+    "note": "the null is scanned identically to the observation: a grid scan always finds some axis, so an unscanned null would manufacture a detection"
+  }
+}

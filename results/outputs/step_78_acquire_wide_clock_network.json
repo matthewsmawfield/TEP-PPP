@@ -1,0 +1,55 @@
+{
+  "step": 78,
+  "product": "COD0OPSFIN",
+  "year": 2024,
+  "timestamp": "2026-09-04T00:20:53.188941+01:00",
+  "downloaded": 1,
+  "already_present": 0,
+  "n_failed": 0,
+  "failed_sample": [],
+  "days_on_disk": 449,
+  "coverage": {
+    "n_stations": 318,
+    "n_quartz": 197,
+    "n_atomic": 86,
+    "n_unique_station_pairs": 50403,
+    "colocated_quartz_atomic_pairs": [
+      [
+        "MATE",
+        "MAT1"
+      ],
+      [
+        "STR1",
+        "STR2"
+      ],
+      [
+        "THTG",
+        "THTI"
+      ],
+      [
+        "WUHN",
+        "WUH2"
+      ]
+    ],
+    "n_colocated": 4,
+    "coordinate_threshold_m": 100.0,
+    "distance_rejected_metadata_pairs": [
+      {
+        "atomic": "HERS",
+        "quartz": "HERT",
+        "separation_m": 136.45488627380564
+      },
+      {
+        "atomic": "THTG",
+        "quartz": "FAA1",
+        "separation_m": 2549.176033360034
+      },
+      {
+        "atomic": "WUHN",
+        "quartz": "JFNG",
+        "separation_m": 12960.628930815423
+      }
+    ]
+  },
+  "next": "register COD0OPSFIN in scripts/lib/tep_data.py, then re-run step_77 (co-located screening), step_74 (short-baseline anisotropy) and step_75c (screening-stratified lambda) on the wider network"
+}

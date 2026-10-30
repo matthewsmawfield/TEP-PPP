@@ -1,0 +1,147 @@
+{
+  "step": 162,
+  "title": "Per-frequency-bin clock-type differentiation spectrum",
+  "timestamp": "2026-09-07T01:22:52.573858+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days": 13,
+  "window_days": 13,
+  "peak_qa_ratio": 2.8593162998486643,
+  "peak_tidal_line": "S2",
+  "background": {
+    "ratio": 0.7771692832368592,
+    "ci95": [
+      0.5215929715382771,
+      1.1362934079583968
+    ],
+    "mean": 0.792155681102554,
+    "std": 0.15946308357198882
+  },
+  "tidal_lines": {
+    "O1": {
+      "freq_uhz": 10.758,
+      "qa_ratio": 0.9255812033788671,
+      "quartz_pa": 0.22529827956993118,
+      "atomic_pa": 0.24341276459317865,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 0.8367173096591902
+    },
+    "Q1": {
+      "freq_uhz": 10.676,
+      "qa_ratio": 0.9255812033788671,
+      "quartz_pa": 0.22529827956993118,
+      "atomic_pa": 0.24341276459317865,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 0.8367173096591902
+    },
+    "S1": {
+      "freq_uhz": 11.574,
+      "qa_ratio": 0.6328337906041613,
+      "quartz_pa": 0.10334218941480329,
+      "atomic_pa": 0.16330068171003215,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": -0.999114572034897
+    },
+    "P1": {
+      "freq_uhz": 11.542,
+      "qa_ratio": 0.6328337906041613,
+      "quartz_pa": 0.10334218941480329,
+      "atomic_pa": 0.16330068171003215,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": -0.999114572034897
+    },
+    "K1": {
+      "freq_uhz": 11.608,
+      "qa_ratio": 0.6328337906041613,
+      "quartz_pa": 0.10334218941480329,
+      "atomic_pa": 0.16330068171003215,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": -0.999114572034897
+    },
+    "N2": {
+      "freq_uhz": 21.422,
+      "qa_ratio": 0.8606037730788483,
+      "quartz_pa": 0.13540835941805276,
+      "atomic_pa": 0.1573411175431213,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 0.4292409907236853
+    },
+    "M2": {
+      "freq_uhz": 22.365,
+      "qa_ratio": 1.594132163543326,
+      "quartz_pa": 0.18839143160459457,
+      "atomic_pa": 0.11817805067419956,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 5.029229740679909
+    },
+    "S2": {
+      "freq_uhz": 23.148,
+      "qa_ratio": 2.8593162998486643,
+      "quartz_pa": 0.2650617211240573,
+      "atomic_pa": 0.09270108422005857,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 12.96325502079546
+    },
+    "K2": {
+      "freq_uhz": 23.098,
+      "qa_ratio": 2.8593162998486643,
+      "quartz_pa": 0.2650617211240573,
+      "atomic_pa": 0.09270108422005857,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": 12.96325502079546
+    },
+    "M3": {
+      "freq_uhz": 34.533,
+      "qa_ratio": 0.7119488424483913,
+      "quartz_pa": 0.08483883676664807,
+      "atomic_pa": 0.11916423162496816,
+      "n_q": 2895,
+      "n_a": 550,
+      "z_score": -0.5029806075332395
+    }
+  },
+  "lunar_mean_qa": 1.00356943716566,
+  "solar_mean_qa": 1.5234267943019624,
+  "interpretation": [
+    "Per-frequency-bin clock-type differentiation: 13 days, 13-day window",
+    "  Tidal lines analyzed at nearest FFT bin",
+    "  Quartz pairs: 2895, Atomic pairs: 550 (per tidal line)",
+    "",
+    "  Peak Q/A ratio: 2.86x at S2 (23.148 uHz)",
+    "",
+    "  Background (off-tide): Q/A=0.78x CI[0.5215929715382771, 1.1362934079583968]",
+    "  Background mean: 0.79x, std: 0.16x",
+    "",
+    "  Tidal lines:",
+    "    O1   (LUNAR)  10.758 uHz: Q=0.2253, A=0.2434, Q/A=0.93x z=0.8",
+    "    Q1   (LUNAR)  10.676 uHz: Q=0.2253, A=0.2434, Q/A=0.93x z=0.8",
+    "    S1   (SOLAR)  11.574 uHz: Q=0.1033, A=0.1633, Q/A=0.63x z=-1.0",
+    "    P1   (SOLAR)  11.542 uHz: Q=0.1033, A=0.1633, Q/A=0.63x z=-1.0",
+    "    K1   (SOLAR)  11.608 uHz: Q=0.1033, A=0.1633, Q/A=0.63x z=-1.0",
+    "    N2   (LUNAR)  21.422 uHz: Q=0.1354, A=0.1573, Q/A=0.86x z=0.4",
+    "    M2   (LUNAR)  22.365 uHz: Q=0.1884, A=0.1182, Q/A=1.59x z=5.0",
+    "    S2   (SOLAR)  23.148 uHz: Q=0.2651, A=0.0927, Q/A=2.86x z=13.0",
+    "    K2   (SOLAR)  23.098 uHz: Q=0.2651, A=0.0927, Q/A=2.86x z=13.0",
+    "    M3   (LUNAR)  34.533 uHz: Q=0.0848, A=0.1192, Q/A=0.71x z=-0.5",
+    "",
+    "  Lunar mean Q/A: 1.00x (n=5)",
+    "  Solar mean Q/A: 1.52x (n=5)",
+    "  SOLAR tides show STRONGER or equal clock-type differentiation than LUNAR tides.",
+    "  This does NOT support TEP: atmospheric effects dominate.",
+    "",
+    "  M2 (lunar) Q/A:      1.59x",
+    "  S2 (solar) Q/A:      2.86x",
+    "  M2 - S2:             -1.27x",
+    "  S2 (solar) >= M2 (lunar): atmospheric component dominates"
+  ],
+  "pre_registered_prediction": "If TEP is real, the Q/A ratio should be higher at lunar tidal frequencies (M2, O1, N2) than at solar tidal frequencies (S2, S1, K1), because lunar tides are purely gravitational while solar tides have atmospheric components."
+}

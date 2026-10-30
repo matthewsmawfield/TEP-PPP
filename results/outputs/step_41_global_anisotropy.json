@@ -1,0 +1,73 @@
+{
+  "test": "global_anisotropy_t2",
+  "product": "COD0MGXFIN precise receiver clocks (RINEX CLK AR)",
+  "T2_global": {
+    "n_days": 30,
+    "n_pair_days": 189932,
+    "n_stations": 160,
+    "n_ew_pairs": 43808,
+    "n_ns_pairs": 48384,
+    "ew_minus_ns": -0.0188712780239457,
+    "ci95": [
+      -0.04266096916921455,
+      0.00038280590110675584
+    ],
+    "p_ew_le_ns": 0.965,
+    "sign_positive": false,
+    "significant": false,
+    "dmax_km": 18996.899887546933,
+    "limiting_factor": "orientation diversity or station count"
+  },
+  "timestamp": "2026-09-01T17:43:16.040547",
+  "T2_global_dmax5000": {
+    "n_days": 30,
+    "n_pair_days": 36685,
+    "n_stations": 160,
+    "n_ew_pairs": 10024,
+    "n_ns_pairs": 8665,
+    "ew_minus_ns": -0.0008162191808973089,
+    "ci95": [
+      -0.05898661434823112,
+      0.06222598255427311
+    ],
+    "p_ew_le_ns": 0.5225,
+    "sign_positive": false,
+    "significant": false,
+    "dmax_km": 4999.892148982219,
+    "limiting_factor": "orientation diversity or station count"
+  },
+  "T2_global_dmax10000": {
+    "n_days": 30,
+    "n_pair_days": 107438,
+    "n_stations": 160,
+    "n_ew_pairs": 22951,
+    "n_ns_pairs": 27000,
+    "ew_minus_ns": -0.0202626491963711,
+    "ci95": [
+      -0.05064075040597469,
+      0.008415734847821753
+    ],
+    "p_ew_le_ns": 0.8975,
+    "sign_positive": false,
+    "significant": false,
+    "dmax_km": 9999.645043148972,
+    "limiting_factor": "orientation diversity or station count"
+  },
+  "T2_global_dmax19000": {
+    "n_days": 30,
+    "n_pair_days": 189932,
+    "n_stations": 160,
+    "n_ew_pairs": 43808,
+    "n_ns_pairs": 48384,
+    "ew_minus_ns": -0.0188712780239457,
+    "ci95": [
+      -0.0397266031514696,
+      0.0007812941140104884
+    ],
+    "p_ew_le_ns": 0.97,
+    "sign_positive": false,
+    "significant": false,
+    "dmax_km": 18996.899887546933,
+    "limiting_factor": "orientation diversity or station count"
+  }
+}

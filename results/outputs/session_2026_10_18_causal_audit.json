@@ -1,0 +1,65 @@
+{
+ "date": "2026-10-18",
+ "scope": "107-window corpus, data/ppp_live/results (Oct 16-18)",
+ "oracle_vs_causal_split": {
+  "stack_vertex_on_mean_pct": 28.33,
+  "stack_vertex_on_min_pct": 6.3,
+  "stack_vertex_free": {
+   "scale_4_mean_pct": -45.6,
+   "scale_2_mean_pct": -39.0,
+   "scale_1_mean_pct": -31.7,
+   "scale_05_mean_pct": -24.0,
+   "scale_025_mean_pct": -16.1
+  },
+  "pool_estimators_vertex_free_mean_pct": {
+   "concat": -29.16,
+   "bsc": -39.07,
+   "median": -25.46,
+   "signmed": -35.52,
+   "trimmed": -28.7,
+   "std": -40.0,
+   "huber": -27.49
+  },
+  "joint_ridge_vertex_free": {
+   "lam_0.01_mean_pct": 0.02,
+   "lam_1.0_mean_pct": 0.02
+  },
+  "vertex_sign_persistence_mean": 0.599,
+  "pooled_vs_vertex_signmatch_mean": 0.489
+ },
+ "repeatability_spectrum_detrended_residual": {
+  "86164s": {
+   "pooled_vertex": -0.32,
+   "neg_frac": 0.94,
+   "n": 33
+  },
+  "86400s": {
+   "pooled_vertex": -0.061,
+   "n": 33
+  },
+  "all_other_lags_7200_80000": "within +/-0.09 noise"
+ },
+ "causal_channels_screened": {
+  "residDT_sidereal_echo": "transfers ~+10% at |alpha|=0.29 (n=33 paired) - consistent with deployed selfsid +5.6%",
+  "accumDT_sidereal": {
+   "alpha0.29_mean_pct": 0.57,
+   "sign_match": 0.79,
+   "note": "yesterday's whole-stack correction at sidereal lag - new deployable channel"
+  },
+  "ech150_rolling": {
+   "mean": 0.75,
+   "note": "redundant with in-window AR128 RLS"
+  },
+  "clim_h/clim_h5": "~+0.1 - noise level",
+  "station_new_lags": "all <= +0.2 - clip opportunism floor",
+  "derivatives/products/bumps/tau": "<= +0.2"
+ },
+ "rls_channel_regressors": {
+  "AR128_control": 99.762,
+  "chanRLS_only_best": 99.164,
+  "chanRLS+AR": 99.816,
+  "verdict": "in-window mop saturated; +0.05% not deployable"
+ },
+ "persist_model_variants": "all worse (level -6.7%, damped -10..-21%, lastN -52..-172%, quad -157%, hfit -42.5%) - production Theil-Sen+drift-gate is optimal",
+ "pppar_fixrate": "mid-day collapse 0.01-0.27 (07:48-11:30 UTC+1) vs ~0.45-0.75 baseline; recovering ~12:00; coincides with elevated conv_rmse 0.4-0.9m - suspect product freshness/geometry cycle, check fetch_precise log on Pi"
+}

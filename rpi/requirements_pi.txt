@@ -1,0 +1,26 @@
+# TEP-PPP Raspberry Pi dependencies
+# Pi 3 Model B (ARMv8, 1 GB RAM) — lightweight packages only
+
+# GPS serial communication
+pyserial>=3.5
+
+# Display: pygame for framebuffer rendering
+# pygame-ce (community edition) has better ARM support than legacy pygame
+pygame-ce>=2.4.0
+
+# Core scientific stack (pre-built wheels for arm64)
+numpy>=1.24.0
+scipy>=1.10.0
+
+# HTTP client for NTRIP / API calls
+requests>=2.31.0
+
+# Web dashboard (gps_web.py)
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# System monitoring
+psutil>=5.9.0
+
+# Timezone-aware datetime handling
+python-dateutil>=2.8.0

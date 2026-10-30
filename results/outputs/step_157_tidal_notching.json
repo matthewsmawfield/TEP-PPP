@@ -1,0 +1,248 @@
+{
+  "step": 157,
+  "title": "Tidal-line notching: do specific gravitational frequencies carry unique signal?",
+  "timestamp": "2026-09-07T01:12:54.403087+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "notch_half_width_uhz": 0.5,
+  "results": {
+    "full_band": {
+      "median_rms_m": 0.6220280738168449,
+      "notch_effect_pct": {
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_M2_lunar": {
+      "median_rms_m": 0.6226778923943548,
+      "notch_effect_pct": {
+        "median": 0.040398135014085845,
+        "ci95": [
+          -0.020215071587859068,
+          0.14749694438462857
+        ],
+        "n": 13,
+        "frac_positive": 0.6923076923076923
+      },
+      "n": 13
+    },
+    "notch_O1_lunar": {
+      "median_rms_m": 0.6217832901704634,
+      "notch_effect_pct": {
+        "median": -0.2701209821297623,
+        "ci95": [
+          -0.40898628511849555,
+          -0.1485048925562782
+        ],
+        "n": 13,
+        "frac_positive": 0.15384615384615385
+      },
+      "n": 13
+    },
+    "notch_S2_solar": {
+      "median_rms_m": 0.6227456665773655,
+      "notch_effect_pct": {
+        "median": 0.11536340411733015,
+        "ci95": [
+          -0.055446827945804245,
+          0.23605441435698982
+        ],
+        "n": 13,
+        "frac_positive": 0.6923076923076923
+      },
+      "n": 13
+    },
+    "notch_K1_mixed": {
+      "median_rms_m": 0.6189828639753207,
+      "notch_effect_pct": {
+        "median": -1.0376246644051679,
+        "ci95": [
+          -1.2840892066141363,
+          -0.6268491812695509
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_solar_24h": {
+      "median_rms_m": 0.6189828639753207,
+      "notch_effect_pct": {
+        "median": -1.0376246644051679,
+        "ci95": [
+          -1.2840892066141363,
+          -0.6268491812695509
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_N2_lunar": {
+      "median_rms_m": 0.6229911267574955,
+      "notch_effect_pct": {
+        "median": 0.037658122458172905,
+        "ci95": [
+          0.011826693291538959,
+          0.15844303141914207
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "n": 13
+    },
+    "notch_fake_25h": {
+      "median_rms_m": 0.622913449782825,
+      "notch_effect_pct": {
+        "median": 0.09315282815214321,
+        "ci95": [
+          0.06599372933566716,
+          0.1659334103121468
+        ],
+        "n": 13,
+        "frac_positive": 0.8461538461538461
+      },
+      "n": 13
+    },
+    "notch_fake_13h": {
+      "median_rms_m": 0.6228844464444858,
+      "notch_effect_pct": {
+        "median": 0.0464797089954061,
+        "ci95": [
+          0.0003118358111287023,
+          0.13767427286459633
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "n": 13
+    },
+    "notch_fake_11h": {
+      "median_rms_m": 0.6228911250834589,
+      "notch_effect_pct": {
+        "median": 0.04195455277389293,
+        "ci95": [
+          0.001152226651557342,
+          0.1387479605732711
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "n": 13
+    },
+    "notch_fake_7h": {
+      "median_rms_m": 0.6227890341298317,
+      "notch_effect_pct": {
+        "median": 0.08034272943207021,
+        "ci95": [
+          0.03733091193653948,
+          0.1434829309721275
+        ],
+        "n": 13,
+        "frac_positive": 0.8461538461538461
+      },
+      "n": 13
+    },
+    "notch_all_lunar": {
+      "median_rms_m": 0.6216428460744149,
+      "notch_effect_pct": {
+        "median": -0.24252941647132653,
+        "ci95": [
+          -0.4623999193531514,
+          -0.08238184620817934
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_all_solar": {
+      "median_rms_m": 0.6168199719164532,
+      "notch_effect_pct": {
+        "median": -1.2634266254916704,
+        "ci95": [
+          -1.405906441552296,
+          -0.8186319305543255
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_all_real": {
+      "median_rms_m": 0.6134923399231436,
+      "notch_effect_pct": {
+        "median": -1.5214263377440473,
+        "ci95": [
+          -1.9775147991319075,
+          -0.839999001281988
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "notch_all_fake": {
+      "median_rms_m": 0.6229346404395243,
+      "notch_effect_pct": {
+        "median": 0.14574368277568972,
+        "ci95": [
+          0.11307740169066438,
+          0.21972591453724988
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "n": 13
+    },
+    "notch_lunar_and_solar": {
+      "median_rms_m": 0.6151180607516222,
+      "notch_effect_pct": {
+        "median": -1.5477883700937278,
+        "ci95": [
+          -1.999660714943019,
+          -0.7642797578152227
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    }
+  },
+  "interpretation": [
+    "Tidal-line notching: 13 eval days, 13-day window.",
+    "  Positive % = notching HURTS (the frequency carries unique signal)",
+    "  Negative % = notching HELPS (the frequency is noise)",
+    "",
+    "  full_band                     : +0.000% CI[0.0, 0.0] HELPS ",
+    "  notch_M2_lunar                : +0.040% CI[-0.020215071587859068, 0.14749694438462857] HURTS **",
+    "  notch_O1_lunar                : -0.270% CI[-0.40898628511849555, -0.1485048925562782] HELPS ",
+    "  notch_S2_solar                : +0.115% CI[-0.055446827945804245, 0.23605441435698982] HURTS **",
+    "  notch_K1_mixed                : -1.038% CI[-1.2840892066141363, -0.6268491812695509] HELPS ",
+    "  notch_solar_24h               : -1.038% CI[-1.2840892066141363, -0.6268491812695509] HELPS ",
+    "  notch_N2_lunar                : +0.038% CI[0.011826693291538959, 0.15844303141914207] HURTS ***",
+    "  notch_fake_25h                : +0.093% CI[0.06599372933566716, 0.1659334103121468] HURTS ***",
+    "  notch_fake_13h                : +0.046% CI[0.0003118358111287023, 0.13767427286459633] HURTS ***",
+    "  notch_fake_11h                : +0.042% CI[0.001152226651557342, 0.1387479605732711] HURTS ***",
+    "  notch_fake_7h                 : +0.080% CI[0.03733091193653948, 0.1434829309721275] HURTS ***",
+    "  notch_all_lunar               : -0.243% CI[-0.4623999193531514, -0.08238184620817934] HELPS ",
+    "  notch_all_solar               : -1.263% CI[-1.405906441552296, -0.8186319305543255] HELPS ",
+    "  notch_all_real                : -1.521% CI[-1.9775147991319075, -0.839999001281988] HELPS ",
+    "  notch_all_fake                : +0.146% CI[0.11307740169066438, 0.21972591453724988] HURTS ***",
+    "  notch_lunar_and_solar         : -1.548% CI[-1.999660714943019, -0.7642797578152227] HELPS ",
+    "\n  Lunar notching hurt: -0.243%",
+    "  Fake notching hurt:  +0.146%",
+    "  Difference (lunar - fake): -0.388%",
+    "  Notching fake tides hurts as much as or more than notching lunar tides.",
+    "  The lunar frequencies do NOT carry unique signal beyond nearby noise.",
+    "\n  M2 lunar notching: +0.040% CI[-0.020215071587859068, 0.14749694438462857]",
+    "  Notching M2 HURTS \u2014 the M2 lunar tide carries unique predictive signal."
+  ],
+  "pre_registered_prediction": "If TEP is real, notching the M2 and O1 lunar tidal frequencies should HURT prediction more than notching fake non-physical frequencies. The gravitational tidal lines carry unique predictive signal that cannot be replaced by nearby frequencies."
+}

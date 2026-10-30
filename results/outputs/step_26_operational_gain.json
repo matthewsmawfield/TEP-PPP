@@ -1,0 +1,390 @@
+{
+  "test": "operational_gain_honest_baselines",
+  "baselines": {
+    "none": "clock free -- standard per-epoch PPP",
+    "self": "prior at the station's own band-limited variability (NO NETWORK)",
+    "net_mean": "prior at the bulk network-average prediction error (scale=1)",
+    "uniform_krig": "prior at the scaled-mean prediction error (same nugget, NO geometry)",
+    "kernel": "prior at the nested-CV distance-kernel prediction error"
+  },
+  "broadcast_spp": {
+    "label": "broadcast_spp",
+    "product": "broadcast",
+    "heldout_prior_quality_m": {
+      "self": 14.912170549407934,
+      "net_mean": 12.773605907569536,
+      "uniform_krig": 12.763509704223747,
+      "kernel": 5.128490618120228
+    },
+    "network_marginal_skill_pct": {
+      "bulk_mean_vs_self": 14.341068825311332,
+      "kernel_vs_self": 65.60869122889794,
+      "kernel_vs_bulk_mean": 59.85087801181399,
+      "uniform_krig_vs_self": 14.408773277271136,
+      "kernel_vs_uniform_krig": 59.81911921590745
+    },
+    "by_satellite_count": {
+      "3": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 1.0,
+        "pos_sigma_m": {
+          "none": null,
+          "self": 22.72224401952224,
+          "net_mean": 22.463315597218696,
+          "uniform_krig": 22.451579025378482,
+          "kernel": 15.57191767004315
+        },
+        "kernel_vs_self_pct": 31.468398734454894,
+        "kernel_vs_bulk_mean_pct": 30.678453932369653,
+        "kernel_vs_uniform_krig_pct": 30.642216066668638
+      },
+      "4": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0009398496240601503,
+        "pos_sigma_m": {
+          "none": 47.07623119171245,
+          "self": 15.514247876827895,
+          "net_mean": 14.023806568966643,
+          "uniform_krig": 14.02070327887916,
+          "kernel": 8.975224794663813
+        },
+        "kernel_vs_self_pct": 42.14850203554358,
+        "kernel_vs_bulk_mean_pct": 36.00008135790224,
+        "kernel_vs_uniform_krig_pct": 35.985915854990495
+      },
+      "5": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 17.856634008655234,
+          "self": 11.878499809755619,
+          "net_mean": 10.420757237270294,
+          "uniform_krig": 10.42565686313285,
+          "kernel": 6.709393173952686
+        },
+        "kernel_vs_self_pct": 43.516493821531476,
+        "kernel_vs_bulk_mean_pct": 35.615109140473514,
+        "kernel_vs_uniform_krig_pct": 35.64536736597955
+      },
+      "6": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 10.521210333068758,
+          "self": 8.853676393796162,
+          "net_mean": 8.000375383381549,
+          "uniform_krig": 8.004723765300273,
+          "kernel": 5.521053970033874
+        },
+        "kernel_vs_self_pct": 37.64111399076526,
+        "kernel_vs_bulk_mean_pct": 30.990063522490995,
+        "kernel_vs_uniform_krig_pct": 31.027551581890624
+      },
+      "8": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 5.77239472517842,
+          "self": 5.488915749251018,
+          "net_mean": 5.247734410920706,
+          "uniform_krig": 5.249980340930971,
+          "kernel": 4.1323686886056805
+        },
+        "kernel_vs_self_pct": 24.71429919161071,
+        "kernel_vs_bulk_mean_pct": 21.254233445844996,
+        "kernel_vs_uniform_krig_pct": 21.28792071109178
+      },
+      "99": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 1.0636873559935778,
+          "self": 1.0631169198257358,
+          "net_mean": 1.062628845461842,
+          "uniform_krig": 1.0626345536603434,
+          "kernel": 1.054327837716451
+        },
+        "kernel_vs_self_pct": 0.8267277046747901,
+        "kernel_vs_bulk_mean_pct": 0.781176586805632,
+        "kernel_vs_uniform_krig_pct": 0.781709564711508
+      }
+    },
+    "by_satellite_count_train_est": {
+      "3": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 1.0,
+        "pos_sigma_m": {
+          "none": null,
+          "self": 19.832538102508618,
+          "net_mean": 18.647649657195984,
+          "uniform_krig": 18.652861460113776,
+          "kernel": 11.898449207328351
+        },
+        "kernel_vs_self_pct": 40.005413599466046,
+        "kernel_vs_bulk_mean_pct": 36.193303574121835,
+        "kernel_vs_uniform_krig_pct": 36.21113182676383
+      },
+      "4": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0009398496240601503,
+        "pos_sigma_m": {
+          "none": 47.07623119171245,
+          "self": 15.521167060665658,
+          "net_mean": 13.354224783026464,
+          "uniform_krig": 13.358186246551288,
+          "kernel": 7.167129976277069
+        },
+        "kernel_vs_self_pct": 53.82351115567664,
+        "kernel_vs_bulk_mean_pct": 46.330617518235414,
+        "kernel_vs_uniform_krig_pct": 46.346533548838465
+      },
+      "5": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 17.856634008655234,
+          "self": 12.360637908911258,
+          "net_mean": 10.604416661764747,
+          "uniform_krig": 10.613107699700539,
+          "kernel": 5.936292604815863
+        },
+        "kernel_vs_self_pct": 51.97422132610031,
+        "kernel_vs_bulk_mean_pct": 44.02056431618967,
+        "kernel_vs_uniform_krig_pct": 44.06640568640077
+      },
+      "6": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 10.521210333068758,
+          "self": 9.03171433066214,
+          "net_mean": 8.29091008976965,
+          "uniform_krig": 8.296219654584931,
+          "kernel": 5.220665599050695
+        },
+        "kernel_vs_self_pct": 42.19629399341339,
+        "kernel_vs_bulk_mean_pct": 37.03145321172162,
+        "kernel_vs_uniform_krig_pct": 37.07175296201953
+      },
+      "8": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 5.77239472517842,
+          "self": 5.5183950871532685,
+          "net_mean": 5.354090069397258,
+          "uniform_krig": 5.356013414266155,
+          "kernel": 4.144484131651703
+        },
+        "kernel_vs_self_pct": 24.896929882748108,
+        "kernel_vs_bulk_mean_pct": 22.59218507845774,
+        "kernel_vs_uniform_krig_pct": 22.619982231326198
+      },
+      "99": {
+        "n_epochs": 255360,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 1.0636873559935778,
+          "self": 1.063163804633735,
+          "net_mean": 1.0627938100321823,
+          "uniform_krig": 1.0627988876100591,
+          "kernel": 1.0584293019333402
+        },
+        "kernel_vs_self_pct": 0.4453220359609489,
+        "kernel_vs_bulk_mean_pct": 0.41066367320204966,
+        "kernel_vs_uniform_krig_pct": 0.41113946652173716
+      }
+    }
+  },
+  "precise_clk": {
+    "label": "precise_clk",
+    "product": "clk_cod",
+    "heldout_prior_quality_m": {
+      "self": 0.8954470673009995,
+      "net_mean": 0.9796983218151019,
+      "uniform_krig": 0.9760131795273679,
+      "kernel": 0.9008793498677206
+    },
+    "network_marginal_skill_pct": {
+      "bulk_mean_vs_self": -9.408848115170798,
+      "kernel_vs_self": -0.6066559113421022,
+      "kernel_vs_bulk_mean": 8.045228841604235,
+      "uniform_krig_vs_self": -8.997305945644074,
+      "kernel_vs_uniform_krig": 7.698034333514913
+    },
+    "by_satellite_count": {
+      "3": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 1.0,
+        "pos_sigma_m": {
+          "none": null,
+          "self": 9.89676401089831,
+          "net_mean": 9.931857453974217,
+          "uniform_krig": 9.931569739823125,
+          "kernel": 9.902641511569772
+        },
+        "kernel_vs_self_pct": -0.059388105697877336,
+        "kernel_vs_bulk_mean_pct": 0.2941639319718026,
+        "kernel_vs_uniform_krig_pct": 0.291275488278131
+      },
+      "4": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0028601694915254237,
+        "pos_sigma_m": {
+          "none": 40.111273698768834,
+          "self": 4.982642664939925,
+          "net_mean": 5.014267907954714,
+          "uniform_krig": 5.013999877305933,
+          "kernel": 4.985074421616108
+        },
+        "kernel_vs_self_pct": -0.04880455693310193,
+        "kernel_vs_bulk_mean_pct": 0.5822083477488915,
+        "kernel_vs_uniform_krig_pct": 0.5768938252421085
+      },
+      "5": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 15.208558609060947,
+          "self": 3.598756748686168,
+          "net_mean": 3.643444379065046,
+          "uniform_krig": 3.642928064408343,
+          "kernel": 3.6087562836618146
+        },
+        "kernel_vs_self_pct": -0.2778608189980325,
+        "kernel_vs_bulk_mean_pct": 0.9520687512768577,
+        "kernel_vs_uniform_krig_pct": 0.9380306210377665
+      },
+      "6": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 9.59901640605352,
+          "self": 2.9241056245923582,
+          "net_mean": 2.9656635062574956,
+          "uniform_krig": 2.9649439321295405,
+          "kernel": 2.93654374790127
+        },
+        "kernel_vs_self_pct": -0.4253650485230187,
+        "kernel_vs_bulk_mean_pct": 0.9818969109200437,
+        "kernel_vs_uniform_krig_pct": 0.957865810564329
+      },
+      "8": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 5.368823279084697,
+          "self": 2.1409852205737154,
+          "net_mean": 2.185552157865179,
+          "uniform_krig": 2.1845761791074487,
+          "kernel": 2.1580838732432692
+        },
+        "kernel_vs_self_pct": -0.7986347829608942,
+        "kernel_vs_bulk_mean_pct": 1.2568121297430235,
+        "kernel_vs_uniform_krig_pct": 1.212697735951851
+      },
+      "99": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 1.0729255614781659,
+          "self": 0.9561384073897223,
+          "net_mean": 0.976386745919276,
+          "uniform_krig": 0.9760424649489085,
+          "kernel": 0.9614070158099127
+        },
+        "kernel_vs_self_pct": -0.5510298905964772,
+        "kernel_vs_bulk_mean_pct": 1.5342004766010775,
+        "kernel_vs_uniform_krig_pct": 1.4994684826301952
+      }
+    },
+    "by_satellite_count_train_est": {
+      "3": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 1.0,
+        "pos_sigma_m": {
+          "none": null,
+          "self": 9.410672057495209,
+          "net_mean": 9.41611717672259,
+          "uniform_krig": 9.416071502852281,
+          "kernel": 9.401054752862702
+        },
+        "kernel_vs_self_pct": 0.10219572601987137,
+        "kernel_vs_bulk_mean_pct": 0.15996427802665858,
+        "kernel_vs_uniform_krig_pct": 0.1594799910454192
+      },
+      "4": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0028601694915254237,
+        "pos_sigma_m": {
+          "none": 40.111273698768834,
+          "self": 4.41150641241452,
+          "net_mean": 4.4250367037051985,
+          "uniform_krig": 4.42463573726165,
+          "kernel": 4.396284881178422
+        },
+        "kernel_vs_self_pct": 0.3450415756681702,
+        "kernel_vs_bulk_mean_pct": 0.6497533117115539,
+        "kernel_vs_uniform_krig_pct": 0.6407500586878556
+      },
+      "5": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 15.208558609060947,
+          "self": 3.159107684686127,
+          "net_mean": 3.178756622809778,
+          "uniform_krig": 3.178169413009005,
+          "kernel": 3.1384412720439006
+        },
+        "kernel_vs_self_pct": 0.6541851277310884,
+        "kernel_vs_bulk_mean_pct": 1.268274220070409,
+        "kernel_vs_uniform_krig_pct": 1.2500321978585416
+      },
+      "6": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 9.59901640605352,
+          "self": 2.5486610274776433,
+          "net_mean": 2.573183403466955,
+          "uniform_krig": 2.572448729257993,
+          "kernel": 2.52159001275544
+        },
+        "kernel_vs_self_pct": 1.0621661503960378,
+        "kernel_vs_bulk_mean_pct": 2.0050413290401803,
+        "kernel_vs_uniform_krig_pct": 1.9770546220846508
+      },
+      "8": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 5.368823279084697,
+          "self": 1.9690420178687702,
+          "net_mean": 2.001985297900945,
+          "uniform_krig": 2.001099909197151,
+          "kernel": 1.9330667389803537
+        },
+        "kernel_vs_self_pct": 1.827044753842022,
+        "kernel_vs_bulk_mean_pct": 3.442510741355176,
+        "kernel_vs_uniform_krig_pct": 3.399788781365354
+      },
+      "99": {
+        "n_epochs": 113280,
+        "frac_singular_no_prior": 0.0,
+        "pos_sigma_m": {
+          "none": 1.0729255614781659,
+          "self": 0.9754370953121023,
+          "net_mean": 0.9829915754289421,
+          "uniform_krig": 0.982797126330019,
+          "kernel": 0.9658335570333774
+        },
+        "kernel_vs_self_pct": 0.9845369142591598,
+        "kernel_vs_bulk_mean_pct": 1.745489872390571,
+        "kernel_vs_uniform_krig_pct": 1.7260499488828795
+      }
+    }
+  },
+  "timestamp": "2026-09-01T19:24:50.515353",
+  "headline": "Broadcast SPP, held-out stations: the network kernel is 66% better than knowing nothing but the station's own clock variability, and 60% better than a bulk network average. In the position domain under obstruction (honest, prior sigma = actual error) this is worth 42% at 4 visible satellites and 25% at 8, versus a no-network prior. With a deployable training-estimated sigma the corresponding gains are 54% (4 sats) and 25% (8 sats)."
+}

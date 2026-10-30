@@ -1,0 +1,46 @@
+{
+  "lam_5e+06": {
+    "real_mean_pct": 3.3939848859728765,
+    "real_median_pct": 2.574975748831948,
+    "real_wins": 22,
+    "real_n": 24,
+    "perm_mean_of_means": 0.42280262311525674,
+    "perm_p50": 0.3909057514643092,
+    "perm_p95": 1.210076554968464,
+    "perm_max": 1.9620680665268215,
+    "perm_frac_ge_real": 0.0,
+    "perm_z": 5.813316304985646,
+    "tail": {
+      "real_mean_pct": 6.97789919660876,
+      "real_wins": 19,
+      "real_n": 24,
+      "perm_mean_of_means": 0.9927298122071174,
+      "perm_p95": 2.235923291849819,
+      "perm_max": 3.7601397378484287,
+      "perm_frac_ge_real": 0.0,
+      "perm_z": 6.639936171028706
+    }
+  },
+  "lam_1e+07": {
+    "real_mean_pct": 3.027862458740662,
+    "real_median_pct": 2.3982027579718346,
+    "real_wins": 23,
+    "real_n": 24,
+    "perm_mean_of_means": 0.37847640992982995,
+    "perm_p50": 0.37170441022820583,
+    "perm_p95": 0.9767147135895154,
+    "perm_max": 1.602192282584432,
+    "perm_frac_ge_real": 0.0,
+    "perm_z": 6.535664787524211,
+    "tail": {
+      "real_mean_pct": 6.045711364015067,
+      "real_wins": 19,
+      "real_n": 24,
+      "perm_mean_of_means": 0.8575441584797701,
+      "perm_p95": 1.8953793455925374,
+      "perm_max": 3.161166656440636,
+      "perm_frac_ge_real": 0.0,
+      "perm_z": 7.1247256301430575
+    }
+  }
+}

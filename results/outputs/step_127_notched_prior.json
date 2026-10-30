@@ -1,0 +1,56 @@
+{
+  "step": 127,
+  "title": "Notched TEP prior: exploiting the solar-illumination-independent TEP continuum for out-of-year generalisation",
+  "timestamp": "2026-09-06T19:03:11.632570+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_evaluation_days": 57,
+  "n_days_scored": 57,
+  "notch_periods_h": [
+    24.0,
+    12.0,
+    8.0,
+    6.0,
+    23.934444444444445,
+    12.42
+  ],
+  "notch_width_frac": 0.05,
+  "notched_lambda_km": 1877.0,
+  "full_band_lambda_km": 4200.0,
+  "results": {
+    "n_days": 57,
+    "notched_vs_full_band_pct": {
+      "median": 1.8711320927130348,
+      "ci95": [
+        1.6385484932972982,
+        2.6008678933755913
+      ],
+      "n": 57,
+      "frac_positive": 0.8596491228070176
+    },
+    "notched_vs_empirical_pct": {
+      "median": 0.34226397199975667,
+      "ci95": [
+        -0.2877619388423014,
+        1.0235005533722807
+      ],
+      "n": 57,
+      "frac_positive": 0.5964912280701754
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "notched": 1.3399660375059226,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "The notched TEP continuum BEATS the full-band TEP kernel on independent-year data (median +1.87%, CI95 [+1.64, +2.60]). The full-band kernel's failure on 2025 data (Step 92: -0.93%) was caused by the solar tidal lines \u2014 atmospheric modulations that do not generalise year-to-year.  Removing them yields a TEP continuum that generalises better.  This directly exploits the Step 125 finding as a predictive strength.",
+    "The notched TEP continuum is better than empirical covariance (median +0.34%, but CI95 includes zero).  The improvement is in the expected direction but not significant."
+  ],
+  "pre_registered_prediction": "The full-band TEP kernel fails on 2025 data (Step 92: -0.93%) because the solar tidal lines are atmospheric modulations that do not generalise year-to-year.  The notched TEP continuum (lambda=1877 km, solar-illumination-independent per Step 125) should beat both the full-band TEP kernel and the empirical covariance on independent-year data.  This exploits the atmospheric modulation finding as a predictive strength: by removing the modulations, we isolate the stable TEP continuum that generalises across years.",
+  "reference": {
+    "step_92_full_band_vs_emp": -0.93,
+    "step_121_notched_lambda_km": 1877.0,
+    "step_125_notched_day_night_inversion": true
+  }
+}

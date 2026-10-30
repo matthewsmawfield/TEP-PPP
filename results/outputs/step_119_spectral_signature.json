@@ -1,0 +1,113 @@
+{
+  "step": 119,
+  "title": "Spectral signature of the network mean clock: TEP vs atmospheric",
+  "timestamp": "2026-09-06T18:07:03.551239+00:00",
+  "product": "clk_cod",
+  "n_days": 60,
+  "n_points": 17280,
+  "dt_s": 300.0,
+  "duration_days": 59.99652777777778,
+  "spectral_fit": {
+    "alpha": -0.30930524620355493,
+    "description": "1/f^0.30930524620355493"
+  },
+  "known_period_peaks": {
+    "solar_diurnal_24h": {
+      "frequency_hz": 1.1574074074074073e-05,
+      "period_s": 86400.0,
+      "in_band": true,
+      "local_max_power": 0.005444279929177858,
+      "local_max_freq_hz": 1.1574074074074073e-05,
+      "background_median_power": 0.00030601464469464344,
+      "enhancement_ratio": 17.790913028395845,
+      "ratio_to_1f_prediction": 38.858052250841425
+    },
+    "semidiurnal_12h": {
+      "frequency_hz": 2.3148148148148147e-05,
+      "period_s": 43200.0,
+      "in_band": true,
+      "local_max_power": 0.0022653249372108714,
+      "local_max_freq_hz": 2.4498456790123455e-05,
+      "background_median_power": 0.00042605680841999546,
+      "enhancement_ratio": 5.31695513941365,
+      "ratio_to_1f_prediction": 20.034626176155744
+    },
+    "sidereal_23h56m": {
+      "frequency_hz": 1.1605775033656747e-05,
+      "period_s": 86164.0,
+      "in_band": true,
+      "local_max_power": 0.005444279929177858,
+      "local_max_freq_hz": 1.1574074074074073e-05,
+      "background_median_power": 0.00030601464469464344,
+      "enhancement_ratio": 17.790913028395845,
+      "ratio_to_1f_prediction": 38.890940753980786
+    },
+    "gps_orbital_11h58m": {
+      "frequency_hz": 2.3211550067313495e-05,
+      "period_s": 43082.0,
+      "in_band": true,
+      "local_max_power": 0.0022653249372108714,
+      "local_max_freq_hz": 2.4498456790123455e-05,
+      "background_median_power": 0.00042605680841999546,
+      "enhancement_ratio": 5.31695513941365,
+      "ratio_to_1f_prediction": 20.05158299276704
+    },
+    "galileo_orbital_14h05m": {
+      "frequency_hz": 1.9735543714229327e-05,
+      "period_s": 50670.0,
+      "in_band": true,
+      "local_max_power": 0.0021777361426472044,
+      "local_max_freq_hz": 2.1219135802469135e-05,
+      "background_median_power": 0.000480595972276337,
+      "enhancement_ratio": 4.53132416472902,
+      "ratio_to_1f_prediction": 18.33290556280995
+    },
+    "lunar_semidiurnal_12h25m": {
+      "frequency_hz": 2.2365360529611736e-05,
+      "period_s": 44712.0,
+      "in_band": true,
+      "local_max_power": 0.0022653249372108714,
+      "local_max_freq_hz": 2.4498456790123455e-05,
+      "background_median_power": 0.0004408075755378747,
+      "enhancement_ratio": 5.139033589535559,
+      "ratio_to_1f_prediction": 19.822577059113357
+    },
+    "lunar_diurnal_24h50m": {
+      "frequency_hz": 1.1182680264805868e-05,
+      "period_s": 89424.0,
+      "in_band": true,
+      "local_max_power": 0.005444279929177858,
+      "local_max_freq_hz": 1.1574074074074073e-05,
+      "background_median_power": 0.00034093918307947287,
+      "enhancement_ratio": 15.968478248828317,
+      "ratio_to_1f_prediction": 38.44677351784543
+    },
+    "8h_tertiary": {
+      "frequency_hz": 3.472222222222222e-05,
+      "period_s": 28800.0,
+      "in_band": true,
+      "local_max_power": 0.006167646056178646,
+      "local_max_freq_hz": 3.2600308641975306e-05,
+      "background_median_power": 0.00019975527857909195,
+      "enhancement_ratio": 30.876010386562083,
+      "ratio_to_1f_prediction": 61.83525137303411
+    },
+    "6h_quaternary": {
+      "frequency_hz": 4.6296296296296294e-05,
+      "period_s": 21600.0,
+      "in_band": true,
+      "local_max_power": 0.0024264179261405815,
+      "local_max_freq_hz": 4.282407407407407e-05,
+      "background_median_power": 0.000188184328134891,
+      "enhancement_ratio": 12.893836326271119,
+      "ratio_to_1f_prediction": 26.59049979027204
+    }
+  },
+  "interpretation": [
+    "The network mean clock spectrum follows 1/f^0.31, which is flatter than typical 1/f noise.",
+    "Peaks detected at 24h (17.79x) and/or 12h (5.32x) \u2014 the spectrum shows solar-driven atmospheric tidal signatures.",
+    "Sidereal peak detected (17.79x) \u2014 satellite geometry/multipath contributes to the common-mode.  Note: at 60-day duration the 24h and sidereal peaks are NOT resolved (separation 3.17e-08 Hz vs resolution 1.93e-07 Hz), so this peak may be the solar diurnal rather than the sidereal.",
+    "Lunar M2 tidal peak detected (5.14x) \u2014 the lunar semidiurnal tide contributes to the common-mode. This could be atmospheric (lunar atmospheric tide) or TEP (gravitational coupling)."
+  ],
+  "pre_registered_prediction": "Under TEP, the network mean clock spectrum should be scale-free (1/f^alpha) with NO peaks at 24h (solar), 12h (semidiurnal), or 23h56m (sidereal).  Under an atmospheric/ionospheric interpretation, peaks at 24h and 12h are expected.  Under a multipath interpretation, a sidereal peak is expected.  Enhancement ratio > 2.0 at a known period indicates a significant peak."
+}

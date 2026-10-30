@@ -1,0 +1,88 @@
+{
+  "step": 102,
+  "title": "Causally-tuned deployable P1 gate",
+  "timestamp": "2026-09-03T22:43:34.250779+00:00",
+  "product": "clk_cod",
+  "frozen_hyperparameters": {
+    "form": "gaussian",
+    "lambda_km": 2000.0,
+    "nugget": 0.15,
+    "empirical_Le_km": 400.0,
+    "n_cal_targets": 763,
+    "form_distribution": {
+      "gaussian": 487,
+      "exponential": 120,
+      "matern15": 156
+    },
+    "lambda_distribution": {
+      "150.0": 136,
+      "9000.0": 78,
+      "900.0": 150,
+      "2000.0": 165,
+      "400.0": 93,
+      "4200.0": 93,
+      "20000.0": 48
+    },
+    "nugget_distribution": {
+      "1.27": 194,
+      "0.15": 425,
+      "0.7": 69,
+      "0.35": 75
+    },
+    "empirical_Le_median": 400.0,
+    "empirical_Le_iqr": [
+      400.0,
+      400.0
+    ]
+  },
+  "calibration_year": 2024,
+  "evaluation_year": 2025,
+  "result": {
+    "n_days_used": 9,
+    "arsenal_vs_frozen_conventional_pct": {
+      "median": 13.386359300313266,
+      "ci95": [
+        11.890099368196172,
+        15.085520864659962
+      ],
+      "n": 9,
+      "frac_positive": 1.0
+    },
+    "arsenal_vs_frozen_empirical_pct": {
+      "median": -3.004059383494573,
+      "ci95": [
+        -3.5209126959721893,
+        -0.42992040388383224
+      ],
+      "n": 9,
+      "frac_positive": 0.1111111111111111
+    },
+    "arsenal_vs_geometry_scramble_pct": {
+      "median": 2.5819604838658416,
+      "ci95": [
+        -1.4120509921064173,
+        3.9395065036787913
+      ],
+      "n": 9,
+      "frac_positive": 0.5555555555555556
+    },
+    "arsenal_vs_phase_scramble_pct": {
+      "median": 1.2291075307242605,
+      "ci95": [
+        -1.6964482564474803,
+        2.9929414440416413
+      ],
+      "n": 9,
+      "frac_positive": 0.5555555555555556
+    },
+    "median_rms_m": {
+      "arsenal": 0.9088385371845531,
+      "frozen_conventional": 1.036772170979152,
+      "frozen_empirical": 0.8931464349718924,
+      "geometry_scramble": 0.9363545211086535,
+      "phase_scramble": 0.928133667918559
+    },
+    "deployable_gate_pass": false
+  },
+  "interpretation": "The physics-fixed TEP kernel is compared against conventional predictors whose hyperparameters are frozen from the 2024 development year only and applied unchanged to 2025 -- causally tuned and deployable in real time.  The Step 64 empirical arm (which fit a covariance length to the 2025 prior-day sample covariance) is replaced by a frozen-empirical arm whose length is fixed from 2024, so no baseline can learn the confirmatory year's spatial structure.  The gate passes if the TEP kernel beats both frozen deployable baselines and both scramble nulls with a positive 95% day-clustered CI."
+}

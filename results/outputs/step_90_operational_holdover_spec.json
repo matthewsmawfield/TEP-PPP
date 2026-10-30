@@ -1,0 +1,286 @@
+{
+  "step": 90,
+  "title": "Operational holdover specification with confidence intervals",
+  "timestamp": "2026-09-03T09:20:00.554696+00:00",
+  "data_source": "Step 56 (phase-resolved TEP, 45 days) and Step 55 (distance-only TEP, 90 days)",
+  "conversion": "1 m clock range error = 3.3356 ns time error",
+  "reference_specs_ns": {
+    "ITU-T G.8272 PRTC-A max |TE|": 100.0,
+    "ITU-T G.8272 PRTC-B max |TE|": 40.0,
+    "ITU-T G.8273.2 PRTC-T max |TE| (class A)": 100.0,
+    "ITU-T G.8273.2 PRTC-T max |TE| (class B)": 40.0,
+    "typical Stratum-3E 24 h holdover budget": 1000.0
+  },
+  "oscillator_models": "TE(t) = a*t + 0.5*b*t^2; values from manufacturer datasheets",
+  "headline": {
+    "1h_TE_ns": 24.7,
+    "1h_CI_ns": [
+      22.0,
+      27.3
+    ],
+    "1h_beats_OCXO": true,
+    "1h_improvement_vs_TCXO": "146x",
+    "8h_TE_ns": 65.7,
+    "8h_CI_ns": [
+      62.8,
+      68.9
+    ],
+    "8h_beats_Rubidium": true
+  },
+  "holdover_table": [
+    {
+      "outage_s": 600,
+      "outage_label": "10 min",
+      "method": "distance_only",
+      "n_eval": 191813,
+      "n_days": 90,
+      "network_aided_TE_rms_ns": 17.0,
+      "network_aided_TE_ci95_ns": [
+        16.5,
+        17.5
+      ],
+      "distance_only_TE_rms_ns": 17.0,
+      "persistence_TE_rms_ns": 19.9,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 600.2,
+        "disciplined OCXO (~$300)": 6.0,
+        "disciplined CSAC (~$1.5k)": 30.0,
+        "disciplined Rubidium (~$2k)": 3.0
+      },
+      "improvement_vs_free_running_TCXO": "35x",
+      "beats_OCXO": false,
+      "beats_CSAC": true,
+      "beats_Rubidium": false,
+      "within_PRTC_A": true,
+      "within_PRTC_B": true,
+      "gain_vs_persistence_pct": 14.8,
+      "gain_vs_persistence_ci95": [
+        12.1,
+        17.1
+      ]
+    },
+    {
+      "outage_s": 1800,
+      "outage_label": "30 min",
+      "method": "phase_resolved",
+      "n_eval": 45600,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 22.1,
+      "network_aided_TE_ci95_ns": [
+        19.8,
+        24.1
+      ],
+      "distance_only_TE_rms_ns": 22.7,
+      "persistence_TE_rms_ns": 30.1,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 1801.6,
+        "disciplined OCXO (~$300)": 18.4,
+        "disciplined CSAC (~$1.5k)": 90.1,
+        "disciplined Rubidium (~$2k)": 9.1
+      },
+      "improvement_vs_free_running_TCXO": "81x",
+      "beats_OCXO": false,
+      "beats_CSAC": true,
+      "beats_Rubidium": false,
+      "within_PRTC_A": true,
+      "within_PRTC_B": true,
+      "gain_vs_persistence_pct": 26.5,
+      "gain_vs_persistence_ci95": [
+        20.0,
+        34.1
+      ],
+      "gain_vs_distance_only_pct": 2.7,
+      "gain_vs_distance_only_ci95": [
+        1.7,
+        4.1
+      ]
+    },
+    {
+      "outage_s": 3600,
+      "outage_label": "1 h",
+      "method": "phase_resolved",
+      "n_eval": 44414,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 24.7,
+      "network_aided_TE_ci95_ns": [
+        22.0,
+        27.3
+      ],
+      "distance_only_TE_rms_ns": 26.0,
+      "persistence_TE_rms_ns": 39.9,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 3606.5,
+        "disciplined OCXO (~$300)": 37.5,
+        "disciplined CSAC (~$1.5k)": 180.6,
+        "disciplined Rubidium (~$2k)": 18.4
+      },
+      "improvement_vs_free_running_TCXO": "146x",
+      "beats_OCXO": true,
+      "beats_CSAC": true,
+      "beats_Rubidium": false,
+      "within_PRTC_A": true,
+      "within_PRTC_B": true,
+      "gain_vs_persistence_pct": 38.1,
+      "gain_vs_persistence_ci95": [
+        31.6,
+        44.9
+      ],
+      "gain_vs_distance_only_pct": 4.8,
+      "gain_vs_distance_only_ci95": [
+        3.3,
+        7.1
+      ]
+    },
+    {
+      "outage_s": 7200,
+      "outage_label": "2 h",
+      "method": "distance_only",
+      "n_eval": 173040,
+      "n_days": 90,
+      "network_aided_TE_rms_ns": 34.5,
+      "network_aided_TE_ci95_ns": [
+        31.9,
+        37.3
+      ],
+      "distance_only_TE_rms_ns": 34.5,
+      "persistence_TE_rms_ns": 57.2,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 7225.9,
+        "disciplined OCXO (~$300)": 78.0,
+        "disciplined CSAC (~$1.5k)": 362.3,
+        "disciplined Rubidium (~$2k)": 37.5
+      },
+      "improvement_vs_free_running_TCXO": "210x",
+      "beats_OCXO": true,
+      "beats_CSAC": true,
+      "beats_Rubidium": true,
+      "within_PRTC_A": true,
+      "within_PRTC_B": true,
+      "gain_vs_persistence_pct": 39.8,
+      "gain_vs_persistence_ci95": [
+        34.8,
+        44.3
+      ]
+    },
+    {
+      "outage_s": 14400,
+      "outage_label": "4 h",
+      "method": "phase_resolved",
+      "n_eval": 37983,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 40.6,
+      "network_aided_TE_ci95_ns": [
+        38.0,
+        43.9
+      ],
+      "distance_only_TE_rms_ns": 47.3,
+      "persistence_TE_rms_ns": 85.9,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 14503.7,
+        "disciplined OCXO (~$300)": 167.8,
+        "disciplined CSAC (~$1.5k)": 729.3,
+        "disciplined Rubidium (~$2k)": 78.0
+      },
+      "improvement_vs_free_running_TCXO": "357x",
+      "beats_OCXO": true,
+      "beats_CSAC": true,
+      "beats_Rubidium": true,
+      "within_PRTC_A": true,
+      "within_PRTC_B": false,
+      "gain_vs_persistence_pct": 52.7,
+      "gain_vs_persistence_ci95": [
+        48.9,
+        55.7
+      ],
+      "gain_vs_distance_only_pct": 14.1,
+      "gain_vs_distance_only_ci95": [
+        11.2,
+        17.2
+      ]
+    },
+    {
+      "outage_s": 28800,
+      "outage_label": "8 h",
+      "method": "phase_resolved",
+      "n_eval": 29498,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 65.7,
+      "network_aided_TE_ci95_ns": [
+        62.8,
+        68.9
+      ],
+      "distance_only_TE_rms_ns": 79.2,
+      "persistence_TE_rms_ns": 148.0,
+      "free_running_osc_TE_ns": {
+        "disciplined TCXO (~$5)": 29214.7,
+        "disciplined OCXO (~$300)": 383.4,
+        "disciplined CSAC (~$1.5k)": 1477.3,
+        "disciplined Rubidium (~$2k)": 168.1
+      },
+      "improvement_vs_free_running_TCXO": "445x",
+      "beats_OCXO": true,
+      "beats_CSAC": true,
+      "beats_Rubidium": true,
+      "within_PRTC_A": true,
+      "within_PRTC_B": false,
+      "gain_vs_persistence_pct": 55.6,
+      "gain_vs_persistence_ci95": [
+        53.4,
+        57.6
+      ],
+      "gain_vs_distance_only_pct": 17.0,
+      "gain_vs_distance_only_ci95": [
+        14.6,
+        19.7
+      ]
+    }
+  ],
+  "deployment_specification": {
+    "compute_per_epoch": "<1 ms (single K\u00d7K matrix solve, K\u226440)",
+    "compute_hardware": "any modern CPU; no GPU/FPGA required",
+    "reference_network": "existing CORS/SBAS/RTK infrastructure",
+    "new_hardware_required": "none (network link + GNSS receiver)",
+    "bandwidth_per_epoch": "~2 KB (reference clock residuals for K\u226440 stations)",
+    "bandwidth_per_hour": "~240 KB/h at 30s cadence",
+    "phase_gram_update": "every 24 h (one preceding-day cross-spectrum)",
+    "phase_gram_size": "K\u00d7K float32 (6.2 KB for K=40)",
+    "memory_footprint": "<1 MB (distance matrix + phase Gram + weights)",
+    "latency_budget": "well within 30 s epoch interval (compute <1 ms, network <1 s)",
+    "correlation_length": "physics-fixed (\u03bb = 4,200 km); no per-site calibration",
+    "nugget": "frozen from independent Step 25 nested-CV (0.35); sensitivity tested 0.15-1.27",
+    "configuration": "zero per-site; one global \u03bb and one nuisance nugget"
+  },
+  "cost_benefit_comparison": {
+    "scenario": "GNSS-disciplined receiver loses sky view for 1 hour",
+    "free_running_TCXO_5": {
+      "cost": "$5",
+      "TE_at_1h_ns": 3606.4800000000005,
+      "TE_at_8h_ns": 29214.72
+    },
+    "TEP_aided_TCXO_5": {
+      "cost": "$5 + network link (marginal cost ~$0)",
+      "TE_at_1h_ns": 24.7,
+      "TE_at_8h_ns": 65.7,
+      "TE_at_1h_ci_ns": [
+        22.0,
+        27.3
+      ],
+      "TE_at_8h_ci_ns": [
+        62.8,
+        68.9
+      ]
+    },
+    "free_running_OCXO_300": {
+      "cost": "$300",
+      "TE_at_1h_ns": 37.490399999999994,
+      "TE_at_8h_ns": 383.38559999999995
+    },
+    "free_running_Rubidium_2000": {
+      "cost": "$2,000",
+      "TE_at_1h_ns": 18.37584,
+      "TE_at_8h_ns": 168.05376
+    },
+    "summary": "A $5 TCXO with TEP network aiding holds time to 25 ns at 1 h (vs 3606 ns free-running, 37 ns for a $300 OCXO) and 66 ns at 8 h (vs 29215 ns free-running, 168 ns for a $2,000 Rubidium). The TEP-aided TCXO outperforms the $300 OCXO at every duration beyond 30 min and approaches the $2,000 Rubidium beyond 2 h, at marginal cost zero."
+  },
+  "note": "Confidence intervals are derived from the day-clustered bootstrap gain CIs in Step 56 (4000 resamples). The CI on the absolute RMS is approximated from the gain CI; it slightly underestimates the true width because it treats the baseline RMS as known exactly. The gain CI itself captures the dominant source of uncertainty (day-to-day variability in the prediction ratio)."
+}

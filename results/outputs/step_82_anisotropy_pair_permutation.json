@@ -1,0 +1,115 @@
+{
+  "step": 82,
+  "title": "Pair-level permutation test of short-baseline EW/NS anisotropy",
+  "timestamp": "2026-09-02T23:04:10.056233+00:00",
+  "arms": {
+    "precise": {
+      "n_pair_days": 129030,
+      "n_unique_pairs": 370,
+      "bands": {
+        "300-500": {
+          "n_ew_pairs": 29,
+          "n_ns_pairs": 29,
+          "diff_ew_minus_ns": 0.0036448422066803765,
+          "perm_p": 0.484,
+          "z": 0.0484262769767607,
+          "significant": false
+        },
+        "500-800": {
+          "n_ew_pairs": 30,
+          "n_ns_pairs": 45,
+          "diff_ew_minus_ns": 0.06802194712586862,
+          "perm_p": 0.243,
+          "z": 0.6837266740823129,
+          "significant": false
+        },
+        "300-800": {
+          "n_ew_pairs": 59,
+          "n_ns_pairs": 74,
+          "diff_ew_minus_ns": 0.036399370471713155,
+          "perm_p": 0.3168,
+          "z": 0.4652887412567767,
+          "significant": false
+        },
+        "300-1500": {
+          "n_ew_pairs": 80,
+          "n_ns_pairs": 104,
+          "diff_ew_minus_ns": 0.0171718878961048,
+          "perm_p": 0.3948,
+          "z": 0.2791902348138825,
+          "significant": false
+        },
+        "500-2000": {
+          "n_ew_pairs": 51,
+          "n_ns_pairs": 75,
+          "diff_ew_minus_ns": 0.03746568110873871,
+          "perm_p": 0.3106,
+          "z": 0.505498050320524,
+          "significant": false
+        }
+      },
+      "significant_bands": []
+    },
+    "broadcast": {
+      "n_pair_days": 116997,
+      "n_unique_pairs": 1016,
+      "bands": {
+        "300-500": {
+          "n_ew_pairs": 44,
+          "n_ns_pairs": 52,
+          "diff_ew_minus_ns": 0.023277446443007554,
+          "perm_p": 0.3834,
+          "z": 0.28397003496749323,
+          "significant": false
+        },
+        "500-800": {
+          "n_ew_pairs": 61,
+          "n_ns_pairs": 67,
+          "diff_ew_minus_ns": 0.13035695262148128,
+          "perm_p": 0.0246,
+          "z": 1.9388515914834694,
+          "significant": true
+        },
+        "300-800": {
+          "n_ew_pairs": 105,
+          "n_ns_pairs": 119,
+          "diff_ew_minus_ns": 0.08516648242499436,
+          "perm_p": 0.0448,
+          "z": 1.6777116620557775,
+          "significant": true
+        },
+        "300-1500": {
+          "n_ew_pairs": 193,
+          "n_ns_pairs": 231,
+          "diff_ew_minus_ns": 0.03661673460467563,
+          "perm_p": 0.1318,
+          "z": 1.1186415445859823,
+          "significant": false
+        },
+        "500-2000": {
+          "n_ew_pairs": 166,
+          "n_ns_pairs": 209,
+          "diff_ew_minus_ns": 0.013400745304811057,
+          "perm_p": 0.3402,
+          "z": 0.41656547974122005,
+          "significant": false
+        }
+      },
+      "significant_bands": [
+        "500-800",
+        "300-800"
+      ]
+    }
+  },
+  "verdict": {
+    "method": "one value per unique station pair; sector labels permuted within band; midpoint-bearing azimuth",
+    "arms": {
+      "precise": [],
+      "broadcast": [
+        "500-800",
+        "300-800"
+      ]
+    },
+    "any_significant": true
+  }
+}

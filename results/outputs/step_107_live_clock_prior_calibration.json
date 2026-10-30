@@ -1,0 +1,68 @@
+{
+  "config": {
+    "lambda_km": 1500.0,
+    "nugget": 0.7,
+    "kernel": "gauss",
+    "horizon_h": 4.0,
+    "npre": 48,
+    "train_doys": [
+      1,
+      21
+    ],
+    "test_doys": [
+      22,
+      50
+    ]
+  },
+  "n_cases": {
+    "train": 23547,
+    "test": 33739
+  },
+  "observable": {
+    "accumulated_offset_vs_persist_pct": 37.69,
+    "instantaneous_level_vs_persist_pct": -23.51,
+    "free_m": 9.5317,
+    "persist_m": 9.5433,
+    "tep_m": 5.9469,
+    "netmean_m": 6.2483
+  },
+  "kernel": {
+    "chosen": {
+      "train_vs_free_pct": 38.8,
+      "test_vs_free_pct": 37.61
+    },
+    "step96": {
+      "train_vs_free_pct": 36.74,
+      "test_vs_free_pct": 35.82
+    },
+    "old_live_rig": {
+      "train_vs_free_pct": 25.52,
+      "test_vs_free_pct": 24.47
+    }
+  },
+  "specificity": {
+    "real_geometry_m": 5.9469,
+    "distance_permuted_m": 6.3377,
+    "distance_permuted_sd": 0.0076,
+    "netmean_m": 6.2483,
+    "sigma": 51.3
+  },
+  "screening": {
+    "ATOMIC": {
+      "alpha_star": 1.3038,
+      "at_alpha_star_vs_free_pct": 60.96,
+      "at_1.0_vs_free_pct": 56.61,
+      "at_1.38_vs_free_pct": 60.17
+    },
+    "QUARTZ": {
+      "alpha_star": 0.6188,
+      "at_alpha_star_vs_free_pct": 17.64,
+      "at_1.0_vs_free_pct": 14.43,
+      "at_1.38_vs_free_pct": 1.22
+    }
+  },
+  "standoff": {
+    "unrestricted": 37.69,
+    "min_250km": 38.71
+  }
+}

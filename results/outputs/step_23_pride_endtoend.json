@@ -1,0 +1,26 @@
+{
+  "test": "phase2_pride_endtoend_3arm",
+  "rover": "ZIMM",
+  "date": "2024100",
+  "engine": "PRIDE-PPP-AR 3.2.1 + lsq_add_clkcon",
+  "mode": "kinematic multi-GNSS ionosphere-free phase PPP, WUM MGEX products",
+  "arm_A_no_prior": {
+    "scatter_3d_cm": 1.3
+  },
+  "arm_B_network_mean": {
+    "scatter_3d_cm": 1.3,
+    "offset_vs_A_cm": 0.001,
+    "prior_applied": true
+  },
+  "arm_C_distance_kernel": {
+    "scatter_3d_cm": 1.3,
+    "offset_vs_A_cm": 0.0,
+    "prior_applied": true
+  },
+  "probe_tight_biased": {
+    "offset_vs_A_cm": 4.74,
+    "note": "sigma 0.02 m + 5 m bias -- verifies the constraint reaches position"
+  },
+  "finding": "In clean 24 h multi-GNSS phase PPP the receiver clock is observation-limited to ~1 cm, so a realistic-quality network clock prior (sigma ~0.5-1 m) is a no-op. The prior's operational niche is real-time / single-frequency / few-satellite / degraded-geometry PPP, not standard post-processed PPP.",
+  "mechanism_verified": true
+}

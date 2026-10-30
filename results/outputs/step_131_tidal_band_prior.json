@@ -1,0 +1,64 @@
+{
+  "step": 131,
+  "title": "Tidal-band TEP prior: gravitational tides ARE the TEP signal",
+  "timestamp": "2026-09-06T19:13:44.888262+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_evaluation_days": 57,
+  "n_days_scored": 57,
+  "tidal_periods_h": [
+    24.0,
+    12.0,
+    8.0,
+    6.0,
+    23.934444444444445,
+    12.42
+  ],
+  "tidal_width_frac": 0.05,
+  "lambdas": {
+    "tidal": 4677.0,
+    "full_band": 4200.0,
+    "notched": 1877.0
+  },
+  "results": {
+    "n_days": 57,
+    "tidal_vs_full_band_pct": {
+      "median": -1.6681017815414645,
+      "ci95": [
+        -2.0998447079673133,
+        -1.3834794366897496
+      ],
+      "n": 57,
+      "frac_positive": 0.017543859649122806
+    },
+    "tidal_vs_notched_pct": {
+      "median": -3.8869651962487595,
+      "ci95": [
+        -4.5529849225075525,
+        -3.3925682740041596
+      ],
+      "n": 57,
+      "frac_positive": 0.08771929824561403
+    },
+    "tidal_vs_empirical_pct": {
+      "median": -3.581839023713207,
+      "ci95": [
+        -3.9740411130482878,
+        -2.057508967092292
+      ],
+      "n": 57,
+      "frac_positive": 0.15789473684210525
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "tidal": 1.3433867965576984,
+      "notched": 1.3399660375059226,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "The tidal-band kernel does not beat the full-band kernel (-1.67%).  The tidal lines alone do not carry sufficient predictive power without the continuum."
+  ],
+  "pre_registered_prediction": "The gravitational tidal lines (24h, 12h, 8h, 6h solar + 12.4h M2 lunar) are the strongest and most spatially coherent component of the TEP field (Paper 1: lambda=4677 km at tidal frequencies vs 1502 km post-tidal).  The tidal-band kernel should beat both the full-band kernel (which dilutes the tidal signal with continuum noise) and the notched kernel (which removes the tidal signal entirely).  If it also beats empirical covariance on independent-year data, that is direct evidence that gravitational coupling carries predictive power.",
+  "correction": "Step 127 notched OUT the tidal lines, treating them as atmospheric modulation.  This was backwards \u2014 the tidal lines are gravitational in origin.  This step corrects the framing by isolating and leveraging the gravitational tidal band."
+}

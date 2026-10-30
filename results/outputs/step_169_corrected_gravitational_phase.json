@@ -1,0 +1,231 @@
+{
+  "step": 169,
+  "title": "Corrected gravitational phase test with valid station-level inference",
+  "timestamp": "2026-09-07T22:28:05.674790+00:00",
+  "product": "clk_cod_ops",
+  "n_perm": 10000,
+  "design": "Station-level permutation: shuffles station-longitude assignments to break the gravitational prediction while preserving pairwise structure. Effective dof = n_stations, not n_pairs. Simultaneous harmonic fit of 8 tidal lines at exact frequencies. Two-sided permutation p-value. This corrects the inflated p-values in Steps 165b/167 which used n_pairs degrees of freedom.",
+  "issues_fixed": [
+    "Pairwise pseudoreplication: n_pairs dof replaced by station-level permutation",
+    "M2/N2 aliasing: simultaneous harmonic fit at exact frequencies",
+    "One-sided permutation: now two-sided",
+    "K1/S1 aliasing: resolved by harmonic fit"
+  ],
+  "results": {
+    "COD_2024": {
+      "_design_condition_number_median": 367.9098616484462,
+      "_design_condition_number_max": 367.9098616484462,
+      "M2": {
+        "r": 0.023272580846318575,
+        "p_perm_station": 0.0053994600539946005,
+        "p_naive_pairs": 9.932468431299211e-05,
+        "p_corrected_dof": 0.7215179186505751,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": 2.4718212207557373e-05,
+        "null_r_std": 0.005966242474369297,
+        "null_r_abs_p95": 0.01169112041985806
+      },
+      "N2": {
+        "r": 0.003976183414346697,
+        "p_perm_station": 0.49895010498950104,
+        "p_naive_pairs": 0.5061070550327424,
+        "p_corrected_dof": 0.9514474756878017,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": 3.958296540791745e-05,
+        "null_r_std": 0.006128633730462162,
+        "null_r_abs_p95": 0.012046476224125385
+      },
+      "S2": {
+        "r": 0.1474470282714179,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 1.0898966173226948e-135,
+        "p_corrected_dof": 0.02318695792066695,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": 8.795880621003173e-05,
+        "null_r_std": 0.008593096196986817,
+        "null_r_abs_p95": 0.016793464518083542
+      },
+      "O1": {
+        "r": 0.12740575452850733,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 1.5730057107009012e-101,
+        "p_corrected_dof": 0.05011194920377862,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": -9.103977749453904e-05,
+        "null_r_std": 0.0062459074418897255,
+        "null_r_abs_p95": 0.011855364364499781
+      },
+      "K1": {
+        "r": 0.08491687770232416,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 6.342416137485522e-46,
+        "p_corrected_dof": 0.19266995515499843,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": -8.26911806875068e-05,
+        "null_r_std": 0.005713622913397662,
+        "null_r_abs_p95": 0.010716737775047792
+      },
+      "S1": {
+        "r": 0.05191709041320821,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 3.702240678495448e-18,
+        "p_corrected_dof": 0.42628526291545454,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": -8.875883859040475e-05,
+        "null_r_std": 0.006209591080020068,
+        "null_r_abs_p95": 0.011801681292703967
+      },
+      "P1": {
+        "r": 0.06171380273164419,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 5.166396319912526e-25,
+        "p_corrected_dof": 0.34417368790301817,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": -6.36084849283378e-05,
+        "null_r_std": 0.005903389028540493,
+        "null_r_abs_p95": 0.011157383736519902
+      },
+      "Q1": {
+        "r": 0.18205494837176306,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 5.579517505295738e-207,
+        "p_corrected_dof": 0.004932410127947104,
+        "n_stations": 237,
+        "n_pairs": 27966,
+        "null_r_mean": 5.504700040416388e-05,
+        "null_r_std": 0.012951333650761726,
+        "null_r_abs_p95": 0.024808094879122927
+      },
+      "_control_mean_r": 0.023519838724679838,
+      "_control_mean_abs_r": 0.024825670906485707
+    },
+    "COD_2025": {
+      "_design_condition_number_median": 357.38326661142764,
+      "_design_condition_number_max": 357.38326661142764,
+      "M2": {
+        "r": 0.2072754917039722,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 1.4744983264591519e-213,
+        "p_corrected_dof": 0.0024789811490371627,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": -6.642561905168853e-05,
+        "null_r_std": 0.006734539107873249,
+        "null_r_abs_p95": 0.013277248714614234
+      },
+      "N2": {
+        "r": 0.01850799825972948,
+        "p_perm_station": 0.0552944705529447,
+        "p_naive_pairs": 0.005870759458201731,
+        "p_corrected_dof": 0.7892612350355828,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": -0.0001838253623376692,
+        "null_r_std": 0.010016480954865174,
+        "null_r_abs_p95": 0.019360654656197285
+      },
+      "S2": {
+        "r": 0.22680343306425002,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 2.150650898310293e-256,
+        "p_corrected_dof": 0.0009057095856938271,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": 4.2444918503864195e-06,
+        "null_r_std": 0.008123804407120046,
+        "null_r_abs_p95": 0.015828712220630644
+      },
+      "O1": {
+        "r": 0.16636831959778073,
+        "p_perm_station": 9.999000099990002e-05,
+        "p_naive_pairs": 3.048629039364035e-137,
+        "p_corrected_dof": 0.015556086404713593,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": -7.963428368291142e-07,
+        "null_r_std": 0.006388165945591794,
+        "null_r_abs_p95": 0.012394611759675036
+      },
+      "K1": {
+        "r": 0.008001616411687005,
+        "p_perm_station": 0.3070692930706929,
+        "p_naive_pairs": 0.23367049720829153,
+        "p_corrected_dof": 0.908015857820971,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": 0.00022560770366912846,
+        "null_r_std": 0.00876958433053054,
+        "null_r_abs_p95": 0.017369082337477013
+      },
+      "S1": {
+        "r": 0.0010649532413830026,
+        "p_perm_station": 0.9282071792820717,
+        "p_naive_pairs": 0.8740591487468451,
+        "p_corrected_dof": 0.9877310537809314,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": 0.00014374601450238127,
+        "null_r_std": 0.011110218558750582,
+        "null_r_abs_p95": 0.0218578388124553
+      },
+      "P1": {
+        "r": 0.008073947567025215,
+        "p_perm_station": 0.4163583641635836,
+        "p_naive_pairs": 0.2294708646896289,
+        "p_corrected_dof": 0.9071880776838206,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": 0.00016228947355934756,
+        "null_r_std": 0.010568424654998214,
+        "null_r_abs_p95": 0.02069727952684348
+      },
+      "Q1": {
+        "r": 0.0557334166699133,
+        "p_perm_station": 0.00019998000199980003,
+        "p_naive_pairs": 1.026701480631257e-16,
+        "p_corrected_dof": 0.42059368271161224,
+        "n_stations": 211,
+        "n_pairs": 22155,
+        "null_r_mean": 1.8322126034784363e-05,
+        "null_r_std": 0.007324221693900798,
+        "null_r_abs_p95": 0.014324203753491051
+      },
+      "_control_mean_r": 0.04214303857834276,
+      "_control_mean_abs_r": 0.04214303857834276
+    }
+  },
+  "meta_analysis": {
+    "m2_r_values": [
+      0.023272580846318575,
+      0.2072754917039722
+    ],
+    "m2_p_perm_values": [
+      0.0053994600539946005,
+      9.999000099990002e-05
+    ],
+    "n2_r_values": [
+      0.003976183414346697,
+      0.01850799825972948
+    ],
+    "s2_r_values": [
+      0.1474470282714179,
+      0.22680343306425002
+    ],
+    "o1_r_values": [
+      0.12740575452850733,
+      0.16636831959778073
+    ],
+    "control_r_values": [
+      0.023519838724679838,
+      0.04214303857834276
+    ],
+    "m2_fisher_combined_p": 8.331557816311088e-06
+  }
+}

@@ -1,0 +1,735 @@
+{
+  "step": 66,
+  "title": "Proper-time field gradient; position-from-the-clock",
+  "timestamp": "2026-09-02T14:13:02.753062+00:00",
+  "result": {
+    "n_pairs": 13874,
+    "ground_pairs_sample": [
+      {
+        "pair": "KOKB-KOKV",
+        "sep_km": 7.637103528629153e-07,
+        "n_days": 31,
+        "rms_offset_m": 0.008711279586281326,
+        "rms_rate_m_s": 2.0118198804540605e-06,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "THTG-THTI",
+        "sep_km": 0.0015496466665044077,
+        "n_days": 60,
+        "rms_offset_m": 4.893845835092623,
+        "rms_rate_m_s": 0.0014413326856525291,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "STJ3-STJO",
+        "sep_km": 0.04702027039449558,
+        "n_days": 65,
+        "rms_offset_m": 0.0033603014969255133,
+        "rms_rate_m_s": 1.8787293279100063e-06,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "NYA1-NYA2",
+        "sep_km": 0.16665073400173633,
+        "n_days": 47,
+        "rms_offset_m": 1.0196449063517807,
+        "rms_rate_m_s": 0.0007875667148313227,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "FRDN-UNB3",
+        "sep_km": 2.3290195477603644,
+        "n_days": 26,
+        "rms_offset_m": 0.9884920093308913,
+        "rms_rate_m_s": 0.0004563260095026996,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BIK0-POL2",
+        "sep_km": 23.432304555183695,
+        "n_days": 50,
+        "rms_offset_m": 1.40518046786127,
+        "rms_rate_m_s": 0.0006964594315122499,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ARHT-COTE",
+        "sep_km": 109.4850135174952,
+        "n_days": 50,
+        "rms_offset_m": 1.0970547417500434,
+        "rms_rate_m_s": 0.001274162128687986,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ASPA-SAMO",
+        "sep_km": 121.73102301668418,
+        "n_days": 11,
+        "rms_offset_m": 0.38331106426838996,
+        "rms_rate_m_s": 0.00043928283200423513,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MAO0-MKEA",
+        "sep_km": 130.79771042227955,
+        "n_days": 22,
+        "rms_offset_m": 2.910566071568549,
+        "rms_rate_m_s": 0.0007329657634325546,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BRUX-DLF1",
+        "sep_km": 132.10994789642746,
+        "n_days": 21,
+        "rms_offset_m": 0.44364174813540297,
+        "rms_rate_m_s": 0.00031054383116637383,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BADG-IRKJ",
+        "sep_km": 150.991940876187,
+        "n_days": 27,
+        "rms_offset_m": 0.26548803960050227,
+        "rms_rate_m_s": 0.0001008769942714739,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "TSK2-USUD",
+        "sep_km": 154.9785818665767,
+        "n_days": 21,
+        "rms_offset_m": 1.5224089644746257,
+        "rms_rate_m_s": 0.0007642641396015038,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "TSKB-USUD",
+        "sep_km": 155.01240604645167,
+        "n_days": 10,
+        "rms_offset_m": 2.1954435278354043,
+        "rms_rate_m_s": 0.0006926900096486481,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "OBE4-WTZR",
+        "sep_km": 166.5151751145478,
+        "n_days": 49,
+        "rms_offset_m": 1.1998918572169992,
+        "rms_rate_m_s": 0.0003946625188013887,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "HOFN-MYVA",
+        "sep_km": 172.41448429844223,
+        "n_days": 10,
+        "rms_offset_m": 0.646938256342099,
+        "rms_rate_m_s": 0.0009141337191255289,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ABMF-LMMF",
+        "sep_km": 193.9660626525842,
+        "n_days": 51,
+        "rms_offset_m": 3.6577694468859434,
+        "rms_rate_m_s": 0.0015421232050785835,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ALGO-NRC1",
+        "sep_km": 198.06626171515748,
+        "n_days": 42,
+        "rms_offset_m": 0.8549241933418905,
+        "rms_rate_m_s": 0.0002641406185643228,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ALGO-VALD",
+        "sep_km": 241.1790617820858,
+        "n_days": 52,
+        "rms_offset_m": 1.1721103467444518,
+        "rms_rate_m_s": 0.0007127490166357878,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "LPAL-MAS1",
+        "sep_km": 247.74780349969504,
+        "n_days": 62,
+        "rms_offset_m": 2.0501998364106964,
+        "rms_rate_m_s": 0.001657260549499962,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BRUX-OPMT",
+        "sep_km": 262.04988386480534,
+        "n_days": 53,
+        "rms_offset_m": 0.013425520934035885,
+        "rms_rate_m_s": 9.500744300341665e-06,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "HERT-OPMT",
+        "sep_km": 267.56428002100705,
+        "n_days": 33,
+        "rms_offset_m": 0.8334675374836858,
+        "rms_rate_m_s": 0.0010096006840151555,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "SYDN-TID1",
+        "sep_km": 268.0410639556451,
+        "n_days": 38,
+        "rms_offset_m": 1.4581686052901375,
+        "rms_rate_m_s": 0.00033794602734991887,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BOR1-JOZ2",
+        "sep_km": 270.5835895823581,
+        "n_days": 18,
+        "rms_offset_m": 2.8258694775467132,
+        "rms_rate_m_s": 0.0005183706331167365,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "PARK-TID1",
+        "sep_km": 274.9028490324621,
+        "n_days": 37,
+        "rms_offset_m": 0.2852821006655252,
+        "rms_rate_m_s": 0.00015022338934676569,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BRUX-WSRT",
+        "sep_km": 281.36036014808707,
+        "n_days": 48,
+        "rms_offset_m": 0.904231741278108,
+        "rms_rate_m_s": 0.00034232247006175666,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "PARK-SYDN",
+        "sep_km": 281.6683298475252,
+        "n_days": 55,
+        "rms_offset_m": 1.3807628934977207,
+        "rms_rate_m_s": 0.0003641347452546582,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BRUX-HERT",
+        "sep_km": 282.68721610280653,
+        "n_days": 32,
+        "rms_offset_m": 0.8259828810278735,
+        "rms_rate_m_s": 0.0010124329699834928,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "GOLD-MONP",
+        "sep_km": 284.93633071031655,
+        "n_days": 23,
+        "rms_offset_m": 1.6331106520587952,
+        "rms_rate_m_s": 0.0004484638597514219,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MYVA-REYK",
+        "sep_km": 291.498303989904,
+        "n_days": 10,
+        "rms_offset_m": 0.8427965702253379,
+        "rms_rate_m_s": 0.0009840451738259146,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "GRAZ-WTZA",
+        "sep_km": 301.67749984749264,
+        "n_days": 25,
+        "rms_offset_m": 1.9984806039111802,
+        "rms_rate_m_s": 0.0005401793670674699,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "DLF1-HERT",
+        "sep_km": 307.2470946458876,
+        "n_days": 18,
+        "rms_offset_m": 0.8966898612752806,
+        "rms_rate_m_s": 0.0010817277514178732,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MARS-TLSE",
+        "sep_km": 314.332711415241,
+        "n_days": 42,
+        "rms_offset_m": 2.484122123527075,
+        "rms_rate_m_s": 0.0013355877702622707,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MGUE-SANT",
+        "sep_km": 314.47659056607654,
+        "n_days": 54,
+        "rms_offset_m": 2.4117999618155577,
+        "rms_rate_m_s": 0.0009806335731649242,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "AJAC-MARS",
+        "sep_km": 316.8520197575793,
+        "n_days": 43,
+        "rms_offset_m": 0.7287583762357316,
+        "rms_rate_m_s": 0.000987559697197384,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "KIT3-TASH",
+        "sep_km": 318.30762826841607,
+        "n_days": 104,
+        "rms_offset_m": 1.88656815932308,
+        "rms_rate_m_s": 0.0008983447928690951,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "DRAO-NANO",
+        "sep_km": 323.41376351791223,
+        "n_days": 63,
+        "rms_offset_m": 2.4658556733397803,
+        "rms_rate_m_s": 0.0007892664741812591,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "HOFN-REYK",
+        "sep_km": 327.15789528944293,
+        "n_days": 54,
+        "rms_offset_m": 0.4027936859913037,
+        "rms_rate_m_s": 0.000580960715764504,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "GRAZ-PADO",
+        "sep_km": 332.2899357776763,
+        "n_days": 24,
+        "rms_offset_m": 0.5151850372366917,
+        "rms_rate_m_s": 0.0006161775370163676,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "GANP-JOZ2",
+        "sep_km": 344.2646729464159,
+        "n_days": 20,
+        "rms_offset_m": 2.945487988770143,
+        "rms_rate_m_s": 0.0006291450172649835,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MIZU-TSKB",
+        "sep_km": 349.2095438085765,
+        "n_days": 11,
+        "rms_offset_m": 0.8549049622000058,
+        "rms_rate_m_s": 0.0005991402481661734,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MIZU-TSK2",
+        "sep_km": 349.22947599554624,
+        "n_days": 21,
+        "rms_offset_m": 2.177196626212044,
+        "rms_rate_m_s": 0.0007058121427909046,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "ABMF-CRO1",
+        "sep_km": 365.04008590999854,
+        "n_days": 50,
+        "rms_offset_m": 2.621446772165892,
+        "rms_rate_m_s": 0.0006352627678332024,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "DLF1-OPMT",
+        "sep_km": 379.2320807165969,
+        "n_days": 25,
+        "rms_offset_m": 0.4419113798608132,
+        "rms_rate_m_s": 0.00031004171690806665,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "PADO-WAB2",
+        "sep_km": 380.40285872905747,
+        "n_days": 42,
+        "rms_offset_m": 1.2234354282683353,
+        "rms_rate_m_s": 0.0004170940790846227,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MAR7-METG",
+        "sep_km": 392.91907593421644,
+        "n_days": 62,
+        "rms_offset_m": 1.2800214154512561,
+        "rms_rate_m_s": 0.0005274315110593648,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MIZU-USUD",
+        "sep_km": 413.42566264389785,
+        "n_days": 65,
+        "rms_offset_m": 1.7566349437600894,
+        "rms_rate_m_s": 0.0004499643114499928,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "GANP-GRAZ",
+        "sep_km": 420.27202388378896,
+        "n_days": 26,
+        "rms_offset_m": 2.0863772975548582,
+        "rms_rate_m_s": 0.0006414159669929939,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "PADO-WTZA",
+        "sep_km": 421.6580777115195,
+        "n_days": 61,
+        "rms_offset_m": 1.4419026669684984,
+        "rms_rate_m_s": 0.00043213191543056153,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BOR1-GANP",
+        "sep_km": 427.04159188448796,
+        "n_days": 52,
+        "rms_offset_m": 0.5036108492817245,
+        "rms_rate_m_s": 0.0003545033195488195,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "DRAO-UCAL",
+        "sep_km": 436.8080812555647,
+        "n_days": 63,
+        "rms_offset_m": 2.0624732761374727,
+        "rms_rate_m_s": 0.0008568627620149454,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "OPMT-WAB2",
+        "sep_km": 437.51600316986526,
+        "n_days": 43,
+        "rms_offset_m": 0.024826931008173896,
+        "rms_rate_m_s": 1.1321824342418566e-05,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "MARS-WAB2",
+        "sep_km": 437.8014149806617,
+        "n_days": 24,
+        "rms_offset_m": 2.1612840585847715,
+        "rms_rate_m_s": 0.0013961562807082073,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "FUNC-LPAL",
+        "sep_km": 442.05387305609213,
+        "n_days": 63,
+        "rms_offset_m": 3.928063167128409,
+        "rms_rate_m_s": 0.0017733585082041765,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BRST-HERT",
+        "sep_km": 444.3283025218385,
+        "n_days": 34,
+        "rms_offset_m": 0.8661687347802618,
+        "rms_rate_m_s": 0.0010478526011497595,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MOBS-TID1",
+        "sep_km": 448.003150654459,
+        "n_days": 37,
+        "rms_offset_m": 0.3515203528810323,
+        "rms_rate_m_s": 0.00021704374713274384,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BOR1-WTZA",
+        "sep_km": 456.54438011399935,
+        "n_days": 51,
+        "rms_offset_m": 0.21560190066865942,
+        "rms_rate_m_s": 8.338511100242276e-05,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BAKO-XMIS",
+        "sep_km": 458.3291157889743,
+        "n_days": 17,
+        "rms_offset_m": 2.0055357131719407,
+        "rms_rate_m_s": 0.0014268739197905913,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "AJAC-PADO",
+        "sep_km": 462.0522973633908,
+        "n_days": 62,
+        "rms_offset_m": 1.4087336544563105,
+        "rms_rate_m_s": 0.0012097920403178457,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "BIK0-TASH",
+        "sep_km": 464.20319181536274,
+        "n_days": 50,
+        "rms_offset_m": 1.5919265565265588,
+        "rms_rate_m_s": 0.000459964352234643,
+        "timing_lab_pair": false
+      },
+      {
+        "pair": "MAR7-ONS1",
+        "sep_km": 468.67006603205044,
+        "n_days": 70,
+        "rms_offset_m": 0.3115758108699866,
+        "rms_rate_m_s": 0.0003527958564400272,
+        "timing_lab_pair": false
+      }
+    ],
+    "field_structure_bounds": [
+      {
+        "sep_lo_km": 60,
+        "sep_hi_km": 200,
+        "n_pairs": 11,
+        "quietest_pair": "BADG-IRKJ",
+        "quietest_sep_km": 150.991940876187,
+        "field_bound_offset_m": 0.26548803960050227,
+        "field_bound_rate_m_s": 0.0001008769942714739,
+        "gradient_bound_m_per_m": 1.758292780792862e-06,
+        "median_pair_offset_m": 1.0970547417500434,
+        "sep_median_km": 154.9785818665767
+      },
+      {
+        "sep_lo_km": 200,
+        "sep_hi_km": 400,
+        "n_pairs": 27,
+        "quietest_pair": "PARK-TID1",
+        "quietest_sep_km": 274.9028490324621,
+        "field_bound_offset_m": 0.2852821006655252,
+        "field_bound_rate_m_s": 0.00015022338934676569,
+        "gradient_bound_m_per_m": 1.0377560715343383e-06,
+        "median_pair_offset_m": 1.2800214154512561,
+        "sep_median_km": 314.332711415241
+      },
+      {
+        "sep_lo_km": 400,
+        "sep_hi_km": 800,
+        "n_pairs": 87,
+        "quietest_pair": "BRUX-WTZA",
+        "quietest_sep_km": 636.0775005103824,
+        "field_bound_offset_m": 0.21113598651971555,
+        "field_bound_rate_m_s": 7.917165111080204e-05,
+        "gradient_bound_m_per_m": 3.319343733276245e-07,
+        "median_pair_offset_m": 1.388036637919246,
+        "sep_median_km": 614.1940852443324
+      },
+      {
+        "sep_lo_km": 800,
+        "sep_hi_km": 1600,
+        "n_pairs": 305,
+        "quietest_pair": "BOR1-OPMT",
+        "quietest_sep_km": 1106.8606012716489,
+        "field_bound_offset_m": 0.01991497028213885,
+        "field_bound_rate_m_s": 1.0502879567001791e-05,
+        "gradient_bound_m_per_m": 1.799230206519137e-08,
+        "median_pair_offset_m": 1.9818190588312758,
+        "sep_median_km": 1180.8289248692065
+      },
+      {
+        "sep_lo_km": 1600,
+        "sep_hi_km": 3500,
+        "n_pairs": 1002,
+        "quietest_pair": "BADG-TWTF",
+        "quietest_sep_km": 3385.330309896731,
+        "field_bound_offset_m": 0.09684532072464885,
+        "field_bound_rate_m_s": 3.718101621194591e-05,
+        "gradient_bound_m_per_m": 2.860734754346707e-08,
+        "median_pair_offset_m": 2.256713772823538,
+        "sep_median_km": 2612.4962760207977
+      },
+      {
+        "sep_lo_km": 3500,
+        "sep_hi_km": 8000,
+        "n_pairs": 3816,
+        "quietest_pair": "BRUX-NRC1",
+        "quietest_sep_km": 5670.249254234825,
+        "field_bound_offset_m": 0.012856218543328359,
+        "field_bound_rate_m_s": 1.0098398795591306e-05,
+        "gradient_bound_m_per_m": 2.2673110064300426e-09,
+        "median_pair_offset_m": 2.8663148694458274,
+        "sep_median_km": 6108.073286162737
+      },
+      {
+        "sep_lo_km": 8000,
+        "sep_hi_km": 20000,
+        "n_pairs": 8614,
+        "quietest_pair": "NRC1-TWTF",
+        "quietest_sep_km": 12003.695620606673,
+        "field_bound_offset_m": 0.024181603311835484,
+        "field_bound_rate_m_s": 1.3973001574133962e-05,
+        "gradient_bound_m_per_m": 2.014513202944189e-09,
+        "median_pair_offset_m": 3.0729923033426996,
+        "sep_median_km": 12233.934719304645
+      }
+    ],
+    "timing_lab_pairs": [
+      {
+        "pair": "BRUX-OPMT",
+        "sep_km": 262.04988386480534,
+        "n_days": 53,
+        "rms_offset_m": 0.013425520934035885,
+        "rms_rate_m_s": 9.500744300341665e-06,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "OPMT-WAB2",
+        "sep_km": 437.51600316986526,
+        "n_days": 43,
+        "rms_offset_m": 0.024826931008173896,
+        "rms_rate_m_s": 1.1321824342418566e-05,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "BRUX-WAB2",
+        "sep_km": 486.9341904727753,
+        "n_days": 36,
+        "rms_offset_m": 0.023922236103423027,
+        "rms_rate_m_s": 1.1022662432348044e-05,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "OPMT-VILL",
+        "sep_km": 1056.596241460519,
+        "n_days": 57,
+        "rms_offset_m": 6.513602283300199,
+        "rms_rate_m_s": 0.0024808102692715005,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "VILL-WAB2",
+        "sep_km": 1165.0096768623314,
+        "n_days": 40,
+        "rms_offset_m": 6.673352616395166,
+        "rms_rate_m_s": 0.0026384069906285976,
+        "timing_lab_pair": true
+      },
+      {
+        "pair": "BRUX-VILL",
+        "sep_km": 1318.4372935633846,
+        "n_days": 50,
+        "rms_offset_m": 6.509545678975299,
+        "rms_rate_m_s": 0.0024875125420138725,
+        "timing_lab_pair": true
+      }
+    ],
+    "satellite_frame_test": {
+      "n_epoch_solutions": 920,
+      "per_epoch_gradient_magnitude_m_per_m": 1.679889891506462e-08,
+      "regression_r2_median": 0.09310753587499587,
+      "regression_r2_noise_expectation": 0.125,
+      "r2_exceeds_noise": false,
+      "temporal_coherence": 0.027548837668935334,
+      "sign_flip_null_z": -0.13528683589517296,
+      "gradient_upper_bound_m_per_m": 1.679889891506462e-08,
+      "detected": false
+    },
+    "measured_rate_floor_m_s": 0.00040679446304091755,
+    "velocity_coupling_feasibility": {
+      "pedestrian": {
+        "atomic_reference": {
+          "range_rate_m_s": 1.5566341073015075e-06,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.0038265862707795337,
+          "observable": false,
+          "marginal": false
+        },
+        "phone_TCXO": {
+          "range_rate_m_s": 3.113268214603015e-06,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.007653172541559067,
+          "observable": false,
+          "marginal": false
+        }
+      },
+      "car_highway": {
+        "atomic_reference": {
+          "range_rate_m_s": 3.1132682146030145e-05,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.07653172541559067,
+          "observable": false,
+          "marginal": false
+        },
+        "phone_TCXO": {
+          "range_rate_m_s": 6.226536429206029e-05,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.15306345083118134,
+          "observable": false,
+          "marginal": false
+        }
+      },
+      "high_speed_train": {
+        "atomic_reference": {
+          "range_rate_m_s": 9.339804643809045e-05,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.229595176246772,
+          "observable": false,
+          "marginal": false
+        },
+        "phone_TCXO": {
+          "range_rate_m_s": 0.0001867960928761809,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.459190352493544,
+          "observable": false,
+          "marginal": false
+        }
+      },
+      "aircraft": {
+        "atomic_reference": {
+          "range_rate_m_s": 0.00025943901788358457,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 0.6377643784632556,
+          "observable": false,
+          "marginal": false
+        },
+        "phone_TCXO": {
+          "range_rate_m_s": 0.0005188780357671691,
+          "gradient_used_m_per_m": 1.0377560715343383e-06,
+          "x_rate_floor": 1.2755287569265112,
+          "observable": false,
+          "marginal": true
+        }
+      },
+      "LEO_satellite": {
+        "atomic_reference": {
+          "range_rate_m_s": 0.00012935152164599757,
+          "gradient_used_m_per_m": 1.679889891506462e-08,
+          "x_rate_floor": 0.31797758671308834,
+          "observable": false,
+          "marginal": false
+        },
+        "phone_TCXO": {
+          "range_rate_m_s": 0.00025870304329199514,
+          "gradient_used_m_per_m": 1.679889891506462e-08,
+          "x_rate_floor": 0.6359551734261767,
+          "observable": false,
+          "marginal": false
+        }
+      }
+    },
+    "verdict": {
+      "ground_gradient_m_per_m": 1.0377560715343383e-06,
+      "satellite_altitude_gradient_bound_m_per_m": 1.679889891506462e-08,
+      "altitude_smoothing_ratio": 61.775243531212496,
+      "measured_rate_floor_m_s": 0.00040679446304091755,
+      "direct_v_grad_phi_detected_at_3.9km_s": false,
+      "platform_snr_phone_TCXO": {
+        "pedestrian": 0.008,
+        "car_highway": 0.153,
+        "high_speed_train": 0.459,
+        "aircraft": 1.276,
+        "LEO_satellite": 0.636
+      },
+      "bottom_line": "NULL RESULT, with a clear physical cause. The proper-time field is SMOOTH. The direct v.grad(phi) regression on GPS satellite clocks moving at 3.9 km/s returns a null (R^2 = 0.093 against a 0.125 noise expectation; recovered gradient vector temporally incoherent at 0.028, sign-flip null z = -0.1), bounding |grad phi| <= 1.7e-8 m/m at orbital altitude -- ~100x below the ground bound. Evaluating each platform at its own altitude's gradient, no platform clears 3x the measured clock-rate floor (4.1e-4 m/s): aircraft reach 1.3x, a road vehicle 0.15x, and an orbiting platform 0.4x because the field is so much smoother up there. Position-from-the-clock is therefore NOT available in this data. The reason matters: smoothness is exactly what makes the network predict a station's clock so well, so the property that powers Steps 55/56/64 is the same one that forecloses positioning. The only remaining window is fine structure below ~150 km, which no current product can resolve -- IGS clock products have almost no pairs there and SPP-derived dense products carry a 4-7 m noise floor. A dense CORS cluster processed with precise ephemerides would close it."
+    }
+  }
+}

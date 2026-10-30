@@ -1,0 +1,239 @@
+{
+  "step": 89,
+  "title": "Preferred axis from the seasonal (orbital) lever",
+  "timestamp": "2026-09-03T08:33:15.692242+00:00",
+  "windows": [
+    {
+      "jd": 2460318.0,
+      "ew_minus_ns": -0.05930183845938648,
+      "n_pairs": 3157
+    },
+    {
+      "jd": 2460333.0,
+      "ew_minus_ns": -0.07878922249244377,
+      "n_pairs": 3169
+    },
+    {
+      "jd": 2460348.0,
+      "ew_minus_ns": -0.05908262816245721,
+      "n_pairs": 3154
+    },
+    {
+      "jd": 2460363.0,
+      "ew_minus_ns": -0.053867176065060585,
+      "n_pairs": 3134
+    },
+    {
+      "jd": 2460378.0,
+      "ew_minus_ns": -0.02876513540543779,
+      "n_pairs": 3071
+    },
+    {
+      "jd": 2460393.0,
+      "ew_minus_ns": -0.02984222779036641,
+      "n_pairs": 3055
+    },
+    {
+      "jd": 2460409.0,
+      "ew_minus_ns": -0.028702958100773612,
+      "n_pairs": 3123
+    },
+    {
+      "jd": 2460424.0,
+      "ew_minus_ns": -0.029567393936376182,
+      "n_pairs": 3118
+    },
+    {
+      "jd": 2460439.0,
+      "ew_minus_ns": -0.005524003859702475,
+      "n_pairs": 3058
+    },
+    {
+      "jd": 2460454.0,
+      "ew_minus_ns": -0.02180645630127405,
+      "n_pairs": 3057
+    },
+    {
+      "jd": 2460469.0,
+      "ew_minus_ns": -0.020608085767898854,
+      "n_pairs": 3058
+    },
+    {
+      "jd": 2460484.0,
+      "ew_minus_ns": -0.027077630337154143,
+      "n_pairs": 3042
+    },
+    {
+      "jd": 2460500.0,
+      "ew_minus_ns": -0.025590043404091087,
+      "n_pairs": 3029
+    },
+    {
+      "jd": 2460515.0,
+      "ew_minus_ns": -0.029883735089849914,
+      "n_pairs": 3042
+    },
+    {
+      "jd": 2460530.0,
+      "ew_minus_ns": -0.04467120489632845,
+      "n_pairs": 2980
+    },
+    {
+      "jd": 2460546.0,
+      "ew_minus_ns": -0.018153836699209863,
+      "n_pairs": 2959
+    },
+    {
+      "jd": 2460561.0,
+      "ew_minus_ns": -0.010086543493046843,
+      "n_pairs": 2947
+    },
+    {
+      "jd": 2460576.0,
+      "ew_minus_ns": 0.006623720188026899,
+      "n_pairs": 2959
+    },
+    {
+      "jd": 2460591.0,
+      "ew_minus_ns": 0.008151246012794808,
+      "n_pairs": 2959
+    },
+    {
+      "jd": 2460606.0,
+      "ew_minus_ns": -0.022979659971180955,
+      "n_pairs": 2903
+    },
+    {
+      "jd": 2460621.0,
+      "ew_minus_ns": -0.02756041700063229,
+      "n_pairs": 2900
+    },
+    {
+      "jd": 2460636.0,
+      "ew_minus_ns": -0.04492124222929601,
+      "n_pairs": 2911
+    },
+    {
+      "jd": 2460652.0,
+      "ew_minus_ns": -0.023535825231451007,
+      "n_pairs": 2898
+    },
+    {
+      "jd": 2460667.0,
+      "ew_minus_ns": -0.037918909474434354,
+      "n_pairs": 2839
+    }
+  ],
+  "verdict": {
+    "n_windows": 24,
+    "window_days": 15,
+    "band_km": [
+      300.0,
+      1500.0
+    ],
+    "pairs_per_window_median": 3042,
+    "models": {
+      "dipolar_v_dot_n": {
+        "best_axis_ra_deg": 185.0,
+        "best_axis_dec_deg": -67.5,
+        "r_at_best_axis": -0.6046863952010466,
+        "scanned_null_p_naive": 0.0065,
+        "scanned_null_p_block_permutation": 0.395,
+        "lag1_autocorrelation": 0.6530490533784038,
+        "separation_from_deg": {
+          "CMB_dipole": 61.586806492748046,
+          "paper2_axis": 63.50372236178601,
+          "paper3_axis": 62.533742641698666,
+          "solar_apex": 63.97128611666054
+        },
+        "r_at_named_axes": {
+          "CMB_dipole": {
+            "r": -0.3476996283536599,
+            "p_naive": 0.0915,
+            "p_block_permutation": 0.4665,
+            "bartlett_n_eff": 6.337653573461633
+          },
+          "paper2_axis": {
+            "r": -0.4666858479007984,
+            "p_naive": 0.019,
+            "p_block_permutation": 0.2505,
+            "bartlett_n_eff": 6.434853325665802
+          },
+          "paper3_axis": {
+            "r": -0.481345932402914,
+            "p_naive": 0.017,
+            "p_block_permutation": 0.2435,
+            "bartlett_n_eff": 6.436764575095178
+          },
+          "solar_apex": {
+            "r": -0.42799452974629043,
+            "p_naive": 0.0395,
+            "p_block_permutation": 0.348,
+            "bartlett_n_eff": 5.4341301314606
+          }
+        },
+        "significant_vs_scanned_null": false,
+        "aligns_with_corpus_axis": false
+      },
+      "quadrupolar_v_dot_n_sq": {
+        "best_axis_ra_deg": 210.0,
+        "best_axis_dec_deg": 2.5,
+        "r_at_best_axis": -0.5947479354506287,
+        "scanned_null_p_naive": 0.0125,
+        "scanned_null_p_block_permutation": 0.2665,
+        "lag1_autocorrelation": 0.6530490533784038,
+        "separation_from_deg": {
+          "CMB_dipole": 42.98034338917276,
+          "paper2_axis": 24.850149231847745,
+          "paper3_axis": 23.223331632550035,
+          "solar_apex": 63.8152174934752
+        },
+        "r_at_named_axes": {
+          "CMB_dipole": {
+            "r": -0.19575875903712514,
+            "p_naive": 0.345,
+            "p_block_permutation": 0.6385,
+            "bartlett_n_eff": 7.3069168306057115
+          },
+          "paper2_axis": {
+            "r": -0.4560613480326654,
+            "p_naive": 0.0325,
+            "p_block_permutation": 0.2555,
+            "bartlett_n_eff": 7.686201341664963
+          },
+          "paper3_axis": {
+            "r": -0.4844728338686015,
+            "p_naive": 0.0175,
+            "p_block_permutation": 0.244,
+            "bartlett_n_eff": 7.694283599960805
+          },
+          "solar_apex": {
+            "r": 0.3721176818358598,
+            "p_naive": 0.081,
+            "p_block_permutation": 0.3945,
+            "bartlett_n_eff": 7.605305062504792
+          }
+        },
+        "significant_vs_scanned_null": false,
+        "aligns_with_corpus_axis": true
+      }
+    },
+    "limitation": "one year gives 24 windows against Paper 2's 25.3 years, and the series is autocorrelated (rho1 = +0.65), leaving roughly 7-8 effective degrees of freedom.  Direction and sign can be compared with the corpus; significance cannot be established.",
+    "lag1_autocorrelation": 0.6530490533784038,
+    "corpus_reference": {
+      "CMB_dipole": [
+        168.0,
+        -7.0
+      ],
+      "paper2": [
+        186.0,
+        -4.0
+      ],
+      "paper3": [
+        188.0,
+        -5.0
+      ],
+      "paper2_reported_r": -0.888
+    }
+  }
+}

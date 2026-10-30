@@ -1,0 +1,60 @@
+{
+  "test": "phase2_degraded_geometry",
+  "analytical_by_satellite_count": {
+    "3": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.5019607843137255,
+      "pos_sigma_none_m": 73262253.12947777,
+      "pos_sigma_kriging_m": 9.971612479051679,
+      "improvement_pct": 99.99998638915396
+    },
+    "4": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.0,
+      "pos_sigma_none_m": 41.28975826183792,
+      "pos_sigma_kriging_m": 4.663890958414177,
+      "improvement_pct": 88.70448470819753
+    },
+    "5": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.0,
+      "pos_sigma_none_m": 15.950348155924889,
+      "pos_sigma_kriging_m": 3.3986772474824036,
+      "improvement_pct": 78.692143806153
+    },
+    "6": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.0,
+      "pos_sigma_none_m": 9.876926273217574,
+      "pos_sigma_kriging_m": 2.743523046473529,
+      "improvement_pct": 72.22290649356259
+    },
+    "8": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.0,
+      "pos_sigma_none_m": 5.5125353982301295,
+      "pos_sigma_kriging_m": 2.048505664923093,
+      "improvement_pct": 62.83913812905778
+    },
+    "99": {
+      "n_epochs": 36720,
+      "frac_singular_without_prior": 0.0,
+      "pos_sigma_none_m": 1.0698971218451767,
+      "pos_sigma_kriging_m": 0.9351300144013897,
+      "improvement_pct": 12.59626787399556
+    }
+  },
+  "urban_pride": {
+    "mask": "GPS-only, 50 deg elevation cutoff",
+    "arm_A_scatter_cm": 1.3,
+    "arm_C_scatter_cm": 1.3,
+    "arm_C_offset_vs_A_cm": 0.0,
+    "note": "batch 24 h phase PPP is robust to an instantaneous mask because it accumulates geometry over the whole day -- arms are identical. The clock prior's regime is epoch-wise / real-time PPP under obstruction, which the analytical result above quantifies (a batch engine cannot demonstrate it)."
+  },
+  "computational_cost": {
+    "added_operations_per_epoch": "2 (N[clk,clk] += w ;  N[clk,rhs] += w*(z-x0))",
+    "flops_vs_gnss_update": "~1e-6  (a full epoch update is O(n_sat * n_param^2) ~ 1e3-1e4 flops)",
+    "note": "the prior is a rank-1 diagonal + RHS update; negligible overhead, edge-deployable"
+  },
+  "finding": "A network clock prior is negligible with a full sky but decisive under obstruction: at 3-5 visible satellites it removes the clock/vertical degeneracy that makes instantaneous PPP rank-deficient or >10 m. This is the real-time / urban-canyon operational niche; batch 24 h phase PPP does not need it (Step 23). Overhead is 2 scalar operations per epoch."
+}

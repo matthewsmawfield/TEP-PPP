@@ -1,0 +1,278 @@
+{
+  "step": 80,
+  "title": "Co-located quartz/atomic screening differential across six sites",
+  "timestamp": "2026-09-02T22:38:42.025003+00:00",
+  "product": "clk_cod_ops",
+  "arms": {
+    "MAT1-MATE": {
+      "quartz": "MAT1",
+      "atomic": "MATE",
+      "n_days": 348,
+      "fits": {
+        "delta": {
+          "lambda_km": 1673.4630685175177,
+          "R2_exponential": 0.5141890060454964,
+          "best_model": "exponential",
+          "lambda_best_km": 1673.4630685175177,
+          "R2_best": 0.5141890060454964,
+          "n_bins": 15,
+          "mean_index": 0.03597276427189391
+        },
+        "atomic": {
+          "lambda_km": 39999.99999999999,
+          "R2_exponential": 0.049762277036130786,
+          "best_model": "power_law",
+          "lambda_best_km": 2.8748533530117095,
+          "R2_best": 0.10885035043804303,
+          "n_bins": 15,
+          "mean_index": -0.00992799391135371
+        },
+        "quartz": {
+          "lambda_km": 1704.9427596612636,
+          "R2_exponential": 0.5192026791028748,
+          "best_model": "exponential",
+          "lambda_best_km": 1704.9427596612636,
+          "R2_best": 0.5192026791028748,
+          "n_bins": 15,
+          "mean_index": 0.03718441642442392
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.02688337369332361,
+        "R2_max": 0.7017227525824834,
+        "lambda_median_km": 2699.5629967675277
+      },
+      "p_R2_ge_observed": 0.24,
+      "lambda_in_TEP_band": true,
+      "significant": false
+    },
+    "STR2-STR1": {
+      "quartz": "STR2",
+      "atomic": "STR1",
+      "n_days": 349,
+      "fits": {
+        "delta": {
+          "lambda_km": 65.474561242461,
+          "R2_exponential": -2.1316282072803006e-14,
+          "best_model": "power_law",
+          "lambda_best_km": 0.0002959348293808243,
+          "R2_best": 0.3967830398870621,
+          "n_bins": 15,
+          "mean_index": 0.005893577098364461
+        },
+        "atomic": {
+          "lambda_km": 2834.742964434258,
+          "R2_exponential": 0.719918191157346,
+          "best_model": "power_law",
+          "lambda_best_km": 0.9376619401593401,
+          "R2_best": 0.7220959947381196,
+          "n_bins": 15,
+          "mean_index": -0.0017898845767673089
+        },
+        "quartz": {
+          "lambda_km": 83.83279739932527,
+          "R2_exponential": -1.3988810110276972e-14,
+          "best_model": "power_law",
+          "lambda_best_km": 0.00015719909082845908,
+          "R2_best": 0.28154280065718684,
+          "n_bins": 15,
+          "mean_index": 0.0069864517779570125
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.08463247689769204,
+        "R2_max": 0.5940675593139138,
+        "lambda_median_km": 794.042914856575
+      },
+      "p_R2_ge_observed": 0.92,
+      "lambda_in_TEP_band": false,
+      "significant": false
+    },
+    "FAA1-THTG": {
+      "quartz": "FAA1",
+      "atomic": "THTG",
+      "n_days": 314,
+      "fits": {
+        "delta": {
+          "lambda_km": 631.3315230472698,
+          "R2_exponential": 0.0161166113218435,
+          "best_model": "gaussian",
+          "lambda_best_km": 1622.1000276638122,
+          "R2_best": 0.01651367428513606,
+          "n_bins": 15,
+          "mean_index": 0.011264936737900189
+        },
+        "atomic": {
+          "lambda_km": 698.7879625194466,
+          "R2_exponential": 0.14183599121784218,
+          "best_model": "gaussian",
+          "lambda_best_km": 1588.7724887427205,
+          "R2_best": 0.14406727858713775,
+          "n_bins": 15,
+          "mean_index": 0.005973629458793479
+        },
+        "quartz": {
+          "lambda_km": 713.9952503391028,
+          "R2_exponential": 0.03700048146354917,
+          "best_model": "gaussian",
+          "lambda_best_km": 1643.307071228722,
+          "R2_best": 0.038001385863345116,
+          "n_bins": 15,
+          "mean_index": 0.019187260879678113
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.025080065030882226,
+        "R2_max": 0.6394798620225742,
+        "lambda_median_km": 579.748410427163
+      },
+      "p_R2_ge_observed": 0.52,
+      "lambda_in_TEP_band": false,
+      "significant": false
+    },
+    "THTI-THTG": {
+      "quartz": "THTI",
+      "atomic": "THTG",
+      "n_days": 280,
+      "fits": {
+        "delta": {
+          "lambda_km": 974.674445770992,
+          "R2_exponential": 0.37675432228355166,
+          "best_model": "gaussian",
+          "lambda_best_km": 3529.0020018984806,
+          "R2_best": 0.3818364097773621,
+          "n_bins": 15,
+          "mean_index": 0.02463668252247691
+        },
+        "atomic": {
+          "lambda_km": 725.4615074383975,
+          "R2_exponential": 0.5638239830252119,
+          "best_model": "gaussian",
+          "lambda_best_km": 1624.6662319881777,
+          "R2_best": 0.5647148722597571,
+          "n_bins": 15,
+          "mean_index": 0.0005459054501739015
+        },
+        "quartz": {
+          "lambda_km": 1018.7377554426362,
+          "R2_exponential": 0.39326061473086993,
+          "best_model": "gaussian",
+          "lambda_best_km": 3529.7618614596818,
+          "R2_best": 0.39862994775096905,
+          "n_bins": 15,
+          "mean_index": 0.03195219528303048
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.00832425323618291,
+        "R2_max": 0.7117875684347441,
+        "lambda_median_km": 554.88440199432
+      },
+      "p_R2_ge_observed": 0.24,
+      "lambda_in_TEP_band": false,
+      "significant": false
+    },
+    "JFNG-WUHN": {
+      "quartz": "JFNG",
+      "atomic": "WUHN",
+      "n_days": 192,
+      "fits": {
+        "delta": {
+          "lambda_km": 242.95136262360415,
+          "R2_exponential": 3.2924095894171224e-05,
+          "best_model": "power_law",
+          "lambda_best_km": 0.00017122082606235643,
+          "R2_best": 0.15165155286090215,
+          "n_bins": 15,
+          "mean_index": 0.014006191410218957
+        },
+        "atomic": {
+          "lambda_km": 39999.99999999999,
+          "R2_exponential": 0.3861320875015173,
+          "best_model": "exponential",
+          "lambda_best_km": 39999.99999999999,
+          "R2_best": 0.3861320875015173,
+          "n_bins": 15,
+          "mean_index": 0.018742737230451896
+        },
+        "quartz": {
+          "lambda_km": 39999.99999999999,
+          "R2_exponential": 0.33320372844235757,
+          "best_model": "exponential",
+          "lambda_best_km": 39999.99999999999,
+          "R2_best": 0.33320372844235757,
+          "n_bins": 15,
+          "mean_index": 0.033383697097524735
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.03135827797789248,
+        "R2_max": 0.5870901484743802,
+        "lambda_median_km": 343.2440626917756
+      },
+      "p_R2_ge_observed": 0.64,
+      "lambda_in_TEP_band": false,
+      "significant": false
+    },
+    "WUH2-WUHN": {
+      "quartz": "WUH2",
+      "atomic": "WUHN",
+      "n_days": 336,
+      "fits": {
+        "delta": {
+          "lambda_km": 589.6821113881493,
+          "R2_exponential": 0.21383562846613813,
+          "best_model": "constant",
+          "lambda_best_km": null,
+          "R2_best": 0.0,
+          "n_bins": 15,
+          "mean_index": 0.0015837206076155805
+        },
+        "atomic": {
+          "lambda_km": 39999.99999999973,
+          "R2_exponential": 0.4039135412757848,
+          "best_model": "exponential",
+          "lambda_best_km": 39999.99999999973,
+          "R2_best": 0.4039135412757848,
+          "n_bins": 15,
+          "mean_index": 0.010262288598896257
+        },
+        "quartz": {
+          "lambda_km": 588.2698657061715,
+          "R2_exponential": 0.21379943955392422,
+          "best_model": "constant",
+          "lambda_best_km": null,
+          "R2_best": 0.0,
+          "n_bins": 15,
+          "mean_index": 0.0015843677414274387
+        }
+      },
+      "null": {
+        "n": 25,
+        "R2_median": 0.07171887135974375,
+        "R2_max": 0.3873945961810521,
+        "lambda_median_km": 1686.035253591575
+      },
+      "p_R2_ge_observed": 0.24,
+      "lambda_in_TEP_band": false,
+      "significant": false
+    }
+  },
+  "verdict": {
+    "n_sites": 6,
+    "n_sites_significant_and_in_TEP_band": 0,
+    "sites": [],
+    "lambda_delta_median_km": 610.5068172177096,
+    "lambda_delta_range_km": [
+      65.474561242461,
+      1673.4630685175177
+    ],
+    "corpus_lambda_km": "4201 +/- 1967 (Paper 2)",
+    "replicates_across_sites": false
+  }
+}

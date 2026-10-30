@@ -1,0 +1,64 @@
+366 SP3 days available; using 90 (every 4th) for the CSD battery
+loaded 90 usable days   (median 114 sats/day)
+
+[gps_only]  lambda = 40000 +/- 6828 km   R2 = 0.617   A=0.4913 C0=-0.2349   (43,525 pair-days, 18 bins)
+  model comparison: best=exponential  dAIC(exp vs best)=0.0
+  structure: c_near=0.495  c_far=-0.041  contrast=+0.536  log_slope=-0.2639
+  null phase_randomise : contrast +0.003±0.050 (p=0.000, z=+10.6)   slope -0.0016 (p=0.000, z=+24.5)
+  null pair_shuffle    : contrast -0.003±0.043 (p=0.000, z=+12.6)   slope +0.0003 (p=0.000, z=+24.6)
+
+[galileo_only]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0241   (29,690 pair-days, 12 bins)
+  model comparison: best=constant  dAIC(exp vs best)=2.4
+  structure: c_near=0.333  c_far=0.065  contrast=+0.269  log_slope=+0.0543
+  null phase_randomise : contrast +0.008±0.039 (p=0.000, z=+6.7)   slope -0.0007 (p=1.000, z=-3.2)
+  null pair_shuffle    : contrast -0.001±0.035 (p=0.000, z=+7.7)   slope +0.0001 (p=1.000, z=-3.1)
+
+[glonass_only]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0007   (18,061 pair-days, 10 bins)
+  model comparison: best=constant  dAIC(exp vs best)=3.4
+  structure: c_near=0.010  c_far=-0.004  contrast=+0.014  log_slope=-0.0093
+  null phase_randomise : contrast -0.001±0.025 (p=0.283, z=+0.6)   slope -0.0005 (p=0.317, z=+0.4)
+  null pair_shuffle    : contrast +0.002±0.024 (p=0.308, z=+0.5)   slope -0.0017 (p=0.400, z=+0.3)
+
+[beidou_only]  lambda = nan +/- nan km   R2 = 0.000   A=0.0000 C0=0.0132   (55,058 pair-days, 20 bins)
+  model comparison: best=constant  dAIC(exp vs best)=2.9
+  structure: c_near=0.196  c_far=0.013  contrast=+0.183  log_slope=-0.0412
+  null phase_randomise : contrast -0.001±0.032 (p=0.000, z=+5.7)   slope -0.0000 (p=0.000, z=+4.1)
+  null pair_shuffle    : contrast -0.002±0.031 (p=0.000, z=+6.0)   slope +0.0004 (p=0.000, z=+4.2)
+
+[cross_gps_galileo]  lambda = 14911 +/- 959 km   R2 = 0.693   A=0.6955 C0=0.0048   (74,358 pair-days, 14 bins)
+  model comparison: best=exponential  dAIC(exp vs best)=0.0
+  structure: c_near=0.307  c_far=0.005  contrast=+0.302  log_slope=-0.1680
+  null phase_randomise : contrast +0.001±0.025 (p=0.000, z=+12.0)   slope +0.0002 (p=0.000, z=+16.8)
+  null pair_shuffle    : contrast +0.001±0.020 (p=0.000, z=+14.8)   slope +0.0002 (p=0.000, z=+17.1)
+
+[all_meo]  lambda = 13965 +/- 586 km   R2 = 0.708   A=0.3380 C0=0.0052   (577,081 pair-days, 21 bins)
+  model comparison: best=gaussian  dAIC(exp vs best)=3.8
+  structure: c_near=0.179  c_far=0.007  contrast=+0.172  log_slope=-0.0796
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:299: UserWarning: resource_tracker: There appear to be 14 leaked semlock objects to clean up at shutdown
+  warnings.warn(
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:299: UserWarning: resource_tracker: There appear to be 12 leaked folder objects to clean up at shutdown
+  warnings.warn(
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_5a5149a276404df3966c51c33d421de9: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_3ec7af96024f4e1596a8cd10cc1b8604: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_91f8eaf948234dad87aa2c225fed21e7_4d56c2d7b6f64906949928e39b191a7d: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_b1c999519f2f45d3848f3b50c5019813: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_37440f1d281d41e0a5910f6d6c3d77b1_9a4cf7cc57d94fd188ecf96780fce1a5: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_8e69399a69de478c946f955763b9a355: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_41bc1e88613a4bee9f2f64322e165d90_c35aa1c6c4bc40739c04a41ffb90debd: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_b22384c481594c32aa6145879ecd95b8: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_f9e5258dea3b475ba3477f3fc3c1facd_235d045e6a584b31bb52b9e85992fadb: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_e96cae1be3554a7fb96a989a7b83c7b6: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_5242ee1f122e4498ac9f4f263d64fc1f_b3beb521c7464683a0b21a7bde425a78: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+.venv/lib/python3.12/site-packages/joblib/externals/loky/backend/resource_tracker.py:315: UserWarning: resource_tracker: /var/folders/ys/zbt4w_p92878lccskzg_cj1h0000gn/T/joblib_memmapping_folder_26144_dd688e1caf0341c4b091ea8a24413728_8835f64513ee44cabbf748639f16a151: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")

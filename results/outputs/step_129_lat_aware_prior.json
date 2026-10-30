@@ -1,0 +1,62 @@
+{
+  "step": 129,
+  "title": "Latitude-aware screening prior: exploiting equatorial coupling",
+  "timestamp": "2026-09-06T19:04:24.453250+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "lambdas": {
+    "low_lat": 5627.0,
+    "mid_lat": 1450.0,
+    "high_lat": 1920.0,
+    "uniform": 4200.0
+  },
+  "results": {
+    "n_days": 30,
+    "lat_aware_vs_uniform_pct": {
+      "median": -0.9157619975003417,
+      "ci95": [
+        -1.5360642763163845,
+        -0.5495145917476019
+      ],
+      "n": 30,
+      "frac_positive": 0.13333333333333333
+    },
+    "lat_aware_vs_emp_pct": {
+      "median": -1.8957512691478384,
+      "ci95": [
+        -2.7310147724766254,
+        0.5545719878179596
+      ],
+      "n": 30,
+      "frac_positive": 0.4
+    },
+    "low_lat_lat_aware_vs_uniform_pct": {
+      "median": -0.692838876242674,
+      "ci95": [
+        -0.8878754937965083,
+        -0.43139854757010543
+      ],
+      "n": 30,
+      "frac_positive": 0.06666666666666667
+    },
+    "low_lat_lat_aware_vs_emp_pct": {
+      "median": -1.657115719335378,
+      "ci95": [
+        -2.70012419427178,
+        -0.5168307272809369
+      ],
+      "n": 30,
+      "frac_positive": 0.2
+    },
+    "median_rms_m": {
+      "uniform": 1.1880427571354584,
+      "lat_aware": 1.1991163844933752,
+      "empirical": 1.1908345560849
+    }
+  },
+  "interpretation": [
+    "The latitude-aware kernel does not beat the uniform kernel (-0.92%).  The latitude-dependent lambdas from Step 122 do not improve prediction.",
+    "For low-latitude targets specifically, latitude-aware vs uniform: -0.69% (CI95 [-0.89, -0.43], n=30)."
+  ],
+  "pre_registered_prediction": "The latitude-aware TEP kernel (low-lat lambda=5627 km, mid-lat lambda=1450 km, from Step 122) should beat the uniform kernel (lambda=4200 km), especially for low-latitude targets, because the latitude-dependent coupling strength carries predictive information.  This exploits the equatorial ionization anomaly modulation as a predictive feature."
+}

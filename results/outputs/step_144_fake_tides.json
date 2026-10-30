@@ -1,0 +1,81 @@
+{
+  "step": 144,
+  "title": "Fake-tides control",
+  "timestamp": "2026-09-06T20:23:50.006897+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 57,
+  "real_tidal_frequencies_uhz": [
+    11.574,
+    22.354999999999997,
+    23.148,
+    34.721999999999994
+  ],
+  "fake_tidal_frequencies_uhz": [
+    11.110999999999999,
+    21.368,
+    25.253,
+    39.683
+  ],
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502.0
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459.0
+    }
+  ],
+  "results": {
+    "n_days": 57,
+    "real_tides_vs_full_band_pct": {
+      "median": 2.191585077832814,
+      "ci95": [
+        1.5575213456469617,
+        2.886811690706137
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "fake_tides_vs_full_band_pct": {
+      "median": 1.6970466346520885,
+      "ci95": [
+        0.7391822066805553,
+        2.598286743106082
+      ],
+      "n": 57,
+      "frac_positive": 0.7719298245614035
+    },
+    "real_tides_vs_fake_tides_pct": {
+      "median": 0.5839116443077441,
+      "ci95": [
+        0.36662184691236277,
+        0.7290463334834074
+      ],
+      "n": 57,
+      "frac_positive": 0.8421052631578947
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "real_tides": 1.31922915487668,
+      "fake_tides": 1.400541827458613
+    }
+  },
+  "interpretation": [
+    "Real-tides multi-band vs full-band: median +2.19%, CI95 [+1.56, +2.89].",
+    "Fake-tides multi-band vs full-band: median +1.70%, CI95 [+0.74, +2.60].",
+    "Real tides BEAT fake tides (median +0.58%, CI95 [+0.37, +0.73]). The real gravitational tidal frequencies carry predictive signal that fake non-physical frequencies do not. This is direct evidence that the gravitational tidal structure is operationally relevant, not just any low-frequency coherence."
+  ],
+  "pre_registered_prediction": "If the real gravitational tidal frequencies carry the predictive signal, the real-tides multi-band predictor should beat the fake-tides variant. If the tidal band's contribution is just generic low-frequency coherence, fake tides should work equally well."
+}

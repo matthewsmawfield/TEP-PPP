@@ -1,0 +1,16 @@
+{
+  "description": "Epoch-sharing fraction for the pinned step_174 corpus: fraction of each 1-step eval window's holdout epochs coinciding (15 s gate) with the newest ring member's target epochs, and with the pooled ring (K=16) member targets. Quantifies the retrodiction channel in the sealed headline.",
+  "corpus_end_wid": 1793132392,
+  "n_members": 40,
+  "n_eval_seals": 24,
+  "newest_member_share_pct": {
+    "mean": 89.14,
+    "min": 74.6,
+    "max": 95.74
+  },
+  "pooled_ring_share_pct": {
+    "mean": 89.14,
+    "min": 74.6,
+    "max": 95.74
+  }
+}

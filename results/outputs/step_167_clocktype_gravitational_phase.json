@@ -1,0 +1,109 @@
+{
+  "step": 167,
+  "title": "Clock-type screening of the gravitational phase signature",
+  "timestamp": "2026-09-07T15:04:19.684602+00:00",
+  "product": "clk_cod_ops",
+  "design": "Stations classified by clock noise: atomic (<5 ns) vs good quartz (5-50 ns). TEP predicts quartz > atomic for M2 (screening). S2 should show an even larger contrast because it has an atmospheric component that only affects quartz.",
+  "results_2024": {
+    "atomic": {
+      "n_stations": 79,
+      "M2": {
+        "r": 0.10646848312789262,
+        "p": 3.1388480986616122e-09,
+        "n_pairs": 3081
+      },
+      "O1": {
+        "r": 0.05916568519181306,
+        "p": 0.0010175058231616104,
+        "n_pairs": 3081
+      },
+      "S2": {
+        "r": 0.008035234377429007,
+        "p": 0.6557157094608526,
+        "n_pairs": 3081
+      },
+      "control_r_mean": 0.02985821127318311
+    },
+    "quartz": {
+      "n_stations": 125,
+      "M2": {
+        "r": 0.20714136752897633,
+        "p": 7.164752285621518e-76,
+        "n_pairs": 7750
+      },
+      "O1": {
+        "r": 0.1312185075483203,
+        "p": 4.119595688627758e-31,
+        "n_pairs": 7750
+      },
+      "S2": {
+        "r": 0.22988691504098996,
+        "p": 1.7565982304576492e-93,
+        "n_pairs": 7750
+      },
+      "control_r_mean": 0.10612575398256766
+    }
+  },
+  "results_2025": {
+    "atomic": {
+      "n_stations": 84,
+      "M2": {
+        "r": 0.06157610226942506,
+        "p": 0.0002750338859914413,
+        "n_pairs": 3486
+      },
+      "O1": {
+        "r": 0.2486390619031246,
+        "p": 2.8498606644786834e-50,
+        "n_pairs": 3486
+      },
+      "S2": {
+        "r": -0.01907706069248939,
+        "p": 0.2601430208205788,
+        "n_pairs": 3486
+      },
+      "control_r_mean": 0.014238780549912962
+    },
+    "quartz": {
+      "n_stations": 135,
+      "M2": {
+        "r": 0.08973595304344086,
+        "p": 1.226301152432231e-17,
+        "n_pairs": 9045
+      },
+      "O1": {
+        "r": 0.006074866387464531,
+        "p": 0.5634822823312147,
+        "n_pairs": 9045
+      },
+      "S2": {
+        "r": 0.28013180441880997,
+        "p": 9.937924118183645e-163,
+        "n_pairs": 9045
+      },
+      "control_r_mean": 0.021050585081394207
+    }
+  },
+  "summary": {
+    "2024": {
+      "atomic_M2_r": 0.10646848312789262,
+      "quartz_M2_r": 0.20714136752897633,
+      "atomic_S2_r": 0.008035234377429007,
+      "quartz_S2_r": 0.22988691504098996,
+      "atomic_ctrl_r": 0.02985821127318311,
+      "quartz_ctrl_r": 0.10612575398256766,
+      "M2_quartz_over_atomic": 1.945565123531937,
+      "S2_quartz_over_atomic": 28.60985806297609
+    },
+    "2025": {
+      "atomic_M2_r": 0.06157610226942506,
+      "quartz_M2_r": 0.08973595304344086,
+      "atomic_S2_r": -0.01907706069248939,
+      "quartz_S2_r": 0.28013180441880997,
+      "atomic_ctrl_r": 0.014238780549912962,
+      "quartz_ctrl_r": 0.021050585081394207,
+      "M2_quartz_over_atomic": 1.457317851181988,
+      "S2_quartz_over_atomic": 280.13180441880996
+    }
+  }
+}

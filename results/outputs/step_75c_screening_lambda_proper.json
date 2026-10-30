@@ -1,0 +1,139 @@
+{
+  "step": "75c",
+  "title": "Screening-stratified correlation length, with sample-size and datum controls",
+  "timestamp": "2026-09-02T21:07:25.572882+00:00",
+  "arms": {
+    "as_published": {
+      "n_pair_days": 1936557,
+      "n_unique_pairs": {
+        "QQ": 5624,
+        "QA": 4374,
+        "AA": 832
+      },
+      "lambda_unmatched_km": {
+        "QQ": 2590.7942056582074,
+        "QA": 7324.191367086567,
+        "AA": 1096.6234379124976
+      },
+      "lambda_size_matched": {
+        "QQ": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 2587.247032833919,
+          "iqr_km": [
+            2131.056777016191,
+            3126.217957061037
+          ],
+          "ci95_km": [
+            1633.7672170244582,
+            4689.856171952208
+          ]
+        },
+        "QA": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 7138.964933396922,
+          "iqr_km": [
+            3797.738555314945,
+            25887.021908412386
+          ],
+          "ci95_km": [
+            366.91334944066773,
+            39999.99999999999
+          ]
+        },
+        "AA": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 1096.6234379124976,
+          "iqr_km": [
+            1096.6234379124976,
+            1096.6234379124976
+          ],
+          "ci95_km": [
+            1096.6234379124976,
+            1096.6234379124976
+          ]
+        }
+      },
+      "size_matched_QQ_above_AA": true,
+      "perm_monotone_fraction": 0.29,
+      "perm_n": 300,
+      "observed_lambda_gap_km": 1494.1707677457098,
+      "perm_p_gap": 0.22333333333333333,
+      "ordering_is_informative": false,
+      "gap_significant": false
+    },
+    "datum_projected_out": {
+      "n_pair_days": 1936557,
+      "n_unique_pairs": {
+        "QQ": 5624,
+        "QA": 4374,
+        "AA": 832
+      },
+      "lambda_unmatched_km": {
+        "QQ": 2590.7942056582074,
+        "QA": 7324.191367086567,
+        "AA": 1096.6234379124976
+      },
+      "lambda_size_matched": {
+        "QQ": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 2479.846779804931,
+          "iqr_km": [
+            2197.6878795275084,
+            2921.4439653530585
+          ],
+          "ci95_km": [
+            1600.6407936336927,
+            3958.453375551596
+          ]
+        },
+        "QA": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 6302.307603808594,
+          "iqr_km": [
+            3522.875148690345,
+            20683.972972141444
+          ],
+          "ci95_km": [
+            252.76975180637146,
+            39999.99999999999
+          ]
+        },
+        "AA": {
+          "n_pairs": 832,
+          "n_draws": 250,
+          "median_km": 1096.6234379124976,
+          "iqr_km": [
+            1096.6234379124976,
+            1096.6234379124976
+          ],
+          "ci95_km": [
+            1096.6234379124976,
+            1096.6234379124976
+          ]
+        }
+      },
+      "size_matched_QQ_above_AA": true,
+      "perm_monotone_fraction": 0.25333333333333335,
+      "perm_n": 300,
+      "observed_lambda_gap_km": 1494.1707677457098,
+      "perm_p_gap": 0.22333333333333333,
+      "ordering_is_informative": false,
+      "gap_significant": false
+    }
+  },
+  "verdict": {
+    "estimator": "phase-alignment index cos(arg(sum_f S_ij(f))), Step 53 (NOT band-passed Pearson)",
+    "model": "A*exp(-d/lambda) + C0 (the offset absorbs the rank-1 network datum)",
+    "n_days": 366,
+    "step_75b_claim": "lambda_QQ 2617 > lambda_QA 1073 > lambda_AA 546 = screening",
+    "ordering_informative": false,
+    "gap_significant": false,
+    "size_matched_separation": true,
+    "conclusion": "NOT confirmed: the ordering is consistent with a class-size artefact once the estimator, the nugget, the sample sizes and the label permutation are all handled correctly"
+  }
+}

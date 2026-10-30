@@ -1,0 +1,224 @@
+{
+  "step": 155,
+  "title": "Leave-one-band-out: which frequency band drives the multi-band advantage?",
+  "timestamp": "2026-09-07T01:05:20.050639+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "bands": [
+    {
+      "name": "tidal",
+      "f_lo_uhz": 10.0,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677
+    },
+    {
+      "name": "post_tidal",
+      "f_lo_uhz": 35.0,
+      "f_hi_uhz": 100.0,
+      "lambda_km": 1502
+    },
+    {
+      "name": "intermediate",
+      "f_lo_uhz": 100.0,
+      "f_hi_uhz": 500.0,
+      "lambda_km": 1459
+    }
+  ],
+  "n_days_scored": 13,
+  "band_availability": {
+    "tidal": 13,
+    "post_tidal": 13,
+    "intermediate": 13
+  },
+  "results": {
+    "full_band": {
+      "median_rms_m": 0.6228610149909556,
+      "vs_full_band_pct": {
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_multi_band_pct": {
+        "median": -1.6913841404093466,
+        "ci95": [
+          -1.8470318069060188,
+          -1.2916952816091065
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "multi_band": {
+      "median_rms_m": 0.61491814630932,
+      "vs_full_band_pct": {
+        "median": 1.6632521572073178,
+        "ci95": [
+          1.2752232826372945,
+          1.8135352342990685
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_multi_band_pct": {
+        "median": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "no_tidal": {
+      "median_rms_m": 0.6155985742198599,
+      "vs_full_band_pct": {
+        "median": 1.613503526602511,
+        "ci95": [
+          1.241015125812428,
+          1.8752805844781117
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_multi_band_pct": {
+        "median": 0.08841171920433988,
+        "ci95": [
+          -0.19572883328182744,
+          0.13622291947280596
+        ],
+        "n": 13,
+        "frac_positive": 0.6923076923076923
+      },
+      "n": 13
+    },
+    "no_post_tidal": {
+      "median_rms_m": 0.615383306975564,
+      "vs_full_band_pct": {
+        "median": 1.200541988568704,
+        "ci95": [
+          1.0787202036610655,
+          1.3658400410360483
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_multi_band_pct": {
+        "median": -0.4479466104280183,
+        "ci95": [
+          -0.6458136558388006,
+          -0.2830267654106988
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "no_intermediate": {
+      "median_rms_m": 0.6173256997532726,
+      "vs_full_band_pct": {
+        "median": 1.1854958384167058,
+        "ci95": [
+          0.9181869461594716,
+          1.5186413567827683
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_multi_band_pct": {
+        "median": -0.3915242147922493,
+        "ci95": [
+          -0.43488667264892644,
+          -0.30034066123065806
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "tidal_only": {
+      "median_rms_m": 0.6288106225411119,
+      "vs_full_band_pct": {
+        "median": -1.1660183338567442,
+        "ci95": [
+          -1.3432224662084158,
+          -1.0587668549250306
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "vs_multi_band_pct": {
+        "median": -2.966864724950047,
+        "ci95": [
+          -3.2068261528220177,
+          -2.621168378115213
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    },
+    "post_tidal_only": {
+      "median_rms_m": 0.6133057691996092,
+      "vs_full_band_pct": {
+        "median": 1.788975456018116,
+        "ci95": [
+          1.6525167640497274,
+          2.1856604356891407
+        ],
+        "n": 13,
+        "frac_positive": 1.0
+      },
+      "vs_multi_band_pct": {
+        "median": 0.21669256687967264,
+        "ci95": [
+          0.019006207569205458,
+          0.5312442092522462
+        ],
+        "n": 13,
+        "frac_positive": 0.7692307692307693
+      },
+      "n": 13
+    },
+    "intermediate_only": {
+      "median_rms_m": 0.6190244144050431,
+      "vs_full_band_pct": {
+        "median": 1.0447298629684076,
+        "ci95": [
+          0.9082528813196822,
+          1.6449922713399068
+        ],
+        "n": 13,
+        "frac_positive": 0.9230769230769231
+      },
+      "vs_multi_band_pct": {
+        "median": -0.35278563414391506,
+        "ci95": [
+          -0.7830054510723272,
+          -0.24019771390744182
+        ],
+        "n": 13,
+        "frac_positive": 0.0
+      },
+      "n": 13
+    }
+  },
+  "interpretation": [
+    "Leave-one-band-out: 13 eval days, 13-day window.",
+    "Band availability: tidal 13/13, post_tidal 13/13, intermediate 13/13 days.",
+    "  multi_band: vs full-band +1.66% CI[1.2752232826372945, 1.8135352342990685], vs multi-band +0.00% CI[0.0, 0.0], RMS=0.615 m",
+    "  no_tidal: vs full-band +1.61% CI[1.241015125812428, 1.8752805844781117], vs multi-band +0.09% CI[-0.19572883328182744, 0.13622291947280596], RMS=0.616 m",
+    "  no_post_tidal: vs full-band +1.20% CI[1.0787202036610655, 1.3658400410360483], vs multi-band -0.45% CI[-0.6458136558388006, -0.2830267654106988], RMS=0.615 m",
+    "  no_intermediate: vs full-band +1.19% CI[0.9181869461594716, 1.5186413567827683], vs multi-band -0.39% CI[-0.43488667264892644, -0.30034066123065806], RMS=0.617 m",
+    "  tidal_only: vs full-band -1.17% CI[-1.3432224662084158, -1.0587668549250306], vs multi-band -2.97% CI[-3.2068261528220177, -2.621168378115213], RMS=0.629 m",
+    "  post_tidal_only: vs full-band +1.79% CI[1.6525167640497274, 2.1856604356891407], vs multi-band +0.22% CI[0.019006207569205458, 0.5312442092522462], RMS=0.613 m",
+    "  intermediate_only: vs full-band +1.04% CI[0.9082528813196822, 1.6449922713399068], vs multi-band -0.35% CI[-0.7830054510723272, -0.24019771390744182], RMS=0.619 m",
+    "Removing the tidal band does NOT hurt (+0.09% CI[-0.19572883328182744, 0.13622291947280596]). The tidal band is not essential; the advantage comes from the continuum."
+  ],
+  "pre_registered_prediction": "If TEP is real, the tidal band (10-35 uHz, lambda=4677 km) carries the gravitational tidal signal. Removing it should hurt performance more than removing the post-tidal or intermediate bands. The tidal-only kernel should also carry predictive signal, even if it doesn't beat the full-band kernel (because the continuum is also needed)."
+}

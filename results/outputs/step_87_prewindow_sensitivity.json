@@ -1,0 +1,72 @@
+{
+  "step": 87,
+  "title": "Pre-window length sensitivity of TEP outage prediction",
+  "timestamp": "2026-09-03T15:27:38.108644+00:00",
+  "design": "Re-runs the Step 55 causal outage prediction at 1 h, 2 h, and 4 h pre-window lengths on a 15-day subset. The TEP covariance remains physics-fixed (lambda = 4,200 km, nugget = 0.35) with no re-tuning. Tests whether the result is sensitive to the pre-window choice.",
+  "n_days": 15,
+  "prewindow_options_s": [
+    3600,
+    7200,
+    14400
+  ],
+  "gap_labels_s": [
+    3600,
+    14400
+  ],
+  "sweep": {
+    "3600": {
+      "3600": {
+        "n_eval": 31812,
+        "rms_tep_m": 8.640515158529485,
+        "rms_pers_m": 12.396616186413484,
+        "tep_vs_pers_pct": 30.299405671691538,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 27452,
+        "rms_tep_m": 22.32031174591869,
+        "rms_pers_m": 35.20608002322447,
+        "tep_vs_pers_pct": 36.600974231738945,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "7200": {
+      "3600": {
+        "n_eval": 30335,
+        "rms_tep_m": 6.609526923163213,
+        "rms_pers_m": 10.62254415075824,
+        "tep_vs_pers_pct": 37.77830593727,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 25983,
+        "rms_tep_m": 13.489818800713447,
+        "rms_pers_m": 25.059101689670566,
+        "tep_vs_pers_pct": 46.16798731347186,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    },
+    "14400": {
+      "3600": {
+        "n_eval": 27390,
+        "rms_tep_m": 5.98700293466914,
+        "rms_pers_m": 9.446977616224418,
+        "tep_vs_pers_pct": 36.62520249453172,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      },
+      "14400": {
+        "n_eval": 23143,
+        "rms_tep_m": 10.581107924304245,
+        "rms_pers_m": 17.711234931503327,
+        "tep_vs_pers_pct": 40.257650213405405,
+        "target_reset_like_events": 0,
+        "target_reset_like_examples": []
+      }
+    }
+  }
+}

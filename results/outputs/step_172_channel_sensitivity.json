@@ -1,0 +1,43 @@
+{
+  "step": 172,
+  "name": "satellite_free_channel_sensitivity_exploratory",
+  "generated_utc": "2026-10-29",
+  "status": "EXPLORATORY - not part of the pre-registered verdict",
+  "context": {
+    "capture": "data/satfree/quartz_20261027_1403.csv (153,037 rows, 2026-10-27 13:58 -> 2026-10-29 15:51 UTC, 49.87 h, median dt 1.15 s)",
+    "channel": "mac_phase_s = CLOCK_MONOTONIC_RAW - CLOCK_REALTIME (host quartz vs NTP-steered realtime); sntp columns give remote-server references",
+    "corruption": "1,600 edges excised (|dph|>10 ms or dt>10 s), concentrated in a sleep/wake burst 28/04:24-07:47; 15 clean segments >=3600 ticks totalling ~34.9 h, dep coverage ~100% from last_result_window_*",
+    "prediction": "network_accum_curve.corr_m (pure dep) assembled over the full span: 135,185 samples, dep rms 2.459 m"
+  },
+  "registration_fix_2026_10_29": {
+    "bug": "_assemble_pred_auto used the window filename epoch (int(time.time()) at merge ~= holdout end + solve latency) as the h=0 origin, registering every dep curve ~7.2 ks (~2 h) too late - past the field's ~90-min coherence horizon",
+    "fix": "origin now = unix(t_pre[-1]) read from the durable raw_window pkl (t_pre is GPS seconds; unix = gps + 315964782); windows without pkls are skipped",
+    "effect": "registered pooled PA rose +0.065 -> +0.226 (p 0.86 -> 0.49); seg00 PA +0.24 -> +0.77 (z +1.4); still null - the channel noise bound below dominates"
+  },
+  "registered_result": {
+    "pooled_real_only": {"n_terms": 16, "phase_alignment": 0.2257, "p_shift": 0.487, "z_shift": -0.18, "null_abs_p99": 0.7197},
+    "valid_captures": ["seg00 (5.69 h) PA +0.768 (p=0.117)", "seg07 (6.35 h) PA -0.249"],
+    "note": "pipeline bug fixed 2026-10-29: selftest synthetic_coupled previously entered the pooled ensemble unflagged, fabricating pooled PA 0.95/z 4.5; real-only pooled is reported"
+  },
+  "relaxed_gate_sensitivity": {
+    "gate": "nseg=2, >=2 in-band bins (vs registered >=4)",
+    "qualifying_captures": ["seg00 (5.69h,8t)", "seg07 (6.35h,8t)", "seg12 (3.48h,4t)", "seg14 (3.46h,4t)"],
+    "pooled": {"n_terms": 24, "phase_alignment": 0.1704, "p_shift": 0.574, "z_shift": -0.37, "null_abs_p99": 0.6375}
+  },
+  "injection_recovery": {
+    "method": "kappa * dep(t)/c injected into the REAL detrended residual at the CORRECT registration; pooled PA vs circular-shift null (300 draws)",
+    "result": "flat through kappa=16,384 (injected in-band ~60 us vs ~13-19 ms noise); kappa=2e7 recovers pooled PA 0.99",
+    "kappa_min_estimate": "~1e7 - the channel is ~7 orders of magnitude too loud for the predicted ~4 ns signal"
+  },
+  "channel_noise_floor": {
+    "mac_phase_inband_rms_s": 0.0186,
+    "raw_vs_pool_server_inband_rms_s": 0.1053,
+    "sntp_nist_offset_inband_rms_s": 0.1566,
+    "dep_inband_rms_m": [0.485, 1.125],
+    "signal_s_equivalent_ns": [1.6, 3.75],
+    "snr_per_term": "~1e-7",
+    "noise_source": "reference side, not the crystal: macOS NTP steering wanders CLOCK_REALTIME by ~20 ms in-band; ~15 discipline steps/h at 1-2 ms plus a sleep/wake corruption burst. The raw crystal's own wander is us-class.",
+    "implication": "the Mac-crystal/NTP-realtime construction cannot test field coupling at any plausible amplitude. The decisive satellite-free measurement requires the pre-registered hardware path: terminated LC29H TIMEPULSE timestamped on a shared counter against a GPSDO (ns-class reference), where the selftest demonstrates PA 0.98 recovery at 25 ns wander vs ~10 ns signal"
+  },
+  "verdict_interpretation": "step_172 JSON verdict FAIL is a faithfully reported null on a channel whose noise floor is ~7 orders of magnitude above the signal - the satellite-free test remains UNRESOLVED pending the hardware rig, not falsified"
+}

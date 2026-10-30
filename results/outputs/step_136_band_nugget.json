@@ -1,0 +1,48 @@
+{
+  "step": 136,
+  "title": "Band-specific nugget optimisation for multi-band TEP prior",
+  "timestamp": "2026-09-06T19:49:25.025223+00:00",
+  "product": "clk_cod",
+  "n_dev_days": 30,
+  "n_eval_days": 57,
+  "results": {
+    "n_days": 57,
+    "frozen_band_nuggets": {
+      "tidal": 0.35,
+      "post_tidal": 0.35,
+      "intermediate": 0.35
+    },
+    "fusion_weights": [
+      2.25,
+      1.75,
+      1.0
+    ],
+    "multi_vs_full_band_pct": {
+      "median": 1.688531997567655,
+      "ci95": [
+        1.4590713134864708,
+        2.4829994672549316
+      ],
+      "n": 57,
+      "frac_positive": 0.8771929824561403
+    },
+    "multi_vs_empirical_pct": {
+      "median": 0.48315692876800265,
+      "ci95": [
+        -0.006069695746235837,
+        1.18231896463733
+      ],
+      "n": 57,
+      "frac_positive": 0.6140350877192983
+    },
+    "median_rms_m": {
+      "full_band": 1.3309442136146439,
+      "multi_band": 1.2951385180026127,
+      "empirical": 1.3109799418092287
+    }
+  },
+  "interpretation": [
+    "The band-specific-nugget multi-band kernel BEATS the full-band kernel (median +1.69%, CI95 [+1.46, +2.48]). Per-band nuggets ({'tidal': 0.35, 'post_tidal': 0.35, 'intermediate': 0.35}) improve over the common nugget."
+  ],
+  "pre_registered_prediction": "Per-band nuggets should improve over the common nugget because each frequency band has a different signal-to-noise ratio. The tidal band (gravitational, long-range) may have a lower nugget; the intermediate band (local, noisier) may need a higher nugget."
+}

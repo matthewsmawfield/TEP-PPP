@@ -1,0 +1,91 @@
+{
+  "step": 149,
+  "title": "M2 lunar tidal test",
+  "timestamp": "2026-09-06T23:50:39.535648+00:00",
+  "product": "clk_cod",
+  "year": 2025,
+  "n_days_scored": 17,
+  "m2_freq_uhz": 22.365,
+  "s2_freq_uhz": 23.148,
+  "causal_window_days": 5,
+  "bands": [
+    {
+      "name": "m2_lunar",
+      "f_lo_uhz": 20.865000000000002,
+      "f_hi_uhz": 23.865,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "s2_solar",
+      "f_lo_uhz": 21.648,
+      "f_hi_uhz": 24.648,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "off_tide",
+      "f_lo_uhz": 15.0,
+      "f_hi_uhz": 19.0,
+      "lambda_km": 4677.0
+    },
+    {
+      "name": "full_tidal",
+      "f_lo_uhz": 9.84,
+      "f_hi_uhz": 35.0,
+      "lambda_km": 4677.0
+    }
+  ],
+  "results": {
+    "n_days": 17,
+    "m2_vs_off_tide_pct": {
+      "median": 0.07016353428538347,
+      "ci95": [
+        -0.5313212101567766,
+        0.7794115954976921
+      ],
+      "n": 14,
+      "frac_positive": 0.6428571428571429
+    },
+    "s2_vs_off_tide_pct": {
+      "median": -0.0015634847355505688,
+      "ci95": [
+        -0.7852141591238038,
+        0.3875256812986949
+      ],
+      "n": 14,
+      "frac_positive": 0.5
+    },
+    "m2_vs_s2_pct": {
+      "median": 0.31417798364939964,
+      "ci95": [
+        0.0,
+        1.397906946100913
+      ],
+      "n": 17,
+      "frac_positive": 0.5882352941176471
+    },
+    "full_tidal_vs_off_tide_pct": {
+      "median": 1.285220120165026,
+      "ci95": [
+        0.697345300577279,
+        1.6557341865911845
+      ],
+      "n": 14,
+      "frac_positive": 0.8571428571428571
+    },
+    "median_rms_m": {
+      "full_band": 0.9546962223305729,
+      "m2_lunar": 0.968726065549085,
+      "s2_solar": 0.9738639477058335,
+      "off_tide": 1.3798257697060787,
+      "full_tidal": 0.9529790903143802
+    }
+  },
+  "interpretation": [
+    "M2 vs off-tide: median +0.07%, CI95 [-0.53, +0.78].",
+    "S2 vs off-tide: median -0.00%, CI95 [-0.79, +0.39].",
+    "M2 vs S2: median +0.31%, CI95 [+0.00, +1.40].",
+    "Full tidal vs off-tide: median +1.29%, CI95 [+0.70, +1.66].",
+    "M2 lunar is better than off-tide but CI includes zero."
+  ],
+  "pre_registered_prediction": "The M2 lunar frequency (22.365 uHz, 12.42h) should carry predictive signal because it is purely gravitational with no solar atmospheric counterpart. If M2 beats the off-tide band, the gravitational tidal structure is directly operationally relevant."
+}

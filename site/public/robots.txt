@@ -1,0 +1,22 @@
+# robots.txt for TEP-PPP: Engineering and Validation
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mlsmawfield.com/tep/ppp/sitemap.xml
+
+# Disallow access to hidden directories and files
+Disallow: /.*
+
+# Allow all files with these extensions
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.pdf$
+
+# Crawl-delay: 10  # Uncomment if needed to limit crawl rate

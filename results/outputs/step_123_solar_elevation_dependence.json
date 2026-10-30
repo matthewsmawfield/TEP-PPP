@@ -1,0 +1,90 @@
+{
+  "step": 123,
+  "title": "Solar elevation angle dependence of clock coherence",
+  "timestamp": "2026-09-06T18:13:13.485956+00:00",
+  "product": "clk_cod",
+  "n_days": 30,
+  "n_pairs_total": 180542,
+  "n_pairs_tep_band": 40961,
+  "elevation_bins": [
+    {
+      "elevation_center": -15.0,
+      "mean_alignment": -0.12260963462474721,
+      "n_pairs": 139,
+      "sem": 0.0635456347248967
+    },
+    {
+      "elevation_center": -5.0,
+      "mean_alignment": 0.03942822964593032,
+      "n_pairs": 1052,
+      "sem": 0.02375315742275694
+    },
+    {
+      "elevation_center": 5.0,
+      "mean_alignment": 0.06107364872706571,
+      "n_pairs": 4764,
+      "sem": 0.010951012531830959
+    },
+    {
+      "elevation_center": 15.0,
+      "mean_alignment": 0.11796924181245559,
+      "n_pairs": 9028,
+      "sem": 0.007979906731183794
+    },
+    {
+      "elevation_center": 25.0,
+      "mean_alignment": 0.09309763135385096,
+      "n_pairs": 8049,
+      "sem": 0.008401997807544545
+    },
+    {
+      "elevation_center": 35.0,
+      "mean_alignment": 0.0763355723319391,
+      "n_pairs": 4029,
+      "sem": 0.01188266208441568
+    },
+    {
+      "elevation_center": 45.0,
+      "mean_alignment": 0.05100427576306603,
+      "n_pairs": 2646,
+      "sem": 0.014450803625450962
+    },
+    {
+      "elevation_center": 55.0,
+      "mean_alignment": 0.09540889330824798,
+      "n_pairs": 1475,
+      "sem": 0.01912019410776383
+    },
+    {
+      "elevation_center": 65.0,
+      "mean_alignment": 0.23842729471794916,
+      "n_pairs": 2037,
+      "sem": 0.01632914717343095
+    },
+    {
+      "elevation_center": 75.0,
+      "mean_alignment": 0.24726406015350136,
+      "n_pairs": 3181,
+      "sem": 0.012913875893617427
+    },
+    {
+      "elevation_center": 85.0,
+      "mean_alignment": 0.22865485684724557,
+      "n_pairs": 4561,
+      "sem": 0.010685277995028847
+    }
+  ],
+  "correlation_elevation_vs_alignment": 0.8510317149034332,
+  "day_night_comparison": {
+    "day_alignment": 0.12581553033389223,
+    "night_alignment": 0.020517009550527984,
+    "delta": 0.10529852078336424,
+    "n_day": 39770,
+    "n_night": 1191
+  },
+  "interpretation": [
+    "The TEP-band alignment shows a strong positive correlation with solar elevation angle (r=+0.851). This is consistent with an atmospheric/ionospheric interpretation (solar illumination drives ionospheric structure) and inconsistent with TEP (which predicts no solar elevation dependence).",
+    "Day-night difference: +0.1053 (day=0.1258, night=0.0205). The higher daytime alignment is consistent with an ionospheric interpretation."
+  ],
+  "pre_registered_prediction": "Under TEP, the clock correlation field should not depend on solar elevation angle.  Under an atmospheric/ionospheric interpretation, the coherence should be stronger at high solar elevation (daytime, near subsolar) and weaker at night. A significant correlation with solar elevation supports atmospheric; no correlation supports TEP."
+}
