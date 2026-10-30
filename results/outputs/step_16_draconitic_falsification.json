@@ -39,23 +39,17 @@
         "R2": null,
         "n_pairs": 70,
         "n_bins": 2
-      },
-      "2024": {
-        "lambda_km": 348.4441227376555,
-        "R2": 0.798389871620838,
-        "n_pairs": 2005,
-        "n_bins": 14
       }
     },
     "lambda_cv": null,
     "stable": null
   },
-  "observed_correlation_r": 0.957587675362861,
+  "observed_correlation_r": 0.9656592322746257,
   "min_draconitic_attenuated_r": 0.7432347068579869,
   "max_draconitic_attenuated_r": 0.9979493708850141,
   "draconitic_excluded_by_beat_period": true,
   "stability_confirms_solar_lock": null,
   "note": "The beat-period argument provides an UPPER BOUND on the residual draconitic contribution after 3-year averaging.  For constellations with beat periods much longer than the observation span (e.g. BeiDou MEO at ~25 yr), the attenuation is near unity and the beat-period test alone cannot exclude the draconitic hypothesis.  The multi-constellation argument (D1, step_27) is the stronger falsification.  The year-over-year stability check is confirmatory when multi-year data is available; when it is inconclusive (insufficient years), the beat-period + multi-constellation arguments remain the primary falsification evidence.",
   "reference": "Ray et al. (2007), Chanard et al. (2020) -- GPS draconitic errors",
-  "timestamp": "2026-09-01T09:11:03.533739"
+  "timestamp": "2026-10-30T10:23:59.771105"
 }

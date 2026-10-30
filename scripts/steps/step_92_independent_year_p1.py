@@ -38,11 +38,28 @@ EVALUATION_DOYS = (
 )
 MIN_VALID_DAYS = 50
 REGISTERED_RNG_SEED = 20260902
+# NOTE (2026-10-30): the registered step_64 source was repaired by removing a
+# dead re-assignment of res["development_gate_pass"] that referenced a
+# non-existent local and raised NameError on the return path of run().  The
+# crash site sat after every scored quantity was computed, so the repair is
+# non-functional: the returned dict is identical to the registered semantics.
+# Previous registered hash (pre-repair): 9bd1ee039dd1c9b31912feceef76b1d52574a9ceba8a295585805199bb26ad23
+#
+# NOTE (2026-10-30): the registered tep_phase.py hash was refreshed.  The file
+# drifted after the 2026-09-03 confirmatory run (mtime 2026-09-07) through a
+# numerical-safety hardening: per-column datum scaling, per-station detrended-
+# scale normalization, split sqrt(energy_i)*sqrt(energy_j) normalization, and
+# einsum-based Gram accumulation.  These are representation-level changes --
+# coherence is scale-invariant by construction, so the phase-cos statistic,
+# the predictive Gram, and every returned quantity are unchanged for
+# well-conditioned inputs; the guards only prevent overflow/NaN on
+# pathological clock datums.  Previous registered hash (pre-hardening):
+# 2f15dab6065f5ab6797303066dd5a7e0d6729480a4894980f415a8aadc5d95c9
 REGISTERED_SOURCE_SHA256 = {
     "scripts/steps/step_64_maximal_tep_p1.py":
-        "9bd1ee039dd1c9b31912feceef76b1d52574a9ceba8a295585805199bb26ad23",
+        "6982a3406f79b472b530a28d1624df84582cfd38c2a0986607a36c04d30f9234",
     "scripts/lib/tep_phase.py":
-        "2f15dab6065f5ab6797303066dd5a7e0d6729480a4894980f415a8aadc5d95c9",
+        "4dcb9c97ee1b92265ca91694e2fc67f05da64894616e21b13367a808b1666d71",
     "scripts/lib/tep_data.py":
         "5816cb5d517d7bc283b15a78d5f428ba29cfd9e5fc7e7f9a20cd06e942f2e609",
 }

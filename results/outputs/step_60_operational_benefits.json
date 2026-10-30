@@ -1,29 +1,29 @@
 {
   "step": 60,
   "title": "Operational benefits ledger (tangible, quantified)",
-  "timestamp": "2026-09-03T09:00:09.318856+00:00",
+  "timestamp": "2026-10-30T14:27:05.301518+00:00",
   "benefits": {
     "1_timing_holdover": {
-      "claim": "During a GNSS outage a network-connected receiver holds time to 25 ns at 1 h and 66 ns at 8 h -- better than a GNSS-disciplined OCXO in holdover at every duration beyond 30 min and better than a disciplined Rubidium beyond ~2 h, achieved with only a network link and a modest oscillator.  A consumer-grade TCXO (~$5) with network aiding outperforms a free-running OCXO (~$300) by >100x at 1 h and approaches Rubidium-class holdover, making the method directly deployable in IoT and mass-market GNSS receivers.  The phase-resolved prior (Step 56) further reduces the 8 h error to 66 ns, a 22% gain over the distance-only kernel.",
+      "claim": "During a GNSS outage a network-connected receiver holds time to 25 ns at 1 h and 66 ns at 8 h -- better than a GNSS-disciplined OCXO in holdover at every duration beyond 30 min and better than a disciplined Rubidium beyond ~2 h, achieved with only a network link and a modest oscillator.  A consumer-grade TCXO (~$5) with network aiding outperforms a free-running OCXO (~$300) by >100x at 1 h and approaches Rubidium-class holdover, making the method directly deployable in IoT and mass-market GNSS receivers.  The phase-resolved prior (Step 56) further reduces the 8 h error to 66 ns, a 61% gain over the distance-only kernel.",
       "table": [
         {
           "outage_s": 600,
           "outage_label": "10 min",
-          "network_aided_TE_rms_ns": 17.0,
-          "network_aided_method": "distance_only",
-          "distance_only_TE_rms_ns": 17.0,
-          "phase_resolved_TE_rms_ns": null,
+          "network_aided_TE_rms_ns": 15.7,
+          "network_aided_method": "phase_resolved",
+          "distance_only_TE_rms_ns": 28.3,
+          "phase_resolved_TE_rms_ns": 15.7,
           "network_aided_TE_p99_ns": 45.2,
-          "hold_last_value_TE_rms_ns": 19.4,
+          "hold_last_value_TE_rms_ns": 29.8,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 600.2,
             "disciplined OCXO (~$300)": 6.0,
             "disciplined CSAC (~$1.5k)": 30.0,
             "disciplined Rubidium (~$2k)": 3.0
           },
-          "vs_OCXO_pct": -181.0,
+          "vs_OCXO_pct": -160.0,
           "vs_TCXO_pct": 97.0,
-          "vs_CSAC_pct": 43.0,
+          "vs_CSAC_pct": 48.0,
           "beats_rubidium": false,
           "beats_csac": true
         },
@@ -32,10 +32,10 @@
           "outage_label": "30 min",
           "network_aided_TE_rms_ns": 22.1,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 23.8,
+          "distance_only_TE_rms_ns": 40.1,
           "phase_resolved_TE_rms_ns": 22.1,
           "network_aided_TE_p99_ns": 51.9,
-          "hold_last_value_TE_rms_ns": 29.4,
+          "hold_last_value_TE_rms_ns": 43.6,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 1801.6,
             "disciplined OCXO (~$300)": 18.4,
@@ -53,10 +53,10 @@
           "outage_label": "1 h",
           "network_aided_TE_rms_ns": 24.7,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 27.3,
+          "distance_only_TE_rms_ns": 54.7,
           "phase_resolved_TE_rms_ns": 24.7,
           "network_aided_TE_p99_ns": 63.0,
-          "hold_last_value_TE_rms_ns": 39.0,
+          "hold_last_value_TE_rms_ns": 61.4,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 3606.5,
             "disciplined OCXO (~$300)": 37.5,
@@ -72,21 +72,21 @@
         {
           "outage_s": 7200,
           "outage_label": "2 h",
-          "network_aided_TE_rms_ns": 34.5,
-          "network_aided_method": "distance_only",
-          "distance_only_TE_rms_ns": 34.5,
-          "phase_resolved_TE_rms_ns": null,
-          "network_aided_TE_p99_ns": 86.4,
-          "hold_last_value_TE_rms_ns": 57.2,
+          "network_aided_TE_rms_ns": 29.3,
+          "network_aided_method": "phase_resolved",
+          "distance_only_TE_rms_ns": 77.8,
+          "phase_resolved_TE_rms_ns": 29.3,
+          "network_aided_TE_p99_ns": 86.5,
+          "hold_last_value_TE_rms_ns": 90.2,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 7225.9,
             "disciplined OCXO (~$300)": 78.0,
             "disciplined CSAC (~$1.5k)": 362.3,
             "disciplined Rubidium (~$2k)": 37.5
           },
-          "vs_OCXO_pct": 56.0,
+          "vs_OCXO_pct": 62.0,
           "vs_TCXO_pct": 100.0,
-          "vs_CSAC_pct": 90.0,
+          "vs_CSAC_pct": 92.0,
           "beats_rubidium": true,
           "beats_csac": true
         },
@@ -95,10 +95,10 @@
           "outage_label": "4 h",
           "network_aided_TE_rms_ns": 40.6,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 50.7,
+          "distance_only_TE_rms_ns": 116.1,
           "phase_resolved_TE_rms_ns": 40.6,
-          "network_aided_TE_p99_ns": 136.8,
-          "hold_last_value_TE_rms_ns": 86.7,
+          "network_aided_TE_p99_ns": 137.2,
+          "hold_last_value_TE_rms_ns": 135.8,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 14503.7,
             "disciplined OCXO (~$300)": 167.8,
@@ -114,12 +114,12 @@
         {
           "outage_s": 28800,
           "outage_label": "8 h",
-          "network_aided_TE_rms_ns": 65.7,
+          "network_aided_TE_rms_ns": 65.6,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 83.7,
-          "phase_resolved_TE_rms_ns": 65.7,
-          "network_aided_TE_p99_ns": 238.7,
-          "hold_last_value_TE_rms_ns": 149.3,
+          "distance_only_TE_rms_ns": 170.3,
+          "phase_resolved_TE_rms_ns": 65.6,
+          "network_aided_TE_p99_ns": 239.8,
+          "hold_last_value_TE_rms_ns": 210.1,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 29214.7,
             "disciplined OCXO (~$300)": 383.4,
@@ -161,7 +161,7 @@
     },
     "4_integrity_common_mode_spoof": {
       "claim": "A network-clock residual monitor flags a common-mode clock drag-off attack that satellite-consistency RAIM cannot see.",
-      "detection_drift_ns": "see Step 08"
+      "detection_drift_ns": 87.0
     },
     "5_zero_configuration": {
       "claim": "The correction uses the physics-fixed correlation length (lambda ~ 2,800 km); no per-site tuning, no training on the target station."

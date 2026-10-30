@@ -1,7 +1,15 @@
 # TEP-PPP Priors and Configuration
 # Paper 33, Pune v0.1
-# These parameters define the TEP-PPP analysis configuration.
-# Do not duplicate these values in project scripts — import from configs/ or core/.
+#
+# SUPERSEDED — retained prototype spec from the exploratory kernel-validation
+# era (5-station EUREF pilot).  Nothing in the active pipeline imports this
+# file.  The frozen deployed specification is scripts/lib/tep_kernel.py
+# (LAMBDA_CANONICAL_KM = 4200.0, selected on held-out data) and the frozen
+# Step 56/96 phase-Gram specs; the canonical corpus value is
+# core/parameter_registry.yaml (lambda_T = 4200 km).  The lambda_t_km = 1000
+# value below was an early grid point, not the measured scale — and its
+# declared CI band does not contain it, a stale-arithmetic artefact left
+# intact here for provenance rather than silently rewritten.
 
 version: "0.1"
 codename: "Pune"

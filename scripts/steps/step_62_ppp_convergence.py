@@ -55,6 +55,9 @@ CLOCK_RMS_M = 1.16
 PRIOR_SIGMA_M = float(np.sqrt(max(1.0 - PREDICTABLE_FRACTION, 1e-3)) * CLOCK_RMS_M)  # ~0.70 m
 
 CONV_THRESH_M = 0.10
+# Protocol checkpoints (minutes) for the per-arm convergence curve, matching
+# the registered protocol: "report 3-D error at 2/5/10/20/40/60 min".
+CHECK_MIN = (2, 5, 10, 20, 40, 60)
 import os as _os
 # Focus the sampling where the effect lives (the shortest cold starts) and take
 # many independent start epochs so the gain gets a real confidence interval.
@@ -219,7 +222,7 @@ def main():
     # The config's "Session time" line sets that, so each window is a separate
     # cold-start solution.  Truth is the SINEX ITRF coordinate: the RINEX header
     # APPROX POSITION is only metre-accurate and would swamp the whole effect.
-    import shutil, subprocess, tempfile
+    import shutil, tempfile
     from scripts.lib import tep_sinex as sx
     from scripts.steps.step_23_pride_endtoend import sdk_env, PRIDE, ATX
 

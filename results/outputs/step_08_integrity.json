@@ -1,0 +1,30 @@
+{
+  "test": "integrity_monitoring_clock_dragoff",
+  "description": "Simulated slow clock drag-off attack on ZIMM; TEP network prediction residual crosses 3-sigma threshold",
+  "target_station": "ZIMM",
+  "reference_stations": [
+    "GRAS",
+    "GENO",
+    "BRUX",
+    "WTZR"
+  ],
+  "attack_start_epoch": 100,
+  "attack_start_s": 3000.0,
+  "drift_rate_ns_per_epoch": 0.5,
+  "drift_rate_ns_per_s": 0.016666666666666666,
+  "cadence_s": 30.0,
+  "normal_residual_mad_ns": 32.96023544329477,
+  "normal_residual_std_ns": 30.385331911891384,
+  "pre_attack_false_alarms": 0,
+  "pre_attack_n_epochs": 100,
+  "detection_threshold_ns": 98.8807063298843,
+  "detection_epoch": 274,
+  "detection_delay_epochs": 174,
+  "detection_delay_s": 5220.0,
+  "drift_at_detection_ns": 87.0,
+  "residual_at_detection_ns": 99.01877110410345,
+  "drift_at_detection_m": 26.081943845999998,
+  "standard_raim_simulated": false,
+  "standard_raim_note": "Standard RAIM checks inter-satellite consistency; a clock spoof affects all satellites identically and is absorbed by the clock state, so RAIM cannot detect it. This is a theoretical argument, not a simulation.",
+  "timestamp": "2026-10-30T11:37:30.387581"
+}

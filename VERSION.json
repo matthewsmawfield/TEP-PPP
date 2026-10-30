@@ -1,10 +1,10 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "codename": "Pune",
   "date": "2026-10-29",
   "first_published": "2026-10-29",
-  "last_updated": "2026-10-29",
-  "doi": "10.5281/zenodo.23704946",
+  "last_updated": "2026-10-30",
+  "doi": "10.5281/zenodo.23704945",
   "status": "Preprint (Draft)",
   "description": "Paper 33: Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging. A phase-resolved TEP clock prior (fixed lambda = 4,200 km covariance plus a cross-spectral phase Gram) delivers deployment-ready holdover, clock-domain outage bridging, and degraded-geometry positioning gains on existing CORS/RTK infrastructure, validated on the live 68-station walk-forward observatory with cryptographically sealed ex-ante prediction.",
   "previous_version": null,

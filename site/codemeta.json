@@ -1,7 +1,7 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "ScholarlyArticle",
-  "identifier": "10.5281/zenodo.23704946",
+  "identifier": "10.5281/zenodo.23704945",
   "name": "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging",
   "description": "A phase-resolved TEP clock prior (fixed lambda = 4,200 km covariance plus a cross-spectral phase Gram) delivers deployment-ready GNSS timing holdover, clock-domain outage bridging, and degraded-geometry positioning gains on existing CORS/RTK infrastructure, validated on the live 68-station walk-forward observatory with cryptographically sealed ex-ante prediction.",
   "author": [
@@ -13,8 +13,8 @@
     }
   ],
   "datePublished": "2026-10-29",
-  "dateModified": "2026-10-29",
-  "version": "0.1 (Pune)",
+  "dateModified": "2026-10-30",
+  "version": "0.2 (Pune)",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "codeRepository": "https://github.com/matthewsmawfield/TEP-PPP",
   "url": "https://mlsmawfield.com/tep/ppp/",

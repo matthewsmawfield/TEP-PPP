@@ -635,6 +635,57 @@ def run_temporal_t4(product, date_tags, label, n_null=200, max_stations=None,
     }
 
 
+
+
+def _synthetic_common_view_null(date_tags, epochs_s, real_pc_j, real_pc_jdl, n_trials=100):
+    """Run synthetic common-view-only receiver clocks through the identical Stage 1/2 estimator."""
+    days = list(td.load_multi_day("broadcast", date_tags))
+    day_vis = []
+    for dt_tag, s in days:
+        pre = _precompute_day(s, epochs_s, date_tag=dt_tag)
+        if pre is None:
+            continue
+        _, J_pe, pairs_idx, _, sts_c = pre
+        geom = _pair_geom(sts_c, pairs_idx)
+        rv = load_real_visibility(dt_tag, sts_c, epochs_s, ("G",))
+        if rv is not None:
+            day_vis.append((rv[0], rv[1], J_pe, pairs_idx, geom))
+    rng = np.random.default_rng(20261030)
+    out = {
+        "n_trials": n_trials,
+        "description": "Synthetic receiver clocks generated solely from shared SP3 visible-satellite clock noise plus local receiver noise (matched to broadcast short-baseline SNR, zero TEP field) passed through the identical two-stage pooled-kappa estimator.",
+    }
+    for key, mode in (("equal_weight", "equal"), ("sin2_elev_weighted", "sin2")):
+        pcs_j, pcs_jdl, kappas = [], [], []
+        for _ in range(n_trials):
+            syn_tables = []
+            for vis, sin_e, J_pe, pairs_idx, geom in day_vis:
+                n_ep, n_sta, n_sat = vis.shape
+                sat_clk = rng.standard_normal((n_ep, n_sat))
+                W = vis.astype(float) if mode == "equal" else np.where(vis, np.clip(sin_e, 0.0, 1.0) ** 2, 0.0)
+                rx_cv = np.einsum("eik,ek->ei", W, sat_clk) / np.clip(W.sum(axis=2), 1e-9, None)
+                rx = rx_cv + 0.55 * rng.standard_normal((n_ep, n_sta))
+                sd = rx.std(0); sd[sd < 1e-9] = 1.0
+                M_syn = (rx - rx.mean(0)) / sd
+                syn_tables.extend(_pair_table(M_syn, J_pe, pairs_idx, geom))
+            kap = _pooled_kappa(syn_tables)
+            a_s, d_s, jb_s, dl_s = _alphas(syn_tables, kap)
+            pc_s, _, _, pc_ctrl_s, _ = _fit_distance(a_s, d_s, jb_s, dl_s)
+            kappas.append(kap); pcs_j.append(pc_s); pcs_jdl.append(pc_ctrl_s)
+        pcs_j = np.asarray(pcs_j); pcs_jdl = np.asarray(pcs_jdl)
+        out[key] = {
+            "kappa_mean": round(float(np.mean(kappas)), 4),
+            "pc_alpha_logd_given_jbar_mean": round(float(pcs_j.mean()), 4),
+            "pc_alpha_logd_given_jbar_std": round(float(pcs_j.std()), 4),
+            "real_z_sigma_given_jbar": round(float((real_pc_j - pcs_j.mean()) / pcs_j.std()), 1),
+            "pc_alpha_logd_given_jbar_cosdlon_mean": round(float(pcs_jdl.mean()), 4),
+            "pc_alpha_logd_given_jbar_cosdlon_std": round(float(pcs_jdl.std()), 4),
+            "real_z_sigma_given_jbar_cosdlon": round(float((real_pc_jdl - pcs_jdl.mean()) / pcs_jdl.std()), 1),
+            "n_negative_draws": int(np.sum(pcs_j < 0)),
+        }
+    return out
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     res = {
@@ -648,8 +699,12 @@ def main():
 
     # Broadcast global (7 days, 52 stations)
     bdays = [f"2024{d:03d}" for d in range(100, 107)]
-    res["arms"]["broadcast_global"] = run_temporal_t4(
-        "broadcast", bdays, "broadcast_global", n_null=200)
+    bg = run_temporal_t4("broadcast", bdays, "broadcast_global", n_null=200)
+    bg["synthetic_common_view_only_null"] = _synthetic_common_view_null(
+        bdays, np.linspace(0.0, 86400.0, N_EPOCHS, endpoint=False),
+        bg["partial_corr_alpha_logd_given_jbar"],
+        bg["partial_corr_alpha_logd_given_jbar_cosdlon"])
+    res["arms"]["broadcast_global"] = bg
 
     # Precise COD (30 evenly-spaced days, subsample to 60 stations for speed)
     cod_days = td.available_dates("clk_cod", 2024)

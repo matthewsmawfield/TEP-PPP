@@ -422,7 +422,6 @@ def run(days, product="precise"):
     # out-of-sample replication.
     res["p1_pass"] = False
     res["p1_requires_independent_year"] = True
-    res["development_gate_pass"] = bool(development_gate_pass)
     return res
 
 

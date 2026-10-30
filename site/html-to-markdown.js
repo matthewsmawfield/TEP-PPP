@@ -7,6 +7,7 @@ const { createManuscriptContext, injectPlaceholders } = require('./manuscript-da
 class HTMLToMarkdownConverter {
     decodeEntities(text) {
         return text
+            .replace(/\u00a0/g, ' ')
             .replace(/&amp;/g, '&')
             .replace(/&lt;/g, '<')
             .replace(/&gt;/g, '>')
@@ -48,12 +49,13 @@ class HTMLToMarkdownConverter {
 
     cleanInline(html) {
         return this.decodeEntities(html)
-            .replace(/<(strong|b)[^>]*>([\s\S]*?)<\/(strong|b)>/gi, '**$2**')
-            .replace(/<(em|i)[^>]*>([\s\S]*?)<\/(em|i)>/gi, '*$2*')
-            .replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, '`$1`')
-            .replace(/<sub[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>')
-            .replace(/<sup[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>')
-            .replace(/<\/?(?!sub|sup)[a-zA-Z][^>]*>/g, '')
+            .replace(/<br\s*\/?>/gi, ' ')
+            .replace(/<(strong|b)\b[^>]*>([\s\S]*?)<\/\1>/gi, '**$2**')
+            .replace(/<(em|i)\b[^>]*>([\s\S]*?)<\/\1>/gi, '*$2*')
+            .replace(/<code\b[^>]*>([\s\S]*?)<\/code>/gi, '`$1`')
+            .replace(/<sub\b[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>')
+            .replace(/<sup\b[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>')
+            .replace(/<\/?(?!sub\b|sup\b)[a-zA-Z][^>]*>/g, '')
             .replace(/\s+/g, ' ')
             .trim();
     }
@@ -90,6 +92,23 @@ class HTMLToMarkdownConverter {
             return `${delim}${key}${delim}`;
         });
 
+        // Protect <pre>...</pre> blocks as fenced code blocks before HTML tag stripping.
+        const preBlocks = [];
+        text = text.replace(/<pre\b[^>]*>([\s\S]*?)<\/pre>/gi, (match, content) => {
+            const cleaned = content
+                .replace(/<\/?[a-zA-Z][^>]*>/g, '')
+                .replace(/^\n+|\n+$/g, '');
+            let lang = 'text';
+            if (/^@\w+\{/m.test(cleaned)) {
+                lang = 'bibtex';
+            } else if (/^(#\s|\s*(git|cd|pip|python|node|npm)\b)/m.test(cleaned)) {
+                lang = 'bash';
+            }
+            const key = `__PRE_${preBlocks.length}__`;
+            preBlocks.push(`\`\`\`${lang}\n${cleaned}\n\`\`\``);
+            return `\n\n${key}\n\n`;
+        });
+
         text = text
             .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, '')
             .replace(/<table[^>]*>[\s\S]*?<\/table>/gi, (match) => this.tableToMarkdown(match))
@@ -107,18 +126,24 @@ class HTMLToMarkdownConverter {
             .replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, '\n\n$1\n\n')
             .replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, '\n- $1')
             .replace(/<\/?ul[^>]*>/gi, '\n')
-            .replace(/<(strong|b)[^>]*>([\s\S]*?)<\/(strong|b)>/gi, '**$2**')
-            .replace(/<(em|i)[^>]*>([\s\S]*?)<\/(em|i)>/gi, '*$2*')
-            .replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, '`$1`')
-            .replace(/<sub[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>')
-            .replace(/<sup[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>')
+            .replace(/<br\s*\/?>/gi, '\n')
+            .replace(/<(strong|b)\b[^>]*>([\s\S]*?)<\/\1>/gi, '**$2**')
+            .replace(/<(em|i)\b[^>]*>([\s\S]*?)<\/\1>/gi, '*$2*')
+            .replace(/<code\b[^>]*>([\s\S]*?)<\/code>/gi, '`$1`')
+            .replace(/<sub\b[^>]*>([\s\S]*?)<\/sub>/gi, '<sub>$1</sub>')
+            .replace(/<sup\b[^>]*>([\s\S]*?)<\/sup>/gi, '<sup>$1</sup>')
             .replace(/<\/?div[^>]*>/gi, '\n')
             .replace(/<\/?section[^>]*>/gi, '\n')
-            .replace(/<\/?(?!sub|sup)[a-zA-Z][^>]*>/g, '')
+            .replace(/<\/?(?!sub\b|sup\b)[a-zA-Z][^>]*>/g, '')
+            .replace(/\{,\}/g, ',')
+            .replace(/\\,/g, ' ')
             .replace(/^[ \t]+/gm, '')
             .replace(/[ \t]+$/gm, '')
             .replace(/\n{3,}/g, '\n\n')
             .trim();
+
+        // Restore fenced <pre> blocks
+        text = text.replace(/__PRE_(\d+)__/g, (match, idx) => preBlocks[idx]);
 
         // Restore math content
         text = text.replace(/(\$\$?)__MATH_(\d+)__\1/g, (match, delim, idx) => {
@@ -137,7 +162,7 @@ class HTMLToMarkdownConverter {
             .map((section) => injectPlaceholders(fs.readFileSync(path.join(__dirname, 'components', section.file), 'utf8'), context))
             .join('\n\n');
 
-        const header = `# ${manifest.title}\n**${manifest.author}**\nVersion: ${manifest.version}\nFirst published: ${manifest.first_published} - Last updated: ${manifest.date}\nDOI: ${manifest.doi}\n\n---\n\n`;
+        const header = `# ${manifest.title}\n**${manifest.author}**\nVersion: ${manifest.version}\nFirst published: ${manifest.first_published} - Last updated: ${manifest.last_updated || manifest.date}\nDOI: ${manifest.doi}\n\n---\n\n`;
         const markdown = header + this.htmlToMarkdown(body) + '\n';
         const versionOnly = manifest.version.replace(/\s*\([^)]+\)/, '');
         const outputPath = path.join(__dirname, '..', `33-TEP-PPP-${versionOnly}-${manifest.codename}.md`);

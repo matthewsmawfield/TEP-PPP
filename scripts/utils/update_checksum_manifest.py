@@ -42,6 +42,13 @@ def _sha256(p: Path) -> str:
 
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text())
+    ver_path = ROOT / "VERSION.json"
+    if ver_path.exists():
+        ver = json.loads(ver_path.read_text())
+        if "version" in ver:
+            manifest["version"] = ver["version"]
+        if "codename" in ver:
+            manifest["codename"] = ver["codename"]
     files = set(manifest["files"])
 
     # Committed artifacts on disk join the ledger; volatile products are

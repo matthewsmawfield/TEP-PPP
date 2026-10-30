@@ -1,7 +1,7 @@
 {
   "step": 90,
   "title": "Operational holdover specification with confidence intervals",
-  "timestamp": "2026-09-03T09:20:00.554696+00:00",
+  "timestamp": "2026-10-30T14:27:05.486727+00:00",
   "data_source": "Step 56 (phase-resolved TEP, 45 days) and Step 55 (distance-only TEP, 90 days)",
   "conversion": "1 m clock range error = 3.3356 ns time error",
   "reference_specs_ns": {
@@ -16,13 +16,13 @@
     "1h_TE_ns": 24.7,
     "1h_CI_ns": [
       22.0,
-      27.3
+      27.4
     ],
     "1h_beats_OCXO": true,
     "1h_improvement_vs_TCXO": "146x",
-    "8h_TE_ns": 65.7,
+    "8h_TE_ns": 65.6,
     "8h_CI_ns": [
-      62.8,
+      62.7,
       68.9
     ],
     "8h_beats_Rubidium": true
@@ -31,32 +31,37 @@
     {
       "outage_s": 600,
       "outage_label": "10 min",
-      "method": "distance_only",
-      "n_eval": 191813,
-      "n_days": 90,
-      "network_aided_TE_rms_ns": 17.0,
+      "method": "phase_resolved",
+      "n_eval": 46833,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 15.7,
       "network_aided_TE_ci95_ns": [
-        16.5,
-        17.5
+        15.4,
+        16.1
       ],
-      "distance_only_TE_rms_ns": 17.0,
-      "persistence_TE_rms_ns": 19.9,
+      "distance_only_TE_rms_ns": 15.9,
+      "best_temporal_TE_rms_ns": 19.0,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 600.2,
         "disciplined OCXO (~$300)": 6.0,
         "disciplined CSAC (~$1.5k)": 30.0,
         "disciplined Rubidium (~$2k)": 3.0
       },
-      "improvement_vs_free_running_TCXO": "35x",
+      "improvement_vs_free_running_TCXO": "38x",
       "beats_OCXO": false,
       "beats_CSAC": true,
       "beats_Rubidium": false,
       "within_PRTC_A": true,
       "within_PRTC_B": true,
-      "gain_vs_persistence_pct": 14.8,
-      "gain_vs_persistence_ci95": [
-        12.1,
-        17.1
+      "gain_vs_best_temporal_pct": 17.4,
+      "gain_vs_best_temporal_ci95": [
+        15.5,
+        19.0
+      ],
+      "gain_vs_distance_only_pct": 1.2,
+      "gain_vs_distance_only_ci95": [
+        0.4,
+        1.9
       ]
     },
     {
@@ -67,11 +72,11 @@
       "n_days": 45,
       "network_aided_TE_rms_ns": 22.1,
       "network_aided_TE_ci95_ns": [
-        19.8,
-        24.1
+        19.9,
+        24.0
       ],
       "distance_only_TE_rms_ns": 22.7,
-      "persistence_TE_rms_ns": 30.1,
+      "best_temporal_TE_rms_ns": 30.1,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 1801.6,
         "disciplined OCXO (~$300)": 18.4,
@@ -84,12 +89,12 @@
       "beats_Rubidium": false,
       "within_PRTC_A": true,
       "within_PRTC_B": true,
-      "gain_vs_persistence_pct": 26.5,
-      "gain_vs_persistence_ci95": [
-        20.0,
-        34.1
+      "gain_vs_best_temporal_pct": 26.5,
+      "gain_vs_best_temporal_ci95": [
+        20.1,
+        33.9
       ],
-      "gain_vs_distance_only_pct": 2.7,
+      "gain_vs_distance_only_pct": 2.6,
       "gain_vs_distance_only_ci95": [
         1.7,
         4.1
@@ -104,10 +109,10 @@
       "network_aided_TE_rms_ns": 24.7,
       "network_aided_TE_ci95_ns": [
         22.0,
-        27.3
+        27.4
       ],
       "distance_only_TE_rms_ns": 26.0,
-      "persistence_TE_rms_ns": 39.9,
+      "best_temporal_TE_rms_ns": 39.9,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 3606.5,
         "disciplined OCXO (~$300)": 37.5,
@@ -120,9 +125,9 @@
       "beats_Rubidium": false,
       "within_PRTC_A": true,
       "within_PRTC_B": true,
-      "gain_vs_persistence_pct": 38.1,
-      "gain_vs_persistence_ci95": [
-        31.6,
+      "gain_vs_best_temporal_pct": 38.1,
+      "gain_vs_best_temporal_ci95": [
+        31.4,
         44.9
       ],
       "gain_vs_distance_only_pct": 4.8,
@@ -134,32 +139,37 @@
     {
       "outage_s": 7200,
       "outage_label": "2 h",
-      "method": "distance_only",
-      "n_eval": 173040,
-      "n_days": 90,
-      "network_aided_TE_rms_ns": 34.5,
+      "method": "phase_resolved",
+      "n_eval": 42208,
+      "n_days": 45,
+      "network_aided_TE_rms_ns": 29.3,
       "network_aided_TE_ci95_ns": [
-        31.9,
-        37.3
+        26.5,
+        32.4
       ],
-      "distance_only_TE_rms_ns": 34.5,
-      "persistence_TE_rms_ns": 57.2,
+      "distance_only_TE_rms_ns": 32.3,
+      "best_temporal_TE_rms_ns": 57.2,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 7225.9,
         "disciplined OCXO (~$300)": 78.0,
         "disciplined CSAC (~$1.5k)": 362.3,
         "disciplined Rubidium (~$2k)": 37.5
       },
-      "improvement_vs_free_running_TCXO": "210x",
+      "improvement_vs_free_running_TCXO": "247x",
       "beats_OCXO": true,
       "beats_CSAC": true,
       "beats_Rubidium": true,
       "within_PRTC_A": true,
       "within_PRTC_B": true,
-      "gain_vs_persistence_pct": 39.8,
-      "gain_vs_persistence_ci95": [
-        34.8,
-        44.3
+      "gain_vs_best_temporal_pct": 48.8,
+      "gain_vs_best_temporal_ci95": [
+        43.3,
+        53.6
+      ],
+      "gain_vs_distance_only_pct": 9.2,
+      "gain_vs_distance_only_ci95": [
+        6.6,
+        12.2
       ]
     },
     {
@@ -171,10 +181,10 @@
       "network_aided_TE_rms_ns": 40.6,
       "network_aided_TE_ci95_ns": [
         38.0,
-        43.9
+        43.8
       ],
       "distance_only_TE_rms_ns": 47.3,
-      "persistence_TE_rms_ns": 85.9,
+      "best_temporal_TE_rms_ns": 85.9,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 14503.7,
         "disciplined OCXO (~$300)": 167.8,
@@ -187,14 +197,14 @@
       "beats_Rubidium": true,
       "within_PRTC_A": true,
       "within_PRTC_B": false,
-      "gain_vs_persistence_pct": 52.7,
-      "gain_vs_persistence_ci95": [
-        48.9,
+      "gain_vs_best_temporal_pct": 52.7,
+      "gain_vs_best_temporal_ci95": [
+        49.0,
         55.7
       ],
       "gain_vs_distance_only_pct": 14.1,
       "gain_vs_distance_only_ci95": [
-        11.2,
+        11.0,
         17.2
       ]
     },
@@ -204,13 +214,13 @@
       "method": "phase_resolved",
       "n_eval": 29498,
       "n_days": 45,
-      "network_aided_TE_rms_ns": 65.7,
+      "network_aided_TE_rms_ns": 65.6,
       "network_aided_TE_ci95_ns": [
-        62.8,
+        62.7,
         68.9
       ],
       "distance_only_TE_rms_ns": 79.2,
-      "persistence_TE_rms_ns": 148.0,
+      "best_temporal_TE_rms_ns": 148.0,
       "free_running_osc_TE_ns": {
         "disciplined TCXO (~$5)": 29214.7,
         "disciplined OCXO (~$300)": 383.4,
@@ -223,15 +233,15 @@
       "beats_Rubidium": true,
       "within_PRTC_A": true,
       "within_PRTC_B": false,
-      "gain_vs_persistence_pct": 55.6,
-      "gain_vs_persistence_ci95": [
-        53.4,
-        57.6
+      "gain_vs_best_temporal_pct": 55.7,
+      "gain_vs_best_temporal_ci95": [
+        53.5,
+        57.7
       ],
-      "gain_vs_distance_only_pct": 17.0,
+      "gain_vs_distance_only_pct": 17.1,
       "gain_vs_distance_only_ci95": [
         14.6,
-        19.7
+        19.8
       ]
     }
   ],
@@ -260,13 +270,13 @@
     "TEP_aided_TCXO_5": {
       "cost": "$5 + network link (marginal cost ~$0)",
       "TE_at_1h_ns": 24.7,
-      "TE_at_8h_ns": 65.7,
+      "TE_at_8h_ns": 65.6,
       "TE_at_1h_ci_ns": [
         22.0,
-        27.3
+        27.4
       ],
       "TE_at_8h_ci_ns": [
-        62.8,
+        62.7,
         68.9
       ]
     },

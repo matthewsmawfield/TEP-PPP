@@ -87,7 +87,7 @@ def main():
                  "independent CODE precise-clock product",
                  fontsize=12)
     ax.legend(loc="upper right", fontsize=9.5, framealpha=0.95)
-    ax.annotate("negative tail: spherical field\nstructure (Section 3.7e)",
+    ax.annotate("negative tail: spherical field\nstructure (Section 3.7.4)",
                 xy=(9800, -0.05), xytext=(3200, -0.10),
                 fontsize=8.5, color=C["secondary"],
                 arrowprops=dict(arrowstyle="->", color=C["secondary"],

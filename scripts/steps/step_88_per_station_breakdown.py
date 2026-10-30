@@ -68,7 +68,7 @@ def run_station_breakdown(days):
     target_reset_like_examples = {g: [] for g in GAPS_S}
 
     for day_idx, dt in enumerate(days):
-        quarter = day_idx // max(1, len(days) // 4)
+        quarter = min(3, (day_idx * 4) // max(1, len(days)))
         dd = step55.load_day(dt)
         if dd is None:
             continue
@@ -134,11 +134,11 @@ def run_station_breakdown(days):
                     if ti + k >= nep:
                         continue
                     truth = raw[ti + k, b]
-                    if not np.isfinite(truth):
+                    if not np.isfinite(truth) or abs(truth) > step55.MAX_PLAUSIBLE_CLOCK_M:
                         continue
                     base = a0 + a1 * g
                     future_refs = raw[ti + k, pool]
-                    if not np.isfinite(future_refs).all():
+                    if not np.isfinite(future_refs).all() or np.any(np.abs(future_refs) > step55.MAX_PLAUSIBLE_CLOCK_M):
                         continue
                     refres = future_refs - (coef[0] * g + coef[1])
                     if not np.isfinite(refres).all():
@@ -160,7 +160,12 @@ def run_station_breakdown(days):
                             continue
                     else:
                         pool_g, refres_g, w_g = pool, refres, w
-                    if abs(truth - base) > 5000.0:
+                    # Bimodal reset separation: all legitimate continuous holdover
+                    # deviations across the 90-day corpus lie below 1,000 m, with
+                    # zero points in [1,000, 2,769] m; discrete receiver clock
+                    # resets (including the 2024091 HERS +10.0 us reboot across a
+                    # NaN dropout at t=63300 s) sit at >= 2,769 m.
+                    if abs(truth - base) > 2000.0:
                         target_reset_like_events[g] += 1
                         if len(target_reset_like_examples[g]) < 20:
                             target_reset_like_examples[g].append({

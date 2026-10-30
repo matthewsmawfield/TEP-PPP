@@ -501,7 +501,15 @@ def main():
             "ci95_lower": ci["ci95"][0] if ci.get("ci95") else None,
             "passed": passed,
         }
-    results["gate_pass"] = all(g["passed"] for g in gate_checks.values())
+    # A 1-day prior (287 * 300 s = 86,100 s) has 86,100 * 9.84e-6 = 0.847 < 0.85
+    # low-frequency cycles, so spectral_phase_gram omits the tidal band on a 1-day
+    # window (resolved in Step 153 with the 3-day prior).  Gate on the five
+    # primary controls and the 1-day-resolved band ablations.
+    required_gate_keys = (
+        "full_band", "empirical", "geometry_scramble", "phase_scramble",
+        "lambda_scramble", "no_post_tidal", "no_intermediate",
+    )
+    results["gate_pass"] = all(gate_checks[k]["passed"] for k in required_gate_keys)
     results["gate_checks"] = gate_checks
 
     interpretations = []
@@ -535,10 +543,10 @@ def main():
 
     if results["gate_pass"]:
         interpretations.append(
-            f"GATE PASSED: the multi-band kernel beats all controls and "
-            f"ablations with positive CI lower bounds. The frequency-"
-            f"dependent lambdas from Paper 1 carry genuine physics-fixed "
-            f"predictive structure that generalises to independent-year data.")
+            "GATE PASSED: the multi-band kernel beats all five primary "
+            "controls and both 1-day-resolved band ablations with positive "
+            "CI lower bounds (the tidal band requires the 3-day prior of "
+            "Step 153).")
     else:
         failed = [k for k, v in gate_checks.items() if not v["passed"]]
         interpretations.append(

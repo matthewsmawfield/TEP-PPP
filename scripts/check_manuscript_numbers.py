@@ -88,6 +88,80 @@ def main() -> int:
         problems.append(f"unexpected Step 38 ensemble metric: {ens}")
     if not (abs(s10["lambda_km"] - 3480) < 2 and s10["R2"] > 0.9):
         problems.append(f"unexpected Step 10 result: {s10}")
+    # The quoted T1 model-selection margin must equal the committed model
+    # comparison -- a stale "15.6" literal once claimed ~100x the real
+    # amplitude-domain margin.
+    daic = (s10.get("model_comparison") or {}).get(
+        "delta_aic_exponential_vs_best")
+    if daic is not None and f"{daic:.2f}" not in text:
+        problems.append(
+            f"Step 10 delta-AIC {daic:.2f} not quoted in manuscript")
+    # The Rubidium crossover in the holdover claim is read from the Step 90
+    # table itself: the earliest gap at which the aided TE beats the
+    # disciplined-Rubidium model and keeps beating it at every longer gap.
+    # A stale "~2 h" literal survived the Step 55/56 regeneration (the
+    # distance-only 2 h arm loses to the Rb model), so the boundary is
+    # pinned here rather than trusted.
+    try:
+        s90 = load("step_90_operational_holdover_spec.json")
+        rows = sorted(s90["holdover_table"], key=lambda r: r["outage_s"])
+        rb_gap = next(
+            (r["outage_s"] for r in rows
+             if all(q["beats_Rubidium"] for q in rows
+                    if q["outage_s"] >= r["outage_s"])),
+            None)
+        if rb_gap is not None:
+            rb_phrase = (f"{rb_gap / 3600:g} h" if rb_gap >= 3600
+                         else f"{rb_gap / 60:g} min")
+            if rb_gap >= 3600:
+                gap_pat = rb_phrase.replace(" ", r"\s*")
+                expected = rf"beyond \$(?:\\sim)?\${gap_pat}"
+                if not re.search(expected, text):
+                    problems.append(
+                        f"manuscript must give the Rubidium crossover as "
+                        f"beyond ~{rb_phrase} (from step_90 beats_Rubidium)")
+            for m in re.finditer(
+                    r"Rubidium[^\n]{0,60}?beyond\s+\$?\\?s?i?m?\$?\s*(\d+)\s*h",
+                    text):
+                if float(m.group(1)) * 3600 != rb_gap:
+                    problems.append(
+                        f"stale Rubidium crossover 'beyond {m.group(1)} h' "
+                        f"contradicts step_90 (true boundary {rb_phrase})")
+    except (KeyError, FileNotFoundError):
+        problems.append("step_90 holdover spec missing for Rubidium pin")
+    # P4 blind-replication disclosure: DLF1 sits in the DOY-100 broadcast
+    # training pool, so the manuscript may not call the capture ten unseen
+    # stations and must disclose the pool membership.
+    if re.search(
+            r"ten\s+(?:previously\s+)?unseen|10\s+unseen\s+(?:live\s+)?stations"
+            r"|ten\s+live\s+stations\s+that\s+had\s+never",
+            text, re.I):
+        problems.append(
+            "P4 must not claim ten unseen stations: DLF1 is in the "
+            "DOY-100 broadcast training pool")
+    if not re.search(r"DLF1[^\n]{0,140}training[- ]pool", text, re.I):
+        problems.append(
+            "manuscript must disclose DLF1's training-pool membership")
+    # The canonical k=3 blind-solve figures quoted in the text come from the
+    # dense-arm JSON (step_48_three_satellite.json); pin them so they cannot
+    # drift to the precise-arm values or a stale recalibration.
+    try:
+        s48d = load("step_48_three_satellite.json")
+        can = s48d["by_k_window"]["k3_L3600"]["tep_blind_integrity"]
+        for label, val in (
+            ("canonical k=3 RMS", can["rms_3d_m"]),
+            ("canonical k=3 p50", can["p50_m"]),
+            ("canonical k=3 p99", can["p99_m"]),
+        ):
+            if f"{val:.2f}" not in text:
+                problems.append(
+                    f"Step 48 {label} {val:.2f} m not in manuscript")
+        if f"{can['availability'] * 100:.1f}" not in text:
+            problems.append(
+                "Step 48 canonical k=3 availability "
+                f"{can['availability'] * 100:.1f}% not in manuscript")
+    except (KeyError, FileNotFoundError):
+        problems.append("step_48 dense-arm output missing for canonical pin")
     # Step 39 must remain a post-fit diagnostic (not raw-observation)
     if s39.get("strict_p2_pass") is not False or not s39.get("uses_full_sky_linearization"):
         problems.append("Step 39 must remain diagnostic; raw-observation P2 is step_44")
@@ -113,7 +187,6 @@ def main() -> int:
     # Only the genuinely blind nonlinear arm can support strict P2. RAIM or
     # multistart labels must not promote a truth-linearised fallback.
     s48_summary = s48.get("summary", {})
-    s48_blind = s48_summary.get("k3_blind_tep", {})
     s48_blind_method = s48_summary.get("k3_blind_tep_method", "")
     s48_blind_gain = s48_summary.get("k3_blind_tep_vs_best_conventional_rms_pct")
     s48_paired_gain = s48_summary.get("k3_blind_paired_tep_vs_best_conventional_rms_pct")
@@ -152,14 +225,29 @@ def main() -> int:
     for label, pattern in stale_48.items():
         if re.search(pattern, text, re.IGNORECASE):
             problems.append(label)
-    # The integrity gate cost is now dynamically checked against the JSON.
-    # The recalibrated gate (6x threshold, 50 m floor) costs <1 pp availability
-    # for <0.5% RMS improvement — a dramatic reduction from the original 8.98 pp.
-    s48_k3_600 = s48.get("by_k_window", {}).get("k3_L600", {})
-    s48_tep_k = s48_k3_600.get("tep_kernel", {})
-    s48_int_k = s48_k3_600.get("tep_integrity", {})
-    ig_avail_cost = (s48_tep_k.get("availability", 0) - s48_int_k.get("availability", 0)) * 100
-    ig_rms_gain = (s48_tep_k.get("rms_3d_m", 0) - s48_int_k.get("rms_3d_m", 0)) / max(s48_tep_k.get("rms_3d_m", 1), 1e-6) * 100
+    # The integrity gate cost is dynamically checked against the canonical
+    # dense-arm JSON (the referent of the manuscript's claim) on the blind
+    # arms (tep_blind -> tep_blind_integrity): the manuscript claims "0.0
+    # percentage points availability cost", which holds only if the
+    # recalibrated gate rejects zero epochs on that network.  The precise-arm
+    # run (a different network/product) is not the claim's referent.
+    ig_costs = []
+    try:
+        _s48_dense = load("step_48_three_satellite.json")
+    except FileNotFoundError:
+        _s48_dense = s48
+    for win in ("k3_L600", "k3_L3600"):
+        kw = _s48_dense.get("by_k_window", {}).get(win, {})
+        for ungated, gated in (("tep_blind", "tep_blind_integrity"),
+                               ("tep_blind_phase", "tep_blind_phase_integrity")):
+            if ungated in kw and gated in kw:
+                ig_costs.append(
+                    (kw[ungated].get("availability", 0)
+                     - kw[gated].get("availability", 0)) * 100)
+    if ig_costs and max(ig_costs) > 0.05:
+        problems.append(
+            f"integrity gate costs {max(ig_costs):.2f} pp on the canonical "
+            "dense-arm blind arms; the '0.0 pp' claim must be re-checked")
     # The manuscript must mention the integrity gate and its cost.
     if not re.search(r"integrity\s*gate", text, re.I):
         problems.append("manuscript must mention the integrity gate")
@@ -927,6 +1015,36 @@ def main() -> int:
                             "manuscript")
     except FileNotFoundError:
         problems.append("step_179 output missing")
+
+    # Step 88 per-station and seasonal breakdown: must have 4 quarters
+    # (Q1..Q4, never a remainder Q5) and quote the committed quarter gains.
+    try:
+        r88 = load("step_88_per_station_breakdown.json")
+        seas = r88.get("seasonal_stability") or {}
+        if set(seas.keys()) != {"Q1", "Q2", "Q3", "Q4"}:
+            problems.append(f"Step 88 seasonal_stability must have Q1..Q4, got {sorted(seas)}")
+        for q in ("Q1", "Q2", "Q3", "Q4"):
+            for g in ("3600", "14400"):
+                v = seas[q][g]["tep_vs_pers_pct"]
+                if f"+{v:.1f}" not in text:
+                    problems.append(f"Step 88 {q} {g}s gain +{v:.1f}% not quoted in manuscript")
+        if re.search(r"\bQ5\b", text):
+            problems.append("manuscript contains bogus Q5 quarter")
+    except (KeyError, FileNotFoundError):
+        problems.append("step_88 output missing or incomplete")
+
+    # Step 45 synthetic common-view-only null and Step 56 lambda_1/e sensitivity
+    try:
+        scv = s45["arms"]["broadcast_global"]["synthetic_common_view_only_null"]
+        eq_pc = scv["equal_weight"]["pc_alpha_logd_given_jbar_mean"]
+        s2_pc = scv["sin2_elev_weighted"]["pc_alpha_logd_given_jbar_mean"]
+        if f"+{eq_pc:.3f}" not in text or f"+{s2_pc:.3f}" not in text:
+            problems.append("Step 45 synthetic common-view-only null PCs not quoted in manuscript")
+        lsens = s56["lambda_convention_sensitivity_rms_m"]
+        if "0.13" not in text or "0.33" not in text or f"{lsens['3600']['lam_1e_4200_op_2970']:.2f}" not in text:
+            problems.append("Step 56 lambda_1/e convention sensitivity not quoted in manuscript")
+    except (KeyError, FileNotFoundError):
+        problems.append("step_45 synthetic common-view null or step_56 lambda sensitivity missing")
 
     if problems:
         print("MANUSCRIPT / EVIDENCE FAILURES:")

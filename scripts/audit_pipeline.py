@@ -21,7 +21,7 @@ Rubric (per step):
   logging    -- runtime logging/progress verbosity. 0=none, 1=print only,
                 2=structured print+summary, 3=rich progress/JSON telemetry.
   tep_success-- evidence verdict for TEP.  PASS / PARTIAL / DIAGNOSTIC / DEBUG /
-                NULL / N-A / SUPERSeded / ARCHIVED.
+                NULL / N-A / SUPERSEDED / ARCHIVED.
   in_ms      -- referenced in site/components/*.html.  Y/N.
   ms_import  -- manuscript importance. Critical / Supporting / Minor / None.
   archive    -- recommendation. Keep / Archive / Candidate / Already archived.
@@ -63,9 +63,13 @@ DEFAULT_ARCHIVE = "Keep"
 # (tep_success, ms_import, archive_rec)
 ANNOTATIONS: dict[str, tuple[str, str, str]] = {
     # --- Acquisition / processing (foundational, not evidence per se) ---
-    # step_01/02/03_kernel/05/08 live in the untracked
+    # step_01/02/03_kernel/05 live in the untracked
     # archive/early_superseded/ tree, outside this audit's scope, and are
     # retained in the orchestrator as optional (skip-if-absent) steps.
+    # step_08_integrity_monitoring was recovered from its orphaned bytecode
+    # (the source had been lost while the committed output JSON remained);
+    # it produces the Step 08 scorecard result, so it is audited as evidence.
+    "step_08_integrity_monitoring": ("PASS", "Supporting", "Keep"),
     "step_09_acquire_global_clk": ("N-A", "Supporting", "Keep"),
     "step_09b_acquire_sinex": ("N-A", "Supporting", "Keep"),
     "step_29_fetch_leo": ("N-A", "Minor", "Candidate"),
@@ -124,7 +128,7 @@ ANNOTATIONS: dict[str, tuple[str, str, str]] = {
     "step_52_drone_kinematic": ("DIAGNOSTIC", "Supporting", "Keep"),
     "step_52_extrapolation_regime": ("DIAGNOSTIC", "Minor", "Candidate"),
     "step_53_coherent_lambda": ("PASS", "Critical", "Keep"),
-    "step_54_dense_operational_skill": ("SUPERSeded", "Supporting", "Keep"),
+    "step_54_dense_operational_skill": ("SUPERSEDED", "Supporting", "Keep"),
     "step_55_dense_outage_prediction": ("PASS", "Critical", "Keep"),
     "step_55_dense_position_gain": ("DIAGNOSTIC", "Minor", "Candidate"),
     "step_56_phase_predictive_bridge": ("PASS", "Critical", "Keep"),
@@ -185,7 +189,7 @@ ANNOTATIONS: dict[str, tuple[str, str, str]] = {
     "step_99_precise_clock_position": ("PASS", "Critical", "Keep"),
     "step_100_decisive_drone_experiment": ("DIAGNOSTIC", "Supporting", "Keep"),
     "step_101_full_field_predictor": ("PASS", "Critical", "Keep"),
-    "step_102_causal_deployable_p1_gate": ("PASS", "Critical", "Keep"),
+    "step_102_causal_deployable_p1_gate": ("PARTIAL", "Critical", "Keep"),
     "step_103_atomic_quartz_gradients": ("PASS", "Critical", "Keep"),
     "step_104_leo_moving_platform": ("DIAGNOSTIC", "Supporting", "Keep"),
     "step_104b_seasonal_regional_sweep": ("PASS", "Critical", "Keep"),
@@ -231,8 +235,8 @@ ANNOTATIONS: dict[str, tuple[str, str, str]] = {
     "step_36_meo_csd": ("PASS", "Critical", "Keep"),
 
     # --- Superseded / exploratory duplicates (archive candidates) ---
-    "step_41_t4_matched": ("SUPERSeded", "Minor", "Candidate"),
-    "step_32_reverse_engineer": ("SUPERSeded", "Minor", "Candidate"),
+    "step_41_t4_matched": ("SUPERSEDED", "Minor", "Candidate"),
+    "step_32_reverse_engineer": ("SUPERSEDED", "Minor", "Candidate"),
 }
 
 
@@ -240,6 +244,8 @@ ANNOTATIONS: dict[str, tuple[str, str, str]] = {
 # use a stem different from the script name (e.g. variant scripts writing
 # to the flagship's output, or figure-only artefacts).
 ARTEFACT_ALIASES: dict[str, list[str]] = {
+    "step_08_integrity_monitoring": ["step_08_integrity",
+                                     "step_12_integrity"],
     "step_19_phase1_report": ["phase1_gate"],
     "step_165_gravitational_phase_test": ["step_165_gravitational_phase"],
     "step_174b_clean_untapered_arm": ["step_174_clean_untapered_arm"],
@@ -411,7 +417,8 @@ def main() -> int:
         stems = [step_id, *ARTEFACT_ALIASES.get(step_id, [])]
         has_json = any(
             name.startswith(stem) for name in outputs for stem in stems)
-        has_log = any(name.startswith(step_id) for name in logs)
+        has_log = any(
+            name.startswith(stem) for name in logs for stem in stems)
         doc_score = score_docstring(source)
         com_score = score_comments(source)
         log_score = score_logging(source)

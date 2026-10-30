@@ -100,9 +100,9 @@ def main():
 
     # ── Build the holdover specification from Step 56 (phase-resolved) ───
     holdover_rows = []
-    bg56 = s56.get("by_gap", {})
+    bg56 = {**s56.get("supplemental_by_gap", {}), **s56.get("by_gap", {})}
 
-    # Also include Step 55 gaps not covered by Step 56 (10 min, 2 h)
+    # Also include Step 55 gaps not covered by Step 56 (if any)
     bg55 = (s55 or {}).get("by_gap", {})
 
     # Collect all gaps from both steps
@@ -185,7 +185,11 @@ def main():
             "network_aided_TE_rms_ns": round(best_ns, 1),
             "network_aided_TE_ci95_ns": [round(ci_lo_ns, 1), round(ci_hi_ns, 1)] if ci_lo_ns else None,
             "distance_only_TE_rms_ns": round(dist_ns, 1) if dist_ns else None,
-            "persistence_TE_rms_ns": round(pers_ns, 1),
+            # Best causally selected temporal predictor on the corresponding
+            # evaluation set (Step 56: 45-day phase arm; Step 55: 90-day
+            # distance arm).  This is NOT the hold-last-value persistence
+            # reported in step_60, which uses rms_m.pers on the 90-day set.
+            "best_temporal_TE_rms_ns": round(pers_ns, 1),
             "free_running_osc_TE_ns": osc_tes,
             "improvement_vs_free_running_TCXO": f"{osc_tcxo / best_ns:.0f}x" if best_ns > 0 else "inf",
             "beats_OCXO": bool(best_ns < osc_ocxo),
@@ -193,8 +197,8 @@ def main():
             "beats_Rubidium": bool(best_ns < osc_rb),
             "within_PRTC_A": bool(best_ns < prtc_a),
             "within_PRTC_B": bool(best_ns < prtc_b),
-            "gain_vs_persistence_pct": round(gain_vs_pers, 1) if gain_vs_pers else None,
-            "gain_vs_persistence_ci95": [round(gain_ci_vs_pers[0], 1), round(gain_ci_vs_pers[1], 1)] if gain_ci_vs_pers else None,
+            "gain_vs_best_temporal_pct": round(gain_vs_pers, 1) if gain_vs_pers else None,
+            "gain_vs_best_temporal_ci95": [round(gain_ci_vs_pers[0], 1), round(gain_ci_vs_pers[1], 1)] if gain_ci_vs_pers else None,
         }
         if gain_vs_tep is not None:
             row["gain_vs_distance_only_pct"] = round(gain_vs_tep, 1)
@@ -309,7 +313,7 @@ def main():
     # ── Print the specification table ────────────────────────────────────
     print("OPERATIONAL HOLDOVER SPECIFICATION")
     print(f"{'outage':>8} {'method':>16} {'TE (ns)':>10} {'CI95 (ns)':>16} "
-          f"{'pers (ns)':>10} {'TCXO $5':>10} {'OCXO $300':>11} {'Rb $2k':>9} "
+          f"{'b-temp(ns)':>10} {'TCXO $5':>10} {'OCXO $300':>11} {'Rb $2k':>9} "
           f"{'vs TCXO':>9} {'PRTC-A':>8}")
     print("-" * 120)
     for r in holdover_rows:
@@ -319,7 +323,7 @@ def main():
         prtc = "PASS" if r["within_PRTC_A"] else "FAIL"
         print(f"{r['outage_label']:>8} {r['method']:>16} "
               f"{r['network_aided_TE_rms_ns']:>8.1f}ns {ci_s:>16} "
-              f"{r['persistence_TE_rms_ns']:>8.1f}ns "
+              f"{r['best_temporal_TE_rms_ns']:>8.1f}ns "
               f"{o['disciplined TCXO (~$5)']:>7.0f}ns "
               f"{o['disciplined OCXO (~$300)']:>8.0f}ns "
               f"{o['disciplined Rubidium (~$2k)']:>6.0f}ns "

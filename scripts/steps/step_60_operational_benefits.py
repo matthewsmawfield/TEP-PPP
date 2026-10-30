@@ -24,7 +24,7 @@ Benefits quantified:
 
 Reads: step_55_dense_outage_prediction.json, step_56_phase_predictive_bridge.json,
 step_58_clock_field_lengthscales.json, step_48_three_satellite.json,
-step_08_integrity_monitoring.json (best effort).
+step_08_integrity.json (best effort).
 
 Output: results/outputs/step_60_operational_benefits.json
 """
@@ -92,7 +92,7 @@ def timing_holdover(s55, s56=None):
     from phase resolution.
     """
     bg = (s55 or {}).get("by_gap", {})
-    bg56 = (s56 or {}).get("by_gap", {})
+    bg56 = {**(s56 or {}).get("supplemental_by_gap", {}), **(s56 or {}).get("by_gap", {})}
     rows = []
     for g in sorted(bg, key=int):
         a = bg[g]
@@ -145,7 +145,7 @@ def main():
     s56 = _load("step_56_phase_predictive_bridge.json")
     s58 = _load("step_58_clock_field_lengthscales.json")
     s48 = _load("step_48_three_satellite.json")
-    s08 = _load("step_08_integrity_monitoring.json")
+    s08 = _load("step_08_integrity.json")
 
     hold = timing_holdover(s55, s56)
 
@@ -189,11 +189,27 @@ def main():
         pg = 100.0 * (1.0 - h8["phase_resolved_TE_rms_ns"] / h8["distance_only_TE_rms_ns"])
         if pg > 1.0:
             phase_gain_8h = f"  The phase-resolved prior (Step 56) further reduces the 8 h error to {round(h8['phase_resolved_TE_rms_ns'])} ns, a {pg:.0f}% gain over the distance-only kernel."
+    # Rubidium boundary from the table itself: the earliest gap at which the
+    # aided TE beats the disciplined-Rubidium model and keeps beating it at
+    # every longer gap.  Hardcoding "~2 h" silently overclaimed when the
+    # distance-only arm at 2 h lost to the Rb model.
+    rb_phrase = ""
+    if hold:
+        gaps = sorted(r["outage_s"] for r in hold)
+        rb_g = next(
+            (g for g in gaps
+             if all(r["beats_rubidium"] for r in hold if r["outage_s"] >= g)),
+            None)
+        if rb_g is not None:
+            rb_phrase = (f"beyond ~{rb_g / 3600:g} h" if rb_g >= 3600
+                         else f"beyond ~{rb_g / 60:g} min")
+    rb_clause = (f" and better than a disciplined Rubidium {rb_phrase}"
+                 if rb_phrase else "")
     holdover_claim = (
         f"During a GNSS outage a network-connected receiver holds time to "
         f"{ns_1h} ns at 1 h and {ns_8h} ns at 8 h -- better than a GNSS-disciplined "
-        f"OCXO in holdover at every duration beyond 30 min and better than a "
-        f"disciplined Rubidium beyond ~2 h, achieved with only a network link "
+        f"OCXO in holdover at every duration beyond 30 min{rb_clause}, "
+        f"achieved with only a network link "
         f"and a modest oscillator.  A consumer-grade TCXO (~$5) with network "
         f"aiding outperforms a free-running OCXO (~$300) by >100x at 1 h and "
         f"approaches Rubidium-class holdover, making the method directly "
@@ -202,7 +218,8 @@ def main():
     # integrity detection threshold
     integ = None
     if s08:
-        for k in ("detection_drift_ns", "threshold_crossing_ns", "detected_at_ns"):
+        for k in ("drift_at_detection_ns", "detection_drift_ns",
+                  "threshold_crossing_ns", "detected_at_ns"):
             if k in s08:
                 integ = s08[k]
                 break

@@ -1,8 +1,8 @@
 {
   "name": "tep-ppp-site",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging",
-  "comment": "Package version matches manuscript version v0.1 (Pune)",
+  "comment": "Package version matches manuscript version v0.2 (Pune)",
   "main": "index.html",
   "scripts": {
     "dev": "node dev-server.js",

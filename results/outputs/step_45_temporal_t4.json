@@ -40,7 +40,31 @@
       "T4_temporal_pass": true,
       "stage1": "pooled common-view slope kappa with pair fixed effects (alpha = mean_e[p - kappa*J]); per-pair beta was replaced: its noise entered alpha multiplied by Jbar and attenuated the stage-2 partial correlation toward zero through the d-Jbar collinearity (errors-in-variables).",
       "covisibility": "per-epoch Jaccard of visible-satellite sets computed from the day's real SP3 ephemerides at UTC seconds-of-day (GPS-only; the nominal 24-satellite model is arbitrarily Earth-phased and scrambles the per-epoch J, attenuating kappa ~4x).",
-      "T4_temporal_rule": "distance_fit_significant = (separated R^2 > 0.2 AND separated R^2 sigma > 3.0 vs the identically residualised epoch-shuffle null AND 500 < separated lambda < 20000); common_view_separated = (|partial corr(alpha, log d | Jbar)| > 0.10 AND PC sigma > 3.0); T4_temporal_pass requires BOTH. The scored distance fit is on alpha residualised on [Jbar, cos(Delta-lon)] -- the raw binned fit is descriptive only, since it attributes neither the Jbar-aligned nor the longitude-phased components. frozen_S2 = (|PC| > 0.15 AND OOS R^2 gain > 0.02)."
+      "T4_temporal_rule": "distance_fit_significant = (separated R^2 > 0.2 AND separated R^2 sigma > 3.0 vs the identically residualised epoch-shuffle null AND 500 < separated lambda < 20000); common_view_separated = (|partial corr(alpha, log d | Jbar)| > 0.10 AND PC sigma > 3.0); T4_temporal_pass requires BOTH. The scored distance fit is on alpha residualised on [Jbar, cos(Delta-lon)] -- the raw binned fit is descriptive only, since it attributes neither the Jbar-aligned nor the longitude-phased components. frozen_S2 = (|PC| > 0.15 AND OOS R^2 gain > 0.02).",
+      "synthetic_common_view_only_null": {
+        "n_trials": 100,
+        "description": "Synthetic receiver clocks generated solely from shared SP3 visible-satellite clock noise plus local receiver noise (matched to broadcast short-baseline SNR, zero TEP field) passed through the identical two-stage pooled-kappa estimator.",
+        "equal_weight": {
+          "kappa_mean": 0.2096,
+          "pc_alpha_logd_given_jbar_mean": 0.0552,
+          "pc_alpha_logd_given_jbar_std": 0.0211,
+          "real_z_sigma_given_jbar": -10.4,
+          "pc_alpha_logd_given_jbar_cosdlon_mean": 0.0534,
+          "pc_alpha_logd_given_jbar_cosdlon_std": 0.0215,
+          "real_z_sigma_given_jbar_cosdlon": -14.9,
+          "n_negative_draws": 0
+        },
+        "sin2_elev_weighted": {
+          "kappa_mean": -0.0463,
+          "pc_alpha_logd_given_jbar_mean": 0.065,
+          "pc_alpha_logd_given_jbar_std": 0.0261,
+          "real_z_sigma_given_jbar": -8.8,
+          "pc_alpha_logd_given_jbar_cosdlon_mean": 0.0681,
+          "pc_alpha_logd_given_jbar_cosdlon_std": 0.0267,
+          "real_z_sigma_given_jbar_cosdlon": -12.5,
+          "n_negative_draws": 0
+        }
+      }
     },
     "precise_cod": {
       "label": "precise_cod",

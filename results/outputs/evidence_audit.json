@@ -1,6 +1,6 @@
 {
   "audit": "TEP-PPP operational evidence ledger",
-  "generated_utc": "2026-10-30T00:55:49.062030+00:00",
+  "generated_utc": "2026-10-30T17:40:35.509676+00:00",
   "strict_operational_claim_pass": true,
   "current_defensible_claim": "Held-out GNSS receiver clocks contain operationally useful spatial structure, and the precise-clock TEP-scale fit is robust across five filters including detrend-only data. A phase/coherence prior frozen from the preceding day converts the Papers 1-2 phase-cos observable into causal outage skill: across 45 days it improves on distance-only TEP by 2.6-17.1%, causal CV spatial prediction by 4.8-23.4%, and a coherence-magnitude-preserving phase scramble by 14.4-37.2%, with positive clustered intervals. Co-located quartz/free-atomic anchors now convert that phase structure into spatial predictive power: two independent sites recover 3,282/3,732 km under station-clustered geometry nulls (p=0.001 each), and a target-blind 43-mode inversion localises Matera/Tahiti to 339/744 km versus 9,078/10,044 km null medians. This is a GNSS-derived observability replay; the live zero-satellite test requires direct local dual-clock phase measurements. Full-sky 3-D RMS is the wrong scoreboard for a time field: with 8 satellites geometry already estimates the receiver clock, so TEP is correctly inert in position (Step 23). Predictive power is in held-out clocks (P1, S6) and in dropout PPP (P3). At k=3 free-clock SPP is infeasible and TEP supplies the clock measurement. Phase-resolved k=3: RMS 5.75 m (p50 3.05 m) vs AR1 5.53 m / 2.83 m. The dense-network clock advantage (Step 55 p50 vs temporal: +6.2 to +19.3%) was previously discarded by a change-on-stale-SPP-anchor predictor; the flagship now injects the Step 55/56 absolute residual (trend + kriged live reference residuals) at 1 h and 4 h. Repeated one-millisecond wrap-mode targets are now rejected causally; unexpected steering still requires steering-event telemetry or an independent motion/position constraint. The temporal T4 regression breaks the co-visibility collinearity: with the corrected pooled common-view slope on real-SP3 co-visibility, the non-common-view component of pair correlation meets the frozen separability criterion on the broadcast product (PC=-0.164 > 0.15 at 10.8 sigma, OOS R^2 gain +0.022 > 0.02, lambda=1008 km) and shows a significant but attenuated partial correlation on the precise product (PC=-0.040, 9.2 sigma) -- the expected attenuation where the network solution absorbs the field's common mode and atomic oscillators screen the remainder. S2 is PARTIAL. An unconstrained Gaussian process resolves the TEP-predicted scale when the signal is present: with a noise-dominating injection it recovers the full TEP band at 88% within 2x (5/5 scales), the >1,000 km baseline-restricted free GP selects a 1,500 km median (85% in the TEP band), and both spatial-signal nulls collapse to the grid edge (0% of temporal-shuffle and 3% of geometry-shuffle nulls in the TEP band). At the real sub-noise amplitude SNR the band-passed-amplitude free GP picks ~700 km; the operative unconstrained-discovery evidence is the phase observable (S4: free form and free length scale, Gaussian at lambda in [3,820, 4,348] km on both precise centres). Operational robustness PASSES all 8 of 8 aperture dimensions (network density, pre-window, oscillator type, independent year, clock-filter family, corrupt-reference rejection, frozen live stream, and multi-region seasonal sweep across 30/30 region-season cells) with the prior frozen and physics-fixed.",
   "gates": {
@@ -241,7 +241,7 @@
           15.141789357188184
         ]
       ],
-      "scope": "2026-10-16 P4 capture: 10 unseen live NTRIP stations (agrs_nl + ReNEP), ~9.5 h continuous overnight capture (34,200 obs epochs/station) through the frozen obstruction protocol at all five registered windows (10/30/60/120/240 min).  With the contemporaneous kriged-field kernel (the deployed predictor, leave-target-out) the live result is kernel-vs-hold -0.6/+2.1/+4.0/+5.2/+15.1% (all six 240-min stations positive, +3.0..+16.1) and kernel-vs-linrate +44..+90% \u2014 tracking the archived benchmark (+8.7% at 240 min).  The legacy SOD-template kernel arm scores -31% at 240 min on identical data; the earlier P4 negative is kernel staleness, not channel failure (documented in step_37b method field)."
+      "scope": "2026-10-16 P4 capture: 9 unseen live NTRIP stations (ReNEP) plus the disclosed training-pool station DLF1 (agrs_nl), ~9.5 h continuous overnight capture (uninterrupted 00:52-10:22 UTC segment; 22,866-48,108 decoded epochs/station) through the frozen obstruction protocol at all five registered windows (10/30/60/120/240 min).  With the contemporaneous kriged-field kernel (the deployed predictor, leave-target-out) the live result is kernel-vs-hold -0.6/+2.1/+4.0/+5.2/+15.1% (all six 240-min stations positive, +3.0..+16.1) and kernel-vs-linrate +44..+90% \u2014 tracking the archived benchmark (+8.7% at 240 min).  The legacy SOD-template kernel arm scores -31% at 240 min on identical data; the earlier P4 negative is kernel staleness, not channel failure (documented in step_37b method field)."
     },
     "P5_operational_robustness": {
       "pass": true,
@@ -485,31 +485,31 @@
       "metric": {
         "1800": {
           "n_eval": 45600,
-          "phase_vs_tep_pct": 2.6424885932170628,
-          "phase_vs_cv_spatial_pct": 4.786048574024992,
-          "phase_vs_scramble_pct": 14.387535026043407,
-          "phase_vs_angle_scramble_pct": 32.50470033897517
+          "phase_vs_tep_pct": 2.6424885932171627,
+          "phase_vs_cv_spatial_pct": 4.786048574024759,
+          "phase_vs_scramble_pct": 14.387535026043441,
+          "phase_vs_angle_scramble_pct": 32.504700338975056
         },
         "3600": {
           "n_eval": 44414,
-          "phase_vs_tep_pct": 4.8124361657897685,
-          "phase_vs_cv_spatial_pct": 9.123787749305679,
-          "phase_vs_scramble_pct": 20.609031674233226,
-          "phase_vs_angle_scramble_pct": 43.271535130096396
+          "phase_vs_tep_pct": 4.812436165789757,
+          "phase_vs_cv_spatial_pct": 9.123787749305167,
+          "phase_vs_scramble_pct": 20.60903167423319,
+          "phase_vs_angle_scramble_pct": 43.27153513009615
         },
         "14400": {
           "n_eval": 37983,
-          "phase_vs_tep_pct": 14.089981330642543,
-          "phase_vs_cv_spatial_pct": 19.63212098587287,
-          "phase_vs_scramble_pct": 34.16790638269023,
-          "phase_vs_angle_scramble_pct": 57.41417595618147
+          "phase_vs_tep_pct": 14.089981330641411,
+          "phase_vs_cv_spatial_pct": 19.63212098587149,
+          "phase_vs_scramble_pct": 34.16790638268946,
+          "phase_vs_angle_scramble_pct": 57.41417595618091
         },
         "28800": {
           "n_eval": 29498,
-          "phase_vs_tep_pct": 17.132746588221714,
-          "phase_vs_cv_spatial_pct": 23.435750878710326,
-          "phase_vs_scramble_pct": 37.17953436286775,
-          "phase_vs_angle_scramble_pct": 60.03682611836874
+          "phase_vs_tep_pct": 17.13274658822044,
+          "phase_vs_cv_spatial_pct": 23.435750878708927,
+          "phase_vs_scramble_pct": 37.17953436286713,
+          "phase_vs_angle_scramble_pct": 60.03682611836831
         }
       },
       "verdict": "PASS",
@@ -541,21 +541,21 @@
         {
           "outage_s": 600,
           "outage_label": "10 min",
-          "network_aided_TE_rms_ns": 17.0,
-          "network_aided_method": "distance_only",
-          "distance_only_TE_rms_ns": 17.0,
-          "phase_resolved_TE_rms_ns": null,
+          "network_aided_TE_rms_ns": 15.7,
+          "network_aided_method": "phase_resolved",
+          "distance_only_TE_rms_ns": 28.3,
+          "phase_resolved_TE_rms_ns": 15.7,
           "network_aided_TE_p99_ns": 45.2,
-          "hold_last_value_TE_rms_ns": 19.4,
+          "hold_last_value_TE_rms_ns": 29.8,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 600.2,
             "disciplined OCXO (~$300)": 6.0,
             "disciplined CSAC (~$1.5k)": 30.0,
             "disciplined Rubidium (~$2k)": 3.0
           },
-          "vs_OCXO_pct": -181.0,
+          "vs_OCXO_pct": -160.0,
           "vs_TCXO_pct": 97.0,
-          "vs_CSAC_pct": 43.0,
+          "vs_CSAC_pct": 48.0,
           "beats_rubidium": false,
           "beats_csac": true
         },
@@ -564,10 +564,10 @@
           "outage_label": "30 min",
           "network_aided_TE_rms_ns": 22.1,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 23.8,
+          "distance_only_TE_rms_ns": 40.1,
           "phase_resolved_TE_rms_ns": 22.1,
           "network_aided_TE_p99_ns": 51.9,
-          "hold_last_value_TE_rms_ns": 29.4,
+          "hold_last_value_TE_rms_ns": 43.6,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 1801.6,
             "disciplined OCXO (~$300)": 18.4,
@@ -585,10 +585,10 @@
           "outage_label": "1 h",
           "network_aided_TE_rms_ns": 24.7,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 27.3,
+          "distance_only_TE_rms_ns": 54.7,
           "phase_resolved_TE_rms_ns": 24.7,
           "network_aided_TE_p99_ns": 63.0,
-          "hold_last_value_TE_rms_ns": 39.0,
+          "hold_last_value_TE_rms_ns": 61.4,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 3606.5,
             "disciplined OCXO (~$300)": 37.5,
@@ -604,21 +604,21 @@
         {
           "outage_s": 7200,
           "outage_label": "2 h",
-          "network_aided_TE_rms_ns": 34.5,
-          "network_aided_method": "distance_only",
-          "distance_only_TE_rms_ns": 34.5,
-          "phase_resolved_TE_rms_ns": null,
-          "network_aided_TE_p99_ns": 86.4,
-          "hold_last_value_TE_rms_ns": 57.2,
+          "network_aided_TE_rms_ns": 29.3,
+          "network_aided_method": "phase_resolved",
+          "distance_only_TE_rms_ns": 77.8,
+          "phase_resolved_TE_rms_ns": 29.3,
+          "network_aided_TE_p99_ns": 86.5,
+          "hold_last_value_TE_rms_ns": 90.2,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 7225.9,
             "disciplined OCXO (~$300)": 78.0,
             "disciplined CSAC (~$1.5k)": 362.3,
             "disciplined Rubidium (~$2k)": 37.5
           },
-          "vs_OCXO_pct": 56.0,
+          "vs_OCXO_pct": 62.0,
           "vs_TCXO_pct": 100.0,
-          "vs_CSAC_pct": 90.0,
+          "vs_CSAC_pct": 92.0,
           "beats_rubidium": true,
           "beats_csac": true
         },
@@ -627,10 +627,10 @@
           "outage_label": "4 h",
           "network_aided_TE_rms_ns": 40.6,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 50.7,
+          "distance_only_TE_rms_ns": 116.1,
           "phase_resolved_TE_rms_ns": 40.6,
-          "network_aided_TE_p99_ns": 136.8,
-          "hold_last_value_TE_rms_ns": 86.7,
+          "network_aided_TE_p99_ns": 137.2,
+          "hold_last_value_TE_rms_ns": 135.8,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 14503.7,
             "disciplined OCXO (~$300)": 167.8,
@@ -646,12 +646,12 @@
         {
           "outage_s": 28800,
           "outage_label": "8 h",
-          "network_aided_TE_rms_ns": 65.7,
+          "network_aided_TE_rms_ns": 65.6,
           "network_aided_method": "phase_resolved",
-          "distance_only_TE_rms_ns": 83.7,
-          "phase_resolved_TE_rms_ns": 65.7,
-          "network_aided_TE_p99_ns": 238.7,
-          "hold_last_value_TE_rms_ns": 149.3,
+          "distance_only_TE_rms_ns": 170.3,
+          "phase_resolved_TE_rms_ns": 65.6,
+          "network_aided_TE_p99_ns": 239.8,
+          "hold_last_value_TE_rms_ns": 210.1,
           "free_running_osc_TE_ns": {
             "disciplined TCXO (~$5)": 29214.7,
             "disciplined OCXO (~$300)": 383.4,

@@ -689,9 +689,11 @@ def build_audit() -> dict:
                 (r.get("gap"), r.get("live_kernel_vs_hold_pct"))
                 for r in s37c.get("comparison_table", [])],
             "scope": (
-                "2026-10-16 P4 capture: 10 unseen live NTRIP stations "
-                "(agrs_nl + ReNEP), ~9.5 h continuous overnight capture "
-                "(34,200 obs epochs/station) through the frozen "
+                "2026-10-16 P4 capture: 9 unseen live NTRIP stations "
+                "(ReNEP) plus the disclosed training-pool station DLF1 "
+                "(agrs_nl), ~9.5 h continuous overnight capture "
+                "(uninterrupted 00:52-10:22 UTC segment; "
+                "22,866-48,108 decoded epochs/station) through the frozen "
                 "obstruction protocol at all five registered windows "
                 "(10/30/60/120/240 min).  With the contemporaneous "
                 "kriged-field kernel (the deployed predictor, "

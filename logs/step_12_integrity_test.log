@@ -1,15 +1,15 @@
-[2026-09-03 23:36:42] [INFO    ] 
-[2026-09-03 23:36:42] [INFO    ] ================================================================================
-[2026-09-03 23:36:42] [INFO    ] TEP-PPP Signal Integrity Proof
-[2026-09-03 23:36:42] [INFO    ] ================================================================================
-[2026-09-03 23:36:42] [INFO    ] 
-[2026-09-03 23:36:42] [PROCESS ] Establishing Baseline TEP Field...
-[2026-09-03 23:36:47] [INFO    ] Reference LOO residual MAD scale: 32.96 ns
-[2026-09-03 23:36:47] [INFO    ] Pre-attack false-alarm check: 0/100 exceed threshold (clean)
-[2026-09-03 23:36:47] [PROCESS ] Injecting Clock Spoofing Attack...
-[2026-09-03 23:36:47] [INFO    ] Attack Start: Epoch 100
-[2026-09-03 23:36:47] [SUCCESS ] TEP Detection: Epoch 274 (Delay: 174 epochs)
-[2026-09-03 23:36:47] [SUCCESS ] Drift at detection: 87.00 ns (~26.08 m)
-[2026-09-03 23:36:47] [INFO    ] Residual at detection: 99.02 ns
-[2026-09-03 23:36:48] [SUCCESS ] Saved integrity plot to results/figures/step_12_integrity_proof.png
-[2026-09-03 23:36:48] [SUCCESS ] Saved integrity summary to results/outputs/step_08_integrity.json
+[2026-10-30 11:37:03] [INFO    ] 
+[2026-10-30 11:37:03] [INFO    ] ================================================================================
+[2026-10-30 11:37:03] [INFO    ] TEP-PPP Signal Integrity Proof
+[2026-10-30 11:37:03] [INFO    ] ================================================================================
+[2026-10-30 11:37:03] [INFO    ] 
+[2026-10-30 11:37:03] [PROCESS ] Establishing Baseline TEP Field...
+[2026-10-30 11:37:28] [INFO    ] Reference LOO residual MAD scale: 32.96 ns
+[2026-10-30 11:37:28] [INFO    ] Pre-attack false-alarm check: 0/100 exceed threshold (clean)
+[2026-10-30 11:37:28] [PROCESS ] Injecting Clock Spoofing Attack...
+[2026-10-30 11:37:28] [INFO    ] Attack Start: Epoch 100
+[2026-10-30 11:37:28] [SUCCESS ] TEP Detection: Epoch 274 (Delay: 174 epochs)
+[2026-10-30 11:37:28] [SUCCESS ] Drift at detection: 87.00 ns (~26.08 m)
+[2026-10-30 11:37:28] [INFO    ] Residual at detection: 99.02 ns
+[2026-10-30 11:37:30] [SUCCESS ] Saved integrity plot to results/figures/step_12_integrity_proof.png
+[2026-10-30 11:37:30] [SUCCESS ] Saved integrity summary to results/outputs/step_08_integrity.json

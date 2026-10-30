@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-30T00:55:16.879871+00:00",
+  "generated": "2026-10-30T17:17:22.523286+00:00",
   "project": "TEP-PPP",
-  "version": "0.1",
+  "version": "0.2",
   "codename": "Pune",
   "files": {
     "results/figures/step_06_falsification.png": {
@@ -10,9 +10,9 @@
       "modified": "2026-09-03T23:34:25"
     },
     "results/figures/step_12_integrity_proof.png": {
-      "sha256": "fb90ed8dd259e65da00c543570fc8992577860bcfca1f6029cd52bbeb03c0616",
-      "size_bytes": 499012,
-      "modified": "2026-09-27T05:32:33"
+      "sha256": "9fd9aca8686b1a77cbef7f9ada690169aef06e23210dfa28fface28db600f573",
+      "size_bytes": 476024,
+      "modified": "2026-10-30T11:37:30"
     },
     "results/figures/step_137_aperture_synthesis.png": {
       "sha256": "58bbec6a648e63785b5a6456a4a4cfe67fb31ad2530c1ff6b184adc8437cb0bc",
@@ -55,9 +55,9 @@
       "modified": "2026-10-16T11:41:09"
     },
     "results/figures/step_53_headline_detection.png": {
-      "sha256": "ee554561d6e830c5775f2321ff1e31c1178957a12dee53b85f734bddf658565b",
-      "size_bytes": 114168,
-      "modified": "2026-10-29T21:30:48"
+      "sha256": "2f7c3f1f193454d6de83d04792ebd1728200ca24534e72d9139ba7dcb9ca8695",
+      "size_bytes": 114354,
+      "modified": "2026-10-30T14:51:57"
     },
     "results/figures/step_5_real_data_convergence.png": {
       "sha256": "6491b2b0a69192aba5ce930982fd99008b67a8855c2d79660b5ce04658d27a98",
@@ -153,6 +153,11 @@
       "sha256": "1db6e07e9b8d34171b428b61ea2590236b474c1a17800073c0adcb4ad5460967",
       "size_bytes": 1275,
       "modified": "2026-09-03T23:34:25"
+    },
+    "results/outputs/step_08_integrity.json": {
+      "sha256": "79891d83f4764ebefbf00fbdb948b39640cbe638be3a218fc20bcd992ecaceec",
+      "size_bytes": 1179,
+      "modified": "2026-10-30T11:37:30"
     },
     "results/outputs/step_09_acquire_global_clk.json": {
       "sha256": "b75901f04411dbaca8493c468703ba5dc2b4fa3a1fad5a2b244989fc072cec93",
@@ -365,9 +370,9 @@
       "modified": "2026-09-01T18:46:05"
     },
     "results/outputs/step_140_multiband_controls.json": {
-      "sha256": "f24d6e08a91c87f35db8ef0da2ef9f1682ee8988072bb84059311a4d24debf53",
-      "size_bytes": 5050,
-      "modified": "2026-09-06T21:01:58"
+      "sha256": "be17a24abadcb03a0319ed62c811a0422c03298242b8bc3c97387fe3320088eb",
+      "size_bytes": 5143,
+      "modified": "2026-10-30T17:00:25"
     },
     "results/outputs/step_142_multi_year.json": {
       "sha256": "8c49c053cfdf3d1e8c308c02db9cc7a813722c160cf4f72aee328328d34893b0",
@@ -555,9 +560,9 @@
       "modified": "2026-09-07T21:36:11"
     },
     "results/outputs/step_16_draconitic_falsification.json": {
-      "sha256": "7d209e5582d506373457584f8c47bbe2d740e3e88ed7845fe0cd55c176db1ef0",
-      "size_bytes": 2391,
-      "modified": "2026-09-01T09:11:03"
+      "sha256": "712c63d4a28d56f190e38fe2460688192a7da4b3deb971952eefa0f23511ff98",
+      "size_bytes": 2248,
+      "modified": "2026-10-30T10:23:59"
     },
     "results/outputs/step_170_clock_field_localisation_live.json": {
       "sha256": "c121450768af1ea8cfd583bab02ba77a54770fbd70715753d958630160025a30",
@@ -592,7 +597,7 @@
     "results/outputs/step_174_epoch_share.json": {
       "sha256": "5d22c320396f787dff67f5372146a70116f3678bc7ad97c720ad16d1065f3f3e",
       "size_bytes": 555,
-      "modified": "2026-10-28T19:47:33"
+      "modified": "2026-10-30T10:24:39"
     },
     "results/outputs/step_174_mismatch_control.json": {
       "sha256": "83d60672b8def694dd731d805a58746004d6a2277c680f61386671f8c80022be",
@@ -770,9 +775,9 @@
       "modified": "2026-09-03T20:39:38"
     },
     "results/outputs/step_45_temporal_t4.json": {
-      "sha256": "c67665945759c248b8adc83fdbcdbae74dab59fb070b566bce8c8e72c3345240",
-      "size_bytes": 7464,
-      "modified": "2026-10-29T18:03:36"
+      "sha256": "0789c5facc54d33278e113ef7897714df4b4ca2b126c3605acaf1c8add77ffbd",
+      "size_bytes": 8638,
+      "modified": "2026-10-30T16:27:16"
     },
     "results/outputs/step_45b_t4_forensic.json": {
       "sha256": "b4fe2939af6fae6f795fc46f06a7910c69320651449eafa051b5a2131dcec09d",
@@ -807,7 +812,7 @@
     "results/outputs/step_52_drone_kinematic.json": {
       "sha256": "456f7f81caebeb6e9faaf881064cb7e1adc8bd0e0d2060ce9be29c08fe380a84",
       "size_bytes": 2675213,
-      "modified": "2026-10-30T00:54:16"
+      "modified": "2026-10-30T01:42:51"
     },
     "results/outputs/step_53_coherent_lambda.json": {
       "sha256": "db64dbcdc8ed9ef63bee8e6942a3ac0c1360d86d07fb25be1ccc422e4ef30169",
@@ -830,9 +835,9 @@
       "modified": "2026-09-03T19:09:49"
     },
     "results/outputs/step_56_phase_predictive_bridge.json": {
-      "sha256": "1cb42cb4b2f0e26c3389f77fed3d14bc9e546b81cf495125bf4b211a8a6350bf",
-      "size_bytes": 50648,
-      "modified": "2026-09-05T14:19:48"
+      "sha256": "d3dc223978bc3aac0b62df97e731250b3e1712afcd02b9ba77a8f99a70169e22",
+      "size_bytes": 64241,
+      "modified": "2026-10-30T16:27:16"
     },
     "results/outputs/step_57_joint_estimator_sensitivity.json": {
       "sha256": "53560802a51ad52e88c9dc6f8654d2a451774a1d6e29db741af31bf1da8de8f5",
@@ -850,9 +855,9 @@
       "modified": "2026-09-02T11:36:18"
     },
     "results/outputs/step_60_operational_benefits.json": {
-      "sha256": "6c3ddd3dee36256b99ce37d075eebb537f75e9d82bda76484a036d22404fc6d4",
-      "size_bytes": 6891,
-      "modified": "2026-09-03T10:00:09"
+      "sha256": "4898db7e18106bd5fa4f8c7490be70a5453a9a91c01520dd369d2658321ce9ec",
+      "size_bytes": 6887,
+      "modified": "2026-10-30T14:27:05"
     },
     "results/outputs/step_61_acquire_regional_cors.json": {
       "sha256": "4f748b2498a239d7265030e573a40f9c2f35aa4c2825ba5647d7f2b16ad0acb2",
@@ -1025,9 +1030,9 @@
       "modified": "2026-10-29T13:38:16"
     },
     "results/outputs/step_83_t4_phasecos_fullyear.json": {
-      "sha256": "01fd77e78152657e46d7ff2d4d630697054f4fb6129c9888e9939bf7b64801a0",
-      "size_bytes": 1148,
-      "modified": "2026-09-04T09:12:12"
+      "sha256": "213ec397cf2ce0b3db33cc1c2c76dfe53f3f1cce0b13c81aa139d5ae9e0b5d00",
+      "size_bytes": 3205,
+      "modified": "2026-10-30T10:36:53"
     },
     "results/outputs/step_84_quadrupole_axis.json": {
       "sha256": "b1715b47ffea6efe2c51531e132c1fbda24b27f0801070f4402a262e55964d7f",
@@ -1050,9 +1055,9 @@
       "modified": "2026-09-03T20:39:38"
     },
     "results/outputs/step_88_per_station_breakdown.json": {
-      "sha256": "45076128e5f72fdbcff628cc8acf9f2664f871c6b13592bd32105015b93219fc",
-      "size_bytes": 20435,
-      "modified": "2026-09-03T20:39:38"
+      "sha256": "22b1e30ba793b75e5465f2b561101097b579948efbd1b9319c632ce78e6f8a8b",
+      "size_bytes": 20074,
+      "modified": "2026-10-30T13:52:26"
     },
     "results/outputs/step_88b_band_decomposed_kernel.json": {
       "sha256": "75ce82095321520ce76e191b7c7bb157c77f77af6816fdd482b33168e65894ba",
@@ -1065,9 +1070,9 @@
       "modified": "2026-09-03T10:12:28"
     },
     "results/outputs/step_90_operational_holdover_spec.json": {
-      "sha256": "0481e68723593c9822f827291404eb3242cf0f3715572367229e55ef86bff753",
-      "size_bytes": 9006,
-      "modified": "2026-09-03T10:20:00"
+      "sha256": "fb529407e7b2770b4127e480b3727c5c4c8d054cb11bb9b66a8a9973bf7ecb43",
+      "size_bytes": 9267,
+      "modified": "2026-10-30T14:27:05"
     },
     "results/outputs/step_90b_physics_kernel_stack.json": {
       "sha256": "3161d92f28e195621ffe82892f9109e94d2cff79a8fdda71a05e85e84af9488c",
