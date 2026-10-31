@@ -226,7 +226,7 @@
 
 
     <h3>A.8 TEP-Specific Predictive Superiority: Phase-Cos vs a Tuned Conventional Model (Step 64, P1)</h3>
-    <p>The P1 gate asks whether the <em>physics-fixed</em> TEP predictor &mdash; every parameter set a priori from Papers 1&ndash;2 &mdash; beats a conventional spatial model that is allowed to <em>learn</em> its covariance from data. Earlier P1 attempts used an amplitude-domain isotropic Gaussian and tied. Step 64 gives TEP its full arsenal, all in the phase domain where Papers 1&ndash;2 measured it: the phase-cos coherence Gram $\operatorname{Re}(S_{ij}/|S_{ij}|)$ frozen from the complete prior UTC day, an annual time-varying $\lambda$, and an isotropic multi-scale exponential continuum ($\lambda/1.6, \lambda, 1.6\lambda$) &mdash; with <em>zero</em> tuning on any data. Two arsenal components were withdrawn during development: a harmonic add-on (incompatible prior/current residual definitions) and a pairwise azimuth warp (not guaranteed positive definite on the sphere). The conventional competitor selects $(\text{form}, \lambda, \text{nugget})$ by leave-one-out on the held-out station's own prior day (the strongest deployable conventional model), and a second control fits $\rho(d)$ to the whole prior-day network covariance.</p>
+    <p>The P1 gate asks whether the <em>physics-fixed</em> TEP predictor &mdash; every parameter set a priori from Papers 1&ndash;2 &mdash; beats a conventional spatial model that is allowed to <em>learn</em> its covariance from data. Earlier P1 attempts used an amplitude-domain isotropic Gaussian and tied. Step 64 gives TEP its full arsenal, all in the phase domain where Papers 1&ndash;2 measured it: the phase-cos coherence Gram $\operatorname{Re}(S_{ij}/|S_{ij}|)$ frozen from the complete prior UTC day, an annual time-varying $\lambda$, and an isotropic multi-scale exponential continuum ($\lambda/1.6, \lambda, 1.6\lambda$) &mdash; with <em>zero</em> tuning on any data. Two exploratory candidate terms were excluded on mathematical grounds: a harmonic add-on (incompatible prior/current residual definitions) and a pairwise azimuth warp (not guaranteed positive definite on the sphere). The conventional competitor selects $(\text{form}, \lambda, \text{nugget})$ by leave-one-out on the held-out station's own prior day (the strongest deployable conventional model), and a second control fits $\rho(d)$ to the whole prior-day network covariance.</p>
     <p>Held-out (leave-one-station-out) clock prediction on the dense EUREF/EPN network, 30 days, current-day evaluation epochs struck after the prior-day structures are frozen:</p>
     <table>
         <thead><tr><th>Network</th><th>phase-cos vs tuned conventional</th><th>phase-cos vs empirical covariance</th><th>full arsenal vs phase-cos</th><th>full arsenal vs geometry-scramble null</th></tr></thead>
@@ -267,9 +267,9 @@
         <tbody>
             <tr><td>zero (baseline)</td><td>53.57</td><td>&mdash;</td></tr>
             <tr><td>network mean</td><td>53.46</td><td>$+0.21\%$</td></tr>
-            <tr><td><strong>Gaussian</strong> &mdash; the kernel in use</td><td>53.99</td><td>$\mathbf{-0.78\%}$</td></tr>
+            <tr><td><strong>Gaussian</strong> &mdash; the kernel in use</td><td>53.99</td><td><strong>$-0.78\%$</strong></td></tr>
             <tr><td>exponential</td><td>52.40</td><td>$+2.18\%$</td></tr>
-            <tr><td><strong>Legendre PSD</strong> &mdash; measured structure</td><td><strong>52.11</strong></td><td>$\mathbf{+2.73\%}$</td></tr>
+            <tr><td><strong>Legendre PSD</strong> &mdash; measured structure</td><td><strong>52.11</strong></td><td><strong>$+2.73\%$</strong></td></tr>
         </tbody>
     </table>
 
@@ -285,7 +285,7 @@
             <tr><td>angular structure (Step 86)</td><td>52.11</td><td>$+2.73\%$</td><td>&mdash;</td></tr>
             <tr><td>$+$ oscillator screening</td><td>51.77</td><td>$+3.37\%$</td><td>$+0.66\%$ &nbsp;CI $[+0.60, +0.72]$</td></tr>
             <tr><td>$+$ anisotropy</td><td>51.73</td><td>$+3.43\%$</td><td>$+0.73\%$ &nbsp;CI $[+0.48, +0.98]$</td></tr>
-            <tr><td><strong>$+$ both</strong></td><td><strong>51.70</strong></td><td>$\mathbf{+3.49\%}$</td><td>$\mathbf{+0.79\%}$ &nbsp;CI $[+0.54, +1.04]$</td></tr>
+            <tr><td><strong>$+$ both</strong></td><td><strong>51.70</strong></td><td><strong>$+3.49\%$</strong></td><td><strong>$+0.79\%$</strong> &nbsp;CI $[+0.54, +1.04]$</td></tr>
         </tbody>
     </table>
 

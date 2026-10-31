@@ -1,7 +1,6 @@
-v0.2 (Pune) — 30 October 2026 — Rubidium-crossover pin, synthetic common-view null, and extended phase-resolved holdover coverage
+v0.3 (Pune) — 31 October 2026 — Methodological-control framing, parameterisation standardization, and abstract/PDF typography refinement
 
-- Pinned the disciplined-Rubidium crossover to the regenerated holdover table itself rather than a hardcoded claim; with the phase-resolved arm now scored at every gap the boundary is confirmed at ~2 h
-- Added a synthetic common-view-only receiver-clock null for the temporal T4 separability test, falsifying the shared-visibility explanation at ~10–15 sigma on the broadcast product
-- Extended phase-resolved outage prediction to the 10-minute and 2-hour horizons with fixed-lambda ablation arms; network-aided clock-residual error is now quantified at 38.1% (1 h), 48.8% (2 h), and 55.7% (8 h) below the best causal temporal extrapolator
-- Recovered and registered the Step 08 signal-integrity source; the clock-drag-off spoof-detection arm is now fully auditable
-- Corrected the P4 live-capture disclosure to 9 unseen stations plus the disclosed training-pool station DLF1, and hardened the per-station seasonal breakdown against clock-reset artefacts
+- Reframed the temporal T4, three-satellite blind solve, PPP cold-start, and cross-spectral phase-alignment sections to present the validated estimators first and group superseded exploratory arms as explicit methodological controls
+- Standardised the three covariance length-scale parameterisation conventions in Section 2.2 and unified the deployment-pathway discussion in Section 4
+- Streamlined the abstract and removed redundant plain-language and meta-commentary blocks across the manuscript and citation metadata
+- Corrected display-equation vector typography and code-span formatting in Section 2.9 and highlighted table entries across Section 3 and Appendix A
