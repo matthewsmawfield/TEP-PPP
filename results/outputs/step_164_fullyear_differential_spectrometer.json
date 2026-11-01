@@ -1,7 +1,7 @@
 {
   "step": 164,
   "title": "Co-located differential spectrometer: coherent multi-window accumulation",
-  "timestamp": "2026-09-07T11:36:54.642296+00:00",
+  "timestamp": "2026-11-01T15:43:13.735457+00:00",
   "product": "clk_cod_ops",
   "design": "Coherent accumulation of cross-spectra across 13-day overlapping windows (step=7d).  Each window is independently detrended.  The cross-spectral product conj(F_delta)*F_remote is accumulated across all windows before computing phase alignment, giving the SNR of the full year with per-window drift removal.",
   "pairs": {
@@ -3178,6 +3178,80 @@
           "broadband_lambda": 57.588199137383754,
           "n_windows": 33,
           "n_remote_stations": 157
+        }
+      }
+    },
+    "tidal_band_10_35uHz_colocated": {
+      "MAT1-MATE": {
+        "tidal_band_10_35uHz": {
+          "fit": {
+            "lambda_km": 1937.8297113354956,
+            "R2_exponential": 0.8751297973596047,
+            "best_model": "power_law",
+            "n_bins": 15,
+            "n_reference_stations": 292,
+            "mean_index": 0.04352380556360761
+          },
+          "geometry_null": {
+            "unit": "distant reference station (daily repeats collapsed)",
+            "n_realisations": 1000,
+            "R2_median": 0.013308760730326774,
+            "lambda_median_km": 407.2024023238431,
+            "p_R2_ge_observed": 0.000999000999000999
+          }
+        },
+        "continuum_35_500uHz": {
+          "fit": {
+            "lambda_km": 518.8016639705297,
+            "R2_exponential": 0.9440378783995553,
+            "best_model": "power_law",
+            "n_bins": 15,
+            "n_reference_stations": 292,
+            "mean_index": 0.022343958803345373
+          },
+          "geometry_null": {
+            "unit": "distant reference station (daily repeats collapsed)",
+            "n_realisations": 1000,
+            "R2_median": 0.01838469930244302,
+            "lambda_median_km": 355.96853026367273,
+            "p_R2_ge_observed": 0.000999000999000999
+          }
+        }
+      },
+      "THTI-THTG": {
+        "tidal_band_10_35uHz": {
+          "fit": {
+            "lambda_km": 2211.3138015304826,
+            "R2_exponential": 0.8604709950097464,
+            "best_model": "exponential",
+            "n_bins": 13,
+            "n_reference_stations": 195,
+            "mean_index": -0.007992502210125757
+          },
+          "geometry_null": {
+            "unit": "distant reference station (daily repeats collapsed)",
+            "n_realisations": 1000,
+            "R2_median": 0.007371351019238415,
+            "lambda_median_km": 500.12373556001114,
+            "p_R2_ge_observed": 0.000999000999000999
+          }
+        },
+        "continuum_35_500uHz": {
+          "fit": {
+            "lambda_km": 14355.936043749001,
+            "R2_exponential": 0.6717898711419643,
+            "best_model": "exponential",
+            "n_bins": 13,
+            "n_reference_stations": 195,
+            "mean_index": 0.010332123033601
+          },
+          "geometry_null": {
+            "unit": "distant reference station (daily repeats collapsed)",
+            "n_realisations": 1000,
+            "R2_median": 0.011840986021563249,
+            "lambda_median_km": 422.43149317332126,
+            "p_R2_ge_observed": 0.002997002997002997
+          }
         }
       }
     }

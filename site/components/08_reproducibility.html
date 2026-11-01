@@ -25,8 +25,14 @@
         (Step 34); the RTKLIB post-fit position replay diagnostic under three-satellite obstruction
         (Steps 33/39); the conventional baseline and filter-sensitivity audits (Steps 38/40); the
         causal outage-bridging benchmark and the phase-resolved prior-day predictor
-        (Steps 55–56); and
-        the production PRIDE-PPP-AR mechanism integration (Steps 22–23). The
+        (Steps 55–56); the production PRIDE-PPP-AR mechanism and degraded-sky integration (Steps 22–23, 62);
+        oscillator-class screening, co-located monument differentials, and blind phase-fingerprint localisation
+        (Steps 65–65c, 75–80, 103, 158–171); the independent-year leftover-clock and multi-band predictors,
+        degraded-sky SPP flagship, and cross-constellation satellite-clock arm (Steps 96, 98–106, 140, 153);
+        sub-diurnal celestial-axis aperture synthesis and cluster robustness (Steps 137, 179); the live
+        68-station NTRIP observatory, cryptographically sealed ex-ante evaluation, and clean-origin
+        prospective preregistration suite (Steps 37, 168–180); and the 65-day European optical-fibre
+        clock network reanalysis (Step 181). The
         Kalman-filter simulations (Steps 04, 07, 20) are exploratory and not relied on for any claim.
         All steps are orchestrated by <code>scripts/run_pipeline.py</code> with per-step logging.
     </p>
@@ -37,10 +43,13 @@
         under CC-BY 4.0
         (<a href="https://doi.org/10.5281/zenodo.23704945" target="_blank">DOI: 10.5281/zenodo.23704945</a>).
         The full codebase and execution environment are identical to the published version.
-        Version: v0.3 (Pune), published 29 October 2026 (last updated 31 October 2026).
+        Version: v0.4 (Pune), published 29 October 2026 (last updated 1 November 2026).
     </p>
     <p>
-        <em>Revision note (v0.2):</em> Unified the six-horizon phase-resolved holdover specification across the main text and Appendix A.13 (Step 90, restoring the 2 h Rubidium crossover at 29.3 ns vs 37.5 ns), repaired the Step 88 four-quarter partition (removing a spurious fifth two-day remainder slice) and its bimodal discrete-reset screen ($2{,}000$ m threshold in the empty $[1{,}000, 2{,}769]$ m gap, isolating the DOY-091 HERS $+10.0\,\mu\text{s}$ dropout reboot; worst-station 1 h gain $+0.5\% \rightarrow +9.2\%$, Q1 $+18.6\% \rightarrow +19.1\%$; Appendix A.12), added explicit environmental/hardware aging nulls to the Step 65c oscillator-screening decomposition (&sect;3.5.3), documented the isotropic independence of all operational predictors from the Step 137/179 celestial-axis attribution (&sect;3.7.4), disclosed the full 15-mountpoint provenance of the 15&ndash;16 October 2026 NTRIP capture (&sect;3.9), reconciled the Step 97 dipolar/quadrupolar seasonal sign convention (Appendix A.19), and standardised sequential subsection numbering across &sect;3 and Appendix A.
+        <em>Revision note (v0.4):</em> Added exact $\binom{18}{8} = 43{,}758$ station-level label permutation inference to the Step 65/65c oscillator-screening decompositions (&sect;3.5.3; predictable-power ratio $2.03\times, p = 0.0187$; LF coherent RMS ratio $7.37\times, p = 0.0273$), evaluated Step 167 tidal phase matching under verified IGS site-log metadata and station-level longitude permutation across CODE and GFZ (&sect;3.10.1; quartz $M_2$ $p_{\mathrm{perm}} = 10^{-4}$, conditional multi-centre Fisher $p_{\mathrm{perm}} = 1.9\times 10^{-6}$ vs atomic $0.42$ and $0.55$), resolved the $10$&ndash;$35\,\mu\text{Hz}$ tidal-band decay scale on the co-located Matera ($\lambda = 1{,}938$ km) and Tahiti ($\lambda = 2{,}211$ km) differentials (Step 164), reanalysed the 65-day European optical-fibre clock campaign ([22]; Step 181, &sect;4: NPL&ndash;PTB differential offset $-7.1 \pm 7.7\times 10^{-18}$, conditional $95\%$ envelope $\le 2.2\times 10^{-17}$, and $1$ s star-tree closure $3.61\times 10^{-20}$; remote $\tau_{\mathrm{DL}} = 8.68$&ndash;$27.92\times 10^{-18}$ vs $0.00\times 10^{-18}$ at NPL, $7.86$ &amp; $24.76\times 10^{-18}$ at PTB, and simultaneous $1$ s 4-clock $\sigma_{\mathrm{baseline}} = 7.62$&ndash;$7.74\times 10^{-18}$; $705$ km $M_2$ Fisher $p = 0.0014$ raw, $0.0019$ dm, with joint species-frame $\mathrm{Yb^+\,E3}-\mathrm{Sr}$ simultaneous Rayleigh $R = 0.990, p_{\mathrm{joint,6h}} = 0.0230$ vs geographic $R = 0.477$ (four geographic ratios on a separate window; $R = 0.358$ for the same three simultaneous ratios); zero-fibre $705$ km anti-phase $\mathrm{PA} = -0.335 \pm 0.091, z_{\mathrm{null}} = -3.27, p_{\mathrm{perm}} = 0.0010$; and 43-mode global localisation to $879$&ndash;$1{,}416$ km, conditional two-site Fisher $p = 0.0030$, plus $3$&ndash;$24$ h GNSS waveform match $p_{\mathrm{dayblk}} = 0.0020$&ndash;$0.0370$), and integrated precision metrology and geodetic CME literature [11&ndash;22] alongside the v0.3 live observatory and sealed-envelope suites (Steps 168&ndash;180).
+    </p>
+    <p>
+        <em>Revision note (v0.2):</em> Unified the six-horizon phase-resolved holdover specification across the main text (Step 90, restoring the 2 h Rubidium crossover at 29.3 ns vs 37.5 ns), repaired the Step 88 four-quarter partition (removing a spurious fifth two-day remainder slice) and its bimodal discrete-reset screen ($2{,}000$ m threshold in the empty $[1{,}000, 2{,}769]$ m gap, isolating the DOY-091 HERS $+10.0\,\mu\text{s}$ dropout reboot; worst-station 1 h gain $+0.5\% \rightarrow +9.2\%$, Q1 $+18.6\% \rightarrow +19.1\%$), added explicit environmental/hardware aging nulls to the Step 65c oscillator-screening decomposition (&sect;3.5.3), documented the isotropic independence of all operational predictors from the Step 137/179 celestial-axis attribution (&sect;3.7.4), disclosed the full 15-mountpoint provenance of the 15&ndash;16 October 2026 NTRIP capture (&sect;3.9), reconciled the Step 97 dipolar/quadrupolar seasonal sign convention (Step 97), and standardised sequential subsection numbering across &sect;3.
     </p>
 
     <h4>Repository Structure</h4>
@@ -55,7 +64,7 @@ TEP-PPP/
 │   ├── gps_web.py                  # FastAPI server, 1 Hz EKF, Rolling-Ridge Refit, PPP-AR
 │   └── static/                     # Live Skill Observatory web dashboard (HTML/JS/CSS)
 ├── scripts/
-│   ├── steps/                      # Numbered analysis steps (step_01 .. step_180)
+│   ├── steps/                      # Numbered analysis steps (step_01 .. step_181)
 │   ├── lib/                        # PPP estimators, kernel, NTRIP &amp; OS Net clients
 │   ├── live/                       # Real-time 68-station NTRIP kriging server &amp; product fetcher
 │   ├── utils/                      # Logging, plot style
@@ -110,7 +119,13 @@ TEP-PPP/
                 <td style="padding: 0.5em;">Live 68-station CORS &amp; L1/L5 rover observatory</td>
                 <td style="padding: 0.5em;">OS Net (UK) / AGRS-NL / BKG / Centipede / ReNEP + CODE/GRG ultra-rapid</td>
                 <td style="padding: 0.5em;"><code>rpi/gps_web.py</code>, <code>scripts/live/tep_realtime_server.py</code>, <code>scripts/live/sealed_envelope_verifier.py</code></td>
-                <td style="padding: 0.5em;"><code>data/ppp_live/</code> (<code>results/</code>, <code>sealed_envelopes/</code>) &amp; <code>results/outputs/</code> (<code>live_rrr_*.json</code>, <code>step_174_*.json</code>)</td>
+                <td style="padding: 0.5em;"><code>data/ppp_live/</code> (<code>results/</code>,<br><code>sealed_envelopes/</code>) &amp;<br><code>results/outputs/</code> (<code>live_rrr_*.json</code>, <code>step_174_*.json</code>)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #d0d7e0; background: #f8f9fb;">
+                <td style="padding: 0.5em;">2023 European optical-fibre clock comparison campaign (65 days, 1 Hz)</td>
+                <td style="padding: 0.5em;">NPL / LNE-OP (SYRTE) / PTB / INRIM (Pizzocaro et al. 2026 [22])</td>
+                <td style="padding: 0.5em;">Zenodo <code>10.5281/zenodo.16539534</code> (Pipeline Step 181)</td>
+                <td style="padding: 0.5em;"><code>data/optical_fiber_2023/</code> &amp;<br><code>results/outputs/step_181_*.json</code></td>
             </tr>
         </tbody>
     </table>
@@ -170,10 +185,12 @@ python scripts/live/anchor_chain_status.py
 python scripts/live/sealed_lattice_audit.py
 
 # Re-run the satellite-scale reconciliation (Step 178), CMB-axis cluster
-# robustness (Step 179), and clean-origin prospective preregistration (Step 180)
+# robustness (Step 179), clean-origin prospective preregistration (Step 180),
+# and 65-day European optical-fibre clock network reanalysis (Step 181)
 python scripts/steps/step_178_satellite_scale_reconciliation.py
 python scripts/steps/step_179_axis_robustness.py
 python scripts/steps/step_180_prospective_preregistration.py
+python scripts/steps/step_181_european_optical_fiber_2023.py
 </pre>
     </div>
     <p>

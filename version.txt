@@ -1,6 +1,8 @@
-v0.3 (Pune) — 31 October 2026 — Methodological-control framing, parameterisation standardization, and abstract/PDF typography refinement
+v0.4 (Pune) — 1 November 2026 — Phase-resolved GNSS clock prediction and European optical-clock cross-checks
 
-- Reframed the temporal T4, three-satellite blind solve, PPP cold-start, and cross-spectral phase-alignment sections to present the validated estimators first and group superseded exploratory arms as explicit methodological controls
-- Standardised the three covariance length-scale parameterisation conventions in Section 2.2 and unified the deployment-pathway discussion in Section 4
-- Streamlined the abstract and removed redundant plain-language and meta-commentary blocks across the manuscript and citation metadata
-- Corrected display-equation vector typography and code-span formatting in Section 2.9 and highlighted table entries across Section 3 and Appendix A
+- Verified the oscillator-dependent lunar phase response using site-log clock classifications and station-level permutations across two analysis centres.
+- Reanalysed the European optical-clock campaign, distinguishing differential clock-ratio constraints from the internal fibre-tree closure.
+- Tested the optical species-aligned lunar phase result with shared-timestamp permutations that preserve common-clock inputs.
+- Separated the five-pair optical variance decomposition from independent significance tests and reported the conditional scope of combined probabilities.
+- Retained operational prediction tests and negative controls while removing the supplementary audit from the paper.
+- Clarified the four consecutive outage-subset gains and distinguished Gaussian-predictor robustness from the Legendre and phase-resolved analyses.

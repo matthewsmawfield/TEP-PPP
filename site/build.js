@@ -82,6 +82,18 @@
             copyRecursiveSync(publicDir, publicDest, fs, path);
         }
 
+        // CI checks out the root PDF, but site/public/docs is gitignored.
+        const stem = `33-TEP-PPP-${manifest.version.replace(/\s*\([^)]+\)/, '')}-${manifest.codename}`;
+        const rootPdf = path.join(siteDir, '..', `${stem}.pdf`);
+        const docsDest = path.join(publicDest, 'docs');
+        if (fs.existsSync(rootPdf)) {
+            fs.mkdirSync(docsDest, { recursive: true });
+            fs.copyFileSync(rootPdf, path.join(docsDest, `${stem}.pdf`));
+            fs.copyFileSync(rootPdf, path.join(distDir, 'manuscript.pdf'));
+        } else {
+            console.warn(`No versioned root PDF yet: ${rootPdf}`);
+        }
+
         // Copy assets directory to dist
         const assetsDir = path.join(siteDir, 'assets');
         const assetsDest = path.join(distDir, 'assets');
@@ -113,6 +125,9 @@
 
         const converter = new HTMLToMarkdownConverter();
         await converter.convertSiteToMarkdown();
+        fs.mkdirSync(docsDest, { recursive: true });
+        fs.copyFileSync(path.join(siteDir, '..', `${stem}.md`),
+            path.join(docsDest, `${stem}.md`));
 
         console.log(`Built TEP-PPP static manuscript: ${path.join(distDir, 'index.html')}`);
 

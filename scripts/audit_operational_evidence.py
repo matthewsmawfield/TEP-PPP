@@ -1402,10 +1402,24 @@ def main() -> int:
     parser.add_argument("--check", action="store_true",
                         help="exit non-zero unless the strict operational claim passes")
     parser.add_argument("--no-write", action="store_true", help="print without writing artifacts")
+    parser.add_argument("--verify-artifacts", action="store_true",
+                        help="compare the committed ledgers with current outputs without rewriting them")
     args = parser.parse_args()
     audit = build_audit()
     markdown = render_markdown(audit)
-    if not args.no_write:
+    if args.verify_artifacts:
+        try:
+            saved = json.loads((OUT / "evidence_audit.json").read_text())
+            saved.pop("generated_utc", None)
+            current = json.loads(json.dumps(
+                {k: v for k, v in audit.items() if k != "generated_utc"}))
+            if saved != current or (ROOT / "EVIDENCE_STATUS.md").read_text() != markdown:
+                print("FAIL: committed evidence ledgers differ from current outputs")
+                return 1
+        except (OSError, json.JSONDecodeError):
+            print("FAIL: committed evidence ledgers are missing or unreadable")
+            return 1
+    elif not args.no_write:
         OUT.mkdir(parents=True, exist_ok=True)
         (OUT / "evidence_audit.json").write_text(json.dumps(audit, indent=2) + "\n")
         (ROOT / "EVIDENCE_STATUS.md").write_text(markdown)

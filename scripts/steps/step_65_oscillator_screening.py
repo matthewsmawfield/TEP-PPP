@@ -42,10 +42,19 @@ BAND = (10e-6, 500e-6)
 
 ATOMIC = {"H-MASER", "CESIUM", "RUBIDIUM"}
 QUARTZ = {"OCXO", "INTERNAL", "QUARTZ", "TCXO"}
+RINEX_PROCESSED = ROOT.parent / "TEP-GNSS-RINEX" / "data" / "processed"
+DENSE_EUREF_STATIONS = [
+    "BRUX", "BZR2", "DLF1", "ESOC", "GENO", "GOP6", "GRAS", "GRAZ", "HERS",
+    "IENG", "KOS1", "LROC", "MARS", "MEDI", "OBE4", "OP71", "PADO", "PTBB",
+    "REDU", "TLSE", "VEN1", "WAB2", "WSRT", "WTZR", "ZIMM",
+]
 
 
 def oscillator_map():
-    meta = json.load(open(ROOT / "data" / "meta" / "optimal_100_metadata.json"))
+    meta_p = ROOT / "data" / "meta" / "optimal_100_metadata.json"
+    if not meta_p.exists():
+        meta_p = RINEX_PROCESSED / "optimal_100_metadata.json"
+    meta = json.load(open(meta_p))
     st = dict(meta["stations"]) if isinstance(meta["stations"], list) else meta["stations"]
     out = {}
     for name, v in st.items():
@@ -57,8 +66,59 @@ def oscillator_map():
     return out
 
 
-def day_spectra(dt):
+def _load_dense_day(dt):
     s = td.load_series("precise", dt)
+    if s:
+        return s
+    if not RINEX_PROCESSED.exists():
+        return {}
+    out = {}
+    for nm in DENSE_EUREF_STATIONS:
+        p = RINEX_PROCESSED / f"{nm}_{dt}.npz"
+        if not p.exists():
+            continue
+        z = td._read_npz(p)
+        if z is None or "precise_clock_bias_ns" not in z:
+            continue
+        clk = np.asarray(z["precise_clock_bias_ns"], float)
+        t = (np.asarray(z["timestamps"], float)
+             if "timestamps" in z else np.arange(len(clk)) * 30.0)
+        n = min(len(clk), len(t))
+        clk, t = clk[:n], t[:n]
+        if np.mean(np.isfinite(clk)) < 0.85 or td.detect_clock_jumps(clk, 12.0) > 6:
+            continue
+        sta = td._station_from_npz(nm, z)
+        if sta is None:
+            continue
+        resid = td.robust_detrend(clk)
+        if not np.isfinite(resid).any() or np.nanstd(resid) < 1e-6:
+            continue
+        out[nm] = {"resid": resid, "raw": clk, "t": t, "station": sta, "nsat": None}
+    if not out:
+        return out
+    lens = sorted(len(v["resid"]) for v in out.values())
+    ref = next(v for v in out.values() if len(v["resid"]) == lens[-1])
+    grid = np.round(ref["t"]).astype(np.int64)
+    keep = {}
+    for nm, v in out.items():
+        tt = np.round(v["t"]).astype(np.int64)
+        idx = {int(x): i for i, x in enumerate(tt)}
+        sel = np.array([idx.get(int(g), -1) for g in grid])
+        hit = sel >= 0
+        if hit.mean() < 0.80:
+            continue
+        for k in ("resid", "raw"):
+            a = np.full(len(grid), np.nan)
+            a[hit] = v[k][sel[hit]]
+            v[k] = a
+        v["t"] = grid.astype(float)
+        v["resid"] = td._interp_nan(v["resid"])
+        keep[nm] = v
+    return keep
+
+
+def day_spectra(dt):
+    s = _load_dense_day(dt)
     if not s or len(s) < 12:
         return None
     names = list(s)
@@ -98,6 +158,8 @@ def _krige_skill(Fb, D, t, pool):
 def run():
     osc = oscillator_map()
     dates = td.available_dates("precise", 2024)
+    if not dates and RINEX_PROCESSED.exists():
+        dates = [f"2024{d:03d}" for d in range(1, 367)]
     days = [dates[i] for i in np.linspace(1, len(dates) - 1, N_DAYS).astype(int)]
     rows = []           # per (station-day): group, rms, coh, skill
     for dt in days:
@@ -119,7 +181,7 @@ def run():
                 cohs.append(np.real(S) / np.sqrt(pw[i] * pw[j] + 1e-30))
             sk = _krige_skill(Fb, D, i, others)
             rms_i = float(np.sqrt(np.mean(R[:, i] ** 2)))
-            rows.append({"group": g, "rms_m": rms_i,
+            rows.append({"station": n, "group": g, "rms_m": rms_i,
                          "coh": float(np.median(cohs)),
                          "coherent_power": float(np.median(cohs)) * rms_i ** 2,
                          "predictable_power": (float(sk) * rms_i ** 2) if sk is not None else np.nan,
@@ -170,6 +232,85 @@ def run():
         "real_quartz_minus_atomic_skill": real_dskill,
         "skill_diff_z": float((real_dskill - np.nanmean(null_dskill)) / (np.nanstd(null_dskill) + 1e-12)),
         "skill_diff_p": float(np.mean(np.abs(null_dskill) >= abs(real_dskill))),
+    }
+
+    # Station-level cluster-preserving permutation null: reassign group labels
+    # across the 18 unique stations exhaustively (all C(18, 8) = 43,758
+    # combinations, preserving all daily repeats within each station), and also
+    # evaluate per-station collapsed medians.
+    import itertools
+    sta_names = sorted({x["station"] for x in rows})
+    sta_true_grp = np.array([osc[s] for s in sta_names])
+    sta_to_idx = {s: idx_s for idx_s, s in enumerate(sta_names)}
+    row_sta_idx = np.array([sta_to_idx[x["station"]] for x in rows])
+    ppv = np.array([x["predictable_power"] for x in rows])
+    rmsv = np.array([x["rms_m"] for x in rows])
+    real_dpp = (res["absolute_predictable_power_m2"]["quartz"]["median"]
+                - res["absolute_predictable_power_m2"]["atomic"]["median"])
+    real_pp_ratio = (res["absolute_predictable_power_m2"]["quartz"]["median"]
+                     / res["absolute_predictable_power_m2"]["atomic"]["median"])
+
+    q_sta_mask = sta_true_grp == "quartz"
+    a_sta_mask = sta_true_grp == "atomic"
+    n_q_sta = int(q_sta_mask.sum())
+    sta_null_dskill, sta_null_dpp, sta_null_ppratio = [], [], []
+    m_sk = np.isfinite(skv)
+    m_pp = np.isfinite(ppv)
+    for q_comb in itertools.combinations(range(len(sta_names)), n_q_sta):
+        q_set = np.zeros(len(sta_names), dtype=bool)
+        q_set[list(q_comb)] = True
+        row_q = q_set[row_sta_idx]
+        row_a = ~row_q
+        sta_null_dskill.append(
+            np.nanmedian(skv[row_q & m_sk]) - np.nanmedian(skv[row_a & m_sk]))
+        q_med_pp = np.nanmedian(ppv[row_q & m_pp])
+        a_med_pp = np.nanmedian(ppv[row_a & m_pp])
+        sta_null_dpp.append(q_med_pp - a_med_pp)
+        sta_null_ppratio.append(q_med_pp / (a_med_pp + 1e-12))
+    sta_null_dskill = np.asarray(sta_null_dskill)
+    sta_null_dpp = np.asarray(sta_null_dpp)
+    sta_null_ppratio = np.asarray(sta_null_ppratio)
+    n_sta_perm = len(sta_null_dpp)
+
+    # Per-station collapsed medians
+    sta_med_skill = np.array([
+        np.nanmedian([x["skill"] for x in rows if x["station"] == s])
+        for s in sta_names
+    ])
+    sta_med_pp = np.array([
+        np.nanmedian([x["predictable_power"] for x in rows if x["station"] == s])
+        for s in sta_names
+    ])
+    sta_med_rms = np.array([
+        np.nanmedian([x["rms_m"] for x in rows if x["station"] == s])
+        for s in sta_names
+    ])
+    res["station_level_permutation_null"] = {
+        "n_stations": {"atomic": int(a_sta_mask.sum()), "quartz": int(q_sta_mask.sum())},
+        "n_exact_combinations": n_sta_perm,
+        "unit": "station (exact C(18,8)=43,758 station-label assignments, all daily repeats reassigned together)",
+        "cluster_skill_diff_z": float(
+            (real_dskill - np.nanmean(sta_null_dskill)) / (np.nanstd(sta_null_dskill) + 1e-12)),
+        "cluster_skill_diff_p_one_sided": float(
+            np.mean(sta_null_dskill >= real_dskill - 1e-12)),
+        "cluster_skill_diff_p_two_sided": float(
+            np.mean(np.abs(sta_null_dskill) >= abs(real_dskill) - 1e-12)),
+        "cluster_predictable_power_ratio": float(real_pp_ratio),
+        "cluster_predictable_power_diff_m2": float(real_dpp),
+        "cluster_predictable_power_z": float(
+            (real_dpp - np.nanmean(sta_null_dpp)) / (np.nanstd(sta_null_dpp) + 1e-12)),
+        "cluster_predictable_power_p_one_sided": float(
+            np.mean(sta_null_dpp >= real_dpp - 1e-12)),
+        "station_collapsed_medians": {
+            "atomic_rms_m": float(np.nanmedian(sta_med_rms[a_sta_mask])),
+            "quartz_rms_m": float(np.nanmedian(sta_med_rms[q_sta_mask])),
+            "atomic_skill": float(np.nanmedian(sta_med_skill[a_sta_mask])),
+            "quartz_skill": float(np.nanmedian(sta_med_skill[q_sta_mask])),
+            "atomic_predictable_power_m2": float(np.nanmedian(sta_med_pp[a_sta_mask])),
+            "quartz_predictable_power_m2": float(np.nanmedian(sta_med_pp[q_sta_mask])),
+            "predictable_power_ratio_station_median": float(
+                np.nanmedian(sta_med_pp[q_sta_mask]) / np.nanmedian(sta_med_pp[a_sta_mask])),
+        },
     }
     q_rms = res["band_limited_rms_m"]["quartz"]["median"]
     a_rms = res["band_limited_rms_m"]["atomic"]["median"]

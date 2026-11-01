@@ -1,7 +1,7 @@
 {
   "step": 167,
   "title": "Clock-type screening of the gravitational phase signature",
-  "timestamp": "2026-09-07T15:04:19.684602+00:00",
+  "timestamp": "2026-11-01T21:21:19.287241+00:00",
   "product": "clk_cod_ops",
   "design": "Stations classified by clock noise: atomic (<5 ns) vs good quartz (5-50 ns). TEP predicts quartz > atomic for M2 (screening). S2 should show an even larger contrast because it has an atmospheric component that only affects quartz.",
   "results_2024": {
@@ -104,6 +104,329 @@
       "quartz_ctrl_r": 0.021050585081394207,
       "M2_quartz_over_atomic": 1.457317851181988,
       "S2_quartz_over_atomic": 280.13180441880996
+    }
+  },
+  "metadata_verified_station_permutation": {
+    "classification_source": "verified IGS site-log metadata (H-MASER/CESIUM/RUBIDIUM vs INTERNAL/OCXO)",
+    "inference": "station-level longitude permutation (n_perm=10000, effective dof = n_stations)",
+    "n_verified_stations_total": 191,
+    "precise_2024_simultaneous_8line": {
+      "atomic": {
+        "n_stations": 31,
+        "n_pairs": 465,
+        "M2": {
+          "r": 0.031184282945610806,
+          "p_perm_station": 0.42155784421557846,
+          "p_naive_pairs": 0.5023436675406043,
+          "n_stations": 31,
+          "n_pairs": 465,
+          "null_r_std": 0.0410049728469668
+        },
+        "N2": {
+          "r": -0.04114379677839604,
+          "p_perm_station": 0.34896510348965104,
+          "p_naive_pairs": 0.37604556947472384,
+          "n_stations": 31,
+          "n_pairs": 465,
+          "null_r_std": 0.0476136594281195
+        },
+        "S2": {
+          "r": 0.26095543861039155,
+          "p_perm_station": 0.00019998000199980003,
+          "p_naive_pairs": 1.1210634925404551e-08,
+          "n_stations": 31,
+          "n_pairs": 465,
+          "null_r_std": 0.04386450166711694
+        },
+        "O1": {
+          "r": 0.03908434197489387,
+          "p_perm_station": 0.32426757324267574,
+          "p_naive_pairs": 0.40042517863180166,
+          "n_stations": 31,
+          "n_pairs": 465,
+          "null_r_std": 0.045642483834036573
+        }
+      },
+      "quartz": {
+        "n_stations": 69,
+        "n_pairs": 2346,
+        "M2": {
+          "r": 0.29670859828205365,
+          "p_perm_station": 9.999000099990002e-05,
+          "p_naive_pairs": 6.863575718950121e-49,
+          "n_stations": 69,
+          "n_pairs": 2346,
+          "null_r_std": 0.02988681058444225
+        },
+        "N2": {
+          "r": 0.06426920144911408,
+          "p_perm_station": 0.0124987501249875,
+          "p_naive_pairs": 0.0018427349053927392,
+          "n_stations": 69,
+          "n_pairs": 2346,
+          "null_r_std": 0.02011244179030297
+        },
+        "S2": {
+          "r": 0.15672084809881537,
+          "p_perm_station": 0.00029997000299970003,
+          "p_naive_pairs": 2.275296090447455e-14,
+          "n_stations": 69,
+          "n_pairs": 2346,
+          "null_r_std": 0.02770542820156272
+        },
+        "O1": {
+          "r": 0.22525117704076428,
+          "p_perm_station": 9.999000099990002e-05,
+          "p_naive_pairs": 2.276698602719126e-28,
+          "n_stations": 69,
+          "n_pairs": 2346,
+          "null_r_std": 0.035565329055409434
+        }
+      },
+      "M2_quartz_over_atomic_ratio": 9.514684009234704,
+      "O1_quartz_over_atomic_ratio": 5.763207608444735
+    },
+    "multi_centre_final_products": {
+      "COD_2025_30d": {
+        "atomic": {
+          "n_stations": 11,
+          "n_pairs": 55,
+          "M2": {
+            "r": -0.03579443550376194,
+            "p_perm_station": 0.8009199080091991,
+            "p_naive_pairs": 0.7952923213301347,
+            "n_stations": 11,
+            "n_pairs": 55,
+            "null_r_std": 0.133691231803678
+          },
+          "O1": {
+            "r": -0.04980147298452538,
+            "p_perm_station": 0.7117288271172882,
+            "p_naive_pairs": 0.7180407369180372,
+            "n_stations": 11,
+            "n_pairs": 55,
+            "null_r_std": 0.13385060452497435
+          },
+          "S2": {
+            "r": 0.1002725062729797,
+            "p_perm_station": 0.43865613438656137,
+            "p_naive_pairs": 0.46636934375637207,
+            "n_stations": 11,
+            "n_pairs": 55,
+            "null_r_std": 0.13462026129563606
+          }
+        },
+        "quartz": {
+          "n_stations": 37,
+          "n_pairs": 666,
+          "M2": {
+            "r": 0.22680009920246852,
+            "p_perm_station": 0.0005999400059994001,
+            "p_naive_pairs": 3.232476365261235e-09,
+            "n_stations": 37,
+            "n_pairs": 666,
+            "null_r_std": 0.040953670425429765
+          },
+          "O1": {
+            "r": 0.3302176502130393,
+            "p_perm_station": 9.999000099990002e-05,
+            "p_naive_pairs": 2.084704006534216e-18,
+            "n_stations": 37,
+            "n_pairs": 666,
+            "null_r_std": 0.04932390289328378
+          },
+          "S2": {
+            "r": 0.11228425167058365,
+            "p_perm_station": 0.015598440155984402,
+            "p_naive_pairs": 0.003714355232959748,
+            "n_stations": 37,
+            "n_pairs": 666,
+            "null_r_std": 0.03856911992193816
+          }
+        }
+      },
+      "COD_90d": {
+        "quartz": {
+          "n_stations": 29,
+          "n_pairs": 406,
+          "M2": {
+            "r": 0.23584028749150854,
+            "p_perm_station": 0.0011998800119988001,
+            "p_naive_pairs": 1.544815521721821e-06,
+            "n_stations": 29,
+            "n_pairs": 406,
+            "null_r_std": 0.05080449713048697
+          },
+          "O1": {
+            "r": 0.22510397384830444,
+            "p_perm_station": 0.0006999300069993001,
+            "p_naive_pairs": 4.635191359372282e-06,
+            "n_stations": 29,
+            "n_pairs": 406,
+            "null_r_std": 0.04717363662847012
+          },
+          "S2": {
+            "r": 0.08188369953465882,
+            "p_perm_station": 0.070992900709929,
+            "p_naive_pairs": 0.09943650871500985,
+            "n_stations": 29,
+            "n_pairs": 406,
+            "null_r_std": 0.05057241387852015
+          }
+        }
+      },
+      "GFZ_2025_30d": {
+        "atomic": {
+          "n_stations": 12,
+          "n_pairs": 66,
+          "M2": {
+            "r": -0.1639182284162813,
+            "p_perm_station": 0.13838616138386162,
+            "p_naive_pairs": 0.18845957927141174,
+            "n_stations": 12,
+            "n_pairs": 66,
+            "null_r_std": 0.12102299470071062
+          },
+          "O1": {
+            "r": 0.08293493255742565,
+            "p_perm_station": 0.32826717328267174,
+            "p_naive_pairs": 0.5079487298134666,
+            "n_stations": 12,
+            "n_pairs": 66,
+            "null_r_std": 0.09434579578899745
+          },
+          "S2": {
+            "r": 0.02375383181975366,
+            "p_perm_station": 0.8580141985801419,
+            "p_naive_pairs": 0.849844709188965,
+            "n_stations": 12,
+            "n_pairs": 66,
+            "null_r_std": 0.1246010065019389
+          }
+        },
+        "quartz": {
+          "n_stations": 20,
+          "n_pairs": 190,
+          "M2": {
+            "r": 0.159495441407003,
+            "p_perm_station": 0.03899610038996101,
+            "p_naive_pairs": 0.027943714043056088,
+            "n_stations": 20,
+            "n_pairs": 190,
+            "null_r_std": 0.07352467863612269
+          },
+          "O1": {
+            "r": 0.03939138577443099,
+            "p_perm_station": 0.5884411558844116,
+            "p_naive_pairs": 0.5894734461794808,
+            "n_stations": 20,
+            "n_pairs": 190,
+            "null_r_std": 0.07209329923553368
+          },
+          "S2": {
+            "r": 0.2680969625521922,
+            "p_perm_station": 0.0058994100589941,
+            "p_naive_pairs": 0.0001841876520156081,
+            "n_stations": 20,
+            "n_pairs": 190,
+            "null_r_std": 0.07247078503706417
+          }
+        }
+      },
+      "GFZ_90d": {
+        "atomic": {
+          "n_stations": 6,
+          "n_pairs": 15,
+          "M2": {
+            "r": -0.11082463981924164,
+            "p_perm_station": 0.7478252174782521,
+            "p_naive_pairs": 0.6941716644592013,
+            "n_stations": 6,
+            "n_pairs": 15,
+            "null_r_std": 0.2594300427850282
+          },
+          "O1": {
+            "r": -0.019275661555342882,
+            "p_perm_station": 0.9352064793520648,
+            "p_naive_pairs": 0.9456397296165389,
+            "n_stations": 6,
+            "n_pairs": 15,
+            "null_r_std": 0.23992506084114446
+          },
+          "S2": {
+            "r": 0.2834767737912725,
+            "p_perm_station": 0.09559044095590441,
+            "p_naive_pairs": 0.30590445071021277,
+            "n_stations": 6,
+            "n_pairs": 15,
+            "null_r_std": 0.15267796469009104
+          }
+        },
+        "quartz": {
+          "n_stations": 24,
+          "n_pairs": 276,
+          "M2": {
+            "r": 0.13663752130318457,
+            "p_perm_station": 0.040195980401959805,
+            "p_naive_pairs": 0.023186415946322786,
+            "n_stations": 24,
+            "n_pairs": 276,
+            "null_r_std": 0.0656248361728882
+          },
+          "O1": {
+            "r": 0.05771501664147722,
+            "p_perm_station": 0.2896710328967103,
+            "p_naive_pairs": 0.33943673856641665,
+            "n_stations": 24,
+            "n_pairs": 276,
+            "null_r_std": 0.060412175547748324
+          },
+          "S2": {
+            "r": 0.09509627725860395,
+            "p_perm_station": 0.07849215078492151,
+            "p_naive_pairs": 0.11496541624388938,
+            "n_stations": 24,
+            "n_pairs": 276,
+            "null_r_std": 0.06084353647257648
+          }
+        }
+      }
+    },
+    "multi_centre_fisher_combined": {
+      "quartz_M2_p_perm_fisher": 1.908440303267482e-06,
+      "atomic_M2_p_perm_fisher": 0.5463069191273082,
+      "quartz_S2_p_perm_fisher": 0.00032137512492312045,
+      "atomic_S2_p_perm_fisher": 0.3544590080033002,
+      "dependence_preserving_joint_station_permutation_M2": {
+        "quartz": {
+          "n_permutations": 10000,
+          "seed": 16799,
+          "tail": "two-sided absolute mean correlation",
+          "null_assumption": "Station longitude labels are exchangeable within oscillator class; shared station assignments are retained across datasets.",
+          "z_scope": "Standardized distance from permutation mean, not a Gaussian-tail significance.",
+          "n_datasets": 4,
+          "n_unique_stations": 52,
+          "mean_M2_r": 0.1897,
+          "null_mean": 0.0002,
+          "null_std": 0.033,
+          "z_joint_station_perm": 5.73,
+          "p_joint_station_perm": 0.0003
+        },
+        "atomic": {
+          "n_permutations": 10000,
+          "seed": 16799,
+          "tail": "two-sided absolute mean correlation",
+          "null_assumption": "Station longitude labels are exchangeable within oscillator class; shared station assignments are retained across datasets.",
+          "z_scope": "Standardized distance from permutation mean, not a Gaussian-tail significance.",
+          "n_datasets": 3,
+          "n_unique_stations": 23,
+          "mean_M2_r": -0.1035,
+          "null_mean": -0.0003,
+          "null_std": 0.1187,
+          "z_joint_station_perm": -0.87,
+          "p_joint_station_perm": 0.374
+        }
+      }
     }
   }
 }

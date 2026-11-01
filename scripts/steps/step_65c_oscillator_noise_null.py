@@ -136,8 +136,11 @@ MODEL2CLASS = {m: c for c, s in OSC_SPECS.items() for m in s["models"]}
 
 
 def _load_maps():
-    meta = json.load(open(PROJECT_ROOT / "data" / "meta" /
-                          "optimal_100_metadata.json"))["stations"]
+    meta_p = PROJECT_ROOT / "data" / "meta" / "optimal_100_metadata.json"
+    if not meta_p.exists():
+        meta_p = (PROJECT_ROOT.parent / "TEP-GNSS-RINEX"
+                  / "data" / "processed" / "optimal_100_metadata.json")
+    meta = json.load(open(meta_p))["stations"]
     type_map, class_map = {}, {}
     for name, info in meta.items():
         ct = (info.get("classification") or {}).get("clock_type", "UNKNOWN")
@@ -241,15 +244,18 @@ def _class_expected_rms(n_rep=150):
 
 
 def run():
+    from scripts.steps.step_65_oscillator_screening import _load_dense_day
     type_map, class_map = _load_maps()
     dates = td.available_dates("precise", 2024)
+    if not dates:
+        dates = [f"2024{d:03d}" for d in range(1, 367)]
     days = [dates[i] for i in
             np.linspace(0, len(dates) - 1, min(N_DAYS, len(dates))).astype(int)]
 
     station_rows = []          # per (station, day, band): stats dict
     qq_pairs, aa_pairs = {}, {}   # band -> (dists, corrs) accumulated per day
     for day in days:
-        s = td.load_series("precise", day)
+        s = _load_dense_day(day)
         if not s:
             continue
         names = [n for n in s if n in type_map and type_map[n] in
@@ -355,8 +361,11 @@ def run():
                 "rms_m": _med(rows, "rms_m"),
                 "rms_m_station_median": _step65b_style_median(rows, "rms_m"),
                 "coupling_b": _med(rows, "coupling_b"),
+                "coupling_b_station_median": _step65b_style_median(rows, "coupling_b"),
                 "coherent_rms_m": _med(rows, "coh_rms_m"),
+                "coherent_rms_m_station_median": _step65b_style_median(rows, "coh_rms_m"),
                 "idiosyncratic_rms_m": _med(rows, "idio_rms_m"),
+                "idiosyncratic_rms_m_station_median": _step65b_style_median(rows, "idio_rms_m"),
             }
         q, a = per_band[band]["quartz"], per_band[band]["atomic"]
         per_band[band]["ratio_total"] = (
@@ -368,12 +377,71 @@ def run():
         per_band[band]["ratio_coupling"] = (
             q["coupling_b"] / a["coupling_b"]
             if q["coupling_b"] and a["coupling_b"] else None)
+        per_band[band]["ratio_coupling_station_median"] = (
+            q["coupling_b_station_median"] / a["coupling_b_station_median"]
+            if q["coupling_b_station_median"] and a["coupling_b_station_median"]
+            else None)
         per_band[band]["ratio_coherent"] = (
             q["coherent_rms_m"] / a["coherent_rms_m"]
             if q["coherent_rms_m"] and a["coherent_rms_m"] else None)
+        per_band[band]["ratio_coherent_station_median"] = (
+            q["coherent_rms_m_station_median"] / a["coherent_rms_m_station_median"]
+            if q["coherent_rms_m_station_median"] and a["coherent_rms_m_station_median"]
+            else None)
         per_band[band]["ratio_idiosyncratic"] = (
             q["idiosyncratic_rms_m"] / a["idiosyncratic_rms_m"]
             if q["idiosyncratic_rms_m"] and a["idiosyncratic_rms_m"] else None)
+        per_band[band]["ratio_idiosyncratic_station_median"] = (
+            q["idiosyncratic_rms_m_station_median"] / a["idiosyncratic_rms_m_station_median"]
+            if q["idiosyncratic_rms_m_station_median"] and a["idiosyncratic_rms_m_station_median"]
+            else None)
+
+        # Exact C(18, 8) = 43,758 station-level label permutation test
+        import itertools
+        b_rows = [r for r in station_rows if r["band"] == band]
+        sta_list = sorted({r["station"] for r in b_rows})
+        if len(sta_list) >= 6:
+            sta_grp = np.array([
+                next(r["group"] for r in b_rows if r["station"] == s)
+                for s in sta_list
+            ])
+            sta_tot = np.array([
+                np.nanmedian([r["rms_m"] for r in b_rows if r["station"] == s])
+                for s in sta_list
+            ])
+            sta_coh = np.array([
+                np.nanmedian([r["coh_rms_m"] for r in b_rows if r["station"] == s])
+                for s in sta_list
+            ])
+            sta_b = np.array([
+                np.nanmedian([r["coupling_b"] for r in b_rows if r["station"] == s])
+                for s in sta_list
+            ])
+            nq = int((sta_grp == "quartz").sum())
+            obs_tot_r = per_band[band]["ratio_total_station_median"] or 0.0
+            obs_coh_r = per_band[band]["ratio_coherent_station_median"] or 0.0
+            obs_b_r = per_band[band]["ratio_coupling_station_median"] or 0.0
+            n_comb = c_tot = c_coh = c_b = 0
+            for q_idx in itertools.combinations(range(len(sta_list)), nq):
+                qm = np.zeros(len(sta_list), dtype=bool)
+                qm[list(q_idx)] = True
+                am = ~qm
+                n_comb += 1
+                if np.median(sta_tot[qm]) / np.median(sta_tot[am]) >= obs_tot_r - 1e-12:
+                    c_tot += 1
+                if np.median(sta_coh[qm]) / np.median(sta_coh[am]) >= obs_coh_r - 1e-12:
+                    c_coh += 1
+                if np.median(sta_b[qm]) / np.median(sta_b[am]) >= obs_b_r - 1e-12:
+                    c_b += 1
+            per_band[band]["station_level_permutation"] = {
+                "n_stations": len(sta_list),
+                "n_quartz": nq,
+                "n_atomic": len(sta_list) - nq,
+                "n_exact_combinations": n_comb,
+                "p_total_ratio": float(c_tot / n_comb),
+                "p_coherent_ratio": float(c_coh / n_comb),
+                "p_coupling_ratio": float(c_b / n_comb),
+            }
 
     # same-type pair correlation profiles (median corr in 4 distance bins)
     pair_profiles = {}

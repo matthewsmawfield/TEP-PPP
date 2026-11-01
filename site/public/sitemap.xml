@@ -5,13 +5,13 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://mlsmawfield.com/tep/ppp/</loc>
-        <lastmod>2026-10-31</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mlsmawfield.com/tep/ppp/public/docs/33-TEP-PPP-v0.3-Pune.pdf</loc>
-        <lastmod>2026-10-31</lastmod>
+        <loc>https://mlsmawfield.com/tep/ppp/public/docs/33-TEP-PPP-v0.4-Pune.pdf</loc>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

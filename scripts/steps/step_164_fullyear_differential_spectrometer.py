@@ -48,7 +48,7 @@ _spec.loader.exec_module(s53)
 
 OUT = ROOT / "results" / "outputs" / "step_164_fullyear_differential_spectrometer.json"
 AUDIT_PATH = ROOT / "data" / "meta" / "clock_anchor_audit_2024.json"
-AUDIT = json.loads(AUDIT_PATH.read_text())
+AUDIT = json.loads(AUDIT_PATH.read_text()) if AUDIT_PATH.exists() else {"pairs": {}}
 
 PRODUCT = "clk_cod_ops"
 DT = 300.0
@@ -492,8 +492,91 @@ def compute_summary(all_results):
     return summary
 
 
+def _compute_tidal_band_colocated() -> dict:
+    """Evaluate the 10-35 uHz gravitational tidal band on the 348-day
+    station-collapsed co-located differential fingerprints (Step 77) so
+    the co-located spatial decay scale is also resolved over the full
+    tidal band, not only a single 0.89 uHz FFT bin."""
+    s77_p = ROOT / "results" / "outputs" / "step_77_colocated_screening_differential.json"
+    if not s77_p.exists():
+        return {}
+    s77_arms = json.loads(s77_p.read_text()).get("arms", {})
+    out = {}
+
+    def _fit_s77(pairs):
+        pairs = [p for p in pairs if s53.DMIN_KM <= p[0] <= s53.DMAX_KM]
+        if len(pairs) < 20:
+            return None
+        arr = np.asarray(pairs, float)
+        arr = arr[np.argsort(arr[:, 0])]
+        n_bins_target = min(15, max(6, len(arr) // 15))
+        chunks = [c for c in np.array_split(arr, n_bins_target) if len(c) >= 3]
+        if len(chunks) < 6:
+            return None
+        ctr = np.asarray([np.exp(np.mean(np.log(c[:, 0]))) for c in chunks])
+        val = np.asarray([np.mean(c[:, 1]) for c in chunks])
+        cnt = np.asarray([len(c) for c in chunks])
+        f = s53._fit(ctr, val, cnt)
+        if not f:
+            return None
+        e = f.get("exponential") or {}
+        return {
+            "lambda_km": e.get("lambda_km"),
+            "R2_exponential": e.get("R2"),
+            "best_model": f.get("best_model"),
+            "n_bins": len(ctr),
+            "n_reference_stations": len(arr),
+            "mean_index": float(np.mean(arr[:, 1])),
+        }
+
+    def _perm_s77(pairs, obs_r2, seed=16477):
+        rng = np.random.default_rng(seed)
+        dists = np.asarray([p[0] for p in pairs], float)
+        vals = np.asarray([p[1] for p in pairs], float)
+        r2s, lams = [], []
+        for _ in range(N_NULL):
+            f = _fit_s77(list(zip(rng.permutation(dists), vals)))
+            if f and f["R2_exponential"] is not None and f["lambda_km"] is not None:
+                r2s.append(float(f["R2_exponential"]))
+                lams.append(float(f["lambda_km"]))
+        r2s = np.asarray(r2s)
+        lams = np.asarray(lams)
+        return {
+            "unit": "distant reference station (daily repeats collapsed)",
+            "n_realisations": int(len(r2s)),
+            "R2_median": float(np.median(r2s)),
+            "lambda_median_km": float(np.median(lams)),
+            "p_R2_ge_observed": float((1 + np.sum(r2s >= obs_r2)) / (1 + len(r2s))),
+        }
+
+    for arm_name in ("MAT1-MATE", "THTI-THTG"):
+        arm = s77_arms.get(arm_name)
+        if not arm:
+            continue
+        freqs = np.asarray(arm.get("mode_frequency_uhz", []), float)
+        fps = arm.get("frequency_resolved_delta_fingerprints", [])
+        if not len(freqs) or not fps:
+            continue
+        t_mask = (freqs >= 10.0) & (freqs <= 35.0)
+        c_mask = (freqs > 35.0) & (freqs <= 500.0)
+        arm_out = {}
+        for label, mask in (("tidal_band_10_35uHz", t_mask),
+                            ("continuum_35_500uHz", c_mask)):
+            pairs = [
+                (float(fp["distance_km"]),
+                 float(np.mean(np.asarray(fp["mean_phase_cos_by_frequency"], float)[mask])))
+                for fp in fps
+            ]
+            fit = _fit_s77(pairs)
+            null = _perm_s77(pairs, fit["R2_exponential"], seed=16477) if fit else None
+            arm_out[label] = {"fit": fit, "geometry_null": null}
+        out[arm_name] = arm_out
+    return out
+
+
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    existing = json.loads(OUT.read_text()) if OUT.exists() else {}
 
     cands = []
     for _, c in AUDIT["pairs"].items():
@@ -502,38 +585,42 @@ def main():
         if c["separation_m"] <= 100.0 and c.get("valid_internal_vs_free_atomic_contrast"):
             cands.append((c["external_station"], c["internal_station"], c["separation_m"]))
 
-    if not cands:
-        OUT.write_text(json.dumps({"step": 164, "status": "no_colocated_pairs"}))
-        return
-
-    print(f"STEP 164  |  Co-located differential spectrometer (coherent multi-window)")
-    print(f"  Window={WINDOW_DAYS}d, step={STEP_DAYS}d, pairs: {[(a,i) for a,i,_ in cands]}")
-
     dates_2024 = td.available_dates(PRODUCT, 2024)
-    ser0 = td.load_series(PRODUCT, dates_2024[0], min_valid_frac=0.0, max_jumps=10000)
-    all_stations = list(ser0.keys())
+    if cands and dates_2024:
+        print(f"STEP 164  |  Co-located differential spectrometer (coherent multi-window)")
+        print(f"  Window={WINDOW_DAYS}d, step={STEP_DAYS}d, pairs: {[(a,i) for a,i,_ in cands]}")
 
-    all_results = {}
-    for atomic, internal, sep_m in cands:
-        pair_name = f"{internal}-{atomic}"
-        print(f"\n  === {pair_name} (sep={sep_m:.1f} m) ===")
-        result = analyze_fullyear(dates_2024, internal, atomic, all_stations, 2024)
-        if result:
-            result["separation_m"] = sep_m
-            all_results[pair_name] = {"2024": result}
+        ser0 = td.load_series(PRODUCT, dates_2024[0], min_valid_frac=0.0, max_jumps=10000)
+        all_stations = list(ser0.keys())
 
-    # 2025 replication for MAT1-MATE
-    dates_2025 = td.available_dates(PRODUCT, 2025)
-    if dates_2025 and "MAT1-MATE" in all_results:
-        print(f"\n  2025 replication: {len(dates_2025)} days")
-        ser0_25 = td.load_series(PRODUCT, dates_2025[0], min_valid_frac=0.0, max_jumps=10000)
-        result_25 = analyze_fullyear(dates_2025, "MAT1", "MATE",
-                                      list(ser0_25.keys()), 2025)
-        if result_25:
-            result_25["separation_m"] = 10.7
-            all_results["MAT1-MATE"]["2025"] = result_25
+        all_results = {}
+        for atomic, internal, sep_m in cands:
+            pair_name = f"{internal}-{atomic}"
+            print(f"\n  === {pair_name} (sep={sep_m:.1f} m) ===")
+            result = analyze_fullyear(dates_2024, internal, atomic, all_stations, 2024)
+            if result:
+                result["separation_m"] = sep_m
+                all_results[pair_name] = {"2024": result}
 
-    summary = compute_summary(all_results)
+        # 2025 replication for MAT1-MATE
+        dates_2025 = td.available_dates(PRODUCT, 2025)
+        if dates_2025 and "MAT1-MATE" in all_results:
+            print(f"\n  2025 replication: {len(dates_2025)} days")
+            ser0_25 = td.load_series(PRODUCT, dates_2025[0], min_valid_frac=0.0, max_jumps=10000)
+            result_25 = analyze_fullyear(dates_2025, "MAT1", "MATE",
+                                          list(ser0_25.keys()), 2025)
+            if result_25:
+                result_25["separation_m"] = 10.7
+                all_results["MAT1-MATE"]["2025"] = result_25
+
+        summary = compute_summary(all_results)
+    else:
+        all_results = existing.get("pairs", {})
+        summary = existing.get("summary", {})
+
+    tidal_band_colocated = _compute_tidal_band_colocated()
+    summary["tidal_band_10_35uHz_colocated"] = tidal_band_colocated
+
     output = {
         "step": 164,
         "title": "Co-located differential spectrometer: coherent multi-window accumulation",

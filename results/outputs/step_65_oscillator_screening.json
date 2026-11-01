@@ -1,7 +1,7 @@
 {
   "step": 65,
   "title": "Oscillator-type screening of the TEP field",
-  "timestamp": "2026-09-02T13:27:03.056111+00:00",
+  "timestamp": "2026-11-01T15:29:41.158797+00:00",
   "hypothesis": "quartz (OCXO) receiver clocks are less screened from the TEP field than atomic (H-maser/Cs) references: larger residual but higher network coherence and predictability",
   "result": {
     "n_station_days": {
@@ -13,8 +13,8 @@
         "median": 5.74327214333713,
         "n": 437,
         "ci95": [
-          5.689857166742973,
-          5.83696819548218
+          5.689821149835186,
+          5.836812145929337
         ]
       },
       "quartz": {
@@ -31,34 +31,34 @@
         "median": 0.5924776743021871,
         "n": 437,
         "ci95": [
-          0.5772618073648721,
-          0.605126185412542
+          0.5773971025458784,
+          0.605360859046522
         ]
       },
       "quartz": {
         "median": 0.571337733374208,
         "n": 353,
         "ci95": [
-          0.5552350527622543,
-          0.585837474601008
+          0.5547052535269374,
+          0.5852987616866847
         ]
       }
     },
     "network_predictable_fraction": {
       "atomic": {
-        "median": 0.5352069414308802,
+        "median": 0.5352069414308811,
         "n": 437,
         "ci95": [
-          0.5087464391519252,
-          0.5639738066681061
+          0.5089715260371371,
+          0.5629330254179166
         ]
       },
       "quartz": {
-        "median": 0.6152454680607288,
+        "median": 0.6152454680607284,
         "n": 353,
         "ci95": [
-          0.5945749396733405,
-          0.6410383771142358
+          0.5945749396733412,
+          0.641052737239171
         ]
       }
     },
@@ -67,49 +67,73 @@
         "median": 19.82681123225345,
         "n": 437,
         "ci95": [
-          19.27919461870639,
-          20.575495618716484
+          19.263804857228365,
+          20.583114040627564
         ]
       },
       "quartz": {
         "median": 30.41935339659337,
         "n": 353,
         "ci95": [
-          28.012736630800074,
+          28.006927984467335,
           32.707218448790634
         ]
       }
     },
     "absolute_predictable_power_m2": {
       "atomic": {
-        "median": 17.777300874173104,
+        "median": 17.777300874173115,
         "n": 437,
         "ci95": [
-          16.739082542231113,
-          18.927740401948807
+          16.73908254223109,
+          18.9277404019488
         ]
       },
       "quartz": {
-        "median": 33.463317368746914,
+        "median": 33.4633173687469,
         "n": 353,
         "ci95": [
-          31.000723475040935,
-          36.36539108346193
+          30.772629759492546,
+          36.58561392757344
         ]
       }
     },
     "label_shuffle_null": {
       "real_quartz_minus_atomic_coherence": -0.021139940927979106,
-      "coherence_diff_z": -2.334194646929966,
-      "coherence_diff_p": 0.0265,
-      "real_quartz_minus_atomic_skill": 0.08003852662984856,
-      "skill_diff_z": 5.9930892851321005,
+      "coherence_diff_z": -2.2764019834606217,
+      "coherence_diff_p": 0.0285,
+      "real_quartz_minus_atomic_skill": 0.08003852662984734,
+      "skill_diff_z": 5.9503838564795,
       "skill_diff_p": 0.0
+    },
+    "station_level_permutation_null": {
+      "n_stations": {
+        "atomic": 10,
+        "quartz": 8
+      },
+      "n_exact_combinations": 43758,
+      "unit": "station (exact C(18,8)=43,758 station-label assignments, all daily repeats reassigned together)",
+      "cluster_skill_diff_z": 1.1191044285595613,
+      "cluster_skill_diff_p_one_sided": 0.1459618812559989,
+      "cluster_skill_diff_p_two_sided": 0.286621874857169,
+      "cluster_predictable_power_ratio": 1.8823620979134381,
+      "cluster_predictable_power_diff_m2": 15.686016494573785,
+      "cluster_predictable_power_z": 2.110540659804768,
+      "cluster_predictable_power_p_one_sided": 0.018693724576077517,
+      "station_collapsed_medians": {
+        "atomic_rms_m": 5.786699070242266,
+        "quartz_rms_m": 7.817838683759804,
+        "atomic_skill": 0.5532319162809267,
+        "quartz_skill": 0.6129138097132988,
+        "atomic_predictable_power_m2": 18.98999782217038,
+        "quartz_predictable_power_m2": 38.48673170131532,
+        "predictable_power_ratio_station_median": 2.026684366250056
+      }
     },
     "verdict": {
       "quartz_residual_larger": true,
       "quartz_more_network_predictable": true,
-      "quartz_more_predictable_power_ratio": 1.88236209791344,
+      "quartz_more_predictable_power_ratio": 1.8823620979134381,
       "supported": true,
       "note": "normalised phase-cos coherence is marginally lower for quartz (-0.021) because it also carries more incoherent local noise; the operationally meaningful quantities -- held-out predictable fraction AND absolute predictable power -- both favour quartz strongly"
     }

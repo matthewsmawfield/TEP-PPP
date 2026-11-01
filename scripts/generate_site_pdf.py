@@ -136,6 +136,14 @@ def copy_pdf_to_root(source_pdf: Path, base_dir: Path):
     return target_path
 
 
+def sync_pdf_to_dist(source_pdf: Path, dist_dir: Path):
+    """Deploy the same processed PDF that is copied to the repository root."""
+    docs_dir = dist_dir / 'public' / 'docs'
+    docs_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source_pdf, docs_dir / source_pdf.name)
+    shutil.copy2(source_pdf, dist_dir / 'manuscript.pdf')
+
+
 def process_pdf_with_metadata(pdf_path: Path):
     """Run the PDF processing script to add metadata and compress."""
     process_script = Path(__file__).parent / 'utils' / 'process_pdf.py'
@@ -269,6 +277,7 @@ async def generate_pdf(quality: str = 'high', wait_time: float = 5.0, skip_build
         
         # Copy compressed PDF to root directory
         copy_pdf_to_root(docs_pdf, base_dir)
+        sync_pdf_to_dist(docs_pdf, dist_dir)
 
         # Clean up temporary PDF-specific HTML
         try:

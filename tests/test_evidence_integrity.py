@@ -1,6 +1,7 @@
 import json
 import sys
 import ast
+import subprocess
 from pathlib import Path
 
 import numpy as np
@@ -9,6 +10,7 @@ import pytest
 from scripts.lib.tep_phase import (spectral_phase_gram, phase_distance_weights,
                                    phase_randomised_real_gram, spectral_phase_blocks,
                                    complex_wiener_weights)
+from scripts.check_manuscript_numbers import check_step88_rows
 
 
 def test_phase_gram_matches_registered_phase_cos_and_is_psd():
@@ -92,6 +94,31 @@ sys.path.insert(0, str(ROOT))
 
 def load(name):
     return json.loads((OUT / name).read_text())
+
+
+def test_optical_joint_phase_null_preserves_shared_clock_signal():
+    from scripts.steps.step_181_european_optical_fiber_2023 import _joint_species_phase_null
+
+    t = 60000 + np.arange(8 * 144) / 144
+    t = t[np.arange(len(t)) % 7 != 0]  # unequal UTC block occupancies
+    shared = np.sin(2 * np.pi * 1.93227 * t) + 0.2 * np.cos(2 * np.pi * 0.93 * t)
+    result = _joint_species_phase_null(t, np.column_stack([shared, 2 * shared, 3 * shared]),
+                                      n_perm=39)
+    # Perfect shared-input alignment must also survive the null, not look significant.
+    assert result["p_value"] == 1.0
+    assert result["null_mean_R"] == pytest.approx(1.0)
+
+
+def test_optical_utc_block_permutation_preserves_gaps_and_offsets():
+    from scripts.steps.step_181_european_optical_fiber_2023 import _permute_block_dates
+
+    t = 60000 + np.array([0.01, 0.03, 0.27, 0.52, 0.55, 2.02])
+    permuted = _permute_block_dates(t, 6, np.random.default_rng(42))
+    np.testing.assert_allclose((permuted - 60000) % 0.25, (t - 60000) % 0.25,
+                               atol=1e-10)
+    for block in np.unique(np.floor((t - 60000) * 4)):
+        mask = np.floor((t - 60000) * 4) == block
+        np.testing.assert_allclose(np.diff(permuted[mask]), np.diff(t[mask]), atol=1e-10)
 
 
 def test_t1_interval_contains_selected_family_estimate():
@@ -910,3 +937,43 @@ def test_p1_audit_scores_arsenal_versus_tuned_conventional():
     assert "full_arsenal_vs_tuned_conventional_pct" in source
     assert '-0.3%' not in source
     assert "step_92_independent_year_p1.json" in source
+
+
+def test_step88_manuscript_rows_match_all_four_subsets():
+    root = Path(__file__).resolve().parents[1]
+    text = (root / "33-TEP-PPP-v0.4-Pune.md").read_text()
+    seasons = json.loads((root / "results/outputs/step_88_per_station_breakdown.json").read_text())["seasonal_stability"]
+    assert check_step88_rows(text, seasons) == []
+    assert "Step 88 Q2 1 h / 4 h" in check_step88_rows(text.replace("+37.1%", "+36.1%"), seasons)[0]
+
+
+def test_evidence_ledger_verification_does_not_rewrite_release():
+    root = Path(__file__).resolve().parents[1]
+    ledger = root / "results/outputs/evidence_audit.json"
+    before = ledger.read_bytes()
+    subprocess.run(
+        [sys.executable, "scripts/audit_operational_evidence.py", "--verify-artifacts", "--check"],
+        cwd=root, check=True, stdout=subprocess.DEVNULL,
+    )
+    assert ledger.read_bytes() == before
+
+
+def test_flat_checksums_match_manifest_and_exclude_volatile_outputs():
+    root = Path(__file__).resolve().parents[1]
+    manifest = json.loads((root / "results/checksum_manifest.json").read_text())
+    flat = json.loads((root / "results/checksums_sha256.json").read_text())
+    assert flat == {name: entry["sha256"] for name, entry in manifest["files"].items()}
+    assert not set(flat).intersection(manifest["excluded_volatile"])
+
+
+def test_processed_pdf_is_copied_into_deploy_build(tmp_path):
+    pytest.importorskip("playwright")
+    from scripts.generate_site_pdf import sync_pdf_to_dist
+
+    pdf = tmp_path / "paper.pdf"
+    pdf.write_bytes(b"processed PDF")
+    dist = tmp_path / "dist"
+    dist.mkdir()
+    sync_pdf_to_dist(pdf, dist)
+    assert (dist / "manuscript.pdf").read_bytes() == pdf.read_bytes()
+    assert (dist / "public/docs/paper.pdf").read_bytes() == pdf.read_bytes()

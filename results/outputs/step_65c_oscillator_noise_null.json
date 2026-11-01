@@ -1,7 +1,7 @@
 {
  "step": "65c",
  "title": "Oscillator-noise null for the quartz/atomic screening claim",
- "timestamp": "2026-09-27T08:01:07.636577+00:00",
+ "timestamp": "2026-11-01T15:52:03.035873+00:00",
  "n_days": 30,
  "units": "metres (resid ns x C_M_PER_NS)",
  "station_mix_by_oscillator_class": {
@@ -9,8 +9,8 @@
    "receiver_quartz": 8
   },
   "atomic": {
-   "active_maser": 5,
    "passive_maser": 4,
+   "active_maser": 5,
    "bench_ocxo": 1
   }
  },
@@ -21,22 +21,40 @@
     "rms_m": 2.6833075924203094,
     "rms_m_station_median": 4.086765626797407,
     "coupling_b": 1.4813814702326478,
+    "coupling_b_station_median": 1.7546209953265222,
     "coherent_rms_m": 2.12060649046823,
-    "idiosyncratic_rms_m": 0.7185589762187871
+    "coherent_rms_m_station_median": 3.8727527376097965,
+    "idiosyncratic_rms_m": 0.7185589762187871,
+    "idiosyncratic_rms_m_station_median": 0.8294728533125726
    },
    "atomic": {
     "n_station_days": 286,
     "rms_m": 1.2075648908668744,
     "rms_m_station_median": 1.0807055964200196,
     "coupling_b": 0.31284277928120363,
+    "coupling_b_station_median": 0.2809565391308291,
     "coherent_rms_m": 0.7045182421842947,
-    "idiosyncratic_rms_m": 0.7281740297622916
+    "coherent_rms_m_station_median": 0.5256555160002859,
+    "idiosyncratic_rms_m": 0.7281740297622916,
+    "idiosyncratic_rms_m_station_median": 0.7084151605282907
    },
    "ratio_total": 2.2220814903736095,
    "ratio_total_station_median": 3.7815716327697007,
    "ratio_coupling": 4.735226664448869,
+   "ratio_coupling_station_median": 6.245168739459282,
    "ratio_coherent": 3.0100093418354685,
-   "ratio_idiosyncratic": 0.98679566538971
+   "ratio_coherent_station_median": 7.36747284053553,
+   "ratio_idiosyncratic": 0.98679566538971,
+   "ratio_idiosyncratic_station_median": 1.1708852372583398,
+   "station_level_permutation": {
+    "n_stations": 18,
+    "n_quartz": 8,
+    "n_atomic": 10,
+    "n_exact_combinations": 43758,
+    "p_total_ratio": 0.03299968005850359,
+    "p_coherent_ratio": 0.027332144979203804,
+    "p_coupling_ratio": 0.03773024361259655
+   }
   },
   "MF": {
    "quartz": {
@@ -44,22 +62,40 @@
     "rms_m": 5.60198800178498,
     "rms_m_station_median": 5.7688792450262785,
     "coupling_b": 1.090572052696897,
+    "coupling_b_station_median": 1.1118717231574802,
     "coherent_rms_m": 4.466901268283074,
-    "idiosyncratic_rms_m": 3.085939801290473
+    "coherent_rms_m_station_median": 4.711750864579139,
+    "idiosyncratic_rms_m": 3.085939801290473,
+    "idiosyncratic_rms_m_station_median": 2.929866435541934
    },
    "atomic": {
     "n_station_days": 286,
     "rms_m": 4.820142329094619,
     "rms_m_station_median": 4.816422297666332,
     "coupling_b": 0.9341584518331085,
+    "coupling_b_station_median": 0.9227269679464305,
     "coherent_rms_m": 3.853188583861584,
-    "idiosyncratic_rms_m": 2.8650243335061956
+    "coherent_rms_m_station_median": 3.851653965572678,
+    "idiosyncratic_rms_m": 2.8650243335061956,
+    "idiosyncratic_rms_m_station_median": 2.789569149457203
    },
    "ratio_total": 1.16220385609178,
    "ratio_total_station_median": 1.1977519595450412,
    "ratio_coupling": 1.1674379764555536,
+   "ratio_coupling_station_median": 1.2049845314828065,
    "ratio_coherent": 1.1592739807732018,
-   "ratio_idiosyncratic": 1.0771077108144218
+   "ratio_coherent_station_median": 1.2233058594292956,
+   "ratio_idiosyncratic": 1.0771077108144218,
+   "ratio_idiosyncratic_station_median": 1.0502935322868876,
+   "station_level_permutation": {
+    "n_stations": 18,
+    "n_quartz": 8,
+    "n_atomic": 10,
+    "n_exact_combinations": 43758,
+    "p_total_ratio": 0.005256181726769962,
+    "p_coherent_ratio": 0.00904977375565611,
+    "p_coupling_ratio": 0.027926322043969103
+   }
   },
   "HF": {
    "quartz": {
@@ -67,22 +103,40 @@
     "rms_m": 2.2466437203085943,
     "rms_m_station_median": 2.238434373565566,
     "coupling_b": 0.13422916336517943,
+    "coupling_b_station_median": 0.13411571265152905,
     "coherent_rms_m": 0.1654064700936907,
-    "idiosyncratic_rms_m": 2.2423551554267434
+    "coherent_rms_m_station_median": 0.14296559247371432,
+    "idiosyncratic_rms_m": 2.2423551554267434,
+    "idiosyncratic_rms_m_station_median": 2.2327435020163313
    },
    "atomic": {
     "n_station_days": 286,
     "rms_m": 2.527695621371028,
     "rms_m_station_median": 2.4613937670783423,
     "coupling_b": 0.07209874039898159,
+    "coupling_b_station_median": 0.07025871262822575,
     "coherent_rms_m": 0.14824365510526405,
-    "idiosyncratic_rms_m": 2.516844015935187
+    "coherent_rms_m_station_median": 0.1486793352137324,
+    "idiosyncratic_rms_m": 2.516844015935187,
+    "idiosyncratic_rms_m_station_median": 2.4524530347185927
    },
    "ratio_total": 0.8888110187452117,
    "ratio_total_station_median": 0.9094174217490492,
    "ratio_coupling": 1.8617407547257987,
+   "ratio_coupling_station_median": 1.9088837189659718,
    "ratio_coherent": 1.115774364685219,
-   "ratio_idiosyncratic": 0.8909392641059437
+   "ratio_coherent_station_median": 0.9615700276584884,
+   "ratio_idiosyncratic": 0.8909392641059437,
+   "ratio_idiosyncratic_station_median": 0.9104123383437303,
+   "station_level_permutation": {
+    "n_stations": 18,
+    "n_quartz": 8,
+    "n_atomic": 10,
+    "n_exact_combinations": 43758,
+    "p_total_ratio": 0.8683212212623977,
+    "p_coherent_ratio": 0.6237945061474474,
+    "p_coupling_ratio": 0.150646738882033
+   }
   },
   "FULL": {
    "quartz": {
@@ -90,22 +144,40 @@
     "rms_m": 6.007745967908479,
     "rms_m_station_median": 6.069685866697039,
     "coupling_b": 1.0539566920516832,
+    "coupling_b_station_median": 1.0675430658034892,
     "coherent_rms_m": 4.349537632384929,
-    "idiosyncratic_rms_m": 3.966743428125967
+    "coherent_rms_m_station_median": 4.621029947821132,
+    "idiosyncratic_rms_m": 3.966743428125967,
+    "idiosyncratic_rms_m_station_median": 3.765592670417761
    },
    "atomic": {
     "n_station_days": 286,
     "rms_m": 5.578991628339223,
     "rms_m_station_median": 5.582116680964551,
     "coupling_b": 0.8855021580798472,
+    "coupling_b_station_median": 0.8788471112738335,
     "coherent_rms_m": 3.7656598265953285,
-    "idiosyncratic_rms_m": 4.09542942141995
+    "coherent_rms_m_station_median": 3.7884392046741935,
+    "idiosyncratic_rms_m": 4.09542942141995,
+    "idiosyncratic_rms_m_station_median": 3.8770470225364084
    },
    "ratio_total": 1.0768515832487258,
    "ratio_total_station_median": 1.0873448574436175,
    "ratio_coupling": 1.1902361642315118,
+   "ratio_coupling_station_median": 1.2147085108536715,
    "ratio_coherent": 1.1550532529959048,
-   "ratio_idiosyncratic": 0.9685781440595879
+   "ratio_coherent_station_median": 1.2197714409986267,
+   "ratio_idiosyncratic": 0.9685781440595879,
+   "ratio_idiosyncratic_station_median": 0.9712527726718846,
+   "station_level_permutation": {
+    "n_stations": 18,
+    "n_quartz": 8,
+    "n_atomic": 10,
+    "n_exact_combinations": 43758,
+    "p_total_ratio": 0.03992412815942228,
+    "p_coherent_ratio": 0.009415421180127063,
+    "p_coupling_ratio": 0.024978289684172036
+   }
   }
  },
  "same_type_pair_profiles": {
@@ -174,7 +246,7 @@
      ],
      "n_pairs": 50,
      "median_corr": 0.5015735360560093,
-     "mean_corr": 0.515288584108989
+     "mean_corr": 0.5152885841089889
     },
     {
      "bin_km": [
@@ -194,7 +266,7 @@
      ],
      "n_pairs": 241,
      "median_corr": 0.0676724943410249,
-     "mean_corr": 0.07426311917555818
+     "mean_corr": 0.0742631191755582
     },
     {
      "bin_km": [
@@ -212,7 +284,7 @@
      ],
      "n_pairs": 50,
      "median_corr": 0.018544554070529632,
-     "mean_corr": 0.03272597752779126
+     "mean_corr": 0.032725977527791265
     },
     {
      "bin_km": [
@@ -328,7 +400,7 @@
      ],
      "n_pairs": 112,
      "median_corr": 0.5054715333336379,
-     "mean_corr": 0.48991469969685636
+     "mean_corr": 0.48991469969685647
     },
     {
      "bin_km": [
@@ -348,7 +420,7 @@
      ],
      "n_pairs": 436,
      "median_corr": 0.02039240435085275,
-     "mean_corr": 0.018544724620099973
+     "mean_corr": 0.018544724620099966
     },
     {
      "bin_km": [
@@ -366,7 +438,7 @@
      ],
      "n_pairs": 112,
      "median_corr": 0.0027594742489452243,
-     "mean_corr": -0.003212495451349179
+     "mean_corr": -0.0032124954513491786
     },
     {
      "bin_km": [
@@ -395,7 +467,7 @@
      ],
      "n_pairs": 698,
      "median_corr": 0.4699814480794767,
-     "mean_corr": 0.44750569729226203
+     "mean_corr": 0.44750569729226214
     },
     {
      "bin_km": [
@@ -404,7 +476,7 @@
      ],
      "n_pairs": 112,
      "median_corr": 0.39922366993876135,
-     "mean_corr": 0.3846102806278231
+     "mean_corr": 0.38461028062782304
     },
     {
      "bin_km": [

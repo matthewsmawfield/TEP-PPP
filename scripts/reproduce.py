@@ -29,7 +29,8 @@ def main() -> int:
     if not compileall.compile_dir(ROOT / "scripts", quiet=1):
         return 1
     run([sys.executable, "-m", "pytest", "-q"])
-    run([sys.executable, "scripts/audit_operational_evidence.py"])
+    audit_flags = ["--verify-artifacts", "--check"] if args.verify_only else []
+    run([sys.executable, "scripts/audit_operational_evidence.py", *audit_flags])
     run([sys.executable, "scripts/check_manuscript_numbers.py"])
     print("Reproducibility verification passed.")
     return 0

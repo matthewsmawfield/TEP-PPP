@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main() -> int:
     commands = [
-        [sys.executable, str(ROOT / "scripts" / "audit_operational_evidence.py")],
+        [sys.executable, str(ROOT / "scripts" / "audit_operational_evidence.py"),
+         "--verify-artifacts", "--check"],
         [sys.executable, str(ROOT / "scripts" / "check_manuscript_numbers.py")],
     ]
     for command in commands:

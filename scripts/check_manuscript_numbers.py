@@ -8,6 +8,7 @@ artifact checked because it is what readers see.
 from __future__ import annotations
 
 import json
+import math
 import re
 from pathlib import Path
 
@@ -18,6 +19,29 @@ OUT = ROOT / "results" / "outputs"
 
 def load(name: str) -> dict:
     return json.loads((OUT / name).read_text())
+
+
+def check_step88_rows(text: str, seas: dict) -> list[str]:
+    problems = []
+    if set(seas) != {"Q1", "Q2", "Q3", "Q4"}:
+        return [f"Step 88 seasonal_stability must have Q1..Q4, got {sorted(seas)}"]
+    for q in ("Q1", "Q2", "Q3", "Q4"):
+        values = []
+        for gap in ("3600", "14400"):
+            value = seas[q][gap]["tep_vs_pers_pct"]
+            if not isinstance(value, (int, float)) or not math.isfinite(value):
+                problems.append(f"Step 88 {q} {gap}s gain is not finite")
+            else:
+                values.append(value)
+        if len(values) == 2 and not re.search(
+            rf"\b{q}\s*\(\+{values[0]:.1f}%\s*/\s*\+{values[1]:.1f}%\)", text
+        ):
+            problems.append(f"Step 88 {q} 1 h / 4 h manuscript gains differ from evidence")
+    if "Step 55 distance-only Gaussian" not in text or "four consecutive subsets" not in text:
+        problems.append("Step 88 must be identified as four within-sample Gaussian-arm subsets")
+    if re.search(r"\bQ5\b", text):
+        problems.append("manuscript contains bogus Q5 quarter")
+    return problems
 
 
 
@@ -1016,20 +1040,11 @@ def main() -> int:
     except FileNotFoundError:
         problems.append("step_179 output missing")
 
-    # Step 88 per-station and seasonal breakdown: must have 4 quarters
-    # (Q1..Q4, never a remainder Q5) and quote the committed quarter gains.
+    # The four consecutive 90-day subsets must remain visible after the
+    # appendix removal, with the correct 1 h and 4 h Gaussian-arm gains.
     try:
         r88 = load("step_88_per_station_breakdown.json")
-        seas = r88.get("seasonal_stability") or {}
-        if set(seas.keys()) != {"Q1", "Q2", "Q3", "Q4"}:
-            problems.append(f"Step 88 seasonal_stability must have Q1..Q4, got {sorted(seas)}")
-        for q in ("Q1", "Q2", "Q3", "Q4"):
-            for g in ("3600", "14400"):
-                v = seas[q][g]["tep_vs_pers_pct"]
-                if f"+{v:.1f}" not in text:
-                    problems.append(f"Step 88 {q} {g}s gain +{v:.1f}% not quoted in manuscript")
-        if re.search(r"\bQ5\b", text):
-            problems.append("manuscript contains bogus Q5 quarter")
+        problems.extend(check_step88_rows(text, r88.get("seasonal_stability") or {}))
     except (KeyError, FileNotFoundError):
         problems.append("step_88 output missing or incomplete")
 
@@ -1045,6 +1060,126 @@ def main() -> int:
             problems.append("Step 56 lambda_1/e convention sensitivity not quoted in manuscript")
     except (KeyError, FileNotFoundError):
         problems.append("step_45 synthetic common-view null or step_56 lambda sensitivity missing")
+
+    # Steps 65, 65c, 164, 167 -- oscillator-class station-level permutation,
+    # co-located tidal-band scale, and metadata-verified gravitational phase.
+    try:
+        s65 = load("step_65_oscillator_screening.json")["result"]["station_level_permutation_null"]
+        s65c = load("step_65c_oscillator_noise_null.json")["per_band"]["LF"]
+        s164 = load("step_164_fullyear_differential_spectrometer.json")["summary"]
+        s167 = load("step_167_clocktype_gravitational_phase.json")["metadata_verified_station_permutation"]
+        plain = re.sub(r"[{},\s]", "", text)
+        if f"{s65['cluster_predictable_power_p_one_sided']:.4f}" not in text:
+            problems.append("Step 65 station-level permutation p-value not quoted in manuscript")
+        if f"{s65c['ratio_coherent_station_median']:.2f}" not in text or \
+                f"{s65c['station_level_permutation']['p_coherent_ratio']:.4f}" not in text:
+            problems.append("Step 65c station-median LF coherent ratio or permutation p not quoted")
+        tb_lam = s164["tidal_band_10_35uHz_colocated"]["MAT1-MATE"]["tidal_band_10_35uHz"]["fit"]["lambda_km"]
+        m2_24_lam = s164["pairs"]["MAT1-MATE"]["2024"]["M2_lambda_km"]
+        m2_25_lam = s164["pairs"]["MAT1-MATE"]["2025"]["M2_lambda_km"]
+        for v in (f"{tb_lam:,.0f}".replace(",", ""),
+                  f"{m2_24_lam:,.0f}".replace(",", ""),
+                  f"{m2_25_lam:,.0f}".replace(",", "")):
+            if v not in plain:
+                problems.append(f"Step 164 MAT1-MATE scale {v} km not quoted in manuscript")
+        q_m2_r = s167["precise_2024_simultaneous_8line"]["quartz"]["M2"]["r"]
+        a_m2_r = s167["precise_2024_simultaneous_8line"]["atomic"]["M2"]["r"]
+        j_m2 = s167["multi_centre_fisher_combined"]["dependence_preserving_joint_station_permutation_M2"]
+        if f"+{q_m2_r:.3f}" not in text or f"+{a_m2_r:.3f}" not in text or \
+                f"+{j_m2['quartz']['z_joint_station_perm']:.2f}" not in text or \
+                f"{j_m2['quartz']['p_joint_station_perm']:.4f}" not in text:
+            problems.append("Step 167 metadata-verified 2024 M2 r or joint COD+GFZ station-permutation z/p not quoted in manuscript")
+        s181 = load("step_181_european_optical_fiber_2023.json")
+        am = s181["architecture_matrix"]
+        dl_pairs = s181["dersimonian_laird_excess_floor"]["pairs"]
+        ft = s181["five_tide_600s_regression"]
+        if f"{am['NPL_Sr1-PTB_Sr3_CombKnoten']['birge_vs_1000s_wn']:.3f}" not in text or \
+                f"{am['NPL_YbE3-NPL_Sr1']['birge_vs_1000s_wn']:.3f}" not in text:
+            problems.append("Step 181 optical-fiber Birge-vs-white-noise values not quoted in manuscript")
+        for pk in (
+            "NPL_Sr1-PTB_Sr3_CombKnoten",
+            "PTB_Yb_CombKnoten-NPL_Sr1",
+            "NPL_YbE3-PTB_Yb_CombKnoten",
+            "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
+            "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten",
+        ):
+            tdl = dl_pairs[pk]["excess_daily_std_tau_DL_1e18"]
+            if f"{tdl:.2f}" not in text:
+                problems.append(f"Step 181 DerSimonian-Laird tau_DL {tdl:.2f} for {pk} not quoted in manuscript")
+        if f"{ft['homonuclear_705km_fisher_6h_block']['p_value']:.4f}" not in text or \
+                f"{ft['homonuclear_705km_fisher_6h_block_demeaned']['p_value']:.4f}" not in text:
+            problems.append("Step 181 5-tide Fisher combined p-values not quoted in manuscript")
+        ray_r = ft["common_window_705km_4pair_phase_clustering"]["rayleigh_resultant_R"]
+        if f"{ray_r:.3f}" not in text or "0.892" in text or "0.903" in text:
+            problems.append("Step 181 4-pair M2 Rayleigh R not quoted or stale value present in manuscript")
+        n_disj = s181["disjoint_pair_multiplicity_summary"]["n_eligible_tests_across_1h_3h_6h"]
+        if str(n_disj) not in text:
+            problems.append("Step 181 eligible disjoint test count not quoted in manuscript")
+        zf = s181["zero_fiber_705km_antiphase_coherence"]["windows"]["W_3h_f_le_1000uHz"]
+        if f"{zf['mean_pa']:.3f}" not in text or f"{zf['z_vs_window_shuffle_null']:.2f}" not in text:
+            problems.append("Step 181 zero-fiber 705 km anti-phase PA or window-shuffle z not quoted in manuscript")
+        zloc = s181.get("zero_satellite_global_clock_field_localisation")
+        if zloc:
+            e2_err = int(zloc["pairs"]["PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten"]["ionofree_all_stations"]["surface_error_km"])
+            sr_err = int(zloc["pairs"]["PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten"]["ionofree_all_stations"]["surface_error_km"])
+            p_2site = zloc["fisher_combined_independent_sites_df4"]["p_value"]
+            nd_sr = int(zloc["pairs"]["PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten"]["ionofree_all_stations"]["diurnal_semidiurnal_excluded_41modes_gt_30uHz"]["surface_error_km"])
+            if str(e2_err) not in plain or str(sr_err) not in plain or str(nd_sr) not in plain or f"{p_2site:.4f}" not in text:
+                problems.append("Step 181 zero-satellite optical clock localisation errors, diurnal-excluded control, or 2-site Fisher p not quoted")
+        fc4 = s181["dersimonian_laird_excess_floor"]["four_clock_exact_variance_cancellation_705km"]
+        if f"{fc4['isolated_baseline_std_705km_1e18']:.2f}" not in text:
+            problems.append("Step 181 4-clock exact variance cancellation baseline std not quoted")
+        sim4 = s181["dersimonian_laird_excess_floor"]["simultaneous_1s_common_epoch_4clock_subtraction"]
+        if f"{sim4['dl_isolated_baseline_std_705km_1e18']:.2f}" not in text or \
+                f"{sim4['exact_unweighted_isolated_baseline_std_705km_1e18']:.2f}" not in text:
+            problems.append("Step 181 simultaneous 1s common-epoch 4-clock baseline std (7.62 / 7.74) not quoted")
+        dep_ctrl = s181["dersimonian_laird_excess_floor"]["distance_scaling_dependency_controls"]
+        if f"+{dep_ctrl['four_group_spearman_rho']:.3f}" not in text:
+            problems.append("Step 181 4-distance-group Spearman rho (+0.800) not quoted")
+        gls_d = s181["gls_clock_link_variance_decomposition"]
+        f_clk = gls_d["clock_only"]["frac_v2_explained"] * 100.0
+        f_lnk = gls_d["clock_plus_common_remote_link"]["frac_v2_explained"] * 100.0
+        npl_ptb_sub = gls_d["five_pair_npl_ptb_4clock_subnetwork"]
+        r2_sub_0 = npl_ptb_sub["clock_only_centered_r2"] * 100.0
+        r2_sub_1 = npl_ptb_sub["clock_plus_remote_link_centered_r2"] * 100.0
+        if f"{f_clk:.2f}\\%" not in text or f"{f_lnk:.2f}\\%" not in text or \
+                f"{r2_sub_0:.1f}\\%" not in text or f"{r2_sub_1:.1f}\\%" not in text:
+            problems.append("Step 181 9-pair or 5-pair NPL-PTB NNLS variance fractions not quoted")
+        het_sim = ft["common_window_705km_4pair_phase_clustering"]["simultaneous_707bin_heteronuclear_YbE3_minus_Sr_species_frame"]
+        het_r = het_sim["rayleigh_resultant_R"]
+        het_p_joint = het_sim["p_perm_joint_utc_6h_block_R"]
+        het_p_day = het_sim["p_perm_joint_utc_day_block_R"]
+        if (f"{het_r:.3f}" not in text or f"{het_p_joint:.4f}" not in text
+                or f"{het_p_day:.4f}" not in text):
+            problems.append("Step 181 species-frame Rayleigh R and both joint UTC-block permutation p-values must be quoted")
+        if "0.0190" in text:
+            problems.append("Independent-column optical phase shuffle must not appear as the dependence-aware manuscript result")
+        if npl_ptb_sub["clock_plus_link_design_rank"] != 5 or npl_ptb_sub["unconstrained_residual_dof_clock_plus_link"] != 0:
+            problems.append("Step 181 five-pair fit rank/degree-of-freedom metadata changed")
+        chb = s181["conformal_holonomy_bound"]
+        b95_17 = chb["bound_95pct_abs_offset_1e18"] / 10.0
+        if f"{b95_17:.1f}" not in text:
+            problems.append("Step 181 conditional 95% single-effect offset envelope (2.2e-17) not quoted")
+        import hashlib
+        cs_ledger = json.loads((ROOT / "results" / "checksums_sha256.json").read_text())
+        for step_fn in ("step_167_clocktype_gravitational_phase.json", "step_181_european_optical_fiber_2023.json"):
+            sp = OUT / step_fn
+            sha = hashlib.sha256(sp.read_bytes()).hexdigest()
+            if cs_ledger.get(f"results/outputs/{step_fn}") != sha:
+                problems.append(f"{step_fn} SHA-256 out of sync with results/checksums_sha256.json")
+        wf = s181.get("contemporaneous_optical_gnss_waveform_correlations") or {}
+        if wf:
+            for wk in (
+                "NPL_Sr1_PTB_Sr3__vs__clock_bias_HERT_PTBB_3h",
+                "NPL_YbE3_NPL_Sr1__vs__precise_HERS_PTBB_6h",
+                "PTB_Yb1E2_PTB_Yb1E3__vs__pos_jitter_OP71_PTBB_12h",
+            ):
+                r_d = wf[wk]["pearson_r_detrended"]
+                p_b = wf[wk]["p_day_block_permutation_detrended"]
+                if f"{r_d:+.3f}" not in text or f"{p_b:.4f}" not in text:
+                    problems.append(f"Step 181 waveform {wk} detrended r={r_d:+.3f} or p_dayblk={p_b:.4f} not quoted")
+    except (KeyError, FileNotFoundError):
+        problems.append("Step 65/65c/164/167/181 tightened oscillator-class outputs missing")
 
     if problems:
         print("MANUSCRIPT / EVIDENCE FAILURES:")
