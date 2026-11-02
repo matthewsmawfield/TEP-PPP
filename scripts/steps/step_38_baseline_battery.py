@@ -19,8 +19,9 @@ different training day (leakage-free):
                   chosen freely on the train day over {exp, gaussian, matern15}
                   x lambda in {0.1 ... 25} x 10^3 km -- an unconstrained GP with
                   NO TEP prior
-  tep_kernel      exponential kriging BLUP with lambda constrained to the
-                  physically-predicted 1,000-10,000 km band (the TEP claim)
+  tep_kernel      Gaussian kriging BLUP (form fixed by the T1/Papers 1-2 AIC
+                  result) with lambda constrained to the physically-predicted
+                  1,000-10,000 km band (the TEP claim)
 
 Headline: tep_kernel skill vs the BEST of {idw_tuned, knn_tuned, free_gp} on the
 same held-out folds.  If the TEP kernel only ties tuned IDW / a free GP, the

@@ -1,3 +1,9 @@
+v0.5 (Pune) — 2 November 2026 — Artifact provenance and disclosure hardening
+
+- Declared legacy-run provenance on the committed Step 48 outputs (generated under lambda 3,480 km / nugget 0.15 change-kriging before the current 4,200 km / 0.35 absolute-residual defaults) and added a regression test preventing silent source/output fingerprint drift.
+- Stated the satellite-channel boundary in the manuscript: the pair products share the analysis-centre network adjustment and 8,140 km is band membership over an ill-conditioned tail, not a 4,200 km recovery.
+- Corrected the Step 38 docstring (Gaussian, not exponential).
+
 v0.4 (Pune) — 1 November 2026 — Phase-resolved GNSS clock prediction and European optical-clock cross-checks
 
 - Verified the oscillator-dependent lunar phase response using site-log clock classifications and station-level permutations across two analysis centres.

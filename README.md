@@ -5,8 +5,8 @@
 ![Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging](site/public/image.webp)
 
 **Author:** Matthew Lukin Smawfield  
-**Version:** v0.4 (Pune)  
-**First published:** 29 October 2026 · **Last updated:** 1 November 2026  
+**Version:** v0.5 (Pune)  
+**First published:** 29 October 2026 · **Last updated:** 2 November 2026  
 **Status:** Preprint  
 **DOI:** [10.5281/zenodo.23704945](https://doi.org/10.5281/zenodo.23704945)  
 **Website:** [https://mlsmawfield.com/tep/ppp/](https://mlsmawfield.com/tep/ppp/)  
@@ -22,7 +22,7 @@ In the cross-spectral phase-alignment observable $\cos(\arg \sum_f S_{ij}(f))$, 
 
 Out-of-ecosystem reanalysis of the 65-day 2023 European optical-fibre clock campaign across NPL, LNE-OP/SYRTE, PTB, and INRIM constrains differential frequency-ratio offsets across the Doppler-cancelled NPL–PTB link to $-7.1 \pm 7.7\times 10^{-18}$ ($1\sigma$; conditional $95\%$ single-effect envelope $\le 2.2\times 10^{-17}$, with $1$ s 3-node star-tree closure at $3.61\times 10^{-20}$ on the $b_1 = 0$ tree), unmasks a $\tau_{\mathrm{DL}} = 8.68$–$27.92\times 10^{-18}$ sub-mHz remote floor versus $0.00\times 10^{-18}$ co-located at NPL ($7.86$ and $24.76\times 10^{-18}$ locally at PTB; 4-clock baseline excess $7.62$–$7.74\times 10^{-18}$ on $212{,}605$ simultaneous $1$ s common epochs and $7.30\times 10^{-18}$ full-campaign; 8-pair $\rho = +0.927, p = 9.4\times 10^{-4}$, 4-group $\rho_{\mathrm{group}} = +0.800$) alongside $705$ km lunar $M_2$ amplitude enhancement (Fisher $p = 0.0014$ raw, $0.0019$ demeaned; joint species-frame $\mathrm{Yb^+\,E3}-\mathrm{Sr}$ simultaneous phase clustering $R = 0.990, p_{\mathrm{joint,6h}} = 0.0230$ vs $R = 0.477$ (four geographic ratios on a separate window; $R = 0.358$ for the same three simultaneous ratios) in the geographic frame), detects zero-fibre $705$ km anti-phase coherence probing a non-universal $\Delta K_\alpha$ electromagnetic coupling extension between co-located optical pairs at NPL and PTB ($\mathrm{PA} = -0.335 \pm 0.091, z = -3.69, z_{\mathrm{null}} = -3.27, p_{\mathrm{perm}} = 0.0010$), and localises the zero-satellite optical clock pairs globally to $879$–$1{,}416$ km against the 366-station GNSS archive (conditional two-site Fisher $p = 0.0030$; sub-diurnal $f > 30\,\mu\text{Hz}$ error $704$–$1{,}285$ km).
 
-Operationally, a phase-resolved TEP clock prior requires no new hardware and under 1 ms per epoch on existing CORS/RTK networks: (i) for timing holdover, it reduces sky-outage clock-residual error by $38.1\%$ at 1 h ($24.7$ ns) and $55.7\%$ at 8 h ($65.6$ ns), outperforming datasheet holdover of a $\sim\$300$ OCXO beyond 30 min and a $\sim\$2{,}000$ Rubidium standard beyond 2 h; (ii) for outage bridging, it reduces clock RMS by $5.0$–$18.9\%$ over 90 EUREF days and beats every deployable baseline on held-out 2025 across Europe, North America, and East Asia; and (iii) for degraded-geometry positioning, it restores $k = 3$ availability ($+29.6\%$ 3-D carrier-phase RMSE reduction), improves $k = 4$–$5$ 3-D RMS by $+14.5$–$48.0\%$, localises co-located GNSS anchors to $339$ km (Matera) and $744$ km (Tahiti) and 43 live NTRIP stations to $191.8$ km median error, and achieves $+35.84\%$ mean two-hour holdover gain across 185 walk-forward windows on a 68-station live observatory ($116$ of $120$ SHA-256-sealed ex-ante envelopes positive, $+29.01\%$ mean; clean-origin forward component $+2.57\%, p = 1.8\times 10^{-5}$).
+Operationally, a phase-resolved TEP clock prior requires no new hardware and under 1 ms per epoch on existing CORS/RTK networks: (i) for timing holdover, it reduces sky-outage clock-residual error by $38.1\%$ at 1 h ($24.7$ ns) and $55.7\%$ at 8 h ($65.6$ ns), outperforming datasheet holdover of a $\sim\$300$ OCXO beyond 30 min and a $\sim\$2{,}000$ Rubidium standard beyond 2 h; (ii) for outage bridging, it reduces clock RMS by $5.0$–$18.9\%$ over 90 EUREF days and beats every deployable baseline on held-out 2025 across Europe, North America, and East Asia; and (iii) for degraded-geometry positioning, it restores $k = 3$ availability ($+29.6\%$ 3-D carrier-phase RMSE reduction), improves $k = 4$–$5$ 3-D RMS by $+14.5$–$48.0\%$, localises co-located GNSS anchors to $339$ km (Matera) and $744$ km (Tahiti) and 43 live NTRIP stations to $191.8$ km median error, and achieves $+35.84\%$ mean two-hour holdover gain across 185 walk-forward windows on a 68-station live observatory ($116$ of $120$ SHA-256-sealed ex-ante envelopes positive, $+29.01\%$ mean on overlapping sliding windows; zero-target-overlap clean-origin forward component $+2.57\%, p = 1.8\times 10^{-5}$).
 
 **Keywords:** Temporal Equivalence Principle; GNSS atomic clocks; Precise Point Positioning (PPP); spatial clock priors; GNSS outage bridging; timing holdover; cross-spectral phase alignment; cryptographically sealed evaluation
 
@@ -156,7 +156,7 @@ cd site && npm ci && npm run build
   year={2026},
   doi={10.5281/zenodo.23704945},
   url={https://doi.org/10.5281/zenodo.23704945},
-  note={Preprint v0.4 (Pune)}
+  note={Preprint v0.5 (Pune)}
 }
 ```
 

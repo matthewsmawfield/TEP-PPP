@@ -3364,7 +3364,7 @@ def main():
         print(f"Summary: TEP vs best conventional (k=4/5/6): "
               f"median {med_s}, {frac_s} positive cells, "
               f"k=3 TEP availability {k3a_s} "
-              f"(conventional {'INFEASIBLE' if s['k3_conventional_infeasible'] else 'available'})")
+              f"(conventional {'INFEASIBLE' if s.get('k3_conventional_infeasible') else ('available' if 'k3_conventional_infeasible' in s else 'n/a')})")
 
     (OUT / OUTPUT_NAME).write_text(json.dumps(result, indent=2))
     print(f"saved {OUT / OUTPUT_NAME}")

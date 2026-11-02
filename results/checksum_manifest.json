@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-01T21:39:15.160956+00:00",
+  "generated": "2026-11-02T01:07:44.483304+00:00",
   "project": "TEP-PPP",
-  "version": "0.4",
+  "version": "0.5",
   "codename": "Pune",
   "files": {
     "results/figures/step_06_falsification.png": {
@@ -650,9 +650,14 @@
       "modified": "2026-10-29T22:26:27"
     },
     "results/outputs/step_181_european_optical_fiber_2023.json": {
-      "sha256": "01aec3c3071b6ab0510be78184809ff64124e4d7c57242136fa87a3fee3350ff",
-      "size_bytes": 55832,
-      "modified": "2026-11-01T21:39:14"
+      "sha256": "709a45457475d3974ae6065f075b1cf672b44755a76a8f25c8e4bc40047198b9",
+      "size_bytes": 49926,
+      "modified": "2026-11-01T23:24:13"
+    },
+    "results/outputs/step_181c_mask_preserving_null.json": {
+      "sha256": "ef13704bf76f788cfe28f07e66f9d3f6ca77a9c15478f53f6a81f206e2d29f80",
+      "size_bytes": 97875,
+      "modified": "2026-11-01T23:50:49"
     },
     "results/outputs/step_21_position_information.json": {
       "sha256": "61073b3721007d9f972e381c8a3ebd3a5d82532ad64d089eca3c7af7a0ae88b2",
@@ -795,19 +800,19 @@
       "modified": "2026-09-01T20:36:01"
     },
     "results/outputs/step_48_three_satellite.json": {
-      "sha256": "2b4ce31f28ed0e5e4332d18a32269ba0c762e6321a7df767045bad60805ed094",
-      "size_bytes": 323407,
-      "modified": "2026-09-03T00:58:46"
+      "sha256": "7f55fdd8baaae338f0a011417289e4f0e14b628db3a0e1c14eccbd046630050d",
+      "size_bytes": 284942,
+      "modified": "2026-11-01T22:53:00"
     },
     "results/outputs/step_48_three_satellite_precise.json": {
-      "sha256": "7a38eac742fecdee6554aed5ea8602d14a65737e297b0f067b64d4793bcb9cc8",
-      "size_bytes": 339361,
-      "modified": "2026-09-03T02:09:16"
+      "sha256": "682bff846461a7734147989e232a01893016c8c1e0970a3c6426f260adc24385",
+      "size_bytes": 299174,
+      "modified": "2026-11-01T22:53:00"
     },
     "results/outputs/step_48b_gap_sweep.json": {
-      "sha256": "779b7676e9052c4a2074627a8fd5ca5aff6ef70904fd86de1f2e39901c8fb736",
-      "size_bytes": 11684,
-      "modified": "2026-09-02T08:30:19"
+      "sha256": "380acc0a65f5f476817e76d1b8b6443c294a3c67c9d1a7509ef2187776d9c7cd",
+      "size_bytes": 10948,
+      "modified": "2026-11-01T22:53:00"
     },
     "results/outputs/step_50_lambda_meta_analysis.json": {
       "sha256": "cdad2f0bf8e5d2193ab42f79df6179e7de4aff4d5203a826d782b9dfde5c68ee",
@@ -898,6 +903,11 @@
       "sha256": "4b53f2864c5550676acd6e5444443169b5c531d39a727a13566675927beda7c5",
       "size_bytes": 17339,
       "modified": "2026-11-01T15:52:03"
+    },
+    "results/outputs/step_65d_coupling_covariates.json": {
+      "sha256": "868be36db8fa32d5e019dcb33ce271a5b852b90bdb56c6610460fb3148915d03",
+      "size_bytes": 10741,
+      "modified": "2026-11-01T23:42:00"
     },
     "results/outputs/step_66_clock_gradient_holygrail.json": {
       "sha256": "fb829a3fc2eb0be872e43aff05ed26fa894ec2dd68fa4c303f518a859ca9bc23",
@@ -1003,6 +1013,11 @@
       "sha256": "7d95b29e67a6ff3009ec2c9e64071bb008daf1495e5691ccdb25d486c4380208",
       "size_bytes": 6686,
       "modified": "2026-09-03T08:56:20"
+    },
+    "results/outputs/step_79b_oriented_flux.json": {
+      "sha256": "4f2e440677735fbe972012224ddf990f3bb0ed17e843f853a4dea4843fa059f9",
+      "size_bytes": 598,
+      "modified": "2026-11-01T23:31:26"
     },
     "results/outputs/step_80_clock_field_localisation.json": {
       "sha256": "6cd19a70f777c2f051b87b291f9e50232251dceeb79df7e63db9f4cca63c4c91",

@@ -941,7 +941,7 @@ def test_p1_audit_scores_arsenal_versus_tuned_conventional():
 
 def test_step88_manuscript_rows_match_all_four_subsets():
     root = Path(__file__).resolve().parents[1]
-    text = (root / "33-TEP-PPP-v0.4-Pune.md").read_text()
+    text = sorted(root.glob("33-TEP-PPP-*.md"))[-1].read_text()
     seasons = json.loads((root / "results/outputs/step_88_per_station_breakdown.json").read_text())["seasonal_stability"]
     assert check_step88_rows(text, seasons) == []
     assert "Step 88 Q2 1 h / 4 h" in check_step88_rows(text.replace("+37.1%", "+36.1%"), seasons)[0]
@@ -977,3 +977,30 @@ def test_processed_pdf_is_copied_into_deploy_build(tmp_path):
     sync_pdf_to_dist(pdf, dist)
     assert (dist / "manuscript.pdf").read_bytes() == pdf.read_bytes()
     assert (dist / "public/docs/paper.pdf").read_bytes() == pdf.read_bytes()
+
+
+def test_step48_outputs_declare_run_provenance():
+    """Step 48-family artifacts must either carry the current source's
+    covariance fingerprint or an explicit legacy-run provenance marker, so a
+    superseded configuration can never masquerade as a current run."""
+    import re
+    root = Path(__file__).resolve().parents[1]
+    src = (root / "scripts/steps/step_48_three_satellite.py").read_text()
+    lam = float(re.search(r'TEP_LAMBDA_KM\s*=\s*float\(os\.environ\.get\('
+                          r'"TEP_LAMBDA_KM",\s*"([0-9.]+)"\)\)', src).group(1))
+    nug = float(re.search(r'TEP_NUGGET\s*=\s*float\(os\.environ\.get\('
+                          r'"TEP_NUGGET",\s*"([0-9.]+)"\)\)', src).group(1))
+    for name in ("step_48_three_satellite.json",
+                 "step_48_three_satellite_precise.json",
+                 "step_48b_gap_sweep.json"):
+        d = json.loads((root / "results/outputs" / name).read_text())
+        cov = d["tep_covariance"]
+        matches_source = (abs(cov["lambda_km"] - lam) < 1e-9
+                          and abs(cov["nugget"] - nug) < 1e-9)
+        if not matches_source:
+            prov = d.get("provenance", {})
+            assert prov.get("status") == "superseded_config", (
+                f"{name}: covariance fingerprint "
+                f"(lambda={cov['lambda_km']}, nugget={cov['nugget']}) matches "
+                f"neither the source defaults ({lam}, {nug}) nor a declared "
+                "legacy-run provenance marker")

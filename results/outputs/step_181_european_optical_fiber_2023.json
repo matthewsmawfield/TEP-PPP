@@ -1,1592 +1,1592 @@
 {
-  "step": 181,
-  "title": "European optical-fiber clock network reanalysis (Pizzocaro et al. 2026, PRR 8, 033250)",
-  "timestamp": "2026-11-01T21:39:14.985460+00:00",
-  "dataset_doi": "10.5281/zenodo.16539534",
-  "publication_doi": "10.1103/l4bh-ryxs",
-  "campaign_window": "MJD 59999-60064 (24 Feb - 30 Apr 2023)",
-  "dataset_summary": {
-    "n_comparison_folders": 16,
-    "n_daily_dat_files": 328,
-    "n_valid_flag1_seconds": 7903540
-  },
-  "conformal_holonomy_bound": {
-    "pair": "NPL_YbE3-PTB_Yb_CombKnoten",
-    "baseline_chord_km": 705.0,
-    "fiber_length_km": 2155.0,
-    "published_offset_1e18": -7.1,
-    "published_uncertainty_1e18": 7.7,
-    "published_birge": 1.13,
-    "measured_birge_vs_1000s_wn": 0.883,
-    "conditional_1sigma_offset_uncertainty_1e18": 7.7,
-    "bound_95pct_abs_offset_1e18": 22.2,
-    "observable_scope": "Differential clock frequency-ratio consistency constraint across Doppler-cancelled link; 1 s star-tree closure (b1=0) is an algebraic data-processing check, while a model-independent disformal synchronization holonomy bound requires a physically closed b1>=1 fiber loop."
-  },
-  "dersimonian_laird_excess_floor": {
-    "paper1_predicted_range_10ks_1e17": [
-      1.4,
-      8.6
-    ],
-    "paper1_predicted_range_100ks_1e18": [
-      2.1,
-      12.0
-    ],
-    "spearman_rho_d_geo_vs_tau_DL": 0.927,
-    "spearman_p_d_geo_vs_tau_DL": 0.00094,
-    "distance_scaling_dependency_controls": {
-      "distance_bins_km": [
-        0.0,
-        705.0,
-        755.0,
-        915.0
-      ],
-      "distance_bin_mean_tau_DL_1e18": [
-        3.93,
-        9.65,
-        21.37,
-        18.23
-      ],
-      "four_group_spearman_rho": 0.8,
-      "four_group_exact_4fact_p_one_sided": 0.0417,
-      "four_group_exact_4fact_p_two_sided": 0.0833,
-      "leave_one_clock_out": {
-        "INRIM_ITYb1": {
-          "n_pairs": 5,
-          "spearman_rho": 0.866,
-          "spearman_p": 0.0577
-        },
-        "NPL_Sr1": {
-          "n_pairs": 4,
-          "spearman_rho": 0.949,
-          "spearman_p": 0.0513
-        },
-        "NPL_YbE3": {
-          "n_pairs": 6,
-          "spearman_rho": 0.883,
-          "spearman_p": 0.0198
-        },
-        "PTB_Sr3": {
-          "n_pairs": 5,
-          "spearman_rho": 0.975,
-          "spearman_p": 0.0048
-        },
-        "PTB_Yb": {
-          "n_pairs": 4,
-          "spearman_rho": 0.8,
-          "spearman_p": 0.2
-        }
-      }
+ "step": 181,
+ "title": "European optical-fiber clock network reanalysis (Pizzocaro et al. 2026, PRR 8, 033250)",
+ "timestamp": "2026-11-01T21:39:14.985460+00:00",
+ "dataset_doi": "10.5281/zenodo.16539534",
+ "publication_doi": "10.1103/l4bh-ryxs",
+ "campaign_window": "MJD 59999-60064 (24 Feb - 30 Apr 2023)",
+ "dataset_summary": {
+  "n_comparison_folders": 16,
+  "n_daily_dat_files": 328,
+  "n_valid_flag1_seconds": 7903540
+ },
+ "conformal_holonomy_bound": {
+  "pair": "NPL_YbE3-PTB_Yb_CombKnoten",
+  "baseline_chord_km": 705.0,
+  "fiber_length_km": 2155.0,
+  "published_offset_1e18": -7.1,
+  "published_uncertainty_1e18": 7.7,
+  "published_birge": 1.13,
+  "measured_birge_vs_1000s_wn": 0.883,
+  "conditional_1sigma_offset_uncertainty_1e18": 7.7,
+  "bound_95pct_abs_offset_1e18": 22.2,
+  "observable_scope": "Differential clock frequency-ratio consistency constraint across Doppler-cancelled link; 1 s star-tree closure (b1=0) is an algebraic data-processing check, while a model-independent disformal synchronization holonomy bound requires a physically closed b1>=1 fiber loop."
+ },
+ "dersimonian_laird_excess_floor": {
+  "paper1_predicted_range_10ks_1e17": [
+   1.4,
+   8.6
+  ],
+  "paper1_predicted_range_100ks_1e18": [
+   2.1,
+   12.0
+  ],
+  "spearman_rho_d_geo_vs_tau_DL": 0.927,
+  "spearman_p_d_geo_vs_tau_DL": 0.00094,
+  "distance_scaling_dependency_controls": {
+   "distance_bins_km": [
+    0.0,
+    705.0,
+    755.0,
+    915.0
+   ],
+   "distance_bin_mean_tau_DL_1e18": [
+    3.93,
+    9.65,
+    21.37,
+    18.23
+   ],
+   "four_group_spearman_rho": 0.8,
+   "four_group_exact_4fact_p_one_sided": 0.1667,
+   "four_group_exact_4fact_p_two_sided": 0.3333,
+   "leave_one_clock_out": {
+    "INRIM_ITYb1": {
+     "n_pairs": 5,
+     "spearman_rho": 0.866,
+     "spearman_p": 0.0577
     },
-    "four_clock_exact_variance_cancellation_705km": {
-      "clocks": [
-        "NPL_YbE3",
-        "NPL_Sr1",
-        "PTB_Yb1E3",
-        "PTB_Sr3"
-      ],
-      "local_0km_variance_sum_1e36": 61.78,
-      "remote_705km_homonuclear_variance_sum_1e36": 168.46,
-      "remote_over_local_variance_ratio": 2.73,
-      "isolated_baseline_std_705km_1e18": 7.3
+    "NPL_Sr1": {
+     "n_pairs": 4,
+     "spearman_rho": 0.949,
+     "spearman_p": 0.0513
     },
-    "simultaneous_1s_common_epoch_4clock_subtraction": {
-      "n_simultaneous_1s_epochs": 212605,
-      "n_common_days_ge_1h": 10,
-      "common_mjds": [
-        60021,
-        60022,
-        60023,
-        60024,
-        60026,
-        60027,
-        60028,
-        60029,
-        60032,
-        60033
-      ],
-      "tau_DL_1e18": {
-        "NPL_YbE3-NPL_Sr1": 0.0,
-        "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 5.23,
-        "NPL_YbE3-PTB_Yb_CombKnoten": 7.07,
-        "NPL_Sr1-PTB_Sr3_CombKnoten": 9.68
-      },
-      "dl_remote_variance_sum_1e36": 143.69,
-      "dl_local_variance_sum_1e36": 27.35,
-      "dl_remote_over_local_ratio": 5.25,
-      "dl_isolated_baseline_std_705km_1e18": 7.63,
-      "exact_unweighted_raw_var_diff_1e36": 141.05,
-      "exact_unweighted_wn_var_diff_1e36": 21.11,
-      "exact_unweighted_net_var_diff_1e36": 119.94,
-      "exact_unweighted_isolated_baseline_std_705km_1e18": 7.74
+    "NPL_YbE3": {
+     "n_pairs": 6,
+     "spearman_rho": 0.883,
+     "spearman_p": 0.0198
     },
-    "pairs": {
-      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
-        "n_valid_seconds": 2640310,
-        "n_days_ge_1h": 44,
-        "sigma_y_100s_1e18": 872.5,
-        "median_daily_white_u_1e18": 36.7,
-        "daily_birge_B": 1.2,
-        "excess_daily_std_tau_DL_1e18": 24.76,
-        "excess_adev_40ks_1e18": 32.9,
-        "adev_40ks_over_white": 1.25
-      },
-      "NPL_YbE3-NPL_Sr1": {
-        "n_valid_seconds": 910415,
-        "n_days_ge_1h": 18,
-        "sigma_y_100s_1e18": 333.5,
-        "median_daily_white_u_1e18": 14.8,
-        "daily_birge_B": 0.99,
-        "excess_daily_std_tau_DL_1e18": 0.0,
-        "excess_adev_40ks_1e18": 0.0,
-        "adev_40ks_over_white": 0.9
-      },
-      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-        "n_valid_seconds": 1553720,
-        "n_days_ge_1h": 35,
-        "sigma_y_100s_1e18": 91.8,
-        "median_daily_white_u_1e18": 4.8,
-        "daily_birge_B": 2.03,
-        "excess_daily_std_tau_DL_1e18": 7.86,
-        "excess_adev_40ks_1e18": 8.12,
-        "adev_40ks_over_white": 2.03
-      },
-      "NPL_YbE3-PTB_Yb_CombKnoten": {
-        "n_valid_seconds": 374671,
-        "n_days_ge_1h": 15,
-        "sigma_y_100s_1e18": 314.7,
-        "median_daily_white_u_1e18": 20.3,
-        "daily_birge_B": 1.09,
-        "excess_daily_std_tau_DL_1e18": 8.68,
-        "excess_adev_40ks_1e18": 12.98,
-        "adev_40ks_over_white": 1.3
-      },
-      "PTB_Yb_CombKnoten-NPL_Sr1": {
-        "n_valid_seconds": 631040,
-        "n_days_ge_1h": 23,
-        "sigma_y_100s_1e18": 98.9,
-        "median_daily_white_u_1e18": 6.2,
-        "daily_birge_B": 2.03,
-        "excess_daily_std_tau_DL_1e18": 10.61,
-        "excess_adev_40ks_1e18": 8.42,
-        "adev_40ks_over_white": 1.97
-      },
-      "NPL_Sr1-PTB_Sr3_CombKnoten": {
-        "n_valid_seconds": 465853,
-        "n_days_ge_1h": 17,
-        "sigma_y_100s_1e18": 56.6,
-        "median_daily_white_u_1e18": 3.1,
-        "daily_birge_B": 3.21,
-        "excess_daily_std_tau_DL_1e18": 9.65,
-        "excess_adev_40ks_1e18": 5.95,
-        "adev_40ks_over_white": 2.33
-      },
-      "PTB_Yb_CombKnoten-INRIM_ITYb1": {
-        "n_valid_seconds": 274615,
-        "n_days_ge_1h": 20,
-        "sigma_y_100s_1e18": 342.9,
-        "median_daily_white_u_1e18": 26.9,
-        "daily_birge_B": 1.15,
-        "excess_daily_std_tau_DL_1e18": 14.81,
-        "excess_adev_40ks_1e18": 7.26,
-        "adev_40ks_over_white": 1.09
-      },
-      "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
-        "n_valid_seconds": 202965,
-        "n_days_ge_1h": 16,
-        "sigma_y_100s_1e18": 316.3,
-        "median_daily_white_u_1e18": 29.0,
-        "daily_birge_B": 1.47,
-        "excess_daily_std_tau_DL_1e18": 27.92,
-        "excess_adev_40ks_1e18": 17.06,
-        "adev_40ks_over_white": 1.47
-      },
-      "INRIM_ITYb1-NPL_Sr1": {
-        "n_valid_seconds": 141224,
-        "n_days_ge_1h": 12,
-        "sigma_y_100s_1e18": 303.2,
-        "median_daily_white_u_1e18": 25.6,
-        "daily_birge_B": 1.23,
-        "excess_daily_std_tau_DL_1e18": 18.23,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      }
+    "PTB_Sr3": {
+     "n_pairs": 5,
+     "spearman_rho": 0.975,
+     "spearman_p": 0.0048
     },
-    "pre_mjd_60035_overlap_control": {
-      "NPL_YbE3-NPL_Sr1": {
-        "n_valid_seconds": 910415,
-        "n_days_ge_1h": 18,
-        "sigma_y_100s_1e18": 333.5,
-        "median_daily_white_u_1e18": 14.8,
-        "daily_birge_B": 0.99,
-        "excess_daily_std_tau_DL_1e18": 0.0,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      },
-      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-        "n_valid_seconds": 989389,
-        "n_days_ge_1h": 23,
-        "sigma_y_100s_1e18": 83.9,
-        "median_daily_white_u_1e18": 4.6,
-        "daily_birge_B": 2.33,
-        "excess_daily_std_tau_DL_1e18": 9.19,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      },
-      "PTB_Yb_CombKnoten-NPL_Sr1": {
-        "n_valid_seconds": 376798,
-        "n_days_ge_1h": 12,
-        "sigma_y_100s_1e18": 88.8,
-        "median_daily_white_u_1e18": 4.9,
-        "daily_birge_B": 1.78,
-        "excess_daily_std_tau_DL_1e18": 7.74,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      },
-      "NPL_Sr1-PTB_Sr3_CombKnoten": {
-        "n_valid_seconds": 357218,
-        "n_days_ge_1h": 12,
-        "sigma_y_100s_1e18": 55.1,
-        "median_daily_white_u_1e18": 3.1,
-        "daily_birge_B": 3.31,
-        "excess_daily_std_tau_DL_1e18": 9.47,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      }
+    "PTB_Yb": {
+     "n_pairs": 4,
+     "spearman_rho": 0.8,
+     "spearman_p": 0.2
     }
+   }
   },
-  "five_tide_600s_regression": {
-    "pairs": {
-      "NPL_YbE3-NPL_Sr1": {
-        "n_600s_bins": 1839,
-        "M2_amp_raw_1e18": 2.3,
-        "S2_amp_raw_1e18": 5.2,
-        "K1_amp_raw_1e18": 10.3,
-        "O1_amp_raw_1e18": 4.4,
-        "M2_over_S2_raw": 0.44,
-        "M2_amp_daily_demeaned_1e18": 3.3,
-        "S2_amp_daily_demeaned_1e18": 6.1,
-        "M2_over_S2_daily_demeaned": 0.54,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 3.2,
-          "S2_amp_1e18": 6.1,
-          "S1_amp_1e18": 43.6,
-          "M2_over_S2": 0.52
-        },
-        "p_perm_6h_block": 0.906,
-        "p_perm_6h_block_demeaned": 0.808,
-        "p_perm_whole_day_date": 0.83,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      },
-      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-        "n_600s_bins": 2743,
-        "M2_amp_raw_1e18": 10.6,
-        "S2_amp_raw_1e18": 12.8,
-        "K1_amp_raw_1e18": 7.3,
-        "O1_amp_raw_1e18": 3.0,
-        "M2_over_S2_raw": 0.83,
-        "M2_amp_daily_demeaned_1e18": 15.7,
-        "S2_amp_daily_demeaned_1e18": 16.0,
-        "M2_over_S2_daily_demeaned": 0.98,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 15.5,
-          "S2_amp_1e18": 15.6,
-          "S1_amp_1e18": 36.1,
-          "M2_over_S2": 0.99
-        },
-        "p_perm_6h_block": 0.322,
-        "p_perm_6h_block_demeaned": 0.046,
-        "p_perm_whole_day_date": 0.444,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      },
-      "NPL_YbE3-PTB_Yb_CombKnoten": {
-        "n_600s_bins": 1090,
-        "M2_amp_raw_1e18": 25.2,
-        "S2_amp_raw_1e18": 6.1,
-        "K1_amp_raw_1e18": 11.5,
-        "O1_amp_raw_1e18": 18.8,
-        "M2_over_S2_raw": 4.12,
-        "M2_amp_daily_demeaned_1e18": 24.6,
-        "S2_amp_daily_demeaned_1e18": 2.7,
-        "M2_over_S2_daily_demeaned": 9.06,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 25.4,
-          "S2_amp_1e18": 3.2,
-          "S1_amp_1e18": 93.4,
-          "M2_over_S2": 7.86
-        },
-        "p_perm_6h_block": 0.008,
-        "p_perm_6h_block_demeaned": 0.01,
-        "p_perm_whole_day_date": 0.022,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      },
-      "PTB_Yb_CombKnoten-NPL_Sr1": {
-        "n_600s_bins": 1841,
-        "M2_amp_raw_1e18": 7.7,
-        "S2_amp_raw_1e18": 7.8,
-        "K1_amp_raw_1e18": 12.0,
-        "O1_amp_raw_1e18": 2.8,
-        "M2_over_S2_raw": 0.99,
-        "M2_amp_daily_demeaned_1e18": 6.3,
-        "S2_amp_daily_demeaned_1e18": 7.3,
-        "M2_over_S2_daily_demeaned": 0.87,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 6.5,
-          "S2_amp_1e18": 7.6,
-          "S1_amp_1e18": 37.4,
-          "M2_over_S2": 0.85
-        },
-        "p_perm_6h_block": 0.088,
-        "p_perm_6h_block_demeaned": 0.224,
-        "p_perm_whole_day_date": 0.412,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      },
-      "NPL_Sr1-PTB_Sr3_CombKnoten": {
-        "n_600s_bins": 1255,
-        "M2_amp_raw_1e18": 5.2,
-        "S2_amp_raw_1e18": 3.8,
-        "K1_amp_raw_1e18": 3.6,
-        "O1_amp_raw_1e18": 2.8,
-        "M2_over_S2_raw": 1.39,
-        "M2_amp_daily_demeaned_1e18": 5.1,
-        "S2_amp_daily_demeaned_1e18": 3.5,
-        "M2_over_S2_daily_demeaned": 1.47,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 5.2,
-          "S2_amp_1e18": 3.5,
-          "S1_amp_1e18": 7.3,
-          "M2_over_S2": 1.49
-        },
-        "p_perm_6h_block": 0.018,
-        "p_perm_6h_block_demeaned": 0.02,
-        "p_perm_whole_day_date": 0.092,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      },
-      "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
-        "n_600s_bins": 466,
-        "M2_amp_raw_1e18": 30.6,
-        "S2_amp_raw_1e18": 14.2,
-        "K1_amp_raw_1e18": 39.4,
-        "O1_amp_raw_1e18": 14.2,
-        "M2_over_S2_raw": 2.16,
-        "M2_amp_daily_demeaned_1e18": 22.6,
-        "S2_amp_daily_demeaned_1e18": 14.4,
-        "M2_over_S2_daily_demeaned": 1.58,
-        "six_tide_with_S1_daily_demeaned": {
-          "M2_amp_1e18": 21.4,
-          "S2_amp_1e18": 14.4,
-          "S1_amp_1e18": 28.7,
-          "M2_over_S2": 1.49
-        },
-        "p_perm_6h_block": 0.0,
-        "p_perm_6h_block_demeaned": 0.014,
-        "p_perm_whole_day_date": 0.0,
-        "n_permutations": 500,
-        "permutation_seed": 42
-      }
+  "four_clock_exact_variance_cancellation_705km": {
+   "clocks": [
+    "NPL_YbE3",
+    "NPL_Sr1",
+    "PTB_Yb1E3",
+    "PTB_Sr3"
+   ],
+   "local_0km_variance_sum_1e36": 61.78,
+   "remote_705km_homonuclear_variance_sum_1e36": 168.46,
+   "remote_over_local_variance_ratio": 2.73,
+   "isolated_baseline_std_705km_1e18": 7.3
+  },
+  "simultaneous_1s_common_epoch_4clock_subtraction": {
+   "n_simultaneous_1s_epochs": 212605,
+   "n_common_days_ge_1h": 10,
+   "common_mjds": [
+    60021,
+    60022,
+    60023,
+    60024,
+    60026,
+    60027,
+    60028,
+    60029,
+    60032,
+    60033
+   ],
+   "tau_DL_1e18": {
+    "NPL_YbE3-NPL_Sr1": 0.0,
+    "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 5.23,
+    "NPL_YbE3-PTB_Yb_CombKnoten": 7.07,
+    "NPL_Sr1-PTB_Sr3_CombKnoten": 9.68
+   },
+   "dl_remote_variance_sum_1e36": 143.69,
+   "dl_local_variance_sum_1e36": 27.35,
+   "dl_remote_over_local_ratio": 5.25,
+   "dl_isolated_baseline_std_705km_1e18": 7.63,
+   "exact_unweighted_raw_var_diff_1e36": 141.05,
+   "exact_unweighted_wn_var_diff_1e36": 21.11,
+   "exact_unweighted_net_var_diff_1e36": 119.94,
+   "exact_unweighted_isolated_baseline_std_705km_1e18": 7.74
+  },
+  "pairs": {
+   "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
+    "n_valid_seconds": 2640310,
+    "n_days_ge_1h": 44,
+    "sigma_y_100s_1e18": 872.5,
+    "median_daily_white_u_1e18": 36.7,
+    "daily_birge_B": 1.2,
+    "excess_daily_std_tau_DL_1e18": 24.76,
+    "excess_adev_40ks_1e18": 32.9,
+    "adev_40ks_over_white": 1.25
+   },
+   "NPL_YbE3-NPL_Sr1": {
+    "n_valid_seconds": 910415,
+    "n_days_ge_1h": 18,
+    "sigma_y_100s_1e18": 333.5,
+    "median_daily_white_u_1e18": 14.8,
+    "daily_birge_B": 0.99,
+    "excess_daily_std_tau_DL_1e18": 0.0,
+    "excess_adev_40ks_1e18": 0.0,
+    "adev_40ks_over_white": 0.9
+   },
+   "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
+    "n_valid_seconds": 1553720,
+    "n_days_ge_1h": 35,
+    "sigma_y_100s_1e18": 91.8,
+    "median_daily_white_u_1e18": 4.8,
+    "daily_birge_B": 2.03,
+    "excess_daily_std_tau_DL_1e18": 7.86,
+    "excess_adev_40ks_1e18": 8.12,
+    "adev_40ks_over_white": 2.03
+   },
+   "NPL_YbE3-PTB_Yb_CombKnoten": {
+    "n_valid_seconds": 374671,
+    "n_days_ge_1h": 15,
+    "sigma_y_100s_1e18": 314.7,
+    "median_daily_white_u_1e18": 20.3,
+    "daily_birge_B": 1.09,
+    "excess_daily_std_tau_DL_1e18": 8.68,
+    "excess_adev_40ks_1e18": 12.98,
+    "adev_40ks_over_white": 1.3
+   },
+   "PTB_Yb_CombKnoten-NPL_Sr1": {
+    "n_valid_seconds": 631040,
+    "n_days_ge_1h": 23,
+    "sigma_y_100s_1e18": 98.9,
+    "median_daily_white_u_1e18": 6.2,
+    "daily_birge_B": 2.03,
+    "excess_daily_std_tau_DL_1e18": 10.61,
+    "excess_adev_40ks_1e18": 8.42,
+    "adev_40ks_over_white": 1.97
+   },
+   "NPL_Sr1-PTB_Sr3_CombKnoten": {
+    "n_valid_seconds": 465853,
+    "n_days_ge_1h": 17,
+    "sigma_y_100s_1e18": 56.6,
+    "median_daily_white_u_1e18": 3.1,
+    "daily_birge_B": 3.21,
+    "excess_daily_std_tau_DL_1e18": 9.65,
+    "excess_adev_40ks_1e18": 5.95,
+    "adev_40ks_over_white": 2.33
+   },
+   "PTB_Yb_CombKnoten-INRIM_ITYb1": {
+    "n_valid_seconds": 274615,
+    "n_days_ge_1h": 20,
+    "sigma_y_100s_1e18": 342.9,
+    "median_daily_white_u_1e18": 26.9,
+    "daily_birge_B": 1.15,
+    "excess_daily_std_tau_DL_1e18": 14.81,
+    "excess_adev_40ks_1e18": 7.26,
+    "adev_40ks_over_white": 1.09
+   },
+   "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
+    "n_valid_seconds": 202965,
+    "n_days_ge_1h": 16,
+    "sigma_y_100s_1e18": 316.3,
+    "median_daily_white_u_1e18": 29.0,
+    "daily_birge_B": 1.47,
+    "excess_daily_std_tau_DL_1e18": 27.92,
+    "excess_adev_40ks_1e18": 17.06,
+    "adev_40ks_over_white": 1.47
+   },
+   "INRIM_ITYb1-NPL_Sr1": {
+    "n_valid_seconds": 141224,
+    "n_days_ge_1h": 12,
+    "sigma_y_100s_1e18": 303.2,
+    "median_daily_white_u_1e18": 25.6,
+    "daily_birge_B": 1.23,
+    "excess_daily_std_tau_DL_1e18": 18.23,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   }
+  },
+  "pre_mjd_60035_overlap_control": {
+   "NPL_YbE3-NPL_Sr1": {
+    "n_valid_seconds": 910415,
+    "n_days_ge_1h": 18,
+    "sigma_y_100s_1e18": 333.5,
+    "median_daily_white_u_1e18": 14.8,
+    "daily_birge_B": 0.99,
+    "excess_daily_std_tau_DL_1e18": 0.0,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   },
+   "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
+    "n_valid_seconds": 989389,
+    "n_days_ge_1h": 23,
+    "sigma_y_100s_1e18": 83.9,
+    "median_daily_white_u_1e18": 4.6,
+    "daily_birge_B": 2.33,
+    "excess_daily_std_tau_DL_1e18": 9.19,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   },
+   "PTB_Yb_CombKnoten-NPL_Sr1": {
+    "n_valid_seconds": 376798,
+    "n_days_ge_1h": 12,
+    "sigma_y_100s_1e18": 88.8,
+    "median_daily_white_u_1e18": 4.9,
+    "daily_birge_B": 1.78,
+    "excess_daily_std_tau_DL_1e18": 7.74,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   },
+   "NPL_Sr1-PTB_Sr3_CombKnoten": {
+    "n_valid_seconds": 357218,
+    "n_days_ge_1h": 12,
+    "sigma_y_100s_1e18": 55.1,
+    "median_daily_white_u_1e18": 3.1,
+    "daily_birge_B": 3.31,
+    "excess_daily_std_tau_DL_1e18": 9.47,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   }
+  }
+ },
+ "five_tide_600s_regression": {
+  "pairs": {
+   "NPL_YbE3-NPL_Sr1": {
+    "n_600s_bins": 1839,
+    "M2_amp_raw_1e18": 2.3,
+    "S2_amp_raw_1e18": 5.2,
+    "K1_amp_raw_1e18": 10.3,
+    "O1_amp_raw_1e18": 4.4,
+    "M2_over_S2_raw": 0.44,
+    "M2_amp_daily_demeaned_1e18": 3.3,
+    "S2_amp_daily_demeaned_1e18": 6.1,
+    "M2_over_S2_daily_demeaned": 0.54,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 3.2,
+     "S2_amp_1e18": 6.1,
+     "S1_amp_1e18": 43.6,
+     "M2_over_S2": 0.52
     },
-    "homonuclear_705km_fisher_6h_block": {
-      "chi2_df4": 17.69,
-      "p_value": 0.0014
+    "p_perm_6h_block": 0.906,
+    "p_perm_6h_block_demeaned": 0.808,
+    "p_perm_whole_day_date": 0.83,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   },
+   "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
+    "n_600s_bins": 2743,
+    "M2_amp_raw_1e18": 10.6,
+    "S2_amp_raw_1e18": 12.8,
+    "K1_amp_raw_1e18": 7.3,
+    "O1_amp_raw_1e18": 3.0,
+    "M2_over_S2_raw": 0.83,
+    "M2_amp_daily_demeaned_1e18": 15.7,
+    "S2_amp_daily_demeaned_1e18": 16.0,
+    "M2_over_S2_daily_demeaned": 0.98,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 15.5,
+     "S2_amp_1e18": 15.6,
+     "S1_amp_1e18": 36.1,
+     "M2_over_S2": 0.99
     },
-    "homonuclear_705km_fisher_6h_block_demeaned": {
-      "chi2_df4": 17.03,
-      "p_value": 0.0019
+    "p_perm_6h_block": 0.322,
+    "p_perm_6h_block_demeaned": 0.046,
+    "p_perm_whole_day_date": 0.444,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   },
+   "NPL_YbE3-PTB_Yb_CombKnoten": {
+    "n_600s_bins": 1090,
+    "M2_amp_raw_1e18": 25.2,
+    "S2_amp_raw_1e18": 6.1,
+    "K1_amp_raw_1e18": 11.5,
+    "O1_amp_raw_1e18": 18.8,
+    "M2_over_S2_raw": 4.12,
+    "M2_amp_daily_demeaned_1e18": 24.6,
+    "S2_amp_daily_demeaned_1e18": 2.7,
+    "M2_over_S2_daily_demeaned": 9.06,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 25.4,
+     "S2_amp_1e18": 3.2,
+     "S1_amp_1e18": 93.4,
+     "M2_over_S2": 7.86
     },
-    "homonuclear_705km_fisher_whole_day_date": {
-      "chi2_df4": 12.41,
-      "p_value": 0.0146
+    "p_perm_6h_block": 0.008,
+    "p_perm_6h_block_demeaned": 0.01,
+    "p_perm_whole_day_date": 0.022,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   },
+   "PTB_Yb_CombKnoten-NPL_Sr1": {
+    "n_600s_bins": 1841,
+    "M2_amp_raw_1e18": 7.7,
+    "S2_amp_raw_1e18": 7.8,
+    "K1_amp_raw_1e18": 12.0,
+    "O1_amp_raw_1e18": 2.8,
+    "M2_over_S2_raw": 0.99,
+    "M2_amp_daily_demeaned_1e18": 6.3,
+    "S2_amp_daily_demeaned_1e18": 7.3,
+    "M2_over_S2_daily_demeaned": 0.87,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 6.5,
+     "S2_amp_1e18": 7.6,
+     "S1_amp_1e18": 37.4,
+     "M2_over_S2": 0.85
     },
-    "common_window_705km_4pair_phase_clustering": {
-      "window_mjd": [
-        60018.5,
-        60034.2
-      ],
-      "frame": "y_NPL - y_PTB",
-      "amplitudes_1e18": {
-        "NPL_Sr1-PTB_Sr3_CombKnoten": 2.4,
-        "NPL_YbE3-PTB_Yb_CombKnoten": 26.9,
-        "PTB_Yb_CombKnoten-NPL_Sr1": 6.4,
-        "NPL_YbE3-PTB_Sr3_CombKnoten": 17.4
-      },
-      "phases_deg": {
-        "NPL_Sr1-PTB_Sr3_CombKnoten": 217.2,
-        "NPL_YbE3-PTB_Yb_CombKnoten": 161.4,
-        "PTB_Yb_CombKnoten-NPL_Sr1": 51.5,
-        "NPL_YbE3-PTB_Sr3_CombKnoten": 218.5
-      },
-      "mean_phase_deg": 183.8,
-      "rayleigh_resultant_R": 0.477,
-      "simultaneous_707bin_heteronuclear_YbE3_minus_Sr_species_frame": {
-        "n_simultaneous_600s_bins": 707,
-        "frame": "y_YbE3 - y_Sr (Delta K_alpha = -6.01)",
-        "amplitudes_1e18": {
-          "NPL_YbE3-PTB_Sr3_CombKnoten": 8.6,
-          "PTB_Yb_CombKnoten-NPL_Sr1": 8.8,
-          "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 8.5
-        },
-        "phases_deg": {
-          "NPL_YbE3-PTB_Sr3_CombKnoten": 267.0,
-          "PTB_Yb_CombKnoten-NPL_Sr1": 280.2,
-          "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 260.8
-        },
-        "rayleigh_resultant_R": 0.99,
-        "p_perm_6h_block_R": 0.019,
-        "independent_column_shuffle_scope": "Diagnostic only: independently shuffling ratios breaks shared-clock covariance; use joint UTC-block p-values for inference.",
-        "p_perm_joint_utc_6h_block_R": 0.023,
-        "p_perm_joint_utc_day_block_R": 0.043,
-        "joint_utc_6h_block_null": {
-          "block_hours": 6,
-          "n_blocks": 37,
-          "n_permutations": 1000,
-          "seed": 42,
-          "shared_timestamp_permutation": true,
-          "null_mean_R": 0.624370142729576,
-          "exceedances": 22,
-          "p_value": 0.022977022977022976,
-          "method": "Joint UTC-block date-label permutation; ratio vectors and within-block offsets retained.",
-          "assumption": "UTC blocks are exchangeable under the null; longer-range serial dependence is not preserved."
-        },
-        "joint_utc_day_block_null": {
-          "block_hours": 24,
-          "n_blocks": 12,
-          "n_permutations": 1000,
-          "seed": 42,
-          "shared_timestamp_permutation": true,
-          "null_mean_R": 0.6969336101542397,
-          "exceedances": 42,
-          "p_value": 0.04295704295704296,
-          "method": "Joint UTC-block date-label permutation; ratio vectors and within-block offsets retained.",
-          "assumption": "UTC blocks are exchangeable under the null; longer-range serial dependence is not preserved."
-        },
-        "same_three_ratios_geographic_sign_R": 0.3581165425312511,
-        "sampling_scope": "Intersection of occupied 600 s bins; within-bin valid seconds can differ between ratios.",
-        "statistical_role": "Joint-network consistency result across three contemporaneous ratios sharing clock inputs on the 4-clock NPL-PTB network."
-      }
+    "p_perm_6h_block": 0.088,
+    "p_perm_6h_block_demeaned": 0.224,
+    "p_perm_whole_day_date": 0.412,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   },
+   "NPL_Sr1-PTB_Sr3_CombKnoten": {
+    "n_600s_bins": 1255,
+    "M2_amp_raw_1e18": 5.2,
+    "S2_amp_raw_1e18": 3.8,
+    "K1_amp_raw_1e18": 3.6,
+    "O1_amp_raw_1e18": 2.8,
+    "M2_over_S2_raw": 1.39,
+    "M2_amp_daily_demeaned_1e18": 5.1,
+    "S2_amp_daily_demeaned_1e18": 3.5,
+    "M2_over_S2_daily_demeaned": 1.47,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 5.2,
+     "S2_amp_1e18": 3.5,
+     "S1_amp_1e18": 7.3,
+     "M2_over_S2": 1.49
+    },
+    "p_perm_6h_block": 0.018,
+    "p_perm_6h_block_demeaned": 0.02,
+    "p_perm_whole_day_date": 0.092,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   },
+   "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
+    "n_600s_bins": 466,
+    "M2_amp_raw_1e18": 30.6,
+    "S2_amp_raw_1e18": 14.2,
+    "K1_amp_raw_1e18": 39.4,
+    "O1_amp_raw_1e18": 14.2,
+    "M2_over_S2_raw": 2.16,
+    "M2_amp_daily_demeaned_1e18": 22.6,
+    "S2_amp_daily_demeaned_1e18": 14.4,
+    "M2_over_S2_daily_demeaned": 1.58,
+    "six_tide_with_S1_daily_demeaned": {
+     "M2_amp_1e18": 21.4,
+     "S2_amp_1e18": 14.4,
+     "S1_amp_1e18": 28.7,
+     "M2_over_S2": 1.49
+    },
+    "p_perm_6h_block": 0.0,
+    "p_perm_6h_block_demeaned": 0.014,
+    "p_perm_whole_day_date": 0.0,
+    "n_permutations": 500,
+    "permutation_seed": 42
+   }
+  },
+  "homonuclear_705km_fisher_6h_block": {
+   "chi2_df4": 17.69,
+   "p_value": 0.0014
+  },
+  "homonuclear_705km_fisher_6h_block_demeaned": {
+   "chi2_df4": 17.03,
+   "p_value": 0.0019
+  },
+  "homonuclear_705km_fisher_whole_day_date": {
+   "chi2_df4": 12.41,
+   "p_value": 0.0146
+  },
+  "common_window_705km_4pair_phase_clustering": {
+   "window_mjd": [
+    60018.5,
+    60034.2
+   ],
+   "frame": "y_NPL - y_PTB",
+   "amplitudes_1e18": {
+    "NPL_Sr1-PTB_Sr3_CombKnoten": 2.4,
+    "NPL_YbE3-PTB_Yb_CombKnoten": 26.9,
+    "PTB_Yb_CombKnoten-NPL_Sr1": 6.4,
+    "NPL_YbE3-PTB_Sr3_CombKnoten": 17.4
+   },
+   "phases_deg": {
+    "NPL_Sr1-PTB_Sr3_CombKnoten": 217.2,
+    "NPL_YbE3-PTB_Yb_CombKnoten": 161.4,
+    "PTB_Yb_CombKnoten-NPL_Sr1": 51.5,
+    "NPL_YbE3-PTB_Sr3_CombKnoten": 218.5
+   },
+   "mean_phase_deg": 183.8,
+   "rayleigh_resultant_R": 0.477,
+   "simultaneous_707bin_heteronuclear_YbE3_minus_Sr_species_frame": {
+    "n_simultaneous_600s_bins": 707,
+    "frame": "y_YbE3 - y_Sr (Delta K_alpha = -6.01)",
+    "amplitudes_1e18": {
+     "NPL_YbE3-PTB_Sr3_CombKnoten": 8.6,
+     "PTB_Yb_CombKnoten-NPL_Sr1": 8.8,
+     "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 8.5
+    },
+    "phases_deg": {
+     "NPL_YbE3-PTB_Sr3_CombKnoten": 267.0,
+     "PTB_Yb_CombKnoten-NPL_Sr1": 280.2,
+     "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": 260.8
+    },
+    "rayleigh_resultant_R": 0.99,
+    "p_perm_6h_block_R": 0.019,
+    "independent_column_shuffle_scope": "Diagnostic only: independently shuffling ratios breaks shared-clock covariance; use joint UTC-block p-values for inference.",
+    "p_perm_joint_utc_6h_block_R": 0.023,
+    "p_perm_joint_utc_day_block_R": 0.043,
+    "joint_utc_6h_block_null": {
+     "block_hours": 6,
+     "n_blocks": 37,
+     "n_permutations": 1000,
+     "seed": 42,
+     "shared_timestamp_permutation": true,
+     "null_mean_R": 0.624370142729576,
+     "exceedances": 22,
+     "p_value": 0.022977022977022976,
+     "method": "Joint UTC-block date-label permutation; ratio vectors and within-block offsets retained.",
+     "assumption": "UTC blocks are exchangeable under the null; longer-range serial dependence is not preserved."
+    },
+    "joint_utc_day_block_null": {
+     "block_hours": 24,
+     "n_blocks": 12,
+     "n_permutations": 1000,
+     "seed": 42,
+     "shared_timestamp_permutation": true,
+     "null_mean_R": 0.6969336101542397,
+     "exceedances": 42,
+     "p_value": 0.04295704295704296,
+     "method": "Joint UTC-block date-label permutation; ratio vectors and within-block offsets retained.",
+     "assumption": "UTC blocks are exchangeable under the null; longer-range serial dependence is not preserved."
+    },
+    "same_three_ratios_geographic_sign_R": 0.3581165425312511,
+    "sampling_scope": "Intersection of occupied 600 s bins; within-bin valid seconds can differ between ratios.",
+    "statistical_role": "Joint-network consistency result across three contemporaneous ratios sharing clock inputs on the 4-clock NPL-PTB network."
+   }
+  }
+ },
+ "star_topology_closure_audit": {
+  "network_topology": "Star tree centered on LNE-SYRTE (Paris); first Betti number b_1 = E - V + 1 = 3 - 4 + 1 = 0",
+  "triangles": {
+   "NPL_YbE3__PTB_Yb1E3__NPL_Sr1": {
+    "n_simultaneous_seconds": 280947,
+    "simultaneous_hours": 78.04,
+    "mean_closure": -4.39e-20,
+    "std_closure": 1.27e-19
+   },
+   "NPL_YbE3__INRIM_ITYb1__PTB_Yb1E3": {
+    "n_simultaneous_seconds": 62446,
+    "simultaneous_hours": 17.35,
+    "mean_closure": 8.45e-23,
+    "std_closure": 1.37e-21
+   }
+  },
+  "table_II_campaign_non_closure_1e18_range": [
+   5.1,
+   7.9
+  ],
+  "physical_interpretation": "Simultaneous 1-second closure vanishes to 10^-20 - 10^-23 because the star-tree topology retraces identical fiber segments; Table II's 5.1-7.9 x 10^-18 campaign non-closure therefore proves temporal epoch-sampling drift across non-overlapping uptime windows sampling the time-varying tau_DL ~ 9-15 x 10^-18 sub-mHz floor."
+ },
+ "zero_fiber_705km_antiphase_coherence": {
+  "pair_1": "NPL_YbE3-NPL_Sr1 (100% local at NPL, Teddington UK, 0 km fiber)",
+  "pair_2": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten (100% local single Paul trap at PTB, Braunschweig DE, 0 km fiber)",
+  "baseline_separation_km": 705.0,
+  "shared_clocks": 0,
+  "shared_fiber_links": 0,
+  "shared_gnss_satellites": 0,
+  "delta_K_alpha_pair_1": -6.01,
+  "delta_K_alpha_pair_2": 6.95,
+  "delta_K_alpha_product": -41.77,
+  "predicted_phase_sign": "negative (anti-phase, pi shift due to opposite-sign Delta K_alpha)",
+  "windows": {
+   "W_3h_f_le_1000uHz": {
+    "n_windows": 45,
+    "mean_pa": -0.335,
+    "se_pa": 0.091,
+    "z_score": -3.69,
+    "p_two_sided": 0.00022,
+    "window_shuffle_null_mean": 0.002,
+    "window_shuffle_null_std": 0.103,
+    "differential_vs_null": -0.336,
+    "z_vs_window_shuffle_null": -3.27,
+    "p_window_shuffle_two_sided": 0.001
+   },
+   "W_3h_f_le_500uHz": {
+    "n_windows": 45,
+    "mean_pa": -0.292,
+    "se_pa": 0.104,
+    "z_score": -2.8,
+    "p_two_sided": 0.00519,
+    "window_shuffle_null_mean": -0.003,
+    "window_shuffle_null_std": 0.107,
+    "differential_vs_null": -0.288,
+    "z_vs_window_shuffle_null": -2.71,
+    "p_window_shuffle_two_sided": 0.007
+   },
+   "W_3h_f_le_300uHz": {
+    "n_windows": 45,
+    "mean_pa": -0.306,
+    "se_pa": 0.105,
+    "z_score": -2.92,
+    "p_two_sided": 0.00347,
+    "window_shuffle_null_mean": -0.0,
+    "window_shuffle_null_std": 0.103,
+    "differential_vs_null": -0.305,
+    "z_vs_window_shuffle_null": -2.97,
+    "p_window_shuffle_two_sided": 0.003
+   },
+   "W_6h_f_le_500uHz": {
+    "n_windows": 23,
+    "mean_pa": -0.388,
+    "se_pa": 0.143,
+    "z_score": -2.71,
+    "p_two_sided": 0.00678,
+    "window_shuffle_null_mean": -0.015,
+    "window_shuffle_null_std": 0.141,
+    "differential_vs_null": -0.373,
+    "z_vs_window_shuffle_null": -2.64,
+    "p_window_shuffle_two_sided": 0.008
+   },
+   "W_8h_f_le_500uHz": {
+    "n_windows": 16,
+    "mean_pa": -0.451,
+    "se_pa": 0.166,
+    "z_score": -2.72,
+    "p_two_sided": 0.00655,
+    "window_shuffle_null_mean": 0.003,
+    "window_shuffle_null_std": 0.17,
+    "differential_vs_null": -0.453,
+    "z_vs_window_shuffle_null": -2.67,
+    "p_window_shuffle_two_sided": 0.011
+   }
+  }
+ },
+ "zero_satellite_global_clock_field_localisation": {
+  "fixed_lambda_km": 4201.0,
+  "n_modes_10_500uHz": 43,
+  "target_coordinates_withheld": true,
+  "pairs": {
+   "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
+    "ionofree_all_stations": {
+     "n_reference_stations": 366,
+     "estimated_lat_deg": 51.0,
+     "estimated_lon_deg": 23.3,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 896.0,
+     "truth_signed_correlation": 0.375,
+     "truth_score_percentile_global": 99.0,
+     "n_positive_modes_of_43": 32,
+     "positive_modes_binomial_p": 0.001,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.1112,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0535,
+     "even_modes_error_km": 810.0,
+     "odd_modes_error_km": 1195.0,
+     "odd_even_separation_km": 947.0,
+     "geometry_null_median_error_km": 9212.0,
+     "p_localisation_error_le_observed": 0.014,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 955.0,
+      "estimated_lat_deg": 54.1,
+      "estimated_lon_deg": 24.5,
+      "geometry_null_median_error_km": 8997.0,
+      "p_localisation_error_le_observed": 0.016,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "ionofree_excl_300km": {
+     "n_reference_stations": 360,
+     "estimated_lat_deg": 51.5,
+     "estimated_lon_deg": 22.8,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 850.0,
+     "truth_signed_correlation": 0.378,
+     "truth_score_percentile_global": 99.1,
+     "n_positive_modes_of_43": 31,
+     "positive_modes_binomial_p": 0.0027,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.1137,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0533,
+     "even_modes_error_km": 732.0,
+     "odd_modes_error_km": 1175.0,
+     "odd_even_separation_km": 876.0,
+     "geometry_null_median_error_km": 8875.0,
+     "p_localisation_error_le_observed": 0.016,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 929.0,
+      "estimated_lat_deg": 54.1,
+      "estimated_lon_deg": 24.1,
+      "geometry_null_median_error_km": 8923.0,
+      "p_localisation_error_le_observed": 0.022,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "ionofree_excl_500km": {
+     "n_reference_stations": 343,
+     "estimated_lat_deg": 51.7,
+     "estimated_lon_deg": 24.0,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 928.0,
+     "truth_signed_correlation": 0.33,
+     "truth_score_percentile_global": 98.8,
+     "n_positive_modes_of_43": 30,
+     "positive_modes_binomial_p": 0.0069,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.0995,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0451,
+     "even_modes_error_km": 819.0,
+     "odd_modes_error_km": 1240.0,
+     "odd_even_separation_km": 942.0,
+     "geometry_null_median_error_km": 9198.0,
+     "p_localisation_error_le_observed": 0.014,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1029.0,
+      "estimated_lat_deg": 54.4,
+      "estimated_lon_deg": 25.6,
+      "geometry_null_median_error_km": 9186.0,
+      "p_localisation_error_le_observed": 0.012,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "precise_all_stations": {
+     "n_reference_stations": 366,
+     "estimated_lat_deg": 53.6,
+     "estimated_lon_deg": 25.8,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 1036.0,
+     "truth_signed_correlation": 0.419,
+     "truth_score_percentile_global": 98.8,
+     "n_positive_modes_of_43": 31,
+     "positive_modes_binomial_p": 0.0027,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.1194,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0634,
+     "even_modes_error_km": 702.0,
+     "odd_modes_error_km": 1659.0,
+     "odd_even_separation_km": 1036.0,
+     "geometry_null_median_error_km": 9144.0,
+     "p_localisation_error_le_observed": 0.018,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1052.0,
+      "estimated_lat_deg": 55.3,
+      "estimated_lon_deg": 25.7,
+      "geometry_null_median_error_km": 9010.0,
+      "p_localisation_error_le_observed": 0.022,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "precise_excl_300km": {
+     "n_reference_stations": 360,
+     "estimated_lat_deg": 53.9,
+     "estimated_lon_deg": 24.8,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 972.0,
+     "truth_signed_correlation": 0.424,
+     "truth_score_percentile_global": 99.0,
+     "n_positive_modes_of_43": 30,
+     "positive_modes_binomial_p": 0.0069,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.1223,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0639,
+     "even_modes_error_km": 695.0,
+     "odd_modes_error_km": 1643.0,
+     "odd_even_separation_km": 1031.0,
+     "geometry_null_median_error_km": 8854.0,
+     "p_localisation_error_le_observed": 0.014,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1015.0,
+      "estimated_lat_deg": 55.3,
+      "estimated_lon_deg": 25.1,
+      "geometry_null_median_error_km": 8875.0,
+      "p_localisation_error_le_observed": 0.014,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "precise_excl_500km": {
+     "n_reference_stations": 343,
+     "estimated_lat_deg": 53.8,
+     "estimated_lon_deg": 25.1,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 991.0,
+     "truth_signed_correlation": 0.391,
+     "truth_score_percentile_global": 98.9,
+     "n_positive_modes_of_43": 31,
+     "positive_modes_binomial_p": 0.0027,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.1081,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0628,
+     "even_modes_error_km": 702.0,
+     "odd_modes_error_km": 1606.0,
+     "odd_even_separation_km": 981.0,
+     "geometry_null_median_error_km": 9033.0,
+     "p_localisation_error_le_observed": 0.018,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1046.0,
+      "estimated_lat_deg": 55.3,
+      "estimated_lon_deg": 25.6,
+      "geometry_null_median_error_km": 9036.0,
+      "p_localisation_error_le_observed": 0.016,
+      "p_best_score_ge_observed": 0.002
+     }
+    },
+    "day_shuffle_temporal_null_precise": {
+     "n_permutations": 200,
+     "real_coarse_error_km": 1066.0,
+     "day_shuffle_median_error_km": 8448.0,
+     "real_truth_kernel_corr": 0.277,
+     "day_shuffle_mean_corr": 0.038,
+     "day_shuffle_std_corr": 0.108,
+     "p_truth_corr_ge_observed": 0.0149
     }
-  },
-  "star_topology_closure_audit": {
-    "network_topology": "Star tree centered on LNE-SYRTE (Paris); first Betti number b_1 = E - V + 1 = 3 - 4 + 1 = 0",
-    "triangles": {
-      "NPL_YbE3__PTB_Yb1E3__NPL_Sr1": {
-        "n_simultaneous_seconds": 280947,
-        "simultaneous_hours": 78.04,
-        "mean_closure": -4.39e-20,
-        "std_closure": 1.27e-19
-      },
-      "NPL_YbE3__INRIM_ITYb1__PTB_Yb1E3": {
-        "n_simultaneous_seconds": 62446,
-        "simultaneous_hours": 17.35,
-        "mean_closure": 8.45e-23,
-        "std_closure": 1.37e-21
-      }
+   },
+   "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
+    "ionofree_all_stations": {
+     "n_reference_stations": 366,
+     "estimated_lat_deg": 50.1,
+     "estimated_lon_deg": 22.6,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 879.0,
+     "truth_signed_correlation": 0.145,
+     "truth_score_percentile_global": 99.2,
+     "n_positive_modes_of_43": 23,
+     "positive_modes_binomial_p": 0.3804,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.045,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0074,
+     "even_modes_error_km": 1382.0,
+     "odd_modes_error_km": 7519.0,
+     "odd_even_separation_km": 7194.0,
+     "geometry_null_median_error_km": 9477.0,
+     "p_localisation_error_le_observed": 0.01,
+     "p_best_score_ge_observed": 0.0499,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 704.0,
+      "estimated_lat_deg": 52.1,
+      "estimated_lon_deg": 20.8,
+      "geometry_null_median_error_km": 9661.0,
+      "p_localisation_error_le_observed": 0.006,
+      "p_best_score_ge_observed": 0.1277
+     }
     },
-    "table_II_campaign_non_closure_1e18_range": [
-      5.1,
-      7.9
-    ],
-    "physical_interpretation": "Simultaneous 1-second closure vanishes to 10^-20 - 10^-23 because the star-tree topology retraces identical fiber segments; Table II's 5.1-7.9 x 10^-18 campaign non-closure therefore proves temporal epoch-sampling drift across non-overlapping uptime windows sampling the time-varying tau_DL ~ 9-15 x 10^-18 sub-mHz floor."
-  },
-  "zero_fiber_705km_antiphase_coherence": {
-    "pair_1": "NPL_YbE3-NPL_Sr1 (100% local at NPL, Teddington UK, 0 km fiber)",
-    "pair_2": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten (100% local single Paul trap at PTB, Braunschweig DE, 0 km fiber)",
-    "baseline_separation_km": 705.0,
-    "shared_clocks": 0,
-    "shared_fiber_links": 0,
-    "shared_gnss_satellites": 0,
-    "delta_K_alpha_pair_1": -6.01,
-    "delta_K_alpha_pair_2": 6.95,
-    "delta_K_alpha_product": -41.77,
-    "predicted_phase_sign": "negative (anti-phase, pi shift due to opposite-sign Delta K_alpha)",
-    "windows": {
-      "W_3h_f_le_1000uHz": {
-        "n_windows": 45,
-        "mean_pa": -0.335,
-        "se_pa": 0.091,
-        "z_score": -3.69,
-        "p_two_sided": 0.00022,
-        "window_shuffle_null_mean": 0.002,
-        "window_shuffle_null_std": 0.103,
-        "differential_vs_null": -0.336,
-        "z_vs_window_shuffle_null": -3.27,
-        "p_window_shuffle_two_sided": 0.001
-      },
-      "W_3h_f_le_500uHz": {
-        "n_windows": 45,
-        "mean_pa": -0.292,
-        "se_pa": 0.104,
-        "z_score": -2.8,
-        "p_two_sided": 0.00519,
-        "window_shuffle_null_mean": -0.003,
-        "window_shuffle_null_std": 0.107,
-        "differential_vs_null": -0.288,
-        "z_vs_window_shuffle_null": -2.71,
-        "p_window_shuffle_two_sided": 0.007
-      },
-      "W_3h_f_le_300uHz": {
-        "n_windows": 45,
-        "mean_pa": -0.306,
-        "se_pa": 0.105,
-        "z_score": -2.92,
-        "p_two_sided": 0.00347,
-        "window_shuffle_null_mean": -0.0,
-        "window_shuffle_null_std": 0.103,
-        "differential_vs_null": -0.305,
-        "z_vs_window_shuffle_null": -2.97,
-        "p_window_shuffle_two_sided": 0.003
-      },
-      "W_6h_f_le_500uHz": {
-        "n_windows": 23,
-        "mean_pa": -0.388,
-        "se_pa": 0.143,
-        "z_score": -2.71,
-        "p_two_sided": 0.00678,
-        "window_shuffle_null_mean": -0.015,
-        "window_shuffle_null_std": 0.141,
-        "differential_vs_null": -0.373,
-        "z_vs_window_shuffle_null": -2.64,
-        "p_window_shuffle_two_sided": 0.008
-      },
-      "W_8h_f_le_500uHz": {
-        "n_windows": 16,
-        "mean_pa": -0.451,
-        "se_pa": 0.166,
-        "z_score": -2.72,
-        "p_two_sided": 0.00655,
-        "window_shuffle_null_mean": 0.003,
-        "window_shuffle_null_std": 0.17,
-        "differential_vs_null": -0.453,
-        "z_vs_window_shuffle_null": -2.67,
-        "p_window_shuffle_two_sided": 0.011
-      }
+    "ionofree_excl_100km": {
+     "n_reference_stations": 365,
+     "estimated_lat_deg": 49.8,
+     "estimated_lon_deg": 23.0,
+     "true_lat_deg": 52.3,
+     "true_lon_deg": 10.46,
+     "surface_error_km": 918.0,
+     "truth_signed_correlation": 0.142,
+     "truth_score_percentile_global": 98.9,
+     "n_positive_modes_of_43": 24,
+     "positive_modes_binomial_p": 0.2712,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.044,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0071,
+     "even_modes_error_km": 1382.0,
+     "odd_modes_error_km": 7527.0,
+     "odd_even_separation_km": 7201.0,
+     "geometry_null_median_error_km": 8879.0,
+     "p_localisation_error_le_observed": 0.012,
+     "p_best_score_ge_observed": 0.0539,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 704.0,
+      "estimated_lat_deg": 52.1,
+      "estimated_lon_deg": 20.8,
+      "geometry_null_median_error_km": 8961.0,
+      "p_localisation_error_le_observed": 0.006,
+      "p_best_score_ge_observed": 0.1537
+     }
     }
-  },
-  "zero_satellite_global_clock_field_localisation": {
-    "fixed_lambda_km": 4201.0,
-    "n_modes_10_500uHz": 43,
-    "target_coordinates_withheld": true,
-    "pairs": {
-      "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
-        "ionofree_all_stations": {
-          "n_reference_stations": 366,
-          "estimated_lat_deg": 51.0,
-          "estimated_lon_deg": 23.3,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 896.0,
-          "truth_signed_correlation": 0.375,
-          "truth_score_percentile_global": 99.0,
-          "n_positive_modes_of_43": 32,
-          "positive_modes_binomial_p": 0.001,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.1112,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0535,
-          "even_modes_error_km": 810.0,
-          "odd_modes_error_km": 1195.0,
-          "odd_even_separation_km": 947.0,
-          "geometry_null_median_error_km": 9212.0,
-          "p_localisation_error_le_observed": 0.014,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 955.0,
-            "estimated_lat_deg": 54.1,
-            "estimated_lon_deg": 24.5,
-            "geometry_null_median_error_km": 8997.0,
-            "p_localisation_error_le_observed": 0.016,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "ionofree_excl_300km": {
-          "n_reference_stations": 360,
-          "estimated_lat_deg": 51.5,
-          "estimated_lon_deg": 22.8,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 850.0,
-          "truth_signed_correlation": 0.378,
-          "truth_score_percentile_global": 99.1,
-          "n_positive_modes_of_43": 31,
-          "positive_modes_binomial_p": 0.0027,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.1137,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0533,
-          "even_modes_error_km": 732.0,
-          "odd_modes_error_km": 1175.0,
-          "odd_even_separation_km": 876.0,
-          "geometry_null_median_error_km": 8875.0,
-          "p_localisation_error_le_observed": 0.016,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 929.0,
-            "estimated_lat_deg": 54.1,
-            "estimated_lon_deg": 24.1,
-            "geometry_null_median_error_km": 8923.0,
-            "p_localisation_error_le_observed": 0.022,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "ionofree_excl_500km": {
-          "n_reference_stations": 343,
-          "estimated_lat_deg": 51.7,
-          "estimated_lon_deg": 24.0,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 928.0,
-          "truth_signed_correlation": 0.33,
-          "truth_score_percentile_global": 98.8,
-          "n_positive_modes_of_43": 30,
-          "positive_modes_binomial_p": 0.0069,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.0995,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0451,
-          "even_modes_error_km": 819.0,
-          "odd_modes_error_km": 1240.0,
-          "odd_even_separation_km": 942.0,
-          "geometry_null_median_error_km": 9198.0,
-          "p_localisation_error_le_observed": 0.014,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1029.0,
-            "estimated_lat_deg": 54.4,
-            "estimated_lon_deg": 25.6,
-            "geometry_null_median_error_km": 9186.0,
-            "p_localisation_error_le_observed": 0.012,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "precise_all_stations": {
-          "n_reference_stations": 366,
-          "estimated_lat_deg": 53.6,
-          "estimated_lon_deg": 25.8,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 1036.0,
-          "truth_signed_correlation": 0.419,
-          "truth_score_percentile_global": 98.8,
-          "n_positive_modes_of_43": 31,
-          "positive_modes_binomial_p": 0.0027,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.1194,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0634,
-          "even_modes_error_km": 702.0,
-          "odd_modes_error_km": 1659.0,
-          "odd_even_separation_km": 1036.0,
-          "geometry_null_median_error_km": 9144.0,
-          "p_localisation_error_le_observed": 0.018,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1052.0,
-            "estimated_lat_deg": 55.3,
-            "estimated_lon_deg": 25.7,
-            "geometry_null_median_error_km": 9010.0,
-            "p_localisation_error_le_observed": 0.022,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "precise_excl_300km": {
-          "n_reference_stations": 360,
-          "estimated_lat_deg": 53.9,
-          "estimated_lon_deg": 24.8,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 972.0,
-          "truth_signed_correlation": 0.424,
-          "truth_score_percentile_global": 99.0,
-          "n_positive_modes_of_43": 30,
-          "positive_modes_binomial_p": 0.0069,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.1223,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0639,
-          "even_modes_error_km": 695.0,
-          "odd_modes_error_km": 1643.0,
-          "odd_even_separation_km": 1031.0,
-          "geometry_null_median_error_km": 8854.0,
-          "p_localisation_error_le_observed": 0.014,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1015.0,
-            "estimated_lat_deg": 55.3,
-            "estimated_lon_deg": 25.1,
-            "geometry_null_median_error_km": 8875.0,
-            "p_localisation_error_le_observed": 0.014,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "precise_excl_500km": {
-          "n_reference_stations": 343,
-          "estimated_lat_deg": 53.8,
-          "estimated_lon_deg": 25.1,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 991.0,
-          "truth_signed_correlation": 0.391,
-          "truth_score_percentile_global": 98.9,
-          "n_positive_modes_of_43": 31,
-          "positive_modes_binomial_p": 0.0027,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.1081,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0628,
-          "even_modes_error_km": 702.0,
-          "odd_modes_error_km": 1606.0,
-          "odd_even_separation_km": 981.0,
-          "geometry_null_median_error_km": 9033.0,
-          "p_localisation_error_le_observed": 0.018,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1046.0,
-            "estimated_lat_deg": 55.3,
-            "estimated_lon_deg": 25.6,
-            "geometry_null_median_error_km": 9036.0,
-            "p_localisation_error_le_observed": 0.016,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "day_shuffle_temporal_null_precise": {
-          "n_permutations": 200,
-          "real_coarse_error_km": 1066.0,
-          "day_shuffle_median_error_km": 8448.0,
-          "real_truth_kernel_corr": 0.277,
-          "day_shuffle_mean_corr": 0.038,
-          "day_shuffle_std_corr": 0.108,
-          "p_truth_corr_ge_observed": 0.0149
-        }
-      },
-      "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-        "ionofree_all_stations": {
-          "n_reference_stations": 366,
-          "estimated_lat_deg": 50.1,
-          "estimated_lon_deg": 22.6,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 879.0,
-          "truth_signed_correlation": 0.145,
-          "truth_score_percentile_global": 99.2,
-          "n_positive_modes_of_43": 23,
-          "positive_modes_binomial_p": 0.3804,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.045,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0074,
-          "even_modes_error_km": 1382.0,
-          "odd_modes_error_km": 7519.0,
-          "odd_even_separation_km": 7194.0,
-          "geometry_null_median_error_km": 9477.0,
-          "p_localisation_error_le_observed": 0.01,
-          "p_best_score_ge_observed": 0.0499,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 704.0,
-            "estimated_lat_deg": 52.1,
-            "estimated_lon_deg": 20.8,
-            "geometry_null_median_error_km": 9661.0,
-            "p_localisation_error_le_observed": 0.006,
-            "p_best_score_ge_observed": 0.1277
-          }
-        },
-        "ionofree_excl_100km": {
-          "n_reference_stations": 365,
-          "estimated_lat_deg": 49.8,
-          "estimated_lon_deg": 23.0,
-          "true_lat_deg": 52.3,
-          "true_lon_deg": 10.46,
-          "surface_error_km": 918.0,
-          "truth_signed_correlation": 0.142,
-          "truth_score_percentile_global": 98.9,
-          "n_positive_modes_of_43": 24,
-          "positive_modes_binomial_p": 0.2712,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.044,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0071,
-          "even_modes_error_km": 1382.0,
-          "odd_modes_error_km": 7527.0,
-          "odd_even_separation_km": 7201.0,
-          "geometry_null_median_error_km": 8879.0,
-          "p_localisation_error_le_observed": 0.012,
-          "p_best_score_ge_observed": 0.0539,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 704.0,
-            "estimated_lat_deg": 52.1,
-            "estimated_lon_deg": 20.8,
-            "geometry_null_median_error_km": 8961.0,
-            "p_localisation_error_le_observed": 0.006,
-            "p_best_score_ge_observed": 0.1537
-          }
-        }
-      },
-      "NPL_YbE3-NPL_Sr1": {
-        "precise_all_stations": {
-          "n_reference_stations": 363,
-          "estimated_lat_deg": 41.0,
-          "estimated_lon_deg": 10.3,
-          "true_lat_deg": 51.42,
-          "true_lon_deg": -0.34,
-          "surface_error_km": 1416.0,
-          "truth_signed_correlation": 0.204,
-          "truth_score_percentile_global": 97.3,
-          "n_positive_modes_of_43": 31,
-          "positive_modes_binomial_p": 0.0027,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.0572,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0163,
-          "even_modes_error_km": 1894.0,
-          "odd_modes_error_km": 11836.0,
-          "odd_even_separation_km": 10111.0,
-          "geometry_null_median_error_km": 8773.0,
-          "p_localisation_error_le_observed": 0.024,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1285.0,
-            "estimated_lat_deg": 41.7,
-            "estimated_lon_deg": 8.8,
-            "geometry_null_median_error_km": 8996.0,
-            "p_localisation_error_le_observed": 0.024,
-            "p_best_score_ge_observed": 0.002
-          }
-        },
-        "precise_excl_500km": {
-          "n_reference_stations": 352,
-          "estimated_lat_deg": 41.1,
-          "estimated_lon_deg": 10.2,
-          "true_lat_deg": 51.42,
-          "true_lon_deg": -0.34,
-          "surface_error_km": 1402.0,
-          "truth_signed_correlation": 0.196,
-          "truth_score_percentile_global": 96.8,
-          "n_positive_modes_of_43": 26,
-          "positive_modes_binomial_p": 0.111,
-          "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
-          "mean_mode_corr_odd_cpd_even_idx": 0.0595,
-          "mean_mode_corr_even_cpd_odd_idx": 0.0118,
-          "even_modes_error_km": 1456.0,
-          "odd_modes_error_km": 11906.0,
-          "odd_even_separation_km": 10686.0,
-          "geometry_null_median_error_km": 9130.0,
-          "p_localisation_error_le_observed": 0.022,
-          "p_best_score_ge_observed": 0.002,
-          "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
-            "surface_error_km": 1285.0,
-            "estimated_lat_deg": 41.7,
-            "estimated_lon_deg": 8.8,
-            "geometry_null_median_error_km": 9313.0,
-            "p_localisation_error_le_observed": 0.01,
-            "p_best_score_ge_observed": 0.002
-          }
-        }
-      }
+   },
+   "NPL_YbE3-NPL_Sr1": {
+    "precise_all_stations": {
+     "n_reference_stations": 363,
+     "estimated_lat_deg": 41.0,
+     "estimated_lon_deg": 10.3,
+     "true_lat_deg": 51.42,
+     "true_lon_deg": -0.34,
+     "surface_error_km": 1416.0,
+     "truth_signed_correlation": 0.204,
+     "truth_score_percentile_global": 97.3,
+     "n_positive_modes_of_43": 31,
+     "positive_modes_binomial_p": 0.0027,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.0572,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0163,
+     "even_modes_error_km": 1894.0,
+     "odd_modes_error_km": 11836.0,
+     "odd_even_separation_km": 10111.0,
+     "geometry_null_median_error_km": 8773.0,
+     "p_localisation_error_le_observed": 0.024,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1285.0,
+      "estimated_lat_deg": 41.7,
+      "estimated_lon_deg": 8.8,
+      "geometry_null_median_error_km": 8996.0,
+      "p_localisation_error_le_observed": 0.024,
+      "p_best_score_ge_observed": 0.002
+     }
     },
-    "ptb_two_independent_pairs_separation_km": 112.0,
-    "fisher_combined_independent_sites_df4": {
-      "chi2_df4": 16.0,
-      "p_value": 0.003,
-      "scope": "Conditional Fisher summary, one pair per site; shared GNSS reference dependence is not calibrated."
-    },
-    "fisher_combined_three_pairs": {
-      "chi2_df6": 25.21,
-      "p_value": 0.00031,
-      "scope": "Conditional Fisher summary; shared PTB clocks and GNSS references violate assured independence."
+    "precise_excl_500km": {
+     "n_reference_stations": 352,
+     "estimated_lat_deg": 41.1,
+     "estimated_lon_deg": 10.2,
+     "true_lat_deg": 51.42,
+     "true_lon_deg": -0.34,
+     "surface_error_km": 1402.0,
+     "truth_signed_correlation": 0.196,
+     "truth_score_percentile_global": 96.8,
+     "n_positive_modes_of_43": 26,
+     "positive_modes_binomial_p": 0.111,
+     "positive_modes_binomial_scope": "Nominal independent-mode benchmark only; irregular observation windows correlate Fourier modes.",
+     "mean_mode_corr_odd_cpd_even_idx": 0.0595,
+     "mean_mode_corr_even_cpd_odd_idx": 0.0118,
+     "even_modes_error_km": 1456.0,
+     "odd_modes_error_km": 11906.0,
+     "odd_even_separation_km": 10686.0,
+     "geometry_null_median_error_km": 9130.0,
+     "p_localisation_error_le_observed": 0.022,
+     "p_best_score_ge_observed": 0.002,
+     "diurnal_semidiurnal_excluded_41modes_gt_30uHz": {
+      "surface_error_km": 1285.0,
+      "estimated_lat_deg": 41.7,
+      "estimated_lon_deg": 8.8,
+      "geometry_null_median_error_km": 9313.0,
+      "p_localisation_error_le_observed": 0.01,
+      "p_best_score_ge_observed": 0.002
+     }
     }
+   }
   },
-  "contemporaneous_optical_gnss_waveform_correlations": {
-    "NPL_Sr1_PTB_Sr3__vs__clock_bias_HERT_PTBB_3h": {
-      "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "gnss_channel": "clock_bias_ns:HERT-PTBB",
-      "bin_hours": 3,
-      "n_windows": 84,
-      "pearson_r_raw": 0.373,
-      "pearson_p_raw": 0.00048,
-      "spearman_rho_raw": 0.341,
-      "spearman_p_raw": 0.00152,
-      "pearson_r_detrended": 0.363,
-      "pearson_p_detrended": 0.0007,
-      "spearman_rho_detrended": 0.325,
-      "p_day_block_permutation_detrended": 0.002
-    },
-    "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_3h": {
-      "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "gnss_channel": "clock_bias_ns:IENG-HERT",
-      "bin_hours": 3,
-      "n_windows": 84,
-      "pearson_r_raw": -0.387,
-      "pearson_p_raw": 0.00028,
-      "spearman_rho_raw": -0.429,
-      "spearman_p_raw": 5e-05,
-      "pearson_r_detrended": -0.361,
-      "pearson_p_detrended": 0.00074,
-      "spearman_rho_detrended": -0.392,
-      "p_day_block_permutation_detrended": 0.004
-    },
-    "NPL_Sr1_PTB_Sr3__vs__ionofree_IENG_HERT_3h": {
-      "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "gnss_channel": "ionofree_clock_bias_ns:IENG-HERT",
-      "bin_hours": 3,
-      "n_windows": 84,
-      "pearson_r_raw": -0.3,
-      "pearson_p_raw": 0.00554,
-      "spearman_rho_raw": -0.342,
-      "spearman_p_raw": 0.00146,
-      "pearson_r_detrended": -0.263,
-      "pearson_p_detrended": 0.01546,
-      "spearman_rho_detrended": -0.276,
-      "p_day_block_permutation_detrended": 0.017
-    },
-    "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_6h": {
-      "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "gnss_channel": "clock_bias_ns:IENG-HERT",
-      "bin_hours": 6,
-      "n_windows": 44,
-      "pearson_r_raw": -0.463,
-      "pearson_p_raw": 0.00153,
-      "spearman_rho_raw": -0.464,
-      "spearman_p_raw": 0.00149,
-      "pearson_r_detrended": -0.429,
-      "pearson_p_detrended": 0.00368,
-      "spearman_rho_detrended": -0.472,
-      "p_day_block_permutation_detrended": 0.006
-    },
-    "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_24h": {
-      "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "gnss_channel": "clock_bias_ns:IENG-HERT",
-      "bin_hours": 24,
-      "n_windows": 15,
-      "pearson_r_raw": -0.77,
-      "pearson_p_raw": 0.00079,
-      "spearman_rho_raw": -0.718,
-      "spearman_p_raw": 0.00258,
-      "pearson_r_detrended": -0.678,
-      "pearson_p_detrended": 0.00545,
-      "spearman_rho_detrended": -0.596,
-      "p_day_block_permutation_detrended": 0.002
-    },
-    "NPL_YbE3_NPL_Sr1__vs__precise_HERS_PTBB_6h": {
-      "optical_pair": "NPL_YbE3-NPL_Sr1",
-      "gnss_channel": "precise_clock_bias_ns:HERS-PTBB",
-      "bin_hours": 6,
-      "n_windows": 59,
-      "pearson_r_raw": 0.417,
-      "pearson_p_raw": 0.00101,
-      "spearman_rho_raw": 0.437,
-      "spearman_p_raw": 0.00054,
-      "pearson_r_detrended": 0.282,
-      "pearson_p_detrended": 0.03033,
-      "spearman_rho_detrended": 0.229,
-      "p_day_block_permutation_detrended": 0.017
-    },
-    "NPL_YbE3_NPL_Sr1__vs__clock_bias_ZIMM_ZIM2_12h": {
-      "optical_pair": "NPL_YbE3-NPL_Sr1",
-      "gnss_channel": "clock_bias_ns:ZIMM-ZIM2",
-      "bin_hours": 12,
-      "n_windows": 30,
-      "pearson_r_raw": 0.553,
-      "pearson_p_raw": 0.00155,
-      "spearman_rho_raw": 0.494,
-      "spearman_p_raw": 0.00557,
-      "pearson_r_detrended": 0.393,
-      "pearson_p_detrended": 0.0318,
-      "spearman_rho_detrended": 0.358,
-      "p_day_block_permutation_detrended": 0.037
-    },
-    "PTB_Yb1E2_PTB_Yb1E3__vs__pos_jitter_OP71_PTBB_12h": {
-      "optical_pair": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
-      "gnss_channel": "pos_jitter:OP71-PTBB",
-      "bin_hours": 12,
-      "n_windows": 75,
-      "pearson_r_raw": 0.349,
-      "pearson_p_raw": 0.00216,
-      "spearman_rho_raw": 0.41,
-      "spearman_p_raw": 0.00025,
-      "pearson_r_detrended": 0.362,
-      "pearson_p_detrended": 0.00142,
-      "spearman_rho_detrended": 0.391,
-      "p_day_block_permutation_detrended": 0.006
-    }
+  "ptb_two_independent_pairs_separation_km": 112.0,
+  "fisher_combined_independent_sites_df4": {
+   "chi2_df4": 16.0,
+   "p_value": 0.003,
+   "scope": "Conditional Fisher summary, one pair per site; shared GNSS reference dependence is not calibrated."
   },
-  "gls_clock_link_variance_decomposition": {
-    "variance_units": "excess variance = tau_DL^2 in (1e-18)^2",
-    "clocks": [
-      "INRIM_ITYb1",
-      "NPL_Sr1",
-      "NPL_YbE3",
-      "PTB_Sr3",
-      "PTB_Yb",
-      "PTB_Yb1E2"
-    ],
-    "four_clock_exact_difference": {
-      "remote_pairs": [
-        "NPL_YbE3-PTB_Yb_CombKnoten",
-        "NPL_Sr1-PTB_Sr3_CombKnoten"
-      ],
-      "local_pairs": [
-        "NPL_YbE3-NPL_Sr1",
-        "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten"
-      ],
-      "sum_tau2_remote_1e36": 168.46,
-      "sum_tau2_local_1e36": 61.78,
-      "remote_over_local_variance_ratio": 2.73,
-      "baseline_floor_std_1e18_per_link": 7.3
-    },
-    "clock_only": {
-      "per_clock_wander_std_1e18": {
-        "INRIM_ITYb1": 19.55,
-        "NPL_Sr1": 0.0,
-        "NPL_YbE3": 6.14,
-        "PTB_Sr3": 13.57,
-        "PTB_Yb": 0.0,
-        "PTB_Yb1E2": 24.76
-      },
-      "sse": 113226.7,
-      "frac_v2_explained": 0.9035,
-      "per_pair": {
-        "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
-          "baseline_km": 0.0,
-          "tau_DL_1e18": 24.76,
-          "clock_only_pred_std_1e18": 24.76,
-          "clock_only_residual_std_1e18": 0.0
-        },
-        "NPL_YbE3-NPL_Sr1": {
-          "baseline_km": 0.0,
-          "tau_DL_1e18": 0.0,
-          "clock_only_pred_std_1e18": 6.14,
-          "clock_only_residual_std_1e18": -6.14
-        },
-        "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-          "baseline_km": 0.0,
-          "tau_DL_1e18": 7.86,
-          "clock_only_pred_std_1e18": 13.57,
-          "clock_only_residual_std_1e18": -11.06
-        },
-        "NPL_YbE3-PTB_Yb_CombKnoten": {
-          "baseline_km": 705.0,
-          "tau_DL_1e18": 8.68,
-          "clock_only_pred_std_1e18": 6.14,
-          "clock_only_residual_std_1e18": 6.14
-        },
-        "PTB_Yb_CombKnoten-NPL_Sr1": {
-          "baseline_km": 705.0,
-          "tau_DL_1e18": 10.61,
-          "clock_only_pred_std_1e18": 0.0,
-          "clock_only_residual_std_1e18": 10.61
-        },
-        "NPL_Sr1-PTB_Sr3_CombKnoten": {
-          "baseline_km": 705.0,
-          "tau_DL_1e18": 9.65,
-          "clock_only_pred_std_1e18": 13.57,
-          "clock_only_residual_std_1e18": -9.53
-        },
-        "PTB_Yb_CombKnoten-INRIM_ITYb1": {
-          "baseline_km": 755.0,
-          "tau_DL_1e18": 14.81,
-          "clock_only_pred_std_1e18": 19.55,
-          "clock_only_residual_std_1e18": -12.77
-        },
-        "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
-          "baseline_km": 755.0,
-          "tau_DL_1e18": 27.92,
-          "clock_only_pred_std_1e18": 23.8,
-          "clock_only_residual_std_1e18": 14.6
-        },
-        "INRIM_ITYb1-NPL_Sr1": {
-          "baseline_km": 915.0,
-          "tau_DL_1e18": 18.23,
-          "clock_only_pred_std_1e18": 19.55,
-          "clock_only_residual_std_1e18": -7.08
-        }
-      },
-      "mean_remote_residual_std_1e18": 0.33,
-      "mean_local_residual_std_1e18": -5.73
-    },
-    "clock_plus_common_remote_link": {
-      "remote_link_std_1e18": 5.29,
-      "sse": 111568.8,
-      "frac_v2_explained": 0.9049
-    },
-    "clock_plus_geodesic_link": {
-      "geodesic_coef_std_1e18_per_Mm": 5.545,
-      "sse": 112186.3,
-      "frac_v2_explained": 0.9044
-    },
-    "leave_inrimityb1_out": {
-      "per_clock_wander_std_1e18": {
-        "INRIM_ITYb1": 0.0,
-        "NPL_Sr1": 6.25,
-        "NPL_YbE3": 0.0,
-        "PTB_Sr3": 5.23,
-        "PTB_Yb": 7.82,
-        "PTB_Yb1E2": 23.49
-      },
-      "remote_residual_std_1e18_per_pair": [
-        3.78,
-        3.52,
-        5.16
-      ],
-      "sse": 3307.5
-    },
-    "five_pair_npl_ptb_4clock_subnetwork": {
-      "pairs": [
-        "NPL_YbE3-NPL_Sr1",
-        "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten",
-        "NPL_YbE3-PTB_Yb_CombKnoten",
-        "NPL_Sr1-PTB_Sr3_CombKnoten",
-        "PTB_Yb_CombKnoten-NPL_Sr1"
-      ],
-      "clocks": [
-        "NPL_YbE3",
-        "NPL_Sr1",
-        "PTB_Yb",
-        "PTB_Sr3"
-      ],
-      "n_pairs": 5,
-      "n_parameters_clock_only": 4,
-      "n_parameters_clock_plus_link": 5,
-      "clock_only_design_rank": 4,
-      "clock_plus_link_design_rank": 5,
-      "unconstrained_residual_dof_clock_plus_link": 0,
-      "clock_only_sse": 3307.5,
-      "clock_only_centered_r2": 0.549,
-      "clock_only_frac_v2": 0.8927,
-      "clock_plus_remote_link_sse": 462.0,
-      "clock_plus_remote_link_centered_r2": 0.937,
-      "clock_plus_remote_link_frac_v2": 0.985,
-      "sse_reduction_pct": 86.0,
-      "remote_link_std_1e18": 7.3,
-      "nine_pair_unweighted_local_var_sum_violation_ratio": 3.59,
-      "statistical_role": "Internal variance decomposition and consistency representation of the 4-clock covariance contrast (5 observations vs 4 non-negative clock parameters + 1 link parameter)."
-    }
+  "fisher_combined_three_pairs": {
+   "chi2_df6": 25.21,
+   "p_value": 0.00031,
+   "scope": "Conditional Fisher summary; shared PTB clocks and GNSS references violate assured independence."
+  }
+ },
+ "contemporaneous_optical_gnss_waveform_correlations": {
+  "NPL_Sr1_PTB_Sr3__vs__clock_bias_HERT_PTBB_3h": {
+   "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "gnss_channel": "clock_bias_ns:HERT-PTBB",
+   "bin_hours": 3,
+   "n_windows": 84,
+   "pearson_r_raw": 0.373,
+   "pearson_p_raw": 0.00048,
+   "spearman_rho_raw": 0.341,
+   "spearman_p_raw": 0.00152,
+   "pearson_r_detrended": 0.363,
+   "pearson_p_detrended": 0.0007,
+   "spearman_rho_detrended": 0.325,
+   "p_day_block_permutation_detrended": 0.002
   },
-  "architecture_matrix": {
+  "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_3h": {
+   "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "gnss_channel": "clock_bias_ns:IENG-HERT",
+   "bin_hours": 3,
+   "n_windows": 84,
+   "pearson_r_raw": -0.387,
+   "pearson_p_raw": 0.00028,
+   "spearman_rho_raw": -0.429,
+   "spearman_p_raw": 5e-05,
+   "pearson_r_detrended": -0.361,
+   "pearson_p_detrended": 0.00074,
+   "spearman_rho_detrended": -0.392,
+   "p_day_block_permutation_detrended": 0.004
+  },
+  "NPL_Sr1_PTB_Sr3__vs__ionofree_IENG_HERT_3h": {
+   "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "gnss_channel": "ionofree_clock_bias_ns:IENG-HERT",
+   "bin_hours": 3,
+   "n_windows": 84,
+   "pearson_r_raw": -0.3,
+   "pearson_p_raw": 0.00554,
+   "spearman_rho_raw": -0.342,
+   "spearman_p_raw": 0.00146,
+   "pearson_r_detrended": -0.263,
+   "pearson_p_detrended": 0.01546,
+   "spearman_rho_detrended": -0.276,
+   "p_day_block_permutation_detrended": 0.017
+  },
+  "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_6h": {
+   "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "gnss_channel": "clock_bias_ns:IENG-HERT",
+   "bin_hours": 6,
+   "n_windows": 44,
+   "pearson_r_raw": -0.463,
+   "pearson_p_raw": 0.00153,
+   "spearman_rho_raw": -0.464,
+   "spearman_p_raw": 0.00149,
+   "pearson_r_detrended": -0.429,
+   "pearson_p_detrended": 0.00368,
+   "spearman_rho_detrended": -0.472,
+   "p_day_block_permutation_detrended": 0.006
+  },
+  "NPL_Sr1_PTB_Sr3__vs__clock_bias_IENG_HERT_24h": {
+   "optical_pair": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "gnss_channel": "clock_bias_ns:IENG-HERT",
+   "bin_hours": 24,
+   "n_windows": 15,
+   "pearson_r_raw": -0.77,
+   "pearson_p_raw": 0.00079,
+   "spearman_rho_raw": -0.718,
+   "spearman_p_raw": 0.00258,
+   "pearson_r_detrended": -0.678,
+   "pearson_p_detrended": 0.00545,
+   "spearman_rho_detrended": -0.596,
+   "p_day_block_permutation_detrended": 0.002
+  },
+  "NPL_YbE3_NPL_Sr1__vs__precise_HERS_PTBB_6h": {
+   "optical_pair": "NPL_YbE3-NPL_Sr1",
+   "gnss_channel": "precise_clock_bias_ns:HERS-PTBB",
+   "bin_hours": 6,
+   "n_windows": 59,
+   "pearson_r_raw": 0.417,
+   "pearson_p_raw": 0.00101,
+   "spearman_rho_raw": 0.437,
+   "spearman_p_raw": 0.00054,
+   "pearson_r_detrended": 0.282,
+   "pearson_p_detrended": 0.03033,
+   "spearman_rho_detrended": 0.229,
+   "p_day_block_permutation_detrended": 0.017
+  },
+  "NPL_YbE3_NPL_Sr1__vs__clock_bias_ZIMM_ZIM2_12h": {
+   "optical_pair": "NPL_YbE3-NPL_Sr1",
+   "gnss_channel": "clock_bias_ns:ZIMM-ZIM2",
+   "bin_hours": 12,
+   "n_windows": 30,
+   "pearson_r_raw": 0.553,
+   "pearson_p_raw": 0.00155,
+   "spearman_rho_raw": 0.494,
+   "spearman_p_raw": 0.00557,
+   "pearson_r_detrended": 0.393,
+   "pearson_p_detrended": 0.0318,
+   "spearman_rho_detrended": 0.358,
+   "p_day_block_permutation_detrended": 0.037
+  },
+  "PTB_Yb1E2_PTB_Yb1E3__vs__pos_jitter_OP71_PTBB_12h": {
+   "optical_pair": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
+   "gnss_channel": "pos_jitter:OP71-PTBB",
+   "bin_hours": 12,
+   "n_windows": 75,
+   "pearson_r_raw": 0.349,
+   "pearson_p_raw": 0.00216,
+   "spearman_rho_raw": 0.41,
+   "spearman_p_raw": 0.00025,
+   "pearson_r_detrended": 0.362,
+   "pearson_p_detrended": 0.00142,
+   "spearman_rho_detrended": 0.391,
+   "p_day_block_permutation_detrended": 0.006
+  }
+ },
+ "gls_clock_link_variance_decomposition": {
+  "variance_units": "excess variance = tau_DL^2 in (1e-18)^2",
+  "clocks": [
+   "INRIM_ITYb1",
+   "NPL_Sr1",
+   "NPL_YbE3",
+   "PTB_Sr3",
+   "PTB_Yb",
+   "PTB_Yb1E2"
+  ],
+  "four_clock_exact_difference": {
+   "remote_pairs": [
+    "NPL_YbE3-PTB_Yb_CombKnoten",
+    "NPL_Sr1-PTB_Sr3_CombKnoten"
+   ],
+   "local_pairs": [
+    "NPL_YbE3-NPL_Sr1",
+    "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten"
+   ],
+   "sum_tau2_remote_1e36": 168.46,
+   "sum_tau2_local_1e36": 61.78,
+   "remote_over_local_variance_ratio": 2.73,
+   "baseline_floor_std_1e18_per_link": 7.3
+  },
+  "clock_only": {
+   "per_clock_wander_std_1e18": {
+    "INRIM_ITYb1": 19.55,
+    "NPL_Sr1": 0.0,
+    "NPL_YbE3": 6.14,
+    "PTB_Sr3": 13.57,
+    "PTB_Yb": 0.0,
+    "PTB_Yb1E2": 24.76
+   },
+   "sse": 113226.7,
+   "frac_v2_explained": 0.9035,
+   "per_pair": {
     "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
-      "architecture": "Ion x Ion (local)",
-      "baseline_km": 0.0,
-      "fiber_km": 0.0,
-      "published_birge": 1.13,
-      "n_hours": 733.38,
-      "n_days_ge_1h": 44,
-      "weighted_mean_offset_1e18": 6.8,
-      "daily_std_1e18": 53.81,
-      "adev_1000s_1e18": 304.4,
-      "adev_20000s_1e18": 70.92,
-      "adev_20000s_over_wn": 1.042,
-      "birge_vs_1000s_wn": 1.112,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 2640310,
-        "n_days_ge_1h": 44,
-        "sigma_y_100s_1e18": 872.5,
-        "median_daily_white_u_1e18": 36.7,
-        "daily_birge_B": 1.2,
-        "excess_daily_std_tau_DL_1e18": 24.76,
-        "excess_adev_40ks_1e18": 32.9,
-        "adev_40ks_over_white": 1.25
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 9043,
-        "M2_amp_1e18": 17.7,
-        "O1_amp_1e18": 11.19,
-        "S2_amp_1e18": 6.56,
-        "off_tide_ctrl_mean_1e18": 14.99,
-        "M2_over_ctrl_ratio": 1.181,
-        "S2_over_ctrl_ratio": 0.438
-      }
+     "baseline_km": 0.0,
+     "tau_DL_1e18": 24.76,
+     "clock_only_pred_std_1e18": 24.76,
+     "clock_only_residual_std_1e18": 0.0
     },
     "NPL_YbE3-NPL_Sr1": {
-      "architecture": "Ion x Lattice (local)",
-      "baseline_km": 0.0,
-      "fiber_km": 0.0,
-      "published_birge": 1.09,
-      "n_hours": 252.89,
-      "n_days_ge_1h": 18,
-      "weighted_mean_offset_1e18": 7.06,
-      "daily_std_1e18": 16.77,
-      "adev_1000s_1e18": 111.91,
-      "adev_20000s_1e18": 22.0,
-      "adev_20000s_over_wn": 0.879,
-      "birge_vs_1000s_wn": 0.996,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 910415,
-        "n_days_ge_1h": 18,
-        "sigma_y_100s_1e18": 333.5,
-        "median_daily_white_u_1e18": 14.8,
-        "daily_birge_B": 0.99,
-        "excess_daily_std_tau_DL_1e18": 0.0,
-        "excess_adev_40ks_1e18": 0.0,
-        "adev_40ks_over_white": 0.9
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 3558,
-        "M2_amp_1e18": 0.89,
-        "O1_amp_1e18": 3.14,
-        "S2_amp_1e18": 5.8,
-        "off_tide_ctrl_mean_1e18": 5.95,
-        "M2_over_ctrl_ratio": 0.149,
-        "S2_over_ctrl_ratio": 0.974
-      }
+     "baseline_km": 0.0,
+     "tau_DL_1e18": 0.0,
+     "clock_only_pred_std_1e18": 6.14,
+     "clock_only_residual_std_1e18": -6.14
     },
     "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
-      "architecture": "Ion x Lattice (local PTB)",
-      "baseline_km": 0.0,
-      "fiber_km": 0.0,
-      "published_birge": 1.97,
-      "n_hours": 431.38,
-      "n_days_ge_1h": 35,
-      "weighted_mean_offset_1e18": 55.27,
-      "daily_std_1e18": 8.99,
-      "adev_1000s_1e18": 32.21,
-      "adev_20000s_1e18": 7.03,
-      "adev_20000s_over_wn": 0.976,
-      "birge_vs_1000s_wn": 1.804,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 1553720,
-        "n_days_ge_1h": 35,
-        "sigma_y_100s_1e18": 91.8,
-        "median_daily_white_u_1e18": 4.8,
-        "daily_birge_B": 2.03,
-        "excess_daily_std_tau_DL_1e18": 7.86,
-        "excess_adev_40ks_1e18": 8.12,
-        "adev_40ks_over_white": 2.03
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 5381,
-        "M2_amp_1e18": 2.48,
-        "O1_amp_1e18": 1.06,
-        "S2_amp_1e18": 2.67,
-        "off_tide_ctrl_mean_1e18": 1.59,
-        "M2_over_ctrl_ratio": 1.559,
-        "S2_over_ctrl_ratio": 1.679
-      }
+     "baseline_km": 0.0,
+     "tau_DL_1e18": 7.86,
+     "clock_only_pred_std_1e18": 13.57,
+     "clock_only_residual_std_1e18": -11.06
     },
     "NPL_YbE3-PTB_Yb_CombKnoten": {
-      "architecture": "Ion x Ion (remote)",
-      "baseline_km": 705.0,
-      "fiber_km": 2155.0,
-      "published_birge": 1.13,
-      "n_hours": 104.04,
-      "n_days_ge_1h": 15,
-      "weighted_mean_offset_1e18": -7.73,
-      "daily_std_1e18": 23.75,
-      "adev_1000s_1e18": 122.64,
-      "adev_20000s_1e18": 40.64,
-      "adev_20000s_over_wn": 1.482,
-      "birge_vs_1000s_wn": 0.883,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 374671,
-        "n_days_ge_1h": 15,
-        "sigma_y_100s_1e18": 314.7,
-        "median_daily_white_u_1e18": 20.3,
-        "daily_birge_B": 1.09,
-        "excess_daily_std_tau_DL_1e18": 8.68,
-        "excess_adev_40ks_1e18": 12.98,
-        "adev_40ks_over_white": 1.3
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 1906,
-        "M2_amp_1e18": 14.51,
-        "O1_amp_1e18": 14.67,
-        "S2_amp_1e18": 5.41,
-        "off_tide_ctrl_mean_1e18": 7.0,
-        "M2_over_ctrl_ratio": 2.073,
-        "S2_over_ctrl_ratio": 0.773
-      }
+     "baseline_km": 705.0,
+     "tau_DL_1e18": 8.68,
+     "clock_only_pred_std_1e18": 6.14,
+     "clock_only_residual_std_1e18": 6.14
     },
     "PTB_Yb_CombKnoten-NPL_Sr1": {
-      "architecture": "Ion x Lattice (remote)",
-      "baseline_km": 705.0,
-      "fiber_km": 2155.0,
-      "published_birge": 2.15,
-      "n_hours": 174.96,
-      "n_days_ge_1h": 23,
-      "weighted_mean_offset_1e18": 9.03,
-      "daily_std_1e18": 11.15,
-      "adev_1000s_1e18": 39.11,
-      "adev_20000s_1e18": 8.31,
-      "adev_20000s_over_wn": 0.95,
-      "birge_vs_1000s_wn": 1.271,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 631040,
-        "n_days_ge_1h": 23,
-        "sigma_y_100s_1e18": 98.9,
-        "median_daily_white_u_1e18": 6.2,
-        "daily_birge_B": 2.03,
-        "excess_daily_std_tau_DL_1e18": 10.61,
-        "excess_adev_40ks_1e18": 8.42,
-        "adev_40ks_over_white": 1.97
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 3197,
-        "M2_amp_1e18": 2.98,
-        "O1_amp_1e18": 1.56,
-        "S2_amp_1e18": 3.46,
-        "off_tide_ctrl_mean_1e18": 3.9,
-        "M2_over_ctrl_ratio": 0.766,
-        "S2_over_ctrl_ratio": 0.888
-      }
+     "baseline_km": 705.0,
+     "tau_DL_1e18": 10.61,
+     "clock_only_pred_std_1e18": 0.0,
+     "clock_only_residual_std_1e18": 10.61
     },
     "NPL_Sr1-PTB_Sr3_CombKnoten": {
-      "architecture": "Lattice x Lattice (remote)",
-      "baseline_km": 705.0,
-      "fiber_km": 2155.0,
-      "published_birge": 4.51,
-      "n_hours": 129.31,
-      "n_days_ge_1h": 17,
-      "weighted_mean_offset_1e18": 39.1,
-      "daily_std_1e18": 9.41,
-      "adev_1000s_1e18": 14.02,
-      "adev_20000s_1e18": 5.42,
-      "adev_20000s_over_wn": 1.729,
-      "birge_vs_1000s_wn": 3.214,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 465853,
-        "n_days_ge_1h": 17,
-        "sigma_y_100s_1e18": 56.6,
-        "median_daily_white_u_1e18": 3.1,
-        "daily_birge_B": 3.21,
-        "excess_daily_std_tau_DL_1e18": 9.65,
-        "excess_adev_40ks_1e18": 5.95,
-        "adev_40ks_over_white": 2.33
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 2216,
-        "M2_amp_1e18": 5.15,
-        "O1_amp_1e18": 3.28,
-        "S2_amp_1e18": 2.56,
-        "off_tide_ctrl_mean_1e18": 2.5,
-        "M2_over_ctrl_ratio": 2.057,
-        "S2_over_ctrl_ratio": 1.023
-      }
+     "baseline_km": 705.0,
+     "tau_DL_1e18": 9.65,
+     "clock_only_pred_std_1e18": 13.57,
+     "clock_only_residual_std_1e18": -9.53
     },
     "PTB_Yb_CombKnoten-INRIM_ITYb1": {
-      "architecture": "Ion x Lattice (remote)",
-      "baseline_km": 755.0,
-      "fiber_km": 2393.0,
-      "published_birge": 1.55,
-      "n_hours": 76.26,
-      "n_days_ge_1h": 20,
-      "weighted_mean_offset_1e18": 113.61,
-      "daily_std_1e18": 34.97,
-      "adev_1000s_1e18": 89.35,
-      "adev_20000s_1e18": 27.99,
-      "adev_20000s_over_wn": 1.401,
-      "birge_vs_1000s_wn": 1.342,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 274615,
-        "n_days_ge_1h": 20,
-        "sigma_y_100s_1e18": 342.9,
-        "median_daily_white_u_1e18": 26.9,
-        "daily_birge_B": 1.15,
-        "excess_daily_std_tau_DL_1e18": 14.81,
-        "excess_adev_40ks_1e18": 7.26,
-        "adev_40ks_over_white": 1.09
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 1107,
-        "M2_amp_1e18": 11.88,
-        "O1_amp_1e18": 13.15,
-        "S2_amp_1e18": 4.8,
-        "off_tide_ctrl_mean_1e18": 10.2,
-        "M2_over_ctrl_ratio": 1.164,
-        "S2_over_ctrl_ratio": 0.47
-      }
+     "baseline_km": 755.0,
+     "tau_DL_1e18": 14.81,
+     "clock_only_pred_std_1e18": 19.55,
+     "clock_only_residual_std_1e18": -12.77
     },
     "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
-      "architecture": "Lattice x Lattice (remote)",
-      "baseline_km": 755.0,
-      "fiber_km": 2393.0,
-      "published_birge": 1.68,
-      "n_hours": 56.37,
-      "n_days_ge_1h": 16,
-      "weighted_mean_offset_1e18": -62.14,
-      "daily_std_1e18": 40.69,
-      "adev_1000s_1e18": 85.77,
-      "adev_20000s_1e18": 26.0,
-      "adev_20000s_over_wn": 1.355,
-      "birge_vs_1000s_wn": 1.554,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 202965,
-        "n_days_ge_1h": 16,
-        "sigma_y_100s_1e18": 316.3,
-        "median_daily_white_u_1e18": 29.0,
-        "daily_birge_B": 1.47,
-        "excess_daily_std_tau_DL_1e18": 27.92,
-        "excess_adev_40ks_1e18": 17.06,
-        "adev_40ks_over_white": 1.47
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 812,
-        "M2_amp_1e18": 8.23,
-        "O1_amp_1e18": 4.45,
-        "S2_amp_1e18": 6.18,
-        "off_tide_ctrl_mean_1e18": 12.58,
-        "M2_over_ctrl_ratio": 0.654,
-        "S2_over_ctrl_ratio": 0.491
-      }
+     "baseline_km": 755.0,
+     "tau_DL_1e18": 27.92,
+     "clock_only_pred_std_1e18": 23.8,
+     "clock_only_residual_std_1e18": 14.6
     },
     "INRIM_ITYb1-NPL_Sr1": {
-      "architecture": "Lattice x Lattice (remote)",
-      "baseline_km": 915.0,
-      "fiber_km": 1808.0,
-      "published_birge": 1.26,
-      "n_hours": 39.22,
-      "n_days_ge_1h": 12,
-      "weighted_mean_offset_1e18": -105.84,
-      "daily_std_1e18": 36.59,
-      "adev_1000s_1e18": 89.96,
-      "adev_20000s_1e18": 41.57,
-      "adev_20000s_over_wn": 2.066,
-      "birge_vs_1000s_wn": 1.21,
-      "dersimonian_laird_and_40ks": {
-        "n_valid_seconds": 141224,
-        "n_days_ge_1h": 12,
-        "sigma_y_100s_1e18": 303.2,
-        "median_daily_white_u_1e18": 25.6,
-        "daily_birge_B": 1.23,
-        "excess_daily_std_tau_DL_1e18": 18.23,
-        "excess_adev_40ks_1e18": null,
-        "adev_40ks_over_white": null
-      },
-      "tidal_spectroscopy_1e18": {
-        "n_5min_bins": 768,
-        "M2_amp_1e18": 5.85,
-        "O1_amp_1e18": 11.8,
-        "S2_amp_1e18": 3.6,
-        "off_tide_ctrl_mean_1e18": 14.86,
-        "M2_over_ctrl_ratio": 0.393,
-        "S2_over_ctrl_ratio": 0.242
-      }
+     "baseline_km": 915.0,
+     "tau_DL_1e18": 18.23,
+     "clock_only_pred_std_1e18": 19.55,
+     "clock_only_residual_std_1e18": -7.08
     }
+   },
+   "mean_remote_residual_std_1e18": 0.33,
+   "mean_local_residual_std_1e18": -5.73
   },
-  "disjoint_pair_sub_mhz_correlations": [
-    {
-      "bin_hours": 1.0,
-      "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
-      "pair_2": "SYRTE_Hg-NPL_Sr1",
-      "n_bins": 15,
-      "pearson_r": -0.6252,
-      "pearson_p": 0.012685038152587678,
-      "spearman_rho": -0.6357,
-      "spearman_p": 0.0108607461687898
-    },
-    {
-      "bin_hours": 1.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
-      "n_bins": 131,
-      "pearson_r": -0.1756,
-      "pearson_p": 0.04485710139875936,
-      "spearman_rho": -0.1125,
-      "spearman_p": 0.2009176941825957
-    },
-    {
-      "bin_hours": 1.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
-      "n_bins": 53,
-      "pearson_r": -0.2412,
-      "pearson_p": 0.08182196658283088,
-      "spearman_rho": -0.3115,
-      "spearman_p": 0.02318599489065292
-    },
-    {
-      "bin_hours": 1.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "SYRTE_Hg-PTB_Yb_CombKnoten",
-      "n_bins": 14,
-      "pearson_r": -0.5486,
-      "pearson_p": 0.042210375925965916,
-      "spearman_rho": -0.6879,
-      "spearman_p": 0.006540042491841914
-    },
-    {
-      "bin_hours": 1.0,
-      "pair_1": "PTB_Yb_CombKnoten-INRIM_ITYb1",
-      "pair_2": "SYRTE_Hg-NPL_Sr1",
-      "n_bins": 14,
-      "pearson_r": 0.5907,
-      "pearson_p": 0.026117290426953467,
-      "spearman_rho": 0.622,
-      "spearman_p": 0.017550315290540047
-    },
-    {
-      "bin_hours": 3.0,
-      "pair_1": "INRIM_ITYb1-NPL_Sr1",
-      "pair_2": "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten",
-      "n_bins": 28,
-      "pearson_r": 0.4335,
-      "pearson_p": 0.021183257334617886,
-      "spearman_rho": 0.3251,
-      "spearman_p": 0.09137860677092112
-    },
-    {
-      "bin_hours": 3.0,
-      "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
-      "pair_2": "NPL_YbE3-NPL_Sr1",
-      "n_bins": 33,
-      "pearson_r": 0.3206,
-      "pearson_p": 0.0689046729074287,
-      "spearman_rho": 0.3807,
-      "spearman_p": 0.028847337902829555
-    },
-    {
-      "bin_hours": 3.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
-      "n_bins": 27,
-      "pearson_r": -0.6021,
-      "pearson_p": 0.0008915852676538402,
-      "spearman_rho": -0.6764,
-      "spearman_p": 0.0001072319876546711
-    },
-    {
-      "bin_hours": 3.0,
-      "pair_1": "NPL_YbE3-PTB_Yb_CombKnoten",
-      "pair_2": "SYRTE_Hg-INRIM_ITYb1",
-      "n_bins": 12,
-      "pearson_r": -0.6533,
-      "pearson_p": 0.021228055785397874,
-      "spearman_rho": -0.2797,
-      "spearman_p": 0.37856866966230307
-    },
-    {
-      "bin_hours": 6.0,
-      "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb_CombKnoten-NPL_Sr1",
-      "n_bins": 21,
-      "pearson_r": -0.4769,
-      "pearson_p": 0.028838605467907338,
-      "spearman_rho": -0.4766,
-      "spearman_p": 0.028928327683357725
-    },
-    {
-      "bin_hours": 6.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
-      "n_bins": 21,
-      "pearson_r": -0.624,
-      "pearson_p": 0.0025041371385476885,
-      "spearman_rho": -0.6026,
-      "spearman_p": 0.003839267741778838
-    },
-    {
-      "bin_hours": 6.0,
-      "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
-      "pair_2": "SYRTE_Hg-PTB_Yb_CombKnoten",
-      "n_bins": 12,
-      "pearson_r": -0.7824,
-      "pearson_p": 0.002632782289607267,
-      "spearman_rho": -0.7972,
-      "spearman_p": 0.0019003677255282686
-    },
-    {
-      "bin_hours": 6.0,
-      "pair_1": "NPL_YbE3-PTB_Sr3_CombKnoten",
-      "pair_2": "PTB_Yb_CombKnoten-NPL_Sr1",
-      "n_bins": 36,
-      "pearson_r": -0.2081,
-      "pearson_p": 0.22317206998019798,
-      "spearman_rho": -0.3879,
-      "spearman_p": 0.019406013788356657
-    }
-  ],
-  "disjoint_pair_multiplicity_summary": {
-    "n_eligible_tests_across_1h_3h_6h": 118,
-    "n_nominal_p_lt_0_05": 13
+  "clock_plus_common_remote_link": {
+   "remote_link_std_1e18": 5.29,
+   "sse": 111568.8,
+   "frac_v2_explained": 0.9049
+  },
+  "clock_plus_geodesic_link": {
+   "geodesic_coef_std_1e18_per_Mm": 5.545,
+   "sse": 112186.3,
+   "frac_v2_explained": 0.9044
+  },
+  "leave_inrimityb1_out": {
+   "per_clock_wander_std_1e18": {
+    "INRIM_ITYb1": 0.0,
+    "NPL_Sr1": 6.25,
+    "NPL_YbE3": 0.0,
+    "PTB_Sr3": 5.23,
+    "PTB_Yb": 7.82,
+    "PTB_Yb1E2": 23.49
+   },
+   "remote_residual_std_1e18_per_pair": [
+    3.78,
+    3.52,
+    5.16
+   ],
+   "sse": 3307.5
+  },
+  "five_pair_npl_ptb_4clock_subnetwork": {
+   "pairs": [
+    "NPL_YbE3-NPL_Sr1",
+    "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten",
+    "NPL_YbE3-PTB_Yb_CombKnoten",
+    "NPL_Sr1-PTB_Sr3_CombKnoten",
+    "PTB_Yb_CombKnoten-NPL_Sr1"
+   ],
+   "clocks": [
+    "NPL_YbE3",
+    "NPL_Sr1",
+    "PTB_Yb",
+    "PTB_Sr3"
+   ],
+   "n_pairs": 5,
+   "n_parameters_clock_only": 4,
+   "n_parameters_clock_plus_link": 5,
+   "clock_only_design_rank": 4,
+   "clock_plus_link_design_rank": 5,
+   "unconstrained_residual_dof_clock_plus_link": 0,
+   "clock_only_sse": 3307.5,
+   "clock_only_centered_r2": 0.549,
+   "clock_only_frac_v2": 0.8927,
+   "clock_plus_remote_link_sse": 462.0,
+   "clock_plus_remote_link_centered_r2": 0.937,
+   "clock_plus_remote_link_frac_v2": 0.985,
+   "sse_reduction_pct": 86.0,
+   "remote_link_std_1e18": 7.3,
+   "nine_pair_unweighted_local_var_sum_violation_ratio": 3.59,
+   "statistical_role": "Internal variance decomposition and consistency representation of the 4-clock covariance contrast (5 observations vs 4 non-negative clock parameters + 1 link parameter)."
   }
+ },
+ "architecture_matrix": {
+  "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten": {
+   "architecture": "Ion x Ion (local)",
+   "baseline_km": 0.0,
+   "fiber_km": 0.0,
+   "published_birge": 1.13,
+   "n_hours": 733.38,
+   "n_days_ge_1h": 44,
+   "weighted_mean_offset_1e18": 6.8,
+   "daily_std_1e18": 53.81,
+   "adev_1000s_1e18": 304.4,
+   "adev_20000s_1e18": 70.92,
+   "adev_20000s_over_wn": 1.042,
+   "birge_vs_1000s_wn": 1.112,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 2640310,
+    "n_days_ge_1h": 44,
+    "sigma_y_100s_1e18": 872.5,
+    "median_daily_white_u_1e18": 36.7,
+    "daily_birge_B": 1.2,
+    "excess_daily_std_tau_DL_1e18": 24.76,
+    "excess_adev_40ks_1e18": 32.9,
+    "adev_40ks_over_white": 1.25
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 9043,
+    "M2_amp_1e18": 17.7,
+    "O1_amp_1e18": 11.19,
+    "S2_amp_1e18": 6.56,
+    "off_tide_ctrl_mean_1e18": 14.99,
+    "M2_over_ctrl_ratio": 1.181,
+    "S2_over_ctrl_ratio": 0.438
+   }
+  },
+  "NPL_YbE3-NPL_Sr1": {
+   "architecture": "Ion x Lattice (local)",
+   "baseline_km": 0.0,
+   "fiber_km": 0.0,
+   "published_birge": 1.09,
+   "n_hours": 252.89,
+   "n_days_ge_1h": 18,
+   "weighted_mean_offset_1e18": 7.06,
+   "daily_std_1e18": 16.77,
+   "adev_1000s_1e18": 111.91,
+   "adev_20000s_1e18": 22.0,
+   "adev_20000s_over_wn": 0.879,
+   "birge_vs_1000s_wn": 0.996,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 910415,
+    "n_days_ge_1h": 18,
+    "sigma_y_100s_1e18": 333.5,
+    "median_daily_white_u_1e18": 14.8,
+    "daily_birge_B": 0.99,
+    "excess_daily_std_tau_DL_1e18": 0.0,
+    "excess_adev_40ks_1e18": 0.0,
+    "adev_40ks_over_white": 0.9
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 3558,
+    "M2_amp_1e18": 0.89,
+    "O1_amp_1e18": 3.14,
+    "S2_amp_1e18": 5.8,
+    "off_tide_ctrl_mean_1e18": 5.95,
+    "M2_over_ctrl_ratio": 0.149,
+    "S2_over_ctrl_ratio": 0.974
+   }
+  },
+  "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten": {
+   "architecture": "Ion x Lattice (local PTB)",
+   "baseline_km": 0.0,
+   "fiber_km": 0.0,
+   "published_birge": 1.97,
+   "n_hours": 431.38,
+   "n_days_ge_1h": 35,
+   "weighted_mean_offset_1e18": 55.27,
+   "daily_std_1e18": 8.99,
+   "adev_1000s_1e18": 32.21,
+   "adev_20000s_1e18": 7.03,
+   "adev_20000s_over_wn": 0.976,
+   "birge_vs_1000s_wn": 1.804,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 1553720,
+    "n_days_ge_1h": 35,
+    "sigma_y_100s_1e18": 91.8,
+    "median_daily_white_u_1e18": 4.8,
+    "daily_birge_B": 2.03,
+    "excess_daily_std_tau_DL_1e18": 7.86,
+    "excess_adev_40ks_1e18": 8.12,
+    "adev_40ks_over_white": 2.03
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 5381,
+    "M2_amp_1e18": 2.48,
+    "O1_amp_1e18": 1.06,
+    "S2_amp_1e18": 2.67,
+    "off_tide_ctrl_mean_1e18": 1.59,
+    "M2_over_ctrl_ratio": 1.559,
+    "S2_over_ctrl_ratio": 1.679
+   }
+  },
+  "NPL_YbE3-PTB_Yb_CombKnoten": {
+   "architecture": "Ion x Ion (remote)",
+   "baseline_km": 705.0,
+   "fiber_km": 2155.0,
+   "published_birge": 1.13,
+   "n_hours": 104.04,
+   "n_days_ge_1h": 15,
+   "weighted_mean_offset_1e18": -7.73,
+   "daily_std_1e18": 23.75,
+   "adev_1000s_1e18": 122.64,
+   "adev_20000s_1e18": 40.64,
+   "adev_20000s_over_wn": 1.482,
+   "birge_vs_1000s_wn": 0.883,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 374671,
+    "n_days_ge_1h": 15,
+    "sigma_y_100s_1e18": 314.7,
+    "median_daily_white_u_1e18": 20.3,
+    "daily_birge_B": 1.09,
+    "excess_daily_std_tau_DL_1e18": 8.68,
+    "excess_adev_40ks_1e18": 12.98,
+    "adev_40ks_over_white": 1.3
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 1906,
+    "M2_amp_1e18": 14.51,
+    "O1_amp_1e18": 14.67,
+    "S2_amp_1e18": 5.41,
+    "off_tide_ctrl_mean_1e18": 7.0,
+    "M2_over_ctrl_ratio": 2.073,
+    "S2_over_ctrl_ratio": 0.773
+   }
+  },
+  "PTB_Yb_CombKnoten-NPL_Sr1": {
+   "architecture": "Ion x Lattice (remote)",
+   "baseline_km": 705.0,
+   "fiber_km": 2155.0,
+   "published_birge": 2.15,
+   "n_hours": 174.96,
+   "n_days_ge_1h": 23,
+   "weighted_mean_offset_1e18": 9.03,
+   "daily_std_1e18": 11.15,
+   "adev_1000s_1e18": 39.11,
+   "adev_20000s_1e18": 8.31,
+   "adev_20000s_over_wn": 0.95,
+   "birge_vs_1000s_wn": 1.271,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 631040,
+    "n_days_ge_1h": 23,
+    "sigma_y_100s_1e18": 98.9,
+    "median_daily_white_u_1e18": 6.2,
+    "daily_birge_B": 2.03,
+    "excess_daily_std_tau_DL_1e18": 10.61,
+    "excess_adev_40ks_1e18": 8.42,
+    "adev_40ks_over_white": 1.97
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 3197,
+    "M2_amp_1e18": 2.98,
+    "O1_amp_1e18": 1.56,
+    "S2_amp_1e18": 3.46,
+    "off_tide_ctrl_mean_1e18": 3.9,
+    "M2_over_ctrl_ratio": 0.766,
+    "S2_over_ctrl_ratio": 0.888
+   }
+  },
+  "NPL_Sr1-PTB_Sr3_CombKnoten": {
+   "architecture": "Lattice x Lattice (remote)",
+   "baseline_km": 705.0,
+   "fiber_km": 2155.0,
+   "published_birge": 4.51,
+   "n_hours": 129.31,
+   "n_days_ge_1h": 17,
+   "weighted_mean_offset_1e18": 39.1,
+   "daily_std_1e18": 9.41,
+   "adev_1000s_1e18": 14.02,
+   "adev_20000s_1e18": 5.42,
+   "adev_20000s_over_wn": 1.729,
+   "birge_vs_1000s_wn": 3.214,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 465853,
+    "n_days_ge_1h": 17,
+    "sigma_y_100s_1e18": 56.6,
+    "median_daily_white_u_1e18": 3.1,
+    "daily_birge_B": 3.21,
+    "excess_daily_std_tau_DL_1e18": 9.65,
+    "excess_adev_40ks_1e18": 5.95,
+    "adev_40ks_over_white": 2.33
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 2216,
+    "M2_amp_1e18": 5.15,
+    "O1_amp_1e18": 3.28,
+    "S2_amp_1e18": 2.56,
+    "off_tide_ctrl_mean_1e18": 2.5,
+    "M2_over_ctrl_ratio": 2.057,
+    "S2_over_ctrl_ratio": 1.023
+   }
+  },
+  "PTB_Yb_CombKnoten-INRIM_ITYb1": {
+   "architecture": "Ion x Lattice (remote)",
+   "baseline_km": 755.0,
+   "fiber_km": 2393.0,
+   "published_birge": 1.55,
+   "n_hours": 76.26,
+   "n_days_ge_1h": 20,
+   "weighted_mean_offset_1e18": 113.61,
+   "daily_std_1e18": 34.97,
+   "adev_1000s_1e18": 89.35,
+   "adev_20000s_1e18": 27.99,
+   "adev_20000s_over_wn": 1.401,
+   "birge_vs_1000s_wn": 1.342,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 274615,
+    "n_days_ge_1h": 20,
+    "sigma_y_100s_1e18": 342.9,
+    "median_daily_white_u_1e18": 26.9,
+    "daily_birge_B": 1.15,
+    "excess_daily_std_tau_DL_1e18": 14.81,
+    "excess_adev_40ks_1e18": 7.26,
+    "adev_40ks_over_white": 1.09
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 1107,
+    "M2_amp_1e18": 11.88,
+    "O1_amp_1e18": 13.15,
+    "S2_amp_1e18": 4.8,
+    "off_tide_ctrl_mean_1e18": 10.2,
+    "M2_over_ctrl_ratio": 1.164,
+    "S2_over_ctrl_ratio": 0.47
+   }
+  },
+  "INRIM_ITYb1-PTB_Sr3_CombKnoten": {
+   "architecture": "Lattice x Lattice (remote)",
+   "baseline_km": 755.0,
+   "fiber_km": 2393.0,
+   "published_birge": 1.68,
+   "n_hours": 56.37,
+   "n_days_ge_1h": 16,
+   "weighted_mean_offset_1e18": -62.14,
+   "daily_std_1e18": 40.69,
+   "adev_1000s_1e18": 85.77,
+   "adev_20000s_1e18": 26.0,
+   "adev_20000s_over_wn": 1.355,
+   "birge_vs_1000s_wn": 1.554,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 202965,
+    "n_days_ge_1h": 16,
+    "sigma_y_100s_1e18": 316.3,
+    "median_daily_white_u_1e18": 29.0,
+    "daily_birge_B": 1.47,
+    "excess_daily_std_tau_DL_1e18": 27.92,
+    "excess_adev_40ks_1e18": 17.06,
+    "adev_40ks_over_white": 1.47
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 812,
+    "M2_amp_1e18": 8.23,
+    "O1_amp_1e18": 4.45,
+    "S2_amp_1e18": 6.18,
+    "off_tide_ctrl_mean_1e18": 12.58,
+    "M2_over_ctrl_ratio": 0.654,
+    "S2_over_ctrl_ratio": 0.491
+   }
+  },
+  "INRIM_ITYb1-NPL_Sr1": {
+   "architecture": "Lattice x Lattice (remote)",
+   "baseline_km": 915.0,
+   "fiber_km": 1808.0,
+   "published_birge": 1.26,
+   "n_hours": 39.22,
+   "n_days_ge_1h": 12,
+   "weighted_mean_offset_1e18": -105.84,
+   "daily_std_1e18": 36.59,
+   "adev_1000s_1e18": 89.96,
+   "adev_20000s_1e18": 41.57,
+   "adev_20000s_over_wn": 2.066,
+   "birge_vs_1000s_wn": 1.21,
+   "dersimonian_laird_and_40ks": {
+    "n_valid_seconds": 141224,
+    "n_days_ge_1h": 12,
+    "sigma_y_100s_1e18": 303.2,
+    "median_daily_white_u_1e18": 25.6,
+    "daily_birge_B": 1.23,
+    "excess_daily_std_tau_DL_1e18": 18.23,
+    "excess_adev_40ks_1e18": null,
+    "adev_40ks_over_white": null
+   },
+   "tidal_spectroscopy_1e18": {
+    "n_5min_bins": 768,
+    "M2_amp_1e18": 5.85,
+    "O1_amp_1e18": 11.8,
+    "S2_amp_1e18": 3.6,
+    "off_tide_ctrl_mean_1e18": 14.86,
+    "M2_over_ctrl_ratio": 0.393,
+    "S2_over_ctrl_ratio": 0.242
+   }
+  }
+ },
+ "disjoint_pair_sub_mhz_correlations": [
+  {
+   "bin_hours": 1.0,
+   "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
+   "pair_2": "SYRTE_Hg-NPL_Sr1",
+   "n_bins": 15,
+   "pearson_r": -0.6252,
+   "pearson_p": 0.012685038152587678,
+   "spearman_rho": -0.6357,
+   "spearman_p": 0.0108607461687898
+  },
+  {
+   "bin_hours": 1.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb1E2_CombYb-PTB_Yb_CombKnoten",
+   "n_bins": 131,
+   "pearson_r": -0.1756,
+   "pearson_p": 0.04485710139875936,
+   "spearman_rho": -0.1125,
+   "spearman_p": 0.2009176941825957
+  },
+  {
+   "bin_hours": 1.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
+   "n_bins": 53,
+   "pearson_r": -0.2412,
+   "pearson_p": 0.08182196658283088,
+   "spearman_rho": -0.3115,
+   "spearman_p": 0.02318599489065292
+  },
+  {
+   "bin_hours": 1.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "SYRTE_Hg-PTB_Yb_CombKnoten",
+   "n_bins": 14,
+   "pearson_r": -0.5486,
+   "pearson_p": 0.042210375925965916,
+   "spearman_rho": -0.6879,
+   "spearman_p": 0.006540042491841914
+  },
+  {
+   "bin_hours": 1.0,
+   "pair_1": "PTB_Yb_CombKnoten-INRIM_ITYb1",
+   "pair_2": "SYRTE_Hg-NPL_Sr1",
+   "n_bins": 14,
+   "pearson_r": 0.5907,
+   "pearson_p": 0.026117290426953467,
+   "spearman_rho": 0.622,
+   "spearman_p": 0.017550315290540047
+  },
+  {
+   "bin_hours": 3.0,
+   "pair_1": "INRIM_ITYb1-NPL_Sr1",
+   "pair_2": "PTB_Yb_CombKnoten-PTB_Sr3_CombKnoten",
+   "n_bins": 28,
+   "pearson_r": 0.4335,
+   "pearson_p": 0.021183257334617886,
+   "spearman_rho": 0.3251,
+   "spearman_p": 0.09137860677092112
+  },
+  {
+   "bin_hours": 3.0,
+   "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
+   "pair_2": "NPL_YbE3-NPL_Sr1",
+   "n_bins": 33,
+   "pearson_r": 0.3206,
+   "pearson_p": 0.0689046729074287,
+   "spearman_rho": 0.3807,
+   "spearman_p": 0.028847337902829555
+  },
+  {
+   "bin_hours": 3.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
+   "n_bins": 27,
+   "pearson_r": -0.6021,
+   "pearson_p": 0.0008915852676538402,
+   "spearman_rho": -0.6764,
+   "spearman_p": 0.0001072319876546711
+  },
+  {
+   "bin_hours": 3.0,
+   "pair_1": "NPL_YbE3-PTB_Yb_CombKnoten",
+   "pair_2": "SYRTE_Hg-INRIM_ITYb1",
+   "n_bins": 12,
+   "pearson_r": -0.6533,
+   "pearson_p": 0.021228055785397874,
+   "spearman_rho": -0.2797,
+   "spearman_p": 0.37856866966230307
+  },
+  {
+   "bin_hours": 6.0,
+   "pair_1": "INRIM_ITYb1-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb_CombKnoten-NPL_Sr1",
+   "n_bins": 21,
+   "pearson_r": -0.4769,
+   "pearson_p": 0.028838605467907338,
+   "spearman_rho": -0.4766,
+   "spearman_p": 0.028928327683357725
+  },
+  {
+   "bin_hours": 6.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb_CombKnoten-INRIM_ITYb1",
+   "n_bins": 21,
+   "pearson_r": -0.624,
+   "pearson_p": 0.0025041371385476885,
+   "spearman_rho": -0.6026,
+   "spearman_p": 0.003839267741778838
+  },
+  {
+   "bin_hours": 6.0,
+   "pair_1": "NPL_Sr1-PTB_Sr3_CombKnoten",
+   "pair_2": "SYRTE_Hg-PTB_Yb_CombKnoten",
+   "n_bins": 12,
+   "pearson_r": -0.7824,
+   "pearson_p": 0.002632782289607267,
+   "spearman_rho": -0.7972,
+   "spearman_p": 0.0019003677255282686
+  },
+  {
+   "bin_hours": 6.0,
+   "pair_1": "NPL_YbE3-PTB_Sr3_CombKnoten",
+   "pair_2": "PTB_Yb_CombKnoten-NPL_Sr1",
+   "n_bins": 36,
+   "pearson_r": -0.2081,
+   "pearson_p": 0.22317206998019798,
+   "spearman_rho": -0.3879,
+   "spearman_p": 0.019406013788356657
+  }
+ ],
+ "disjoint_pair_multiplicity_summary": {
+  "n_eligible_tests_across_1h_3h_6h": 118,
+  "n_nominal_p_lt_0_05": 13
+ }
 }

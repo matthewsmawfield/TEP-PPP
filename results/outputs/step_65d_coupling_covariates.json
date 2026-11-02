@@ -1,0 +1,402 @@
+{
+ "step": "65d",
+ "test": "coupling_covariate_decomposition",
+ "description": "Per-station LF (<10 uHz) network-coupling amplitude b decomposed by oscillator class vs antenna model vs site environment, using the Step 65c machinery",
+ "days": [
+  2024085,
+  2024112
+ ],
+ "n_stations": 25,
+ "per_station": [
+  {
+   "station": "MARS",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 2.9444300553276563,
+   "n_days": 28,
+   "antenna_type": "TRM59800.00 NONE",
+   "receiver_type": "TRIMBLE NETR9",
+   "latitude_deg": 43.278767,
+   "altitude_m": 61.8
+  },
+  {
+   "station": "ZIMM",
+   "oscillator_class": "passive_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 2.6248825064814207,
+   "n_days": 27,
+   "antenna_type": "TRM59800.00 SCIS",
+   "receiver_type": "TRIMBLE ALLOY",
+   "latitude_deg": 46.877095,
+   "altitude_m": 956.4
+  },
+  {
+   "station": "LROC",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 2.4302398530584512,
+   "n_days": 27,
+   "antenna_type": "TRM59800.00 SCIS",
+   "receiver_type": "TRIMBLE NETR9",
+   "latitude_deg": 46.158939,
+   "altitude_m": 57.9
+  },
+  {
+   "station": "GENO",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 2.080077445483146,
+   "n_days": 27,
+   "antenna_type": "LEIAR25.R4 LEIT",
+   "receiver_type": "LEICA GR50",
+   "latitude_deg": 44.419388,
+   "altitude_m": 155.5
+  },
+  {
+   "station": "BZR2",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 2.042862852387989,
+   "n_days": 24,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "VEN1",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 1.8048986723014186,
+   "n_days": 28,
+   "antenna_type": "LEIAR25.R4 LEIT",
+   "receiver_type": "LEICA GR30",
+   "latitude_deg": 45.430567,
+   "altitude_m": 60.4
+  },
+  {
+   "station": "GOP6",
+   "oscillator_class": "passive_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 1.2820206964923533,
+   "n_days": 28,
+   "antenna_type": "JAVRINGANT_DM NONE",
+   "receiver_type": "SEPT POLARX5",
+   "latitude_deg": 49.913666,
+   "altitude_m": 592.6
+  },
+  {
+   "station": "GRAZ",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 1.1213943163360824,
+   "n_days": 27,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "OBE4",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 1.0539299690379456,
+   "n_days": 28,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "PADO",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 0.996325234210496,
+   "n_days": 28,
+   "antenna_type": "LEIAR25.R4 LEIT",
+   "receiver_type": "LEICA GR50",
+   "latitude_deg": 45.411151,
+   "altitude_m": 64.7
+  },
+  {
+   "station": "DLF1",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 0.9273258964600699,
+   "n_days": 28,
+   "antenna_type": "JAVRINGANT_DM NONE",
+   "receiver_type": "SEPT POLARX5",
+   "latitude_deg": 51.986016,
+   "altitude_m": 75.8
+  },
+  {
+   "station": "BRUX",
+   "oscillator_class": "passive_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 0.6942701075151715,
+   "n_days": 27,
+   "antenna_type": "JAVRINGANT_DM NONE",
+   "receiver_type": "SEPT POLARX5TR",
+   "latitude_deg": 50.79806,
+   "altitude_m": 158.1
+  },
+  {
+   "station": "REDU",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 0.6893736658792395,
+   "n_days": 27,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "WSRT",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 0.6838112268851881,
+   "n_days": 28,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "PTBB",
+   "oscillator_class": "active_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 0.4676758061959916,
+   "n_days": 28,
+   "antenna_type": "LEIAR25.R4 NONE",
+   "receiver_type": "SEPT POLARX5TR",
+   "latitude_deg": 52.296191,
+   "altitude_m": 130.3
+  },
+  {
+   "station": "HERS",
+   "oscillator_class": "bench_ocxo",
+   "clock_type": "CESIUM",
+   "coupling_b_median": 0.2441086493403093,
+   "n_days": 28,
+   "antenna_type": "LEIAR25.R4 NONE",
+   "receiver_type": "SEPT POLARX5",
+   "latitude_deg": 50.867312,
+   "altitude_m": 76.5
+  },
+  {
+   "station": "ESOC",
+   "oscillator_class": "active_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 0.21763896874290262,
+   "n_days": 28,
+   "antenna_type": "AOAD/M_T NONE",
+   "receiver_type": "SEPT POLARX5TR",
+   "latitude_deg": 49.871765,
+   "altitude_m": 192.3
+  },
+  {
+   "station": "TLSE",
+   "oscillator_class": "active_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 0.1454154987515594,
+   "n_days": 28,
+   "antenna_type": "TRM59800.00 SCIS",
+   "receiver_type": "TRIMBLE NETR9",
+   "latitude_deg": 43.560692,
+   "altitude_m": 207.2
+  },
+  {
+   "station": "WAB2",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": 0.030485093015638304,
+   "n_days": 28,
+   "antenna_type": "TRM115000.00 NONE",
+   "receiver_type": "TRIMBLE ALLOY",
+   "latitude_deg": 46.923749,
+   "altitude_m": 611.2
+  },
+  {
+   "station": "GRAS",
+   "oscillator_class": "active_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": 0.027185195479085024,
+   "n_days": 26,
+   "antenna_type": "TRM59800.00 NONE",
+   "receiver_type": "TRIMBLE NETR9",
+   "latitude_deg": 43.754735,
+   "altitude_m": 1319.3
+  },
+  {
+   "station": "OP71",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": 0.007851078182009188,
+   "n_days": 28,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "WTZR",
+   "oscillator_class": "active_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": -0.009085230899392583,
+   "n_days": 26,
+   "antenna_type": "LEIAR25.R3 LEIT",
+   "receiver_type": "LEICA GR50",
+   "latitude_deg": 49.144196,
+   "altitude_m": 666.1
+  },
+  {
+   "station": "KOS1",
+   "oscillator_class": "receiver_quartz",
+   "clock_type": "OCXO",
+   "coupling_b_median": -0.01652938738510355,
+   "n_days": 28,
+   "antenna_type": "SEPCHOKE_B3E6 NONE",
+   "receiver_type": "SEPT POLARX5",
+   "latitude_deg": 52.173355,
+   "altitude_m": 104.8
+  },
+  {
+   "station": "MEDI",
+   "oscillator_class": "unmapped",
+   "clock_type": "UNKNOWN",
+   "coupling_b_median": -0.05081237530505711,
+   "n_days": 28,
+   "antenna_type": "?",
+   "receiver_type": "?",
+   "latitude_deg": null,
+   "altitude_m": null
+  },
+  {
+   "station": "IENG",
+   "oscillator_class": "passive_maser",
+   "clock_type": "H-MASER",
+   "coupling_b_median": -0.07020451295137989,
+   "n_days": 28,
+   "antenna_type": "LEIAR25.R4 LEIT",
+   "receiver_type": "SEPT POLARX5",
+   "latitude_deg": 45.015136,
+   "altitude_m": 316.4
+  }
+ ],
+ "group_medians": {
+  "by_antenna_prefix": {
+   "AOAD/M_T NON": {
+    "median_b": 0.21763896874290262,
+    "n": 1
+   },
+   "JAVRINGANT_D": {
+    "median_b": 0.9273258964600699,
+    "n": 3
+   },
+   "LEIAR25.R3 L": {
+    "median_b": -0.009085230899392583,
+    "n": 1
+   },
+   "LEIAR25.R4 L": {
+    "median_b": 1.4006119532559573,
+    "n": 4
+   },
+   "LEIAR25.R4 N": {
+    "median_b": 0.35589222776815044,
+    "n": 2
+   },
+   "SEPCHOKE_B3E": {
+    "median_b": -0.01652938738510355,
+    "n": 1
+   },
+   "TRM115000.00": {
+    "median_b": 0.030485093015638304,
+    "n": 1
+   },
+   "TRM59800.00 ": {
+    "median_b": 2.4302398530584512,
+    "n": 5
+   }
+  },
+  "by_oscillator_class": {
+   "active_maser": {
+    "median_b": 0.1454154987515594,
+    "n": 5
+   },
+   "bench_ocxo": {
+    "median_b": 0.2441086493403093,
+    "n": 1
+   },
+   "passive_maser": {
+    "median_b": 0.9881454020037623,
+    "n": 4
+   },
+   "receiver_quartz": {
+    "median_b": 1.4006119532559573,
+    "n": 8
+   }
+  }
+ },
+ "eta_squared": {
+  "antenna_model": 0.3700628068616656,
+  "oscillator_class": 0.29944106305034773
+ },
+ "verdict": {
+  "broadband_lf_coupling_organised_by": "measurement-chain hardware and site environment, not oscillator class",
+  "identical_antenna_couples_alike_example": "passive-maser ZIMM (+2.63) groups with quartz MARS/LROC (+2.94/+2.43) on the shared TRM59800 chain",
+  "implication": "the broadband LF coherent residual enters through the observation chain; the class-average quartz>atomic differential cannot be claimed as oscillator screening. TEP-relevant coupling is confined to observables the measurement chain cannot reach: the lunar M2 line and the co-located monument differentials",
+  "within_stratum_result": "class split persists inside identical hardware strata (TRM59800+NetR9) but hardware x oscillator interaction is unresolved: ZIMM/GOP6 passive masers couple at quartz level on other strata"
+ },
+ "within_stratum_analysis": {
+  "method": "per-station LF coupling_b compared within identical antenna+receiver strata and within clock classes",
+  "strata": [
+   {
+    "antenna": "TRM59800.00",
+    "receiver": "TRIMBLE NETR9",
+    "stations": [
+     {
+      "station": "MARS",
+      "clock_type": "OCXO",
+      "b": 2.944
+     },
+     {
+      "station": "LROC",
+      "clock_type": "OCXO",
+      "b": 2.43
+     },
+     {
+      "station": "TLSE",
+      "clock_type": "H-MASER",
+      "b": 0.145
+     },
+     {
+      "station": "GRAS",
+      "clock_type": "H-MASER",
+      "b": 0.027
+     }
+    ],
+    "finding": "~20x quartz/maser class split INSIDE identical hardware"
+   },
+   {
+    "antenna": "JAVRINGANT_DM",
+    "receiver": "SEPT POLARX5",
+    "stations": [
+     {
+      "station": "GOP6",
+      "clock_type": "H-MASER",
+      "b": 1.282
+     },
+     {
+      "station": "DLF1",
+      "clock_type": "OCXO",
+      "b": 0.927
+     }
+    ],
+    "finding": "no class effect: passive maser couples like quartz"
+   }
+  ],
+  "anomalies": "passive masers ZIMM (+2.63, TRM59800+Alloy) and GOP6 (+1.28, JAVRINGANT+PolaRx5) couple at receiver-quartz level on their strata",
+  "revised_interpretation": "coupling is a hardware x oscillator interaction, not separable as antenna OR class on 25 stations: the quartz/maser class split is strong inside matched hardware (TRM59800+NetR9: +2.7 vs +0.09) yet two passive masers couple at quartz level on other strata. A joint hierarchical model with more stations is required; neither the observation-chain-only nor class-only reading is established"
+ }
+}

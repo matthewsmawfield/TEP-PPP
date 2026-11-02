@@ -13,10 +13,10 @@ abstract: |
 
   Out-of-ecosystem reanalysis of the 65-day 2023 European optical-fibre clock campaign across NPL, LNE-OP/SYRTE, PTB, and INRIM constrains differential frequency-ratio offsets across the Doppler-cancelled NPL–PTB link to -7.1 +/- 7.7e-18 (1 sigma; conditional 95% single-effect envelope ≤ 2.2e-17, with 1 s 3-node star-tree closure at 3.61e-20 on the b1 = 0 tree), unmasks a tau_DL = 8.68–27.92e-18 sub-mHz remote floor versus 0.00e-18 co-located at NPL (7.86 and 24.76e-18 locally at PTB; 4-clock baseline excess 7.62–7.74e-18 on 212,605 simultaneous 1 s common epochs and 7.30e-18 full-campaign; 8-pair rho = +0.927, p = 9.4e-4, 4-group rho_group = +0.800) alongside 705 km lunar M2 amplitude enhancement (Fisher p = 0.0014 raw, 0.0019 demeaned; joint species-frame Yb+ E3 - Sr simultaneous phase clustering R = 0.990, p_joint,6h = 0.0230 vs R = 0.477 for four geographic ratios on a separate window (R = 0.358 for the same three simultaneous ratios)), detects zero-fibre 705 km anti-phase coherence probing a non-universal Delta K_alpha electromagnetic coupling extension between co-located optical pairs at NPL and PTB (PA = -0.335 +/- 0.091, z = -3.69, z_null = -3.27, p_perm = 0.0010), and localises the zero-satellite optical clock pairs globally to 879–1,416 km against the 366-station GNSS archive (conditional two-site Fisher p = 0.0030; sub-diurnal f ≥ 30 uHz error 704–1,285 km).
 
-  Operationally, a phase-resolved TEP clock prior requires no new hardware and under 1 ms per epoch on existing CORS/RTK networks: (i) for timing holdover, it reduces sky-outage clock-residual error by 38.1% at 1 h (24.7 ns) and 55.7% at 8 h (65.6 ns), outperforming datasheet holdover of a ~USD 300 OCXO beyond 30 min and a ~USD 2,000 Rubidium standard beyond 2 h; (ii) for outage bridging, it reduces clock RMS by 5.0–18.9% over 90 EUREF days and beats every deployable baseline on held-out 2025 across Europe, North America, and East Asia; and (iii) for degraded-geometry positioning, it restores k = 3 availability (+29.6% 3-D carrier-phase RMSE reduction), improves k = 4–5 3-D RMS by +14.5–48.0%, localises co-located GNSS anchors to 339 km (Matera) and 744 km (Tahiti) and 43 live NTRIP stations to 191.8 km median error, and achieves +35.84% mean two-hour holdover gain across 185 walk-forward windows on a 68-station live observatory (116 of 120 SHA-256-sealed ex-ante envelopes positive, +29.01% mean; clean-origin forward component +2.57%, p = 1.8e-5).
+  Operationally, a phase-resolved TEP clock prior requires no new hardware and under 1 ms per epoch on existing CORS/RTK networks: (i) for timing holdover, it reduces sky-outage clock-residual error by 38.1% at 1 h (24.7 ns) and 55.7% at 8 h (65.6 ns), outperforming datasheet holdover of a ~USD 300 OCXO beyond 30 min and a ~USD 2,000 Rubidium standard beyond 2 h; (ii) for outage bridging, it reduces clock RMS by 5.0–18.9% over 90 EUREF days and beats every deployable baseline on held-out 2025 across Europe, North America, and East Asia; and (iii) for degraded-geometry positioning, it restores k = 3 availability (+29.6% 3-D carrier-phase RMSE reduction), improves k = 4–5 3-D RMS by +14.5–48.0%, localises co-located GNSS anchors to 339 km (Matera) and 744 km (Tahiti) and 43 live NTRIP stations to 191.8 km median error, and achieves +35.84% mean two-hour holdover gain across 185 walk-forward windows on a 68-station live observatory (116 of 120 SHA-256-sealed ex-ante envelopes positive, +29.01% mean on overlapping sliding windows; zero-target-overlap clean-origin forward component +2.57%, p = 1.8e-5).
 license: CC-BY-4.0
-version: v0.4 (Pune)
-date-released: 2026-10-29
+version: v0.5 (Pune)
+date-released: 2026-11-02
 date-published: 2026-10-29
 keywords:
   - Temporal Equivalence Principle
@@ -54,7 +54,7 @@ doi: "10.5281/zenodo.23704945"
 
 preferred-citation:
   type: article
-  title: "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging (Pune v0.4)"
+  title: "Temporal Equivalence Principle: Phase-Resolved Spatial Clock Priors for GNSS Outage Bridging (Pune v0.5)"
   authors:
     - family-names: Smawfield
       given-names: Matthew Lukin

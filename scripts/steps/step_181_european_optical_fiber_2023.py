@@ -1490,8 +1490,11 @@ def main() -> None:
                 "distance_bins_km": [float(b) for b in dist_bins_4],
                 "distance_bin_mean_tau_DL_1e18": dist_bin_means_4,
                 "four_group_spearman_rho": round(float(rho_group_4), 3),
-                "four_group_exact_4fact_p_one_sided": round(1.0 / 24.0, 4),
-                "four_group_exact_4fact_p_two_sided": round(2.0 / 24.0, 4),
+                # Exact 4! = 24 enumeration: rho = +1.0 for 1 ordering,
+                # rho = +0.8 for 3 orderings -> P(rho >= 0.8) = 4/24 and
+                # P(|rho| >= 0.8) = 8/24.  (1/24, 2/24 held only for rho = 1.0.)
+                "four_group_exact_4fact_p_one_sided": round(4.0 / 24.0, 4),
+                "four_group_exact_4fact_p_two_sided": round(8.0 / 24.0, 4),
                 "leave_one_clock_out": loco_spearman,
             },
             "four_clock_exact_variance_cancellation_705km": {

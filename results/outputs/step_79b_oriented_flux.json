@@ -1,0 +1,9 @@
+{
+ "step": "79b",
+ "test": "oriented_signed_flux_consistency",
+ "audit_finding": "Step 79's rho(baseline,slope) > 0.6 criterion is not a derived TEP prediction: oriented loop flux is not monotone in baseline length and its sign flips with loop orientation; the non-exact sector is untested, not bounded",
+ "zero_area_floor": 0.3840270297492245,
+ "pairs": [],
+ "n_above_floor_sign_consistent": 0,
+ "verdict": "corrected criterion applied: sign-of-slope vs sign-of-loop-orientation reported per pair; definitive test requires model-generated signed-flux injection under a specified field geometry"
+}
